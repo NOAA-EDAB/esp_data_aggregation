@@ -1,0 +1,100 @@
+---
+title: "survdat_testing"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+params: 
+  species_ID: "000"
+---
+
+```{r, data, include = FALSE}
+library(ggplot2)
+
+plot_variable <- function(x, variable, ytitle) {
+  fig <- ggplot(x,
+         aes(x = as.numeric(YEAR),
+             y = get(variable)))+
+    geom_point()+
+    stat_smooth()+
+    #ecodata::geom_gls()+ # not working...
+    facet_grid(rows = vars(SEASON))+
+    theme_bw()+
+    xlab("Year")+
+    ylab(ytitle) 
+  
+  return(fig)
+}
+
+data <- readRDS(here::here("data", "survdat.RDS"))
+data <- tibble::as.tibble(data$survdat)
+list_data <- split(data, 
+                   f = list(data$SVSPP, 
+                            data$SEASON),
+                   drop = TRUE)
+species <- params$species_ID
+plot_data <- data[data$SVSPP == species,]
+
+# TO-DO
+## write if() loop so stat_smooth only runs on data sets with enough data
+## get geom_gls() to work
+## find average from past 5 years and compare to long-term average?
+## or some other comparison metric
+```
+
+## Test of Survdat data
+
+This is a test report of `survdat` data. 
+
+This report is pulling information on the species with the SVSPP ID: `r species`.
+
+### Temperature
+
+#### Surface temperature
+```{r, surftemp, echo = FALSE, warning = FALSE, message = FALSE}
+plot_variable(plot_data,
+              variable = "SURFTEMP", 
+              ytitle = "Surface temperature")
+```
+
+#### Bottom temperature
+```{r, bottemp, echo = FALSE, warning = FALSE, message = FALSE}
+plot_variable(plot_data,
+              variable = "BOTTEMP", 
+              ytitle = "Bottom temperature")
+```
+
+#### Surface salinity
+```{r, surfsalin, echo = FALSE, warning = FALSE, message = FALSE}
+plot_variable(plot_data,
+              variable = "SURFSALIN", 
+              ytitle = "Surface salinity")
+```
+
+#### Bottom salinity
+```{r, botsalin, echo = FALSE, warning = FALSE, message = FALSE}
+plot_variable(plot_data,
+              variable = "BOTSALIN", 
+              ytitle = "Bottom salinity")
+```
+
+#### Abundance
+```{r, abundance, echo = FALSE, warning = FALSE, message = FALSE}
+plot_variable(plot_data,
+              variable = "ABUNDANCE", 
+              ytitle = "Abundance")
+```
+
+#### Biomass
+```{r, biomass, echo = FALSE, warning = FALSE, message = FALSE}
+plot_variable(plot_data,
+              variable = "BIOMASS", 
+              ytitle = "Biomass")
+```
+
+#### Length
+```{r, length, echo = FALSE, warning = FALSE, message = FALSE}
+plot_variable(plot_data,
+              variable = "LENGTH", 
+              ytitle = "Length")
+```
+
