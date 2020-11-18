@@ -14,24 +14,28 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-```{r cars}
+```{r }
 
 library("tidyverse")
-rec_landings_1950_2019<-read.csv("foss_landings_REC_1950_2019_MA_NE.csv", stringsAsFactors = T)
-fish_list<-unique(rec_landings_1950_2019$NMFS.Name)
+
+
+
+rec_landings_1950_2019<-readr::read_csv("foss_landings_REC_1950_2019_MA_NE.csv")
+fish_list<-unique(rec_landings_1950_2019$`NMFS Name`)
 stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
 stock_list<-unique(stock_list_all_strata$common_name)
 which(fish_list == stock_list)
-rec_by_sp<-rec_landings_1950_2019 %>% group_by(NMFS.Name)
+rec_by_sp<-rec_landings_1950_2019 %>% group_by(`NMFS Name`,Year) %>% summarise(mean= mean(Pounds))
 
 
+ggplot2::ggplot(rec_by_sp, aes(x=Pounds,))
 
-
+length(unique(rec_landings_1950_2019$`NMFS Name`))
 
 ```
 
 ## Recreational catches time serise 
-This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$NMFS.Name))` species. 
+This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$`NMFS Name`))` species. 
 
 You can also embed plots, for example:
 
