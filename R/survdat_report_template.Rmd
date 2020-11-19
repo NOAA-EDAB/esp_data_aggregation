@@ -5,18 +5,28 @@ date: "`r format(Sys.time(), '%d %b %Y')`"
 output: html_document
 params: 
   species_ID: "000"
+  data_source: data
 ---
 
-```{r, data, include = FALSE}
+```{r, functions, include = FALSE}
 library(ggplot2)
 
 plot_variable <- function(x, variable, ytitle) {
-  fig <- ggplot(x,
+  
+  if(sum(is.na(x[,variable]))>0){
+    y <- x[-which(is.na(x[,variable])), ]
+  }
+  else y <- x
+  
+  stat_method <- c()
+  if(length(unique(y$YEAR))>20){stat_method <- "loess"} else stat_method <- "lm"
+  
+  fig <- ggplot(y,
          aes(x = as.numeric(YEAR),
-             y = get(variable)))+
+             y = as.numeric(get(variable))))+
     geom_point()+
-    stat_smooth()+
-    #ecodata::geom_gls()+ # not working...
+    stat_smooth(method = stat_method)+
+   # ecodata::geom_gls()+ # not working...
     facet_grid(rows = vars(SEASON))+
     theme_bw()+
     xlab("Year")+
@@ -25,17 +35,62 @@ plot_variable <- function(x, variable, ytitle) {
   return(fig)
 }
 
-data <- readRDS(here::here("data", "survdat.RDS"))
-data <- tibble::as.tibble(data$survdat)
-list_data <- split(data, 
-                   f = list(data$SVSPP, 
-                            data$SEASON),
-                   drop = TRUE)
+format_numbers <- function(x) {as.numeric(as.character(unlist(x)))}
+
+data_summary <- function(x, variable, season) {
+  
+  if(sum(is.na(x[,variable]))>0){
+    y <- x[-which(is.na(x[,variable])), ]
+  }
+  else y <- x
+
+  year_data <- format_numbers(y[y$SEASON == season, "YEAR"])
+  variable_data <- format_numbers(y[y$SEASON == season, variable])
+
+  all_data <- c(paste(min(year_data), max(year_data), sep = " - "),
+                 round(mean(variable_data, na.rm = TRUE), digits = 2),
+                 round(sd(variable_data, na.rm = TRUE), digits = 2),
+                 round(min(variable_data, na.rm = TRUE), digits = 2),
+                 round(max(variable_data, na.rm = TRUE), digits = 2))
+  
+  z <- y[which(format_numbers(y$YEAR)>(max(year_data) - 5)), ]
+  
+  five_year_data <- format_numbers(z[z$SEASON == season, "YEAR"])
+  five_variable_data <- format_numbers(z[z$SEASON == season, variable])
+  
+  five_data <- c(paste(min(five_year_data), max(five_year_data), sep = " - "),
+                 round(mean(five_variable_data, na.rm = TRUE), digits = 2),
+                 round(sd(five_variable_data, na.rm = TRUE), digits = 2),
+                 round(min(five_variable_data, na.rm = TRUE), digits = 2),
+                 round(max(five_variable_data, na.rm = TRUE), digits = 2))
+  
+  output <- rbind(c(season, all_data), c(season, five_data))
+  
+  return(output)
+}
+
+generate_info <- function(x, ytitle, variable){
+  fig <- plot_variable(x,
+              variable = variable, 
+              ytitle = ytitle)
+
+  table <- rbind(data_summary(x, variable = variable, season = "FALL"),
+                 data_summary(x, variable = variable, season = "SPRING"))
+                 
+  colnames(table) <- c("SEASON", "YEARS", "MEAN", "SD", "MIN", "MAX")
+  
+  print(fig)
+  return(knitr::kable(table))
+}
+```
+
+```{r, data, include = FALSE}
 species <- params$species_ID
+data <- params$data_source
 plot_data <- data[data$SVSPP == species,]
 
 # TO-DO
-## write if() loop so stat_smooth only runs on data sets with enough data
+## x write if() loop so stat_smooth only runs on data sets with enough data
 ## get geom_gls() to work
 ## find average from past 5 years and compare to long-term average?
 ## or some other comparison metric
@@ -46,54 +101,58 @@ plot_data <- data[data$SVSPP == species,]
 This is a test report of `survdat` data. 
 
 This report is pulling information on the species with the SVSPP ID: `r species`.
+Each metric is plotted against time. If there are more than 10 years of data, a loess smooth curve is fit. If there are 10 or fewer years in the time series, a linear regression is fit. The tables show summary statistics for the entire time series and for the most recent 5 years in the time series. 
 
 ### Temperature
 
 #### Surface temperature
 ```{r, surftemp, echo = FALSE, warning = FALSE, message = FALSE}
-plot_variable(plot_data,
+generate_info(plot_data,
               variable = "SURFTEMP", 
               ytitle = "Surface temperature")
+
 ```
 
 #### Bottom temperature
 ```{r, bottemp, echo = FALSE, warning = FALSE, message = FALSE}
-plot_variable(plot_data,
+generate_info(plot_data,
               variable = "BOTTEMP", 
               ytitle = "Bottom temperature")
 ```
 
+### Salinity 
+
 #### Surface salinity
 ```{r, surfsalin, echo = FALSE, warning = FALSE, message = FALSE}
-plot_variable(plot_data,
+generate_info(plot_data,
               variable = "SURFSALIN", 
               ytitle = "Surface salinity")
 ```
 
 #### Bottom salinity
 ```{r, botsalin, echo = FALSE, warning = FALSE, message = FALSE}
-plot_variable(plot_data,
+generate_info(plot_data,
               variable = "BOTSALIN", 
               ytitle = "Bottom salinity")
 ```
 
-#### Abundance
+### Abundance
 ```{r, abundance, echo = FALSE, warning = FALSE, message = FALSE}
-plot_variable(plot_data,
+generate_info(plot_data,
               variable = "ABUNDANCE", 
               ytitle = "Abundance")
 ```
 
-#### Biomass
+### Biomass
 ```{r, biomass, echo = FALSE, warning = FALSE, message = FALSE}
-plot_variable(plot_data,
+generate_info(plot_data,
               variable = "BIOMASS", 
               ytitle = "Biomass")
 ```
 
-#### Length
+### Length
 ```{r, length, echo = FALSE, warning = FALSE, message = FALSE}
-plot_variable(plot_data,
+generate_info(plot_data,
               variable = "LENGTH", 
               ytitle = "Length")
 ```
