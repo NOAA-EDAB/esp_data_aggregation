@@ -14,24 +14,47 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-```{r cars}
+```{r }
 
 library("tidyverse")
-rec_landings_1950_2019<-read.csv("foss_landings_REC_1950_2019_MA_NE.csv", stringsAsFactors = T)
-fish_list<-unique(rec_landings_1950_2019$NMFS.Name)
+
+
+#read in recreational landings data
+rec_landings_1950_2019<-readr::read_csv("foss_landings_REC_1950_2019_MA_NE.csv")
+#extract the names of species
+fish_list<-unique(rec_landings_1950_2019$`NMFS Name`)
+#load in the stocks managed in NEFSC
 stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+#extract out the names
 stock_list<-unique(stock_list_all_strata$common_name)
-which(fish_list == stock_list)
-rec_by_sp<-rec_landings_1950_2019 %>% group_by(NMFS.Name)
+stock_list<-stringr::str_to_lower(stock_list)
+#
+rec_by_sp<-rec_landings_1950_2019 %>% group_by(`NMFS Name`,Year) %>% summarise(mean= mean(Pounds))
+rec_by_sp$`NMFS Name`<-stringr::str_to_lower(rec_by_sp$`NMFS Name`)
+cod<-rec_by_sp$`NMFS Name`[913]
+t2<-rec_w_comma$`NMFS Name` %>% str_split("\\,\\s")
+str_split(cod,  "\\,\\s")
+
+rec_w_comma<-rec_by_sp[str_detect(rec_by_sp$`NMFS Name`, "\\,\\s"),]
+
+str_glue_data()
+
+if(stringr::str_detect(cod, "\\,\\s")== T){
+  print("has comma")
+}
 
 
 
 
+
+ggplot2::ggplot(rec_by_sp, aes(x=Pounds,))
+
+length(unique(rec_landings_1950_2019$`NMFS Name`))
 
 ```
 
 ## Recreational catches time serise 
-This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$NMFS.Name))` species. 
+This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$`NMFS Name`))` species. 
 
 You can also embed plots, for example:
 
