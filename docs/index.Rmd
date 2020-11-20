@@ -1,0 +1,25 @@
+---
+title: "Preliminary survdat reports"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+These reports are a preliminary analysis of `survdat` data.
+
+```{r}
+`%>%` <- dplyr::`%>%`
+
+all_pages <- list.files(here::here("docs/"), pattern = ".html")
+
+purrr::map(all_pages, ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", .x, "'>",
+                 .x, "</a>", sep = "")) %>%
+  unlist() %>%
+  knitr::kable(col.names = "SVSPP")
+
+```
