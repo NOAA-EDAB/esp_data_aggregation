@@ -17,7 +17,7 @@ These reports are a preliminary analysis of `survdat` data.
 
 all_pages <- list.files(here::here("docs/"), pattern = ".html")
 
-purrr::map(all_pages, ~paste("<a href='https://rtabandera.github.io/ESP_data_aggregation/", .x, "'>",
+purrr::map(all_pages, ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", .x, "'>",
                  .x, "</a>", sep = "")) %>%
   unlist() %>%
   knitr::kable(col.names = "SVSPP")
