@@ -7,19 +7,34 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-```
 
-# Introduction
-These reports are a preliminary analysis of `survdat` data.
-
-```{r}
 `%>%` <- dplyr::`%>%`
 
 all_pages <- list.files(here::here("docs/"), pattern = ".html")
+all_pages <- all_pages[-which(all_pages == "index.html")]
+survdat_pages <- all_pages[which(nchar(all_pages) == 8)]
+assessmentdata_pages <- all_pages[-which(nchar(all_pages) == 8)]
+```
 
-purrr::map(all_pages, ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", .x, "'>",
+# Table of contents
+## `survdat`
+These reports are a preliminary analysis of `survdat` data.
+
+```{r}
+purrr::map(survdat_pages, ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", .x, "'>",
                  .x, "</a>", sep = "")) %>%
   unlist() %>%
   knitr::kable(col.names = "SVSPP")
+
+```
+
+## `assessmentdata`
+These reports are a preliminary analysis of `assessmentdata` data.
+
+```{r}
+purrr::map(assessmentdata_pages, ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", .x, "'>",
+                 .x, "</a>", sep = "")) %>%
+  unlist() %>%
+  knitr::kable(col.names = "Stock Name")
 
 ```
