@@ -88,14 +88,36 @@ This report is pulling information on the species with the stock name: `r specie
 B/Bmsy and F/Fmsy were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit. 
 
 ```{r status}
-b_status <- if((plot_data$'B/Bmsy' %>% tail(n = 1)) > 1) "DANGER" else "GOOD"
-f_status <- if((plot_data$'F/Fmsy' %>% tail(n = 1)) > 1) "DANGER" else "GOOD"
+# b/bmsy
+bbmsy <- plot_data$'B/Bmsy' 
+
+if(sum(is.na(bbmsy)) == length(bbmsy)){
+  b_data <- "MISSING"
+} else b_data <- "PRESENT"
+
+bbmsy <- bbmsy[is.na(bbmsy) == FALSE]
+
+if(b_data == "PRESENT"){
+  b_status <- if((tail(bbmsy, n = 1)) > 1) "DANGER" else "GOOD"
+} else b_status <- "UNKNOWN"
+
+# f/fmsy
+ffmsy <- plot_data$'F/Fmsy' 
+
+if(sum(is.na(ffmsy)) == length(ffmsy)){
+  f_data <- "MISSING"
+} else f_data <- "PRESENT"
+
+ffmsy <- ffmsy[is.na(ffmsy) == FALSE]
+
+if(f_data == "PRESENT"){
+  f_status <- if((tail(ffmsy, n = 1)) > 1) "DANGER" else "GOOD"
+} else f_status <- "UNKNOWN"
 ```
 
 ### B/Bmsy
 The most recent status of B/Bmsy is: `r b_status`
 ```{r, bbmsy} 
-
 plot_bbmsy(plot_data, ytitle = "B / Bmsy")
 ```
 
