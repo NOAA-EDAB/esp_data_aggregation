@@ -1,0 +1,107 @@
+---
+title: "assessmentdata_testing"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+params: 
+  species_ID: "Acadian redfish - Gulf of Maine / Georges Bank"
+  data_source: data
+---
+
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.align = 'center')
+```
+
+```{r, functions, include = FALSE}
+library(ggplot2)
+
+`%>%` <- dplyr::`%>%`
+
+plot_bbmsy <- function(x, ytitle) {
+
+  # use geom_gls only if there are 30 or more years of data
+  if(length(x$`B Year`) >= 30){
+    fig <- ggplot(x,
+         aes(x = `B Year`,
+             y = `B/Bmsy`))+
+    geom_point()+
+    ecodata::geom_gls()+
+    theme_bw()+
+    xlab("Year")+
+    ylab(ytitle)
+  } else {
+    fig <- ggplot(x,
+         aes(x = `B Year`,
+             y = `B/Bmsy`))+
+    geom_point()+
+    theme_bw()+
+    xlab("Year")+
+    ylab(ytitle)
+  }
+
+  return(fig)
+}
+
+plot_ffmsy <- function(x, ytitle) {
+
+  # use geom_gls only if there are 30 or more years of data
+  if(length(x$`B Year`) >= 30){
+    fig <- ggplot(x,
+         aes(x = `F Year`,
+             y = `F/Fmsy`))+
+    geom_point()+
+    ecodata::geom_gls()+
+    theme_bw()+
+    xlab("Year")+
+    ylab(ytitle)
+  } else {
+    fig <- ggplot(x,
+         aes(x = `F Year`,
+             y = `F/Fmsy`))+
+    geom_point()+
+    theme_bw()+
+    xlab("Year")+
+    ylab(ytitle)
+  }
+
+  return(fig)
+}
+
+
+```
+
+```{r, data, include = FALSE}
+species <- params$species_ID
+data <- params$data_source
+plot_data <- data[data$`Stock Name` == species,]
+
+# TO-DO
+## find average from past 5 years and compare to long-term average?
+## or some other comparison metric
+```
+
+## Test of assesssmentdata data, species stock name `r species`
+
+This is a test report of `assessmentdata` data. 
+
+This report is pulling information on the species with the stock name: `r species`.
+B/Bmsy and F/Fmsy were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit. 
+
+```{r status}
+b_status <- if((plot_data$'B/Bmsy' %>% tail(n = 1)) > 1) "DANGER" else "GOOD"
+f_status <- if((plot_data$'F/Fmsy' %>% tail(n = 1)) > 1) "DANGER" else "GOOD"
+```
+
+### B/Bmsy
+The most recent status of B/Bmsy is: `r b_status`
+```{r, bbmsy} 
+
+plot_bbmsy(plot_data, ytitle = "B / Bmsy")
+```
+
+### F/Fmsy
+The most recent status of F/Fmsy is: `r f_status`
+```{r, ffmsy}
+plot_ffmsy(plot_data, ytitle = "F / Fmsy")
+```
+
