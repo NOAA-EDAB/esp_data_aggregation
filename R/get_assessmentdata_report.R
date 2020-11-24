@@ -1,7 +1,8 @@
-library(assessmentdata)
+`%>%` <- dplyr::`%>%`
+
 data <- assessmentdata::stockAssessmentSummary
 
-ne_data <- filter(data, Jurisdiction == "NEFMC")
+ne_data <- dplyr::filter(data, Jurisdiction == "NEFMC")
 head(ne_data)
 
 list_species <- split(unique(ne_data$`Stock Name`), f = list(unique(ne_data$`Stock Name`)))
@@ -78,6 +79,5 @@ results <- purrr::map(test_species, function(x){
 colnames(results) <- c("B_year", "B_Bmsy", "B_status", "F_year", "F_Fmsy", "F_status")
 results
 
-setwd(here::here("data"))
-write.csv("results", file = "bbmsy_ffmsy_summary.csv")
+write.csv(results, file = here::here("data", "bbmsy_ffmsy_summary.csv"))
 #####
