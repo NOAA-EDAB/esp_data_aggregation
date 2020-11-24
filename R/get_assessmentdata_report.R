@@ -1,21 +1,55 @@
 `%>%` <- dplyr::`%>%`
 
+# read in data
+#####
 data <- assessmentdata::stockAssessmentSummary
 
 ne_data <- dplyr::filter(data, Jurisdiction == "NEFMC")
-head(ne_data)
 
-list_species <- split(unique(ne_data$`Stock Name`), f = list(unique(ne_data$`Stock Name`)))
+split_info <- stringr::str_split_fixed(ne_data$`Stock Name`, " - ", n = 2)
+ne_data$Species <- split_info[,1]
+ne_data$Region <- split_info[,2]
+
+dat <- assessmentdata::stockAssessmentData
+head(dat)
+
+recruit <- dplyr::filter(dat, 
+                         Metric == "Recruitment",
+                         Region == "Gulf of Maine / Georges Bank" |
+                           Region == "Eastern Georges Bank" |
+                           Region == "Georges Bank" |
+                           Region == "Gulf of Maine" |
+                           Region == "Gulf of Maine / Cape Hatteras" |
+                           Region == "Georges Bank / Southern New England" |
+                           Region == "Southern New England / Mid" |
+                           Region == "Gulf of Maine / Northern Georges Bank" |
+                           Region == "Southern Georges Bank / Mid" |
+                           Region == "Cape Cod / Gulf of Maine")
+#####
+
+all_species <- unique(c(ne_data$Species, recruit$Species))
+list_species <- split(all_species, f = list(all_species))
 
 # render some reports
 
-test_species <- list_species
-purrr::map(test_species, ~rmarkdown::render(here::here("R", "assessmentdata_report_template.Rmd"), 
+purrr::map(list_species, ~rmarkdown::render(here::here("R", "assessmentdata_report_template.Rmd"), 
                                             params = list(species_ID = .x,
-                                                          data_source = ne_data), 
+                                                          data_source = ne_data,
+                                                          recruit_data_source = recruit,
+                                                          nyear = 20), 
                                             output_dir = here::here("docs"),
-                                            output_file = paste(stringr::str_replace(.x, "/", "&"), 
+                                            output_file = paste(.x, "_assessmentdata", 
                                                                 ".html", sep = "")))
+
+plot_data <- subset(ne_data, Species == "Atlantic mackerel")
+list_regions <- split(unique(plot_data$Region), f = list(unique(plot_data$Region)))
+status(list_regions, metric = "bbmsy")
+test <- c("GOOD", "BAD", "UNKNOWN")
+
+test <- recruit[recruit$Species == list_species[3],]
+lil <- tibble::as_tibble(c(1))
+
+length(test$Species)
 
 # make summary spreadsheet
 #####

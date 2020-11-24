@@ -6,17 +6,19 @@ output: html_document
 params: 
   species_ID: "Acadian redfish - Gulf of Maine / Georges Bank"
   data_source: data
+  recruit_data_source: recruit
+  nyear: 20
 ---
 
 ```{r, setup, include = FALSE}
 knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.align = 'center')
-```
 
-```{r, functions, include = FALSE}
 library(ggplot2)
 
 `%>%` <- dplyr::`%>%`
+```
 
+```{r, bf_functions, include = FALSE}
 plot_bbmsy <- function(x, ytitle) {
 
   # use geom_gls only if there are 30 or more years of data
@@ -24,19 +26,23 @@ plot_bbmsy <- function(x, ytitle) {
     fig <- ggplot(x,
          aes(x = `B Year`,
              y = `B/Bmsy`))+
-    geom_point()+
+    geom_point(color = "navyblue", cex = 2)+
+    geom_line()+
     ecodata::geom_gls()+
     theme_bw()+
     xlab("Year")+
-    ylab(ytitle)
+    ylab(ytitle)+
+    facet_grid(cols = vars(Region))
   } else {
     fig <- ggplot(x,
          aes(x = `B Year`,
              y = `B/Bmsy`))+
-    geom_point()+
+    geom_point(color = "navyblue", cex = 2)+
+    geom_line()+
     theme_bw()+
     xlab("Year")+
-    ylab(ytitle)
+    ylab(ytitle)+
+    facet_grid(cols = vars(Region))
   }
 
   return(fig)
@@ -45,46 +51,147 @@ plot_bbmsy <- function(x, ytitle) {
 plot_ffmsy <- function(x, ytitle) {
 
   # use geom_gls only if there are 30 or more years of data
-  if(length(x$`B Year`) >= 30){
+  if(length(x$`F Year`) >= 30){
     fig <- ggplot(x,
          aes(x = `F Year`,
              y = `F/Fmsy`))+
-    geom_point()+
+    geom_point(color = "navyblue", cex = 2)+
+    geom_line()+
     ecodata::geom_gls()+
     theme_bw()+
     xlab("Year")+
-    ylab(ytitle)
+    ylab(ytitle)+
+    facet_grid(cols = vars(Region))
   } else {
     fig <- ggplot(x,
          aes(x = `F Year`,
              y = `F/Fmsy`))+
-    geom_point()+
+    geom_point(color = "navyblue", cex = 2)+
+    geom_line()+
     theme_bw()+
     xlab("Year")+
-    ylab(ytitle)
+    ylab(ytitle)+
+    facet_grid(cols = vars(Region))
   }
 
   return(fig)
 }
 
+status <- function(data, regions, metric){
+  
+  data <- dplyr::filter(data, Region == regions)
 
+  if(metric == "bbmsy") {data <- data$`B/Bmsy`}
+  if(metric == "ffmsy") {data <- data$`F/Fmsy`}
+  
+  if(sum(is.na(data)) == length(data)){
+  data_info <- "MISSING"} else data_info <- "PRESENT"
+
+  data <- data[is.na(data) == FALSE]
+
+  if(data_info == "PRESENT"){
+    if(metric == "bbmsy"){
+      data_status <- if(tail(data, n = 1) > 1) "GOOD" else "DANGER"
+    }
+    if(metric == "ffmsy"){
+      data_status <- if(tail(data, n = 1) > 1) "DANGER" else "GOOD"
+    }
+  
+  } else data_status <- "UNKNOWN"
+  
+  return(data_status)
+}
+```
+
+```{r, recruitment_functions, include = FALSE}
+plot_all <- function(x){
+  
+  max_y <- max(x$Value)
+  median_x <- median(unique(x$Year))
+  
+  x$facet_row <- paste(x$Description, x$Units, sep = "\n")
+  
+  all_sd <- x %>% dplyr::group_by(Region, facet_row) %>%
+    dplyr::summarise(sd_all = sd(Value, na.rm = TRUE) %>% round(digits = 2) %>% prettyNum(big.mark = ","),
+              x_coord = median_x,
+              y_coord = max_y * 0.85)
+
+  fig <- ggplot(x,
+            aes(x = Year,
+                y = Value))+
+   geom_point(color = "navyblue", cex = 2)+
+   geom_line()+
+   ecodata::geom_gls()+
+   geom_text(data = all_sd,
+             aes(x = x_coord,
+                 y = y_coord,
+                 label = sd_all))+
+    geom_text(aes(x = median(Year),
+                 y = max(Value) * 0.95,
+                 label = "St Dev:"))+
+    facet_grid(rows = vars(facet_row),
+             cols = vars(Region))+
+    theme_bw()+
+    labs(title = "All Recruitment Data")+
+    scale_y_continuous(label = scales::comma)
+  
+  return(fig)
+}
+
+plot_short <- function(x, n = nyear){
+  
+  min_year <- max(x$Year - n)
+  x <- dplyr::filter(x, Year > min_year)
+    
+  max_y <- max(x$Value)
+  median_x <- median(unique(x$Year))
+  
+  x$facet_row <- paste(x$Description, x$Units, sep = "\n")
+  
+  all_sd <- x %>% dplyr::group_by(Region, facet_row) %>%
+    dplyr::summarise(sd_all = sd(Value, na.rm = TRUE) %>% round(digits = 2) %>% prettyNum(big.mark = ","),
+              x_coord = median_x,
+              y_coord = max_y * 0.85)
+
+  fig <- ggplot(x,
+            aes(x = Year,
+                y = Value))+
+   geom_point(color = "navyblue", cex = 2)+
+   geom_line()+
+   ecodata::geom_gls()+
+   geom_text(data = all_sd,
+             aes(x = x_coord,
+                 y = y_coord,
+                 label = sd_all))+
+    geom_text(aes(x = median(Year),
+                 y = max(Value) * 0.95,
+                 label = "St Dev:"))+
+    facet_grid(rows = vars(facet_row),
+             cols = vars(Region))+
+    theme_bw()+
+    labs(title = paste("Last", n, "Years of Recruitment Data"))+
+    scale_y_continuous(label = scales::comma)
+ 
+  return(fig)
+}
 ```
 
 ```{r, data, include = FALSE}
 species <- params$species_ID
-data <- params$data_source
-plot_data <- data[data$`Stock Name` == species,]
 
-# TO-DO
-## find average from past 5 years and compare to long-term average?
-## or some other comparison metric
+data <- params$data_source
+plot_data <- data[data$Species == species,]
+
+recruit_data <- params$recruit_data_source
+plot_recruit_data <- recruit_data[recruit_data$Species == species,]
+nyear <- params$nyear
 ```
 
-## Test of assesssmentdata data, species stock name `r species`
+## Test of assesssmentdata data, species: `r species`
 
 This is a test report of `assessmentdata` data. 
 
-This report is pulling information on the species with the stock name: `r species`.
+This report is pulling information on all Northeast `r species` stocks.
 
 B/Bmsy and F/Fmsy were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit. 
 
@@ -92,43 +199,49 @@ B/Bmsy was classified as "DANGER" if it was below 1 and "GOOD" if it was above 1
 
 F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1.
 
-```{r status}
-# b/bmsy
-bbmsy <- plot_data$'B/Bmsy' 
-
-if(sum(is.na(bbmsy)) == length(bbmsy)){
-  b_data <- "MISSING"
-} else b_data <- "PRESENT"
-
-bbmsy <- bbmsy[is.na(bbmsy) == FALSE]
-
-if(b_data == "PRESENT"){
-  b_status <- if((tail(bbmsy, n = 1)) > 1) "GOOD" else "DANGER"
-} else b_status <- "UNKNOWN"
-
-# f/fmsy
-ffmsy <- plot_data$'F/Fmsy' 
-
-if(sum(is.na(ffmsy)) == length(ffmsy)){
-  f_data <- "MISSING"
-} else f_data <- "PRESENT"
-
-ffmsy <- ffmsy[is.na(ffmsy) == FALSE]
-
-if(f_data == "PRESENT"){
-  f_status <- if((tail(ffmsy, n = 1)) > 1) "DANGER" else "GOOD"
-} else f_status <- "UNKNOWN"
-```
+Recruitment was plotted against time for all years of data and for only the past `r nyear` years of data. In both cases, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). 
 
 ### B/Bmsy
-The most recent status of B/Bmsy is: `r b_status`
+```{r}
+if(length(plot_data$Species) > 1){
+  list_regions <- split(unique(plot_data$Region), f = list(unique(plot_data$Region)))
+  bbmsy2 <- purrr::map(list_regions, ~status(data = plot_data, regions = .x, metric = "bbmsy"))
+  ffmsy2 <- purrr::map(list_regions, ~status(data = plot_data, regions = .x, metric = "ffmsy"))
+} else {
+  bbmsy2 <- "UNKNOWN"
+  ffmsy2 <- "UNKNOWN"
+}
+
+```
+The most recent status of B/Bmsy is: `r bbmsy2`
 ```{r, bbmsy} 
-plot_bbmsy(plot_data, ytitle = "B / Bmsy")
+if("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2){
+  plot_bbmsy(plot_data[which(is.na(plot_data$`B/Bmsy`) == FALSE), ], 
+             ytitle = "B / Bmsy")
+} else print("NO DATA")
 ```
 
 ### F/Fmsy
-The most recent status of F/Fmsy is: `r f_status`
+The most recent status of F/Fmsy is: `r ffmsy2`
 ```{r, ffmsy}
-plot_ffmsy(plot_data, ytitle = "F / Fmsy")
+if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
+ plot_ffmsy(plot_data[which(is.na(plot_data$`F/Fmsy`) == FALSE), ],
+                      ytitle = "F / Fmsy")
+} else print("NO DATA")
+```
+
+### Recruitment
+#### Past `r nyear` years
+```{r, short} 
+if(length(plot_recruit_data$Species) >= 1){
+  plot_short(plot_recruit_data)
+} else print("NO DATA")
+```
+
+#### All years
+```{r, allyears} 
+if(length(plot_recruit_data$Species) >= 1){
+  plot_all(plot_recruit_data)
+} else print("NO DATA")
 ```
 
