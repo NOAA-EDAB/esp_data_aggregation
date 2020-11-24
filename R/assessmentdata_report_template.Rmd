@@ -85,7 +85,12 @@ plot_data <- data[data$`Stock Name` == species,]
 This is a test report of `assessmentdata` data. 
 
 This report is pulling information on the species with the stock name: `r species`.
+
 B/Bmsy and F/Fmsy were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit. 
+
+B/Bmsy was classified as "DANGER" if it was below 1 and "GOOD" if it was above 1.
+
+F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1.
 
 ```{r status}
 # b/bmsy
@@ -98,7 +103,7 @@ if(sum(is.na(bbmsy)) == length(bbmsy)){
 bbmsy <- bbmsy[is.na(bbmsy) == FALSE]
 
 if(b_data == "PRESENT"){
-  b_status <- if((tail(bbmsy, n = 1)) > 1) "DANGER" else "GOOD"
+  b_status <- if((tail(bbmsy, n = 1)) > 1) "GOOD" else "DANGER"
 } else b_status <- "UNKNOWN"
 
 # f/fmsy
