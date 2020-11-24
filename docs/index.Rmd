@@ -33,8 +33,8 @@ These reports are a preliminary analysis of `assessmentdata` data.
 
 ```{r}
 purrr::map(assessmentdata_pages, ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", .x, "'>",
-                 .x, "</a>", sep = "")) %>%
+                 stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1], "</a>", sep = "")) %>%
   unlist() %>%
-  knitr::kable(col.names = "Stock Name")
+  knitr::kable(col.names = "Species Name")
 
 ```
