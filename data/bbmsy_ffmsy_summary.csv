@@ -1,39 +1,39 @@
-"","B_year","B_Bmsy","B_status","F_year","F_Fmsy","F_status"
-"Acadian redfish - Gulf of Maine / Georges Bank","2016","1.45","GOOD","2016","0.28","GOOD"
-"American plaice - Gulf of Maine / Georges Bank","2016","0.99","DANGER","2016","0.5","GOOD"
-"Atlantic cod - Eastern Georges Bank","UNKNOWN","UNKNOWN","UNKNOWN","2015","0.46","GOOD"
-"Atlantic cod - Georges Bank","2011","0.07","DANGER","2011","2.39","DANGER"
-"Atlantic cod - Gulf of Maine","2010","0.19","DANGER","2010","5.7","DANGER"
-"Atlantic halibut - Northwestern Atlantic Coast","2010","0.03","DANGER","2010","0.44","GOOD"
-"Atlantic herring - Northwestern Atlantic Coast","2017","0.75","DANGER","2017","0.88","GOOD"
-"Atlantic salmon - Gulf of Maine","2016","0.15","DANGER","2016","0","GOOD"
-"Atlantic wolffish - Gulf of Maine / Georges Bank","2016","0.4","DANGER","2016","0.01","GOOD"
-"Barndoor skate - Georges Bank / Southern New England","2018","1.15","GOOD","UNKNOWN","UNKNOWN","UNKNOWN"
-"Clearnose skate - Southern New England / Mid-Atlantic","2018","0.92","DANGER","UNKNOWN","UNKNOWN","UNKNOWN"
-"Haddock - Eastern Georges Bank","UNKNOWN","UNKNOWN","UNKNOWN","2016","0.38","GOOD"
-"Haddock - Georges Bank","2016","2.78","GOOD","2016","0.88","GOOD"
-"Haddock - Gulf of Maine","2016","7.07","GOOD","2016","0.3","GOOD"
-"Little skate - Georges Bank / Southern New England","2019","0.87","DANGER","UNKNOWN","UNKNOWN","UNKNOWN"
-"Ocean pout - Northwestern Atlantic Coast","2016","0.05","DANGER","2016","0.29","GOOD"
-"Offshore hake - Northwestern Atlantic Coast","UNKNOWN","UNKNOWN","UNKNOWN","UNKNOWN","UNKNOWN","UNKNOWN"
-"Pollock - Gulf of Maine / Georges Bank","2016","1.74","GOOD","2016","0.14","GOOD"
-"Red deepsea crab - Northwestern Atlantic","UNKNOWN","UNKNOWN","UNKNOWN","2005","0.71","GOOD"
-"Red hake - Gulf of Maine / Northern Georges Bank","2016","2.02","GOOD","2016","0.55","GOOD"
-"Red hake - Southern Georges Bank / Mid-Atlantic","2016","0.37","DANGER","2016","1.36","DANGER"
-"Rosette skate - Southern New England / Mid-Atlantic","2018","0.98","DANGER","UNKNOWN","UNKNOWN","UNKNOWN"
-"Sea scallop - Northwestern Atlantic Coast","2017","2.72","GOOD","2017","0.19","GOOD"
-"Silver hake - Gulf of Maine / Northern Georges Bank","2016","3.1","GOOD","2016","0.05","GOOD"
-"Silver hake - Southern Georges Bank / Mid-Atlantic","2016","0.64","DANGER","2016","0.17","GOOD"
-"Smooth skate - Gulf of Maine","2018","1","DANGER","UNKNOWN","UNKNOWN","UNKNOWN"
-"Thorny skate - Gulf of Maine","2018","0.04","DANGER","UNKNOWN","UNKNOWN","UNKNOWN"
-"White hake - Gulf of Maine / Georges Bank","2016","0.69","DANGER","2016","0.36","GOOD"
-"Windowpane - Gulf of Maine / Georges Bank","2016","0.17","DANGER","2016","0.65","GOOD"
-"Windowpane - Southern New England / Mid-Atlantic","2016","1.3","GOOD","2016","0.9","GOOD"
-"Winter flounder - Georges Bank","2016","0.52","DANGER","2016","0.22","GOOD"
-"Winter flounder - Gulf of Maine","2004","0.84","DANGER","2016","0.37","GOOD"
-"Winter flounder - Southern New England / Mid-Atlantic","2016","0.18","DANGER","2016","0.62","GOOD"
-"Winter skate - Georges Bank / Southern New England","2018","1.28","GOOD","UNKNOWN","UNKNOWN","UNKNOWN"
-"Witch flounder - Northwestern Atlantic Coast","2014","0.22","DANGER","2014","2.46","DANGER"
-"Yellowtail flounder - Cape Cod / Gulf of Maine","2016","0.26","DANGER","2016","1.15","DANGER"
-"Yellowtail flounder - Georges Bank","2011","0.11","DANGER","2014","0.2","GOOD"
-"Yellowtail flounder - Southern New England / Mid-Atlantic","2016","0.08","DANGER","2016","3.21","DANGER"
+Stock_name,B_year,B_Bmsy,B_status,F_year,F_Fmsy,F_status
+Acadian redfish - Gulf of Maine / Georges Bank,2016,1.45,GOOD,2016,0.28,GOOD
+American plaice - Gulf of Maine / Georges Bank,2016,0.99,DANGER,2016,0.5,GOOD
+Atlantic cod - Eastern Georges Bank,UNKNOWN,UNKNOWN,UNKNOWN,2015,0.46,GOOD
+Atlantic cod - Georges Bank,2011,0.07,DANGER,2011,2.39,DANGER
+Atlantic cod - Gulf of Maine,2010,0.19,DANGER,2010,5.7,DANGER
+Atlantic halibut - Northwestern Atlantic Coast,2010,0.03,DANGER,2010,0.44,GOOD
+Atlantic herring - Northwestern Atlantic Coast,2017,0.75,DANGER,2017,0.88,GOOD
+Atlantic salmon - Gulf of Maine,2016,0.15,DANGER,2016,0,GOOD
+Atlantic wolffish - Gulf of Maine / Georges Bank,2016,0.4,DANGER,2016,0.01,GOOD
+Barndoor skate - Georges Bank / Southern New England,2018,1.15,GOOD,UNKNOWN,UNKNOWN,UNKNOWN
+Clearnose skate - Southern New England / Mid-Atlantic,2018,0.92,DANGER,UNKNOWN,UNKNOWN,UNKNOWN
+Haddock - Eastern Georges Bank,UNKNOWN,UNKNOWN,UNKNOWN,2016,0.38,GOOD
+Haddock - Georges Bank,2016,2.78,GOOD,2016,0.88,GOOD
+Haddock - Gulf of Maine,2016,7.07,GOOD,2016,0.3,GOOD
+Little skate - Georges Bank / Southern New England,2019,0.87,DANGER,UNKNOWN,UNKNOWN,UNKNOWN
+Ocean pout - Northwestern Atlantic Coast,2016,0.05,DANGER,2016,0.29,GOOD
+Offshore hake - Northwestern Atlantic Coast,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN
+Pollock - Gulf of Maine / Georges Bank,2016,1.74,GOOD,2016,0.14,GOOD
+Red deepsea crab - Northwestern Atlantic,UNKNOWN,UNKNOWN,UNKNOWN,2005,0.71,GOOD
+Red hake - Gulf of Maine / Northern Georges Bank,2016,2.02,GOOD,2016,0.55,GOOD
+Red hake - Southern Georges Bank / Mid-Atlantic,2016,0.37,DANGER,2016,1.36,DANGER
+Rosette skate - Southern New England / Mid-Atlantic,2018,0.98,DANGER,UNKNOWN,UNKNOWN,UNKNOWN
+Sea scallop - Northwestern Atlantic Coast,2017,2.72,GOOD,2017,0.19,GOOD
+Silver hake - Gulf of Maine / Northern Georges Bank,2016,3.1,GOOD,2016,0.05,GOOD
+Silver hake - Southern Georges Bank / Mid-Atlantic,2016,0.64,DANGER,2016,0.17,GOOD
+Smooth skate - Gulf of Maine,2018,1,DANGER,UNKNOWN,UNKNOWN,UNKNOWN
+Thorny skate - Gulf of Maine,2018,0.04,DANGER,UNKNOWN,UNKNOWN,UNKNOWN
+White hake - Gulf of Maine / Georges Bank,2016,0.69,DANGER,2016,0.36,GOOD
+Windowpane - Gulf of Maine / Georges Bank,2016,0.17,DANGER,2016,0.65,GOOD
+Windowpane - Southern New England / Mid-Atlantic,2016,1.3,GOOD,2016,0.9,GOOD
+Winter flounder - Georges Bank,2016,0.52,DANGER,2016,0.22,GOOD
+Winter flounder - Gulf of Maine,2004,0.84,DANGER,2016,0.37,GOOD
+Winter flounder - Southern New England / Mid-Atlantic,2016,0.18,DANGER,2016,0.62,GOOD
+Winter skate - Georges Bank / Southern New England,2018,1.28,GOOD,UNKNOWN,UNKNOWN,UNKNOWN
+Witch flounder - Northwestern Atlantic Coast,2014,0.22,DANGER,2014,2.46,DANGER
+Yellowtail flounder - Cape Cod / Gulf of Maine,2016,0.26,DANGER,2016,1.15,DANGER
+Yellowtail flounder - Georges Bank,2011,0.11,DANGER,2014,0.2,GOOD
+Yellowtail flounder - Southern New England / Mid-Atlantic,2016,0.08,DANGER,2016,3.21,DANGER
