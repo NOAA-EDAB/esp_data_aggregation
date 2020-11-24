@@ -1,0 +1,121 @@
+---
+title: "assessmentdata_recruitment"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+params: 
+  species_ID: "Acadian redfish"
+  data_source: data
+  nyear: 10
+---
+
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.align = 'center')
+```
+
+```{r, functions, include = FALSE}
+library(ggplot2)
+
+`%>%` <- dplyr::`%>%`
+
+plot_all <- function(x){
+  
+  max_y <- max(x$Value)
+  median_x <- median(unique(x$Year))
+  
+  x$facet_row <- paste(x$Description, x$Units, sep = "\n")
+  
+  all_sd <- x %>% dplyr::group_by(Region, facet_row) %>%
+    dplyr::summarise(sd_all = sd(Value, na.rm = TRUE) %>% round(digits = 2) %>% prettyNum(big.mark = ","),
+              x_coord = median_x,
+              y_coord = max_y * 0.85)
+
+  fig <- ggplot(x,
+            aes(x = Year,
+                y = Value))+
+   geom_point(color = "navyblue")+
+   ecodata::geom_gls()+
+   geom_text(data = all_sd,
+             aes(x = x_coord,
+                 y = y_coord,
+                 label = sd_all))+
+    geom_text(aes(x = median(Year),
+                 y = max(Value) * 0.95,
+                 label = "St Dev:"))+
+    facet_grid(rows = vars(facet_row),
+             cols = vars(Region))+
+    theme_bw()+
+    labs(title = "All Recruitment Data")+
+    scale_y_continuous(label = scales::comma)
+  
+  return(fig)
+}
+
+plot_short <- function(x, n = nyear){
+  
+  min_year <- max(x$Year - n)
+  x <- dplyr::filter(x, Year > min_year)
+    
+  max_y <- max(x$Value)
+  median_x <- median(unique(x$Year))
+  
+  x$facet_row <- paste(x$Description, x$Units, sep = "\n")
+  
+  all_sd <- x %>% dplyr::group_by(Region, facet_row) %>%
+    dplyr::summarise(sd_all = sd(Value, na.rm = TRUE) %>% round(digits = 2) %>% prettyNum(big.mark = ","),
+              x_coord = median_x,
+              y_coord = max_y * 0.85)
+
+  fig <- ggplot(x,
+            aes(x = Year,
+                y = Value))+
+   geom_point(color = "navyblue")+
+   ecodata::geom_gls()+
+   geom_text(data = all_sd,
+             aes(x = x_coord,
+                 y = y_coord,
+                 label = sd_all))+
+    geom_text(aes(x = median(Year),
+                 y = max(Value) * 0.95,
+                 label = "St Dev:"))+
+    facet_grid(rows = vars(facet_row),
+             cols = vars(Region))+
+    theme_bw()+
+    labs(title = paste("Last", n, "Years of Recruitment Data"))+
+    scale_y_continuous(label = scales::comma)
+ 
+  return(fig)
+}
+
+
+```
+
+```{r, data, include = FALSE}
+species <- params$species_ID
+data <- params$data_source
+nyear <- params$nyear
+plot_data <- data[data$Species == species,]
+```
+
+## Test of assesssmentdata recruitment data, species: `r species`
+
+This is a test report of `assessmentdata` recruitment data. 
+
+This report is pulling information on all stocks of the species: `r species`.
+
+Recruitment was plotted against time for all years of data and for only the past `r nyear` years of data. In both cases, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). 
+
+### Past `r nyear` years
+```{r, short} 
+plot_short(plot_data)
+```
+
+### All years
+```{r, allyears} 
+plot_all(plot_data)
+```
+
+
+
+
+
