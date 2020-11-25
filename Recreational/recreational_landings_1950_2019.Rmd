@@ -21,6 +21,7 @@ title: "`r params$stock #in params$location `"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 stock_name<- params$stock
+Rec_state<-params$state
 
 
 ```
@@ -121,7 +122,6 @@ fish_match<-rec_w_comma_whole[str_detect(rec_w_comma_whole$common_name, "hake"),
 rec_landings_clean<-rec_by_sp_whole
 rec_landings_1950_2019_clean <-rec_landings_1950_2019_whole
 # rm(list =c("rec_by_sp", "rec_landings_1950_2019", "rec_landings_1950_2019_comma", "rec_landings_1950_2019_comma_split" "rec_w_comma", "rec_w_comma_split", "stock_list", "stock_list_all_strata") )
-unique(rec_landings_1950_2019_clean$State)
 
 ```
 
@@ -134,7 +134,7 @@ This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.no
 ```{r total catch, echo=FALSE}
 
 rec_landings_clean %>% filter(common_name==stock_name) %>%
-  ggplot2::ggplot(aes(x=Year, y=log10(total),))+geom_point()+geom_line()+ggtitle(label = params$stock )+xlab(label= "Year")+ylab(label = " Log transformed  total catch in pounds (lb) ")+theme_minimal()
+  ggplot2::ggplot(aes(x=Year, y=zoo::rollmean(log(total),7, na.pad=TRUE)))+geom_point()+geom_line()+ggtitle(label = params$stock )+xlab(label= "Year")+ylab(label = " Log transformed  total catch in pounds (lb) ")+theme_minimal()
 
 
 
@@ -142,9 +142,10 @@ rec_landings_clean %>% filter(common_name==stock_name) %>%
 
 ```
 
-```{r state breakdown}
+```{r state breakdown, echo= FALSE}
+rec.sub<-rec_landings_1950_2019_clean %>%  dplyr::filter(State == params$state & common_name == params$stock)
 
-
+rec.sub %>% ggplot2::ggplot(aes(x=Year, y= log(Pounds)))+geom_point(size=3)+geom_line(aes(y= zoo::rollmean(log(Pounds),7, na.pad=TRUE)))+ggtitle(params$stock, subtitle = params$state)
 
 ```
 
