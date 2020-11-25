@@ -1,8 +1,15 @@
 ---
-title: "Preliminary survdat reports"
+title: "Preliminary ESP reports"
 author: "Abigail Tyrell"
 date: "`r format(Sys.time(), '%d %b %Y')`"
-output: html_document
+
+output: 
+  html_document:
+    toc: TRUE
+    number_sections: TRUE
+    toc_float: 
+      collapsed: FALSE
+    toc_depth: 5
 ---
 
 ```{r setup, include=FALSE}
@@ -12,29 +19,68 @@ knitr::opts_chunk$set(echo = FALSE)
 
 all_pages <- list.files(here::here("docs/"), pattern = ".html")
 all_pages <- all_pages[-which(all_pages == "index.html")]
+
 survdat_pages <- all_pages[which(nchar(all_pages) == 8)]
-assessmentdata_pages <- all_pages[-which(nchar(all_pages) == 8)]
+
+assessmentdata_pages <- all_pages[stringr::str_which(all_pages, pattern = "assessmentdata.html")]
+
+a_and_s_pages <- all_pages[stringr::str_which(all_pages, pattern = "assessmentdata_and_survdat.html")]
+
+rec_pages <- all_pages[stringr::str_which(all_pages, pattern = "recreational")]
 ```
 
-# Table of contents
-## `survdat`
-These reports are a preliminary analysis of `survdat` data.
+# `assessmentdata` and `survdat` 
+These reports are a preliminary analysis of `assessmentdata` and `survdat` data.
 
 ```{r}
-purrr::map(survdat_pages, ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", .x, "'>",
-                 .x, "</a>", sep = "")) %>%
+purrr::map(a_and_s_pages, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", 
+                  .x, "'>",
+                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1], 
+                  "</a>", sep = "")) %>%
+  unlist() %>%
+  knitr::kable(col.names = "Species name")
+
+```
+
+# `assessmentdata`
+These reports are a preliminary analysis of `assessmentdata` data only.
+
+```{r}
+purrr::map(assessmentdata_pages, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", 
+                  .x, "'>",
+                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1], 
+                  "</a>", sep = "")) %>%
+  unlist() %>%
+  knitr::kable(col.names = "Species name")
+
+```
+
+# `survdat`
+These reports are a preliminary analysis of `survdat` data only.
+
+```{r}
+purrr::map(survdat_pages, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", 
+                  .x, "'>",
+                  stringr::str_split_fixed(.x, pattern = ".h", n = 2)[,1], 
+                  "</a>", sep = "")) %>%
   unlist() %>%
   knitr::kable(col.names = "SVSPP")
 
 ```
 
-## `assessmentdata`
-These reports are a preliminary analysis of `assessmentdata` data.
+# Recreational
+These reports are a preliminary analysis of recreational data only.
 
 ```{r}
-purrr::map(assessmentdata_pages, ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", .x, "'>",
-                 stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1], "</a>", sep = "")) %>%
+purrr::map(rec_pages, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", 
+                  .x, "'>",
+                  stringr::str_split_fixed(.x, pattern = ".h", n = 2)[,1], 
+                  "</a>", sep = "")) %>%
   unlist() %>%
-  knitr::kable(col.names = "Species Name")
+  knitr::kable(col.names = "File name")
 
 ```
