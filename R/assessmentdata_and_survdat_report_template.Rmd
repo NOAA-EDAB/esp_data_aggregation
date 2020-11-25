@@ -1,0 +1,440 @@
+---
+title: "`r params$species_ID`"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+
+output: 
+  html_document:
+    toc: TRUE
+    number_sections: TRUE
+    toc_float: 
+      collapsed: FALSE
+      title: "`r params$species_ID`"
+    toc_depth: 5
+
+params: 
+  species_ID: "Acadian redfish" # common name of species
+  
+  bf_data: data # bbmsy ffmsy data
+  
+  recruit_data: recruit # recruitment data
+  nyear: 20 # look at recruitment over past nyear years
+  
+  survey_data: data # survey data
+  
+  # sources of data
+  b_source: "assessmentdata::stockAssessmentSummary"
+  f_source: "assessmentdata::stockAssessmentSummary"
+  recruit_source: "assessmentdata::stockAssessmentData"
+  surftemp_source: "survdat"
+  bottemp_source: "survdat"
+  surfsalin_source: "survdat"
+  botsalin_source: "survdat"
+  abun_source: "survdat"
+  biomass_source: "survdat"
+  length_source: "survdat"
+---
+
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.align = 'center')
+
+library(ggplot2)
+
+`%>%` <- dplyr::`%>%`
+```
+
+```{r, bf_functions, include = FALSE}
+plot_bbmsy <- function(x, ytitle) {
+
+  fig <- ggplot(x,
+         aes(x = B.Year,
+             y = B.Bmsy))+
+    geom_point(color = "navyblue", cex = 2)+
+    geom_line()+
+    theme_bw()+
+    xlab("Year")+
+    ylab(ytitle)+
+    facet_grid(cols = vars(Region))
+  
+  if (sum(is.na(x$B.Bmsy) == FALSE) >= 30) 
+    {fig <- fig + ecodata::geom_gls()}
+
+  return(fig)
+}
+
+plot_ffmsy <- function(x, ytitle) {
+
+  fig <- ggplot(x,
+         aes(x = F.Year,
+             y = F.Fmsy))+
+    geom_point(color = "navyblue", cex = 2)+
+    geom_line()+
+    theme_bw()+
+    xlab("Year")+
+    ylab(ytitle)+
+    facet_grid(cols = vars(Region))
+  
+  if (sum(is.na(x$F.Fmsy) == FALSE) >= 30) 
+    {fig <- fig + ecodata::geom_gls()} 
+
+  return(fig)
+}
+
+status <- function(data, regions, metric){
+  
+  data <- dplyr::filter(data, Region == regions)
+
+  if(metric == "bbmsy") {data <- data$B.Bmsy}
+  if(metric == "ffmsy") {data <- data$F.Fmsy}
+  
+  if(sum(is.na(data)) == length(data)){
+  data_info <- "MISSING"} else data_info <- "PRESENT"
+
+  data <- data[is.na(data) == FALSE]
+
+  if(data_info == "PRESENT"){
+    if(metric == "bbmsy"){
+      data_status <- if(tail(data, n = 1) > 1) "GOOD" else "DANGER"
+    }
+    if(metric == "ffmsy"){
+      data_status <- if(tail(data, n = 1) > 1) "DANGER" else "GOOD"
+    }
+  
+  } else data_status <- "UNKNOWN"
+  
+  return(data_status)
+}
+```
+
+```{r, recruitment_functions, include = FALSE}
+plot_all <- function(x){
+  
+  max_y <- max(x$Value)
+  median_x <- median(unique(x$Year))
+  
+  x$facet_row <- paste(x$Description, x$Units, sep = "\n")
+  
+  all_sd <- x %>% dplyr::group_by(Region, facet_row) %>%
+    dplyr::summarise(sd_all = sd(Value, na.rm = TRUE) %>% round(digits = 2) %>% prettyNum(big.mark = ","),
+              x_coord = median_x,
+              y_coord = max_y * 0.85)
+
+  fig <- ggplot(x,
+            aes(x = Year,
+                y = Value))+
+   geom_point(color = "navyblue", cex = 2)+
+   geom_line()+
+   geom_text(data = all_sd,
+             aes(x = x_coord,
+                 y = y_coord,
+                 label = sd_all))+
+    geom_text(aes(x = median(Year),
+                 y = max(Value) * 0.95,
+                 label = "St Dev:"))+
+    facet_grid(rows = vars(facet_row),
+             cols = vars(Region))+
+    theme_bw()+
+    labs(title = "All Recruitment Data")+
+    scale_y_continuous(label = scales::comma)
+  
+  if (sum(is.na(x$Value) == FALSE) >= 30) 
+    {fig <- fig + ecodata::geom_gls()} 
+  
+  return(fig)
+}
+
+plot_short <- function(x, n = nyear){
+  
+  min_year <- max(x$Year - n)
+  x <- dplyr::filter(x, Year > min_year)
+    
+  max_y <- max(x$Value)
+  median_x <- median(unique(x$Year))
+  
+  x$facet_row <- paste(x$Description, x$Units, sep = "\n")
+  
+  all_sd <- x %>% dplyr::group_by(Region, facet_row) %>%
+    dplyr::summarise(sd_all = sd(Value, na.rm = TRUE) %>% 
+                       round(digits = 2) %>% 
+                       prettyNum(big.mark = ","),
+              x_coord = median_x,
+              y_coord = max_y * 0.85)
+
+  fig <- ggplot(x,
+            aes(x = Year,
+                y = Value))+
+   geom_point(color = "navyblue", cex = 2)+
+   geom_line()+
+   geom_text(data = all_sd,
+             aes(x = x_coord,
+                 y = y_coord,
+                 label = sd_all))+
+    geom_text(aes(x = median(Year),
+                 y = max(Value) * 0.95,
+                 label = "St Dev:"))+
+    facet_grid(rows = vars(facet_row),
+             cols = vars(Region))+
+    theme_bw()+
+    labs(title = paste("Last", n, "Years of Recruitment Data"))+
+    scale_y_continuous(label = scales::comma)
+ 
+  if (sum(is.na(x$Value) == FALSE) >= 30) 
+    {fig <- fig + ecodata::geom_gls()} 
+  
+  return(fig)
+}
+```
+
+```{r, survdat_functions, include = FALSE}
+get_var_data <- function(x, variable){
+  y <- dplyr::filter(x, get(variable) > 0, ABUNDANCE > 0)
+  
+# mean by year
+if(variable == "BIOMASS" | variable == "ABUNDANCE"){
+     y <- y %>% dplyr::group_by(YEAR, SEASON) %>%
+     dplyr::summarise(variable2 = sum(get(variable)))
+  } else {
+    y <- y %>% dplyr::group_by(YEAR, SEASON) %>%
+    dplyr::summarise(variable2 = mean(get(variable)))
+  }
+
+colnames(y) <- c("YEAR", "SEASON", "variable")
+
+return(y)
+}
+
+plot_variable <- function(x, season, ytitle) {
+
+  y <- dplyr::filter(x, SEASON == season)
+  
+    fig <- ggplot(y,
+         aes(x = as.numeric(YEAR),
+             y = variable))+
+    geom_point()+
+    theme_bw()+
+    xlab("Year")+
+    ylab(ytitle)+
+    labs(title = season)
+  
+  if (sum(is.na(y$variable) == FALSE) >= 30) 
+    {fig <- fig + ecodata::geom_gls()} 
+
+  return(fig)
+}
+
+format_numbers <- function(x) {as.numeric(as.character(unlist(x)))}
+
+data_summary <- function(x, season) {
+
+  season_data <- dplyr::filter(x, SEASON == season)
+
+  year_data <- format_numbers(season_data$YEAR)
+
+  variable_data <- format_numbers(season_data[,3])
+
+  all_data <- c(paste(min(year_data), max(year_data), sep = " - "),
+                length(year_data),
+                round(mean(variable_data, na.rm = TRUE), digits = 2),
+                round(sd(variable_data, na.rm = TRUE), digits = 2),
+                round(min(variable_data, na.rm = TRUE), digits = 2),
+                round(max(variable_data, na.rm = TRUE), digits = 2))
+  
+  z <- dplyr::filter(season_data, YEAR > (max(year_data) - 5))
+
+  five_year_data <- format_numbers(z$YEAR)
+  five_variable_data <- format_numbers(z[,3])
+  
+  five_data <- c(paste(min(five_year_data), max(five_year_data), sep = " - "),
+                 length(five_year_data),
+                 round(mean(five_variable_data, na.rm = TRUE), digits = 2),
+                 round(sd(five_variable_data, na.rm = TRUE), digits = 2),
+                 round(min(five_variable_data, na.rm = TRUE), digits = 2),
+                 round(max(five_variable_data, na.rm = TRUE), digits = 2))
+  
+  output <- rbind(c(season, all_data), c(season, five_data))
+  
+  return(output)
+}
+
+generate_info <- function(x, ytitle, variable){
+  
+  data <- get_var_data(x, variable = variable)
+  
+  spring_fig <- plot_variable(data, 
+              season = "SPRING",
+              ytitle = ytitle)
+  
+ fall_fig <- plot_variable(data, 
+              season = "FALL",
+              ytitle = ytitle)
+
+  table <- rbind(data_summary(data, season = "SPRING"),
+                 data_summary(data, season = "FALL"))
+                 
+  colnames(table) <- c("SEASON", "YEARS", "N_YEARS", "MEAN", "SD", "MIN", "MAX")
+  
+  print(spring_fig)
+  print(fall_fig)
+  return(knitr::kable(table))
+}
+```
+
+```{r, data, include = FALSE}
+species <- params$species_ID
+
+bf_data <- params$bf_data
+bf_data <- bf_data[bf_data$Species == species, ]
+
+recruit_data <- params$recruit_data
+recruit_data <- recruit_data[recruit_data$Species == species, ]
+nyear <- params$nyear
+
+survey_data <- params$survey_data
+survey_data <- survey_data[survey_data$Species == species, ]
+```
+
+```{r, bf_status}
+if(length(bf_data$Species) > 1){
+  list_regions <- split(unique(bf_data$Region), f = list(unique(bf_data$Region)))
+  bbmsy2 <- purrr::map(list_regions, ~status(data = bf_data, regions = .x, metric = "bbmsy"))
+  ffmsy2 <- purrr::map(list_regions, ~status(data = bf_data, regions = .x, metric = "ffmsy"))
+} else {
+  bbmsy2 <- "UNKNOWN"
+  ffmsy2 <- "UNKNOWN"
+}
+
+```
+
+This is a preliminary report of `assessmentdata` and `survdat` data. This report is pulling information on all Northeast `r species` stocks.
+
+# Methods
+
+## `assessmentdata` methods
+B/Bmsy was classified as "DANGER" if it was below 1 and "GOOD" if it was above 1.
+
+F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1.
+
+
+## `survdat` methods
+`survdat` data with zero abundance were not included in this analysis. Abundance and biomass were summed for each year and season. All other metrics were averaged for each year and season. The tables show summary statistics for the entire time series and for the most recent 5 years in the time series. 
+
+
+## General methods
+All data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit. 
+
+
+# Results
+
+## B/Bmsy
+B/Bmsy data were pulled from ``r params$b_source``.
+
+The most recent status of B/Bmsy is: `r bbmsy2`
+```{r, bbmsy} 
+if("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2){
+  plot_bbmsy(bf_data[which(is.na(bf_data$B.Bmsy) == FALSE), ], 
+             ytitle = "B / Bmsy")
+} else print("NO DATA")
+```
+
+## F/Fmsy
+F/Fmsy data were pulled from ``r params$f_source``.
+
+The most recent status of F/Fmsy is: `r ffmsy2`
+```{r, ffmsy}
+if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
+ plot_ffmsy(bf_data[which(is.na(bf_data$F.Fmsy) == FALSE), ],
+                      ytitle = "F / Fmsy")
+} else print("NO DATA")
+```
+
+## Recruitment
+Recruitment data were pulled from ``r params$recruit_source``.
+
+### Past `r nyear` years
+```{r, short} 
+if(length(recruit_data$Species) >= 1){
+  plot_short(recruit_data)
+} else print("NO DATA")
+```
+
+### All years
+```{r, allyears} 
+if(length(recruit_data$Species) >= 1){
+  plot_all(recruit_data)
+} else print("NO DATA")
+```
+
+## Temperature
+
+### Surface temperature
+Surface temperature data were pulled from ``r params$surftemp_source``.
+```{r, surftemp}
+if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
+  generate_info(survey_data,
+              variable = "SURFTEMP", 
+              ytitle = "Surface temperature")
+} else print("NO DATA")
+```
+
+### Bottom temperature
+Bottom temperature data were pulled from ``r params$bottemp_source``.
+```{r, bottemp}
+if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
+  generate_info(survey_data,
+              variable = "BOTTEMP", 
+              ytitle = "Bottom temperature")
+} else print("NO DATA")
+```
+
+## Salinity 
+
+### Surface salinity
+Surface salinity data were pulled from ``r params$surfsalin_source``.
+```{r, surfsalin}
+if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
+  generate_info(survey_data,
+              variable = "SURFSALIN", 
+              ytitle = "Surface salinity")
+} else print("NO DATA")
+```
+
+### Bottom salinity
+Bottom salinity data were pulled from ``r params$botsalin_source``.
+```{r, botsalin}
+if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
+  generate_info(survey_data,
+              variable = "BOTSALIN", 
+              ytitle = "Bottom salinity")
+} else print("NO DATA")
+```
+
+## Abundance
+Abundance data were pulled from ``r params$abun_source``.
+```{r, abundance}
+if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
+  generate_info(survey_data,
+              variable = "ABUNDANCE", 
+              ytitle = "Abundance")
+} else print("NO DATA")
+```
+
+## Biomass
+Biomass data were pulled from ``r params$biomass_source``.
+```{r, biomass}
+if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
+  generate_info(survey_data,
+              variable = "BIOMASS", 
+              ytitle = "Biomass")
+} else print("NO DATA")
+```
+
+## Length
+Length data were pulled from ``r params$length_source``.
+```{r, length}
+if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
+  generate_info(survey_data,
+              variable = "LENGTH", 
+              ytitle = "Length")
+} else print("NO DATA")
+```
+
