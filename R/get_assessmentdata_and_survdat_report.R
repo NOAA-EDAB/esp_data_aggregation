@@ -3,25 +3,32 @@
 bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
 recruit <- read.csv(here::here("data", "recruitment_data.csv"))
 survey <- read.csv(here::here("data", "survey_data.csv"))
+ad <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
+latlong <- read.csv(here::here("data", "geo_range_data.csv"))
+shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
 
-all_species <- unique(c(bf$Species, recruit$Species, survey$Species))
+all_species <- unique(c(bf$Species, recruit$Species, survey$Species, ad$Species))
 list_species <- split(all_species, f = list(all_species))
 
 # render some reports
 
-purrr::map(list_species, ~rmarkdown::render(here::here("R", "assessmentdata_and_survdat_report_template.Rmd"), 
+purrr::map(list_species[1], ~rmarkdown::render(here::here("R", "assessmentdata_and_survdat_report_template.Rmd"), 
                                             params = list(species_ID = .x,
+                                                          
+                                                          latlong_data = latlong,
+                                                          shape = shape,
                                                           
                                                           bf_data = bf,
                                                           
                                                           recruit_data = recruit,
                                                           nyear = 20,
                                                           
-                                                          survey_data = survey), 
+                                                          survey_data = survey,
+                                                          
+                                                          ad_rating_data = ad), 
                                             output_dir = here::here("docs"),
                                             output_file = paste(.x, "_assessmentdata_and_survdat", 
                                                                 ".html", sep = "")))
-
 
 # make summary spreadsheet
 #####
