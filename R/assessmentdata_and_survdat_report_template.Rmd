@@ -211,6 +211,7 @@ plot_variable <- function(x, season, ytitle) {
          aes(x = as.numeric(YEAR),
              y = variable))+
     geom_point()+
+    geom_line()+
     theme_bw()+
     xlab("Year")+
     ylab(ytitle)+
