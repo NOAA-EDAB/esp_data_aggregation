@@ -15,6 +15,9 @@ output:
 params: 
   species_ID: "Acadian redfish" # common name of species
   
+  latlong_data: data # strata
+  shape: shape # shapefile
+  
   bf_data: data # bbmsy ffmsy data
   
   recruit_data: recruit # recruitment data
@@ -22,7 +25,10 @@ params:
   
   survey_data: data # survey data
   
+  ad_rating_data: data # assessmentdata ratings 
+  
   # sources of data
+  qual_source: "assessmentdata::stockAssessmentSummary"
   b_source: "assessmentdata::stockAssessmentSummary"
   f_source: "assessmentdata::stockAssessmentSummary"
   recruit_source: "assessmentdata::stockAssessmentData"
@@ -41,6 +47,48 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.align = 'center')
 library(ggplot2)
 
 `%>%` <- dplyr::`%>%`
+```
+
+```{r, latlong_functions}
+get_strata <- function(x, data, shapefile){
+  
+  range_coord <- c()
+  
+  data <- dplyr::filter(data, Species == x)
+  
+  for(i in unique(data$Region)){
+    
+    for(j in unique(data$season_)){
+      
+      data2 <- data %>% dplyr::filter(season_ == j, Region == i)
+
+      if(length(data2[,1]) > 0){
+        
+        log_statement <- paste("STRATA == ", unique(data2$strata), collapse = " | ")
+        
+        strata <- dplyr::filter(shapefile, eval(parse(text = log_statement)))
+        
+        temp <- c(i, j, round(sf::st_bbox(strata), digits = 2))
+                             
+        missing_data <- match(unique(data2$strata), unique(shapefile$STRATA)) %>% 
+          is.na() %>% sum()
+        
+        if(missing_data == 0) {warning <- "none"}
+        if(missing_data > 0) {warning <- "shapefile is missing some strata data"}
+        
+        range_coord <- rbind(range_coord, c(temp, warning))
+
+        }
+      }
+    }
+  
+  if(length(range_coord) > 0) {
+    colnames(range_coord) <- c("Region", "Season", "Lat_min", 
+                             "Long_min", "Lat_max", "Long_max", "Warning")
+  }
+  
+  return(range_coord)
+}
 ```
 
 ```{r, bf_functions, include = FALSE}
@@ -283,6 +331,9 @@ generate_info <- function(x, ytitle, variable){
 ```{r, data, include = FALSE}
 species <- params$species_ID
 
+latlong_data <- params$latlong_data
+latlong_data <- latlong_data[latlong_data$Species == species, ]
+
 bf_data <- params$bf_data
 bf_data <- bf_data[bf_data$Species == species, ]
 
@@ -292,6 +343,19 @@ nyear <- params$nyear
 
 survey_data <- params$survey_data
 survey_data <- survey_data[survey_data$Species == species, ]
+
+ad <- params$ad_rating_data
+ad <- ad[ad$Species == species, ]
+ad_rating_data <- tibble::tibble(Species = ad$Species,
+                         Region = ad$Region,
+                         `Assessment Year` = ad$Assessment.Year,
+                         `Last Data Year` = ad$Last.Data.Year,
+                         `Biological Data Rating (2019)` = ad$Biological.Input.Data,
+                         `Biological Data Rating (before 2019)` = ad$Life.History.Data,
+                         `Size Data Rating` = ad$Composition.Input.Data,
+                         `Ecosystem Linkage Data Rating` = ad$Ecosystem.Linkage,
+                         `FSSI status` = ad$FSSI.Stock.,
+                         `Review Result` = ad$Review.Result)
 ```
 
 ```{r, bf_status}
@@ -310,7 +374,14 @@ This is a preliminary report of `assessmentdata` and `survdat` data. This report
 
 # Methods
 
+## General methods
+Latitude and longitude ranges were compiled from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
+
+All continuous temporal data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit.
+
 ## `assessmentdata` methods
+Stock assessment and data quality information were compiled into a summary table.
+
 B/Bmsy was classified as "DANGER" if it was below 1 and "GOOD" if it was above 1.
 
 F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1.
@@ -319,12 +390,21 @@ F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1
 ## `survdat` methods
 `survdat` data with zero abundance were not included in this analysis. Abundance and biomass were summed for each year and season. All other metrics were averaged for each year and season. The tables show summary statistics for the entire time series and for the most recent 5 years in the time series. 
 
-
-## General methods
-All data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit. 
-
-
 # Results
+
+## Latitude and longitude
+Latitude and longitude ranges were compiled from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
+```{r, latlong}
+get_strata(species, latlong_data, shapefile = params$shape) %>%
+  tibble::as_tibble() %>%
+  knitr::kable()
+```
+
+## Stock assessment and data quality information
+Stock assessment and data quality information were pulled from ``r params$qual_source``.
+```{r, quality}
+knitr::kable(ad_rating_data)
+```
 
 ## B/Bmsy
 B/Bmsy data were pulled from ``r params$b_source``.

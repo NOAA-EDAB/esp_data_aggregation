@@ -1574,84 +1574,169 @@ div.tocify {
 <p>This is a preliminary report of <code>assessmentdata</code> and <code>survdat</code> data. This report is pulling information on all Northeast Offshore hake stocks.</p>
 <div id="methods" class="section level1">
 <h1><span class="header-section-number">1</span> Methods</h1>
+<div id="general-methods" class="section level2">
+<h2><span class="header-section-number">1.1</span> General methods</h2>
+<p>Latitude and longitude ranges were compiled from NOAA/EDAB ECSA <a href="https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv">seasonal species strata</a> and <a href="https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles">Bottom Trawl Survey (BTS) shapefiles</a>. The coordinate system is WGS84.</p>
+<p>All continuous temporal data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit.</p>
+</div>
 <div id="assessmentdata-methods" class="section level2">
-<h2><span class="header-section-number">1.1</span> <code>assessmentdata</code> methods</h2>
+<h2><span class="header-section-number">1.2</span> <code>assessmentdata</code> methods</h2>
+<p>Stock assessment and data quality information were compiled into a summary table.</p>
 <p>B/Bmsy was classified as “DANGER” if it was below 1 and “GOOD” if it was above 1.</p>
 <p>F/Fmsy was classified as “DANGER” if it was above 1 and “GOOD” if it was below 1.</p>
 </div>
 <div id="survdat-methods" class="section level2">
-<h2><span class="header-section-number">1.2</span> <code>survdat</code> methods</h2>
+<h2><span class="header-section-number">1.3</span> <code>survdat</code> methods</h2>
 <p><code>survdat</code> data with zero abundance were not included in this analysis. Abundance and biomass were summed for each year and season. All other metrics were averaged for each year and season. The tables show summary statistics for the entire time series and for the most recent 5 years in the time series.</p>
-</div>
-<div id="general-methods" class="section level2">
-<h2><span class="header-section-number">1.3</span> General methods</h2>
-<p>All data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit.</p>
 </div>
 </div>
 <div id="results" class="section level1">
 <h1><span class="header-section-number">2</span> Results</h1>
+<div id="latitude-and-longitude" class="section level2">
+<h2><span class="header-section-number">2.1</span> Latitude and longitude</h2>
+<p>Latitude and longitude ranges were compiled from NOAA/EDAB ECSA <a href="https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv">seasonal species strata</a> and <a href="https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles">Bottom Trawl Survey (BTS) shapefiles</a>. The coordinate system is WGS84.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Region</th>
+<th align="left">Season</th>
+<th align="left">Lat_min</th>
+<th align="left">Long_min</th>
+<th align="left">Lat_max</th>
+<th align="left">Long_max</th>
+<th align="left">Warning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">all</td>
+<td align="left">fall</td>
+<td align="left">-74.89</td>
+<td align="left">35.5</td>
+<td align="left">-65.68</td>
+<td align="left">42.08</td>
+<td align="left">none</td>
+</tr>
+<tr class="even">
+<td align="left">all</td>
+<td align="left">spring</td>
+<td align="left">-74.89</td>
+<td align="left">35.5</td>
+<td align="left">-65.68</td>
+<td align="left">42.08</td>
+<td align="left">none</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stock-assessment-and-data-quality-information" class="section level2">
+<h2><span class="header-section-number">2.2</span> Stock assessment and data quality information</h2>
+<p>Stock assessment and data quality information were pulled from <code>assessmentdata::stockAssessmentSummary</code>.</p>
+<table>
+<colgroup>
+<col width="5%"></col>
+<col width="11%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="12%"></col>
+<col width="15%"></col>
+<col width="7%"></col>
+<col width="12%"></col>
+<col width="4%"></col>
+<col width="17%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Species</th>
+<th align="left">Region</th>
+<th align="right">Assessment Year</th>
+<th align="right">Last Data Year</th>
+<th align="left">Biological Data Rating (2019)</th>
+<th align="right">Biological Data Rating (before 2019)</th>
+<th align="right">Size Data Rating</th>
+<th align="right">Ecosystem Linkage Data Rating</th>
+<th align="left">FSSI status</th>
+<th align="left">Review Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Offshore hake</td>
+<td align="left">Northwestern Atlantic Coast</td>
+<td align="right">2011</td>
+<td align="right">2009</td>
+<td align="left">NA</td>
+<td align="right">1</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+<td align="left">N</td>
+<td align="left">Reject - Data insufficient for assessment</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="bbmsy" class="section level2">
-<h2><span class="header-section-number">2.1</span> B/Bmsy</h2>
+<h2><span class="header-section-number">2.3</span> B/Bmsy</h2>
 <p>B/Bmsy data were pulled from <code>assessmentdata::stockAssessmentSummary</code>.</p>
 <p>The most recent status of B/Bmsy is: UNKNOWN</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 <div id="ffmsy" class="section level2">
-<h2><span class="header-section-number">2.2</span> F/Fmsy</h2>
+<h2><span class="header-section-number">2.4</span> F/Fmsy</h2>
 <p>F/Fmsy data were pulled from <code>assessmentdata::stockAssessmentSummary</code>.</p>
 <p>The most recent status of F/Fmsy is: UNKNOWN</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 <div id="recruitment" class="section level2">
-<h2><span class="header-section-number">2.3</span> Recruitment</h2>
+<h2><span class="header-section-number">2.5</span> Recruitment</h2>
 <p>Recruitment data were pulled from <code>assessmentdata::stockAssessmentData</code>.</p>
 <div id="past-20-years" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Past 20 years</h3>
+<h3><span class="header-section-number">2.5.1</span> Past 20 years</h3>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 <div id="all-years" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> All years</h3>
+<h3><span class="header-section-number">2.5.2</span> All years</h3>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 </div>
 <div id="temperature" class="section level2">
-<h2><span class="header-section-number">2.4</span> Temperature</h2>
+<h2><span class="header-section-number">2.6</span> Temperature</h2>
 <div id="surface-temperature" class="section level3">
-<h3><span class="header-section-number">2.4.1</span> Surface temperature</h3>
+<h3><span class="header-section-number">2.6.1</span> Surface temperature</h3>
 <p>Surface temperature data were pulled from <code>survdat</code>.</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 <div id="bottom-temperature" class="section level3">
-<h3><span class="header-section-number">2.4.2</span> Bottom temperature</h3>
+<h3><span class="header-section-number">2.6.2</span> Bottom temperature</h3>
 <p>Bottom temperature data were pulled from <code>survdat</code>.</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 </div>
 <div id="salinity" class="section level2">
-<h2><span class="header-section-number">2.5</span> Salinity</h2>
+<h2><span class="header-section-number">2.7</span> Salinity</h2>
 <div id="surface-salinity" class="section level3">
-<h3><span class="header-section-number">2.5.1</span> Surface salinity</h3>
+<h3><span class="header-section-number">2.7.1</span> Surface salinity</h3>
 <p>Surface salinity data were pulled from <code>survdat</code>.</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 <div id="bottom-salinity" class="section level3">
-<h3><span class="header-section-number">2.5.2</span> Bottom salinity</h3>
+<h3><span class="header-section-number">2.7.2</span> Bottom salinity</h3>
 <p>Bottom salinity data were pulled from <code>survdat</code>.</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 </div>
 <div id="abundance" class="section level2">
-<h2><span class="header-section-number">2.6</span> Abundance</h2>
+<h2><span class="header-section-number">2.8</span> Abundance</h2>
 <p>Abundance data were pulled from <code>survdat</code>.</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 <div id="biomass" class="section level2">
-<h2><span class="header-section-number">2.7</span> Biomass</h2>
+<h2><span class="header-section-number">2.9</span> Biomass</h2>
 <p>Biomass data were pulled from <code>survdat</code>.</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
 <div id="length" class="section level2">
-<h2><span class="header-section-number">2.8</span> Length</h2>
+<h2><span class="header-section-number">2.10</span> Length</h2>
 <p>Length data were pulled from <code>survdat</code>.</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
 </div>
