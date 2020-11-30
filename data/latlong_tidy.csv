@@ -1,0 +1,353 @@
+Species,Region,Season,Year,Metric,Value,Units,Note
+Acadian redfish,all,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+Acadian redfish,all,fall,NA,long_min,41.19,coordinates_WGS84,none
+Acadian redfish,all,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Acadian redfish,all,fall,NA,long_max,44.49,coordinates_WGS84,none
+Acadian redfish,all,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+Acadian redfish,all,spring,NA,long_min,41.19,coordinates_WGS84,none
+Acadian redfish,all,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Acadian redfish,all,spring,NA,long_max,44.49,coordinates_WGS84,none
+American lobster,Georges Bank,spring,NA,lat_min,-70.85,coordinates_WGS84,none
+American lobster,Georges Bank,spring,NA,long_min,39.9,coordinates_WGS84,none
+American lobster,Georges Bank,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+American lobster,Georges Bank,spring,NA,long_max,42.45,coordinates_WGS84,none
+American lobster,Georges Bank,fall,NA,lat_min,-70.85,coordinates_WGS84,none
+American lobster,Georges Bank,fall,NA,long_min,39.9,coordinates_WGS84,none
+American lobster,Georges Bank,fall,NA,lat_max,-65.68,coordinates_WGS84,none
+American lobster,Georges Bank,fall,NA,long_max,42.45,coordinates_WGS84,none
+American lobster,Gulf of Maine,spring,NA,lat_min,-70.88,coordinates_WGS84,none
+American lobster,Gulf of Maine,spring,NA,long_min,41.69,coordinates_WGS84,none
+American lobster,Gulf of Maine,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+American lobster,Gulf of Maine,spring,NA,long_max,44.49,coordinates_WGS84,none
+American lobster,Gulf of Maine,fall,NA,lat_min,-70.88,coordinates_WGS84,none
+American lobster,Gulf of Maine,fall,NA,long_min,41.69,coordinates_WGS84,none
+American lobster,Gulf of Maine,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+American lobster,Gulf of Maine,fall,NA,long_max,44.49,coordinates_WGS84,none
+American lobster,Georges Bank / Southern New England,spring,NA,lat_min,-75.8,coordinates_WGS84,shapefile is missing some strata data
+American lobster,Georges Bank / Southern New England,spring,NA,long_min,35.14,coordinates_WGS84,shapefile is missing some strata data
+American lobster,Georges Bank / Southern New England,spring,NA,lat_max,-69.35,coordinates_WGS84,shapefile is missing some strata data
+American lobster,Georges Bank / Southern New England,spring,NA,long_max,41.72,coordinates_WGS84,shapefile is missing some strata data
+American lobster,Georges Bank / Southern New England,fall,NA,lat_min,-75.8,coordinates_WGS84,shapefile is missing some strata data
+American lobster,Georges Bank / Southern New England,fall,NA,long_min,35.14,coordinates_WGS84,shapefile is missing some strata data
+American lobster,Georges Bank / Southern New England,fall,NA,lat_max,-69.35,coordinates_WGS84,shapefile is missing some strata data
+American lobster,Georges Bank / Southern New England,fall,NA,long_max,41.72,coordinates_WGS84,shapefile is missing some strata data
+American plaice,all,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+American plaice,all,fall,NA,long_min,40.09,coordinates_WGS84,none
+American plaice,all,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+American plaice,all,fall,NA,long_max,44.49,coordinates_WGS84,none
+American plaice,all,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+American plaice,all,spring,NA,long_min,40.09,coordinates_WGS84,none
+American plaice,all,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+American plaice,all,spring,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic cod,Georges Bank,fall,NA,lat_min,-69.98,coordinates_WGS84,none
+Atlantic cod,Georges Bank,fall,NA,long_min,40.09,coordinates_WGS84,none
+Atlantic cod,Georges Bank,fall,NA,lat_max,-65.68,coordinates_WGS84,none
+Atlantic cod,Georges Bank,fall,NA,long_max,42.45,coordinates_WGS84,none
+Atlantic cod,Georges Bank,spring,NA,lat_min,-69.98,coordinates_WGS84,none
+Atlantic cod,Georges Bank,spring,NA,long_min,40.09,coordinates_WGS84,none
+Atlantic cod,Georges Bank,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+Atlantic cod,Georges Bank,spring,NA,long_max,42.45,coordinates_WGS84,none
+Atlantic cod,Gulf of Maine,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+Atlantic cod,Gulf of Maine,fall,NA,long_min,41.77,coordinates_WGS84,none
+Atlantic cod,Gulf of Maine,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Atlantic cod,Gulf of Maine,fall,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic cod,Gulf of Maine,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+Atlantic cod,Gulf of Maine,spring,NA,long_min,41.77,coordinates_WGS84,none
+Atlantic cod,Gulf of Maine,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Atlantic cod,Gulf of Maine,spring,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic halibut,all,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+Atlantic halibut,all,fall,NA,long_min,40.09,coordinates_WGS84,none
+Atlantic halibut,all,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Atlantic halibut,all,fall,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic halibut,all,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+Atlantic halibut,all,spring,NA,long_min,40.09,coordinates_WGS84,none
+Atlantic halibut,all,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Atlantic halibut,all,spring,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic herring,all,fall,NA,lat_min,-72.51,coordinates_WGS84,none
+Atlantic herring,all,fall,NA,long_min,39.87,coordinates_WGS84,none
+Atlantic herring,all,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Atlantic herring,all,fall,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic herring,all,spring,NA,lat_min,-75.66,coordinates_WGS84,none
+Atlantic herring,all,spring,NA,long_min,35.5,coordinates_WGS84,none
+Atlantic herring,all,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Atlantic herring,all,spring,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic mackerel,all,fall,NA,lat_min,-75.66,coordinates_WGS84,none
+Atlantic mackerel,all,fall,NA,long_min,36.51,coordinates_WGS84,none
+Atlantic mackerel,all,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Atlantic mackerel,all,fall,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic mackerel,all,spring,NA,lat_min,-75.66,coordinates_WGS84,none
+Atlantic mackerel,all,spring,NA,long_min,35.5,coordinates_WGS84,none
+Atlantic mackerel,all,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Atlantic mackerel,all,spring,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic wolffish,all,fall,NA,lat_min,-70.85,coordinates_WGS84,none
+Atlantic wolffish,all,fall,NA,long_min,39.9,coordinates_WGS84,none
+Atlantic wolffish,all,fall,NA,lat_max,-66.74,coordinates_WGS84,none
+Atlantic wolffish,all,fall,NA,long_max,44.49,coordinates_WGS84,none
+Atlantic wolffish,all,spring,NA,lat_min,-70.85,coordinates_WGS84,none
+Atlantic wolffish,all,spring,NA,long_min,39.9,coordinates_WGS84,none
+Atlantic wolffish,all,spring,NA,lat_max,-66.74,coordinates_WGS84,none
+Atlantic wolffish,all,spring,NA,long_max,44.49,coordinates_WGS84,none
+Barndoor skate,all,fall,NA,lat_min,-73.83,coordinates_WGS84,shapefile is missing some strata data
+Barndoor skate,all,fall,NA,long_min,39.13,coordinates_WGS84,shapefile is missing some strata data
+Barndoor skate,all,fall,NA,lat_max,-65.57,coordinates_WGS84,shapefile is missing some strata data
+Barndoor skate,all,fall,NA,long_max,44.49,coordinates_WGS84,shapefile is missing some strata data
+Black sea bass,all,spring,NA,lat_min,-75.66,coordinates_WGS84,none
+Black sea bass,all,spring,NA,long_min,35.5,coordinates_WGS84,none
+Black sea bass,all,spring,NA,lat_max,-68.79,coordinates_WGS84,none
+Black sea bass,all,spring,NA,long_max,42.03,coordinates_WGS84,none
+Black sea bass,all,winter,NA,lat_min,-76.07,coordinates_WGS84,shapefile is missing some strata data
+Black sea bass,all,winter,NA,long_min,35.14,coordinates_WGS84,shapefile is missing some strata data
+Black sea bass,all,winter,NA,lat_max,-65.94,coordinates_WGS84,shapefile is missing some strata data
+Black sea bass,all,winter,NA,long_max,42.24,coordinates_WGS84,shapefile is missing some strata data
+Bluefish,all,fall,NA,lat_min,-75.8,coordinates_WGS84,none
+Bluefish,all,fall,NA,long_min,35.14,coordinates_WGS84,none
+Bluefish,all,fall,NA,lat_max,-70,coordinates_WGS84,none
+Bluefish,all,fall,NA,long_max,41.43,coordinates_WGS84,none
+Butterfish,all,fall,NA,lat_min,-75.8,coordinates_WGS84,shapefile is missing some strata data
+Butterfish,all,fall,NA,long_min,35.14,coordinates_WGS84,shapefile is missing some strata data
+Butterfish,all,fall,NA,lat_max,-65.89,coordinates_WGS84,shapefile is missing some strata data
+Butterfish,all,fall,NA,long_max,42.87,coordinates_WGS84,shapefile is missing some strata data
+Clearnose skate,all,fall,NA,lat_min,-75.8,coordinates_WGS84,none
+Clearnose skate,all,fall,NA,long_min,35.14,coordinates_WGS84,none
+Clearnose skate,all,fall,NA,lat_max,-72.7,coordinates_WGS84,none
+Clearnose skate,all,fall,NA,long_max,40.17,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,fall,NA,lat_min,-75.66,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,fall,NA,long_min,35.5,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,fall,NA,lat_max,-65.68,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,fall,NA,long_max,42.08,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,spring,NA,lat_min,-75.66,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,spring,NA,long_min,35.5,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,spring,NA,long_max,42.08,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,winter,NA,lat_min,-75.66,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,winter,NA,long_min,35.5,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,winter,NA,lat_max,-65.68,coordinates_WGS84,none
+Goosefish,Southern Georges Bank / Mid,winter,NA,long_max,42.08,coordinates_WGS84,none
+Goosefish,Gulf of Maine / Northern Georges Bank,fall,NA,lat_min,-70.67,coordinates_WGS84,shapefile is missing some strata data
+Goosefish,Gulf of Maine / Northern Georges Bank,fall,NA,long_min,41,coordinates_WGS84,shapefile is missing some strata data
+Goosefish,Gulf of Maine / Northern Georges Bank,fall,NA,lat_max,-65.57,coordinates_WGS84,shapefile is missing some strata data
+Goosefish,Gulf of Maine / Northern Georges Bank,fall,NA,long_max,44.49,coordinates_WGS84,shapefile is missing some strata data
+Goosefish,Gulf of Maine / Northern Georges Bank,spring,NA,lat_min,-70.67,coordinates_WGS84,shapefile is missing some strata data
+Goosefish,Gulf of Maine / Northern Georges Bank,spring,NA,long_min,41,coordinates_WGS84,shapefile is missing some strata data
+Goosefish,Gulf of Maine / Northern Georges Bank,spring,NA,lat_max,-65.57,coordinates_WGS84,shapefile is missing some strata data
+Goosefish,Gulf of Maine / Northern Georges Bank,spring,NA,long_max,44.49,coordinates_WGS84,shapefile is missing some strata data
+Haddock,Georges Bank,fall,NA,lat_min,-69.98,coordinates_WGS84,none
+Haddock,Georges Bank,fall,NA,long_min,40.09,coordinates_WGS84,none
+Haddock,Georges Bank,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Haddock,Georges Bank,fall,NA,long_max,42.8,coordinates_WGS84,none
+Haddock,Georges Bank,spring,NA,lat_min,-69.98,coordinates_WGS84,none
+Haddock,Georges Bank,spring,NA,long_min,40.09,coordinates_WGS84,none
+Haddock,Georges Bank,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Haddock,Georges Bank,spring,NA,long_max,42.8,coordinates_WGS84,none
+Haddock,Gulf of Maine,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+Haddock,Gulf of Maine,fall,NA,long_min,41.81,coordinates_WGS84,none
+Haddock,Gulf of Maine,fall,NA,lat_max,-66.61,coordinates_WGS84,none
+Haddock,Gulf of Maine,fall,NA,long_max,44.49,coordinates_WGS84,none
+Haddock,Gulf of Maine,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+Haddock,Gulf of Maine,spring,NA,long_min,41.81,coordinates_WGS84,none
+Haddock,Gulf of Maine,spring,NA,lat_max,-66.61,coordinates_WGS84,none
+Haddock,Gulf of Maine,spring,NA,long_max,44.49,coordinates_WGS84,none
+Jonah crab,Georges Bank,spring,NA,lat_min,-70.85,coordinates_WGS84,none
+Jonah crab,Georges Bank,spring,NA,long_min,39.9,coordinates_WGS84,none
+Jonah crab,Georges Bank,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+Jonah crab,Georges Bank,spring,NA,long_max,42.45,coordinates_WGS84,none
+Jonah crab,Georges Bank,fall,NA,lat_min,-70.85,coordinates_WGS84,none
+Jonah crab,Georges Bank,fall,NA,long_min,39.9,coordinates_WGS84,none
+Jonah crab,Georges Bank,fall,NA,lat_max,-65.68,coordinates_WGS84,none
+Jonah crab,Georges Bank,fall,NA,long_max,42.45,coordinates_WGS84,none
+Jonah crab,Gulf of Maine,spring,NA,lat_min,-70.88,coordinates_WGS84,none
+Jonah crab,Gulf of Maine,spring,NA,long_min,41.69,coordinates_WGS84,none
+Jonah crab,Gulf of Maine,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Jonah crab,Gulf of Maine,spring,NA,long_max,44.49,coordinates_WGS84,none
+Jonah crab,Gulf of Maine,fall,NA,lat_min,-70.88,coordinates_WGS84,none
+Jonah crab,Gulf of Maine,fall,NA,long_min,41.69,coordinates_WGS84,none
+Jonah crab,Gulf of Maine,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Jonah crab,Gulf of Maine,fall,NA,long_max,44.49,coordinates_WGS84,none
+Jonah crab,Georges Bank / Southern New England,spring,NA,lat_min,-75.8,coordinates_WGS84,shapefile is missing some strata data
+Jonah crab,Georges Bank / Southern New England,spring,NA,long_min,35.14,coordinates_WGS84,shapefile is missing some strata data
+Jonah crab,Georges Bank / Southern New England,spring,NA,lat_max,-69.35,coordinates_WGS84,shapefile is missing some strata data
+Jonah crab,Georges Bank / Southern New England,spring,NA,long_max,41.72,coordinates_WGS84,shapefile is missing some strata data
+Jonah crab,Georges Bank / Southern New England,fall,NA,lat_min,-75.8,coordinates_WGS84,shapefile is missing some strata data
+Jonah crab,Georges Bank / Southern New England,fall,NA,long_min,35.14,coordinates_WGS84,shapefile is missing some strata data
+Jonah crab,Georges Bank / Southern New England,fall,NA,lat_max,-69.35,coordinates_WGS84,shapefile is missing some strata data
+Jonah crab,Georges Bank / Southern New England,fall,NA,long_max,41.72,coordinates_WGS84,shapefile is missing some strata data
+Little skate,all,spring,NA,lat_min,-75.8,coordinates_WGS84,shapefile is missing some strata data
+Little skate,all,spring,NA,long_min,35.14,coordinates_WGS84,shapefile is missing some strata data
+Little skate,all,spring,NA,lat_max,-65.57,coordinates_WGS84,shapefile is missing some strata data
+Little skate,all,spring,NA,long_max,44.49,coordinates_WGS84,shapefile is missing some strata data
+Ocean pout,all,spring,NA,lat_min,-74.45,coordinates_WGS84,none
+Ocean pout,all,spring,NA,long_min,38.46,coordinates_WGS84,none
+Ocean pout,all,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+Ocean pout,all,spring,NA,long_max,43.23,coordinates_WGS84,none
+Ocean pout,all,winter,NA,lat_min,-74.45,coordinates_WGS84,none
+Ocean pout,all,winter,NA,long_min,38.47,coordinates_WGS84,none
+Ocean pout,all,winter,NA,lat_max,-66.78,coordinates_WGS84,none
+Ocean pout,all,winter,NA,long_max,41.39,coordinates_WGS84,none
+Offshore hake,all,fall,NA,lat_min,-74.89,coordinates_WGS84,none
+Offshore hake,all,fall,NA,long_min,35.5,coordinates_WGS84,none
+Offshore hake,all,fall,NA,lat_max,-65.68,coordinates_WGS84,none
+Offshore hake,all,fall,NA,long_max,42.08,coordinates_WGS84,none
+Offshore hake,all,spring,NA,lat_min,-74.89,coordinates_WGS84,none
+Offshore hake,all,spring,NA,long_min,35.5,coordinates_WGS84,none
+Offshore hake,all,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+Offshore hake,all,spring,NA,long_max,42.08,coordinates_WGS84,none
+Pollock,all,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+Pollock,all,fall,NA,long_min,40.09,coordinates_WGS84,none
+Pollock,all,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Pollock,all,fall,NA,long_max,44.49,coordinates_WGS84,none
+Pollock,all,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+Pollock,all,spring,NA,long_min,40.09,coordinates_WGS84,none
+Pollock,all,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Pollock,all,spring,NA,long_max,44.49,coordinates_WGS84,none
+Red hake,Southern Georges Bank / Mid,fall,NA,lat_min,-75.66,coordinates_WGS84,none
+Red hake,Southern Georges Bank / Mid,fall,NA,long_min,35.5,coordinates_WGS84,none
+Red hake,Southern Georges Bank / Mid,fall,NA,lat_max,-65.68,coordinates_WGS84,none
+Red hake,Southern Georges Bank / Mid,fall,NA,long_max,42.08,coordinates_WGS84,none
+Red hake,Southern Georges Bank / Mid,spring,NA,lat_min,-75.66,coordinates_WGS84,none
+Red hake,Southern Georges Bank / Mid,spring,NA,long_min,35.5,coordinates_WGS84,none
+Red hake,Southern Georges Bank / Mid,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+Red hake,Southern Georges Bank / Mid,spring,NA,long_max,42.08,coordinates_WGS84,none
+Red hake,Gulf of Maine / Northern Georges Bank,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+Red hake,Gulf of Maine / Northern Georges Bank,fall,NA,long_min,41,coordinates_WGS84,none
+Red hake,Gulf of Maine / Northern Georges Bank,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Red hake,Gulf of Maine / Northern Georges Bank,fall,NA,long_max,44.49,coordinates_WGS84,none
+Red hake,Gulf of Maine / Northern Georges Bank,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+Red hake,Gulf of Maine / Northern Georges Bank,spring,NA,long_min,41,coordinates_WGS84,none
+Red hake,Gulf of Maine / Northern Georges Bank,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Red hake,Gulf of Maine / Northern Georges Bank,spring,NA,long_max,44.49,coordinates_WGS84,none
+Rosette skate,all,fall,NA,lat_min,-75.66,coordinates_WGS84,none
+Rosette skate,all,fall,NA,long_min,35.5,coordinates_WGS84,none
+Rosette skate,all,fall,NA,lat_max,-72.7,coordinates_WGS84,none
+Rosette skate,all,fall,NA,long_max,39.99,coordinates_WGS84,none
+Scup,all,fall,NA,lat_min,-76.07,coordinates_WGS84,shapefile is missing some strata data
+Scup,all,fall,NA,long_min,35.14,coordinates_WGS84,shapefile is missing some strata data
+Scup,all,fall,NA,lat_max,-68.34,coordinates_WGS84,shapefile is missing some strata data
+Scup,all,fall,NA,long_max,42.18,coordinates_WGS84,shapefile is missing some strata data
+Scup,all,spring,NA,lat_min,-75.66,coordinates_WGS84,none
+Scup,all,spring,NA,long_min,35.5,coordinates_WGS84,none
+Scup,all,spring,NA,lat_max,-68.34,coordinates_WGS84,none
+Scup,all,spring,NA,long_max,42.05,coordinates_WGS84,none
+Scup,all,winter,NA,lat_min,-75.66,coordinates_WGS84,none
+Scup,all,winter,NA,long_min,35.5,coordinates_WGS84,none
+Scup,all,winter,NA,lat_max,-65.72,coordinates_WGS84,none
+Scup,all,winter,NA,long_max,42.08,coordinates_WGS84,none
+Silver hake,Southern Georges Bank / Mid,fall,NA,lat_min,-75.66,coordinates_WGS84,none
+Silver hake,Southern Georges Bank / Mid,fall,NA,long_min,35.5,coordinates_WGS84,none
+Silver hake,Southern Georges Bank / Mid,fall,NA,lat_max,-65.68,coordinates_WGS84,none
+Silver hake,Southern Georges Bank / Mid,fall,NA,long_max,42.08,coordinates_WGS84,none
+Silver hake,Southern Georges Bank / Mid,spring,NA,lat_min,-75.66,coordinates_WGS84,none
+Silver hake,Southern Georges Bank / Mid,spring,NA,long_min,35.5,coordinates_WGS84,none
+Silver hake,Southern Georges Bank / Mid,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+Silver hake,Southern Georges Bank / Mid,spring,NA,long_max,42.08,coordinates_WGS84,none
+Silver hake,Gulf of Maine / Northern Georges Bank,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+Silver hake,Gulf of Maine / Northern Georges Bank,fall,NA,long_min,41,coordinates_WGS84,none
+Silver hake,Gulf of Maine / Northern Georges Bank,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Silver hake,Gulf of Maine / Northern Georges Bank,fall,NA,long_max,44.49,coordinates_WGS84,none
+Silver hake,Gulf of Maine / Northern Georges Bank,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+Silver hake,Gulf of Maine / Northern Georges Bank,spring,NA,long_min,41,coordinates_WGS84,none
+Silver hake,Gulf of Maine / Northern Georges Bank,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Silver hake,Gulf of Maine / Northern Georges Bank,spring,NA,long_max,44.49,coordinates_WGS84,none
+Smooth skate,all,fall,NA,lat_min,-73.83,coordinates_WGS84,shapefile is missing some strata data
+Smooth skate,all,fall,NA,long_min,39.13,coordinates_WGS84,shapefile is missing some strata data
+Smooth skate,all,fall,NA,lat_max,-65.57,coordinates_WGS84,shapefile is missing some strata data
+Smooth skate,all,fall,NA,long_max,44.49,coordinates_WGS84,shapefile is missing some strata data
+Summer flounder,all,fall,NA,lat_min,-76.07,coordinates_WGS84,shapefile is missing some strata data
+Summer flounder,all,fall,NA,long_min,35.14,coordinates_WGS84,shapefile is missing some strata data
+Summer flounder,all,fall,NA,lat_max,-69.17,coordinates_WGS84,shapefile is missing some strata data
+Summer flounder,all,fall,NA,long_max,42.18,coordinates_WGS84,shapefile is missing some strata data
+Summer flounder,all,spring,NA,lat_min,-75.66,coordinates_WGS84,none
+Summer flounder,all,spring,NA,long_min,35.5,coordinates_WGS84,none
+Summer flounder,all,spring,NA,lat_max,-68.79,coordinates_WGS84,none
+Summer flounder,all,spring,NA,long_max,41.39,coordinates_WGS84,none
+Summer flounder,all,winter,NA,lat_min,-75.66,coordinates_WGS84,none
+Summer flounder,all,winter,NA,long_min,35.5,coordinates_WGS84,none
+Summer flounder,all,winter,NA,lat_max,-65.72,coordinates_WGS84,none
+Summer flounder,all,winter,NA,long_max,42.08,coordinates_WGS84,none
+Thorny skate,all,fall,NA,lat_min,-73.83,coordinates_WGS84,shapefile is missing some strata data
+Thorny skate,all,fall,NA,long_min,39.13,coordinates_WGS84,shapefile is missing some strata data
+Thorny skate,all,fall,NA,lat_max,-65.57,coordinates_WGS84,shapefile is missing some strata data
+Thorny skate,all,fall,NA,long_max,44.49,coordinates_WGS84,shapefile is missing some strata data
+White hake,all,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+White hake,all,fall,NA,long_min,41,coordinates_WGS84,none
+White hake,all,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+White hake,all,fall,NA,long_max,44.49,coordinates_WGS84,none
+White hake,all,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+White hake,all,spring,NA,long_min,41,coordinates_WGS84,none
+White hake,all,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+White hake,all,spring,NA,long_max,44.49,coordinates_WGS84,none
+Windowpane,Southern New England / Mid,fall,NA,lat_min,-75.8,coordinates_WGS84,none
+Windowpane,Southern New England / Mid,fall,NA,long_min,35.14,coordinates_WGS84,none
+Windowpane,Southern New England / Mid,fall,NA,lat_max,-68.79,coordinates_WGS84,none
+Windowpane,Southern New England / Mid,fall,NA,long_max,41.43,coordinates_WGS84,none
+Windowpane,Gulf of Maine / Georges Bank,fall,NA,lat_min,-70.84,coordinates_WGS84,none
+Windowpane,Gulf of Maine / Georges Bank,fall,NA,long_min,40.09,coordinates_WGS84,none
+Windowpane,Gulf of Maine / Georges Bank,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Windowpane,Gulf of Maine / Georges Bank,fall,NA,long_max,44.49,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,fall,NA,lat_min,-75.04,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,fall,NA,long_min,37.56,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,fall,NA,lat_max,-68.81,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,fall,NA,long_max,42.1,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,spring,NA,lat_min,-75.04,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,spring,NA,long_min,37.56,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,spring,NA,lat_max,-68.81,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,spring,NA,long_max,42.1,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,winter,NA,lat_min,-75.04,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,winter,NA,long_min,37.56,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,winter,NA,lat_max,-68.81,coordinates_WGS84,none
+Winter flounder,Southern New England / Mid,winter,NA,long_max,42.1,coordinates_WGS84,none
+Winter flounder,Georges Bank,fall,NA,lat_min,-69.91,coordinates_WGS84,none
+Winter flounder,Georges Bank,fall,NA,long_min,40.09,coordinates_WGS84,none
+Winter flounder,Georges Bank,fall,NA,lat_max,-65.68,coordinates_WGS84,none
+Winter flounder,Georges Bank,fall,NA,long_max,42.24,coordinates_WGS84,none
+Winter flounder,Georges Bank,spring,NA,lat_min,-69.91,coordinates_WGS84,none
+Winter flounder,Georges Bank,spring,NA,long_min,40.09,coordinates_WGS84,none
+Winter flounder,Georges Bank,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+Winter flounder,Georges Bank,spring,NA,long_max,42.24,coordinates_WGS84,none
+Winter flounder,Gulf of Maine,fall,NA,lat_min,-70.88,coordinates_WGS84,none
+Winter flounder,Gulf of Maine,fall,NA,long_min,41.78,coordinates_WGS84,none
+Winter flounder,Gulf of Maine,fall,NA,lat_max,-67.4,coordinates_WGS84,none
+Winter flounder,Gulf of Maine,fall,NA,long_max,44.49,coordinates_WGS84,none
+Winter flounder,Gulf of Maine,spring,NA,lat_min,-70.88,coordinates_WGS84,none
+Winter flounder,Gulf of Maine,spring,NA,long_min,41.78,coordinates_WGS84,none
+Winter flounder,Gulf of Maine,spring,NA,lat_max,-67.4,coordinates_WGS84,none
+Winter flounder,Gulf of Maine,spring,NA,long_max,44.49,coordinates_WGS84,none
+Winter skate,all,fall,NA,lat_min,-75.66,coordinates_WGS84,shapefile is missing some strata data
+Winter skate,all,fall,NA,long_min,35.5,coordinates_WGS84,shapefile is missing some strata data
+Winter skate,all,fall,NA,lat_max,-65.57,coordinates_WGS84,shapefile is missing some strata data
+Winter skate,all,fall,NA,long_max,44.49,coordinates_WGS84,shapefile is missing some strata data
+Witch flounder,all,fall,NA,lat_min,-70.67,coordinates_WGS84,none
+Witch flounder,all,fall,NA,long_min,41,coordinates_WGS84,none
+Witch flounder,all,fall,NA,lat_max,-65.57,coordinates_WGS84,none
+Witch flounder,all,fall,NA,long_max,44.49,coordinates_WGS84,none
+Witch flounder,all,spring,NA,lat_min,-70.67,coordinates_WGS84,none
+Witch flounder,all,spring,NA,long_min,41,coordinates_WGS84,none
+Witch flounder,all,spring,NA,lat_max,-65.57,coordinates_WGS84,none
+Witch flounder,all,spring,NA,long_max,44.49,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,fall,NA,lat_min,-73.83,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,fall,NA,long_min,39.21,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,fall,NA,lat_max,-68.81,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,fall,NA,long_max,41.39,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,spring,NA,lat_min,-75.04,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,spring,NA,long_min,37.71,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,spring,NA,lat_max,-68.81,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,spring,NA,long_max,41.39,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,winter,NA,lat_min,-75.04,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,winter,NA,long_min,37.71,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,winter,NA,lat_max,-68.81,coordinates_WGS84,none
+Yellowtail flounder,Southern New England / Mid,winter,NA,long_max,41.39,coordinates_WGS84,none
+Yellowtail flounder,Georges Bank,fall,NA,lat_min,-68.91,coordinates_WGS84,none
+Yellowtail flounder,Georges Bank,fall,NA,long_min,40.09,coordinates_WGS84,none
+Yellowtail flounder,Georges Bank,fall,NA,lat_max,-65.68,coordinates_WGS84,none
+Yellowtail flounder,Georges Bank,fall,NA,long_max,42.18,coordinates_WGS84,none
+Yellowtail flounder,Georges Bank,spring,NA,lat_min,-68.91,coordinates_WGS84,none
+Yellowtail flounder,Georges Bank,spring,NA,long_min,40.09,coordinates_WGS84,none
+Yellowtail flounder,Georges Bank,spring,NA,lat_max,-65.68,coordinates_WGS84,none
+Yellowtail flounder,Georges Bank,spring,NA,long_max,42.18,coordinates_WGS84,none
+Yellowtail flounder,Cape Cod / Gulf of Maine,fall,NA,lat_min,-71.08,coordinates_WGS84,none
+Yellowtail flounder,Cape Cod / Gulf of Maine,fall,NA,long_min,41,coordinates_WGS84,none
+Yellowtail flounder,Cape Cod / Gulf of Maine,fall,NA,lat_max,-67.4,coordinates_WGS84,none
+Yellowtail flounder,Cape Cod / Gulf of Maine,fall,NA,long_max,44.49,coordinates_WGS84,none
+Yellowtail flounder,Cape Cod / Gulf of Maine,spring,NA,lat_min,-71.08,coordinates_WGS84,none
+Yellowtail flounder,Cape Cod / Gulf of Maine,spring,NA,long_min,41,coordinates_WGS84,none
+Yellowtail flounder,Cape Cod / Gulf of Maine,spring,NA,lat_max,-67.4,coordinates_WGS84,none
+Yellowtail flounder,Cape Cod / Gulf of Maine,spring,NA,long_max,44.49,coordinates_WGS84,none
