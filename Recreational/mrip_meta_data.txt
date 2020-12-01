@@ -1,0 +1,24 @@
+Marine Recreational Information Program Query Results							
+							
+Your Query Parameters:							
+							
+Query: MRIP EFFORT TIME SERIES							
+							
+Year: 1981 - 2020							
+							
+Wave: BY WAVE							
+							
+Geographic Area: NORTH AND MID-ATLANTIC BY STATE							
+							
+Fishing Mode: ALL MODES BY MODE							
+							
+Fishing Area: ALL AREAS BY AREA							
+							
+Information:							
+							
+ANGLER TRIPS							
+							
+PSE (proportional standard error) is automatically included in all outputs. It expresses the standard error of an estimate as a percentage of the estimate and is a							
+							
+measure of precision.							
+							

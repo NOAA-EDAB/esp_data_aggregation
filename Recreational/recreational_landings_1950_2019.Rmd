@@ -13,7 +13,7 @@ params:
     value: New York
     input: select
     choices: [CONNECTICUT, DELAWARE, MAINE, MARYLAND, MASSACHUSETTS, NEW HAMPSHIRE, NEW JERSEY, NEW YORK, RHODE ISLAND, VIRGINIA]
-title: "`r params$stock #in params$location `"
+title: "Recreational catch of `r stringr::str_to_sentence(params$stock)`  in `r stringr::str_to_sentence(params$state)`"
 ---
 
 ---
@@ -28,7 +28,7 @@ Rec_state<-params$state
 
 
 
-```{r data cleaning, message= FALSE, error=FALSE}
+```{r data cleaning, message= FALSE, error=FALSE,warning = FALSE}
 library("tidyverse")
 #read in recreational landings data
 rec_landings_1950_2019<-readr::read_csv("foss_landings_REC_1950_2019_MA_NE.csv")
