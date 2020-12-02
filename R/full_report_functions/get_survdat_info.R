@@ -1,0 +1,92 @@
+get_var_data <- function(x, variable){
+  y <- dplyr::filter(x, get(variable) > 0, ABUNDANCE > 0)
+  
+  # mean by year
+  if(variable == "BIOMASS" | variable == "ABUNDANCE"){
+    y <- y %>% dplyr::group_by(YEAR, SEASON) %>%
+      dplyr::summarise(variable2 = sum(get(variable)))
+  } else {
+    y <- y %>% dplyr::group_by(YEAR, SEASON) %>%
+      dplyr::summarise(variable2 = mean(get(variable)))
+  }
+  
+  colnames(y) <- c("YEAR", "SEASON", "variable")
+  
+  return(y)
+}
+
+plot_variable <- function(x, season, ytitle) {
+  
+  y <- dplyr::filter(x, SEASON == season)
+  
+  fig <- ggplot(y,
+                aes(x = as.numeric(YEAR),
+                    y = variable))+
+    geom_point()+
+    geom_line()+
+    theme_bw()+
+    xlab("Year")+
+    ylab(ytitle)+
+    labs(title = season)
+  
+  if (sum(is.na(y$variable) == FALSE) >= 30) 
+  {fig <- fig + ecodata::geom_gls()} 
+  
+  return(fig)
+}
+
+format_numbers <- function(x) {as.numeric(as.character(unlist(x)))}
+
+data_summary <- function(x, season) {
+  
+  season_data <- dplyr::filter(x, SEASON == season)
+  
+  year_data <- format_numbers(season_data$YEAR)
+  
+  variable_data <- format_numbers(season_data[,3])
+  
+  all_data <- c(paste(min(year_data), max(year_data), sep = " - "),
+                length(year_data),
+                round(mean(variable_data, na.rm = TRUE), digits = 2),
+                round(sd(variable_data, na.rm = TRUE), digits = 2),
+                round(min(variable_data, na.rm = TRUE), digits = 2),
+                round(max(variable_data, na.rm = TRUE), digits = 2))
+  
+  z <- dplyr::filter(season_data, YEAR > (max(year_data) - 5))
+  
+  five_year_data <- format_numbers(z$YEAR)
+  five_variable_data <- format_numbers(z[,3])
+  
+  five_data <- c(paste(min(five_year_data), max(five_year_data), sep = " - "),
+                 length(five_year_data),
+                 round(mean(five_variable_data, na.rm = TRUE), digits = 2),
+                 round(sd(five_variable_data, na.rm = TRUE), digits = 2),
+                 round(min(five_variable_data, na.rm = TRUE), digits = 2),
+                 round(max(five_variable_data, na.rm = TRUE), digits = 2))
+  
+  output <- rbind(c(season, all_data), c(season, five_data))
+  
+  return(output)
+}
+
+generate_info <- function(x, ytitle, variable){
+  
+  data <- get_var_data(x, variable = variable)
+  
+  spring_fig <- plot_variable(data, 
+                              season = "SPRING",
+                              ytitle = ytitle)
+  
+  fall_fig <- plot_variable(data, 
+                            season = "FALL",
+                            ytitle = ytitle)
+  
+  table <- rbind(data_summary(data, season = "SPRING"),
+                 data_summary(data, season = "FALL"))
+  
+  colnames(table) <- c("SEASON", "YEARS", "N_YEARS", "MEAN", "SD", "MIN", "MAX")
+  
+  print(spring_fig)
+  print(fall_fig)
+  return(knitr::kable(table))
+}
