@@ -12,7 +12,8 @@ list_species <- split(all_species, f = list(all_species))
 
 # render some reports
 
-purrr::map(list_species, ~rmarkdown::render(here::here("R", "assessmentdata_and_survdat_report_template.Rmd"), 
+purrr::map(list_species[1], ~rmarkdown::render(here::here("R/preliminary_files", 
+                                                          "assessmentdata_and_survdat_report_template.Rmd"), 
                                             params = list(species_ID = .x,
                                                           
                                                           latlong_data = latlong,
