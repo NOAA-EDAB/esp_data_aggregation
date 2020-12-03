@@ -1,3 +1,6 @@
+
+# render automated reports with purrr
+#####
 `%>%` <- dplyr::`%>%`
 
 # read in data from spreadsheets
@@ -8,7 +11,8 @@ survey <- read.csv(here::here("data", "survey_data.csv"))
 ad <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
 latlong <- read.csv(here::here("data", "geo_range_data.csv"))
 shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
-rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv"))
+rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
+  dplyr::filter(sub_reg_f == "NORTH ATLANTIC")
 load(here::here("data", "allfh.RData"))
 allfh$Species <- stringr::str_to_sentence(allfh$pdcomnam)
 
@@ -20,7 +24,6 @@ all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
 list_species <- split(all_species, f = list(all_species))
 
 # render some reports
-
 purrr::map(list_species, ~rmarkdown::render(here::here("R", "full_report_template.Rmd"), 
                                             params = list(species_ID = .x,
                                                           
@@ -42,9 +45,85 @@ purrr::map(list_species, ~rmarkdown::render(here::here("R", "full_report_templat
                                             output_dir = here::here("docs"),
                                             output_file = paste(.x, "_full", 
                                                                 ".html", sep = "")))
+#####
 
+## parallelize reports for faster generation
+#####
 
-# make summary spreadsheet
+# using furrr and future doesn't speed up report generation
+# use foreach and doParallel
+# cuts batch generation time of all reports from ~10 minutes to ~2 minutes
+# make sure there are no NAs in the species name vector or it will break
+
+# get NE stock names
+names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
+# tilefish has is NA in COMNAME column? omit for now
+
+all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence() 
+all_species <- all_species[!is.na(all_species)]
+
+# function to save reports, fix temp file problems
+render_par <- function(x){
+
+  tf <- tempfile()
+  dir.create(tf)
+
+  rmarkdown::render(here::here("R", "full_report_template.Rmd"), 
+                    params = list(species_ID = x,
+                                  
+                                  latlong_data = latlong,
+                                  shape = shape,
+                                  
+                                  bf_data = bf,
+                                  
+                                  recruit_data = recruit,
+                                  nyear = 20,
+                                  
+                                  survey_data = survey,
+                                  
+                                  ad_rating_data = ad,
+                                  
+                                  diet_data = allfh,
+                                  
+                                  rec_data = rec), 
+                    intermediates_dir = tf,
+                    output_dir = here::here("docs"),
+                    output_file = paste(x, "_full", 
+                                        ".html", sep = ""))
+
+  unlink(tf)
+  
+  print(paste("completed", x))
+  
+}
+
+# make cluster
+cl <- parallel::makeCluster(parallel::detectCores() - 1)
+
+# set up cluster
+parallel::clusterEvalQ(cl, {
+  # load libraries
+  library(ggplot2)
+  `%>%` <- dplyr::`%>%`
+  
+  # load data
+  bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
+  recruit <- read.csv(here::here("data", "recruitment_data.csv"))
+  survey <- read.csv(here::here("data", "survey_data.csv"))
+  ad <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
+  latlong <- read.csv(here::here("data", "geo_range_data.csv"))
+  shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
+  rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
+    dplyr::filter(sub_reg_f == "NORTH ATLANTIC")
+  load(here::here("data", "allfh.RData"))
+  allfh$Species <- stringr::str_to_sentence(allfh$pdcomnam)
+  }) %>% invisible()
+
+parallel::parLapply(cl, all_species, render_par)
+parallel::stopCluster(cl)
+#####
+
+# make summary spreadsheet (old)
 #####
 results <- purrr::map(test_species, function(x){
   
