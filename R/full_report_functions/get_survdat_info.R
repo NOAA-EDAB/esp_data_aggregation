@@ -15,22 +15,42 @@ get_var_data <- function(x, variable){
   return(y)
 }
 
-plot_variable <- function(x, season, ytitle) {
-  
-  y <- dplyr::filter(x, SEASON == season)
-  
-  fig <- ggplot(y,
+plot_variable <- function(x, ytitle) {
+
+  fig <- ggplot(x,
                 aes(x = as.numeric(YEAR),
-                    y = variable))+
-    geom_point(color = "navyblue", cex = 2)+
+                    y = variable,
+                    color = SEASON))+
+    geom_point(cex = 2)+
     geom_line()+
+    nmfspalette::scale_color_nmfs("regional web")+
     theme_bw()+
     xlab("Year")+
     ylab(ytitle)+
-    labs(title = season)
+    theme(legend.position = "bottom")
   
-  if (sum(is.na(y$variable) == FALSE) >= 30) 
-  {fig <- fig + ecodata::geom_gls()} 
+  ecodat <- x %>%
+    dplyr::filter(YEAR > 0, variable > 0) %>%
+    dplyr::group_by(SEASON) %>%
+    dplyr::mutate(num = length(variable)) %>%
+    dplyr::filter(num > 30)
+  
+  if (length(ecodat$num) > 1) {
+    lines <- c(1, 2)
+    names(lines) <- c("FALL", "SPRING")
+    
+    fig <- fig + 
+      ecodata::geom_gls(inherit.aes = FALSE,
+                        data = ecodat,
+                        mapping = aes(x = as.numeric(YEAR),
+                                      y = variable,
+                                      group = SEASON,
+                                      lty = SEASON))+
+      scale_linetype_manual(values = lines)
+      }
+  
+ # if (sum(is.na(x$variable) == FALSE) >= 30) 
+  #{fig <- fig + ecodata::geom_gls(aes(lty = SEASON))} 
   
   return(fig)
 }
@@ -73,20 +93,13 @@ generate_info <- function(x, ytitle, variable){
   
   data <- get_var_data(x, variable = variable)
   
-  spring_fig <- plot_variable(data, 
-                              season = "SPRING",
-                              ytitle = ytitle)
-  
-  fall_fig <- plot_variable(data, 
-                            season = "FALL",
-                            ytitle = ytitle)
+  fig <- plot_variable(data, ytitle = ytitle)
   
   table <- rbind(data_summary(data, season = "SPRING"),
                  data_summary(data, season = "FALL"))
   
   colnames(table) <- c("SEASON", "YEARS", "N_YEARS", "MEAN", "SD", "MIN", "MAX")
   
-  print(spring_fig)
-  print(fall_fig)
+  print(fig)
   return(knitr::kable(table))
 }

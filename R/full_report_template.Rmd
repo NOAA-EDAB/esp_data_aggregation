@@ -111,6 +111,18 @@ if(length(bf_data$Species) > 1){
 
 ```
 
+```{r, legend}
+# set colors and linetypes to be constant for all regions
+reg <- c(bf_data$Region, recruit_data$Region) %>% unique()
+
+lines <- 1:length(reg)
+names(lines) <- reg
+
+colors <- nmfspalette::nmfs_palette("regional web")(length(reg))
+names(colors) <- reg
+
+```
+
 This is a preliminary report of `assessmentdata` and `survdat` data. This report is pulling information on all Northeast `r species` stocks.
 
 # Methods
@@ -160,7 +172,9 @@ The most recent status of B/Bmsy is: `r bbmsy2`
 ```{r, bbmsy} 
 if("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2){
   plot_bbmsy(bf_data[which(is.na(bf_data$B.Bmsy) == FALSE), ], 
-             ytitle = "B / Bmsy")
+             ytitle = "B / Bmsy",
+             lin = lines,
+             col = colors)
 } else print("NO DATA")
 ```
 
@@ -171,7 +185,9 @@ The most recent status of F/Fmsy is: `r ffmsy2`
 ```{r, ffmsy}
 if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
  plot_ffmsy(bf_data[which(is.na(bf_data$F.Fmsy) == FALSE), ],
-                      ytitle = "F / Fmsy")
+                      ytitle = "F / Fmsy",
+             lin = lines,
+             col = colors)
 } else print("NO DATA")
 ```
 
@@ -179,22 +195,29 @@ if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
 Recruitment data were pulled from ``r params$recruit_source``.
 
 ### Past `r nyear` years
+Separate geom_gls() functions were fit for each region; trend lines are only shown when the trend was statistically significant, so some plots may have fewer trend lines than regions.
 ```{r, short} 
 if(length(recruit_data$Species) >= 1){
-  plot_short(recruit_data, n = nyear)
+  plot_recruit(recruit_data, 
+               n = nyear,
+             lin = lines,
+             col = colors)
 } else print("NO DATA")
 ```
 
 ### All years
+Separate geom_gls() functions were fit for each region; trend lines are only shown when the trend was statistically significant, so some plots may have fewer trend lines than regions.
 ```{r, allyears} 
 if(length(recruit_data$Species) >= 1){
-  plot_all(recruit_data)
+  plot_recruit(recruit_data, 
+               n = "all",
+             lin = lines,
+             col = colors)
 } else print("NO DATA")
 ```
 
 ## Diet
 Diet data were compiled from [existing data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). For analysis, all geographic samples were grouped by season and year, and only year-season combinations with more than 20 predators sampled were considered. Prey items that made up more than 5% of the predator's diet in at least one year-season were identified to the broad category level; all other prey are grouped into the "other" category.
-
 ```{r, diet}
 if(length(diet_data$Species) >= 1){
   get_diet(data = diet_data)
@@ -204,7 +227,7 @@ if(length(diet_data$Species) >= 1){
 ## Temperature
 
 ### Surface temperature
-Surface temperature data were pulled from ``r params$surftemp_source``.
+Surface temperature data were pulled from ``r params$surftemp_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
 ```{r, surftemp}
 if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
   generate_info(survey_data,
@@ -214,7 +237,7 @@ if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
 ```
 
 ### Bottom temperature
-Bottom temperature data were pulled from ``r params$bottemp_source``.
+Bottom temperature data were pulled from ``r params$bottemp_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
 ```{r, bottemp}
 if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
   generate_info(survey_data,
@@ -226,7 +249,7 @@ if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
 ## Salinity 
 
 ### Surface salinity
-Surface salinity data were pulled from ``r params$surfsalin_source``.
+Surface salinity data were pulled from ``r params$surfsalin_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
 ```{r, surfsalin}
 if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
   generate_info(survey_data,
@@ -236,7 +259,7 @@ if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
 ```
 
 ### Bottom salinity
-Bottom salinity data were pulled from ``r params$botsalin_source``.
+Bottom salinity data were pulled from ``r params$botsalin_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
 ```{r, botsalin}
 if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
   generate_info(survey_data,
@@ -246,7 +269,7 @@ if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
 ```
 
 ## Abundance
-Abundance data were pulled from ``r params$abun_source``.
+Abundance data were pulled from ``r params$abun_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
 ```{r, abundance}
 if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
   generate_info(survey_data,
@@ -256,7 +279,7 @@ if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
 ```
 
 ## Biomass
-Biomass data were pulled from ``r params$biomass_source``.
+Biomass data were pulled from ``r params$biomass_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
 ```{r, biomass}
 if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
   generate_info(survey_data,

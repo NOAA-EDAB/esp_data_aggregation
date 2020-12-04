@@ -34,6 +34,7 @@
 
 bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
 recruit <- read.csv(here::here("data", "recruitment_data.csv"))
+recruit$Units <- stringr::str_replace(recruit$Units, "Thousand Recruits", "Number x 1,000")
 survey <- read.csv(here::here("data", "survey_data.csv"))
 ad <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
 latlong <- read.csv(here::here("data", "geo_range_data.csv"))
@@ -133,6 +134,7 @@ parallel::clusterEvalQ(cl, {
   # load data
   bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
   recruit <- read.csv(here::here("data", "recruitment_data.csv"))
+  recruit$Units <- stringr::str_replace(recruit$Units, "Thousand Recruits", "Number x 1,000")
   survey <- read.csv(here::here("data", "survey_data.csv"))
   ad <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
   latlong <- read.csv(here::here("data", "geo_range_data.csv"))
