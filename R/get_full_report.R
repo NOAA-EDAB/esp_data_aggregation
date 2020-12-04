@@ -92,9 +92,6 @@ render_par <- function(x){
                                         ".html", sep = ""))
 
   unlink(tf)
-  
-  print(paste("completed", x))
-  
 }
 
 # make cluster
