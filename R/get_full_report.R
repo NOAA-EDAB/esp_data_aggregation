@@ -1,5 +1,32 @@
+### packages required
 
-# render automated reports with purrr
+## general packages required
+# library(dplyr)
+# library(ggplot2)
+# library(here)
+# library(stringr)
+# library(sf)
+# library(rmarkdown)
+# library(tibble)
+# library(knitr)
+# library(scales)
+# library(ecodata)
+
+## required to render reports
+# library(purrr) # for automated rendering
+# library(parallel) # for automated and parallelized rendering
+
+## required to recreate data
+# library(assessmentdata)
+# library(survdat) # or a saved data pull
+
+## required to recreate color palettes
+# library(grDevices)
+# library(nmfspalette)
+
+###
+
+## render automated reports with purrr
 #####
 `%>%` <- dplyr::`%>%`
 
@@ -120,7 +147,7 @@ parallel::parLapply(cl, all_species, render_par)
 parallel::stopCluster(cl)
 #####
 
-# make summary spreadsheet (old)
+## make summary spreadsheet (old)
 #####
 results <- purrr::map(test_species, function(x){
   

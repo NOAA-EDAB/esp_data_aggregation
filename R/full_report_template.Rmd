@@ -58,6 +58,7 @@ source(here::here("R/full_report_functions", "get_diet.R"))
 source(here::here("R/full_report_functions", "get_latlong.R"))
 source(here::here("R/full_report_functions", "get_bf.R"))
 source(here::here("R/full_report_functions", "get_survdat_info.R"))
+source(here::here("R/full_report_functions", "get_length.R"))
 source(here::here("R/full_report_functions", "get_recruitment.R"))
 source(here::here("R/full_report_functions", "get_rec_catch.R"))
 ```
@@ -273,12 +274,10 @@ if(length(rec_data$Species) > 0){
 ```
 
 ## Length
-Length data were pulled from ``r params$length_source``.
+Length data were pulled from ``r params$length_source``. Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines.
 ```{r, length}
 if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
-  generate_info(survey_data,
-              variable = "LENGTH", 
-              ytitle = "Length")
+  generate_len_info(survey_data)
 } else print("NO DATA")
 ```
 
