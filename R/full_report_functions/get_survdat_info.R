@@ -22,7 +22,7 @@ plot_variable <- function(x, season, ytitle) {
   fig <- ggplot(y,
                 aes(x = as.numeric(YEAR),
                     y = variable))+
-    geom_point()+
+    geom_point(color = "navyblue", cex = 2)+
     geom_line()+
     theme_bw()+
     xlab("Year")+
