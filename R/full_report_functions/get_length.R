@@ -25,7 +25,7 @@ plot_len <- function(x, season) {
     geom_point(cex = 2)+
     nmfspalette::scale_color_nmfs("regional web", 
                                   name = "",
-                                  label = c("min", "mean", "max"))+
+                                  label = c("max", "mean", "min"))+
     theme_bw()+
     xlab("Year")+
     ylab("Length")+
