@@ -56,16 +56,10 @@ get_diet <- function(data){
       
       # assign colors based on nmfs color palette
       
-      colors <- read.csv(here::here("data", "prey_color_palette.csv")) %>%
-        tibble::as_tibble()
-
-      # join colors to prey in right order
-      data_info <- new_normalized$gensci %>%
-        levels() %>%
-        tibble::as_tibble()
-      colnames(data_info) <- "prey_id"
-
-      ordered_color <- dplyr::left_join(data_info, colors, by = "prey_id")
+      colors <- read.csv(here::here("data", "prey_color_palette.csv"))
+      
+      plot_colors <- colors$color
+      names(plot_colors) <- colors$prey_id
 
       # plot
       fig <- ggplot(new_normalized,
@@ -74,7 +68,7 @@ get_diet <- function(data){
                         fill = gensci))+
         geom_bar(color = "black", stat = "identity")+
         scale_fill_manual(name = "Prey \ncategory",
-                          values = ordered_color$color)+
+                          values = plot_colors)+
         theme_classic()+
         ylab("Proportion of gut content")
       

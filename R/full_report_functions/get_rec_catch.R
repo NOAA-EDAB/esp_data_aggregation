@@ -26,16 +26,10 @@ get_rec_catch <- function(data){
 
   # assign colors based on nmfs color palette
   
-  colors <- read.csv(here::here("data", "rec_color_palette.csv")) %>%
-    tibble::as_tibble()
+  colors <- read.csv(here::here("data", "rec_color_palette.csv"))
   
-  # join colors to mode in right order
-  data_info <- summary2$mode_fx_f %>%
-    levels() %>%
-    tibble::as_tibble()
-  colnames(data_info) <- "rec_mode"
-  
-  ordered_color <- dplyr::left_join(data_info, colors, by = "rec_mode")
+  plot_colors <- colors$color
+  names(plot_colors) <- colors$rec_mode
 
   # plot
   fig <- ggplot(summary2,
@@ -48,7 +42,7 @@ get_rec_catch <- function(data){
                        labels = scales::comma)+
     xlab("Year")+
     scale_fill_manual(name = "Category",
-                      values = ordered_color$color)+
+                      values = plot_colors)+
     guides(fill=guide_legend(nrow=2, byrow = TRUE, title = "Category"))+
     theme(legend.position = "bottom")
   
