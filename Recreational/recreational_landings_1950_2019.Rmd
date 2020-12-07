@@ -121,6 +121,7 @@ fish_match<-rec_w_comma_whole[str_detect(rec_w_comma_whole$common_name, "hake"),
 #final dataset is 
 rec_landings_clean<-rec_by_sp_whole
 rec_landings_1950_2019_clean <-rec_landings_1950_2019_whole
+#write.csv(rec_landings_1950_2019_clean, "rec_landings_1950_2019_tidy.csv")
 # rm(list =c("rec_by_sp", "rec_landings_1950_2019", "rec_landings_1950_2019_comma", "rec_landings_1950_2019_comma_split" "rec_w_comma", "rec_w_comma_split", "stock_list", "stock_list_all_strata") )
 
 ```
