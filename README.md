@@ -4,7 +4,8 @@
 https://rtabandera.github.io/esp_data_aggregation/index
 
 ## Introduction
-Ecosystem and Socioeconomic Profiles (ESPs) are a scientific product to support [Integrated Ecosystem Assessment](https://www.integratedecosystemassessment.noaa.gov/) (IEA). IEA seeks to improve understanding and management of fisheries through incorporating natural, social, and economic data into fisheries analyses and management plans. ESPs are a structured framework developed by the Alaska Science Center to integrate ecosystem and socioeconomic information into the stock assessment process.[1] 
+Ecosystem and Socioeconomic Profiles (ESPs) are a scientific product to support [Integrated Ecosystem Assessment](https://www.integratedecosystemassessment.noaa.gov/) (IEA). IEA seeks to improve understanding and management of fisheries through incorporating natural, social, and economic data into fisheries analyses and management plans. ESPs are a structured framework developed by the Alaska Science Center to integrate ecosystem and socioeconomic information into the stock assessment process.[<sup>1</sup>]
+
 
 Here we adapt the ESP process for use in the management of Northeast stocks. Our scientific roadmap consists of these steps:
 1. Gather existing data on ecology, biology, socioeconomics, and the human dimension of Northeast fisheries.
