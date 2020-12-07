@@ -1,35 +1,67 @@
-plot_bbmsy <- function(x, ytitle) {
-  
+plot_bbmsy <- function(x, ytitle, lin = lines, col = colors) {
+
   fig <- ggplot(x,
                 aes(x = B.Year,
-                    y = B.Bmsy))+
-    geom_point(color = "navyblue", cex = 2)+
+                    y = B.Bmsy,
+                    lty = Region,
+                    color = Region))+
+    geom_point(cex = 2)+
     geom_line()+
     theme_bw()+
     xlab("Year")+
     ylab(ytitle)+
-    facet_grid(cols = vars(Region))
+    theme(legend.position = "bottom")+
+    scale_linetype_manual(values = lin)+
+    scale_color_manual(values = col)
   
-  if (sum(is.na(x$B.Bmsy) == FALSE) >= 30) 
-  {fig <- fig + ecodata::geom_gls()}
+  ecodat <- x %>%
+    dplyr::select(B.Bmsy, B.Year, Region) %>%
+    dplyr::filter(B.Bmsy > 0, B.Year > 0) %>%
+    dplyr::group_by(Region) %>%
+    dplyr::mutate(num = length(B.Bmsy)) %>%
+    dplyr::filter(num > 30)
+  
+  if (length(ecodat$B.Bmsy) > 1) {
+    fig <- fig + 
+      ecodata::geom_gls(inherit.aes = FALSE,
+                        data = ecodat,
+                        mapping = aes(x = B.Year,
+                                      y = B.Bmsy,
+                                      lty = Region))}
   
   return(fig)
 }
 
-plot_ffmsy <- function(x, ytitle) {
-  
+plot_ffmsy <- function(x, ytitle, lin = lines, col = colors) {
+
   fig <- ggplot(x,
                 aes(x = F.Year,
-                    y = F.Fmsy))+
-    geom_point(color = "navyblue", cex = 2)+
+                    y = F.Fmsy,
+                    lty = Region,
+                    color = Region))+
+    geom_point(cex = 2)+
     geom_line()+
     theme_bw()+
     xlab("Year")+
     ylab(ytitle)+
-    facet_grid(cols = vars(Region))
+    theme(legend.position = "bottom")+
+    scale_linetype_manual(values = lin)+
+    scale_color_manual(values = col)
   
-  if (sum(is.na(x$F.Fmsy) == FALSE) >= 30) 
-  {fig <- fig + ecodata::geom_gls()} 
+  ecodat <- x %>%
+    dplyr::select(F.Fmsy, F.Year, Region) %>%
+    dplyr::filter(F.Fmsy > 0, F.Year > 0) %>%
+    dplyr::group_by(Region) %>%
+    dplyr::mutate(num = length(F.Fmsy)) %>%
+    dplyr::filter(num > 30)
+  
+  if (length(ecodat$F.Fmsy) > 1) {
+    fig <- fig + 
+      ecodata::geom_gls(inherit.aes = FALSE,
+                        data = ecodat,
+                        mapping = aes(x = F.Year,
+                                      y = F.Fmsy,
+                                      lty = Region))}
   
   return(fig)
 }

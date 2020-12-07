@@ -23,18 +23,32 @@ get_rec_catch <- function(data){
   
   summary2$mode_fx_f <- factor(summary2$mode_fx_f, 
                                cat$mode_fx_f)
+
+  # assign colors based on nmfs color palette
   
+  colors <- read.csv(here::here("data", "rec_color_palette.csv")) %>%
+    tibble::as_tibble()
+  
+  # join colors to mode in right order
+  data_info <- summary2$mode_fx_f %>%
+    levels() %>%
+    tibble::as_tibble()
+  colnames(data_info) <- "rec_mode"
+  
+  ordered_color <- dplyr::left_join(data_info, colors, by = "rec_mode")
+
   # plot
   fig <- ggplot(summary2,
                 aes(x = year,
                     y = total_catch2,
                     fill = mode_fx_f))+
-    geom_area()+
+    geom_bar(color = "black", stat = "identity")+
     theme_bw()+
     scale_y_continuous(name = "Total catch (lb)",
                        labels = scales::comma)+
     xlab("Year")+
-    ggsci::scale_fill_jco()+
+    scale_fill_manual(name = "Category",
+                      values = ordered_color$color)+
     guides(fill=guide_legend(nrow=2, byrow = TRUE, title = "Category"))+
     theme(legend.position = "bottom")
   

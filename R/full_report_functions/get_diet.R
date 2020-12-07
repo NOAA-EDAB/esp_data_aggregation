@@ -54,16 +54,29 @@ get_diet <- function(data){
       new_normalized$gensci <- factor(new_normalized$gensci, 
                                       prey$gensci)
       
+      # assign colors based on nmfs color palette
+      
+      colors <- read.csv(here::here("data", "prey_color_palette.csv")) %>%
+        tibble::as_tibble()
+
+      # join colors to prey in right order
+      data_info <- new_normalized$gensci %>%
+        levels() %>%
+        tibble::as_tibble()
+      colnames(data_info) <- "prey_id"
+
+      ordered_color <- dplyr::left_join(data_info, colors, by = "prey_id")
+
       # plot
       fig <- ggplot(new_normalized,
                     aes(x = year,
                         y = prop2,
                         fill = gensci))+
-        geom_area()+
-        ggsci::scale_fill_jco()+
+        geom_bar(color = "black", stat = "identity")+
+        scale_fill_manual(name = "Prey \ncategory",
+                          values = ordered_color$color)+
         theme_classic()+
-        ylab("Proportion of gut content")+
-        labs(fill = "Prey \ncategory")
+        ylab("Proportion of gut content")
       
       if(length(unique(new_normalized$season)) > 1){
         fig <- fig + facet_grid(rows = vars(season))
