@@ -97,6 +97,7 @@ purrr::map(list_species[1], ~rmarkdown::render(here::here("R", "full_report_temp
 #####
 
 ## parallelize reports for faster generation
+# having problems with this recently...
 #####
 
 # using furrr and future doesn't speed up report generation
@@ -134,7 +135,9 @@ render_par <- function(x){
                                   
                                   diet_data = allfh,
                                   
-                                  rec_data = rec), 
+                                  rec_data = rec,
+                                  
+                                  asmt_data = asmt), 
                     intermediates_dir = tf,
                     output_dir = here::here("docs"),
                     output_file = paste(x, "_full", 

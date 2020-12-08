@@ -2,11 +2,11 @@ source(here::here("R/full_report_functions", "get_survdat_info.R"))
 
 get_len_data <- function(x){
   y <- dplyr::filter(x, LENGTH > 0, ABUNDANCE > 0) %>%
-    dplyr::group_by(YEAR) %>%
+    dplyr::group_by(YEAR, Region) %>%
     dplyr::mutate(n_fish = length(LENGTH)) %>%
     dplyr::filter(n_fish > 10) # only years with >10 fish
   
-  y <- y %>% dplyr::group_by(YEAR, SEASON) %>%
+  y <- y %>% dplyr::group_by(YEAR, SEASON, Region) %>%
       dplyr::summarise(mean_len = mean(LENGTH),
                        min_len = min(LENGTH),
                        max_len = max(LENGTH)
@@ -26,6 +26,7 @@ plot_len <- function(x, season) {
                     color = name))+
     geom_line()+
     geom_point(cex = 2)+
+    facet_grid(rows = vars(Region))+
     nmfspalette::scale_color_nmfs("regional web", 
                                   name = "",
                                   label = c("max", "mean", "min"))+
@@ -50,12 +51,12 @@ generate_len_info <- function(x, ytitle){
   
   tbl_data <- get_var_data(x, variable = "LENGTH")
   
-  table <- rbind(data_summary(tbl_data, season = "SPRING"),
-                 data_summary(tbl_data, season = "FALL"))
-  
-  colnames(table) <- c("SEASON", "YEARS", "N_YEARS", "MEAN", "SD", "MIN", "MAX")
+  table <- data_summary(tbl_data)
   
   print(spring_fig)
   print(fall_fig)
-  return(knitr::kable(table))
+  return(knitr::kable(table, 
+                      col.names = c("Season", "Region",
+                                    "Mean value +- SD (n years)", 
+                                    "Range")))
 }

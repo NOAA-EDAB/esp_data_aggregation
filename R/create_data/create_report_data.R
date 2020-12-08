@@ -33,21 +33,51 @@ data <- readRDS(here::here("data", "survdat.RDS"))
 data <- tibble::as.tibble(data$survdat)
 
 key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
-key <- data.frame(SVSPP = unique(key$SVSPP),
+
+# parse out survey data for NE species only, add common name
+key2 <- data.frame(SVSPP = unique(key$SVSPP),
                   Species = stringr::str_to_sentence(unique(key$COMNAME)))
 
-data2 <- dplyr::filter(data, SVSPP == key$SVSPP)
+matches <- as.numeric(data$SVSPP) %in% as.numeric(key2$SVSPP)
+
+data2 <- data[matches, ]
 
 species_name <- c()
 for(i in 1:length(data2$SVSPP)){
   svspp <- as.numeric(data2$SVSPP[i])
-  r <- which(key$SVSPP == svspp)
-  species_name[i] <- key[r, 2]
+  r <- which(key2$SVSPP == svspp)
+  species_name[i] <- key2[r, 2]
 }
 
 data2$Species <- species_name
 
-write.csv(data2, file = here::here("data", "survey_data.csv"))
+# add region to survey data
+
+# rename regions
+for(i in 1:length(key$stock_area)){
+  if(key$stock_area[i] == "gbk") {key$stock_area[i] <- "Georges Bank"}
+  if(key$stock_area[i] == "gom") {key$stock_area[i] <- "Gulf of Maine"}
+  if(key$stock_area[i] == "snemab") {key$stock_area[i] <- "Southern New England / Mid"}
+  if(key$stock_area[i] == "gbkgom") {key$stock_area[i] <- "Gulf of Maine / Georges Bank"}
+  if(key$stock_area[i] == "ccgom") {key$stock_area[i] <- "Cape Cod / Gulf of Maine"}
+  if(key$stock_area[i] == "south") {key$stock_area[i] <- "Southern Georges Bank / Mid"}
+  if(key$stock_area[i] == "north") {key$stock_area[i] <- "Gulf of Maine / Northern Georges Bank"}
+  if(key$stock_area[i] == "sne") {key$stock_area[i] <- "Georges Bank / Southern New England"}
+  if(key$stock_area[i] == "unit") {key$stock_area[i] <- "all"}
+}
+
+key$Species <- stringr::str_to_sentence(key$COMNAME)
+key$spst <- paste(key$Species, key$strata %>% as.numeric())
+key3 <- key %>% dplyr::select(spst, stock_area)
+
+data2$spst <- paste(data2$Species, data2$STRATUM %>% as.numeric())
+
+data2$spst %in% key3$spst
+
+data3 <- dplyr::left_join(data2, key3, by = "spst")
+data3$Region <- data3$stock_area
+
+write.csv(data3, file = here::here("data", "survey_data.csv"))
 
 # assessmentdata ratings - same as bf data
 ad <- assessmentdata::stockAssessmentSummary %>% 

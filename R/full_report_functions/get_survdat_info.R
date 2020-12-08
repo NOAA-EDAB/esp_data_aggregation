@@ -3,19 +3,21 @@ get_var_data <- function(x, variable){
   
   # mean by year
   if(variable == "BIOMASS" | variable == "ABUNDANCE"){
-    y <- y %>% dplyr::group_by(YEAR, SEASON) %>%
+    y <- y %>% dplyr::group_by(YEAR, SEASON, Region) %>%
       dplyr::summarise(variable2 = sum(get(variable)))
   } else {
-    y <- y %>% dplyr::group_by(YEAR, SEASON) %>%
+    y <- y %>% dplyr::group_by(YEAR, SEASON, Region) %>%
       dplyr::summarise(variable2 = mean(get(variable)))
   }
   
-  colnames(y) <- c("YEAR", "SEASON", "variable")
+  colnames(y) <- c("YEAR", "SEASON", "Region", "variable")
   
   return(y)
 }
 
 plot_variable <- function(x, ytitle) {
+  
+  x <- x %>% dplyr::filter(variable > 0)
 
   fig <- ggplot(x,
                 aes(x = as.numeric(YEAR),
@@ -23,15 +25,17 @@ plot_variable <- function(x, ytitle) {
                     color = SEASON))+
     geom_point(cex = 2)+
     geom_line()+
+    facet_grid(rows = vars(Region))+
     nmfspalette::scale_color_nmfs("regional web")+
+    scale_y_continuous(labels = scales::comma)+
     theme_bw()+
     xlab("Year")+
     ylab(ytitle)+
     theme(legend.position = "bottom")
   
   ecodat <- x %>%
-    dplyr::filter(YEAR > 0, variable > 0) %>%
-    dplyr::group_by(SEASON) %>%
+    dplyr::filter(YEAR > 0) %>%
+    dplyr::group_by(SEASON, Region) %>%
     dplyr::mutate(num = length(variable)) %>%
     dplyr::filter(num > 30)
   
@@ -57,49 +61,35 @@ plot_variable <- function(x, ytitle) {
 
 format_numbers <- function(x) {as.numeric(as.character(unlist(x)))}
 
-data_summary <- function(x, season) {
+data_summary <- function(x){
+  table <- x %>% dplyr::group_by(SEASON, Region) %>%
+    dplyr::summarise(mean_value = paste(mean(variable) %>% round(digits = 2), 
+                                             " +- ",
+                                             sd(variable) %>% round(digits = 2),
+                                             " (", length(variable), ") ", 
+                                             sep = ""),
+                     
+                     range_proportion = paste(min(variable) %>% round(digits = 2),
+                                              max(variable) %>% round(digits = 2),
+                                              sep = " - "))
   
-  season_data <- dplyr::filter(x, SEASON == season)
+  return(table)
   
-  year_data <- format_numbers(season_data$YEAR)
-  
-  variable_data <- format_numbers(season_data[,3])
-  
-  all_data <- c(paste(min(year_data), max(year_data), sep = " - "),
-                length(year_data),
-                round(mean(variable_data, na.rm = TRUE), digits = 2),
-                round(sd(variable_data, na.rm = TRUE), digits = 2),
-                round(min(variable_data, na.rm = TRUE), digits = 2),
-                round(max(variable_data, na.rm = TRUE), digits = 2))
-  
-  z <- dplyr::filter(season_data, YEAR > (max(year_data) - 5))
-  
-  five_year_data <- format_numbers(z$YEAR)
-  five_variable_data <- format_numbers(z[,3])
-  
-  five_data <- c(paste(min(five_year_data), max(five_year_data), sep = " - "),
-                 length(five_year_data),
-                 round(mean(five_variable_data, na.rm = TRUE), digits = 2),
-                 round(sd(five_variable_data, na.rm = TRUE), digits = 2),
-                 round(min(five_variable_data, na.rm = TRUE), digits = 2),
-                 round(max(five_variable_data, na.rm = TRUE), digits = 2))
-  
-  output <- rbind(c(season, all_data), c(season, five_data))
-  
-  return(output)
 }
 
 generate_info <- function(x, ytitle, variable){
   
   data <- get_var_data(x, variable = variable)
-  
+
   fig <- plot_variable(data, ytitle = ytitle)
   
-  table <- rbind(data_summary(data, season = "SPRING"),
-                 data_summary(data, season = "FALL"))
+  table <- data_summary(data)
   
-  colnames(table) <- c("SEASON", "YEARS", "N_YEARS", "MEAN", "SD", "MIN", "MAX")
+#  colnames(table) <- c("SEASON", "YEARS", "N_YEARS", "MEAN", "SD", "MIN", "MAX")
   
   print(fig)
-  return(knitr::kable(table))
+  return(knitr::kable(table, 
+                      col.names = c("Season", "Region",
+                                    "Mean value +- SD (n years)", 
+                                    "Range")))
 }
