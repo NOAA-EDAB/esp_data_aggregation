@@ -1,7 +1,10 @@
 source(here::here("R/full_report_functions", "get_survdat_info.R"))
 
 get_len_data <- function(x){
-  y <- dplyr::filter(x, LENGTH > 0, ABUNDANCE > 0)
+  y <- dplyr::filter(x, LENGTH > 0, ABUNDANCE > 0) %>%
+    dplyr::group_by(YEAR) %>%
+    dplyr::mutate(n_fish = length(LENGTH)) %>%
+    dplyr::filter(n_fish > 10) # only years with >10 fish
   
   y <- y %>% dplyr::group_by(YEAR, SEASON) %>%
       dplyr::summarise(mean_len = mean(LENGTH),

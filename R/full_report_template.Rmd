@@ -31,6 +31,8 @@ params:
   
   rec_data: data
   
+  asmt_data: data
+  
   # sources of data
   qual_source: "assessmentdata::stockAssessmentSummary"
   b_source: "assessmentdata::stockAssessmentSummary"
@@ -61,6 +63,8 @@ source(here::here("R/full_report_functions", "get_survdat_info.R"))
 source(here::here("R/full_report_functions", "get_length.R"))
 source(here::here("R/full_report_functions", "get_recruitment.R"))
 source(here::here("R/full_report_functions", "get_rec_catch.R"))
+source(here::here("R/full_report_functions", "get_lw.R"))
+source(here::here("R/full_report_functions", "get_assessment.R"))
 ```
 
 ```{r, data, include = FALSE}
@@ -97,6 +101,9 @@ diet_data <- diet_data[diet_data$Species == species, ]
 
 rec_data <- params$rec_data
 rec_data <- rec_data[rec_data$Species == species, ]
+
+asmt_data <- params$asmt_data
+asmt_data <- asmt_data[asmt_data$Species == species, ]
 ```
 
 ```{r, bf_status}
@@ -113,7 +120,7 @@ if(length(bf_data$Species) > 1){
 
 ```{r, legend}
 # set colors and linetypes to be constant for all regions
-reg <- c(bf_data$Region, recruit_data$Region) %>% unique()
+reg <- c(bf_data$Region, recruit_data$Region, asmt$Region) %>% unique()
 
 lines <- 1:length(reg)
 names(lines) <- reg
@@ -288,7 +295,33 @@ if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
 } else print("NO DATA")
 ```
 
-## Recreational catch
+## Catch
+
+### Catch
+Catch statistics from ``r params$recruit_source``.
+```{r, catch}
+if(nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0){
+plot_asmt(asmt_data, 
+          metric = "Catch", 
+          ytitle = "Catch",
+          lin = lines, 
+          col = colors)
+} else print("NO DATA")
+```
+
+### CPUE
+CPUE statistics from ``r params$recruit_source``.
+```{r, CPUE}
+if(nrow(asmt_data %>% dplyr::filter(Metric == "CPUE")) > 0){
+plot_asmt(asmt_data, 
+          metric = "CPUE", 
+          ytitle = "CPUE",
+          lin = lines, 
+          col = colors)
+} else print("NO DATA")
+```
+
+### Recreational catch
 Recreational catch data were downloaded from [NOAA MRIP](https://www.st.nmfs.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/).
 ```{r, rec}
 if(length(rec_data$Species) > 0){
@@ -297,10 +330,24 @@ if(length(rec_data$Species) > 0){
 ```
 
 ## Length
-Length data were pulled from ``r params$length_source``. Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines.
+Length data were pulled from ``r params$length_source``. Only years with more than 10 fish lengths were considered for analysis. Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines.
 ```{r, length}
 if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
   generate_len_info(survey_data)
 } else print("NO DATA")
 ```
 
+## Condition
+Condition information was derived from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). 
+
+### Length vs weight
+Length vs weight for all geographic samples by decade. Please note, no trend lines were fit and points are jittered to reduce overlap.
+```{r, lw}
+plot_lw(diet_data)
+```
+
+### Condition factor
+We calculated a rough condition factor as: Weight / Length^3. If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap.
+```{r, condition}
+plot_cond(diet_data)
+```

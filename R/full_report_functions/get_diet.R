@@ -8,7 +8,7 @@ get_diet <- function(data){
     
     # only look at season/year combinations with >20 predator samples
     dplyr::group_by(year, season) %>%
-    dplyr::mutate(n_predators = length(unique(pdid))) 
+    dplyr::mutate(n_predators = pdid %>% unique() %>% length()) 
   
     if(max(normalized$n_predators) > 20){
       normalized <- normalized %>%
