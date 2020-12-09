@@ -7,20 +7,20 @@ get_diet <- function(data){
     dplyr::filter(pyamtw > 0) %>%
     
     # only look at season/year combinations with >20 predator samples
-    dplyr::group_by(year, season) %>%
+    dplyr::group_by(year, season, Region) %>%
     dplyr::mutate(n_predators = pdid %>% unique() %>% length()) 
   
     if(max(normalized$n_predators) > 20){
       normalized <- normalized %>%
         dplyr::filter(n_predators > 20) %>%
-        dplyr::group_by(year, season, gensci) %>%
+        dplyr::group_by(year, season, Region, gensci) %>%
         dplyr::summarise(total_weight = sum(pyamtw)) %>%
         dplyr::mutate(proportion = total_weight/sum(total_weight)) 
       
       normalized$gensci <- stringr::str_replace(normalized$gensci, " ", "_")
       
       # group low abundance prey as "other"
-      groups <- normalized %>% dplyr::group_by(year, season, gensci) %>%
+      groups <- normalized %>% dplyr::group_by(year, season, Region, gensci) %>%
         dplyr::summarise(max_prop = max(proportion)) %>%
         dplyr::filter(max_prop > 0.05)
       
@@ -32,17 +32,19 @@ get_diet <- function(data){
       normalized[rows,"gensci"] <- "OTHER"
       
       # re-group proportions with new "other" category
-      normalized <- normalized %>% dplyr::group_by(year, season, gensci) %>%
+      normalized <- normalized %>% dplyr::group_by(year, season, Region, gensci) %>%
         dplyr::summarise(prop2 = sum(proportion))
       
       # add in zeros
       combo <- expand.grid(year = min(normalized$year):max(normalized$year),
                            season = unique(normalized$season),
+                           Region = unique(normalized$Region),
                            gensci = unique(normalized$gensci))
       
       new_normalized <- dplyr::full_join(normalized, combo, 
                                          by = c("year" = "year",
                                                 "season" = "season",
+                                                "Region" = "Region",
                                                 "gensci" = "gensci")) %>%
         dplyr::mutate(prop2 = ifelse(is.na(prop2), 0, prop2))
       
@@ -70,16 +72,23 @@ get_diet <- function(data){
         scale_fill_manual(name = "Prey \ncategory",
                           values = plot_colors)+
         theme_classic()+
-        ylab("Proportion of gut content")
+        ylab("Proportion of gut content")+
+        theme(legend.position = "bottom")
+      
+      if(length(unique(new_normalized$gensci)) > 5){
+        fig <- fig + 
+          guides(fill=guide_legend(nrow=2, byrow = TRUE, title = "Category"))
+      } else{fig <- fig + guides(title = "Category")}
       
       if(length(unique(new_normalized$season)) > 1){
-        fig <- fig + facet_grid(rows = vars(season))
-      }
+        fig <- fig + facet_grid(rows = vars(season), 
+                                cols = vars(Region))
+      } else {fig <- fig +  facet_grid(cols = vars(Region))}
       
       # summary table
-      table <- new_normalized %>% dplyr::group_by(gensci, season, year) %>%
+      table <- new_normalized %>% dplyr::group_by(gensci, season, Region, year) %>%
         dplyr::filter(sum(prop2) > 0) %>%
-        dplyr::group_by(gensci, season) %>%
+        dplyr::group_by(gensci, season, Region) %>%
         dplyr::summarise(mean_proportion = paste(mean(prop2) %>% round(digits = 3), 
                                                  " +- ",
                                                  sd(prop2) %>% round(digits = 3),
@@ -92,7 +101,7 @@ get_diet <- function(data){
       
       print(fig)
       return(knitr::kable(table, 
-                          col.names = c("Prey category", "Season", 
+                          col.names = c("Prey category", "Season", "Region",
                                         "Mean proportion +- SD (n years)", 
                                         "Range")))
 

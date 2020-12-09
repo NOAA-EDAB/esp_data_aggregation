@@ -1,13 +1,23 @@
 get_var_data <- function(x, variable){
-  y <- dplyr::filter(x, get(variable) > 0, ABUNDANCE > 0)
+  # remove NA, zero abundance, length 
+  y <- dplyr::filter(x, get(variable) > 0, ABUNDANCE > 0) %>%
+    dplyr::select(-LENGTH) %>%
+    dplyr::select(-NUMLEN)
   
   # mean by year
   if(variable == "BIOMASS" | variable == "ABUNDANCE"){
-    y <- y %>% dplyr::group_by(YEAR, SEASON, Region) %>%
+    y <- y %>% dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+      dplyr::distinct() %>% # remove repeated row info
+      dplyr::ungroup() %>%
+      dplyr::group_by(YEAR, SEASON, Region) %>% # re-group
       dplyr::summarise(variable2 = sum(get(variable)))
   } else {
-    y <- y %>% dplyr::group_by(YEAR, SEASON, Region) %>%
-      dplyr::summarise(variable2 = mean(get(variable)))
+    y <- y %>% dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+      dplyr::distinct() %>% # remove repeated row info
+      dplyr::summarise(variable2 = mean(get(variable))) %>% # mean by day
+      dplyr::ungroup() %>%
+      dplyr::group_by(YEAR, SEASON, Region) %>%
+      dplyr::summarise(variable3 = mean(variable2)) # mean by season-year
   }
   
   colnames(y) <- c("YEAR", "SEASON", "Region", "variable")
@@ -16,8 +26,6 @@ get_var_data <- function(x, variable){
 }
 
 plot_variable <- function(x, ytitle) {
-  
-  x <- x %>% dplyr::filter(variable > 0)
 
   fig <- ggplot(x,
                 aes(x = as.numeric(YEAR),
@@ -63,14 +71,53 @@ format_numbers <- function(x) {as.numeric(as.character(unlist(x)))}
 
 data_summary <- function(x){
   table <- x %>% dplyr::group_by(SEASON, Region) %>%
-    dplyr::summarise(mean_value = paste(mean(variable) %>% round(digits = 2), 
-                                             " +- ",
-                                             sd(variable) %>% round(digits = 2),
-                                             " (", length(variable), ") ", 
-                                             sep = ""),
+    dplyr::summarise(mean_value = paste(mean(variable) %>% 
+                                          round(digits = 2) %>%
+                                          format(big.mark = ","), 
+                                        " +- ",
+                                        sd(variable) %>% 
+                                          round(digits = 2) %>%
+                                          format(big.mark = ","),
+                                        " (", 
+                                        length(variable), 
+                                        ") ", 
+                                        sep = ""),
                      
-                     range_proportion = paste(min(variable) %>% round(digits = 2),
-                                              max(variable) %>% round(digits = 2),
+                     range_proportion = paste(min(variable) %>% 
+                                                round(digits = 2) %>%
+                                                format(big.mark = ","),
+                                              max(variable) %>% 
+                                                round(digits = 2) %>%
+                                                format(big.mark = ","),
+                                              sep = " - "))
+  
+  return(table)
+  
+}
+
+data_summary_5yr <- function(x){
+  x$YEAR <- as.numeric(x$YEAR)
+  
+  table <- x %>% dplyr::group_by(SEASON, Region) %>%
+    dplyr::filter(YEAR > max(YEAR - 5)) %>%
+    dplyr::summarise(mean_value = paste(mean(variable) %>% 
+                                          round(digits = 2) %>%
+                                          format(big.mark = ","), 
+                                        " +- ",
+                                        sd(variable) %>% 
+                                          round(digits = 2) %>%
+                                          format(big.mark = ","),
+                                        " (", 
+                                        length(variable), 
+                                        ") ", 
+                                        sep = ""),
+                     
+                     range_proportion = paste(min(variable) %>% 
+                                                round(digits = 2) %>%
+                                                format(big.mark = ","),
+                                              max(variable) %>% 
+                                                round(digits = 2) %>%
+                                                format(big.mark = ","),
                                               sep = " - "))
   
   return(table)
@@ -85,11 +132,18 @@ generate_info <- function(x, ytitle, variable){
   
   table <- data_summary(data)
   
-#  colnames(table) <- c("SEASON", "YEARS", "N_YEARS", "MEAN", "SD", "MIN", "MAX")
+  table_5yr <- data_summary_5yr(data)
   
+  total_table <- cbind(table[, 1:3],
+                       table_5yr[, 3],
+                       table[, 4],
+                       table_5yr[, 4]) %>%
+    knitr::kable(col.names = c("Season", "Region",
+                               "Mean value +- SD (n years)",
+                               "Mean value +- SD (past 5 years)",
+                               "Range (total)",
+                               "Range (past 5 years)"))
+
   print(fig)
-  return(knitr::kable(table, 
-                      col.names = c("Season", "Region",
-                                    "Mean value +- SD (n years)", 
-                                    "Range")))
+  return(total_table)
 }

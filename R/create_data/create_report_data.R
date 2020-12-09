@@ -3,6 +3,7 @@
 `%>%` <- dplyr::`%>%`
 
 ## bf data
+#####
 bf <- assessmentdata::stockAssessmentSummary %>% 
   dplyr::filter(Jurisdiction == "NEFMC")
 
@@ -11,8 +12,10 @@ bf$Species <- split_info[,1]
 bf$Region <- split_info[,2]
 
 write.csv(bf, file = here::here("data", "bbmsy_ffmsy_data.csv"))
+#####
 
 ## recruitment data
+#####
 recruit <- assessmentdata::stockAssessmentData %>%
   dplyr::filter(Metric == "Recruitment",
                 Region == "Gulf of Maine / Georges Bank" |
@@ -27,8 +30,10 @@ recruit <- assessmentdata::stockAssessmentData %>%
                 Region == "Cape Cod / Gulf of Maine")
 
 write.csv(recruit, file = here::here("data", "recruitment_data.csv"))
+#####
 
 ## survey data
+#####
 data <- readRDS(here::here("data", "survdat.RDS"))
 data <- tibble::as.tibble(data$survdat)
 
@@ -77,9 +82,15 @@ data2$spst %in% key3$spst
 data3 <- dplyr::left_join(data2, key3, by = "spst")
 data3$Region <- data3$stock_area
 
+# some NAs when survey caught fish outside stock areas - replace
+data3$Region <- tidyr::replace_na(data3$Region, "Outside stock area")
+
 write.csv(data3, file = here::here("data", "survey_data.csv"))
 
+#####
+
 # assessmentdata ratings - same as bf data
+#####
 ad <- assessmentdata::stockAssessmentSummary %>% 
   dplyr::filter(Jurisdiction == "NEFMC")
 split_info <- stringr::str_split_fixed(ad$`Stock Name`, " - ", n = 2)
@@ -89,8 +100,10 @@ head(ad)
 unique(ad$Region)
 
 ad %>% write.csv(here::here("data", "assessmentdata_ratings.csv"))
+#####
 
 # lat/long data
+#####
 data <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 crs <-  "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0" 
 
@@ -126,8 +139,10 @@ data$Region <- Region
 data$Species <- stringr::str_to_sentence(data$COMNAME)
 
 write.csv(data, file = here::here("data", "geo_range_data.csv"))
+#####
 
 # recreational catch
+#####
 files <- dir(here::here("data/MRIP"))
 read_files <- files[stringr::str_detect(files, "catch_year") %>% which()]
 
@@ -143,3 +158,4 @@ big_data$tot_cat <- stringr::str_replace(big_data$tot_cat, ",", "") %>%
 big_data$Species <- stringr::str_to_sentence(big_data$common)
 
 write.csv(big_data, file = here::here("data/MRIP", "all_MRIP_catch_year.csv"))
+#####

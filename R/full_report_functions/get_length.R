@@ -34,9 +34,14 @@ plot_len <- function(x, season) {
     xlab("Year")+
     ylab("Length")+
     labs(title = season)
+  
+  ecodat <- y %>%
+    dplyr::filter(YEAR > 0) %>%
+    dplyr::group_by(Region) %>%
+    dplyr::mutate(num = length(value)) %>%
+    dplyr::filter(num > 30)
 
-  if (sum(is.na(y$value) == FALSE) >= 90) 
-  {fig <- fig + ecodata::geom_gls()} 
+  if (length(ecodat$num) > 1) {fig <- fig + ecodata::geom_gls()} 
 
   return(fig)
 }

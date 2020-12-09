@@ -15,13 +15,9 @@ plot_lw <- function(x){
     xlab("Length (cm)")+
     theme_bw()
   
-  if(unique(data$season) %>% length() > 1 
-     & unique(data$decade) %>% length() > 1) {
-    fig <- fig + facet_grid(cols = vars(season), rows = vars(decade))
-  } else if(unique(data$season) %>% length() == 1 
-            & unique(data$decade) %>% length() > 1) {
-    fig <- fig + facet_grid(rows = vars(decade))
-    }
+  if(unique(data$season) %>% length() > 1) {
+    fig <- fig + facet_grid(cols = vars(season), rows = vars(Region))
+  } else {fig <- fig + facet_grid(rows = vars(Region))}
   
   return(fig)  
 }
@@ -29,7 +25,6 @@ plot_lw <- function(x){
 plot_cond <- function(x){
   
   data <- dplyr::filter(x,
-                        season == "FALL" | season == "SPRING",
                         is.na(pdlen) == FALSE, 
                         is.na(pdwgt) == FALSE)
   
@@ -45,14 +40,19 @@ plot_cond <- function(x){
     theme_bw()
   
   if(unique(data$season) %>% length() > 1) {
-    fig <- fig + facet_grid(cols = vars(season))
-  }
+    fig <- fig + facet_grid(cols = vars(season),
+                            rows = vars(Region))
+  } else { fig <- fig + facet_grid(rows = vars(Region))}
   
   ecodat <- data %>% 
-    dplyr::group_by(year) %>%
-    dplyr::summarise(mean_condition = mean(pdwgt/(pdlen^3)))
+    dplyr::group_by(year, season, Region) %>%
+    dplyr::summarise(mean_condition = mean(pdwgt/(pdlen^3))) %>%
+    dplyr::ungroup() %>%
+    dplyr::group_by(season, Region) %>%
+    dplyr::mutate(n_year = length(year)) %>%
+    dplyr::filter(n_year > 30)
 
-  if(length(ecodat$year) > 30){
+  if(length(ecodat$year) > 1){
     fig <- fig + 
       ecodata::geom_gls(inherit.aes = FALSE,
                         data = ecodat,

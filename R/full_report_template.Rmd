@@ -48,7 +48,8 @@ params:
 ---
 
 ```{r, setup, include = FALSE}
-knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.align = 'center')
+knitr::opts_chunk$set(echo = F, message = F, warning = F, 
+                      fig.width = 8, fig.align = 'center')
 
 library(ggplot2)
 
@@ -130,14 +131,14 @@ names(colors) <- reg
 
 ```
 
-This is a preliminary report of `assessmentdata` and `survdat` data. This report is pulling information on all Northeast `r species` stocks.
+This is a preliminary report of previously collected data. This report is pulling information on all Northeast `r species` stocks.
 
 # Methods
 
 ## General methods
 Northeast stocks were identified from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv).
 
-Data sources for each analysis are identified with in the Results.
+Data sources for each analysis are identified in the Results.
 
 All continuous temporal data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit.
 
@@ -224,7 +225,7 @@ if(length(recruit_data$Species) >= 1){
 ```
 
 ## Diet
-Diet data were compiled from [existing data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). For analysis, all geographic samples were grouped by season and year, and only year-season combinations with more than 20 predators sampled were considered. Prey items that made up more than 5% of the predator's diet in at least one year-season were identified to the broad category level; all other prey are grouped into the "other" category.
+Diet data were compiled from [existing data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). For analysis, all geographic samples were grouped by season, year, and region, and only year-season-region combinations with more than 20 predators sampled were considered. Prey items that made up more than 5% of the predator's diet in at least one year-season-region were identified to the broad category level; all other prey are grouped into the "other" category.
 ```{r, diet}
 if(length(diet_data$Species) >= 1){
   get_diet(data = diet_data)
@@ -234,7 +235,7 @@ if(length(diet_data$Species) >= 1){
 ## Temperature
 
 ### Surface temperature
-Surface temperature data were pulled from ``r params$surftemp_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
+Surface temperature data were pulled from ``r params$surftemp_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, surftemp}
 if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
   generate_info(survey_data,
@@ -244,7 +245,7 @@ if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
 ```
 
 ### Bottom temperature
-Bottom temperature data were pulled from ``r params$bottemp_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
+Bottom temperature data were pulled from ``r params$bottemp_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, bottemp}
 if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
   generate_info(survey_data,
@@ -256,7 +257,7 @@ if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
 ## Salinity 
 
 ### Surface salinity
-Surface salinity data were pulled from ``r params$surfsalin_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
+Surface salinity data were pulled from ``r params$surfsalin_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, surfsalin}
 if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
   generate_info(survey_data,
@@ -266,7 +267,7 @@ if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
 ```
 
 ### Bottom salinity
-Bottom salinity data were pulled from ``r params$botsalin_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
+Bottom salinity data were pulled from ``r params$botsalin_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, botsalin}
 if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
   generate_info(survey_data,
@@ -276,7 +277,7 @@ if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
 ```
 
 ## Abundance
-Abundance data were pulled from ``r params$abun_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
+Abundance data were pulled from ``r params$abun_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, abundance}
 if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
   generate_info(survey_data,
@@ -286,7 +287,7 @@ if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
 ```
 
 ## Biomass
-Biomass data were pulled from ``r params$biomass_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines.
+Biomass data were pulled from ``r params$biomass_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, biomass}
 if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
   generate_info(survey_data,
@@ -330,24 +331,29 @@ if(length(rec_data$Species) > 0){
 ```
 
 ## Length
-Length data were pulled from ``r params$length_source``. Only years with more than 10 fish lengths were considered for analysis. Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines.
+Length data were pulled from ``r params$length_source``. Only years with more than 10 fish lengths were considered for analysis. Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, length}
-if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
-  generate_len_info(survey_data)
-} else print("NO DATA")
+#if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
+#  generate_len_info(survey_data)
+#} else print("NO DATA")
+print("Length analysis is currently under construction.")
 ```
 
 ## Condition
 Condition information was derived from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). 
 
 ### Length vs weight
-Length vs weight for all geographic samples by decade. Please note, no trend lines were fit and points are jittered to reduce overlap.
+Length vs weight for all geographic samples by decade. Please note, no trend lines were fit, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, lw}
+if(length(diet_data$Species) >= 1){
 plot_lw(diet_data)
+} else print("NO DATA")
 ```
 
 ### Condition factor
-We calculated a rough condition factor as: Weight / Length^3. If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap.
+We calculated a rough condition factor as: Weight / Length^3. If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap sometimes the survey observed a small number of fish outside of the defined stock area..
 ```{r, condition}
+if(length(diet_data$Species) >= 1){
 plot_cond(diet_data)
+} else print("NO DATA")
 ```
