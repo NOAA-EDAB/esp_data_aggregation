@@ -74,12 +74,13 @@ by_state <- rec_effort %>%
 
 by_state %>% 
   ggplot2::ggplot(aes(x=Year, 
-                      y=(zoo::rollmean(total_trips/100000,4, na.pad=TRUE))))+
-  ggplot2::geom_line(aes(color = State, 
+                      y=total_trips/100000))+
+  tidyquant::geom_ma(aes(color = State, 
                          linetype = State), 
-                     size=1.3)+
+                     size=1.3,
+                     n = 5)+
   ggtitle("Recreational Fishing effort by state ", 
-          subtitle = " 4 year rolling average")+
+          subtitle = "5 year rolling average")+
   xlab("Year")+
   ylab("Annual recreational trips in 100,000 units")+
   theme_minimal()
