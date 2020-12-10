@@ -1,14 +1,24 @@
 ---
-author: "Ricky Tabandera"
-date: "11/25/2020"
+title: "Recreational fishing effort in`r params$state`"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
 output: html_document
 params:
   State:
-    label: "State:"
+    label: 'State:'
     value: CONNECTICUT
     input: select
-    choices: [CONNECTICUT, DELAWARE, MAINE, MARYLAND, MASSACHUSETTS, NEW HAMPSHIRE, NEW JERSEY, NEW YORK, RHODE ISLAND, VIRGINIA]
-title: "Recreational fishing effort in`r params$state`"
+    choices:
+    - CONNECTICUT
+    - DELAWARE
+    - MAINE
+    - MARYLAND
+    - MASSACHUSETTS
+    - NEW HAMPSHIRE
+    - NEW JERSEY
+    - NEW YORK
+    - RHODE ISLAND
+    - VIRGINIA
 ---
 
 ```{r setup, include=FALSE}
@@ -31,19 +41,51 @@ These records are Recreational Fisheries Statistics sourced from the [ Marine Re
 
 
 ```{r effort by single state, echo=FALSE, message=FALSE,warning=FALSE}
-by_state_mode<-rec_effort %>% dplyr::group_by(State, Fishing.Mode, Year) %>% dplyr::summarise (total_trips= sum(Angler.Trips))
+by_state_mode <- rec_effort %>% 
+  dplyr::group_by(State, Fishing.Mode, Year) %>% 
+  dplyr::summarise (total_trips= sum(Angler.Trips))
 
-selected_state<- by_state_mode %>% dplyr::filter(State == params$State)
-selected_state$Fishing.Mode<- stringr::str_to_sentence(selected_state$Fishing.Mode)
-selected_state %>% ggplot2::ggplot(aes(x=Year, y=(total_trips/100000)))+ ggplot2::geom_line(aes(color = Fishing.Mode, linetype = Fishing.Mode),size=1.3)+ggtitle(params$State)+xlab("Year")+ylab("Annual recreational trips in 100,000 units")+theme_minimal()
+selected_state <- by_state_mode %>% 
+  dplyr::filter(State == params$State)
+
+selected_state$Fishing.Mode <- stringr::str_to_sentence(selected_state$Fishing.Mode)
+
+selected_state %>% 
+  ggplot2::ggplot(aes(x=Year, 
+                      y=(total_trips/100000)))+ 
+  ggplot2::geom_line(aes(color = Fishing.Mode, 
+                         linetype = Fishing.Mode),
+                     size=1.3)+
+  ggtitle(params$State)+
+  xlab("Year")+
+  ylab("Annual recreational trips in 100,000 units")+
+  theme_minimal()
 
 
 ```
+
 ```{r effort by location, echo=FALSE, message=FALSE}
 
-by_location<- rec_effort %>% dplyr::group_by(Year, Fishing.Area) %>% dplyr::summarise(Total_effort= sum(Angler.Trips))
+by_location<- rec_effort %>% 
+  dplyr::group_by(Year, Fishing.Area) %>%
+  dplyr::summarise(Total_effort= sum(Angler.Trips))
 
-by_location %>% ggplot2::ggplot(aes(x=Year, y=(zoo::rollmean(Total_effort/100000,4, na.pad=TRUE))))+ ggplot2::geom_line(aes(color = Fishing.Area, linetype = Fishing.Area),size=1.3)+ggtitle("Recreational Fishing effort by location ", subtitle = " 4 year rolling average")+xlab("Year")+ylab("Annual recreational trips in 100,000 units")+theme_minimal()
+by_location %>%
+  ggplot2::ggplot(aes(x=Year, 
+                      y = Total_effort/100000,
+                      group = Fishing.Area))+ 
+  ggplot2::geom_line()+
+  tidyquant::geom_ma(aes(color = Fishing.Area,
+                         lty = Fishing.Area),
+                     n = 5,
+                     lwd = 1.3)+
+  ggtitle("Recreational Fishing effort by location ", 
+          subtitle = "5 year rolling average")+
+  xlab("Year")+
+  ylab("Annual recreational trips in 100,000 units")+
+  theme_minimal()
+
+  # + facet_grid(rows = vars(Fishing.Area))
 
 
 
