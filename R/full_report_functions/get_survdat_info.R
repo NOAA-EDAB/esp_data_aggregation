@@ -97,9 +97,10 @@ data_summary <- function(x){
 
 data_summary_5yr <- function(x){
   x$YEAR <- as.numeric(x$YEAR)
-  
-  table <- x %>% dplyr::group_by(SEASON, Region) %>%
-    dplyr::filter(YEAR > max(YEAR - 5)) %>%
+
+  table <- x %>%  dplyr::group_by(SEASON, Region) %>%
+    dplyr::mutate(max_year = max(YEAR)) %>%
+    dplyr::filter(YEAR > max_year - 5) %>%
     dplyr::summarise(mean_value = paste(mean(variable) %>% 
                                           round(digits = 2) %>%
                                           format(big.mark = ","), 
@@ -112,7 +113,7 @@ data_summary_5yr <- function(x){
                                         ") ", 
                                         sep = ""),
                      
-                     range_proportion = paste(min(variable) %>% 
+                     range_value = paste(min(variable) %>% 
                                                 round(digits = 2) %>%
                                                 format(big.mark = ","),
                                               max(variable) %>% 

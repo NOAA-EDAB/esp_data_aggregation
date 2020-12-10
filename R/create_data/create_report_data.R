@@ -85,6 +85,13 @@ data3$Region <- data3$stock_area
 # some NAs when survey caught fish outside stock areas - replace
 data3$Region <- tidyr::replace_na(data3$Region, "Outside stock area")
 
+# add unique way to identify fish observations
+date_time <- data3$EST_TOWDATE %>% stringr::str_split(" ", simplify = TRUE)
+data3$date <- date_time[, 1]
+data3$fish_id <- paste(data3$CRUISE6, data3$STRATUM, 
+                       data3$TOW, data3$date, data3$Species,
+                        sep = "_") # unique incidences of observing a species
+
 write.csv(data3, file = here::here("data", "survey_data.csv"))
 
 #####

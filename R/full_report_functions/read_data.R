@@ -5,11 +5,6 @@ recruit <- read.csv(here::here("data", "recruitment_data.csv"))
 recruit$Units <- stringr::str_replace(recruit$Units, "Thousand Recruits", "Number x 1,000")
 
 survey <- read.csv(here::here("data", "survey_data.csv"))
-date_time <- survey$EST_TOWDATE %>% stringr::str_split(" ", simplify = TRUE)
-survey$date <- date_time[, 1]
-survey$fish_id <- paste(survey$CRUISE6, survey$STRATUM, 
-                        survey$TOW, survey$date, survey$Species,
-                        sep = "_")
 
 ad <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
 

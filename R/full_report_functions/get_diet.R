@@ -8,11 +8,11 @@ get_diet <- function(data){
     
     # only look at season/year combinations with >20 predator samples
     dplyr::group_by(year, season, Region) %>%
-    dplyr::mutate(n_predators = pdid %>% unique() %>% length()) 
+    dplyr::mutate(n_predators = fish_id %>% unique() %>% length()) %>%
+    dplyr::filter(n_predators > 20)
   
-    if(max(normalized$n_predators) > 20){
+    if(length(normalized$n_predators) > 1){
       normalized <- normalized %>%
-        dplyr::filter(n_predators > 20) %>%
         dplyr::group_by(year, season, Region, gensci) %>%
         dplyr::summarise(total_weight = sum(pyamtw)) %>%
         dplyr::mutate(proportion = total_weight/sum(total_weight)) 

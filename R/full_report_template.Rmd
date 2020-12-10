@@ -310,18 +310,6 @@ plot_asmt(asmt_data,
 } else print("NO DATA")
 ```
 
-### CPUE
-CPUE statistics from ``r params$recruit_source``.
-```{r, CPUE}
-if(nrow(asmt_data %>% dplyr::filter(Metric == "CPUE")) > 0){
-plot_asmt(asmt_data, 
-          metric = "CPUE", 
-          ytitle = "CPUE",
-          lin = lines, 
-          col = colors)
-} else print("NO DATA")
-```
-
 ### Recreational catch
 Recreational catch data were downloaded from [NOAA MRIP](https://www.st.nmfs.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/).
 ```{r, rec}
@@ -333,10 +321,10 @@ if(length(rec_data$Species) > 0){
 ## Length
 Length data were pulled from ``r params$length_source``. Only years with more than 10 fish lengths were considered for analysis. Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, length}
-#if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
-#  generate_len_info(survey_data)
-#} else print("NO DATA")
-print("Length analysis is currently under construction.")
+if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
+  generate_len_info(survey_data)
+} else print("NO DATA")
+#print("Length analysis is currently under construction.")
 ```
 
 ## Condition
