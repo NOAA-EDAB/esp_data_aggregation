@@ -3,6 +3,7 @@ title: "Food Habits"
 author: "Ricky Tabandera"
 date: "12/2/2020"
 output: html_document
+
 ---
 
 ```{r setup, include=FALSE}
@@ -17,78 +18,38 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{r data loading and cleaning}
 library(tidyverse)
-list.files(here::here("data"))
+library(nmfspalette)
+#list.files(here::here("data"))
 load(here::here("data","allfh.RData"))
-#prelimary function to summerize data
-get_diet(allfh)
+#prelimary function to summarize data
+
 
 #pdgutw or pdgutv (predator gut weight or volume) fills in if a volume was taken (converts to cubic cm to grams and visa versa with pdgutv)
 #avoid pdswgt as it is incomplete 
 # there are a number of different resolutions you can use: gencat (or gensci) is the coarsest-- all fish, and phyla of inverts; analcat is middle-- fishes to family, inverts to class; and collcat-- fish to species, inverts to class/family some species. Of course most of the diet samples aren't IDed to species due to digestion levels, so many stomachs include fish uncl (fish unclassified), AR (animal remains), or broad categories of fish or invertebrates (e.g. gadid, bivalve etc.).
 
+# extract out the relevant cols by 
+
+fh_cod<-allfh %>% filter(pdcomnam=="ATLANTIC COD") %>% select(pynum, pyperi, pywgti, pyvoli, pylen,pyamtw, pyamtv, perpyv, perpyw, pdscinam, pdcomnam, pdcomnam, svspp, gensci, pyamtw, year,season, gencat, gensci, analcat, analsci)
+
+freq_cod<-fh_cod %>% group_by(year,analsci) %>% summarise(occ=length(analsci)) %>% mutate(freq= occ/sum(occ))
+freq_cod<-freq_cod %>% mutate(SWDI= -freq*log(freq))
+sum_cod<-freq_cod %>% group_by( year) %>% summarise(per_year_SWDI= sum(SWDI))
+
+
+
+sum_cod %>% ggplot2::ggplot(aes(x=year,y=per_year_SWDI))+geom_point()+geom_line()
+
+cod_1973<-freq_cod %>% filter(year==1973)
+sum(cod_1973$occ)
+sum(cod_1973$freq)
+
+
+#diversity index H is p
+
 
 #shannon diversity index (H) measure of diversity where richness is weighted by evenness where larger index values can either be richer or more even
 #alterntives are simpsons D
-
-fh_grouped<-allfh %>% group_by(year, season, gensci,stratum_area)
-
-levels(allfh$pdcomnam)
-fh_cod<-allfh %>% filter(pdcomnam=="ATLANTIC COD")
-s.cod<-fh_cod %>% dplyr::group_by(year, season, gensci) %>%  dplyr::summarise(total_weight = sum(pyamtw)) 
-p<-ggplot(s.cod,aes(x=year))+geom_histogram()
-p
-
-
-
-
-
-
-test <- data %>% dplyr::filter(svspp == 72 & pyamtw > 0)
-
-normalized <- test %>%
-  dplyr::group_by(year, season, gensci) %>%
-  dplyr::summarise(total_weight = sum(pyamtw)) %>%
-  dplyr::mutate(proportion = total_weight/sum(total_weight)) 
-normalized
-
-normalized$gensci <- stringr::str_replace(normalized$gensci, " ", "_")
-
-# group low abundance prey as "other"
-groups <- normalized %>% dplyr::group_by(year, season, gensci) %>%
-  dplyr::summarise(max_prop = max(proportion)) %>%
-  dplyr::filter(max_prop > 0.05)
-
-groups <- groups$gensci %>% unique()
-
-rows <- match(normalized$gensci, groups) %>%
-  is.na() %>% which()
-
-normalized[rows,"gensci"] <- "OTHER"
-
-# re-group proportions with new "other" category
-normalized <- normalized %>% dplyr::group_by(year, season, gensci) %>%
-  dplyr::summarise(prop2 = sum(proportion))
-
-# add in zeros
-combo <- expand.grid(year = unique(normalized$year),
-                     season = unique(normalized$season),
-                     gensci = unique(normalized$gensci))
-
-new_normalized <- dplyr::full_join(normalized, combo, 
-                            by = c("year" = "year",
-                                   "season" = "season",
-                                   "gensci" = "gensci")) %>%
-  dplyr::mutate(prop2 = ifelse(is.na(prop2), 0, prop2))
-
-# get order of most important - least important prey
-prey <- new_normalized %>% dplyr::group_by(gensci) %>%
-  dplyr::summarise(imp = max(prop2)) %>%
-  dplyr::arrange(dplyr::desc(imp))
-
-new_normalized$gensci <- factor(new_normalized$gensci, 
-                            prey$gensci)
-
-
 
 
 ```
@@ -97,8 +58,10 @@ new_normalized$gensci <- factor(new_normalized$gensci,
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r diversity plot, echo=FALSE}
+
+
+
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
