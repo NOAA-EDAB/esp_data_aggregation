@@ -1,8 +1,13 @@
 plot_lw <- function(x){
   
-  data <- dplyr::filter(x,
-                       is.na(pdlen) == FALSE, 
-                       is.na(pdwgt) == FALSE)
+  data <- x %>%
+    dplyr::filter(is.na(pdlen) == FALSE, 
+                  is.na(pdwgt) == FALSE) %>%
+    dplyr::select(pdlen, pdwgt, season, Region, fish_id, year) %>%
+    dplyr::distinct() %>% # remove duplicates
+    dplyr::group_by(Region, season) %>%
+    dplyr::mutate(n_fish = length(pdlen)) %>%
+    dplyr::filter(n_fish > 10) # only region-season with >10 fish
 
   fig <- ggplot(data,
                 aes(x = pdlen,
@@ -24,9 +29,14 @@ plot_lw <- function(x){
 
 plot_cond <- function(x){
   
-  data <- dplyr::filter(x,
-                        is.na(pdlen) == FALSE, 
-                        is.na(pdwgt) == FALSE)
+  data <- x %>% 
+    dplyr::filter(is.na(pdlen) == FALSE, 
+                  is.na(pdwgt) == FALSE) %>%
+    dplyr::select(pdlen, pdwgt, season, Region, fish_id, year) %>%
+    dplyr::distinct() %>% # remove duplicates
+    dplyr::group_by(Region, season) %>%
+    dplyr::mutate(n_fish = length(pdlen)) %>%
+    dplyr::filter(n_fish > 10) # only region-season with >10 fish
   
   fig <- ggplot(data,
          aes(x = year,

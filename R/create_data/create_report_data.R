@@ -62,7 +62,7 @@ data2$Species <- species_name
 for(i in 1:length(key$stock_area)){
   if(key$stock_area[i] == "gbk") {key$stock_area[i] <- "Georges Bank"}
   if(key$stock_area[i] == "gom") {key$stock_area[i] <- "Gulf of Maine"}
-  if(key$stock_area[i] == "snemab") {key$stock_area[i] <- "Southern New England / Mid"}
+  if(key$stock_area[i] == "snemab") {key$stock_area[i] <- "Southern New England / Mid-Atlantic"}
   if(key$stock_area[i] == "gbkgom") {key$stock_area[i] <- "Gulf of Maine / Georges Bank"}
   if(key$stock_area[i] == "ccgom") {key$stock_area[i] <- "Cape Cod / Gulf of Maine"}
   if(key$stock_area[i] == "south") {key$stock_area[i] <- "Southern Georges Bank / Mid"}
@@ -92,7 +92,8 @@ data3$fish_id <- paste(data3$CRUISE6, data3$STRATUM,
                        data3$TOW, data3$date, data3$Species,
                         sep = "_") # unique incidences of observing a species
 
-write.csv(data3, file = here::here("data", "survey_data.csv"))
+#write.csv(data3, file = here::here("data", "survey_data.csv"))
+saveRDS(data3, file = here::here("data", "survey_data.RDS"))
 
 #####
 

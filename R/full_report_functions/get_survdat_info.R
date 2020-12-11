@@ -51,19 +51,20 @@ plot_variable <- function(x, ytitle) {
     lines <- c(1, 2)
     names(lines) <- c("FALL", "SPRING")
     
-    fig <- fig + 
-      ecodata::geom_gls(inherit.aes = FALSE,
-                        data = ecodat,
-                        mapping = aes(x = as.numeric(YEAR),
-                                      y = variable,
-                                      group = SEASON,
-                                      lty = SEASON))+
-      scale_linetype_manual(values = lines)
+    # override situations where geom_gls doesn't converge
+    res <- try({ecodata::geom_gls(inherit.aes = FALSE,
+                                  data = ecodat,
+                                  mapping = aes(x = as.numeric(YEAR),
+                                                y = variable,
+                                                group = SEASON,
+                                                lty = SEASON))+
+        scale_linetype_manual(values = lines)}, silent = TRUE)
+    
+    if(class(res) != "try-error"){
+      fig <- fig + res
       }
-  
- # if (sum(is.na(x$variable) == FALSE) >= 30) 
-  #{fig <- fig + ecodata::geom_gls(aes(lty = SEASON))} 
-  
+    }
+
   return(fig)
 }
 

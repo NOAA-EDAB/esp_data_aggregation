@@ -1,12 +1,8 @@
+`%>%` <- dplyr::`%>%`
 
-bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
+survey <- readRDS(here::here("data", "survey_data.RDS"))
 
-recruit <- read.csv(here::here("data", "recruitment_data.csv"))
-recruit$Units <- stringr::str_replace(recruit$Units, "Thousand Recruits", "Number x 1,000")
-
-survey <- read.csv(here::here("data", "survey_data.csv"))
-
-ad <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
+asmt_sum <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
 
 latlong <- read.csv(here::here("data", "geo_range_data.csv"))
 shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
@@ -27,4 +23,9 @@ asmt <- assessmentdata::stockAssessmentData %>%
                   Region == "Gulf of Maine / Northern Georges Bank" |
                   Region == "Southern Georges Bank / Mid" |
                   Region == "Cape Cod / Gulf of Maine")
-asmt$Species <- stringr::str_to_sentence(asmt$Species)
+asmt$Region <- asmt$Region %>% 
+  stringr::str_replace("Mid", "Mid-Atlantic")
+asmt$Species <- asmt$Species %>% 
+  stringr::str_to_sentence()
+asmt$Units <- asmt$Units %>%
+  stringr::str_replace("Thousand Recruits", "Number x 1,000")

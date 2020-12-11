@@ -41,26 +41,22 @@ all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
 list_species <- split(all_species, f = list(all_species))
 
 # render some reports
-purrr::map(list_species, ~rmarkdown::render(here::here("R", "full_report_template.Rmd"), 
+purrr::map("Blueback herring", ~rmarkdown::render(here::here("R", "full_report_template.Rmd"), 
                                             params = list(species_ID = .x,
                                                           
                                                           latlong_data = latlong,
                                                           shape = shape,
                                                           
-                                                          bf_data = bf,
-                                                          
-                                                          recruit_data = recruit,
-                                                          nyear = 20,
-                                                          
+                                                          asmt_sum_data = asmt_sum,
+
                                                           survey_data = survey,
-                                                          
-                                                          ad_rating_data = ad,
                                                           
                                                           diet_data = allfh,
                                                           
                                                           rec_data = rec,
                                                           
-                                                          asmt_data = asmt), 
+                                                          asmt_data = asmt
+                                                          ), 
                                             output_dir = here::here("docs"),
                                             output_file = paste(.x, "_full", 
                                                                 ".html", sep = "")))
@@ -70,9 +66,12 @@ purrr::map(list_species, ~rmarkdown::render(here::here("R", "full_report_templat
 #####
 
 # using furrr and future doesn't speed up report generation
-# use foreach and doParallel
-# cuts batch generation time of all reports from ~10 minutes to ~2 minutes
+# use parallel
+# cuts batch generation time by ~80%
+# but very slow cluster creating and closing - how to speed up??
 # make sure there are no NAs in the species name vector or it will break
+
+`%>%` <- dplyr::`%>%`
 
 # get NE stock names
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
@@ -93,20 +92,16 @@ render_par <- function(x){
                                   latlong_data = latlong,
                                   shape = shape,
                                   
-                                  bf_data = bf,
-                                  
-                                  recruit_data = recruit,
-                                  nyear = 20,
+                                  asmt_sum_data = asmt_sum,
                                   
                                   survey_data = survey,
-                                  
-                                  ad_rating_data = ad,
                                   
                                   diet_data = allfh,
                                   
                                   rec_data = rec,
                                   
-                                  asmt_data = asmt), 
+                                  asmt_data = asmt
+                                  ), 
                     intermediates_dir = tf,
                     output_dir = here::here("docs"),
                     output_file = paste(x, "_full", 
@@ -115,8 +110,15 @@ render_par <- function(x){
   unlink(tf)
 }
 
+# read in data
+source(here::here("R/full_report_functions", "read_data.R"))
+
 # make cluster
 cl <- parallel::makeCluster(parallel::detectCores() - 1)
+
+# export data to cluster
+parallel::clusterExport(cl, list("survey", "asmt", "asmt_sum", 
+                                 "latlong", "rec", "allfh"))
 
 # set up cluster
 parallel::clusterEvalQ(cl, {
@@ -124,12 +126,18 @@ parallel::clusterEvalQ(cl, {
   library(ggplot2)
   `%>%` <- dplyr::`%>%`
   
-  # load data
-  source(here::here("R/full_report_functions", "read_data.R"))
+  # load shapefile
+  shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
   
-  }) %>% invisible()
+}) %>% invisible()
 
+# generate reports
 parallel::parLapply(cl, all_species, render_par)
+
+# check what data is on clusters
+# parallel::clusterCall(cl, print(ls()))
+
+# stop cluster
 parallel::stopCluster(cl)
 #####
 
