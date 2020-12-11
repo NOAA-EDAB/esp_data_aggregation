@@ -339,7 +339,7 @@ plot_lw(diet_data)
 ```
 
 ### Condition factor
-We calculated a rough condition factor as: Weight / Length^3. If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap sometimes the survey observed a small number of fish outside of the defined stock area..
+We calculated a rough condition factor as: Weight / Length^3. If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, condition}
 if(length(diet_data$Species) >= 1){
 plot_cond(diet_data)
