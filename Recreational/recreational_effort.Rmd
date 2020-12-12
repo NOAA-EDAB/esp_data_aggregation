@@ -1,5 +1,5 @@
 ---
-title: "Recreational fishing effort in mid atlantic and northeast states"
+title: "Recreational fishing effort in mid-atlantic and northeast states"
 author: "Ricky Tabandera"
 date: "`r format(Sys.time(), '%d %b %Y')`"
 output: html_document
