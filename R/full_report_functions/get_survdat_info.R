@@ -51,19 +51,20 @@ plot_variable <- function(x, ytitle) {
     lines <- c(1, 2)
     names(lines) <- c("FALL", "SPRING")
     
-    fig <- fig + 
-      ecodata::geom_gls(inherit.aes = FALSE,
-                        data = ecodat,
-                        mapping = aes(x = as.numeric(YEAR),
-                                      y = variable,
-                                      group = SEASON,
-                                      lty = SEASON))+
-      scale_linetype_manual(values = lines)
+    # override situations where geom_gls doesn't converge
+    res <- try({ecodata::geom_gls(inherit.aes = FALSE,
+                                  data = ecodat,
+                                  mapping = aes(x = as.numeric(YEAR),
+                                                y = variable,
+                                                group = SEASON,
+                                                lty = SEASON))+
+        scale_linetype_manual(values = lines)}, silent = TRUE)
+    
+    if(class(res) != "try-error"){
+      fig <- fig + res
       }
-  
- # if (sum(is.na(x$variable) == FALSE) >= 30) 
-  #{fig <- fig + ecodata::geom_gls(aes(lty = SEASON))} 
-  
+    }
+
   return(fig)
 }
 
@@ -97,9 +98,10 @@ data_summary <- function(x){
 
 data_summary_5yr <- function(x){
   x$YEAR <- as.numeric(x$YEAR)
-  
-  table <- x %>% dplyr::group_by(SEASON, Region) %>%
-    dplyr::filter(YEAR > max(YEAR - 5)) %>%
+
+  table <- x %>%  dplyr::group_by(SEASON, Region) %>%
+    dplyr::mutate(max_year = max(YEAR)) %>%
+    dplyr::filter(YEAR > max_year - 5) %>%
     dplyr::summarise(mean_value = paste(mean(variable) %>% 
                                           round(digits = 2) %>%
                                           format(big.mark = ","), 
@@ -112,7 +114,7 @@ data_summary_5yr <- function(x){
                                         ") ", 
                                         sep = ""),
                      
-                     range_proportion = paste(min(variable) %>% 
+                     range_value = paste(min(variable) %>% 
                                                 round(digits = 2) %>%
                                                 format(big.mark = ","),
                                               max(variable) %>% 

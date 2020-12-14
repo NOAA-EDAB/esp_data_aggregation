@@ -1,17 +1,8 @@
+`%>%` <- dplyr::`%>%`
 
-bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
+survey <- readRDS(here::here("data", "survey_data.RDS"))
 
-recruit <- read.csv(here::here("data", "recruitment_data.csv"))
-recruit$Units <- stringr::str_replace(recruit$Units, "Thousand Recruits", "Number x 1,000")
-
-survey <- read.csv(here::here("data", "survey_data.csv"))
-date_time <- survey$EST_TOWDATE %>% stringr::str_split(" ", simplify = TRUE)
-survey$date <- date_time[, 1]
-survey$fish_id <- paste(survey$CRUISE6, survey$STRATUM, 
-                        survey$TOW, survey$date, survey$Species,
-                        sep = "_")
-
-ad <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
+asmt_sum <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
 
 latlong <- read.csv(here::here("data", "geo_range_data.csv"))
 shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
@@ -32,4 +23,19 @@ asmt <- assessmentdata::stockAssessmentData %>%
                   Region == "Gulf of Maine / Northern Georges Bank" |
                   Region == "Southern Georges Bank / Mid" |
                   Region == "Cape Cod / Gulf of Maine")
-asmt$Species <- stringr::str_to_sentence(asmt$Species)
+asmt$Region <- asmt$Region %>% 
+  stringr::str_replace("Mid", "Mid-Atlantic")
+asmt$Species <- asmt$Species %>% 
+  stringr::str_to_sentence()
+asmt$Units <- asmt$Units %>%
+  stringr::str_replace("Thousand Recruits", "Number x 1,000")
+
+cond <- rbind(read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GB.csv"),
+              read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GOM.csv"),
+              read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_MAB.csv"),
+              read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_SS.csv"))
+cond$Species <- stringr::str_to_sentence(cond$Species)
+cond$Species <- cond$Species %>% stringr::str_replace("Atl cod", "Atlantic cod")
+cond$Species <- cond$Species %>% stringr::str_replace("Atl herring", "Atlantic herring")
+cond$Species <- cond$Species %>% stringr::str_replace("Yellowtail", "Yellowtail flounder")
+cond$Species <- cond$Species %>% stringr::str_replace("Windowpane flounder", "Windowpane")

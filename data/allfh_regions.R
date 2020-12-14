@@ -26,9 +26,6 @@ allfh$spst %in% key3$spst
 allfh <- dplyr::left_join(allfh, key3, by = "spst")
 allfh$Region <- tidyr::replace_na(allfh$stock_area, "Outside stock area")
 
-allfh <- allfh %>% 
-  dplyr::group_by(Species, year, season, Region) %>%
-  dplyr::mutate(n_fish = length(year)) %>%
-  dplyr::filter(n_fish > 10) # only year-season-region-species with more than 10 fish
+allfh$fish_id <- paste(allfh$cruise6, allfh$stratum, allfh$tow, 
+                       allfh$Species, allfh$pdid)
 
-head(allfh$n_fish)

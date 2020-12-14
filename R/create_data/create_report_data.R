@@ -62,7 +62,7 @@ data2$Species <- species_name
 for(i in 1:length(key$stock_area)){
   if(key$stock_area[i] == "gbk") {key$stock_area[i] <- "Georges Bank"}
   if(key$stock_area[i] == "gom") {key$stock_area[i] <- "Gulf of Maine"}
-  if(key$stock_area[i] == "snemab") {key$stock_area[i] <- "Southern New England / Mid"}
+  if(key$stock_area[i] == "snemab") {key$stock_area[i] <- "Southern New England / Mid-Atlantic"}
   if(key$stock_area[i] == "gbkgom") {key$stock_area[i] <- "Gulf of Maine / Georges Bank"}
   if(key$stock_area[i] == "ccgom") {key$stock_area[i] <- "Cape Cod / Gulf of Maine"}
   if(key$stock_area[i] == "south") {key$stock_area[i] <- "Southern Georges Bank / Mid"}
@@ -85,7 +85,15 @@ data3$Region <- data3$stock_area
 # some NAs when survey caught fish outside stock areas - replace
 data3$Region <- tidyr::replace_na(data3$Region, "Outside stock area")
 
-write.csv(data3, file = here::here("data", "survey_data.csv"))
+# add unique way to identify fish observations
+date_time <- data3$EST_TOWDATE %>% stringr::str_split(" ", simplify = TRUE)
+data3$date <- date_time[, 1]
+data3$fish_id <- paste(data3$CRUISE6, data3$STRATUM, 
+                       data3$TOW, data3$date, data3$Species,
+                        sep = "_") # unique incidences of observing a species
+
+#write.csv(data3, file = here::here("data", "survey_data.csv"))
+saveRDS(data3, file = here::here("data", "survey_data.RDS"))
 
 #####
 
@@ -145,15 +153,20 @@ write.csv(data, file = here::here("data", "geo_range_data.csv"))
 #####
 files <- dir(here::here("data/MRIP"))
 read_files <- files[stringr::str_detect(files, "catch_year") %>% which()]
+col_to_keep <-  read.csv(here::here("data/MRIP", read_files[1])) %>%
+  colnames()
 
 big_data <- c()
 for(i in 1:length(read_files)){
-  this_data <- read.csv(here::here("data/MRIP", read_files[i]))
+  this_data <- read.csv(here::here("data/MRIP", read_files[i])) %>%
+    tibble::as_tibble() %>%
+    dplyr::select(col_to_keep)
   big_data <- rbind(big_data, this_data)
 }
 head(big_data)
+tail(big_data)
 
-big_data$tot_cat <- stringr::str_replace(big_data$tot_cat, ",", "") %>%
+big_data$tot_cat <- stringr::str_replace_all(big_data$tot_cat, ",", "") #%>%
   as.numeric()
 big_data$Species <- stringr::str_to_sentence(big_data$common)
 
