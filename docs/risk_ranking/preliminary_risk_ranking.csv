@@ -1,89 +1,297 @@
-"","Species","Region","Value","Year_measured","Indicator","rank","norm_rank","stock","total_risk"
-"1","Atlantic herring","Northwestern Atlantic Coast",0.882000029087067,2017,"ffmsy",16,0.761904761904762,"Atlantic herring
-Northwestern Atlantic Coast",1.32712215320911
-"2","American plaice","Gulf of Maine / Georges Bank",0.504999995231628,2016,"ffmsy",13,0.619047619047619,"American plaice
-Gulf of Maine / Georges Bank",0.966873706004141
-"3","Atlantic cod","Eastern Georges Bank",0.455000013113022,2015,"ffmsy",12,0.571428571428571,"Atlantic cod
-Eastern Georges Bank",0.571428571428571
-"4","Atlantic cod","Georges Bank",2.38899993896484,2011,"ffmsy",19,0.904761904761905,"Atlantic cod
-Georges Bank",0.904761904761905
-"5","Atlantic cod","Gulf of Maine",5.69999980926514,2010,"ffmsy",21,1,"Atlantic cod
-Gulf of Maine",1
-"6","Atlantic halibut","Northwestern Atlantic Coast",0.437999993562698,2010,"ffmsy",11,0.523809523809524,"Atlantic halibut
-Northwestern Atlantic Coast",0.523809523809524
-"7","Atlantic wolffish","Gulf of Maine / Georges Bank",0.00899999961256981,2016,"ffmsy",1,0.0476190476190476,"Atlantic wolffish
-Gulf of Maine / Georges Bank",0.786749482401656
-"8","Haddock","Eastern Georges Bank",0.384999990463257,2016,"ffmsy",10,0.476190476190476,"Haddock
-Eastern Georges Bank",0.476190476190476
-"9","Ocean pout","Northwestern Atlantic Coast",0.291000008583069,2016,"ffmsy",8,0.380952380952381,"Ocean pout
-Northwestern Atlantic Coast",1.33747412008282
-"10","Pollock","Gulf of Maine / Georges Bank",0.137999996542931,2016,"ffmsy",3,0.142857142857143,"Pollock
-Gulf of Maine / Georges Bank",0.273291925465838
-"11","Red hake","Gulf of Maine / Northern Georges Bank",0.551999986171722,2016,"ffmsy",14,0.666666666666667,"Red hake
-Gulf of Maine / Northern Georges Bank",0.753623188405797
-"12","Red hake","Southern Georges Bank / Mid-Atlantic",1.35899996757507,2016,"ffmsy",18,0.857142857142857,"Red hake
-Southern Georges Bank / Mid-Atlantic",1.63975155279503
-"13","Silver hake","Gulf of Maine / Northern Georges Bank",0.0540000014007092,2016,"ffmsy",2,0.0952380952380952,"Silver hake
-Gulf of Maine / Northern Georges Bank",0.13871635610766
-"14","Silver hake","Southern Georges Bank / Mid-Atlantic",0.171000003814697,2016,"ffmsy",4,0.19047619047619,"Silver hake
-Southern Georges Bank / Mid-Atlantic",0.842650103519669
-"15","Windowpane","Gulf of Maine / Georges Bank",0.652999997138977,2016,"ffmsy",15,0.714285714285714,"Windowpane
-Gulf of Maine / Georges Bank",1.54037267080745
-"16","Windowpane","Southern New England / Mid-Atlantic",0.902999997138977,2016,"ffmsy",17,0.80952380952381,"Windowpane
-Southern New England / Mid-Atlantic",0.98343685300207
-"17","Winter flounder","Georges Bank",0.224999994039536,2016,"ffmsy",6,0.285714285714286,"Winter flounder
-Georges Bank",0.981366459627329
-"18","Winter flounder","Gulf of Maine",0.374000012874603,2016,"ffmsy",9,0.428571428571429,"Winter flounder
-Gulf of Maine",0.950310559006211
-"19","Yellowtail flounder","Georges Bank",0.284000009298325,2014,"ffmsy",7,0.333333333333333,"Yellowtail flounder
-Georges Bank",1.44099378881988
-"20","Yellowtail flounder","Georges Bank",0.200000002980232,2014,"ffmsy",5,0.238095238095238,"Yellowtail flounder
-Georges Bank",1.44099378881988
-"21","Yellowtail flounder","Southern New England / Mid-Atlantic",3.20600008964539,2016,"ffmsy",20,0.952380952380952,"Yellowtail flounder
-Southern New England / Mid-Atlantic",1.86542443064182
-"22","Atlantic herring","Northwestern Atlantic Coast",0.749000012874603,2017,"bbmsy",13,0.565217391304348,"Atlantic herring
-Northwestern Atlantic Coast",1.32712215320911
-"23","American plaice","Gulf of Maine / Georges Bank",0.989000022411346,2016,"bbmsy",8,0.347826086956522,"American plaice
-Gulf of Maine / Georges Bank",0.966873706004141
-"24","Atlantic wolffish","Gulf of Maine / Georges Bank",0.404000014066696,2016,"bbmsy",17,0.739130434782609,"Atlantic wolffish
-Gulf of Maine / Georges Bank",0.786749482401656
-"25","Ocean pout","Northwestern Atlantic Coast",0.0450000017881393,2016,"bbmsy",22,0.956521739130435,"Ocean pout
-Northwestern Atlantic Coast",1.33747412008282
-"26","Pollock","Gulf of Maine / Georges Bank",1.74300003051758,2016,"bbmsy",3,0.130434782608696,"Pollock
-Gulf of Maine / Georges Bank",0.273291925465838
-"27","Red hake","Gulf of Maine / Northern Georges Bank",2.01999998092651,2016,"bbmsy",2,0.0869565217391304,"Red hake
-Gulf of Maine / Northern Georges Bank",0.753623188405797
-"28","Red hake","Southern Georges Bank / Mid-Atlantic",0.372999995946884,2016,"bbmsy",18,0.782608695652174,"Red hake
-Southern Georges Bank / Mid-Atlantic",1.63975155279503
-"29","Silver hake","Gulf of Maine / Northern Georges Bank",3.1029999256134,2016,"bbmsy",1,0.0434782608695652,"Silver hake
-Gulf of Maine / Northern Georges Bank",0.13871635610766
-"30","Silver hake","Southern Georges Bank / Mid-Atlantic",0.635999977588654,2016,"bbmsy",15,0.652173913043478,"Silver hake
-Southern Georges Bank / Mid-Atlantic",0.842650103519669
-"31","White hake","Gulf of Maine / Georges Bank",0.686999976634979,2016,"bbmsy",14,0.608695652173913,"White hake
-Gulf of Maine / Georges Bank",0.608695652173913
-"32","Windowpane","Gulf of Maine / Georges Bank",0.174999997019768,2016,"bbmsy",19,0.826086956521739,"Windowpane
-Gulf of Maine / Georges Bank",1.54037267080745
-"33","Windowpane","Southern New England / Mid-Atlantic",1.29999995231628,2016,"bbmsy",4,0.173913043478261,"Windowpane
-Southern New England / Mid-Atlantic",0.98343685300207
-"34","Winter flounder","Georges Bank",0.518999993801117,2016,"bbmsy",16,0.695652173913043,"Winter flounder
-Georges Bank",0.981366459627329
-"35","Winter flounder","Gulf of Maine",0.839999973773956,2004,"bbmsy",12,0.521739130434783,"Winter flounder
-Gulf of Maine",0.950310559006211
-"36","Yellowtail flounder","Georges Bank",0.105999998748302,2011,"bbmsy",20,0.869565217391304,"Yellowtail flounder
-Georges Bank",1.44099378881988
-"37","Yellowtail flounder","Southern New England / Mid-Atlantic",0.0820000022649765,2016,"bbmsy",21,0.91304347826087,"Yellowtail flounder
-Southern New England / Mid-Atlantic",1.86542443064182
-"38","Barndoor skate","Georges Bank / Southern New England",1.15299999713898,2018,"bbmsy",6,0.260869565217391,"Barndoor skate
-Georges Bank / Southern New England",0.260869565217391
-"39","Clearnose skate","Southern New England / Mid-Atlantic",0.924000024795532,2018,"bbmsy",10,0.434782608695652,"Clearnose skate
-Southern New England / Mid-Atlantic",0.434782608695652
-"40","Little skate","Georges Bank / Southern New England",0.865000009536743,2019,"bbmsy",11,0.478260869565217,"Little skate
-Georges Bank / Southern New England",0.478260869565217
-"41","Rosette skate","Southern New England / Mid-Atlantic",0.978999972343445,2018,"bbmsy",9,0.391304347826087,"Rosette skate
-Southern New England / Mid-Atlantic",0.391304347826087
-"42","Smooth skate","Gulf of Maine",1,2018,"bbmsy",7,0.304347826086957,"Smooth skate
-Gulf of Maine",0.304347826086957
-"43","Thorny skate","Gulf of Maine",0.0390000008046627,2018,"bbmsy",23,1,"Thorny skate
-Gulf of Maine",1
-"44","Winter skate","Georges Bank / Southern New England",1.27600002288818,2018,"bbmsy",5,0.217391304347826,"Winter skate
-Georges Bank / Southern New England",0.217391304347826
+"","Species","Region","stock","total_risk","name","value","label"
+"1","Acadian redfish","Gulf of Maine / Georges Bank","Acadian redfish
+Gulf of Maine / Georges Bank",2.70967741935484,"ffmsy_new",0.5,"Acadian redfish, 2.71"
+"2","Acadian redfish","Gulf of Maine / Georges Bank","Acadian redfish
+Gulf of Maine / Georges Bank",2.70967741935484,"bbmsy_new",0.5,"Acadian redfish, 2.71"
+"3","Acadian redfish","Gulf of Maine / Georges Bank","Acadian redfish
+Gulf of Maine / Georges Bank",2.70967741935484,"total_catch_new",1,"Acadian redfish, 2.71"
+"4","Acadian redfish","Gulf of Maine / Georges Bank","Acadian redfish
+Gulf of Maine / Georges Bank",2.70967741935484,"rec_catch_new",0.709677419354839,"Acadian redfish, 2.71"
+"5","American plaice","Gulf of Maine / Georges Bank","American plaice
+Gulf of Maine / Georges Bank",1.52569723541591,"ffmsy_new",0.619047619047619,"American plaice, 1.53"
+"6","American plaice","Gulf of Maine / Georges Bank","American plaice
+Gulf of Maine / Georges Bank",1.52569723541591,"bbmsy_new",0.347826086956522,"American plaice, 1.53"
+"7","American plaice","Gulf of Maine / Georges Bank","American plaice
+Gulf of Maine / Georges Bank",1.52569723541591,"total_catch_new",0.558823529411765,"American plaice, 1.53"
+"8","American plaice","Gulf of Maine / Georges Bank","American plaice
+Gulf of Maine / Georges Bank",1.52569723541591,"rec_catch_new",0,"American plaice, 1.53"
+"9","Atlantic cod","Eastern Georges Bank","Atlantic cod
+Eastern Georges Bank",2.2867985904039,"ffmsy_new",0.571428571428571,"Atlantic cod, 2.29"
+"10","Atlantic cod","Eastern Georges Bank","Atlantic cod
+Eastern Georges Bank",2.2867985904039,"bbmsy_new",0.5,"Atlantic cod, 2.29"
+"11","Atlantic cod","Eastern Georges Bank","Atlantic cod
+Eastern Georges Bank",2.2867985904039,"total_catch_new",0.441176470588235,"Atlantic cod, 2.29"
+"12","Atlantic cod","Eastern Georges Bank","Atlantic cod
+Eastern Georges Bank",2.2867985904039,"rec_catch_new",0.774193548387097,"Atlantic cod, 2.29"
+"13","Atlantic cod","Georges Bank","Atlantic cod
+Georges Bank",2.38483780609018,"ffmsy_new",0.904761904761905,"Atlantic cod, 2.38"
+"14","Atlantic cod","Georges Bank","Atlantic cod
+Georges Bank",2.38483780609018,"bbmsy_new",0.5,"Atlantic cod, 2.38"
+"15","Atlantic cod","Georges Bank","Atlantic cod
+Georges Bank",2.38483780609018,"total_catch_new",0.205882352941176,"Atlantic cod, 2.38"
+"16","Atlantic cod","Georges Bank","Atlantic cod
+Georges Bank",2.38483780609018,"rec_catch_new",0.774193548387097,"Atlantic cod, 2.38"
+"17","Atlantic cod","Gulf of Maine","Atlantic cod
+Gulf of Maine",3.03889943074004,"ffmsy_new",1,"Atlantic cod, 3.04"
+"18","Atlantic cod","Gulf of Maine","Atlantic cod
+Gulf of Maine",3.03889943074004,"bbmsy_new",0.5,"Atlantic cod, 3.04"
+"19","Atlantic cod","Gulf of Maine","Atlantic cod
+Gulf of Maine",3.03889943074004,"total_catch_new",0.764705882352941,"Atlantic cod, 3.04"
+"20","Atlantic cod","Gulf of Maine","Atlantic cod
+Gulf of Maine",3.03889943074004,"rec_catch_new",0.774193548387097,"Atlantic cod, 3.04"
+"21","Atlantic halibut","Northwestern Atlantic Coast","Atlantic halibut
+Northwestern Atlantic Coast",1.62058371735791,"ffmsy_new",0.523809523809524,"Atlantic halibut, 1.62"
+"22","Atlantic halibut","Northwestern Atlantic Coast","Atlantic halibut
+Northwestern Atlantic Coast",1.62058371735791,"bbmsy_new",0.5,"Atlantic halibut, 1.62"
+"23","Atlantic halibut","Northwestern Atlantic Coast","Atlantic halibut
+Northwestern Atlantic Coast",1.62058371735791,"total_catch_new",0.5,"Atlantic halibut, 1.62"
+"24","Atlantic halibut","Northwestern Atlantic Coast","Atlantic halibut
+Northwestern Atlantic Coast",1.62058371735791,"rec_catch_new",0.0967741935483871,"Atlantic halibut, 1.62"
+"25","Atlantic herring","Northwestern Atlantic Coast","Atlantic herring
+Northwestern Atlantic Coast",2.40776731449943,"ffmsy_new",0.761904761904762,"Atlantic herring, 2.41"
+"26","Atlantic herring","Northwestern Atlantic Coast","Atlantic herring
+Northwestern Atlantic Coast",2.40776731449943,"bbmsy_new",0.565217391304348,"Atlantic herring, 2.41"
+"27","Atlantic herring","Northwestern Atlantic Coast","Atlantic herring
+Northwestern Atlantic Coast",2.40776731449943,"total_catch_new",0.5,"Atlantic herring, 2.41"
+"28","Atlantic herring","Northwestern Atlantic Coast","Atlantic herring
+Northwestern Atlantic Coast",2.40776731449943,"rec_catch_new",0.580645161290323,"Atlantic herring, 2.41"
+"29","Atlantic mackerel","Gulf of Maine / Cape Hatteras","Atlantic mackerel
+Gulf of Maine / Cape Hatteras",2.93833017077799,"ffmsy_new",0.5,"Atlantic mackerel, 2.94"
+"30","Atlantic mackerel","Gulf of Maine / Cape Hatteras","Atlantic mackerel
+Gulf of Maine / Cape Hatteras",2.93833017077799,"bbmsy_new",0.5,"Atlantic mackerel, 2.94"
+"31","Atlantic mackerel","Gulf of Maine / Cape Hatteras","Atlantic mackerel
+Gulf of Maine / Cape Hatteras",2.93833017077799,"total_catch_new",0.970588235294118,"Atlantic mackerel, 2.94"
+"32","Atlantic mackerel","Gulf of Maine / Cape Hatteras","Atlantic mackerel
+Gulf of Maine / Cape Hatteras",2.93833017077799,"rec_catch_new",0.967741935483871,"Atlantic mackerel, 2.94"
+"33","Atlantic wolffish","Gulf of Maine / Georges Bank","Atlantic wolffish
+Gulf of Maine / Georges Bank",1.13589559245858,"ffmsy_new",0.0476190476190476,"Atlantic wolffish, 1.14"
+"34","Atlantic wolffish","Gulf of Maine / Georges Bank","Atlantic wolffish
+Gulf of Maine / Georges Bank",1.13589559245858,"bbmsy_new",0.739130434782609,"Atlantic wolffish, 1.14"
+"35","Atlantic wolffish","Gulf of Maine / Georges Bank","Atlantic wolffish
+Gulf of Maine / Georges Bank",1.13589559245858,"total_catch_new",0.0588235294117647,"Atlantic wolffish, 1.14"
+"36","Atlantic wolffish","Gulf of Maine / Georges Bank","Atlantic wolffish
+Gulf of Maine / Georges Bank",1.13589559245858,"rec_catch_new",0.290322580645161,"Atlantic wolffish, 1.14"
+"37","Barndoor skate","Georges Bank / Southern New England","Barndoor skate
+Georges Bank / Southern New England",1.14891510601436,"ffmsy_new",0.5,"Barndoor skate, 1.15"
+"38","Barndoor skate","Georges Bank / Southern New England","Barndoor skate
+Georges Bank / Southern New England",1.14891510601436,"bbmsy_new",0.260869565217391,"Barndoor skate, 1.15"
+"39","Barndoor skate","Georges Bank / Southern New England","Barndoor skate
+Georges Bank / Southern New England",1.14891510601436,"total_catch_new",0.323529411764706,"Barndoor skate, 1.15"
+"40","Barndoor skate","Georges Bank / Southern New England","Barndoor skate
+Georges Bank / Southern New England",1.14891510601436,"rec_catch_new",0.0645161290322581,"Barndoor skate, 1.15"
+"41","Butterfish","Gulf of Maine / Cape Hatteras","Butterfish
+Gulf of Maine / Cape Hatteras",2.24193548387097,"ffmsy_new",0.5,"Butterfish, 2.24"
+"42","Butterfish","Gulf of Maine / Cape Hatteras","Butterfish
+Gulf of Maine / Cape Hatteras",2.24193548387097,"bbmsy_new",0.5,"Butterfish, 2.24"
+"43","Butterfish","Gulf of Maine / Cape Hatteras","Butterfish
+Gulf of Maine / Cape Hatteras",2.24193548387097,"total_catch_new",0.5,"Butterfish, 2.24"
+"44","Butterfish","Gulf of Maine / Cape Hatteras","Butterfish
+Gulf of Maine / Cape Hatteras",2.24193548387097,"rec_catch_new",0.741935483870968,"Butterfish, 2.24"
+"45","Clearnose skate","Southern New England / Mid-Atlantic","Clearnose skate
+Southern New England / Mid-Atlantic",1.35793251381899,"ffmsy_new",0.5,"Clearnose skate, 1.36"
+"46","Clearnose skate","Southern New England / Mid-Atlantic","Clearnose skate
+Southern New England / Mid-Atlantic",1.35793251381899,"bbmsy_new",0.434782608695652,"Clearnose skate, 1.36"
+"47","Clearnose skate","Southern New England / Mid-Atlantic","Clearnose skate
+Southern New England / Mid-Atlantic",1.35793251381899,"total_catch_new",0.294117647058824,"Clearnose skate, 1.36"
+"48","Clearnose skate","Southern New England / Mid-Atlantic","Clearnose skate
+Southern New England / Mid-Atlantic",1.35793251381899,"rec_catch_new",0.129032258064516,"Clearnose skate, 1.36"
+"49","Goosefish","Gulf of Maine / Northern Georges Bank","Goosefish
+Gulf of Maine / Northern Georges Bank",1.90512333965844,"ffmsy_new",0.5,"Goosefish, 1.91"
+"50","Goosefish","Gulf of Maine / Northern Georges Bank","Goosefish
+Gulf of Maine / Northern Georges Bank",1.90512333965844,"bbmsy_new",0.5,"Goosefish, 1.91"
+"51","Goosefish","Gulf of Maine / Northern Georges Bank","Goosefish
+Gulf of Maine / Northern Georges Bank",1.90512333965844,"total_catch_new",0.647058823529412,"Goosefish, 1.91"
+"52","Goosefish","Gulf of Maine / Northern Georges Bank","Goosefish
+Gulf of Maine / Northern Georges Bank",1.90512333965844,"rec_catch_new",0.258064516129032,"Goosefish, 1.91"
+"53","Goosefish","Southern Georges Bank / Mid-Atlantic","Goosefish
+Southern Georges Bank / Mid-Atlantic",1.99335863377609,"ffmsy_new",0.5,"Goosefish, 1.99"
+"54","Goosefish","Southern Georges Bank / Mid-Atlantic","Goosefish
+Southern Georges Bank / Mid-Atlantic",1.99335863377609,"bbmsy_new",0.5,"Goosefish, 1.99"
+"55","Goosefish","Southern Georges Bank / Mid-Atlantic","Goosefish
+Southern Georges Bank / Mid-Atlantic",1.99335863377609,"total_catch_new",0.735294117647059,"Goosefish, 1.99"
+"56","Goosefish","Southern Georges Bank / Mid-Atlantic","Goosefish
+Southern Georges Bank / Mid-Atlantic",1.99335863377609,"rec_catch_new",0.258064516129032,"Goosefish, 1.99"
+"57","Haddock","Eastern Georges Bank","Haddock
+Eastern Georges Bank",2.40882804734797,"ffmsy_new",0.476190476190476,"Haddock, 2.41"
+"58","Haddock","Eastern Georges Bank","Haddock
+Eastern Georges Bank",2.40882804734797,"bbmsy_new",0.5,"Haddock, 2.41"
+"59","Haddock","Eastern Georges Bank","Haddock
+Eastern Georges Bank",2.40882804734797,"total_catch_new",0.529411764705882,"Haddock, 2.41"
+"60","Haddock","Eastern Georges Bank","Haddock
+Eastern Georges Bank",2.40882804734797,"rec_catch_new",0.903225806451613,"Haddock, 2.41"
+"61","Haddock","Georges Bank","Haddock
+Georges Bank",2.81499051233397,"ffmsy_new",0.5,"Haddock, 2.81"
+"62","Haddock","Georges Bank","Haddock
+Georges Bank",2.81499051233397,"bbmsy_new",0.5,"Haddock, 2.81"
+"63","Haddock","Georges Bank","Haddock
+Georges Bank",2.81499051233397,"total_catch_new",0.911764705882353,"Haddock, 2.81"
+"64","Haddock","Georges Bank","Haddock
+Georges Bank",2.81499051233397,"rec_catch_new",0.903225806451613,"Haddock, 2.81"
+"65","Haddock","Gulf of Maine","Haddock
+Gulf of Maine",2.31499051233397,"ffmsy_new",0.5,"Haddock, 2.31"
+"66","Haddock","Gulf of Maine","Haddock
+Gulf of Maine",2.31499051233397,"bbmsy_new",0.5,"Haddock, 2.31"
+"67","Haddock","Gulf of Maine","Haddock
+Gulf of Maine",2.31499051233397,"total_catch_new",0.411764705882353,"Haddock, 2.31"
+"68","Haddock","Gulf of Maine","Haddock
+Gulf of Maine",2.31499051233397,"rec_catch_new",0.903225806451613,"Haddock, 2.31"
+"69","Little skate","Georges Bank / Southern New England","Little skate
+Georges Bank / Southern New England",2.07408629651019,"ffmsy_new",0.5,"Little skate, 2.07"
+"70","Little skate","Georges Bank / Southern New England","Little skate
+Georges Bank / Southern New England",2.07408629651019,"bbmsy_new",0.478260869565217,"Little skate, 2.07"
+"71","Little skate","Georges Bank / Southern New England","Little skate
+Georges Bank / Southern New England",2.07408629651019,"total_catch_new",0.676470588235294,"Little skate, 2.07"
+"72","Little skate","Georges Bank / Southern New England","Little skate
+Georges Bank / Southern New England",2.07408629651019,"rec_catch_new",0.419354838709677,"Little skate, 2.07"
+"73","Ocean pout","Northwestern Atlantic Coast","Ocean pout
+Northwestern Atlantic Coast",1.86973218459894,"ffmsy_new",0.380952380952381,"Ocean pout, 1.87"
+"74","Ocean pout","Northwestern Atlantic Coast","Ocean pout
+Northwestern Atlantic Coast",1.86973218459894,"bbmsy_new",0.956521739130435,"Ocean pout, 1.87"
+"75","Ocean pout","Northwestern Atlantic Coast","Ocean pout
+Northwestern Atlantic Coast",1.86973218459894,"total_catch_new",0.5,"Ocean pout, 1.87"
+"76","Ocean pout","Northwestern Atlantic Coast","Ocean pout
+Northwestern Atlantic Coast",1.86973218459894,"rec_catch_new",0.032258064516129,"Ocean pout, 1.87"
+"77","Pollock","Gulf of Maine / Georges Bank","Pollock
+Gulf of Maine / Georges Bank",1.90327295013377,"ffmsy_new",0.142857142857143,"Pollock, 1.9"
+"78","Pollock","Gulf of Maine / Georges Bank","Pollock
+Gulf of Maine / Georges Bank",1.90327295013377,"bbmsy_new",0.130434782608696,"Pollock, 1.9"
+"79","Pollock","Gulf of Maine / Georges Bank","Pollock
+Gulf of Maine / Georges Bank",1.90327295013377,"total_catch_new",0.823529411764706,"Pollock, 1.9"
+"80","Pollock","Gulf of Maine / Georges Bank","Pollock
+Gulf of Maine / Georges Bank",1.90327295013377,"rec_catch_new",0.806451612903226,"Pollock, 1.9"
+"81","Red hake","Gulf of Maine / Northern Georges Bank","Red hake
+Gulf of Maine / Northern Georges Bank",1.2232626570965,"ffmsy_new",0.666666666666667,"Red hake, 1.22"
+"82","Red hake","Gulf of Maine / Northern Georges Bank","Red hake
+Gulf of Maine / Northern Georges Bank",1.2232626570965,"bbmsy_new",0.0869565217391304,"Red hake, 1.22"
+"83","Red hake","Gulf of Maine / Northern Georges Bank","Red hake
+Gulf of Maine / Northern Georges Bank",1.2232626570965,"total_catch_new",0.147058823529412,"Red hake, 1.22"
+"84","Red hake","Gulf of Maine / Northern Georges Bank","Red hake
+Gulf of Maine / Northern Georges Bank",1.2232626570965,"rec_catch_new",0.32258064516129,"Red hake, 1.22"
+"85","Red hake","Southern Georges Bank / Mid-Atlantic","Red hake
+Southern Georges Bank / Mid-Atlantic",2.84468513913279,"ffmsy_new",0.857142857142857,"Red hake, 2.84"
+"86","Red hake","Southern Georges Bank / Mid-Atlantic","Red hake
+Southern Georges Bank / Mid-Atlantic",2.84468513913279,"bbmsy_new",0.782608695652174,"Red hake, 2.84"
+"87","Red hake","Southern Georges Bank / Mid-Atlantic","Red hake
+Southern Georges Bank / Mid-Atlantic",2.84468513913279,"total_catch_new",0.882352941176471,"Red hake, 2.84"
+"88","Red hake","Southern Georges Bank / Mid-Atlantic","Red hake
+Southern Georges Bank / Mid-Atlantic",2.84468513913279,"rec_catch_new",0.32258064516129,"Red hake, 2.84"
+"89","Rosette skate","Southern New England / Mid-Atlantic","Rosette skate
+Southern New England / Mid-Atlantic",1.00895140664962,"ffmsy_new",0.5,"Rosette skate, 1.01"
+"90","Rosette skate","Southern New England / Mid-Atlantic","Rosette skate
+Southern New England / Mid-Atlantic",1.00895140664962,"bbmsy_new",0.391304347826087,"Rosette skate, 1.01"
+"91","Rosette skate","Southern New England / Mid-Atlantic","Rosette skate
+Southern New England / Mid-Atlantic",1.00895140664962,"total_catch_new",0.117647058823529,"Rosette skate, 1.01"
+"92","Rosette skate","Southern New England / Mid-Atlantic","Rosette skate
+Southern New England / Mid-Atlantic",1.00895140664962,"rec_catch_new",0,"Rosette skate, 1.01"
+"93","Silver hake","Gulf of Maine / Northern Georges Bank","Silver hake
+Gulf of Maine / Northern Georges Bank",1.54004462935244,"ffmsy_new",0.0952380952380952,"Silver hake, 1.54"
+"94","Silver hake","Gulf of Maine / Northern Georges Bank","Silver hake
+Gulf of Maine / Northern Georges Bank",1.54004462935244,"bbmsy_new",0.0434782608695652,"Silver hake, 1.54"
+"95","Silver hake","Gulf of Maine / Northern Georges Bank","Silver hake
+Gulf of Maine / Northern Georges Bank",1.54004462935244,"total_catch_new",0.852941176470588,"Silver hake, 1.54"
+"96","Silver hake","Gulf of Maine / Northern Georges Bank","Silver hake
+Gulf of Maine / Northern Georges Bank",1.54004462935244,"rec_catch_new",0.548387096774194,"Silver hake, 1.54"
+"97","Silver hake","Southern Georges Bank / Mid-Atlantic","Silver hake
+Southern Georges Bank / Mid-Atlantic",2.3322136708821,"ffmsy_new",0.19047619047619,"Silver hake, 2.33"
+"98","Silver hake","Southern Georges Bank / Mid-Atlantic","Silver hake
+Southern Georges Bank / Mid-Atlantic",2.3322136708821,"bbmsy_new",0.652173913043478,"Silver hake, 2.33"
+"99","Silver hake","Southern Georges Bank / Mid-Atlantic","Silver hake
+Southern Georges Bank / Mid-Atlantic",2.3322136708821,"total_catch_new",0.941176470588235,"Silver hake, 2.33"
+"100","Silver hake","Southern Georges Bank / Mid-Atlantic","Silver hake
+Southern Georges Bank / Mid-Atlantic",2.3322136708821,"rec_catch_new",0.548387096774194,"Silver hake, 2.33"
+"101","Smooth skate","Gulf of Maine","Smooth skate
+Gulf of Maine",1.11838957181751,"ffmsy_new",0.5,"Smooth skate, 1.12"
+"102","Smooth skate","Gulf of Maine","Smooth skate
+Gulf of Maine",1.11838957181751,"bbmsy_new",0.304347826086957,"Smooth skate, 1.12"
+"103","Smooth skate","Gulf of Maine","Smooth skate
+Gulf of Maine",1.11838957181751,"total_catch_new",0.0882352941176471,"Smooth skate, 1.12"
+"104","Smooth skate","Gulf of Maine","Smooth skate
+Gulf of Maine",1.11838957181751,"rec_catch_new",0.225806451612903,"Smooth skate, 1.12"
+"105","Thorny skate","Gulf of Maine","Thorny skate
+Gulf of Maine",2.33396584440228,"ffmsy_new",0.5,"Thorny skate, 2.33"
+"106","Thorny skate","Gulf of Maine","Thorny skate
+Gulf of Maine",2.33396584440228,"bbmsy_new",1,"Thorny skate, 2.33"
+"107","Thorny skate","Gulf of Maine","Thorny skate
+Gulf of Maine",2.33396584440228,"total_catch_new",0.382352941176471,"Thorny skate, 2.33"
+"108","Thorny skate","Gulf of Maine","Thorny skate
+Gulf of Maine",2.33396584440228,"rec_catch_new",0.451612903225806,"Thorny skate, 2.33"
+"109","White hake","Gulf of Maine / Georges Bank","White hake
+Gulf of Maine / Georges Bank",1.74057421004868,"ffmsy_new",0.5,"White hake, 1.74"
+"110","White hake","Gulf of Maine / Georges Bank","White hake
+Gulf of Maine / Georges Bank",1.74057421004868,"bbmsy_new",0.608695652173913,"White hake, 1.74"
+"111","White hake","Gulf of Maine / Georges Bank","White hake
+Gulf of Maine / Georges Bank",1.74057421004868,"total_catch_new",0.470588235294118,"White hake, 1.74"
+"112","White hake","Gulf of Maine / Georges Bank","White hake
+Gulf of Maine / Georges Bank",1.74057421004868,"rec_catch_new",0.161290322580645,"White hake, 1.74"
+"113","Windowpane","Gulf of Maine / Georges Bank","Windowpane
+Gulf of Maine / Georges Bank",1.91039164613952,"ffmsy_new",0.714285714285714,"Windowpane, 1.91"
+"114","Windowpane","Gulf of Maine / Georges Bank","Windowpane
+Gulf of Maine / Georges Bank",1.91039164613952,"bbmsy_new",0.826086956521739,"Windowpane, 1.91"
+"115","Windowpane","Gulf of Maine / Georges Bank","Windowpane
+Gulf of Maine / Georges Bank",1.91039164613952,"total_catch_new",0.176470588235294,"Windowpane, 1.91"
+"116","Windowpane","Gulf of Maine / Georges Bank","Windowpane
+Gulf of Maine / Georges Bank",1.91039164613952,"rec_catch_new",0.193548387096774,"Windowpane, 1.91"
+"117","Windowpane","Southern New England / Mid-Atlantic","Windowpane
+Southern New England / Mid-Atlantic",1.52992641656943,"ffmsy_new",0.80952380952381,"Windowpane, 1.53"
+"118","Windowpane","Southern New England / Mid-Atlantic","Windowpane
+Southern New England / Mid-Atlantic",1.52992641656943,"bbmsy_new",0.173913043478261,"Windowpane, 1.53"
+"119","Windowpane","Southern New England / Mid-Atlantic","Windowpane
+Southern New England / Mid-Atlantic",1.52992641656943,"total_catch_new",0.352941176470588,"Windowpane, 1.53"
+"120","Windowpane","Southern New England / Mid-Atlantic","Windowpane
+Southern New England / Mid-Atlantic",1.52992641656943,"rec_catch_new",0.193548387096774,"Windowpane, 1.53"
+"121","Winter flounder","Georges Bank","Winter flounder
+Georges Bank",1.86182186759697,"ffmsy_new",0.285714285714286,"Winter flounder, 1.86"
+"122","Winter flounder","Georges Bank","Winter flounder
+Georges Bank",1.86182186759697,"bbmsy_new",0.695652173913043,"Winter flounder, 1.86"
+"123","Winter flounder","Georges Bank","Winter flounder
+Georges Bank",1.86182186759697,"total_catch_new",0.235294117647059,"Winter flounder, 1.86"
+"124","Winter flounder","Georges Bank","Winter flounder
+Georges Bank",1.86182186759697,"rec_catch_new",0.645161290322581,"Winter flounder, 1.86"
+"125","Winter flounder","Gulf of Maine","Winter flounder
+Gulf of Maine",1.62488361403467,"ffmsy_new",0.428571428571429,"Winter flounder, 1.62"
+"126","Winter flounder","Gulf of Maine","Winter flounder
+Gulf of Maine",1.62488361403467,"bbmsy_new",0.521739130434783,"Winter flounder, 1.62"
+"127","Winter flounder","Gulf of Maine","Winter flounder
+Gulf of Maine",1.62488361403467,"total_catch_new",0.0294117647058824,"Winter flounder, 1.62"
+"128","Winter flounder","Gulf of Maine","Winter flounder
+Gulf of Maine",1.62488361403467,"rec_catch_new",0.645161290322581,"Winter flounder, 1.62"
+"129","Winter flounder","Southern New England / Mid-Atlantic","Winter flounder
+Southern New England / Mid-Atlantic",2.23339658444023,"ffmsy_new",0.5,"Winter flounder, 2.23"
+"130","Winter flounder","Southern New England / Mid-Atlantic","Winter flounder
+Southern New England / Mid-Atlantic",2.23339658444023,"bbmsy_new",0.5,"Winter flounder, 2.23"
+"131","Winter flounder","Southern New England / Mid-Atlantic","Winter flounder
+Southern New England / Mid-Atlantic",2.23339658444023,"total_catch_new",0.588235294117647,"Winter flounder, 2.23"
+"132","Winter flounder","Southern New England / Mid-Atlantic","Winter flounder
+Southern New England / Mid-Atlantic",2.23339658444023,"rec_catch_new",0.645161290322581,"Winter flounder, 2.23"
+"133","Winter skate","Georges Bank / Southern New England","Winter skate
+Georges Bank / Southern New England",1.90714462503094,"ffmsy_new",0.5,"Winter skate, 1.91"
+"134","Winter skate","Georges Bank / Southern New England","Winter skate
+Georges Bank / Southern New England",1.90714462503094,"bbmsy_new",0.217391304347826,"Winter skate, 1.91"
+"135","Winter skate","Georges Bank / Southern New England","Winter skate
+Georges Bank / Southern New England",1.90714462503094,"total_catch_new",0.705882352941177,"Winter skate, 1.91"
+"136","Winter skate","Georges Bank / Southern New England","Winter skate
+Georges Bank / Southern New England",1.90714462503094,"rec_catch_new",0.483870967741935,"Winter skate, 1.91"
+"137","Yellowtail flounder","Cape Cod / Gulf of Maine","Yellowtail flounder
+Cape Cod / Gulf of Maine",1.61954459203036,"ffmsy_new",0.5,"Yellowtail flounder, 1.62"
+"138","Yellowtail flounder","Cape Cod / Gulf of Maine","Yellowtail flounder
+Cape Cod / Gulf of Maine",1.61954459203036,"bbmsy_new",0.5,"Yellowtail flounder, 1.62"
+"139","Yellowtail flounder","Cape Cod / Gulf of Maine","Yellowtail flounder
+Cape Cod / Gulf of Maine",1.61954459203036,"total_catch_new",0.264705882352941,"Yellowtail flounder, 1.62"
+"140","Yellowtail flounder","Cape Cod / Gulf of Maine","Yellowtail flounder
+Cape Cod / Gulf of Maine",1.61954459203036,"rec_catch_new",0.354838709677419,"Yellowtail flounder, 1.62"
+"141","Yellowtail flounder","Georges Bank","Yellowtail flounder
+Georges Bank",2.41347955732082,"ffmsy_new",0.571428571428571,"Yellowtail flounder, 2.41"
+"142","Yellowtail flounder","Georges Bank","Yellowtail flounder
+Georges Bank",2.41347955732082,"bbmsy_new",0.869565217391304,"Yellowtail flounder, 2.41"
+"143","Yellowtail flounder","Georges Bank","Yellowtail flounder
+Georges Bank",2.41347955732082,"total_catch_new",0.617647058823529,"Yellowtail flounder, 2.41"
+"144","Yellowtail flounder","Georges Bank","Yellowtail flounder
+Georges Bank",2.41347955732082,"rec_catch_new",0.354838709677419,"Yellowtail flounder, 2.41"
+"145","Yellowtail flounder","Southern New England / Mid-Atlantic","Yellowtail flounder
+Southern New England / Mid-Atlantic",3.01438078737806,"ffmsy_new",0.952380952380952,"Yellowtail flounder, 3.01"
+"146","Yellowtail flounder","Southern New England / Mid-Atlantic","Yellowtail flounder
+Southern New England / Mid-Atlantic",3.01438078737806,"bbmsy_new",0.91304347826087,"Yellowtail flounder, 3.01"
+"147","Yellowtail flounder","Southern New England / Mid-Atlantic","Yellowtail flounder
+Southern New England / Mid-Atlantic",3.01438078737806,"total_catch_new",0.794117647058823,"Yellowtail flounder, 3.01"
+"148","Yellowtail flounder","Southern New England / Mid-Atlantic","Yellowtail flounder
+Southern New England / Mid-Atlantic",3.01438078737806,"rec_catch_new",0.354838709677419,"Yellowtail flounder, 3.01"
