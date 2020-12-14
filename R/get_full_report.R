@@ -41,7 +41,7 @@ all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
 list_species <- split(all_species, f = list(all_species))
 
 # render some reports
-purrr::map("Blueback herring", ~rmarkdown::render(here::here("R", "full_report_template.Rmd"), 
+purrr::map(list_species[1], ~rmarkdown::render(here::here("R", "full_report_template.Rmd"), 
                                             params = list(species_ID = .x,
                                                           
                                                           latlong_data = latlong,
@@ -55,7 +55,9 @@ purrr::map("Blueback herring", ~rmarkdown::render(here::here("R", "full_report_t
                                                           
                                                           rec_data = rec,
                                                           
-                                                          asmt_data = asmt
+                                                          asmt_data = asmt,
+                                                          
+                                                          cond_data = cond
                                                           ), 
                                             output_dir = here::here("docs"),
                                             output_file = paste(.x, "_full", 
@@ -100,7 +102,9 @@ render_par <- function(x){
                                   
                                   rec_data = rec,
                                   
-                                  asmt_data = asmt
+                                  asmt_data = asmt,
+                                  
+                                  cond_data = cond
                                   ), 
                     intermediates_dir = tf,
                     output_dir = here::here("docs"),
@@ -118,7 +122,7 @@ cl <- parallel::makeCluster(parallel::detectCores() - 1)
 
 # export data to cluster
 parallel::clusterExport(cl, list("survey", "asmt", "asmt_sum", 
-                                 "latlong", "rec", "allfh"))
+                                 "latlong", "rec", "allfh", "cond"))
 
 # set up cluster
 parallel::clusterEvalQ(cl, {

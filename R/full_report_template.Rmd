@@ -30,6 +30,8 @@ params:
   
   asmt_data: data # assessmentdata:stockAssessmentData, for recruitment and catch
   asmt_source: "assessmentdata::stockAssessmentData"
+  
+  cond_data: data
 
 ---
 
@@ -51,6 +53,7 @@ source(here::here("R/full_report_functions", "get_length.R"))
 source(here::here("R/full_report_functions", "get_rec_catch.R"))
 source(here::here("R/full_report_functions", "get_lw.R"))
 source(here::here("R/full_report_functions", "get_assessment.R"))
+source(here::here("R/full_report_functions", "get_relative_weight.R"))
 ```
 
 ```{r, data, include = FALSE}
@@ -87,6 +90,9 @@ rec_data <- rec_data[rec_data$Species == species, ]
 
 asmt_data <- params$asmt_data
 asmt_data <- asmt_data[asmt_data$Species == species, ]
+
+cond_data <- params$cond_data
+cond_data <- cond_data[cond_data$Species == species, ]
 ```
 
 ```{r, bf_status}
@@ -310,7 +316,7 @@ if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
 ```
 
 ## Condition
-Condition information was derived from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). 
+Condition information comes from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). 
 
 ### Length vs weight
 Length vs weight for all geographic samples by decade. Please note, no trend lines were fit, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
@@ -321,9 +327,19 @@ plot_lw(diet_data)
 ```
 
 ### Condition factor
+
+#### Weight-volume
 We calculated a rough condition factor as: Weight / Length^3. If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, condition}
 if(length(diet_data$Species) >= 1){
 plot_cond(diet_data)
+} else print("NO DATA")
+```
+
+#### Relative weight
+Relative weight was [previously calculated](https://github.com/Laurels1/Condition/tree/master/data). Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
+```{r, laurel_cond}
+if(length(cond_data$Species) >= 1){
+plot_relw(cond_data)
 } else print("NO DATA")
 ```

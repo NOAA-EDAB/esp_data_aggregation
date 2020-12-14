@@ -1,3 +1,5 @@
+# set up ----
+
 `%>%` <- dplyr::`%>%`
 
 # species key 
@@ -9,9 +11,11 @@ key2 <- data.frame(SVSPP = unique(key$SVSPP),
 
 # high normalized rank = more risk
 
+# f/fmsy ----
+
 # rank f/fmsy by species
 # high f/fmsy = high risk
-#####
+
 bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
 colnames(bf)
 
@@ -35,11 +39,12 @@ f_rank <- bf %>%
                 norm_rank = rank/max(rank)) %>%
   dplyr::rename(Value = F.Fmsy, Year_measured = F.Year)
 f_rank
-#####
+
+# b/bmsy ----
 
 # rank b/bmsy by species
 # low b/bmsy = high risk
-#####
+
 bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
 
 b_rank <- bf %>% 
@@ -60,12 +65,13 @@ b_rank <- bf %>%
                 norm_rank = rank/max(rank)) %>%
   dplyr::rename(Value = B.Bmsy, Year_measured = B.Year)
 b_rank
-#####
+
+# recreational catch ----
 
 # rank recreational catch by species
 # species not separated into stock areas
 # high catch = more risk (the fish is more important)
-#####
+
 rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
   dplyr::filter(sub_reg_f == "NORTH ATLANTIC")
 head(rec)
@@ -89,11 +95,9 @@ rec_rank <- rec %>%
   dplyr::rename(Value = avg_catch_5yr)
 rec_rank
 
-#####
+# total catch ----
 
-# total catch
 # rank by max of all time
-#####
 asmt <- assessmentdata::stockAssessmentData %>%
   dplyr::filter(Region == "Gulf of Maine / Georges Bank" |
                   Region == "Eastern Georges Bank" |
@@ -126,9 +130,8 @@ dplyr::mutate(Year_measured = paste("average of",
               norm_rank = rank/max(rank)) %>%
   dplyr::rename(Value = avg_catch_5yr)
 catch_rank
-#####
 
-### additional indicators to rank
+# additional indicators to rank ----
 
 # abs value of temperature change (surface-bottom x spring-fall)
 # range of temperatures found at
@@ -140,9 +143,9 @@ catch_rank
 # avg length of past 10 years as % of avg length of all times up to 10 years ago
 # max length of past 10 years as % of max length of all times up to 10 years ago
 # number of prey categories in diet
-
 # % of years that stock assessment was rejected
 
+# plot ----
 
 # plot total risk
 data <- rbind(f_rank, b_rank)

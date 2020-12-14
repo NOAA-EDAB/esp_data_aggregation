@@ -11,7 +11,7 @@
 
 <meta name="author" content="Abigail Tyrell" />
 
-<meta name="date" content="2020-12-11" />
+<meta name="date" content="2020-12-14" />
 
 <title>American lobster</title>
 
@@ -1528,7 +1528,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">American lobster</h1>
 <h4 class="author">Abigail Tyrell</h4>
-<h4 class="date">11 Dec 2020</h4>
+<h4 class="date">14 Dec 2020</h4>
 
 </div>
 
@@ -2323,7 +2323,7 @@ div.tocify {
 </div>
 <div id="condition" class="section level2">
 <h2><span class="header-section-number">2.13</span> Condition</h2>
-<p>Condition information was derived from <a href="https://github.com/Laurels1/Condition/blob/master/data/allfh.RData">diet data</a>.</p>
+<p>Condition information comes from <a href="https://github.com/Laurels1/Condition/blob/master/data/allfh.RData">diet data</a>.</p>
 <div id="length-vs-weight" class="section level3">
 <h3><span class="header-section-number">2.13.1</span> Length vs weight</h3>
 <p>Length vs weight for all geographic samples by decade. Please note, no trend lines were fit, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.</p>
@@ -2331,8 +2331,16 @@ div.tocify {
 </div>
 <div id="condition-factor" class="section level3">
 <h3><span class="header-section-number">2.13.2</span> Condition factor</h3>
+<div id="weight-volume" class="section level4">
+<h4><span class="header-section-number">2.13.2.1</span> Weight-volume</h4>
 <p>We calculated a rough condition factor as: Weight / Length^3. If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.</p>
 <pre><code>## [1] &quot;NO DATA&quot;</code></pre>
+</div>
+<div id="relative-weight" class="section level4">
+<h4><span class="header-section-number">2.13.2.2</span> Relative weight</h4>
+<p>Relative weight was <a href="https://github.com/Laurels1/Condition/tree/master/data">previously calculated</a>. Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.</p>
+<pre><code>## [1] &quot;NO DATA&quot;</code></pre>
+</div>
 </div>
 </div>
 </div>
