@@ -57,7 +57,9 @@ purrr::map(list_species[1], ~rmarkdown::render(here::here("R", "full_report_temp
                                                           
                                                           asmt_data = asmt,
                                                           
-                                                          cond_data = cond
+                                                          cond_data = cond,
+                                                          
+                                                          risk_data = risk
                                                           ), 
                                             output_dir = here::here("docs"),
                                             output_file = paste(.x, "_full", 
@@ -104,7 +106,9 @@ render_par <- function(x){
                                   
                                   asmt_data = asmt,
                                   
-                                  cond_data = cond
+                                  cond_data = cond,
+                                  
+                                  risk_data = risk
                                   ), 
                     intermediates_dir = tf,
                     output_dir = here::here("docs"),
@@ -121,7 +125,7 @@ source(here::here("R/full_report_functions", "read_data.R"))
 cl <- parallel::makeCluster(parallel::detectCores() - 1)
 
 # export data to cluster
-parallel::clusterExport(cl, list("survey", "asmt", "asmt_sum", 
+parallel::clusterExport(cl, list("survey", "asmt", "asmt_sum", "risk",
                                  "latlong", "rec", "allfh", "cond"))
 
 # set up cluster
