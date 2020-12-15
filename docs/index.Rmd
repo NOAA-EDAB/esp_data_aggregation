@@ -59,7 +59,7 @@ This is a preliminary risk analysis visualization.
 
 ```{r}
 paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", 
-                  "plot_all_data", "'>",
+                  "plot_all_risk", "'>",
                   "Preliminary risk analysis", 
                   "</a>", sep = "") %>%
   knitr::kable(col.names = "File name")
