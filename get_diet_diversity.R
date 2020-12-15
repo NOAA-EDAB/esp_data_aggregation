@@ -1,2 +1,0 @@
-`%>%` <- dplyr::`%>%`
-library(ggplot2)

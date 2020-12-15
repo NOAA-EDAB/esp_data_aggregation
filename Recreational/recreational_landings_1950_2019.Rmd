@@ -28,7 +28,7 @@ Rec_state<-params$state
 
 
 
-```{r data cleaning, message= FALSE, error=FALSE,warning = FALSE}
+```{r data cleaning, message= FALSE, error=FALSE,warning = FALSE, echo=FALSE}
 library("tidyverse")
 #read in recreational landings data
 rec_landings_1950_2019<-readr::read_csv("foss_landings_REC_1950_2019_MA_NE.csv")
@@ -98,12 +98,12 @@ rec_by_sp_whole[stringr::str_detect(rec_by_sp_whole$common_name, "window"),1]<-"
 rec_landings_1950_2019_whole[stringr::str_detect(rec_landings_1950_2019_whole$common_name,"window"),1 ]<-"windowpane flounder"
 #check how many matches already exist 
 #there are 42 species in NEFSC stock list
-length(stock_list$common_name)
+#length(stock_list$common_name)
 
 
 stock_semi<-semi_join(stock_list, rec_by_sp_whole, by = "common_name") 
 stock_missing<-anti_join(stock_list, stock_semi, by = "common_name") 
-length(stock_missing$common_name)
+#length(stock_missing$common_name)
 #the missing stocks 
 #  1 atlantic hagfish no records     
 #  2 offshore hake    multiple species, ECSA uses red and silver hake, not sure what to do with other species  
@@ -126,16 +126,21 @@ rec_landings_1950_2019_clean <-rec_landings_1950_2019_whole
 
 ```
 
-## Recreational catches time serise 
+## Recreational catches time series 
 
-This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$common_name))` species. 
+This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$common_name))` species.
 
 
 
 ```{r total catch, echo=FALSE}
 
-rec_landings_clean %>% filter(common_name==stock_name) %>%
-  ggplot2::ggplot(aes(x=Year, y=zoo::rollmean(log(total),7, na.pad=TRUE)))+geom_point()+geom_line()+ggtitle(label = params$stock )+xlab(label= "Year")+ylab(label = " Log transformed  total catch in pounds (lb) ")+theme_minimal()
+rec_landings_clean %>% filter(common_name==params$stock) %>%
+  ggplot2::ggplot(aes(x=Year, y=log(total)))+
+  tidyquant::geom_ma( n=5, lwd=1.4)+
+  ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
+  xlab(label= "Year")+
+  ylab(label = "Log transformed  total catch in pounds (lb) ")+
+  theme_minimal()
 
 
 
@@ -143,10 +148,29 @@ rec_landings_clean %>% filter(common_name==stock_name) %>%
 
 ```
 
-```{r state breakdown, echo= FALSE}
-rec.sub<-rec_landings_1950_2019_clean %>%  dplyr::filter(State == params$state & common_name == params$stock)
 
-rec.sub %>% ggplot2::ggplot(aes(x=Year, y= log(Pounds)))+geom_point(size=3)+geom_line(aes(y= zoo::rollmean(log(Pounds),7, na.pad=TRUE)))+ggtitle(params$stock, subtitle = params$state)
+## Recreational landings of `r params$stock` across states in the mid-atlantic and north-east states
+
+```{r state breakdown, echo= FALSE}
+
+rec_landings_1950_2019_clean %>% filter(common_name==params$stock) %>% group_by(State, Year) %>%
+  ggplot2::ggplot(aes(x=Year, y=log(Pounds)))+
+  tidyquant::geom_ma(aes(color = State, lty= State),n=5, lwd=1.4,na.rm = TRUE)+
+  ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
+  xlab(label= "Year")+
+  ylab(label = "Log transformed  total catch in pounds (lb) ")+
+  theme_minimal()
+#figgure out how to display second graph if data is poor 
+
+rec_landings_1950_2019_clean %>% filter(common_name==params$stock) %>% group_by(State, Year) %>%
+  ggplot2::ggplot(aes(x=Year, y=log(Pounds)))+
+  geom_line(aes(color=State,lty=State),lwd=1.3)+
+  facet_wrap(vars(State))+
+  ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
+  xlab(label= "Year")+
+  ylab(label = "Log transformed  total catch in pounds (lb) ")+
+  theme_minimal()
+
 
 ```
 
