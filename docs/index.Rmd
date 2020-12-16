@@ -17,12 +17,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 `%>%` <- dplyr::`%>%`
 
-all_pages <- list.files(here::here("docs/"), pattern = ".html")
-all_pages <- all_pages[-which(all_pages == "index.html")]
+report_pages <- list.files(here::here("docs/reports"), pattern = ".html")
 
-report_pages <- all_pages[stringr::str_which(all_pages, pattern = "full.html")]
+rec_pages <- list.files(here::here("docs/Recreational landings"), pattern = ".html")
 
-rec_pages <- all_pages[stringr::str_which(all_pages, pattern = "recreational")]
+rec_summary_pages <- rec_pages[stringr::str_which(rec_pages, pattern = "recreational")]
+
+rec_species_pages <- rec_pages[-stringr::str_which(rec_pages, pattern = "recreational")]
 
 ```
 
@@ -31,7 +32,7 @@ These reports are a preliminary analysis of ecological and socioeconomic data so
 
 ```{r}
 purrr::map(report_pages, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/reports/", 
                   .x, "'>",
                   stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1], 
                   "</a>", sep = "")) %>%
@@ -44,13 +45,21 @@ purrr::map(report_pages,
 These reports are a preliminary analysis of recreational data only.
 
 ```{r}
-purrr::map(rec_pages, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", 
+purrr::map(rec_summary_pages, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
                   .x, "'>",
                   stringr::str_split_fixed(.x, pattern = ".h", n = 2)[,1], 
                   "</a>", sep = "")) %>%
   unlist() %>%
   knitr::kable(col.names = "File name")
+
+purrr::map(rec_species_pages, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
+                  .x, "'>",
+                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1], 
+                  "</a>", sep = "")) %>%
+  unlist() %>%
+  knitr::kable(col.names = "Species name")
 
 ```
 
@@ -58,7 +67,7 @@ purrr::map(rec_pages,
 This is a preliminary risk analysis visualization.
 
 ```{r}
-paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", 
+paste("<a href='https://rtabandera.github.io/esp_data_aggregation/risk_ranking/", 
                   "plot_all_risk", "'>",
                   "Preliminary risk analysis", 
                   "</a>", sep = "") %>%
