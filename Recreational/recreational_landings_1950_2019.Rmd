@@ -1,6 +1,6 @@
 ---
 author: "Ricky Tabandera"
-date: "11/18/2020"
+date: "`r format(Sys.time(), '%d %b %Y')`"
 output: html_document
 params:
   stock:
@@ -8,12 +8,8 @@ params:
     value: Alewife
     input: select
     choices: [smooth dogfish, spiny dogfish, barndoor skate, winter skate, clearnose skate, rosette skate, little skate, smooth skate, thorny skate, atlantic herring, alewife, blueback herring, silver hake, atlantic cod, haddock, pollock, white hake, red hake, cusk, atlantic halibut, american plaice, summer flounder, yellowtail flounder, winter flounder, atlantic mackerel, butterfish, bluefish, black sea bass, scup, acadian redfish,    atlantic wolffish,  ocean pout, atlantic menhaden,windowpane flounder]
-  state:
-    label: "State:"
-    value: New York
-    input: select
-    choices: [CONNECTICUT, DELAWARE, MAINE, MARYLAND, MASSACHUSETTS, NEW HAMPSHIRE, NEW JERSEY, NEW YORK, RHODE ISLAND, VIRGINIA]
-title: "Recreational catch of `r stringr::str_to_sentence(params$stock)`  in `r stringr::str_to_sentence(params$state)`"
+  
+title: "Recreational catch of `r stringr::str_to_sentence(params$stock)`"
 ---
 
 ---
@@ -107,7 +103,7 @@ stock_missing<-anti_join(stock_list, stock_semi, by = "common_name")
 #the missing stocks 
 #  1 atlantic hagfish no records     
 #  2 offshore hake    multiple species, ECSA uses red and silver hake, not sure what to do with other species  
-fish_match<-rec_w_comma_whole[str_detect(rec_w_comma_whole$common_name, "hake"),]
+#fish_match<-rec_w_comma_whole[str_detect(rec_w_comma_whole$common_name, "hake"),]
 # 3 witch flounder  no records       
 # 4 monkfish no records              
 # 5 american lobster no records      
@@ -124,53 +120,92 @@ rec_landings_1950_2019_clean <-rec_landings_1950_2019_whole
 #write.csv(rec_landings_1950_2019_clean, "rec_landings_1950_2019_tidy.csv")
 # rm(list =c("rec_by_sp", "rec_landings_1950_2019", "rec_landings_1950_2019_comma", "rec_landings_1950_2019_comma_split" "rec_w_comma", "rec_w_comma_split", "stock_list", "stock_list_all_strata") )
 
+
+
+
+Selected_sp<-rec_landings_1950_2019_clean %>% group_by(Year) %>% filter(!is.na(Pounds) & common_name==params$stock) %>% summarise(total=sum(Pounds,na.rm = FALSE))
+selected_by_state<-rec_landings_1950_2019_clean %>% filter(!is.na(Pounds) & common_name==params$stock) %>% group_by(State, Year)
+sp_data_qual<-TRUE
+st_data_qual<-TRUE
+
+#testing if data quality is sufficent for each graph
+if(length(which(is.na(Selected_sp$total)))/length(Selected_sp$total)>0.40){ sp_data_qual<-FALSE}else{sp_data_qual<-TRUE}
+
+
+if(length(which(is.na(selected_by_state$Pounds)))/length(selected_by_state$Pounds) >0.50){st_data_qual<-FALSE}else{st_data_qual<-TRUE}
+
+
+
 ```
 
 ## Recreational catches time series 
 
-This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$common_name))` species.
+This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$common_name))` species. Figures produced reflect the coverage of the data. With stocks that have high coverage, a running average is calculated. In low coverage stocks, missing values are excluded and a simple time series is produced. 
 
 
 
-```{r total catch, echo=FALSE}
+```{r total catch good data, messages=FALSE,warning=FALSE, error=FALSE, echo=FALSE, eval= sp_data_qual}
 
-rec_landings_clean %>% filter(common_name==params$stock) %>%
+Selected_sp%>%
   ggplot2::ggplot(aes(x=Year, y=log(total)))+
   tidyquant::geom_ma( n=5, lwd=1.4)+
+  geom_point()+
   ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
+  xlim(1981,2019)+
   xlab(label= "Year")+
   ylab(label = "Log transformed  total catch in pounds (lb) ")+
   theme_minimal()
 
 
+```
+```{r sp if data is poor,messages=FALSE,warning=FALSE, error=FALSE, echo=FALSE, eval= !sp_data_qual}
 
+
+Selected_sp%>%na.omit()%>%
+  ggplot2::ggplot(aes(x=Year, y=log(total)))+
+  geom_point(size=1.3)+
+  geom_line()+
+  ggtitle(label = params$stock ,subtitle = "Data coverage is poor")+
+  xlim(1981,2019)+
+  xlab(label= "Year")+
+  ylab(label = "Log transformed  total catch in pounds (lb)")+
+  theme_minimal()
 
 
 ```
 
 
-## Recreational landings of `r params$stock` across states in the mid-atlantic and north-east states
+## Recreational landings of `r params$stock` across states in the mid-Atlantic and north-east states
 
-```{r state breakdown, echo= FALSE}
+```{r state breakdown if data is good,messages=FALSE,warning=FALSE, error=FALSE, echo=FALSE, eval=st_data_qual}
 
-rec_landings_1950_2019_clean %>% filter(common_name==params$stock) %>% group_by(State, Year) %>%
+selected_by_state %>%
   ggplot2::ggplot(aes(x=Year, y=log(Pounds)))+
-  tidyquant::geom_ma(aes(color = State, lty= State),n=5, lwd=1.4,na.rm = TRUE)+
-  ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
-  xlab(label= "Year")+
-  ylab(label = "Log transformed  total catch in pounds (lb) ")+
-  theme_minimal()
-#figgure out how to display second graph if data is poor 
-
-rec_landings_1950_2019_clean %>% filter(common_name==params$stock) %>% group_by(State, Year) %>%
-  ggplot2::ggplot(aes(x=Year, y=log(Pounds)))+
-  geom_line(aes(color=State,lty=State),lwd=1.3)+
+  geom_point()+
+  tidyquant::geom_ma(aes(color = State, lty= State),n=5, lwd=1.4,na.rm = TRUE,show.legend = FALSE)+
   facet_wrap(vars(State))+
   ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
+  xlim(1981,2019)+
   xlab(label= "Year")+
   ylab(label = "Log transformed  total catch in pounds (lb) ")+
   theme_minimal()
+ 
 
+
+
+```
+```{r data poor graph, warning=FALSE,  echo= FALSE, eval= !st_data_qual}
+
+selected_by_state%>% 
+  ggplot2::ggplot(aes(x=Year, y=log(Pounds)))+
+  geom_point(aes(color=State),show.legend = FALSE)+
+  geom_line(aes(color=State,lty=State),lwd=1.3,show.legend = FALSE)+
+  facet_wrap(vars(State))+
+  xlim(1981,2019)+
+  ggtitle(label = params$stock ,subtitle = "Data coverage is poor")+
+  xlab(label= "Year")+
+  ylab(label = "Log transformed  total catch in pounds (lb) ")+
+  theme_minimal()
 
 ```
 
