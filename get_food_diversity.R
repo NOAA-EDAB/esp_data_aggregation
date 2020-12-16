@@ -8,7 +8,7 @@ fh_cod<-allfh %>% filter(pdcomnam=="ATLANTIC COD") %>% select(pynum, pyperi, pyw
                                                               season,gencat, gensci, analcat, analsci)
 sp.cod<-fh_cod %>% filter(season=="SPRING")
 
-remotes::install_github("nmfs-general-modeling-tools/nmfspalette")
+
 library(nmfspalette)
 
 

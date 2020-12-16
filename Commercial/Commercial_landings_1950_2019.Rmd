@@ -1,0 +1,67 @@
+---
+title: "Commercial_landings_1950_2019"
+author: "Ricky Tabandera"
+date: "12/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r data processing}
+list.files(here::here("commercial"))
+com_landings<-readr::read_csv(here::here("commercial","foss_ commercial_landings_NE_MA_1950_2019.csv"))
+#renaming cols to aling with stocklist
+com_landings<-com_landings %>% rename(common_name=`NMFS Name`)
+#simplifying the names to be lowercase 
+com_landings$common_name<-stringr::str_to_lower(com_landings$common_name)
+#removing empty rows due to confidentiality 
+com_landings<-com_landings %>% filter(!common_name=="withheld for confidentiality" & !Confidentiality == "Confidential" )
+
+
+
+#load in the stocks managed in NEFSC
+stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+#lowercase all of the names
+stock_list_all_strata$common_name <- stringr::str_to_lower(stock_list_all_strata$common_name)
+#extract out the unique names and rename column  
+stock_list<-stock_list_all_strata %>% distinct(common_name, .keep_all=TRUE)
+
+t1<-com_landings %>% filter(stringr::str_detect(common_name, "**"))
+stringr::str_detect()
+
+
+
+#spliting out the
+com_landings<-com_landings %>%separate (col=common_name,sep ="\\,\\s", into = c("first" ,"second", "third"))
+
+com_landings<-dplyr::mutate(first=replace(first, first== "shark", NA))
+
+  
+  
+  
+t1<-t1 %>%dplyr::mutate(first=replace(first, first== "shark", NA))
+
+t2<-t1 %>% filter(first=="shark")
+f
+
+
+
+head(com_landings)
+unique(com_landings$common_name)
+
+```
+
+
+## Commercial Landings 
+
+This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$common_name))` species. Figures produced reflect the coverage of the data. With stocks that have high coverage, a running average is calculated. In low coverage stocks, missing values are excluded and a simple time series is produced. 
+
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
