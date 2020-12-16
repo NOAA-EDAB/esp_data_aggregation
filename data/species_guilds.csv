@@ -1,0 +1,38 @@
+Species,Scientific_name,Guild
+Acadian redfish,Sebastes fasciatus,demersal_benthivore
+Alewife,Alosa pseudoharengus,pelagic
+American plaice,Hippoglossoides platessoides,demersal_benthivore
+Atlantic cod,Gadus morhua,demersal_piscivore
+Atlantic halibut,Hippoglossus hippoglossus,demersal_piscivore
+Atlantic herring,Clupea harengus,pelagic
+Atlantic mackerel,Scomber scombrus,pelagic
+Atlantic wolffish,Anarhichas lupus,demersal_benthivore
+Barndoor skate,Dipturus laevis,demersal_omnivore
+Black sea bass,Centropristis striata,demersal_omnivore
+Bluefish,Pomatomus saltatrix,
+Blueback herring,Alosa aestivalis,pelagic
+Butterfish,Peprilus triacanthus,pelagic
+Clearnose skate,Raja eglanteria,demersal_benthivore
+Haddock,Melanogrammus aeglefinus,demersal_benthivore
+Little skate,Leucoraja erinacea,demersal_omnivore
+Goosefish,Lophius americanus,demersal_piscivore
+Ocean pout,Zoarces americanus,demersal_benthivore
+Offshore hake,Merluccius albidus,demersal_piscivore
+Pollock,Pollachius virens,demersal_piscivore
+Red hake,Urophycis chuss,demersal_benthivore
+Rosette skate,Leucoraja garmani,demersal_benthivore
+Scup,Stenotomus chrysops,demersal_benthivore
+Silver hake,Merluccius bilinearis,demersal_piscivore
+Smooth dogfish,Mustelus canis,demersal_piscivore
+Smooth skate,Malacoraja senta,demersal_benthivore
+Spiny dogfish,Squalus acanthias,demersal_piscivore
+Summer flounder,Paralichthys dentatus,demersal_piscivore
+Thorny skate,Amblyraja radiata,demersal_omnivore
+White hake,Urophycis tenuis,demersal_piscivore
+Windowpane,Scophthalmus aquosus,demersal_benthivore
+Winter flounder,Pseudopleuronectes americanus,demersal_benthivore
+Winter skate,Leucoraja ocellata,demersal_omnivore
+Witch flounder,Glyptocephalus cynoglossus,demersal_benthivore
+Yellowtail flounder,Limanda ferruginea,demersal_benthivore
+American lobster,Homarus americanus,megabenthos
+Jonah crab,Cancer borealis,megabenthos
