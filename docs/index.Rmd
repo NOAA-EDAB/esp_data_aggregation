@@ -23,6 +23,7 @@ all_pages <- all_pages[-which(all_pages == "index.html")]
 report_pages <- all_pages[stringr::str_which(all_pages, pattern = "full.html")]
 
 rec_pages <- all_pages[stringr::str_which(all_pages, pattern = "recreational")]
+
 ```
 
 # Preliminary reports
@@ -49,6 +50,18 @@ purrr::map(rec_pages,
                   stringr::str_split_fixed(.x, pattern = ".h", n = 2)[,1], 
                   "</a>", sep = "")) %>%
   unlist() %>%
+  knitr::kable(col.names = "File name")
+
+```
+
+# Risk analysis
+This is a preliminary risk analysis visualization.
+
+```{r}
+paste("<a href='https://rtabandera.github.io/esp_data_aggregation/", 
+                  "plot_all_risk", "'>",
+                  "Preliminary risk analysis", 
+                  "</a>", sep = "") %>%
   knitr::kable(col.names = "File name")
 
 ```

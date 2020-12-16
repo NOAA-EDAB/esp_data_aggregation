@@ -1,0 +1,545 @@
+"","Species","Region","Indicator","Year","Value","rank","norm_rank","n_stocks"
+"1","Atlantic herring","Northwestern Atlantic Coast","bbmsy","2017",0.749000012874603,13,0.565217391304348,23
+"2","American plaice","Gulf of Maine / Georges Bank","bbmsy","2016",0.989000022411346,8,0.347826086956522,23
+"3","Atlantic wolffish","Gulf of Maine / Georges Bank","bbmsy","2016",0.404000014066696,17,0.739130434782609,23
+"4","Ocean pout","Northwestern Atlantic Coast","bbmsy","2016",0.0450000017881393,22,0.956521739130435,23
+"5","Pollock","Gulf of Maine / Georges Bank","bbmsy","2016",1.74300003051758,3,0.130434782608696,23
+"6","Red hake","Gulf of Maine / Northern Georges Bank","bbmsy","2016",2.01999998092651,2,0.0869565217391304,23
+"7","Red hake","Southern Georges Bank / Mid-Atlantic","bbmsy","2016",0.372999995946884,18,0.782608695652174,23
+"8","Silver hake","Gulf of Maine / Northern Georges Bank","bbmsy","2016",3.1029999256134,1,0.0434782608695652,23
+"9","Silver hake","Southern Georges Bank / Mid-Atlantic","bbmsy","2016",0.635999977588654,15,0.652173913043478,23
+"10","White hake","Gulf of Maine / Georges Bank","bbmsy","2016",0.686999976634979,14,0.608695652173913,23
+"11","Windowpane","Gulf of Maine / Georges Bank","bbmsy","2016",0.174999997019768,19,0.826086956521739,23
+"12","Windowpane","Southern New England / Mid-Atlantic","bbmsy","2016",1.29999995231628,4,0.173913043478261,23
+"13","Winter flounder","Georges Bank","bbmsy","2016",0.518999993801117,16,0.695652173913043,23
+"14","Winter flounder","Gulf of Maine","bbmsy","2004",0.839999973773956,12,0.521739130434783,23
+"15","Yellowtail flounder","Georges Bank","bbmsy","2011",0.105999998748302,20,0.869565217391304,23
+"16","Yellowtail flounder","Southern New England / Mid-Atlantic","bbmsy","2016",0.0820000022649765,21,0.91304347826087,23
+"17","Barndoor skate","Georges Bank / Southern New England","bbmsy","2018",1.15299999713898,6,0.260869565217391,23
+"18","Clearnose skate","Southern New England / Mid-Atlantic","bbmsy","2018",0.924000024795532,10,0.434782608695652,23
+"19","Little skate","Georges Bank / Southern New England","bbmsy","2019",0.865000009536743,11,0.478260869565217,23
+"20","Rosette skate","Southern New England / Mid-Atlantic","bbmsy","2018",0.978999972343445,9,0.391304347826087,23
+"21","Smooth skate","Gulf of Maine","bbmsy","2018",1,7,0.304347826086957,23
+"22","Thorny skate","Gulf of Maine","bbmsy","2018",0.0390000008046627,23,1,23
+"23","Winter skate","Georges Bank / Southern New England","bbmsy","2018",1.27600002288818,5,0.217391304347826,23
+"24","American plaice","Gulf of Maine / Georges Bank","ffmsy","2016",0.504999995231628,12,0.6,20
+"25","Atlantic cod","Eastern Georges Bank","ffmsy","2015",0.455000013113022,11,0.55,20
+"26","Atlantic cod","Georges Bank","ffmsy","2011",2.38899993896484,18,0.9,20
+"27","Atlantic cod","Gulf of Maine","ffmsy","2010",5.69999980926514,20,1,20
+"28","Atlantic halibut","Northwestern Atlantic Coast","ffmsy","2010",0.437999993562698,10,0.5,20
+"29","Atlantic herring","Northwestern Atlantic Coast","ffmsy","2017",0.882000029087067,15,0.75,20
+"30","Atlantic wolffish","Gulf of Maine / Georges Bank","ffmsy","2016",0.00899999961256981,1,0.05,20
+"31","Haddock","Eastern Georges Bank","ffmsy","2016",0.384999990463257,9,0.45,20
+"32","Ocean pout","Northwestern Atlantic Coast","ffmsy","2016",0.291000008583069,7,0.35,20
+"33","Pollock","Gulf of Maine / Georges Bank","ffmsy","2016",0.137999996542931,3,0.15,20
+"34","Red hake","Gulf of Maine / Northern Georges Bank","ffmsy","2016",0.551999986171722,13,0.65,20
+"35","Red hake","Southern Georges Bank / Mid-Atlantic","ffmsy","2016",1.35899996757507,17,0.85,20
+"36","Silver hake","Gulf of Maine / Northern Georges Bank","ffmsy","2016",0.0540000014007092,2,0.1,20
+"37","Silver hake","Southern Georges Bank / Mid-Atlantic","ffmsy","2016",0.171000003814697,4,0.2,20
+"38","Windowpane","Gulf of Maine / Georges Bank","ffmsy","2016",0.652999997138977,14,0.7,20
+"39","Windowpane","Southern New England / Mid-Atlantic","ffmsy","2016",0.902999997138977,16,0.8,20
+"40","Winter flounder","Georges Bank","ffmsy","2016",0.224999994039536,5,0.25,20
+"41","Winter flounder","Gulf of Maine","ffmsy","2016",0.374000012874603,8,0.4,20
+"42","Yellowtail flounder","Georges Bank","ffmsy","2014",0.242000006139278,6,0.3,20
+"43","Yellowtail flounder","Southern New England / Mid-Atlantic","ffmsy","2016",3.20600008964539,19,0.95,20
+"44","Acadian redfish","Gulf of Maine / Georges Bank","asmt_catch","1942",55892000,34,1,34
+"45","American plaice","Gulf of Maine / Georges Bank","asmt_catch","1982",15570,19,0.558823529411765,34
+"46","Atlantic cod","Eastern Georges Bank","asmt_catch","1984",10558,15,0.441176470588235,34
+"47","Atlantic cod","Georges Bank","asmt_catch","2007",3699,7,0.205882352941176,34
+"48","Atlantic cod","Gulf of Maine","asmt_catch","1991",20944,26,0.764705882352941,34
+"49","Atlantic mackerel","Gulf of Maine / Cape Hatteras","asmt_catch","1973",432608,33,0.970588235294118,34
+"50","Atlantic wolffish","Gulf of Maine / Georges Bank","asmt_catch","1983",1112.40002441406,2,0.0588235294117647,34
+"51","Barndoor skate","Georges Bank / Southern New England","asmt_catch","2014",5062,11,0.323529411764706,34
+"52","Butterfish","Gulf of Maine / Cape Hatteras","asmt_catch","1993",12185,17,0.5,34
+"53","Clearnose skate","Southern New England / Mid-Atlantic","asmt_catch","1994",5012,10,0.294117647058824,34
+"54","Goosefish","Gulf of Maine / Northern Georges Bank","asmt_catch","2003",16203,22,0.647058823529412,34
+"55","Goosefish","Southern Georges Bank / Mid-Atlantic","asmt_catch","1998",20568,25,0.735294117647059,34
+"56","Haddock","Eastern Georges Bank","asmt_catch","1980",13176,18,0.529411764705882,34
+"57","Haddock","Georges Bank","asmt_catch","1965",150362,31,0.911764705882353,34
+"58","Haddock","Gulf of Maine","asmt_catch","1983",7656,14,0.411764705882353,34
+"59","Little skate","Georges Bank / Southern New England","asmt_catch","1993",17889,23,0.676470588235294,34
+"60","Pollock","Gulf of Maine / Georges Bank","asmt_catch","1986",25208,28,0.823529411764706,34
+"61","Red hake","Gulf of Maine / Northern Georges Bank","asmt_catch","1982",2670.00007629395,5,0.147058823529412,34
+"62","Red hake","Southern Georges Bank / Mid-Atlantic","asmt_catch","1966",111790.000915527,30,0.882352941176471,34
+"63","Rosette skate","Southern New England / Mid-Atlantic","asmt_catch","1988",1810,4,0.117647058823529,34
+"64","Silver hake","Gulf of Maine / Northern Georges Bank","asmt_catch","1964",94459.9990844727,29,0.852941176470588,34
+"65","Silver hake","Southern Georges Bank / Mid-Atlantic","asmt_catch","1965",294119.995117188,32,0.941176470588235,34
+"66","Smooth skate","Gulf of Maine","asmt_catch","1974",1667,3,0.0882352941176471,34
+"67","Thorny skate","Gulf of Maine","asmt_catch","1973",5773,13,0.382352941176471,34
+"68","White hake","Gulf of Maine / Georges Bank","asmt_catch","1993",10629,16,0.470588235294118,34
+"69","Windowpane","Gulf of Maine / Georges Bank","asmt_catch","1991",3660,6,0.176470588235294,34
+"70","Windowpane","Southern New England / Mid-Atlantic","asmt_catch","1990",5318,12,0.352941176470588,34
+"71","Winter flounder","Georges Bank","asmt_catch","1983",4203,8,0.235294117647059,34
+"72","Winter flounder","Gulf of Maine","asmt_catch","2012",381,1,0.0294117647058824,34
+"73","Winter flounder","Southern New England / Mid-Atlantic","asmt_catch","1981",15764,20,0.588235294117647,34
+"74","Winter skate","Georges Bank / Southern New England","asmt_catch","1990",18876,24,0.705882352941177,34
+"75","Yellowtail flounder","Cape Cod / Gulf of Maine","asmt_catch","1990",4460.00003814697,9,0.264705882352941,34
+"76","Yellowtail flounder","Georges Bank","asmt_catch","1969",15944,21,0.617647058823529,34
+"77","Yellowtail flounder","Southern New England / Mid-Atlantic","asmt_catch","1983",22211,27,0.794117647058823,34
+"78","Acadian redfish","Gulf of Maine / Georges Bank","recruitment","mean of last 10 years vs historic mean",1.6774290512658,5,0.357142857142857,14
+"79","American plaice","Gulf of Maine / Georges Bank","recruitment","mean of last 10 years vs historic mean",0.500412754874886,10,0.714285714285714,14
+"80","Atlantic mackerel","Gulf of Maine / Cape Hatteras","recruitment","mean of last 10 years vs historic mean",0.230182846811216,12,0.857142857142857,14
+"81","Atlantic wolffish","Gulf of Maine / Georges Bank","recruitment","mean of last 10 years vs historic mean",0.551654073274494,9,0.642857142857143,14
+"82","Butterfish","Gulf of Maine / Cape Hatteras","recruitment","mean of last 10 years vs historic mean",0.629873613926315,8,0.571428571428571,14
+"83","Haddock","Eastern Georges Bank","recruitment","mean of last 10 years vs historic mean",5.66710989185618,3,0.214285714285714,14
+"84","Haddock","Georges Bank","recruitment","mean of last 10 years vs historic mean",11.0502355627935,1,0.0714285714285714,14
+"85","Haddock","Gulf of Maine","recruitment","mean of last 10 years vs historic mean",8.85363257626663,2,0.142857142857143,14
+"86","Pollock","Gulf of Maine / Georges Bank","recruitment","mean of last 10 years vs historic mean",1.99126950905938,4,0.285714285714286,14
+"87","White hake","Gulf of Maine / Georges Bank","recruitment","mean of last 10 years vs historic mean",0.691078514739229,7,0.5,14
+"88","Winter flounder","Georges Bank","recruitment","mean of last 10 years vs historic mean",0.356923284044248,11,0.785714285714286,14
+"89","Winter flounder","Southern New England / Mid-Atlantic","recruitment","mean of last 10 years vs historic mean",0.201509388951235,13,0.928571428571429,14
+"90","Yellowtail flounder","Cape Cod / Gulf of Maine","recruitment","mean of last 10 years vs historic mean",0.737025953323768,6,0.428571428571429,14
+"91","Yellowtail flounder","Southern New England / Mid-Atlantic","recruitment","mean of last 10 years vs historic mean",0.090230576868772,14,1,14
+"92","Acadian redfish","Gulf of Maine / Georges Bank","abundance","mean of last 10 years vs historic mean",1.6774290512658,5,0.357142857142857,14
+"93","American plaice","Gulf of Maine / Georges Bank","abundance","mean of last 10 years vs historic mean",0.500412754874886,10,0.714285714285714,14
+"94","Atlantic mackerel","Gulf of Maine / Cape Hatteras","abundance","mean of last 10 years vs historic mean",0.230182846811216,12,0.857142857142857,14
+"95","Atlantic wolffish","Gulf of Maine / Georges Bank","abundance","mean of last 10 years vs historic mean",0.551654073274494,9,0.642857142857143,14
+"96","Butterfish","Gulf of Maine / Cape Hatteras","abundance","mean of last 10 years vs historic mean",0.629873613926315,8,0.571428571428571,14
+"97","Haddock","Eastern Georges Bank","abundance","mean of last 10 years vs historic mean",5.66710989185618,3,0.214285714285714,14
+"98","Haddock","Georges Bank","abundance","mean of last 10 years vs historic mean",11.0502355627935,1,0.0714285714285714,14
+"99","Haddock","Gulf of Maine","abundance","mean of last 10 years vs historic mean",8.85363257626663,2,0.142857142857143,14
+"100","Pollock","Gulf of Maine / Georges Bank","abundance","mean of last 10 years vs historic mean",1.99126950905938,4,0.285714285714286,14
+"101","White hake","Gulf of Maine / Georges Bank","abundance","mean of last 10 years vs historic mean",0.691078514739229,7,0.5,14
+"102","Winter flounder","Georges Bank","abundance","mean of last 10 years vs historic mean",0.356923284044248,11,0.785714285714286,14
+"103","Winter flounder","Southern New England / Mid-Atlantic","abundance","mean of last 10 years vs historic mean",0.201509388951235,13,0.928571428571429,14
+"104","Yellowtail flounder","Cape Cod / Gulf of Maine","abundance","mean of last 10 years vs historic mean",0.737025953323768,6,0.428571428571429,14
+"105","Yellowtail flounder","Southern New England / Mid-Atlantic","abundance","mean of last 10 years vs historic mean",0.090230576868772,14,1,14
+"106","Silver hake","Gulf of Maine / Northern Georges Bank","biomass_fall","mean of last 10 years vs historic mean",7.84566606314355,1,0.0196078431372549,51
+"107","Atlantic cod","Gulf of Maine","biomass_fall","mean of last 10 years vs historic mean",0.766653482684801,45,0.882352941176471,51
+"108","Haddock","Gulf of Maine","biomass_fall","mean of last 10 years vs historic mean",3.56024203564166,3,0.0588235294117647,51
+"109","Red hake","Gulf of Maine / Northern Georges Bank","biomass_fall","mean of last 10 years vs historic mean",2.92142105954878,9,0.176470588235294,51
+"110","Yellowtail flounder","Cape Cod / Gulf of Maine","biomass_fall","mean of last 10 years vs historic mean",1.60998662439384,21,0.411764705882353,51
+"111","Winter flounder","Gulf of Maine","biomass_fall","mean of last 10 years vs historic mean",1.33894789605894,30,0.588235294117647,51
+"112","Windowpane","Gulf of Maine / Georges Bank","biomass_fall","mean of last 10 years vs historic mean",0.776773300693858,44,0.862745098039216,51
+"113","Goosefish","Gulf of Maine / Northern Georges Bank","biomass_fall","mean of last 10 years vs historic mean",1.5008134835651,24,0.470588235294118,51
+"114","Haddock","Georges Bank","biomass_fall","mean of last 10 years vs historic mean",3.25450730288513,7,0.137254901960784,51
+"115","Yellowtail flounder","Georges Bank","biomass_fall","mean of last 10 years vs historic mean",0.850403515414748,42,0.823529411764706,51
+"116","Goosefish","Southern Georges Bank / Mid-Atlantic","biomass_fall","mean of last 10 years vs historic mean",1.08641516224164,33,0.647058823529412,51
+"117","Atlantic cod","Georges Bank","biomass_fall","mean of last 10 years vs historic mean",0.964175268083056,37,0.725490196078431,51
+"118","Winter flounder","Georges Bank","biomass_fall","mean of last 10 years vs historic mean",1.57665067029958,22,0.431372549019608,51
+"119","Silver hake","Southern Georges Bank / Mid-Atlantic","biomass_fall","mean of last 10 years vs historic mean",3.28073491246106,6,0.117647058823529,51
+"120","Winter flounder","Southern New England / Mid-Atlantic","biomass_fall","mean of last 10 years vs historic mean",1.44012087286694,25,0.490196078431373,51
+"121","Red hake","Southern Georges Bank / Mid-Atlantic","biomass_fall","mean of last 10 years vs historic mean",1.42029963023575,27,0.529411764705882,51
+"122","Yellowtail flounder","Southern New England / Mid-Atlantic","biomass_fall","mean of last 10 years vs historic mean",0.631532029410885,47,0.92156862745098,51
+"123","Windowpane","Southern New England / Mid-Atlantic","biomass_fall","mean of last 10 years vs historic mean",0.92667798962377,39,0.764705882352941,51
+"124","American lobster","Georges Bank / Southern New England","biomass_fall","mean of last 10 years vs historic mean",0.851600100952196,41,0.803921568627451,51
+"125","American lobster","Georges Bank","biomass_fall","mean of last 10 years vs historic mean",2.27124973835811,14,0.274509803921569,51
+"126","American lobster","Gulf of Maine","biomass_fall","mean of last 10 years vs historic mean",3.29928364471253,5,0.0980392156862745,51
+"127","Jonah crab","Georges Bank / Southern New England","biomass_fall","mean of last 10 years vs historic mean",1.06545201131467,34,0.666666666666667,51
+"128","Jonah crab","Georges Bank","biomass_fall","mean of last 10 years vs historic mean",1.10182507137296,32,0.627450980392157,51
+"129","Jonah crab","Gulf of Maine","biomass_fall","mean of last 10 years vs historic mean",1.34186787640292,29,0.568627450980392,51
+"130","Yellowtail flounder","Southern New England / Mid-Atlantic","biomass_spring","mean of last 10 years vs historic mean",0.331381088852548,49,0.96078431372549,51
+"131","Winter flounder","Southern New England / Mid-Atlantic","biomass_spring","mean of last 10 years vs historic mean",0.793322657475989,36,0.705882352941177,51
+"132","Goosefish","Southern Georges Bank / Mid-Atlantic","biomass_spring","mean of last 10 years vs historic mean",1.06745964102853,31,0.607843137254902,51
+"133","Windowpane","Southern New England / Mid-Atlantic","biomass_spring","mean of last 10 years vs historic mean",0.633969618219504,43,0.843137254901961,51
+"134","Silver hake","Southern Georges Bank / Mid-Atlantic","biomass_spring","mean of last 10 years vs historic mean",1.80704327810833,14,0.274509803921569,51
+"135","Red hake","Southern Georges Bank / Mid-Atlantic","biomass_spring","mean of last 10 years vs historic mean",1.25995150225692,27,0.529411764705882,51
+"136","American lobster","Georges Bank / Southern New England","biomass_spring","mean of last 10 years vs historic mean",0.749378237883383,39,0.764705882352941,51
+"137","Jonah crab","Georges Bank / Southern New England","biomass_spring","mean of last 10 years vs historic mean",0.176358652629239,51,1,51
+"138","American lobster","Georges Bank","biomass_spring","mean of last 10 years vs historic mean",2.7565328001135,6,0.117647058823529,51
+"139","Atlantic cod","Georges Bank","biomass_spring","mean of last 10 years vs historic mean",0.752870867723124,38,0.745098039215686,51
+"140","Haddock","Georges Bank","biomass_spring","mean of last 10 years vs historic mean",3.14452256108666,4,0.0784313725490196,51
+"141","Yellowtail flounder","Georges Bank","biomass_spring","mean of last 10 years vs historic mean",0.72764421167469,40,0.784313725490196,51
+"142","Windowpane","Gulf of Maine / Georges Bank","biomass_spring","mean of last 10 years vs historic mean",0.511444924086282,46,0.901960784313726,51
+"143","Winter flounder","Georges Bank","biomass_spring","mean of last 10 years vs historic mean",1.02343204616938,33,0.647058823529412,51
+"144","Atlantic cod","Gulf of Maine","biomass_spring","mean of last 10 years vs historic mean",0.835727179731995,35,0.686274509803922,51
+"145","Haddock","Gulf of Maine","biomass_spring","mean of last 10 years vs historic mean",4.39939902660694,2,0.0392156862745098,51
+"146","Winter flounder","Gulf of Maine","biomass_spring","mean of last 10 years vs historic mean",1.98410568058919,11,0.215686274509804,51
+"147","Goosefish","Gulf of Maine / Northern Georges Bank","biomass_spring","mean of last 10 years vs historic mean",1.34983556917827,21,0.411764705882353,51
+"148","Silver hake","Gulf of Maine / Northern Georges Bank","biomass_spring","mean of last 10 years vs historic mean",7.93433812549879,1,0.0196078431372549,51
+"149","Red hake","Gulf of Maine / Northern Georges Bank","biomass_spring","mean of last 10 years vs historic mean",2.54277484218186,8,0.156862745098039,51
+"150","Yellowtail flounder","Cape Cod / Gulf of Maine","biomass_spring","mean of last 10 years vs historic mean",3.48362898339794,3,0.0588235294117647,51
+"151","American lobster","Gulf of Maine","biomass_spring","mean of last 10 years vs historic mean",3.10199647977983,5,0.0980392156862745,51
+"152","Jonah crab","Georges Bank","biomass_spring","mean of last 10 years vs historic mean",0.76879058830326,37,0.725490196078431,51
+"153","Jonah crab","Gulf of Maine","biomass_spring","mean of last 10 years vs historic mean",1.57419390356899,19,0.372549019607843,51
+"154","Silver hake","Gulf of Maine / Northern Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.903541408293859,33,0.647058823529412,51
+"155","Atlantic cod","Gulf of Maine","avg_length_fall","mean of last 10 years vs historic mean",0.927015674484883,26,0.509803921568627,51
+"156","Haddock","Gulf of Maine","avg_length_fall","mean of last 10 years vs historic mean",0.70722723945693,49,0.96078431372549,51
+"157","Red hake","Gulf of Maine / Northern Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.899374274510339,35,0.686274509803922,51
+"158","Yellowtail flounder","Cape Cod / Gulf of Maine","avg_length_fall","mean of last 10 years vs historic mean",0.911313726498783,30,0.588235294117647,51
+"159","Winter flounder","Gulf of Maine","avg_length_fall","mean of last 10 years vs historic mean",0.867975184938336,41,0.803921568627451,51
+"160","Windowpane","Gulf of Maine / Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.897809477600275,37,0.725490196078431,51
+"161","Goosefish","Gulf of Maine / Northern Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.698236436451195,51,1,51
+"162","American lobster","Gulf of Maine","avg_length_fall","mean of last 10 years vs historic mean",0.994491695500046,13,0.254901960784314,51
+"163","Haddock","Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.699658514788005,50,0.980392156862745,51
+"164","Silver hake","Southern Georges Bank / Mid-Atlantic","avg_length_fall","mean of last 10 years vs historic mean",1.09034625804855,2,0.0392156862745098,51
+"165","Yellowtail flounder","Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",1.06843778802732,4,0.0784313725490196,51
+"166","Goosefish","Southern Georges Bank / Mid-Atlantic","avg_length_fall","mean of last 10 years vs historic mean",0.778050605645546,47,0.92156862745098,51
+"167","Atlantic cod","Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.888418456049928,40,0.784313725490196,51
+"168","Winter flounder","Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.991252110056232,14,0.274509803921569,51
+"169","Winter flounder","Southern New England / Mid-Atlantic","avg_length_fall","mean of last 10 years vs historic mean",0.987677834637957,15,0.294117647058824,51
+"170","Red hake","Southern Georges Bank / Mid-Atlantic","avg_length_fall","mean of last 10 years vs historic mean",0.978899192215542,16,0.313725490196078,51
+"171","Yellowtail flounder","Southern New England / Mid-Atlantic","avg_length_fall","mean of last 10 years vs historic mean",1.07388997399193,3,0.0588235294117647,51
+"172","Windowpane","Southern New England / Mid-Atlantic","avg_length_fall","mean of last 10 years vs historic mean",0.961187844762976,23,0.450980392156863,51
+"173","American lobster","Georges Bank / Southern New England","avg_length_fall","mean of last 10 years vs historic mean",0.943313156589327,24,0.470588235294118,51
+"174","American lobster","Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",1.06714429949033,5,0.0980392156862745,51
+"175","Jonah crab","Georges Bank / Southern New England","avg_length_fall","mean of last 10 years vs historic mean",1.06689523224225,6,0.117647058823529,51
+"176","Jonah crab","Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.965718921958623,20,0.392156862745098,51
+"177","Jonah crab","Gulf of Maine","avg_length_fall","mean of last 10 years vs historic mean",1.02398548511714,8,0.156862745098039,51
+"178","Silver hake","Southern Georges Bank / Mid-Atlantic","avg_length_spring","mean of last 10 years vs historic mean",0.949137071394598,21,0.411764705882353,51
+"179","Yellowtail flounder","Southern New England / Mid-Atlantic","avg_length_spring","mean of last 10 years vs historic mean",1.01515230573362,11,0.215686274509804,51
+"180","Winter flounder","Southern New England / Mid-Atlantic","avg_length_spring","mean of last 10 years vs historic mean",0.979313687638467,15,0.294117647058824,51
+"181","Goosefish","Southern Georges Bank / Mid-Atlantic","avg_length_spring","mean of last 10 years vs historic mean",0.904971415773396,30,0.588235294117647,51
+"182","Windowpane","Southern New England / Mid-Atlantic","avg_length_spring","mean of last 10 years vs historic mean",0.942601579150942,24,0.470588235294118,51
+"183","Red hake","Southern Georges Bank / Mid-Atlantic","avg_length_spring","mean of last 10 years vs historic mean",0.878926766884002,35,0.686274509803922,51
+"184","American lobster","Georges Bank / Southern New England","avg_length_spring","mean of last 10 years vs historic mean",0.963747371168774,19,0.372549019607843,51
+"185","Jonah crab","Georges Bank / Southern New England","avg_length_spring","mean of last 10 years vs historic mean",0.737818032093893,50,0.980392156862745,51
+"186","American lobster","Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",1.12605591680254,2,0.0392156862745098,51
+"187","Atlantic cod","Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.842966392779023,41,0.803921568627451,51
+"188","Haddock","Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.722242338536866,51,1,51
+"189","Yellowtail flounder","Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",1.04022239530218,7,0.137254901960784,51
+"190","Windowpane","Gulf of Maine / Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.878733480473073,36,0.705882352941177,51
+"191","Winter flounder","Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",1.0157120187266,10,0.196078431372549,51
+"192","Atlantic cod","Gulf of Maine","avg_length_spring","mean of last 10 years vs historic mean",0.860267703334134,39,0.764705882352941,51
+"193","Haddock","Gulf of Maine","avg_length_spring","mean of last 10 years vs historic mean",0.817959736702606,43,0.843137254901961,51
+"194","Winter flounder","Gulf of Maine","avg_length_spring","mean of last 10 years vs historic mean",0.852138136478141,40,0.784313725490196,51
+"195","Goosefish","Gulf of Maine / Northern Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.760144223958153,48,0.941176470588235,51
+"196","Yellowtail flounder","Cape Cod / Gulf of Maine","avg_length_spring","mean of last 10 years vs historic mean",0.886733644541874,34,0.666666666666667,51
+"197","Silver hake","Gulf of Maine / Northern Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",1.04844092241988,6,0.117647058823529,51
+"198","Red hake","Gulf of Maine / Northern Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.872634271720034,37,0.725490196078431,51
+"199","American lobster","Gulf of Maine","avg_length_spring","mean of last 10 years vs historic mean",0.947661258991744,22,0.431372549019608,51
+"200","Jonah crab","Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.776445366736728,47,0.92156862745098,51
+"201","Jonah crab","Gulf of Maine","avg_length_spring","mean of last 10 years vs historic mean",1.01785628527234,9,0.176470588235294,51
+"202","Silver hake","Gulf of Maine / Northern Georges Bank","max_length_fall","mean of last 10 years vs historic mean",1.09424716157805,4,0.0784313725490196,51
+"203","Atlantic cod","Gulf of Maine","max_length_fall","mean of last 10 years vs historic mean",0.857760297959864,45,0.882352941176471,51
+"204","Haddock","Gulf of Maine","max_length_fall","mean of last 10 years vs historic mean",0.803773958548343,49,0.96078431372549,51
+"205","Red hake","Gulf of Maine / Northern Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.982576026038014,25,0.490196078431373,51
+"206","Yellowtail flounder","Cape Cod / Gulf of Maine","max_length_fall","mean of last 10 years vs historic mean",0.929695933167788,35,0.686274509803922,51
+"207","Winter flounder","Gulf of Maine","max_length_fall","mean of last 10 years vs historic mean",0.959848258298525,30,0.588235294117647,51
+"208","Windowpane","Gulf of Maine / Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.927291640476942,37,0.725490196078431,51
+"209","Goosefish","Gulf of Maine / Northern Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.961143546575529,29,0.568627450980392,51
+"210","American lobster","Gulf of Maine","max_length_fall","mean of last 10 years vs historic mean",1.1185264055357,2,0.0392156862745098,51
+"211","Haddock","Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.840346972408619,46,0.901960784313726,51
+"212","Silver hake","Southern Georges Bank / Mid-Atlantic","max_length_fall","mean of last 10 years vs historic mean",1.00561391655137,19,0.372549019607843,51
+"213","Yellowtail flounder","Georges Bank","max_length_fall","mean of last 10 years vs historic mean",1.00435087603809,22,0.431372549019608,51
+"214","Goosefish","Southern Georges Bank / Mid-Atlantic","max_length_fall","mean of last 10 years vs historic mean",0.86319905583351,42,0.823529411764706,51
+"215","Atlantic cod","Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.901741906961698,41,0.803921568627451,51
+"216","Winter flounder","Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.97806986616272,26,0.509803921568627,51
+"217","Winter flounder","Southern New England / Mid-Atlantic","max_length_fall","mean of last 10 years vs historic mean",1.00463540593468,20,0.392156862745098,51
+"218","Red hake","Southern Georges Bank / Mid-Atlantic","max_length_fall","mean of last 10 years vs historic mean",0.948239167396183,32,0.627450980392157,51
+"219","Yellowtail flounder","Southern New England / Mid-Atlantic","max_length_fall","mean of last 10 years vs historic mean",1.01150257400257,16,0.313725490196078,51
+"220","Windowpane","Southern New England / Mid-Atlantic","max_length_fall","mean of last 10 years vs historic mean",0.966524858121188,28,0.549019607843137,51
+"221","American lobster","Georges Bank / Southern New England","max_length_fall","mean of last 10 years vs historic mean",0.947004800177972,33,0.647058823529412,51
+"222","American lobster","Georges Bank","max_length_fall","mean of last 10 years vs historic mean",1.10278942720333,3,0.0588235294117647,51
+"223","Jonah crab","Georges Bank / Southern New England","max_length_fall","mean of last 10 years vs historic mean",1.07327687312203,5,0.0980392156862745,51
+"224","Jonah crab","Georges Bank","max_length_fall","mean of last 10 years vs historic mean",1.04272797903007,11,0.215686274509804,51
+"225","Jonah crab","Gulf of Maine","max_length_fall","mean of last 10 years vs historic mean",1.05289768671308,10,0.196078431372549,51
+"226","Silver hake","Southern Georges Bank / Mid-Atlantic","max_length_spring","mean of last 10 years vs historic mean",0.967462599442487,24,0.470588235294118,51
+"227","Yellowtail flounder","Southern New England / Mid-Atlantic","max_length_spring","mean of last 10 years vs historic mean",0.987191123075494,20,0.392156862745098,51
+"228","Winter flounder","Southern New England / Mid-Atlantic","max_length_spring","mean of last 10 years vs historic mean",1.03303374907601,10,0.196078431372549,51
+"229","Goosefish","Southern Georges Bank / Mid-Atlantic","max_length_spring","mean of last 10 years vs historic mean",0.935693948170992,36,0.705882352941177,51
+"230","Windowpane","Southern New England / Mid-Atlantic","max_length_spring","mean of last 10 years vs historic mean",0.958816271859492,28,0.549019607843137,51
+"231","Red hake","Southern Georges Bank / Mid-Atlantic","max_length_spring","mean of last 10 years vs historic mean",0.893940752606391,38,0.745098039215686,51
+"232","American lobster","Georges Bank / Southern New England","max_length_spring","mean of last 10 years vs historic mean",0.945393291104645,32,0.627450980392157,51
+"233","Jonah crab","Georges Bank / Southern New England","max_length_spring","mean of last 10 years vs historic mean",0.68406526439945,51,1,51
+"234","American lobster","Georges Bank","max_length_spring","mean of last 10 years vs historic mean",1.19199353236018,3,0.0588235294117647,51
+"235","Atlantic cod","Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.797263062679093,49,0.96078431372549,51
+"236","Haddock","Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.860553232323456,42,0.823529411764706,51
+"237","Yellowtail flounder","Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.994546939318546,19,0.372549019607843,51
+"238","Windowpane","Gulf of Maine / Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.927893818551057,37,0.725490196078431,51
+"239","Winter flounder","Georges Bank","max_length_spring","mean of last 10 years vs historic mean",1.00184097514125,16,0.313725490196078,51
+"240","Atlantic cod","Gulf of Maine","max_length_spring","mean of last 10 years vs historic mean",0.84043169015793,44,0.862745098039216,51
+"241","Haddock","Gulf of Maine","max_length_spring","mean of last 10 years vs historic mean",0.943179039454538,34,0.666666666666667,51
+"242","Winter flounder","Gulf of Maine","max_length_spring","mean of last 10 years vs historic mean",0.994626754671377,18,0.352941176470588,51
+"243","Goosefish","Gulf of Maine / Northern Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.89026956880283,39,0.764705882352941,51
+"244","Yellowtail flounder","Cape Cod / Gulf of Maine","max_length_spring","mean of last 10 years vs historic mean",0.945351543907065,33,0.647058823529412,51
+"245","Silver hake","Gulf of Maine / Northern Georges Bank","max_length_spring","mean of last 10 years vs historic mean",1.27566179077458,1,0.0196078431372549,51
+"246","Red hake","Gulf of Maine / Northern Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.966117498754806,25,0.490196078431373,51
+"247","American lobster","Gulf of Maine","max_length_spring","mean of last 10 years vs historic mean",1.07868751840839,7,0.137254901960784,51
+"248","Jonah crab","Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.834308132002586,46,0.901960784313726,51
+"249","Jonah crab","Gulf of Maine","max_length_spring","mean of last 10 years vs historic mean",1.20536839449498,2,0.0392156862745098,51
+"250","Silver hake","Southern Georges Bank / Mid-Atlantic","diet","all",12,4,0.363636363636364,11
+"251","Red hake","Southern Georges Bank / Mid-Atlantic","diet","all",13,3,0.272727272727273,11
+"252","Yellowtail flounder","Southern New England / Mid-Atlantic","diet","all",11,5,0.454545454545455,11
+"253","Atlantic cod","Georges Bank","diet","all",14,2,0.181818181818182,11
+"254","Haddock","Georges Bank","diet","all",15,1,0.0909090909090909,11
+"255","Silver hake","Gulf of Maine / Northern Georges Bank","diet","all",12,4,0.363636363636364,11
+"256","Yellowtail flounder","Georges Bank","diet","all",10,6,0.545454545454545,11
+"257","Atlantic cod","Gulf of Maine","diet","all",12,4,0.363636363636364,11
+"258","Haddock","Gulf of Maine","diet","all",11,5,0.454545454545455,11
+"259","Winter flounder","Southern New England / Mid-Atlantic","diet","all",14,2,0.181818181818182,11
+"260","Red hake","Gulf of Maine / Northern Georges Bank","diet","all",13,3,0.272727272727273,11
+"261","Yellowtail flounder","Cape Cod / Gulf of Maine","diet","all",10,6,0.545454545454545,11
+"262","Windowpane","Southern New England / Mid-Atlantic","diet","all",12,4,0.363636363636364,11
+"263","Goosefish","Southern Georges Bank / Mid-Atlantic","diet","all",12,4,0.363636363636364,11
+"264","Winter flounder","Georges Bank","diet","all",12,4,0.363636363636364,11
+"265","Windowpane","Gulf of Maine / Georges Bank","diet","all",12,4,0.363636363636364,11
+"266","Goosefish","Gulf of Maine / Northern Georges Bank","diet","all",12,4,0.363636363636364,11
+"267","Winter flounder","Gulf of Maine","diet","all",12,4,0.363636363636364,11
+"268","Spiny dogfish",NA,"biomass_fall","mean of last 10 years vs historic mean",1.83155713326719,20,0.392156862745098,51
+"269","Winter skate","Georges Bank / Southern New England","biomass_fall","mean of last 10 years vs historic mean",2.00793845466965,17,0.333333333333333,51
+"270","Little skate","Georges Bank / Southern New England","biomass_fall","mean of last 10 years vs historic mean",3.4420482495049,4,0.0784313725490196,51
+"271","Alewife",NA,"biomass_fall","mean of last 10 years vs historic mean",2.61375832006809,11,0.215686274509804,51
+"272","Pollock","Gulf of Maine / Georges Bank","biomass_fall","mean of last 10 years vs historic mean",0.646700034650846,46,0.901960784313726,51
+"273","White hake","Gulf of Maine / Georges Bank","biomass_fall","mean of last 10 years vs historic mean",1.03746046125653,36,0.705882352941177,51
+"274","American plaice","Gulf of Maine / Georges Bank","biomass_fall","mean of last 10 years vs historic mean",1.23869755043536,31,0.607843137254902,51
+"275","Ocean pout","Northwestern Atlantic Coast","biomass_fall","mean of last 10 years vs historic mean",0.907876347699849,40,0.784313725490196,51
+"276","Atlantic herring","Northwestern Atlantic Coast","biomass_fall","mean of last 10 years vs historic mean",2.44560847808709,12,0.235294117647059,51
+"277","Atlantic halibut","Northwestern Atlantic Coast","biomass_fall","mean of last 10 years vs historic mean",1.05664175892375,35,0.686274509803922,51
+"278","Barndoor skate","Georges Bank / Southern New England","biomass_fall","mean of last 10 years vs historic mean",1.91590522232381,19,0.372549019607843,51
+"279","Witch flounder",NA,"biomass_fall","mean of last 10 years vs historic mean",0.953071120525596,38,0.745098039215686,51
+"280","Atlantic mackerel","Gulf of Maine / Cape Hatteras","biomass_fall","mean of last 10 years vs historic mean",1.98347515928574,18,0.352941176470588,51
+"281","Acadian redfish","Gulf of Maine / Georges Bank","biomass_fall","mean of last 10 years vs historic mean",2.05987795157399,15,0.294117647058824,51
+"282","Atlantic wolffish","Gulf of Maine / Georges Bank","biomass_fall","mean of last 10 years vs historic mean",0.595716498595045,48,0.941176470588235,51
+"283","Thorny skate","Gulf of Maine","biomass_fall","mean of last 10 years vs historic mean",0.426036526647969,50,0.980392156862745,51
+"284","Smooth skate","Gulf of Maine","biomass_fall","mean of last 10 years vs historic mean",2.34658254353425,13,0.254901960784314,51
+"285","Blueback herring",NA,"biomass_fall","mean of last 10 years vs historic mean",3.08328024071879,8,0.156862745098039,51
+"286","Butterfish","Gulf of Maine / Cape Hatteras","biomass_fall","mean of last 10 years vs historic mean",1.39019861656554,28,0.549019607843137,51
+"287","Offshore hake",NA,"biomass_fall","mean of last 10 years vs historic mean",0.80188068610329,43,0.843137254901961,51
+"288","Summer flounder",NA,"biomass_fall","mean of last 10 years vs historic mean",1.56292389035158,23,0.450980392156863,51
+"289","Black sea bass",NA,"biomass_fall","mean of last 10 years vs historic mean",2.03674721979258,16,0.313725490196078,51
+"290","Scup",NA,"biomass_fall","mean of last 10 years vs historic mean",1.42432901679805,26,0.509803921568627,51
+"291","Smooth dogfish",NA,"biomass_fall","mean of last 10 years vs historic mean",0.485878603930571,49,0.96078431372549,51
+"292","Rosette skate","Southern New England / Mid-Atlantic","biomass_fall","mean of last 10 years vs historic mean",2.71091535232285,10,0.196078431372549,51
+"293","Clearnose skate","Southern New England / Mid-Atlantic","biomass_fall","mean of last 10 years vs historic mean",3.6765456600967,2,0.0392156862745098,51
+"294","Bluefish",NA,"biomass_fall","mean of last 10 years vs historic mean",0.38048540192331,51,1,51
+"295","Winter skate","Georges Bank / Southern New England","biomass_spring","mean of last 10 years vs historic mean",1.33485780472795,22,0.431372549019608,51
+"296","Little skate","Georges Bank / Southern New England","biomass_spring","mean of last 10 years vs historic mean",1.85006878160177,13,0.254901960784314,51
+"297","Ocean pout","Northwestern Atlantic Coast","biomass_spring","mean of last 10 years vs historic mean",0.325362101309256,50,0.980392156862745,51
+"298","Spiny dogfish",NA,"biomass_spring","mean of last 10 years vs historic mean",1.39362736486903,20,0.392156862745098,51
+"299","Alewife",NA,"biomass_spring","mean of last 10 years vs historic mean",1.28558407578273,25,0.490196078431373,51
+"300","Atlantic herring","Northwestern Atlantic Coast","biomass_spring","mean of last 10 years vs historic mean",2.20367914140068,10,0.196078431372549,51
+"301","Atlantic mackerel","Gulf of Maine / Cape Hatteras","biomass_spring","mean of last 10 years vs historic mean",0.703127278001486,41,0.803921568627451,51
+"302","Blueback herring",NA,"biomass_spring","mean of last 10 years vs historic mean",1.64889684086892,16,0.313725490196078,51
+"303","Smooth dogfish",NA,"biomass_spring","mean of last 10 years vs historic mean",1.76278032808771,15,0.294117647058824,51
+"304","Clearnose skate","Southern New England / Mid-Atlantic","biomass_spring","mean of last 10 years vs historic mean",2.38503133607019,9,0.176470588235294,51
+"305","Summer flounder",NA,"biomass_spring","mean of last 10 years vs historic mean",1.88456702085267,12,0.235294117647059,51
+"306","Butterfish","Gulf of Maine / Cape Hatteras","biomass_spring","mean of last 10 years vs historic mean",1.1698747222465,29,0.568627450980392,51
+"307","Black sea bass",NA,"biomass_spring","mean of last 10 years vs historic mean",1.26378935331292,26,0.509803921568627,51
+"308","Scup",NA,"biomass_spring","mean of last 10 years vs historic mean",1.25365444534211,28,0.549019607843137,51
+"309","Rosette skate","Southern New England / Mid-Atlantic","biomass_spring","mean of last 10 years vs historic mean",2.56191415813502,7,0.137254901960784,51
+"310","Offshore hake",NA,"biomass_spring","mean of last 10 years vs historic mean",0.619943791979978,44,0.862745098039216,51
+"311","Barndoor skate","Georges Bank / Southern New England","biomass_spring","mean of last 10 years vs historic mean",1.05141131492021,32,0.627450980392157,51
+"312","Thorny skate","Gulf of Maine","biomass_spring","mean of last 10 years vs historic mean",0.546964186081395,45,0.882352941176471,51
+"313","Pollock","Gulf of Maine / Georges Bank","biomass_spring","mean of last 10 years vs historic mean",1.30076896809777,24,0.470588235294118,51
+"314","Smooth skate","Gulf of Maine","biomass_spring","mean of last 10 years vs historic mean",1.62750464192308,17,0.333333333333333,51
+"315","American plaice","Gulf of Maine / Georges Bank","biomass_spring","mean of last 10 years vs historic mean",1.06987540149163,30,0.588235294117647,51
+"316","Atlantic wolffish","Gulf of Maine / Georges Bank","biomass_spring","mean of last 10 years vs historic mean",0.374702615146371,48,0.941176470588235,51
+"317","Witch flounder",NA,"biomass_spring","mean of last 10 years vs historic mean",0.663865980092868,42,0.823529411764706,51
+"318","Acadian redfish","Gulf of Maine / Georges Bank","biomass_spring","mean of last 10 years vs historic mean",1.33232485469944,23,0.450980392156863,51
+"319","White hake","Gulf of Maine / Georges Bank","biomass_spring","mean of last 10 years vs historic mean",0.841320543455479,34,0.666666666666667,51
+"320","Atlantic halibut","Northwestern Atlantic Coast","biomass_spring","mean of last 10 years vs historic mean",1.60622505356794,18,0.352941176470588,51
+"321","Bluefish",NA,"biomass_spring","mean of last 10 years vs historic mean",0.405378921829181,47,0.92156862745098,51
+"322","Spiny dogfish",NA,"avg_length_fall","mean of last 10 years vs historic mean",0.902940054613207,34,0.666666666666667,51
+"323","Winter skate","Georges Bank / Southern New England","avg_length_fall","mean of last 10 years vs historic mean",0.918862120254813,29,0.568627450980392,51
+"324","Little skate","Georges Bank / Southern New England","avg_length_fall","mean of last 10 years vs historic mean",0.969252877308122,19,0.372549019607843,51
+"325","Alewife",NA,"avg_length_fall","mean of last 10 years vs historic mean",0.964440816385686,22,0.431372549019608,51
+"326","Pollock","Gulf of Maine / Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.773303230433646,48,0.941176470588235,51
+"327","White hake","Gulf of Maine / Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.925962322182281,28,0.549019607843137,51
+"328","American plaice","Gulf of Maine / Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.890753561520575,39,0.764705882352941,51
+"329","Ocean pout","Northwestern Atlantic Coast","avg_length_fall","mean of last 10 years vs historic mean",0.78928602399933,45,0.882352941176471,51
+"330","Atlantic herring","Northwestern Atlantic Coast","avg_length_fall","mean of last 10 years vs historic mean",0.931594665557732,25,0.490196078431373,51
+"331","Atlantic halibut","Northwestern Atlantic Coast","avg_length_fall","mean of last 10 years vs historic mean",1.00247350680214,11,0.215686274509804,51
+"332","Acadian redfish","Gulf of Maine / Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.910874538235296,31,0.607843137254902,51
+"333","Barndoor skate","Georges Bank / Southern New England","avg_length_fall","mean of last 10 years vs historic mean",0.96467099040502,21,0.411764705882353,51
+"334","Witch flounder",NA,"avg_length_fall","mean of last 10 years vs historic mean",0.788421770500419,46,0.901960784313726,51
+"335","Atlantic mackerel","Gulf of Maine / Cape Hatteras","avg_length_fall","mean of last 10 years vs historic mean",0.972566818916575,18,0.352941176470588,51
+"336","Atlantic wolffish","Gulf of Maine / Georges Bank","avg_length_fall","mean of last 10 years vs historic mean",0.896346692352064,38,0.745098039215686,51
+"337","Thorny skate","Gulf of Maine","avg_length_fall","mean of last 10 years vs historic mean",0.838018726916301,42,0.823529411764706,51
+"338","Smooth skate","Gulf of Maine","avg_length_fall","mean of last 10 years vs historic mean",0.898757751585842,36,0.705882352941177,51
+"339","Blueback herring",NA,"avg_length_fall","mean of last 10 years vs historic mean",0.975512925405572,17,0.333333333333333,51
+"340","Butterfish","Gulf of Maine / Cape Hatteras","avg_length_fall","mean of last 10 years vs historic mean",1.01687732358751,9,0.176470588235294,51
+"341","Offshore hake",NA,"avg_length_fall","mean of last 10 years vs historic mean",0.802136562960545,44,0.862745098039216,51
+"342","Summer flounder",NA,"avg_length_fall","mean of last 10 years vs historic mean",1.02588101536818,7,0.137254901960784,51
+"343","Black sea bass",NA,"avg_length_fall","mean of last 10 years vs historic mean",1.19946881117512,1,0.0196078431372549,51
+"344","Scup",NA,"avg_length_fall","mean of last 10 years vs historic mean",0.926490323236384,27,0.529411764705882,51
+"345","Smooth dogfish",NA,"avg_length_fall","mean of last 10 years vs historic mean",0.907065260440996,32,0.627450980392157,51
+"346","Rosette skate","Southern New England / Mid-Atlantic","avg_length_fall","mean of last 10 years vs historic mean",1.01231576958809,10,0.196078431372549,51
+"347","Clearnose skate","Southern New England / Mid-Atlantic","avg_length_fall","mean of last 10 years vs historic mean",0.999275295334649,12,0.235294117647059,51
+"348","Bluefish",NA,"avg_length_fall","mean of last 10 years vs historic mean",0.812440212561847,43,0.843137254901961,51
+"349","Winter skate","Georges Bank / Southern New England","avg_length_spring","mean of last 10 years vs historic mean",0.96739720165534,18,0.352941176470588,51
+"350","Little skate","Georges Bank / Southern New England","avg_length_spring","mean of last 10 years vs historic mean",1.00298924601177,13,0.254901960784314,51
+"351","Ocean pout","Northwestern Atlantic Coast","avg_length_spring","mean of last 10 years vs historic mean",0.799810998639089,46,0.901960784313726,51
+"352","Spiny dogfish",NA,"avg_length_spring","mean of last 10 years vs historic mean",0.922621635581053,28,0.549019607843137,51
+"353","Atlantic herring","Northwestern Atlantic Coast","avg_length_spring","mean of last 10 years vs historic mean",1.02338203152715,8,0.156862745098039,51
+"354","Alewife",NA,"avg_length_spring","mean of last 10 years vs historic mean",0.971797397020981,17,0.333333333333333,51
+"355","Blueback herring",NA,"avg_length_spring","mean of last 10 years vs historic mean",1.07376321751112,4,0.0784313725490196,51
+"356","Atlantic mackerel","Gulf of Maine / Cape Hatteras","avg_length_spring","mean of last 10 years vs historic mean",0.944344257460836,23,0.450980392156863,51
+"357","Smooth dogfish",NA,"avg_length_spring","mean of last 10 years vs historic mean",0.986450333480699,14,0.274509803921569,51
+"358","Clearnose skate","Southern New England / Mid-Atlantic","avg_length_spring","mean of last 10 years vs historic mean",1.052031724943,5,0.0980392156862745,51
+"359","Summer flounder",NA,"avg_length_spring","mean of last 10 years vs historic mean",1.07412235068903,3,0.0588235294117647,51
+"360","Butterfish","Gulf of Maine / Cape Hatteras","avg_length_spring","mean of last 10 years vs historic mean",0.927362573648096,27,0.529411764705882,51
+"361","Black sea bass",NA,"avg_length_spring","mean of last 10 years vs historic mean",0.953394081512927,20,0.392156862745098,51
+"362","Scup",NA,"avg_length_spring","mean of last 10 years vs historic mean",0.915159671735987,29,0.568627450980392,51
+"363","Rosette skate","Southern New England / Mid-Atlantic","avg_length_spring","mean of last 10 years vs historic mean",0.978877266828401,16,0.313725490196078,51
+"364","Offshore hake",NA,"avg_length_spring","mean of last 10 years vs historic mean",0.74380916811158,49,0.96078431372549,51
+"365","Barndoor skate","Georges Bank / Southern New England","avg_length_spring","mean of last 10 years vs historic mean",1.00912940313377,12,0.235294117647059,51
+"366","Thorny skate","Gulf of Maine","avg_length_spring","mean of last 10 years vs historic mean",0.899799881279181,31,0.607843137254902,51
+"367","Pollock","Gulf of Maine / Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.870257836812955,38,0.745098039215686,51
+"368","American plaice","Gulf of Maine / Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.933985057435695,26,0.509803921568627,51
+"369","Smooth skate","Gulf of Maine","avg_length_spring","mean of last 10 years vs historic mean",0.895177637956924,33,0.647058823529412,51
+"370","Atlantic wolffish","Gulf of Maine / Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.804466299609551,45,0.882352941176471,51
+"371","Witch flounder",NA,"avg_length_spring","mean of last 10 years vs historic mean",0.816839570354396,44,0.862745098039216,51
+"372","Acadian redfish","Gulf of Maine / Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.895198069790182,32,0.627450980392157,51
+"373","White hake","Gulf of Maine / Georges Bank","avg_length_spring","mean of last 10 years vs historic mean",0.941674972771636,25,0.490196078431373,51
+"374","Atlantic halibut","Northwestern Atlantic Coast","avg_length_spring","mean of last 10 years vs historic mean",1.15254128952031,1,0.0196078431372549,51
+"375","Bluefish",NA,"avg_length_spring","mean of last 10 years vs historic mean",0.820608259359487,42,0.823529411764706,51
+"376","Spiny dogfish",NA,"max_length_fall","mean of last 10 years vs historic mean",0.932409878415317,34,0.666666666666667,51
+"377","Winter skate","Georges Bank / Southern New England","max_length_fall","mean of last 10 years vs historic mean",0.983843634084077,24,0.470588235294118,51
+"378","Little skate","Georges Bank / Southern New England","max_length_fall","mean of last 10 years vs historic mean",1.02986245827481,15,0.294117647058824,51
+"379","Alewife",NA,"max_length_fall","mean of last 10 years vs historic mean",1.00190963101248,23,0.450980392156863,51
+"380","Pollock","Gulf of Maine / Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.785857010360834,50,0.980392156862745,51
+"381","White hake","Gulf of Maine / Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.927389317725112,36,0.705882352941177,51
+"382","American plaice","Gulf of Maine / Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.902906487919489,40,0.784313725490196,51
+"383","Ocean pout","Northwestern Atlantic Coast","max_length_fall","mean of last 10 years vs historic mean",0.827202510189336,47,0.92156862745098,51
+"384","Atlantic herring","Northwestern Atlantic Coast","max_length_fall","mean of last 10 years vs historic mean",0.948762563632692,31,0.607843137254902,51
+"385","Atlantic halibut","Northwestern Atlantic Coast","max_length_fall","mean of last 10 years vs historic mean",1.01109031071427,17,0.333333333333333,51
+"386","Acadian redfish","Gulf of Maine / Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.971251742271857,27,0.529411764705882,51
+"387","Barndoor skate","Georges Bank / Southern New England","max_length_fall","mean of last 10 years vs historic mean",1.03883018893754,13,0.254901960784314,51
+"388","Witch flounder",NA,"max_length_fall","mean of last 10 years vs historic mean",0.858519848694309,44,0.862745098039216,51
+"389","Atlantic mackerel","Gulf of Maine / Cape Hatteras","max_length_fall","mean of last 10 years vs historic mean",1.00954612973837,18,0.352941176470588,51
+"390","Atlantic wolffish","Gulf of Maine / Georges Bank","max_length_fall","mean of last 10 years vs historic mean",0.909954546495386,38,0.745098039215686,51
+"391","Thorny skate","Gulf of Maine","max_length_fall","mean of last 10 years vs historic mean",0.811626178493787,48,0.941176470588235,51
+"392","Smooth skate","Gulf of Maine","max_length_fall","mean of last 10 years vs historic mean",1.03170762672657,14,0.274509803921569,51
+"393","Blueback herring",NA,"max_length_fall","mean of last 10 years vs historic mean",1.00439531888283,21,0.411764705882353,51
+"394","Butterfish","Gulf of Maine / Cape Hatteras","max_length_fall","mean of last 10 years vs historic mean",1.04248349964642,12,0.235294117647059,51
+"395","Offshore hake",NA,"max_length_fall","mean of last 10 years vs historic mean",0.860142323680688,43,0.843137254901961,51
+"396","Summer flounder",NA,"max_length_fall","mean of last 10 years vs historic mean",1.05982486880994,7,0.137254901960784,51
+"397","Black sea bass",NA,"max_length_fall","mean of last 10 years vs historic mean",1.21663618001384,1,0.0196078431372549,51
+"398","Scup",NA,"max_length_fall","mean of last 10 years vs historic mean",1.05928821361205,8,0.156862745098039,51
+"399","Smooth dogfish",NA,"max_length_fall","mean of last 10 years vs historic mean",0.907408546473655,39,0.764705882352941,51
+"400","Rosette skate","Southern New England / Mid-Atlantic","max_length_fall","mean of last 10 years vs historic mean",1.05524962384284,9,0.176470588235294,51
+"401","Clearnose skate","Southern New England / Mid-Atlantic","max_length_fall","mean of last 10 years vs historic mean",1.07289996672616,6,0.117647058823529,51
+"402","Bluefish",NA,"max_length_fall","mean of last 10 years vs historic mean",0.777086938538109,51,1,51
+"403","Winter skate","Georges Bank / Southern New England","max_length_spring","mean of last 10 years vs historic mean",0.979175093037933,22,0.431372549019608,51
+"404","Little skate","Georges Bank / Southern New England","max_length_spring","mean of last 10 years vs historic mean",1.02036113227986,13,0.254901960784314,51
+"405","Ocean pout","Northwestern Atlantic Coast","max_length_spring","mean of last 10 years vs historic mean",0.811305149982505,47,0.92156862745098,51
+"406","Spiny dogfish",NA,"max_length_spring","mean of last 10 years vs historic mean",0.950231782484938,29,0.568627450980392,51
+"407","Atlantic herring","Northwestern Atlantic Coast","max_length_spring","mean of last 10 years vs historic mean",1.02927743464377,11,0.215686274509804,51
+"408","Alewife",NA,"max_length_spring","mean of last 10 years vs historic mean",0.999395247622477,17,0.333333333333333,51
+"409","Blueback herring",NA,"max_length_spring","mean of last 10 years vs historic mean",1.06141642247677,9,0.176470588235294,51
+"410","Atlantic mackerel","Gulf of Maine / Cape Hatteras","max_length_spring","mean of last 10 years vs historic mean",0.946337473844185,30,0.588235294117647,51
+"411","Smooth dogfish",NA,"max_length_spring","mean of last 10 years vs historic mean",1.00548617104016,15,0.294117647058824,51
+"412","Clearnose skate","Southern New England / Mid-Atlantic","max_length_spring","mean of last 10 years vs historic mean",1.0657229321923,8,0.156862745098039,51
+"413","Summer flounder",NA,"max_length_spring","mean of last 10 years vs historic mean",1.12660294032308,5,0.0980392156862745,51
+"414","Butterfish","Gulf of Maine / Cape Hatteras","max_length_spring","mean of last 10 years vs historic mean",0.960319067316992,26,0.509803921568627,51
+"415","Black sea bass",NA,"max_length_spring","mean of last 10 years vs historic mean",0.981629003135988,21,0.411764705882353,51
+"416","Scup",NA,"max_length_spring","mean of last 10 years vs historic mean",0.969453846475283,23,0.450980392156863,51
+"417","Rosette skate","Southern New England / Mid-Atlantic","max_length_spring","mean of last 10 years vs historic mean",1.02600822182627,12,0.235294117647059,51
+"418","Offshore hake",NA,"max_length_spring","mean of last 10 years vs historic mean",0.837338685765896,45,0.882352941176471,51
+"419","Barndoor skate","Georges Bank / Southern New England","max_length_spring","mean of last 10 years vs historic mean",1.09440480014926,6,0.117647058823529,51
+"420","Thorny skate","Gulf of Maine","max_length_spring","mean of last 10 years vs historic mean",0.853055165829456,43,0.843137254901961,51
+"421","Pollock","Gulf of Maine / Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.878249780706604,41,0.803921568627451,51
+"422","American plaice","Gulf of Maine / Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.946215496667139,31,0.607843137254902,51
+"423","Smooth skate","Gulf of Maine","max_length_spring","mean of last 10 years vs historic mean",1.00618693753556,14,0.274509803921569,51
+"424","Atlantic wolffish","Gulf of Maine / Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.794627857880789,50,0.980392156862745,51
+"425","Witch flounder",NA,"max_length_spring","mean of last 10 years vs historic mean",0.880205876938182,40,0.784313725490196,51
+"426","Acadian redfish","Gulf of Maine / Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.959142792104322,27,0.529411764705882,51
+"427","White hake","Gulf of Maine / Georges Bank","max_length_spring","mean of last 10 years vs historic mean",0.938552428515085,35,0.686274509803922,51
+"428","Atlantic halibut","Northwestern Atlantic Coast","max_length_spring","mean of last 10 years vs historic mean",1.16583831106653,4,0.0784313725490196,51
+"429","Bluefish",NA,"max_length_spring","mean of last 10 years vs historic mean",0.807542983915696,48,0.941176470588235,51
+"430","Ocean pout","Northwestern Atlantic Coast","diet","all",12,4,0.363636363636364,11
+"431","Little skate","Georges Bank / Southern New England","diet","all",14,2,0.181818181818182,11
+"432","Butterfish","Gulf of Maine / Cape Hatteras","diet","all",11,5,0.454545454545455,11
+"433","Scup",NA,"diet","all",13,3,0.272727272727273,11
+"434","Pollock","Gulf of Maine / Georges Bank","diet","all",13,3,0.272727272727273,11
+"435","American plaice","Gulf of Maine / Georges Bank","diet","all",10,6,0.545454545454545,11
+"436","Witch flounder",NA,"diet","all",9,7,0.636363636363636,11
+"437","White hake","Gulf of Maine / Georges Bank","diet","all",13,3,0.272727272727273,11
+"438","Acadian redfish","Gulf of Maine / Georges Bank","diet","all",10,6,0.545454545454545,11
+"439","Winter skate","Georges Bank / Southern New England","diet","all",13,3,0.272727272727273,11
+"440","Black sea bass",NA,"diet","all",13,3,0.272727272727273,11
+"441","Spiny dogfish",NA,"diet","all",13,3,0.272727272727273,11
+"442","Rosette skate","Southern New England / Mid-Atlantic","diet","all",10,6,0.545454545454545,11
+"443","Summer flounder",NA,"diet","all",10,6,0.545454545454545,11
+"444","Clearnose skate","Southern New England / Mid-Atlantic","diet","all",11,5,0.454545454545455,11
+"445","Smooth dogfish",NA,"diet","all",13,3,0.272727272727273,11
+"446","Blueback herring",NA,"diet","all",10,6,0.545454545454545,11
+"447","Atlantic mackerel","Gulf of Maine / Cape Hatteras","diet","all",11,5,0.454545454545455,11
+"448","Alewife",NA,"diet","all",10,6,0.545454545454545,11
+"449","Thorny skate","Gulf of Maine","diet","all",10,6,0.545454545454545,11
+"450","Atlantic wolffish","Gulf of Maine / Georges Bank","diet","all",6,10,0.909090909090909,11
+"451","Smooth skate","Gulf of Maine","diet","all",9,7,0.636363636363636,11
+"452","Atlantic herring","Northwestern Atlantic Coast","diet","all",13,3,0.272727272727273,11
+"453","Bluefish",NA,"diet","all",10,6,0.545454545454545,11
+"454","Atlantic halibut","Northwestern Atlantic Coast","diet","all",5,11,1,11
+"455","Offshore hake",NA,"diet","all",8,8,0.727272727272727,11
+"456","Barndoor skate","Georges Bank / Southern New England","diet","all",11,5,0.454545454545455,11
+"457","Atlantic herring","Northwestern Atlantic Coast","rec_catch","average of 2014 - 2019 data",171075,19,0.612903225806452,31
+"458","Atlantic wolffish","Gulf of Maine / Georges Bank","rec_catch","average of 2014 - 2019 data",38156,13,0.419354838709677,31
+"459","Ocean pout","Northwestern Atlantic Coast","rec_catch","average of 2014 - 2019 data",856,2,0.0645161290322581,31
+"460","Pollock","Gulf of Maine / Georges Bank","rec_catch","average of 2014 - 2019 data",915508,24,0.774193548387097,31
+"461","Red hake","Gulf of Maine / Northern Georges Bank","rec_catch","average of 2014 - 2019 data",28938,12,0.387096774193548,31
+"462","Red hake","Southern Georges Bank / Mid-Atlantic","rec_catch","average of 2014 - 2019 data",28938,12,0.387096774193548,31
+"463","Silver hake","Gulf of Maine / Northern Georges Bank","rec_catch","average of 2014 - 2019 data",119765,17,0.548387096774194,31
+"464","Silver hake","Southern Georges Bank / Mid-Atlantic","rec_catch","average of 2014 - 2019 data",119765,17,0.548387096774194,31
+"465","White hake","Gulf of Maine / Georges Bank","rec_catch","average of 2014 - 2019 data",9051,9,0.290322580645161,31
+"466","Windowpane","Gulf of Maine / Georges Bank","rec_catch","average of 2014 - 2019 data",8354,8,0.258064516129032,31
+"467","Windowpane","Southern New England / Mid-Atlantic","rec_catch","average of 2014 - 2019 data",8354,8,0.258064516129032,31
+"468","Winter flounder","Georges Bank","rec_catch","average of 2014 - 2019 data",211765,20,0.645161290322581,31
+"469","Winter flounder","Gulf of Maine","rec_catch","average of 2014 - 2019 data",211765,20,0.645161290322581,31
+"470","Yellowtail flounder","Georges Bank","rec_catch","average of 2014 - 2019 data",7462,7,0.225806451612903,31
+"471","Yellowtail flounder","Southern New England / Mid-Atlantic","rec_catch","average of 2014 - 2019 data",7462,7,0.225806451612903,31
+"472","Barndoor skate","Georges Bank / Southern New England","rec_catch","average of 2014 - 2019 data",818,1,0.032258064516129,31
+"473","Clearnose skate","Southern New England / Mid-Atlantic","rec_catch","average of 2014 - 2019 data",3063,4,0.129032258064516,31
+"474","Little skate","Georges Bank / Southern New England","rec_catch","average of 2014 - 2019 data",46083,16,0.516129032258065,31
+"475","Smooth skate","Gulf of Maine","rec_catch","average of 2014 - 2019 data",4742,6,0.193548387096774,31
+"476","Thorny skate","Gulf of Maine","rec_catch","average of 2014 - 2019 data",4641,5,0.161290322580645,31
+"477","Winter skate","Georges Bank / Southern New England","rec_catch","average of 2014 - 2019 data",44358,15,0.483870967741935,31
+"478","Atlantic cod","Eastern Georges Bank","rec_catch","average of 2014 - 2019 data",1454545,26,0.838709677419355,31
+"479","Atlantic cod","Georges Bank","rec_catch","average of 2014 - 2019 data",1454545,26,0.838709677419355,31
+"480","Atlantic cod","Gulf of Maine","rec_catch","average of 2014 - 2019 data",1454545,26,0.838709677419355,31
+"481","Atlantic halibut","Northwestern Atlantic Coast","rec_catch","average of 2014 - 2019 data",2243,3,0.0967741935483871,31
+"482","Haddock","Eastern Georges Bank","rec_catch","average of 2014 - 2019 data",2923019,29,0.935483870967742,31
+"483","Acadian redfish","Gulf of Maine / Georges Bank","rec_catch","average of 2014 - 2019 data",889980,23,0.741935483870968,31
+"484","Atlantic mackerel","Gulf of Maine / Cape Hatteras","rec_catch","average of 2014 - 2019 data",6192206,31,1,31
+"485","Butterfish","Gulf of Maine / Cape Hatteras","rec_catch","average of 2014 - 2019 data",156134,18,0.580645161290323,31
+"486","Goosefish","Gulf of Maine / Northern Georges Bank","rec_catch","average of 2014 - 2019 data",23569,11,0.354838709677419,31
+"487","Goosefish","Southern Georges Bank / Mid-Atlantic","rec_catch","average of 2014 - 2019 data",23569,11,0.354838709677419,31
+"488","Haddock","Georges Bank","rec_catch","average of 2014 - 2019 data",2923019,29,0.935483870967742,31
+"489","Haddock","Gulf of Maine","rec_catch","average of 2014 - 2019 data",2923019,29,0.935483870967742,31
+"490","Winter flounder","Southern New England / Mid-Atlantic","rec_catch","average of 2014 - 2019 data",211765,20,0.645161290322581,31
+"491","Yellowtail flounder","Cape Cod / Gulf of Maine","rec_catch","average of 2014 - 2019 data",7462,7,0.225806451612903,31
+"492","Atlantic herring","Northwestern Atlantic Coast","overall","all",5.6028086741518,16,0.30188679245283,53
+"493","American plaice","Gulf of Maine / Georges Bank","overall","all",7.84342068843348,42,0.792452830188679,53
+"494","Atlantic wolffish","Gulf of Maine / Georges Bank","overall","all",8.69740811535631,50,0.943396226415094,53
+"495","Ocean pout","Northwestern Atlantic Coast","overall","all",8.62683109454415,48,0.905660377358491,53
+"496","Pollock","Gulf of Maine / Georges Bank","overall","all",7.5654508418183,39,0.735849056603774,53
+"497","Red hake","Gulf of Maine / Northern Georges Bank","overall","all",5.26932958826779,13,0.245283018867925,53
+"498","Red hake","Southern Georges Bank / Mid-Atlantic","overall","all",7.60615823276907,40,0.754716981132076,53
+"499","Silver hake","Gulf of Maine / Northern Georges Bank","overall","all",3.81040368206444,2,0.0377358490566038,53
+"500","Silver hake","Southern Georges Bank / Mid-Atlantic","overall","all",5.39164835384619,15,0.283018867924528,53
+"501","White hake","Gulf of Maine / Georges Bank","overall","all",6.94625530946792,32,0.60377358490566,53
+"502","Windowpane","Gulf of Maine / Georges Bank","overall","all",7.97131724805184,43,0.811320754716981,53
+"503","Windowpane","Southern New England / Mid-Atlantic","overall","all",6.5760060801064,28,0.528301886792453,53
+"504","Winter flounder","Georges Bank","overall","all",6.13372153655546,21,0.39622641509434,53
+"505","Winter flounder","Gulf of Maine","overall","all",6.29328188243294,24,0.452830188679245,53
+"506","Yellowtail flounder","Georges Bank","overall","all",6.18592425367444,22,0.415094339622642,53
+"507","Yellowtail flounder","Southern New England / Mid-Atlantic","overall","all",8.20025812951727,45,0.849056603773585,53
+"508","Barndoor skate","Georges Bank / Southern New England","overall","all",4.59081033918094,6,0.113207547169811,53
+"509","Clearnose skate","Southern New England / Mid-Atlantic","overall","all",3.63600738012915,1,0.0188679245283019,53
+"510","Little skate","Georges Bank / Southern New England","overall","all",4.86248259344539,8,0.150943396226415,53
+"511","Rosette skate","Southern New England / Mid-Atlantic","overall","all",4.30930791288848,4,0.0754716981132075,53
+"512","Smooth skate","Gulf of Maine","overall","all",5.21269122209639,12,0.226415094339623,53
+"513","Thorny skate","Gulf of Maine","overall","all",8.66752918176068,49,0.924528301886792,53
+"514","Winter skate","Georges Bank / Southern New England","overall","all",5.76810719187586,17,0.320754716981132,53
+"515","Atlantic cod","Eastern Georges Bank","overall","all",6.82988614800759,31,0.584905660377358,53
+"516","Atlantic cod","Georges Bank","overall","all",8.44993962394342,46,0.867924528301887,53
+"517","Atlantic cod","Gulf of Maine","overall","all",9.05528721752631,52,0.981132075471698,53
+"518","Atlantic halibut","Northwestern Atlantic Coast","overall","all",5.28304870335231,14,0.264150943396226,53
+"519","Haddock","Eastern Georges Bank","overall","all",6.34346706424505,25,0.471698113207547,53
+"520","Acadian redfish","Gulf of Maine / Georges Bank","overall","all",7.04089142988574,34,0.641509433962264,53
+"521","Atlantic mackerel","Gulf of Maine / Cape Hatteras","overall","all",8.04138018843901,44,0.830188679245283,53
+"522","Butterfish","Gulf of Maine / Cape Hatteras","overall","all",6.24667520967331,23,0.433962264150943,53
+"523","Goosefish","Gulf of Maine / Northern Georges Bank","overall","all",7.52239664194123,38,0.716981132075472,53
+"524","Goosefish","Southern Georges Bank / Mid-Atlantic","overall","all",7.74788683801967,41,0.773584905660377,53
+"525","Haddock","Georges Bank","overall","all",7.00258343806731,33,0.622641509433962,53
+"526","Haddock","Gulf of Maine","overall","all",6.61692008181572,29,0.547169811320755,53
+"527","Winter flounder","Southern New England / Mid-Atlantic","overall","all",6.64490664300911,30,0.566037735849057,53
+"528","Yellowtail flounder","Cape Cod / Gulf of Maine","overall","all",5.95193326597501,19,0.358490566037736,53
+"529","American lobster","Georges Bank / Southern New England","overall","all",7.18627450980392,35,0.660377358490566,53
+"530","American lobster","Georges Bank","overall","all",4.14705882352941,3,0.0566037735849057,53
+"531","American lobster","Gulf of Maine","overall","all",4.55882352941176,5,0.0943396226415094,53
+"532","Jonah crab","Georges Bank / Southern New England","overall","all",7.36274509803922,37,0.69811320754717,53
+"533","Jonah crab","Georges Bank","overall","all",7.2843137254902,36,0.679245283018868,53
+"534","Jonah crab","Gulf of Maine","overall","all",5.00980392156863,10,0.188679245283019,53
+"535","Spiny dogfish","Unknown","overall","all",6.50802139037433,27,0.509433962264151,53
+"536","Alewife","Unknown","overall","all",5.80035650623886,18,0.339622641509434,53
+"537","Witch flounder","Unknown","overall","all",8.61675579322638,47,0.886792452830189,53
+"538","Blueback herring","Unknown","overall","all",5.01604278074866,11,0.207547169811321,53
+"539","Offshore hake","Unknown","overall","all",8.98217468805704,51,0.962264150943396,53
+"540","Summer flounder","Unknown","overall","all",4.66310160427807,7,0.132075471698113,53
+"541","Black sea bass","Unknown","overall","all",4.93939393939394,9,0.169811320754717,53
+"542","Scup","Unknown","overall","all",6.03743315508021,20,0.377358490566038,53
+"543","Smooth dogfish","Unknown","overall","all",6.48841354723708,26,0.490566037735849,53
+"544","Bluefish","Unknown","overall","all",9.07486631016043,53,1,53

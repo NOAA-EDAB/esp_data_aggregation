@@ -1,0 +1,43 @@
+---
+title: "risk_plot"
+author: "Abigail Tyrell"
+date: "12/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, 
+                      fig.width = 8, fig.align = 'center')
+
+library(ggplot2)
+
+data <- read.csv(here::here("data/risk_ranking", "plot_data.csv"))
+```
+
+# Risk ranking of Northeast stocks
+```{r plot, fig.height = 36}
+fig <- ggplot(data,
+       aes(x = reorder(stock, -total_risk),
+           y = Indicator ,
+           fill = norm_rank ))+
+  geom_raster(stat = "identity")+
+  geom_text(aes(x = reorder(stock, -total_risk),
+                y = 0.5,
+                label = label),
+            angle = 90,
+            hjust = 0,
+            #cex = 3,
+            color = "black")+
+  theme_bw()+
+  scale_fill_gradient2(high = "darkred", mid = "beige", low = "forestgreen", midpoint = 0.5)+
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.title.x = element_blank(),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        legend.position = "top")+
+  facet_wrap(facets = vars(Region),
+             ncol = 1,
+             scales = "free_x")
+print(fig)
+```
