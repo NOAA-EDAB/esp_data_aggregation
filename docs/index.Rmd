@@ -48,7 +48,8 @@ These reports are a preliminary analysis of recreational data only.
 purrr::map(rec_summary_pages, 
            ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
                   .x, "'>",
-                  stringr::str_split_fixed(.x, pattern = ".h", n = 2)[,1], 
+                  stringr::str_split_fixed(.x, pattern = ".h", n = 2)[,1] %>% 
+                    stringr::str_to_sentence(), 
                   "</a>", sep = "")) %>%
   unlist() %>%
   knitr::kable(col.names = "File name")
@@ -56,7 +57,8 @@ purrr::map(rec_summary_pages,
 purrr::map(rec_species_pages, 
            ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
                   .x, "'>",
-                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1], 
+                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1] %>% 
+                    stringr::str_to_sentence(), 
                   "</a>", sep = "")) %>%
   unlist() %>%
   knitr::kable(col.names = "Species name")
