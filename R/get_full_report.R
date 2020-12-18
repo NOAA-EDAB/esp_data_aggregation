@@ -61,7 +61,7 @@ purrr::map(list_species[1], ~rmarkdown::render(here::here("R", "full_report_temp
                                                           
                                                           risk_data = risk
                                                           ), 
-                                            output_dir = here::here("docs"),
+                                            output_dir = here::here("docs/reports"),
                                             output_file = paste(.x, "_full", 
                                                                 ".html", sep = "")))
 #####
@@ -111,7 +111,7 @@ render_par <- function(x){
                                   risk_data = risk
                                   ), 
                     intermediates_dir = tf,
-                    output_dir = here::here("docs"),
+                    output_dir = here::here("docs/reports"),
                     output_file = paste(x, "_full", 
                                         ".html", sep = ""))
 

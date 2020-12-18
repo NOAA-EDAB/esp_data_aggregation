@@ -40,4 +40,4 @@ cond$Species <- cond$Species %>% stringr::str_replace("Atl herring", "Atlantic h
 cond$Species <- cond$Species %>% stringr::str_replace("Yellowtail", "Yellowtail flounder")
 cond$Species <- cond$Species %>% stringr::str_replace("Windowpane flounder", "Windowpane")
 
-risk <- read.csv(here::here("data/risk_ranking", "full_data.csv"))
+risk <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv"))
