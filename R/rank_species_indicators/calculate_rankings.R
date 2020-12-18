@@ -1,7 +1,10 @@
 
 source(here::here("R/rank_species_indicators", "ranking_functions.R"))
+`%>%` <- dplyr::`%>%`
 
-# most recent measurement ----
+# read in data and rank ----
+
+# * most recent measurement ----
 ### B/Bmsy, F/Fmsy
 bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
 
@@ -18,7 +21,7 @@ f <- recent_indicator(data = bf,
                  indicator_name = "ffmsy")
 
 
-# mean of past 5 years ----
+# * mean of past 5 years ----
 ### rec catch
 rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
   dplyr::filter(sub_reg_f == "NORTH ATLANTIC")
@@ -31,7 +34,7 @@ rec <- yr5mean_indicator(data = rec,
                   high = "high_risk",
                   indicator_name = "rec_catch")
 
-# max of all time ----
+# * max of all time ----
 ### total catch
 asmt <- assessmentdata::stockAssessmentData %>%
   dplyr::filter(Region == "Gulf of Maine / Georges Bank" |
@@ -65,7 +68,7 @@ catch <- maxalltime_indicator(data = asmt %>% dplyr::filter(Metric == "Catch"),
                      high = "high_risk",
                      indicator_name = "asmt_catch")
 
-# mean of past 10 years as % of historical ----
+# * mean of past 10 years as % of historical ----
 ### abundance, recruitment, biomass, mean length, max length
 dat <- asmt %>% dplyr::filter(Metric == "Abundance", Units == "Metric Tons")
 abun <- yr10hist_indicator(data = dat, 
@@ -137,7 +140,7 @@ max_len_s <- yr10hist_indicator(data = length %>%
                    high = "low_risk",
                    indicator_name = "max_length_spring")
 
-# calculated from all time ----
+# * calculated from all time ----
 ### number of prey categories, % of rejected stock assessments
 source(here::here("data", "allfh_regions.R"))
 diet <- alltime_indicator_diet(data = allfh %>% 
@@ -153,9 +156,13 @@ diet <- diet %>%
   dplyr::rename("Value" = "diet_diversity") %>%
   dplyr::select(Species, Region, Indicator, Year, Value, rank, norm_rank)
 
+# merge everything except rec
 all_ind <- rbind(b, f, catch, recruit, abun, biomass_f, biomass_s,
                  avg_len_f, avg_len_s, max_len_f, max_len_s, diet)
 
+# data wrangling -----
+
+# * standardize "Mid" "Mid-Atlantic" ----
 unique(all_ind$Region)
 
 all_ind$Region <- stringr::str_replace(all_ind$Region, "Mid", "Mid-Atlantic")
@@ -163,9 +170,7 @@ all_ind$Region <- stringr::str_replace(all_ind$Region, "Mid-Atlantic-Atlantic", 
 
 unique(all_ind$Region)
 
-write.csv(all_ind, here::here("docs/risk_ranking", "preliminary_risk_ranking.csv"))
-
-# replace "all" with region name
+# * replace "all" with region name ----
 missing_names <- all_ind %>%
   dplyr::filter(Region == "all") %>%
   dplyr::select(-Region)
@@ -183,13 +188,10 @@ names_added <- dplyr::left_join(missing_names, region_key,
 
 fixed_data <- rbind(has_names, names_added)
 
-id <- paste(fixed_data$Species, fixed_data$Region, fixed_data$Indicator)
+# rplace any NA Region with "Unknown"
+fixed_data$Region <- fixed_data$Region %>% tidyr::replace_na("Unknown")
 
-id == unique(id)
-
-cbind(id[484:514], unique(id)[484:514])
-
-# add dummy rec regions and add
+# * create dummy rec regions and add rec to the rest of the data ----
 rec_new <- dplyr::left_join( 
   fixed_data %>% 
     dplyr::select(Species, Region) %>% 
@@ -205,16 +207,14 @@ head(fixed_data)
 
 fixed_data <- fixed_data %>%
   dplyr::group_by(Indicator) %>%
-  dplyr::mutate(n_stocks = max(rank))
+  dplyr::mutate(n_stocks_per_indicator = max(rank))
 
-write.csv(fixed_data, file = here::here("data/risk_ranking", "full_data.csv"))
 
-# fill in missing values
+# * fill in missing values with 0.5, add total risk and overall rank ----
 data <- fixed_data %>%
   dplyr::select(Species, Region, Indicator, norm_rank) %>%
   tidyr::pivot_wider(names_from = "Indicator",
                      values_from = "norm_rank")
-data$Region <- data$Region %>% tidyr::replace_na("Unknown")
 data[is.na(data)] <- 0.5
 
 data <- data %>% tidyr::pivot_longer(cols = colnames(data[3:15]),
@@ -225,55 +225,32 @@ data <- data %>% tidyr::pivot_longer(cols = colnames(data[3:15]),
                 stock = paste(Species, Region, sep = " - "),
                 label = paste(Species, 
                       total_risk %>% round(digits = 2), 
-                      sep = ", "))
+                      sep = ", ")) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(overall_rank = dplyr::dense_rank(total_risk),
+                overall_stocks = stock %>% unique() %>% length(),
+                category = ifelse(Indicator == "ffmsy" |
+                                    Indicator == "asmt_catch" |
+                                    Indicator == "rec_catch",
+                                  "Social", "Biological"))
 data 
 
-write.csv(data, file = here::here("data/risk_ranking", "plot_data.csv"))
+# join fixed_data (with values and years) to data (with total ranks and labels)
+new_data <- dplyr::full_join(data, fixed_data,
+                             by = c("Species", "Region", "Indicator", "norm_rank")) %>%
+  dplyr::group_by(Region) %>%
+  dplyr::mutate(n_stocks_per_region = Species %>% unique %>% length) %>%
+  dplyr::select(Species, Region, Indicator, category, Year, Value, rank, 
+                n_stocks_per_indicator, n_stocks_per_region, norm_rank, 
+                total_risk, overall_rank, overall_stocks, stock, label) 
 
-overall_rank <- data %>%
-  dplyr::select(Species, Region, total_risk) %>%
-  dplyr::distinct() %>%
-  dplyr::ungroup() %>%
-  dplyr::mutate(rank = rank(total_risk),
-                norm_rank = rank/max(rank),
-                n_stocks = length(total_risk),
-                Indicator = "overall",
-                Year = "all") %>%
-  dplyr::rename("Value" = "total_risk") %>%
-  dplyr::select(Species, Region, Indicator, Year, Value, rank, norm_rank, n_stocks)
-  
+new_data
 
-write.csv(rbind(fixed_data, overall_rank), 
-          file = here::here("data/risk_ranking", "full_data.csv"))
+write.csv(new_data,
+          file = here::here("data/risk_ranking", "full_risk_data.csv"))
 
-# figure
-fig <- ggplot(data,
-              aes(x = reorder(stock, -total_risk),
-                  y = Indicator,
-                  fill = norm_rank))+
-  geom_raster(stat = "identity")+
-  geom_text(aes(x = reorder(stock, -total_risk),
-                y = 0.5,
-                label = label),
-            angle = 90,
-            hjust = 0,
-            cex = 3,
-            color = "black")+
-  theme_bw()+
-  scale_fill_gradient2(high = "darkred", mid = "beige", low = "forestgreen", midpoint = 0.5)+
-  theme(axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        axis.title.x = element_blank(),
-        panel.grid.major.x = element_blank(),
-        panel.grid.minor.x = element_blank(),
-        legend.position = "bottom"
-  )+
-  facet_wrap(facets = vars(Region),
-             scales = "free_x")
-fig
+# render Rmd report
+rmarkdown::render(here::here("R/rank_species_indicators", "plot_all_risk.Rmd"), 
+                                      output_dir = here::here("docs/risk_ranking"))
 
-pdf(here::here("docs/risk_ranking", "preliminary_risk_ranking.pdf"),
-    height = 6.5, width = 9)
-fig
-dev.off()
 

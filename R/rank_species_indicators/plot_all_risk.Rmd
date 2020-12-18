@@ -16,16 +16,14 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F,
 library(ggplot2)
 `%>%` <- dplyr::`%>%`
 
-data <- read.csv(here::here("data/risk_ranking", "plot_data.csv")) %>%
-  dplyr::group_by(Region) %>%
-  dplyr::mutate(n_stocks = Species %>% unique() %>% length())
+data <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv"))
 guild_data <- read.csv(here::here("data/risk_ranking", "plot_data_guilds.csv"))
 guild_info <- read.csv(here::here("data/risk_ranking", "guild_info.csv"))
 ```
 
 # Risk ranking of Northeast stocks {.tabset .tabset-fade}
 
-## Methods
+## Methods {.tabset .tabset-fade}
 
 ### Risk ranking
 All stocks were ranked in order of increasing risk. The stock with the highest ranking is the stock determined to be at the highest risk. In this case, high risk has two meanings: (1) high importance (e.g., a stock with a high catch would have a high risk ranking for the catch indicator) or high vulnerability (e.g., a stock with low B/Bmsy would have a high risk ranking for the B/Bmsy indicator). The normalized rank was determined by dividing each stock's rank by the total number of stocks considered for that indicator. Stocks that were missing indicator measurements were assigned a normalized rank of 0.5.
@@ -34,7 +32,7 @@ All stocks were ranked in order of increasing risk. The stock with the highest r
 indicators <- unique(data$Indicator)
 metric <- c(rep("Most recent value", 2), 
             "Max of all time", 
-            rep("Difference between mean of past 10 years and historical mean", 8),
+            rep("Mean of past 10 years as a percent of the historical mean", 8),
             "Number of prey categories from all time",
             "Mean of past 5 years")
 risk <- c("Low is risky",
@@ -62,16 +60,18 @@ guild_info %>%
   knitr::kable()
 ```
 
-## Results
+## Results {.tabset .tabset-fade}
 
-### All risk data
-Ranks for all stocks and stock areas. The total risk (sum of all normalized risk values) is shown for each stock.
+### All risk data {.tabset .tabset-fade}
+Ranks for all stocks. The total risk (sum of all normalized risk values) is shown for each stock.
+
+#### By region
 ```{r plot_more, fig.height = 12}
-more <- data %>% dplyr::filter(n_stocks > 4) 
+more <- data %>% dplyr::filter(n_stocks_per_region > 4) 
 
 fig_more <- ggplot(more,
                    aes(x = reorder(stock, -total_risk),
-                       y = Indicator,
+                       y = paste(category, ": ", Indicator, sep = ""),
                        fill = norm_rank ))+
   geom_raster(stat = "identity")+
   geom_text(aes(x = reorder(stock, -total_risk),
@@ -95,15 +95,16 @@ fig_more <- ggplot(more,
         legend.position = "top")+
   facet_wrap(facets = vars(Region),
              ncol = 2,
-             scales = "free_x")
+             scales = "free_x")+
+  ylab("Indicator")
 
 print(fig_more)
 
 ```
 
-```{r plkot_less, fig.height = 5}
+```{r plot_less, fig.height = 5}
 less <- data %>% 
-  dplyr::filter(n_stocks <= 4) %>%
+  dplyr::filter(n_stocks_per_region <= 4) %>%
   dplyr::mutate(Region2 = Region %>% 
                   stringr::str_replace("Georges Bank", "GB") %>% 
                   stringr::str_replace("Gulf of Maine", "GOM") %>%
@@ -113,7 +114,7 @@ less <- data %>%
 
 fig_less <- ggplot(less,
        aes(x = reorder(stock, -total_risk),
-           y = Indicator ,
+           y = paste(category, ": ", Indicator, sep = ""),
            fill = norm_rank ))+
   geom_raster(stat = "identity")+
   geom_text(aes(x = reorder(stock, -total_risk),
@@ -137,9 +138,45 @@ fig_less <- ggplot(less,
         legend.position = "none")+
   facet_wrap(facets = vars(Region2),
              ncol = 6,
-             scales = "free_x")
+             scales = "free_x")+
+  ylab("Indicator")
 
 print(fig_less)
+```
+
+#### In order of risk
+```{r, all_stocks, fig.height = 15}
+fig <- ggplot(data,
+              aes(x = reorder(stock, -total_risk),
+                  y = paste(category, 
+                            ":\n", 
+                            Indicator %>% 
+                              stringr::str_replace_all("_", "\n"), 
+                            sep = ""),
+                  fill = norm_rank ))+
+  geom_raster(stat = "identity")+
+  geom_text(aes(x = reorder(stock, -total_risk),
+                y = 0.5,
+                label = paste(Region, " ", Species, ", ", 
+                              total_risk %>% round(digits = 2), 
+                              sep = "")),
+            hjust = 0,
+            #cex = 3,
+            color = "black")+
+  theme_bw()+
+  scale_fill_gradient2(high = "darkred", 
+                       mid = "beige", 
+                       low = "forestgreen", 
+                       midpoint = 0.5,
+                       name = "Normalized rank")+
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.title.y = element_blank(),
+        legend.position = "top")+
+  ylab("Indicator")+
+  coord_flip()
+
+print(fig)
 ```
 
 ### Guild risk data

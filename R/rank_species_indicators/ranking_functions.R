@@ -16,6 +16,13 @@
 # calculated from all time
 ### number of prey categories, % of rejected stock assessments
 
+# read in key to filter to NE stocks
+key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
+
+# parse out survey data for NE species only, add common name
+key2 <- data.frame(SVSPP = unique(key$SVSPP),
+                   Species = stringr::str_to_sentence(unique(key$COMNAME)))
+
 # most recent measurement ----
 recent_indicator <- function(data, year_source, value_source, high, indicator_name){
 
@@ -191,11 +198,6 @@ yr10hist_indicator <- function(data, year_source, value_source, high, indicator_
 
 #
 
-
-
-
-
-
 # calculated from all time ----
 alltime_indicator_diet <- function(data, value_source, high, indicator_name){
   
@@ -275,21 +277,19 @@ alltime_indicator_review <- function(data, value_source, high, indicator_name){
   return(data)
 }
 
-
-
 asmt_sum <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
 head(asmt_sum)
 unique(asmt_sum$Review.Result)
 
-dat <- asmt_sum %>%
-  dplyr::select(Species, Region, Assessment.Year, Review.Result) %>%
-  dplyr::group_by(Species, Region, Review.Result) %>%
-  dplyr::summarise(n_results = length(Assessment.Year)) %>%
-  tidyr::pivot_wider(names_from = Review.Result,
-                     values_from = n_results) %>%
-  dplyr::mutate(prop_full_acc = `Full acceptance` - sum)
-dat[is.na(dat)] <- 0
-dat
+#dat <- asmt_sum %>%
+#  dplyr::select(Species, Region, Assessment.Year, Review.Result) %>%
+#  dplyr::group_by(Species, Region, Review.Result) %>%
+#  dplyr::summarise(n_results = length(Assessment.Year)) %>%
+#  tidyr::pivot_wider(names_from = Review.Result,
+#                     values_from = n_results) %>%
+#  dplyr::mutate(prop_full_acc = `Full acceptance` - sum)
+#dat[is.na(dat)] <- 0
+#dat
 
 
 
