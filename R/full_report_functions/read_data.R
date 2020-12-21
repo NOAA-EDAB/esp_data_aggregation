@@ -22,7 +22,14 @@ asmt <- assessmentdata::stockAssessmentData %>%
                   Region == "Southern New England / Mid" |
                   Region == "Gulf of Maine / Northern Georges Bank" |
                   Region == "Southern Georges Bank / Mid" |
-                  Region == "Cape Cod / Gulf of Maine")
+                  Region == "Cape Cod / Gulf of Maine" |
+                  Region == "Northwestern Atlantic Coast" |
+                  Region == "Atlantic" |
+                  Region == "Western Atlantic" |
+                  Region == "Atlantic Coast"  |
+                  Region == "Georges Bank / Cape Hatteras" |
+                  Region == "Northwestern Atlantic" |
+                  Region == "Mid")
 asmt$Region <- asmt$Region %>% 
   stringr::str_replace("Mid", "Mid-Atlantic")
 asmt$Species <- asmt$Species %>% 

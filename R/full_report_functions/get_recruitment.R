@@ -14,7 +14,8 @@ plot_recruit <- function(x, n, lin = lines, col = colors){
                     color = Region))+
     geom_point(cex = 2)+
     geom_line()+
-    facet_grid(rows = vars(Units))+
+    facet_grid(rows = vars(Units),
+               scales = "free_y")+
     theme_bw()+
     labs(title = paste("Past", n, "years recruitment data"))+
     scale_y_continuous(label = scales::comma)+
