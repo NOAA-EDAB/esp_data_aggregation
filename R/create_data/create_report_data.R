@@ -100,7 +100,9 @@ saveRDS(data3, file = here::here("data", "survey_data.RDS"))
 # assessmentdata ratings - same as bf data
 #####
 ad <- assessmentdata::stockAssessmentSummary %>% 
-  dplyr::filter(Jurisdiction == "NEFMC")
+  dplyr::filter(Jurisdiction == "NEFMC" | 
+                  Jurisdiction == "NEFMC / MAFMC" | 
+                  Jurisdiction == "MAFMC")
 split_info <- stringr::str_split_fixed(ad$`Stock Name`, " - ", n = 2)
 ad$Species <- split_info[,1]
 ad$Region <- split_info[,2]
