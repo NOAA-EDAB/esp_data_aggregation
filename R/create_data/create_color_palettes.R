@@ -1,4 +1,4 @@
-## palette for diet
+## palette for diet ----
 
 # get prey categories
 load(here::here("data", "allfh.RData"))
@@ -27,7 +27,7 @@ barplot(names.arg = prey_palette$prey_id,
 write.csv(prey_palette, here::here("data", "prey_color_palette.csv"))
 
 
-## palette for rec catch
+## palette for rec catch ----
 
 # get catch modes
 rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
@@ -44,4 +44,22 @@ rec_palette <- data.frame(rec_mode = rec_mode,
 
 # save palette
 write.csv(rec_palette, here::here("data", "rec_color_palette.csv"))
+
+## palette for com catch ----
+
+# get catch modes
+com <- read.csv(here::here("data", "com_landings_clean_20201222.csv"))
+states <- unique(com$State)
+
+# create colors
+mycolors2 <-  grDevices::colorRampPalette(
+  nmfspalette::nmfs_palette("regional web")(6))(length(states))
+scales::show_col(mycolors2)
+
+# make palette
+com_palette <- data.frame(state_id = states,
+                           color = sample(mycolors2))
+
+# save palette
+write.csv(com_palette, here::here("data", "com_color_palette.csv"))
 

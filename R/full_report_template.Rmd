@@ -34,6 +34,8 @@ params:
   cond_data: data # Laurel's condition data
   
   risk_data: data # relative risk rankings
+  
+  com_data: data # commercial catch
 
 ---
 
@@ -56,6 +58,8 @@ source(here::here("R/full_report_functions", "get_rec_catch.R"))
 source(here::here("R/full_report_functions", "get_lw.R"))
 source(here::here("R/full_report_functions", "get_assessment.R"))
 source(here::here("R/full_report_functions", "get_relative_weight.R"))
+source(here::here("R/full_report_functions", "get_com_catch.R"))
+source(here::here("R/full_report_functions", "get_com_money.R"))
 ```
 
 ```{r, data, include = FALSE}
@@ -98,6 +102,9 @@ cond_data <- cond_data[cond_data$Species == species, ]
 
 risk_data <- params$risk_data
 risk_data <- risk_data[risk_data$Species == species, ]
+
+com_data <- params$com_data
+com_data <- com_data[com_data$Species == species, ]
 ```
 
 ```{r, bf_status}
@@ -193,6 +200,14 @@ if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
                       ytitle = "F / Fmsy",
              lin = lines,
              col = colors)
+} else print("NO DATA")
+```
+
+#### Revenue
+Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+```{r, revenue}
+if(length(com_data$Species) > 0){
+  plot_com_money(com_data)
 } else print("NO DATA")
 ```
 
@@ -295,8 +310,8 @@ if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
 
 #### Catch
 
-##### Catch
-Catch statistics from ``r params$asmt_source``.
+##### Survey catch
+Survey catch statistics from ``r params$asmt_source``.
 ```{r, catch}
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0){
 plot_asmt(asmt_data, 
@@ -314,6 +329,15 @@ if(length(rec_data$Species) > 0){
   get_rec_catch(rec_data)
 } else print("NO DATA")
 ```
+
+##### Commercial catch
+Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+```{r, com}
+if(length(com_data$Species) > 0){
+  plot_com(com_data)
+} else print("NO DATA")
+```
+
 
 #### Length
 Length data were pulled from ``r params$survey_source``. Only years with more than 10 fish lengths were considered for analysis. Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.

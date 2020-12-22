@@ -64,33 +64,4 @@ guild_risk3 <- guild_risk2 %>%
                 sum_ranks = sum(rank))
 head(guild_risk3)
 
-library(ggplot2)
-
-mycolors <-  grDevices::colorRampPalette(
-  nmfspalette::nmfs_palette("regional web")(6))(guild_risk3$Indicator %>% 
-                                                  unique() %>% length())
-scales::show_col(mycolors)
-
-ggplot(guild_risk3,
-       aes(x = reorder(paste(Guild, "\n", size) %>%
-                         stringr::str_replace("_", "\n"), 
-                       total_guild_risk),
-           y = avg_guild_risk, 
-           fill = Indicator)) +
-  geom_bar(stat = "identity", color = "black") +
-  scale_fill_manual(values = sample(mycolors))+
-  geom_text(aes(y = label_y,
-                label = paste(rank, "out of 8")),
-            stat = "identity",
-            vjust = -0.6) +
-  geom_text(aes(y = total_guild_risk,
-                label = paste("sum of ranks:\n", sum_ranks)),
-            stat = "identity",
-            vjust = -0.6)+
-  theme_bw()+
-  #theme(axis.text.x = element_text(angle = 90))+
-  xlab("Guild")+
-  ylab("Average risk within guild")+
-  ylim(c(0,8))
-
 write.csv(guild_risk3, file = here::here("data/risk_ranking", "guild_data.csv"))

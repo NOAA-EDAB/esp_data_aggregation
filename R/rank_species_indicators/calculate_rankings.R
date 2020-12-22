@@ -157,7 +157,48 @@ diet <- diet %>%
   dplyr::rename("Value" = "diet_diversity") %>%
   dplyr::select(Species, Region, Indicator, Year, Value, rank, norm_rank)
 
-# * merge everything except rec ----
+
+# * com data (multiple rankings) ----
+com <- read.csv(here::here("data", "com_landings_clean_20201222_formatted.csv"))
+com$Region <- NA
+
+com_max <- maxalltime_indicator(data = com, 
+                                year_source = "Year", 
+                                value_source = "Pounds", 
+                                high = "high_risk",
+                                indicator_name = "com_catch_max")
+
+rev_max <- maxalltime_indicator(data = com, 
+                                year_source = "Year", 
+                                value_source = "Dollars_adj", 
+                                high = "high_risk",
+                                indicator_name = "revenue_max")
+
+com_5yr <- yr5mean_indicator(data = com, 
+                             year_source = "Year", 
+                             value_source = "Pounds", 
+                             high = "high_risk",
+                             indicator_name = "com_catch_5yr")
+
+rev_5yr <- yr5mean_indicator(data = com, 
+                             year_source = "Year", 
+                             value_source = "Dollars_adj", 
+                             high = "high_risk",
+                             indicator_name = "revenue_5yr")
+
+com_hist <- yr10hist_indicator(data = com, 
+                               year_source = "Year", 
+                               value_source = "Pounds", 
+                               high = "low_risk",
+                               indicator_name = "com_catch_hist")
+
+rev_hist <- yr10hist_indicator(data = com, 
+                               year_source = "Year", 
+                               value_source = "Dollars_adj", 
+                               high = "low_risk",
+                               indicator_name = "revenue_hist")
+
+# * merge everything except rec and com ----
 all_ind <- rbind(b, f, catch, recruit, abun, biomass_f, biomass_s,
                  avg_len_f, avg_len_s, max_len_f, max_len_s, diet)
 
@@ -192,24 +233,26 @@ fixed_data <- rbind(has_names, names_added)
 # replace any NA Region with "Unknown"
 fixed_data$Region <- fixed_data$Region %>% tidyr::replace_na("Unknown")
 
-# * create dummy rec regions and add rec to the rest of the data ----
-rec_new <- dplyr::left_join( 
+# * create dummy rec and com regions and add rec and com to the rest of the data ----
+all_catch <- rbind(rec, com_max, com_5yr, com_hist, 
+                   rev_max, rev_5yr, rev_hist)
+
+all_catch_new <- dplyr::left_join( 
   fixed_data %>% 
     dplyr::select(Species, Region) %>% 
     dplyr::distinct(), 
-  rec,
+  all_catch,
   by = "Species") %>%
   dplyr::select(-Region.y) %>%
   dplyr::filter(Value > 0, is.na(Region.x) == FALSE) %>%
   dplyr::rename("Region" = "Region.x")
 
-fixed_data <- rbind(fixed_data, rec_new)
+fixed_data <- rbind(fixed_data, all_catch_new)
 head(fixed_data)
 
 fixed_data <- fixed_data %>%
   dplyr::group_by(Indicator) %>%
   dplyr::mutate(n_stocks_per_indicator = max(rank))
-
 
 # * fill in missing values with 0.5, add total risk and overall rank ----
 data <- fixed_data %>%
@@ -218,7 +261,7 @@ data <- fixed_data %>%
                      values_from = "norm_rank")
 data[is.na(data)] <- 0.5
 
-data <- data %>% tidyr::pivot_longer(cols = colnames(data[3:15]),
+data <- data %>% tidyr::pivot_longer(cols = colnames(data[3:21]),
                              names_to = "Indicator",
                              values_to = "norm_rank") %>%
   dplyr::group_by(Species, Region) %>%
@@ -232,7 +275,13 @@ data <- data %>% tidyr::pivot_longer(cols = colnames(data[3:15]),
                 overall_stocks = stock %>% unique() %>% length(),
                 category = ifelse(Indicator == "ffmsy" |
                                     Indicator == "asmt_catch" |
-                                    Indicator == "rec_catch",
+                                    Indicator == "rec_catch" |
+                                    Indicator == "com_catch_max" |
+                                    Indicator == "revenue_max" |
+                                    Indicator == "com_catch_5yr" |
+                                    Indicator == "revenue_5yr" |
+                                    Indicator == "com_catch_hist" |
+                                    Indicator == "revenue_hist",
                                   "Social", "Biological"))
 data 
 

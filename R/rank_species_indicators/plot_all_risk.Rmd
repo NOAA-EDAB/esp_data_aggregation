@@ -34,12 +34,17 @@ metric <- c(rep("Most recent value", 2),
             "Max of all time", 
             rep("Mean of past 10 years as a percent of the historical mean", 8),
             "Number of prey categories from all time",
-            "Mean of past 5 years")
+            rep(c("Max of all time", 
+            "Mean of past 5 years",
+            "Mean of past 10 years as a percent of the historical mean"), 2),
+            "Mean of past 5 years"
+            )
 risk <- c("Low is risky",
           "High is risky",
           "High is risky",
           rep("Decrease is risky", 8),
           "Low is risky",
+          rep(c("High is risky", "High is risky", "Decrease is risky"), 2),
           "High is risky")
 
 cbind(indicators, metric, risk) %>%
@@ -51,7 +56,8 @@ Guilds were determined from [previous reporting](https://repository.library.noaa
 
 ```{r, guild_info}
 guild_info %>% 
-  dplyr::mutate(Size = paste("*", size, "*", sep = "")) %>%
+  dplyr::mutate(Scientific_name = paste("*", Scientific_name, "*", sep = "")) %>%
+  dplyr::rename("Size" = "size") %>%
   dplyr::select(Guild, Size, Species, Scientific_name) %>%
   dplyr::arrange(Guild, Size) %>%
   knitr::kable()
@@ -201,6 +207,6 @@ ggplot(guild_data,
   theme_bw()+
   xlab("Guild")+
   ylab("Average risk within guild")+
-  ylim(c(0,8))+
+  ylim(c(0,12))+
   theme(legend.position = "bottom")
 ```
