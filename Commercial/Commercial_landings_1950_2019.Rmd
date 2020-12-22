@@ -7,7 +7,7 @@ params:
     label: "Stock:"
     value: Alewife
     input: select
-    choices: [smooth dogfish, spiny dogfish, barndoor skate, winter skate, clearnose skate, rosette skate, little skate, smooth skate, thorny skate, atlantic herring, alewife, blueback herring, silver hake, atlantic cod, haddock, pollock, white hake, red hake, cusk, atlantic halibut, american plaice, summer flounder, yellowtail flounder, winter flounder, atlantic mackerel, butterfish, bluefish, black sea bass, scup, acadian redfish,    atlantic wolffish,  ocean pout, atlantic menhaden,windowpane flounder]
+    choices: [atlantic hagfish, smooth dogfish, spiny dogfish, barndoor skate, winter skate, clearnose skate, rosette skate, little skate, smooth skate, thorny skate, atlantic herring, alewife, blueback herring, offshore hake, silver hake, atlantic cod, haddock, pollock, white hake, red hake, cusk, atlantic halibut, american plaice, summer flounder, yellowtail flounder, winter flounder, witch flounder, atlantic mackerel, butterfish, bluefish, black sea bass, scup, acadian redfish, atlantic wolffish, ocean pout, monkfish, american lobster, northern shrimp, northern shortfin squid, longfin inshore squid, atlantic menhaden, windowpane flounder ]
   
 title: "Commercial_landing of `r stringr::str_to_sentence(params$stock)`"
 ---
@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-```{r data processing}
+```{r data processing, message= FALSE, error=FALSE,warning = FALSE, echo=FALSE}
 #list.files(here::here("commercial"))
 
 
@@ -41,7 +41,7 @@ confid<-com_landings %>%
   filter(common_name =="withheld for confidentiality" | Confidentiality == "Confidential" )%>%
   group_by(Year) %>%
   summarise(count=n())
-com_landings<-com_landings %>% filter( !Confidentiality == "Confidential" | common_name =="withheld for confidentiality" | is.na(Pounds) )
+com_landings<-com_landings %>% filter(!common_name =="withheld for confidentiality" , !Confidentiality == "Confidential", !is.na(Pounds), !is.na(Dollars), Dollars >1)
 
 
 # removing aggrigated landings records and counting their occurance
@@ -56,24 +56,38 @@ com_landings<-com_landings %>% filter(!stringr::str_detect(common_name, "\\*+"))
 single_name<-com_landings %>% filter(!stringr::str_detect(common_name, "\\,\\s"))
 multipe_name<-com_landings %>% filter(stringr::str_detect(common_name, "\\,\\s"))
 split_names<-multipe_name%>% separate (col=common_name,sep ="\\,\\s", into = c("first" ,"second", "third"))
-split_names<-select()
+#fixing plaice to remove flounder
+split_names<- split_names %>% dplyr::mutate(first=replace(first, which(second=="american plaice"), NA))
+#fixing the shark tag for dogfish
+split_names<- split_names %>% dplyr::mutate(first=replace(first, which(second=="dogfish"), NA))
+#longfin loligo into inshore
+split_names<- split_names %>% dplyr::mutate(second=replace(second, which(second=="longfin loligo"), "longfin inshore"))
+#shortfin illex into northern shortfin
+split_names<- split_names %>% dplyr::mutate(second=replace(second, which(second=="shortfin illex"), "northern shortfin"))
+#goosefish into monkfish
+single_name<- single_name %>% dplyr::mutate(common_name=replace(common_name, which(common_name=="goosefish"), "monkfish"))
+#adding flounder to windowpane 
+single_name<- single_name %>% dplyr::mutate(common_name=replace(common_name, which(common_name=="windowpane"), "windowpane flounder"))
+split_names<-split_names %>% unite(col = "last", c(third, second),sep = " ", remove = TRUE ,na.rm = TRUE)
+split_names<-split_names %>% unite(col = "common_name", c(last, first),sep = " ", remove = TRUE ,na.rm = TRUE)
 
-unique(stock_list$common_name)
+joined_names<- dplyr::bind_rows(split_names,single_name)
+#used to check that there are no missing stocks in the data
+#missing_stocks<-dplyr::anti_join(stock_list,joined_names, by= "common_name")
 
-pick_sp<-split_names %>% filter(stringr::str_detect(first, "flounder"))
-pick_sp<- pick_sp %>% dplyr::mutate_if(first, first="")
-
-# 
-# com_landings<-com_landings %>% separate (col=common_name,sep ="\\,\\s", into = c("first" ,"second", "third"))
-# 
-# com_landings<-dplyr::mutate(first=replace(first, first== "shark", NA))
+#final clean dataset
+com_landings_clean<-dplyr::full_join(stock_list,joined_names, by= "common_name")
 
 
+selected_com_sp<-com_landings_clean %>%
+  dplyr::group_by(Year) %>%
+  filter(common_name==params$stock) %>%
+  summarise(total_pounds=sum(Pounds,na.rm = FALSE),total_dollars=sum(Dollars,na.rm = FALSE))
 
-
-
-
-
+selected_com_state<-com_landings_clean %>%
+  dplyr::group_by(Year,State) %>%
+  filter(common_name==params$stock) %>%
+  summarise(total_pounds=sum(Pounds,na.rm = FALSE),total_dollars=sum(Dollars,na.rm = FALSE))
 
 
 ```
@@ -86,6 +100,25 @@ Figures produced reflect the coverage of the data. With stocks that have high co
 
 
 ```{r landings of single stock, echo=FALSE}
+
+selected_com_sp<-com_landings_clean %>%
+  dplyr::group_by(Year) %>%
+  filter(common_name=="pollock") %>%
+  summarise(total_pounds=sum(Pounds,na.rm = FALSE),total_dollars=sum(Dollars,na.rm = FALSE), price=(total_dollars/total_pounds))
+
+
+selected_com_sp %>% 
+  ggplot2::ggplot(aes(x=Year, y=log(total_dollars)))+
+  ggplot2::geom_point()+
+  tidyquant::geom_ma( n=5, lwd=1.4)+
+  ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
+  xlab(label= "Year")+
+  ylab(label = "Log transformed  total catch in pounds (lb) ")+
+  theme_minimal()
+
+
+
+
 
 ```
 
