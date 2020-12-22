@@ -1,7 +1,7 @@
 ---
 title: "risk_plot"
 author: "Abigail Tyrell"
-date: "12/15/2020"
+date: "`r format(Sys.time(), '%d %b %Y')`"
 output: 
   html_document:
     toc: FALSE
