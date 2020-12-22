@@ -85,6 +85,8 @@ recruit <- yr10hist_indicator(data = dat,
                    indicator_name = "recruitment")
 
 survey <- readRDS(here::here("data", "survey_data.RDS"))
+survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9), ] # remove error jonah crab
+
 biomass <- survey %>% 
   dplyr::select(Species, Region, YEAR, SEASON, BIOMASS, fish_id) %>%
   dplyr::distinct()
@@ -102,7 +104,6 @@ biomass_s <- yr10hist_indicator(data = biomass %>%
                    value_source = "BIOMASS", 
                    high = "low_risk",
                    indicator_name = "biomass_spring")
-
 
 length <- survey %>% 
   dplyr::select(Species, Region, YEAR, SEASON, LENGTH, NUMLEN, fish_id) %>%
@@ -156,7 +157,7 @@ diet <- diet %>%
   dplyr::rename("Value" = "diet_diversity") %>%
   dplyr::select(Species, Region, Indicator, Year, Value, rank, norm_rank)
 
-# merge everything except rec
+# * merge everything except rec ----
 all_ind <- rbind(b, f, catch, recruit, abun, biomass_f, biomass_s,
                  avg_len_f, avg_len_s, max_len_f, max_len_s, diet)
 
@@ -188,7 +189,7 @@ names_added <- dplyr::left_join(missing_names, region_key,
 
 fixed_data <- rbind(has_names, names_added)
 
-# rplace any NA Region with "Unknown"
+# replace any NA Region with "Unknown"
 fixed_data$Region <- fixed_data$Region %>% tidyr::replace_na("Unknown")
 
 # * create dummy rec regions and add rec to the rest of the data ----

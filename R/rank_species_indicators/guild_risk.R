@@ -11,7 +11,7 @@ all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
 guilds <- read.csv(here::here("data", "species_guilds.csv"))
 head(guilds)
 
-risk <- read.csv(here::here("data/risk_ranking", "overall_rank.csv"))
+risk <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv"))
 head(risk)
 
 guild_risk <- dplyr::left_join(guilds, risk, by = "Species")
@@ -37,44 +37,18 @@ survey2 <- survey %>%
   dplyr::mutate(len_class = round(overall_mean_len, digits = -1))
 survey2
 
-guild_risk2 <- dplyr::left_join(survey2, guild_risk, by = "Species")
-
-guild_risk2 <- guild_risk %>%
-  dplyr::select(Species, Guild, Region, total_risk) %>%
-  dplyr::group_by(Species) %>%
-  dplyr::mutate(avg_species_risk = mean(total_risk)) %>%
-  dplyr::select(-total_risk, -Region) %>%
-  dplyr::ungroup() %>%
-  dplyr::distinct() 
-  
-guild_risk3 <- dplyr::left_join(survey2, guild_risk2, by = "Species") %>%
-  dplyr::mutate(size = ifelse(overall_mean_len < 40, "small", "large")) %>%
-  dplyr::group_by(Guild, size) %>%
-  dplyr::summarise(guild_risk = sum(avg_species_risk),
-                   n_guild_species = length(avg_species_risk),
-                   avg_guild_risk = guild_risk/n_guild_species) %>%
-  dplyr::filter(Guild != "") %>%
-  dplyr::ungroup() %>% 
-  dplyr::mutate(rank = rank(avg_guild_risk),
-                norm_rank = rank/max(rank))
-guild_risk3
-
-# look at individual risk categories by guild
-#data <- read.csv(here::here("data/risk_ranking", "full_data.csv"))
-data <- read.csv(here::here("data/risk_ranking", "plot_data.csv")) # has dummy 0.5's
-head(data)
-
-guild_risk4 <- dplyr::left_join(survey2, data, by = "Species")
-guild_risk4 <- dplyr::left_join(guilds, guild_risk4, by = "Species") 
-
-head(guild_risk4)
-write.csv(guild_risk4, file = here::here("data/risk_ranking", "guild_info.csv"))
-
-guild_risk5 <- guild_risk4 %>%
-  dplyr::group_by(Species, Indicator, Guild, overall_mean_len) %>%
+guild_risk2 <- dplyr::left_join(survey2, guild_risk, by = "Species") %>%
+  dplyr::group_by(Species, Scientific_name, Indicator, Guild, overall_mean_len) %>%
   dplyr::summarise(mean_norm_risk = mean(norm_rank)) %>%
   dplyr::ungroup() %>%
-  dplyr::mutate(size = ifelse(overall_mean_len < 40, "small", "large")) %>%
+  dplyr::mutate(size = ifelse(overall_mean_len < 40, "small", "large")) 
+
+guild_info <- guild_risk2 %>%
+  dplyr::select(Species, Scientific_name, Guild, size) %>%
+  dplyr::distinct()
+write.csv(guild_info, file = here::here("data/risk_ranking", "guild_info.csv"))
+
+guild_risk3 <- guild_risk2 %>%
   dplyr::group_by(Guild, size, Indicator) %>%
   dplyr::summarise(guild_risk = sum(mean_norm_risk),
                    n_guild_species = length(mean_norm_risk),
@@ -88,16 +62,16 @@ guild_risk5 <- guild_risk4 %>%
   dplyr::mutate(total_guild_risk = sum(avg_guild_risk),
                 label_y = total_guild_risk - cumsum(avg_guild_risk),
                 sum_ranks = sum(rank))
-View(guild_risk5)
+head(guild_risk3)
 
 library(ggplot2)
 
 mycolors <-  grDevices::colorRampPalette(
-  nmfspalette::nmfs_palette("regional web")(6))(guild_risk5$Indicator %>% 
+  nmfspalette::nmfs_palette("regional web")(6))(guild_risk3$Indicator %>% 
                                                   unique() %>% length())
 scales::show_col(mycolors)
 
-ggplot(guild_risk5,
+ggplot(guild_risk3,
        aes(x = reorder(paste(Guild, "\n", size) %>%
                          stringr::str_replace("_", "\n"), 
                        total_guild_risk),
@@ -119,4 +93,4 @@ ggplot(guild_risk5,
   ylab("Average risk within guild")+
   ylim(c(0,8))
 
-write.csv(guild_risk5, file = here::here("data/risk_ranking", "plot_data_guilds.csv"))
+write.csv(guild_risk3, file = here::here("data/risk_ranking", "guild_data.csv"))

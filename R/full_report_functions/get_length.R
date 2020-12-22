@@ -1,10 +1,7 @@
 source(here::here("R/full_report_functions", "get_survdat_info.R"))
 
 get_len_data <- function(x){
-  if(x$Species %>% unique() == "Jonah crab"){
-    x <- x %>% dplyr::filter(LENGTH < 99.9)
-  } # fix error jonah crab entries
-  
+
   y <- x %>% dplyr::filter(LENGTH > 0, ABUNDANCE > 0) %>%
     dplyr::group_by(YEAR, SEASON, Region) %>%
     dplyr::mutate(n_fish = sum(NUMLEN)) %>%
@@ -51,10 +48,7 @@ plot_len <- function(x, season) {
 }
 
 get_len_data_tbl <- function(x){
-  if(x$Species %>% unique() == "Jonah crab"){
-    x <- x %>% dplyr::filter(LENGTH < 99.9)
-  } # fix error jonah crab entries
-  
+
   x <- x %>% dplyr::filter(LENGTH > 0, ABUNDANCE > 0) %>%
     dplyr::group_by(YEAR, SEASON, Region) %>%
     dplyr::mutate(n_fish = sum(NUMLEN)) %>%

@@ -17,7 +17,7 @@ library(ggplot2)
 `%>%` <- dplyr::`%>%`
 
 data <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv"))
-guild_data <- read.csv(here::here("data/risk_ranking", "plot_data_guilds.csv"))
+guild_data <- read.csv(here::here("data/risk_ranking", "guild_data.csv"))
 guild_info <- read.csv(here::here("data/risk_ranking", "guild_info.csv"))
 ```
 
@@ -51,10 +51,7 @@ Guilds were determined from [previous reporting](https://repository.library.noaa
 
 ```{r, guild_info}
 guild_info %>% 
-  dplyr::select(Species, Scientific_name, Guild, overall_mean_len) %>%
-  dplyr::distinct() %>%
-  dplyr::filter(Guild != "") %>%
-  dplyr::mutate(Size = ifelse(overall_mean_len <40, "small", "large")) %>%
+  dplyr::mutate(Size = paste("*", size, "*", sep = "")) %>%
   dplyr::select(Guild, Size, Species, Scientific_name) %>%
   dplyr::arrange(Guild, Size) %>%
   knitr::kable()
