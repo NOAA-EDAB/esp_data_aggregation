@@ -1,6 +1,7 @@
 `%>%` <- dplyr::`%>%`
 
 survey <- readRDS(here::here("data", "survey_data.RDS"))
+survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9), ] # remove error jonah crab
 
 asmt_sum <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
 
