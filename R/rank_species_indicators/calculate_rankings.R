@@ -299,7 +299,7 @@ new_data
 write.csv(new_data,
           file = here::here("data/risk_ranking", "full_risk_data.csv"))
 
-# render Rmd report
+# render Rmd report ----
 rmarkdown::render(here::here("R/rank_species_indicators", "plot_all_risk.Rmd"), 
                                       output_dir = here::here("docs/risk_ranking"))
 

@@ -54,18 +54,34 @@ cbind(indicators, metric, risk) %>%
 ### Guilds
 Guilds were determined from [previous reporting](https://repository.library.noaa.gov/view/noaa/5277). Guilds were further broken into small (<40cm) and large (>=40cm) size classes. To determine guild risk, the risk values for each species were averaged over all stock areas. Then risk values were averaged by guild. Guilds were ranked in each indicator category.
 
-```{r, guild_info}
-guild_info %>% 
+```{r, guild_info, results = "asis"}
+guild_info <- guild_info %>% 
   dplyr::mutate(Scientific_name = paste("*", Scientific_name, "*", sep = "")) %>%
   dplyr::rename("Size" = "size") %>%
   dplyr::select(Guild, Size, Species, Scientific_name) %>%
-  dplyr::arrange(Guild, Size) %>%
-  knitr::kable()
+  dplyr::arrange(Guild, Size) 
+
+tables <- list()
+for(i in unique(guild_info$Guild)){
+  for(j in unique(guild_info$Size)) {
+    dat <- guild_info %>%
+      dplyr::filter(Guild == i,
+                    Size == j) %>%
+      dplyr::select(Species, Scientific_name)
+    
+    if(nrow(dat) > 1){
+      dat <- dat  %>%
+        knitr::kable(caption = paste(i, j)) 
+      
+      print(dat)
+    }
+  }
+}
 ```
 
 ## Results {.tabset .tabset-fade}
 
-### All risk data {.tabset .tabset-fade}
+### Stock risk data {.tabset .tabset-fade}
 Ranks for all stocks. The total risk (sum of all normalized risk values) is shown for each stock.
 
 #### By region
@@ -193,9 +209,10 @@ ggplot(guild_data,
                          stringr::str_replace("_", "\n"), 
                        total_guild_risk),
            y = avg_guild_risk, 
-           fill = Indicator)) +
+           fill = paste(category, Indicator, sep = ":\n"))) +
   geom_bar(stat = "identity", color = "black") +
-  scale_fill_manual(values = sample(mycolors))+
+  scale_fill_manual(values = sample(mycolors),
+                    name = "Indicator")+
   geom_text(aes(y = label_y,
                 label = paste(rank, "out of 8")),
             stat = "identity",
@@ -208,5 +225,7 @@ ggplot(guild_data,
   xlab("Guild")+
   ylab("Average risk within guild")+
   ylim(c(0,12))+
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        legend.key.size = unit(1.75, 'lines'))+
+      guides(fill=guide_legend(nrow=5))
 ```
