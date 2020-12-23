@@ -1,7 +1,7 @@
 `%>%` <- dplyr::`%>%`
 library(ggplot2)
 
-get_diet <- function(data){
+get_diet_plot <- function(data){
   
   normalized <- data %>%
     dplyr::filter(pyamtw > 0) %>%
@@ -84,26 +84,64 @@ get_diet <- function(data){
         fig <- fig + facet_grid(rows = vars(season), 
                                 cols = vars(Region))
       } else {fig <- fig +  facet_grid(cols = vars(Region))}
-      
-      # summary table
-      table <- new_normalized %>% dplyr::group_by(gensci, season, Region, year) %>%
-        dplyr::filter(sum(prop2) > 0) %>%
-        dplyr::group_by(gensci, season, Region) %>%
-        dplyr::summarise(mean_proportion = paste(mean(prop2) %>% round(digits = 3), 
-                                                 " +- ",
-                                                 sd(prop2) %>% round(digits = 3),
-                                                 " (", length(prop2), ") ", 
-                                                 sep = ""),
-                         
-                         range_proportion = paste(min(prop2) %>% round(digits = 3),
-                                                  max(prop2) %>% round(digits = 3),
-                                                  sep = " - "))
-      
+     
       print(fig)
-      return(knitr::kable(table, 
-                          col.names = c("Prey category", "Season", "Region",
-                                        "Mean proportion +- SD (n years)", 
-                                        "Range")))
 
+        } else print("NOT ENOUGH DATA")
+}
+
+get_diet_table <- function(data){
+  
+  normalized <- data %>%
+    dplyr::filter(pyamtw > 0) %>%
+    
+    # only look at season/year combinations with >20 predator samples
+    dplyr::group_by(year, season, Region) %>%
+    dplyr::mutate(n_predators = fish_id %>% unique() %>% length()) %>%
+    dplyr::filter(n_predators > 20)
+  
+  if(length(normalized$n_predators) > 1){
+    normalized <- normalized %>%
+      dplyr::group_by(year, season, Region, gensci) %>%
+      dplyr::summarise(total_weight = sum(pyamtw)) %>%
+      dplyr::mutate(proportion = total_weight/sum(total_weight)) 
+    
+    normalized$gensci <- stringr::str_replace(normalized$gensci, " ", "_")
+    
+    # group low abundance prey as "other"
+    groups <- normalized %>% dplyr::group_by(year, season, Region, gensci) %>%
+      dplyr::summarise(max_prop = max(proportion)) %>%
+      dplyr::filter(max_prop > 0.05)
+    
+    groups <- groups$gensci %>% unique()
+    
+    rows <- match(normalized$gensci, groups) %>%
+      is.na() %>% which()
+    
+    normalized[rows,"gensci"] <- "OTHER"
+    
+    # re-group proportions with new "other" category
+    normalized <- normalized %>% dplyr::group_by(year, season, Region, gensci) %>%
+      dplyr::summarise(prop2 = sum(proportion))
+    
+    # summary table
+    table <- normalized %>% dplyr::group_by(gensci, season, Region, year) %>%
+      dplyr::filter(sum(prop2) > 0) %>%
+      dplyr::group_by(gensci, season, Region) %>%
+      dplyr::summarise(mean_proportion = paste(mean(prop2) %>% round(digits = 3), 
+                                               " +- ",
+                                               sd(prop2) %>% round(digits = 3),
+                                               " (", length(prop2), ") ", 
+                                               sep = ""),
+                       
+                       range_proportion = paste(min(prop2) %>% round(digits = 3),
+                                                max(prop2) %>% round(digits = 3),
+                                                sep = " - "))
+
+    return(knitr::kable(table, 
+                        col.names = c("Prey category", "Season", "Region",
+                                      "Mean proportion +- SD (n years)", 
+                                      "Range")))
+    
   } else print("NOT ENOUGH DATA")
 }

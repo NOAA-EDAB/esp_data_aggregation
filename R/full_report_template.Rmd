@@ -60,6 +60,7 @@ source(here::here("R/full_report_functions", "get_assessment.R"))
 source(here::here("R/full_report_functions", "get_relative_weight.R"))
 source(here::here("R/full_report_functions", "get_com_catch.R"))
 source(here::here("R/full_report_functions", "get_com_money.R"))
+source(here::here("R/full_report_functions", "compare_rec_com.R"))
 ```
 
 ```{r, data, include = FALSE}
@@ -177,11 +178,13 @@ if(length(ad_rating_data$Species) >= 1){
 } else print("NO DATA")
 ```
 
-#### B/Bmsy
+#### B/Bmsy  {.tabset .tabset-fade .tabset-pills}
 B/Bmsy data were pulled from ``r params$asmt_sum_source``.
 
 The most recent status of B/Bmsy is: `r bbmsy2`
-```{r, bbmsy} 
+
+##### Figure
+```{r, bbmsy_fig} 
 if("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2){
   plot_bbmsy(asmt_sum_data[which(is.na(asmt_sum_data$B.Bmsy) == FALSE), ], 
              ytitle = "B / Bmsy",
@@ -190,10 +193,26 @@ if("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2){
 } else print("NO DATA")
 ```
 
-#### F/Fmsy
+##### Data
+```{r, bbmsy_data}
+DT::datatable(asmt_sum_data[which(is.na(asmt_sum_data$B.Bmsy) == FALSE), ] %>% 
+                dplyr::select(Region, B.Year, B.Bmsy) %>%
+                dplyr::mutate(B.Bmsy = B.Bmsy %>% round(digits = 2)), 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### F/Fmsy {.tabset .tabset-fade .tabset-pills}
 F/Fmsy data were pulled from ``r params$asmt_sum_source``.
 
 The most recent status of F/Fmsy is: `r ffmsy2`
+
+##### Figure
 ```{r, ffmsy}
 if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
  plot_ffmsy(asmt_sum_data[which(is.na(asmt_sum_data$F.Fmsy) == FALSE), ],
@@ -203,16 +222,56 @@ if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
 } else print("NO DATA")
 ```
 
-#### Revenue
+##### Data
+```{r, ffmsy_data}
+DT::datatable(asmt_sum_data[which(is.na(asmt_sum_data$F.Fmsy) == FALSE), ] %>% 
+                dplyr::select(Region, F.Year, F.Fmsy) %>%
+                dplyr::mutate(F.Fmsy = F.Fmsy %>% round(digits = 2)), 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Revenue {.tabset .tabset-fade .tabset-pills}
 Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+
+##### Figure
 ```{r, revenue}
 if(length(com_data$Species) > 0){
   plot_com_money(com_data)
 } else print("NO DATA")
 ```
 
-#### Recruitment
+##### Data
+```{r, revenue_data}
+DT::datatable(com_data %>% 
+                dplyr::select(Year, State, Dollars_adj, Pounds) %>%
+                dplyr::mutate(Dollars_adj = Dollars_adj %>% 
+                                round(digits = 0) %>%
+                                format(big.mark = ","),
+                              State = State %>% 
+                                stringr::str_to_title(),
+                              Pounds = Pounds %>%
+                                format(big.mark = ",")) %>%
+                dplyr::rename("Revenue (2019 dollars)" = "Dollars_adj",
+                              "Commercial catch (lb)" = "Pounds"), 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Recruitment {.tabset .tabset-fade .tabset-pills}
 Recruitment data were pulled from ``r params$asmt_source``. Separate geom_gls() functions were fit for each region; trend lines are only shown when the trend was statistically significant, so some plots may have fewer trend lines than regions.
+
+##### Figure
 ```{r, recruitment}
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Recruitment")) > 0){
 plot_asmt(asmt_data, 
@@ -223,71 +282,214 @@ plot_asmt(asmt_data,
 } else print("NO DATA")
 ```
 
-#### Diet
+##### Data
+```{r, recruit_data}
+DT::datatable(asmt_data %>% 
+                dplyr::filter(Metric == "Recruitment") %>%
+                dplyr::select(-Species, -Metric) %>%
+                dplyr::mutate(Value = Value %>%
+                              format(big.mark = ",")), 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Diet {.tabset .tabset-fade .tabset-pills}
 Diet data were compiled from [existing data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). For analysis, all geographic samples were grouped by season, year, and region, and only year-season-region combinations with more than 20 predators sampled were considered. Prey items that made up more than 5% of the predator's diet in at least one year-season-region were identified to the broad category level; all other prey are grouped into the "other" category.
+
+##### Figure
 ```{r, diet}
 if(length(diet_data$Species) >= 1){
-  get_diet(data = diet_data)
+  get_diet_plot(data = diet_data)
 } else print("NO DATA")
 ```
 
-#### Temperature
+##### Summary
+```{r, diet_summary}
+if(length(diet_data$Species) >= 1){
+  get_diet_table(data = diet_data)
+} else print("NO DATA")
+```
 
-##### Surface temperature
-Surface temperature data were pulled from ``r params$survey_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
-```{r, surftemp}
+##### Data
+```{r, diet_data}
+diet_data2 <- diet_data %>%
+    dplyr::filter(pyamtw > 0) %>%
+    
+    # only look at season/year combinations with >20 predator samples
+    dplyr::group_by(year, season, Region) %>%
+    dplyr::mutate(n_predators = fish_id %>% unique() %>% length()) %>%
+    dplyr::filter(n_predators > 20) %>%
+    dplyr::group_by(year, season, Region, n_predators, gensci) %>%
+    dplyr::summarise(total_weight = sum(pyamtw)) %>%
+    dplyr::mutate(proportion = total_weight/sum(total_weight),
+                  proportion = proportion %>%
+                    round(digits = 3),
+                  total_weight = total_weight %>%
+                    round(digits = 2)) 
+      
+diet_data2$gensci <- diet_data2$gensci %>% 
+  stringr::str_replace("_", " ") %>%
+  stringr::str_to_sentence()
+
+DT::datatable(diet_data2, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Temperature {.tabset .tabset-fade .tabset-pills}
+
+Surface and bottom temperature data were pulled from ``r params$survey_source``. 
+
+##### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+```{r, temp}
 if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
-  generate_info(survey_data,
+  generate_plot(survey_data,
               variable = "SURFTEMP", 
               ytitle = "Surface temperature")
-} else print("NO DATA")
-```
+} else print("NO SURFACE DATA")
 
-##### Bottom temperature
-Bottom temperature data were pulled from ``r params$survey_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
-```{r, bottemp}
 if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
-  generate_info(survey_data,
+  generate_plot(survey_data,
               variable = "BOTTEMP", 
               ytitle = "Bottom temperature")
-} else print("NO DATA")
+} else print("NO BOTTOM DATA")
 ```
 
-#### Salinity 
+##### Summary
+```{r, temp_summary}
+if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
+  generate_table(survey_data,
+              variable = "SURFTEMP", 
+              cap = "Surface temperature")
+} else print("NO SURFACE DATA")
 
-##### Surface salinity
-Surface salinity data were pulled from ``r params$survey_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
+  generate_table(survey_data,
+              variable = "BOTTEMP", 
+              cap = "Bottom temperature")
+} else print("NO BOTTOM DATA")
+```
+
+##### Data
+```{r, temp_data}
+data <- survey_data %>% 
+                dplyr::select(YEAR, SEASON, Region, date, 
+                              fish_id, SURFTEMP, BOTTEMP) %>%
+                dplyr::filter(SURFTEMP > 0 | BOTTEMP > 0) %>%
+                dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+                dplyr::distinct() %>% # remove repeated row info
+                dplyr::summarise(day_mean_surf = mean(SURFTEMP),
+                                 day_mean_bot = mean(BOTTEMP)) %>% # mean by day
+                dplyr::ungroup() %>%
+                dplyr::group_by(YEAR, SEASON, Region) %>%
+                dplyr::summarise(Mean_surface_temperature = mean(day_mean_surf) %>%
+                                   round(digits = 2),
+                                 Mean_bottom_temperature = mean(day_mean_bot) %>%
+                                   round(digits = 2)) # mean by season-year
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Salinity {.tabset .tabset-fade .tabset-pills}
+
+Surface and bottom salinity data were pulled from ``r params$survey_source``. 
+
+##### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, surfsalin}
 if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
-  generate_info(survey_data,
+  generate_plot(survey_data,
               variable = "SURFSALIN", 
               ytitle = "Surface salinity")
-} else print("NO DATA")
-```
+} else print("NO SURFACE DATA")
 
-##### Bottom salinity
-Bottom salinity data were pulled from ``r params$survey_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
-```{r, botsalin}
 if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
-  generate_info(survey_data,
+  generate_plot(survey_data,
               variable = "BOTSALIN", 
               ytitle = "Bottom salinity")
-} else print("NO DATA")
+} else print("NO BOTTOM DATA")
 ```
 
-#### Abundance
-##### ``r params$survey_source``
-Abundance data were pulled from ``r params$survey_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
-```{r, abundance}
+##### Summary
+```{r, salin_summary}
+if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
+  generate_table(survey_data,
+              variable = "SURFSALIN", 
+              cap = "Surface salinity")
+} else print("NO SURFACE DATA")
+
+if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
+  generate_table(survey_data,
+              variable = "BOTSALIN", 
+              cap = "Bottom salinity")
+} else print("NO BOTTOM DATA")
+```
+
+##### Data
+```{r, salin_data}
+data <- survey_data %>% 
+                dplyr::select(YEAR, SEASON, Region, date, 
+                              fish_id, SURFSALIN, BOTSALIN) %>%
+                dplyr::filter(SURFSALIN > 0 | BOTSALIN > 0) %>%
+                dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+                dplyr::distinct() %>% # remove repeated row info
+                dplyr::summarise(day_mean_surf = mean(SURFSALIN),
+                                 day_mean_bot = mean(BOTSALIN)) %>% # mean by day
+                dplyr::ungroup() %>%
+                dplyr::group_by(YEAR, SEASON, Region) %>%
+                dplyr::summarise(Mean_surface_salinity = mean(day_mean_surf) %>%
+                                   round(digits = 2),
+                                 Mean_bottom_salinity = mean(day_mean_bot) %>%
+                                   round(digits = 2)) # mean by season-year
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Abundance {.tabset .tabset-fade .tabset-pills}
+
+Abundance data were pulled from ``r params$survey_source`` and ``r params$asmt_source``. 
+
+##### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+
+Survey abundance:
+```{r, abun_survey}
 if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
-  generate_info(survey_data,
+  generate_plot(survey_data,
               variable = "ABUNDANCE", 
               ytitle = "Abundance")
 } else print("NO DATA")
 ```
 
-##### `assessmentdata`
-Abundance data were pulled from ``r params$asmt_source``. Separate geom_gls() functions were fit for each region; trend lines are only shown when the trend was statistically significant, so some plots may have fewer trend lines than regions.
+Assessment abundance:
 ```{r, abun_asmt}
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Abundance")) > 0){
 plot_asmt(asmt_data, 
@@ -298,20 +500,99 @@ plot_asmt(asmt_data,
 } else print("NO DATA")
 ```
 
-#### Biomass
-Biomass data were pulled from ``r params$survey_source``. Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+##### Survey summary
+```{r, abun_summary}
+if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
+  generate_table(survey_data,
+              variable = "ABUNDANCE", 
+              cap = "")
+} else print("NO DATA")
+```
+
+##### Data
+Survey data:
+```{r, surv_abun_data}
+data <- get_var_data(survey_data, variable = "ABUNDANCE") %>%
+  dplyr::mutate(variable = variable %>%
+                  format(big.mark = ","))
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+Assessment data:
+```{r, asmt_abun_data}
+data <- asmt_data %>% 
+                dplyr::filter(Metric == "Abundance") %>%
+                dplyr::select(-Species, -Metric) %>%
+                dplyr::mutate(Value = Value %>%
+                              format(big.mark = ","))
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Biomass {.tabset .tabset-fade .tabset-pills}
+Biomass data were pulled from ``r params$survey_source``. 
+
+##### Figure
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, biomass}
 if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
-  generate_info(survey_data,
+  generate_plot(survey_data,
               variable = "BIOMASS", 
               ytitle = "Biomass")
 } else print("NO DATA")
 ```
 
-#### Catch
+##### Summary
+```{r, biomass_summary}
+if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
+  generate_table(survey_data,
+              variable = "BIOMASS", 
+              cap = "Biomass")
+} else print("NO DATA")
+```
 
-##### Stock assessment catch
-Stock assessment catch statistics from ``r params$asmt_source``.
+##### Data
+```{r, biomass_data}
+data <- survey_data %>% 
+  dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+  dplyr::distinct() %>% # remove repeated row info
+  dplyr::ungroup() %>%
+  dplyr::group_by(YEAR, SEASON, Region) %>% # re-group
+  dplyr::summarise(Biomass = sum(BIOMASS) %>%
+                     format(big.mark = ","))
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Catch {.tabset .tabset-fade .tabset-pills}
+
+Stock assessment catch data are from ``r params$asmt_source``. Recreational catch data were downloaded from [NOAA MRIP](https://www.st.nmfs.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/). Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+
+##### Figures
+Stock assessment catch:
 ```{r, catch}
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0){
 plot_asmt(asmt_data, 
@@ -322,57 +603,213 @@ plot_asmt(asmt_data,
 } else print("NO DATA")
 ```
 
-##### Recreational catch
-Recreational catch data were downloaded from [NOAA MRIP](https://www.st.nmfs.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/).
+Recreational catch:
 ```{r, rec}
 if(length(rec_data$Species) > 0){
   get_rec_catch(rec_data)
 } else print("NO DATA")
 ```
 
-##### Commercial catch
-Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+Commercial catch:
 ```{r, com}
 if(length(com_data$Species) > 0){
   plot_com(com_data)
 } else print("NO DATA")
 ```
 
-
-#### Length
-Length data were pulled from ``r params$survey_source``. Only years with more than 10 fish lengths were considered for analysis. Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
-```{r, length}
-if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
-  generate_len_info(survey_data)
+Commercial vs recreational catch:
+```{r, comvrec}
+if(length(com_data$Species) > 0 & length(rec_data$Species) > 0){
+  prop_catch(com = com_data, rec = rec_data)
 } else print("NO DATA")
-#print("Length analysis is currently under construction.")
 ```
 
-#### Condition
-Condition information comes from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). 
+##### Data
+Stock assessment catch:
+```{r, catch_data}
+data <- asmt_data %>% 
+  dplyr::filter(Metric == "Catch") %>%
+  dplyr::select(-Species, -Metric) 
+data$Value <- data$Value %>%
+                  format(big.mark = ",")
 
-##### Length vs weight
-Length vs weight for all geographic samples by decade. Please note, no trend lines were fit, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+Recreational catch:
+```{r, rec_data}
+data <- rec_data %>% 
+  dplyr::select(year, st_f, mode_fx_f, tot_cat) %>%
+  dplyr::mutate(State = st_f %>%
+                  stringr::str_to_title(),
+                Method = mode_fx_f %>% 
+                  stringr::str_to_sentence(),
+                Catch_pounds = tot_cat %>%
+                  format(big.mark = ",")) %>%
+  dplyr::select(year, State, Method, Catch_pounds)
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+Commercial catch:
+```{r, com_data}
+data <- com_data %>% 
+                dplyr::select(Year, State, Dollars_adj, Pounds) %>%
+                dplyr::mutate(Dollars_adj = Dollars_adj %>% 
+                                round(digits = 0) %>%
+                                format(big.mark = ","),
+                              State = State %>% 
+                                stringr::str_to_title(),
+                              Pounds = Pounds %>%
+                                format(big.mark = ",")) %>%
+                dplyr::rename("Revenue (2019 dollars)" = "Dollars_adj",
+                              "Commercial catch (lb)" = "Pounds")
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+Commercial vs recreational catch:
+```{r, comvrec_data}
+data <- prop_catch_data(rec = rec_data, com = com_data)
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Length {.tabset .tabset-fade .tabset-pills}
+Length data were pulled from ``r params$survey_source``. Only years with more than 10 fish lengths were considered for analysis. 
+
+##### Figures
+
+Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+```{r, length}
+if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
+  generate_len_plot(survey_data)
+} else print("NO DATA")
+```
+
+##### Summary
+```{r, length_summary}
+if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
+  generate_len_table(survey_data)
+} else print("NO DATA")
+```
+
+##### Data
+```{r, length_data}
+data <- get_len_data2(survey_data)
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+#### Condition {.tabset .tabset-fade .tabset-pills}
+Condition information comes from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData); only regions and seasons with more than 10 fish observations were considered. We calculated a rough condition factor as: Weight / Length^3, and relative weight was [previously calculated](https://github.com/Laurels1/Condition/tree/master/data).
+
+##### Figures
+
+Length vs weight
+
+Please note, no trend lines were fit, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, lw}
 if(length(diet_data$Species) >= 1){
 plot_lw(diet_data)
 } else print("NO DATA")
 ```
 
-##### Condition factor: Weight-volume
-We calculated a rough condition factor as: Weight / Length^3. If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
+Condition factor: Weight-volume
+
+If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, condition}
 if(length(diet_data$Species) >= 1){
 plot_cond(diet_data)
 } else print("NO DATA")
 ```
 
-##### Condition factor: Relative weight
-Relative weight was [previously calculated](https://github.com/Laurels1/Condition/tree/master/data). Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
+Condition factor: Relative weight
+
+Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
 ```{r, laurel_cond}
 if(length(cond_data$Species) >= 1){
 plot_relw(cond_data)
 } else print("NO DATA")
+```
+
+##### Data
+
+Length vs weight with weight-volume condition factor
+```{r, lw_data}
+data <- diet_data %>%
+  dplyr::filter(is.na(pdlen) == FALSE, 
+                  is.na(pdwgt) == FALSE) %>%
+    dplyr::select(pdlen, pdwgt, season, Region, fish_id, year) %>%
+    dplyr::distinct() %>% # remove duplicates
+    dplyr::group_by(Region, season) %>%
+    dplyr::mutate(n_fish = length(pdlen)) %>%
+    dplyr::filter(n_fish > 10) %>% # only region-season with >10 fish)
+  dplyr::mutate(condition = pdwgt/(pdlen^3)) %>%
+  dplyr::mutate(condition = condition %>%
+                  round(digits = 2)) %>%
+  dplyr::select(Region, year, season, pdlen, pdwgt, condition)
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
+```
+
+Relative weight condition factor
+Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
+```{r, laurel_cond_data}
+data <- cond_data %>%
+  dplyr::select(-Species) %>%
+  dplyr::mutate(MeanCond = MeanCond %>%
+                  round(digits = 1))
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+  deferRender = TRUE,
+  scrollY = 200,
+  scroller = TRUE))
 ```
 
 ### Risk analysis

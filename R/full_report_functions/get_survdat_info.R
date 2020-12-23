@@ -1,23 +1,21 @@
 get_var_data <- function(x, variable){
   # remove NA, zero abundance, length 
-  y <- dplyr::filter(x, get(variable) > 0, ABUNDANCE > 0) %>%
-    dplyr::select(-LENGTH) %>%
-    dplyr::select(-NUMLEN)
+  y <- x %>% dplyr::filter(get(variable) > 0, ABUNDANCE > 0) %>%
+    dplyr::select(YEAR, SEASON, Region, fish_id, date, variable) %>%
+    dplyr::distinct() # remove repeated row info
   
   # mean by year
   if(variable == "BIOMASS" | variable == "ABUNDANCE"){
-    y <- y %>% dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
-      dplyr::distinct() %>% # remove repeated row info
-      dplyr::ungroup() %>%
-      dplyr::group_by(YEAR, SEASON, Region) %>% # re-group
-      dplyr::summarise(variable2 = sum(get(variable)))
+    y <- y %>% dplyr::group_by(YEAR, SEASON, Region) %>% 
+      dplyr::summarise(variable2 = sum(get(variable))) %>%
+      dplyr::select(YEAR, SEASON, Region, variable2)
   } else {
-    y <- y %>% dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
-      dplyr::distinct() %>% # remove repeated row info
+    y <- y %>% dplyr::group_by(YEAR, SEASON, Region, fish_id, date) %>%
       dplyr::summarise(variable2 = mean(get(variable))) %>% # mean by day
       dplyr::ungroup() %>%
       dplyr::group_by(YEAR, SEASON, Region) %>%
-      dplyr::summarise(variable3 = mean(variable2)) # mean by season-year
+      dplyr::summarise(variable3 = mean(variable2)) %>% # mean by season-year
+      dplyr::select(YEAR, SEASON, Region, variable3)
   }
   
   colnames(y) <- c("YEAR", "SEASON", "Region", "variable")
@@ -126,10 +124,41 @@ data_summary_5yr <- function(x){
   
 }
 
-generate_info <- function(x, ytitle, variable){
+generate_plot <- function(x, ytitle, variable){
   
   data <- get_var_data(x, variable = variable)
 
+  fig <- plot_variable(data, ytitle = ytitle)
+
+  return(fig)
+}
+
+generate_table <- function(x, variable, cap){
+  
+  data <- get_var_data(x, variable = variable)
+  
+  table <- data_summary(data)
+  
+  table_5yr <- data_summary_5yr(data)
+  
+  total_table <- cbind(table[, 1:3],
+                       table_5yr[, 3],
+                       table[, 4],
+                       table_5yr[, 4]) %>%
+    knitr::kable(col.names = c("Season", "Region",
+                               "Mean value +- SD (n years)",
+                               "Mean value +- SD (past 5 years)",
+                               "Range (total)",
+                               "Range (past 5 years)"),
+                 caption = cap)
+
+  return(total_table)
+}
+
+generate_info <- function(x, ytitle, variable){
+  
+  data <- get_var_data(x, variable = variable)
+  
   fig <- plot_variable(data, ytitle = ytitle)
   
   table <- data_summary(data)
@@ -145,7 +174,7 @@ generate_info <- function(x, ytitle, variable){
                                "Mean value +- SD (past 5 years)",
                                "Range (total)",
                                "Range (past 5 years)"))
-
+  
   print(fig)
   return(total_table)
 }

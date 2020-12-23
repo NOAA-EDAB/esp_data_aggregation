@@ -3,6 +3,8 @@ source(here::here("R/full_report_functions", "get_survdat_info.R"))
 get_len_data <- function(x){
 
   y <- x %>% dplyr::filter(LENGTH > 0, ABUNDANCE > 0) %>%
+    dplyr::select(YEAR, SEASON, Region, fish_id, LENGTH, NUMLEN) %>%
+    dplyr::distinct() %>% # problem with repeat rows
     dplyr::group_by(YEAR, SEASON, Region) %>%
     dplyr::mutate(n_fish = sum(NUMLEN)) %>%
     dplyr::filter(n_fish > 10) # only year-season-region with >10 fish
@@ -49,7 +51,10 @@ plot_len <- function(x, season) {
 
 get_len_data_tbl <- function(x){
 
-  x <- x %>% dplyr::filter(LENGTH > 0, ABUNDANCE > 0) %>%
+  x <- x %>% 
+    dplyr::filter(LENGTH > 0, ABUNDANCE > 0) %>%
+    dplyr::select(YEAR, SEASON, Region, fish_id, LENGTH, NUMLEN) %>%
+    dplyr::distinct() %>% # problem with repeat rows
     dplyr::group_by(YEAR, SEASON, Region) %>%
     dplyr::mutate(n_fish = sum(NUMLEN)) %>%
     dplyr::filter(n_fish > 10) # only year-season-region with >10 fish
@@ -59,11 +64,7 @@ get_len_data_tbl <- function(x){
 
 len_tbl_data <- function(x){
 
-  x <- x %>% dplyr::group_by(YEAR, SEASON, Region) %>%
-    dplyr::mutate(n_fish = sum(NUMLEN)) %>%
-    dplyr::filter(n_fish > 10) %>% # only year-season-region with >10 fish
-    dplyr::ungroup() %>%
-    dplyr::group_by(SEASON, Region) %>%
+  x <- x %>% dplyr::group_by(SEASON, Region) %>%
     dplyr::summarise(mean_len = sum(LENGTH*NUMLEN)/sum(NUMLEN),
                      sd_len = sqrt(sum((LENGTH - mean_len)^2 * NUMLEN) / 
                                      sum(NUMLEN)),
@@ -132,7 +133,7 @@ len_tbl_data_5yr <- function(x){
   return(x)
 }
 
-generate_len_info <- function(x, ytitle){
+generate_len_plot <- function(x, ytitle){
 
   data <- get_len_data(x)
   
@@ -140,8 +141,14 @@ generate_len_info <- function(x, ytitle){
   
   fall_fig <- plot_len(data, season = "FALL")
   
-  tbl_data <- get_len_data_tbl(x)
+  print(spring_fig)
+  print(fall_fig)
+}
 
+generate_len_table <- function(x){
+
+  tbl_data <- get_len_data_tbl(x)
+  
   table <- len_tbl_data(tbl_data)
   
   table_5yr <- len_tbl_data_5yr(tbl_data)
@@ -149,14 +156,33 @@ generate_len_info <- function(x, ytitle){
   total_table <- cbind(table[, 1:3],
                        table_5yr[, 3],
                        table[, 4],
-                       table_5yr[, 4]) %>%
-    knitr::kable(col.names = c("Season", "Region",
-                               "Mean value +- SD (n fish, n years)",
-                               "Mean value +- SD (n fish, past 5 years)",
-                               "Range (total)",
-                               "Range (past 5 years)"))
+                       table_5yr[, 4])
   
-  print(spring_fig)
-  print(fall_fig)
-  return(total_table)
+  return(total_table %>%
+           knitr::kable(col.names = c("Season", "Region",
+                                      "Mean value +- SD (n fish, n years)",
+                                      "Mean value +- SD (n fish, past 5 years)",
+                                      "Range (total)",
+                                      "Range (past 5 years)")))
+}
+
+get_len_data2 <- function(x){
+  
+  y <- x %>% dplyr::filter(LENGTH > 0, ABUNDANCE > 0) %>%
+    dplyr::select(YEAR, SEASON, Region, fish_id, LENGTH, NUMLEN) %>%
+    dplyr::distinct() %>% # problem with repeat rows
+    dplyr::group_by(YEAR, SEASON, Region) %>%
+    dplyr::mutate(n_fish = sum(NUMLEN)) %>%
+    dplyr::filter(n_fish > 10) # only year-season-region with >10 fish
+  
+  y <- y %>% dplyr::group_by(YEAR, SEASON, Region, n_fish) %>%
+    dplyr::summarise(mean_len = sum(LENGTH*NUMLEN)/sum(NUMLEN),
+                     min_len = min(LENGTH),
+                     max_len = max(LENGTH)) %>%
+    dplyr::mutate(n_fish = n_fish %>% 
+                    format(big.mark = ","),
+                  mean_len = mean_len %>% 
+                    round(digits = 2))
+
+  return(y)
 }

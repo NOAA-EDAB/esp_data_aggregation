@@ -11,6 +11,7 @@
 # library(knitr)
 # library(scales)
 # library(ecodata)
+# library(DT)
 
 ## required to render reports
 # library(purrr) # for automated rendering
