@@ -30,7 +30,9 @@ recent_indicator <- function(data, year_source, value_source, high, indicator_na
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
     dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", Value > 0) %>%
+    dplyr::filter(ne_stock == "TRUE", 
+                  is.na(Value) == FALSE, 
+                  is.na(Year) == FALSE) %>%
     
     dplyr::group_by(Species, Region) %>%
     dplyr::mutate(most_recent_year = max(Year)) %>%
@@ -75,7 +77,9 @@ yr5mean_indicator <- function(data, year_source, value_source, high, indicator_n
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
     dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", Value > 0)
+    dplyr::filter(ne_stock == "TRUE", 
+                  is.na(Value) == FALSE, 
+                  is.na(Year) == FALSE)
   
   max_yr <- max(data$Year)
   
@@ -121,7 +125,9 @@ maxalltime_indicator <- function(data, year_source, value_source, high, indicato
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
     dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", Value > 0) %>%
+    dplyr::filter(ne_stock == "TRUE", 
+                  is.na(Value) == FALSE, 
+                  is.na(Year) == FALSE) %>%
     dplyr::group_by(Species, Region) %>%
     dplyr::mutate(max_value = max(Value)) %>%
     dplyr::filter(Value == max_value) %>%
@@ -156,7 +162,9 @@ yr10hist_indicator <- function(data, year_source, value_source, high, indicator_
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
     dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", Value > 0)
+    dplyr::filter(ne_stock == "TRUE",
+                  is.na(Value) == FALSE, 
+                  is.na(Year) == FALSE)
   
   max_yr <- max(data$Year)
   
@@ -205,7 +213,9 @@ alltime_indicator_diet <- function(data, value_source, high, indicator_name){
     dplyr::select(Species, Region, value_source) %>%
     dplyr::rename("Value" = value_source) %>%
     dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", is.na(Value) == FALSE) %>%
+    dplyr::filter(ne_stock == "TRUE", 
+                  is.na(Value) == FALSE, 
+                  is.na(Year) == FALSE) %>%
     
     dplyr::group_by(Species, Region) %>%
     dplyr::mutate(diet_diversity = length(unique(Value)),
@@ -244,7 +254,9 @@ alltime_indicator_review <- function(data, value_source, high, indicator_name){
     dplyr::select(Species, Region, value_source) %>%
     dplyr::rename("Value" = value_source) %>%
     dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", is.na(Value) == FALSE) %>%
+    dplyr::filter(ne_stock == "TRUE", 
+                  is.na(Value) == FALSE, 
+                  is.na(Year) == FALSE) %>%
     
     dplyr::group_by(Species, Region) %>%
     dplyr::mutate(diet_diversity = length(unique(Value)),
@@ -277,9 +289,9 @@ alltime_indicator_review <- function(data, value_source, high, indicator_name){
   return(data)
 }
 
-asmt_sum <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
-head(asmt_sum)
-unique(asmt_sum$Review.Result)
+#asmt_sum <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
+#head(asmt_sum)
+#unique(asmt_sum$Review.Result)
 
 #dat <- asmt_sum %>%
 #  dplyr::select(Species, Region, Assessment.Year, Review.Result) %>%

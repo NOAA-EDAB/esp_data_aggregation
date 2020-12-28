@@ -13,18 +13,17 @@ survey <- survey %>%
 
 # * most recent measurement ----
 ### B/Bmsy, F/Fmsy
-b <- recent_indicator(data = asmt, 
+b <- recent_indicator(data = asmt_sum, 
                  year_source = "B.Year", 
                  value_source = "B.Bmsy", 
                  high = "low_risk",
                  indicator_name = "bbmsy")
 
-f <- recent_indicator(data = asmt, 
+f <- recent_indicator(data = asmt_sum, 
                  year_source = "F.Year", 
                  value_source = "F.Fmsy", 
                  high = "high_risk",
                  indicator_name = "ffmsy")
-
 
 # * mean of past 5 years ----
 ### rec catch
