@@ -43,11 +43,6 @@ guild_risk2 <- dplyr::left_join(survey2, guild_risk, by = "Species") %>%
   dplyr::ungroup() %>%
   dplyr::mutate(size = ifelse(overall_mean_len < 40, "small", "large")) 
 
-guild_info <- guild_risk2 %>%
-  dplyr::select(Species, Scientific_name, Guild, size) %>%
-  dplyr::distinct()
-write.csv(guild_info, file = here::here("data/risk_ranking", "guild_info.csv"))
-
 guild_risk3 <- guild_risk2 %>%
   dplyr::group_by(Guild, size, Indicator) %>%
   dplyr::summarise(guild_risk = sum(mean_norm_risk),
@@ -60,8 +55,28 @@ guild_risk3 <- guild_risk2 %>%
                 norm_rank = rank/max(rank)) %>%
   dplyr::group_by(Guild, size) %>%
   dplyr::mutate(total_guild_risk = sum(avg_guild_risk),
-                label_y = total_guild_risk - cumsum(avg_guild_risk),
                 sum_ranks = sum(rank))
 head(guild_risk3)
 
-write.csv(guild_risk3, file = here::here("data/risk_ranking", "guild_data.csv"))
+dat <- guild_risk3 %>%
+  dplyr::mutate(category = ifelse(Indicator == "ffmsy" |
+                                    Indicator == "asmt_catch" |
+                                    Indicator == "rec_catch" |
+                                    Indicator == "com_catch_max" |
+                                    Indicator == "revenue_max" |
+                                    Indicator == "com_catch_5yr" |
+                                    Indicator == "revenue_5yr" |
+                                    Indicator == "com_catch_hist" |
+                                    Indicator == "revenue_hist",
+                                  "Social", "Biological"),
+                legend_label = paste(category, Indicator, sep = ":\n")) %>%
+  dplyr::arrange(legend_label) %>%
+  dplyr::mutate(label_y = total_guild_risk - cumsum(avg_guild_risk))
+write.csv(dat,
+          file = here::here("data/risk_ranking", "guild_data.csv"))
+
+# save guild info
+guild_info <- guild_risk2 %>%
+  dplyr::select(Species, Scientific_name, Guild, size) %>%
+  dplyr::distinct()
+write.csv(guild_info, file = here::here("data/risk_ranking", "guild_info.csv"))

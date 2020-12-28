@@ -2,19 +2,24 @@
 source(here::here("R/rank_species_indicators", "ranking_functions.R"))
 `%>%` <- dplyr::`%>%`
 
-# read in data and rank ----
+# read in data from spreadsheets
+source(here::here("R/full_report_functions", "read_data.R"))
+
+# remove survey data outside stock areas
+survey <- survey %>%
+  dplyr::filter(Region != "Outside stock area")
+
+# rank data ----
 
 # * most recent measurement ----
 ### B/Bmsy, F/Fmsy
-bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
-
-b <- recent_indicator(data = bf, 
+b <- recent_indicator(data = asmt, 
                  year_source = "B.Year", 
                  value_source = "B.Bmsy", 
                  high = "low_risk",
                  indicator_name = "bbmsy")
 
-f <- recent_indicator(data = bf, 
+f <- recent_indicator(data = asmt, 
                  year_source = "F.Year", 
                  value_source = "F.Fmsy", 
                  high = "high_risk",
@@ -23,9 +28,6 @@ f <- recent_indicator(data = bf,
 
 # * mean of past 5 years ----
 ### rec catch
-rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
-  dplyr::filter(sub_reg_f == "NORTH ATLANTIC")
-head(rec)
 rec$Region <- NA
 
 rec <- yr5mean_indicator(data = rec, 
@@ -36,23 +38,6 @@ rec <- yr5mean_indicator(data = rec,
 
 # * max of all time ----
 ### total catch
-asmt <- assessmentdata::stockAssessmentData %>%
-  dplyr::filter(Region == "Gulf of Maine / Georges Bank" |
-                  Region == "Eastern Georges Bank" |
-                  Region == "Georges Bank" |
-                  Region == "Gulf of Maine" |
-                  Region == "Gulf of Maine / Cape Hatteras" |
-                  Region == "Georges Bank / Southern New England" |
-                  Region == "Southern New England / Mid" |
-                  Region == "Gulf of Maine / Northern Georges Bank" |
-                  Region == "Southern Georges Bank / Mid" |
-                  Region == "Cape Cod / Gulf of Maine")
-asmt$Region <- asmt$Region %>% 
-  stringr::str_replace("Mid", "Mid-Atlantic")
-asmt$Species <- asmt$Species %>% 
-  stringr::str_to_sentence()
-asmt$Units <- asmt$Units %>%
-  stringr::str_replace("Thousand Recruits", "Number x 1,000")
 
 # standardize units
 for(i in 1:nrow(asmt)){
@@ -83,9 +68,6 @@ recruit <- yr10hist_indicator(data = dat,
                    value_source = "Value", 
                    high = "low_risk",
                    indicator_name = "recruitment")
-
-survey <- readRDS(here::here("data", "survey_data.RDS"))
-survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9), ] # remove error jonah crab
 
 biomass <- survey %>% 
   dplyr::select(Species, Region, YEAR, SEASON, BIOMASS, fish_id) %>%
@@ -143,11 +125,13 @@ max_len_s <- yr10hist_indicator(data = length %>%
 
 # * calculated from all time ----
 ### number of prey categories, % of rejected stock assessments
-source(here::here("data", "allfh_regions.R"))
 diet <- alltime_indicator_diet(data = allfh %>% 
-                                dplyr::filter(gensci != "EMPTY", gensci != "BLOWN",
-                                              gensci != "UNOBS", gensci != "ANIMAL REMAINS",
-                                              gensci != "MISCELLANEOUS", gensci != "",
+                                dplyr::filter(gensci != "EMPTY", 
+                                              gensci != "BLOWN",
+                                              gensci != "UNOBS", 
+                                              gensci != "ANIMAL REMAINS",
+                                              gensci != "MISCELLANEOUS", 
+                                              gensci != "",
                                               Region != "Outside stock area"),  
                               value_source = "gensci", 
                               high = "low_risk",
@@ -159,7 +143,6 @@ diet <- diet %>%
 
 
 # * com data (multiple rankings) ----
-com <- read.csv(here::here("data", "com_landings_clean_20201222_formatted.csv"))
 com$Region <- NA
 
 com_max <- maxalltime_indicator(data = com, 

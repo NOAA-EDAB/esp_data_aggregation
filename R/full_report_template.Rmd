@@ -195,16 +195,22 @@ if("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2){
 
 ##### Data
 ```{r, bbmsy_data}
-DT::datatable(asmt_sum_data[which(is.na(asmt_sum_data$B.Bmsy) == FALSE), ] %>% 
+data <- asmt_sum_data[which(is.na(asmt_sum_data$B.Bmsy) == FALSE), ] %>% 
                 dplyr::select(Region, B.Year, B.Bmsy) %>%
-                dplyr::mutate(B.Bmsy = B.Bmsy %>% round(digits = 2)), 
+                dplyr::mutate(B.Bmsy = B.Bmsy %>% round(digits = 2)) %>%
+  character_to_factor()
+
+DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### F/Fmsy {.tabset .tabset-fade .tabset-pills}
@@ -224,16 +230,22 @@ if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
 
 ##### Data
 ```{r, ffmsy_data}
-DT::datatable(asmt_sum_data[which(is.na(asmt_sum_data$F.Fmsy) == FALSE), ] %>% 
+data <- asmt_sum_data[which(is.na(asmt_sum_data$F.Fmsy) == FALSE), ] %>% 
                 dplyr::select(Region, F.Year, F.Fmsy) %>%
-                dplyr::mutate(F.Fmsy = F.Fmsy %>% round(digits = 2)), 
+                dplyr::mutate(F.Fmsy = F.Fmsy %>% round(digits = 2)) %>%
+  character_to_factor()
+
+DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Revenue {.tabset .tabset-fade .tabset-pills}
@@ -248,7 +260,7 @@ if(length(com_data$Species) > 0){
 
 ##### Data
 ```{r, revenue_data}
-DT::datatable(com_data %>% 
+data <- com_data %>% 
                 dplyr::select(Year, State, Dollars_adj, Pounds) %>%
                 dplyr::mutate(Dollars_adj = Dollars_adj %>% 
                                 round(digits = 0) %>%
@@ -258,14 +270,20 @@ DT::datatable(com_data %>%
                               Pounds = Pounds %>%
                                 format(big.mark = ",")) %>%
                 dplyr::rename("Revenue (2019 dollars)" = "Dollars_adj",
-                              "Commercial catch (lb)" = "Pounds"), 
+                              "Commercial catch (lb)" = "Pounds") %>%
+  character_to_factor()
+
+DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Recruitment {.tabset .tabset-fade .tabset-pills}
@@ -284,18 +302,24 @@ plot_asmt(asmt_data,
 
 ##### Data
 ```{r, recruit_data}
-DT::datatable(asmt_data %>% 
+data <- asmt_data %>% 
                 dplyr::filter(Metric == "Recruitment") %>%
                 dplyr::select(-Species, -Metric) %>%
                 dplyr::mutate(Value = Value %>%
-                              format(big.mark = ",")), 
+                              format(big.mark = ",")) %>%
+  character_to_factor()
+
+DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Diet {.tabset .tabset-fade .tabset-pills}
@@ -330,7 +354,8 @@ diet_data2 <- diet_data %>%
                   proportion = proportion %>%
                     round(digits = 3),
                   total_weight = total_weight %>%
-                    round(digits = 2)) 
+                    round(digits = 2))  %>%
+  character_to_factor()
       
 diet_data2$gensci <- diet_data2$gensci %>% 
   stringr::str_replace("_", " ") %>%
@@ -338,12 +363,15 @@ diet_data2$gensci <- diet_data2$gensci %>%
 
 DT::datatable(diet_data2, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Temperature {.tabset .tabset-fade .tabset-pills}
@@ -397,16 +425,20 @@ data <- survey_data %>%
                 dplyr::summarise(Mean_surface_temperature = mean(day_mean_surf) %>%
                                    round(digits = 2),
                                  Mean_bottom_temperature = mean(day_mean_bot) %>%
-                                   round(digits = 2)) # mean by season-year
+                                   round(digits = 2)) %>%
+  character_to_factor() # mean by season-year
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Salinity {.tabset .tabset-fade .tabset-pills}
@@ -460,16 +492,20 @@ data <- survey_data %>%
                 dplyr::summarise(Mean_surface_salinity = mean(day_mean_surf) %>%
                                    round(digits = 2),
                                  Mean_bottom_salinity = mean(day_mean_bot) %>%
-                                   round(digits = 2)) # mean by season-year
+                                   round(digits = 2)) %>%
+  character_to_factor() # mean by season-year
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Abundance {.tabset .tabset-fade .tabset-pills}
@@ -514,16 +550,20 @@ Survey data:
 ```{r, surv_abun_data}
 data <- get_var_data(survey_data, variable = "ABUNDANCE") %>%
   dplyr::mutate(variable = variable %>%
-                  format(big.mark = ","))
+                  format(big.mark = ","))  %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 Assessment data:
@@ -532,16 +572,20 @@ data <- asmt_data %>%
                 dplyr::filter(Metric == "Abundance") %>%
                 dplyr::select(-Species, -Metric) %>%
                 dplyr::mutate(Value = Value %>%
-                              format(big.mark = ","))
+                              format(big.mark = ",")) %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Biomass {.tabset .tabset-fade .tabset-pills}
@@ -575,16 +619,20 @@ data <- survey_data %>%
   dplyr::ungroup() %>%
   dplyr::group_by(YEAR, SEASON, Region) %>% # re-group
   dplyr::summarise(Biomass = sum(BIOMASS) %>%
-                     format(big.mark = ","))
+                     format(big.mark = ",")) %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Catch {.tabset .tabset-fade .tabset-pills}
@@ -631,16 +679,20 @@ data <- asmt_data %>%
   dplyr::filter(Metric == "Catch") %>%
   dplyr::select(-Species, -Metric) 
 data$Value <- data$Value %>%
-                  format(big.mark = ",")
+                  format(big.mark = ",") %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 Recreational catch:
@@ -653,16 +705,20 @@ data <- rec_data %>%
                   stringr::str_to_sentence(),
                 Catch_pounds = tot_cat %>%
                   format(big.mark = ",")) %>%
-  dplyr::select(year, State, Method, Catch_pounds)
+  dplyr::select(year, State, Method, Catch_pounds) %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 Commercial catch:
@@ -677,29 +733,38 @@ data <- com_data %>%
                               Pounds = Pounds %>%
                                 format(big.mark = ",")) %>%
                 dplyr::rename("Revenue (2019 dollars)" = "Dollars_adj",
-                              "Commercial catch (lb)" = "Pounds")
+                              "Commercial catch (lb)" = "Pounds") %>%
+  character_to_factor()
+
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 Commercial vs recreational catch:
 ```{r, comvrec_data}
-data <- prop_catch_data(rec = rec_data, com = com_data)
+data <- prop_catch_data(rec = rec_data, com = com_data) %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Length {.tabset .tabset-fade .tabset-pills}
@@ -723,16 +788,20 @@ if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
 
 ##### Data
 ```{r, length_data}
-data <- get_len_data2(survey_data)
+data <- get_len_data2(survey_data) %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Condition {.tabset .tabset-fade .tabset-pills}
@@ -782,16 +851,20 @@ data <- diet_data %>%
   dplyr::mutate(condition = pdwgt/(pdlen^3)) %>%
   dplyr::mutate(condition = condition %>%
                   round(digits = 2)) %>%
-  dplyr::select(Region, year, season, pdlen, pdwgt, condition)
+  dplyr::select(Region, year, season, pdlen, pdwgt, condition) %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 Relative weight condition factor
@@ -800,16 +873,20 @@ Please note, this data is aggregated by Ecological Protection Unit (EPU), which 
 data <- cond_data %>%
   dplyr::select(-Species) %>%
   dplyr::mutate(MeanCond = MeanCond %>%
-                  round(digits = 1))
+                  round(digits = 1)) %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
-          filter = list(position = 'top', clear = FALSE),
+          filter = list(position = 'top', 
+                        clear = FALSE),
           extensions = 'Scroller',
           options = list(search = list(regex = TRUE),
-  deferRender = TRUE,
-  scrollY = 200,
-  scroller = TRUE))
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 ### Risk analysis

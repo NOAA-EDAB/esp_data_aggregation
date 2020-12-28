@@ -16,6 +16,8 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F,
 library(ggplot2)
 `%>%` <- dplyr::`%>%`
 
+source(here::here("R", "character_to_factor.R"))
+
 data <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv"))
 guild_data <- read.csv(here::here("data/risk_ranking", "guild_data.csv"))
 guild_info <- read.csv(here::here("data/risk_ranking", "guild_info.csv"))
@@ -81,10 +83,14 @@ for(i in unique(guild_info$Guild)){
 
 ## Results {.tabset .tabset-fade}
 
-### Stock risk data {.tabset .tabset-fade}
-Ranks for all stocks. The total risk (sum of all normalized risk values) is shown for each stock.
+### Stock risk {.tabset .tabset-fade .tabset-pills}
+Ranks for all stocks. 
 
-#### By region
+#### Figures {.tabset .tabset-fade}
+
+The total risk (sum of all normalized risk values) is shown for each stock.
+
+##### By region
 ```{r plot_more, fig.height = 12}
 more <- data %>% dplyr::filter(n_stocks_per_region > 4) 
 
@@ -121,7 +127,7 @@ print(fig_more)
 
 ```
 
-```{r plot_less, fig.height = 5}
+```{r plot_less, fig.height = 8}
 less <- data %>% 
   dplyr::filter(n_stocks_per_region <= 4) %>%
   dplyr::mutate(Region2 = Region %>% 
@@ -156,14 +162,14 @@ fig_less <- ggplot(less,
         panel.grid.minor.x = element_blank(),
         legend.position = "none")+
   facet_wrap(facets = vars(Region2),
-             ncol = 6,
+             ncol = 5,
              scales = "free_x")+
   ylab("Indicator")
 
 print(fig_less)
 ```
 
-#### In order of risk
+##### In order of risk
 ```{r, all_stocks, fig.height = 15}
 fig <- ggplot(data,
               aes(x = reorder(stock, -total_risk),
@@ -198,7 +204,59 @@ fig <- ggplot(data,
 print(fig)
 ```
 
-### Guild risk data
+#### Data  {.tabset .tabset-fade}
+##### All data
+```{r, data}
+dat <- data %>% 
+  dplyr::mutate(Value = Value %>%
+                  round(digits = 2) %>%
+                  format(scientific = FALSE,
+                         big.mark = ","),
+                norm_rank = norm_rank %>%
+                  round(digits = 3),
+                total_risk = total_risk %>%
+                  round(digits = 2)) %>%
+  dplyr::select(-X, -stock, -label) %>%
+  character_to_factor()
+
+DT::datatable(dat, 
+          rownames = FALSE,
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
+```
+
+##### Total risk only
+```{r, data_totrisk}
+dat <- data %>%
+  dplyr::select(Species, Region, total_risk, overall_rank) %>%
+  dplyr::mutate(total_risk = total_risk %>%
+                  round(digits = 2)) %>%
+  dplyr::distinct() %>%
+  character_to_factor()
+
+DT::datatable(dat, 
+          rownames = FALSE,
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
+```
+
+### Guild risk{.tabset .tabset-fade .tabset-pills}
+
+#### Figure
 ```{r guild, fig.height = 10}
 mycolors <-  grDevices::colorRampPalette(
   nmfspalette::nmfs_palette("regional web")(6))(guild_data$Indicator %>% 
@@ -209,7 +267,7 @@ ggplot(guild_data,
                          stringr::str_replace("_", "\n"), 
                        total_guild_risk),
            y = avg_guild_risk, 
-           fill = paste(category, Indicator, sep = ":\n"))) +
+           fill = legend_label)) +
   geom_bar(stat = "identity", color = "black") +
   scale_fill_manual(values = sample(mycolors),
                     name = "Indicator")+
@@ -228,4 +286,34 @@ ggplot(guild_data,
   theme(legend.position = "bottom",
         legend.key.size = unit(1.75, 'lines'))+
       guides(fill=guide_legend(nrow=5))
+```
+
+#### Data
+```{r, guild_data}
+dat <- guild_data %>% 
+  dplyr::mutate(Guild = paste(Guild, size)) %>%
+  dplyr::select(Guild, n_guild_species, category, Indicator, avg_guild_risk, 
+                rank, norm_rank, total_guild_risk, sum_ranks) %>%
+  dplyr::mutate(avg_guild_risk = avg_guild_risk %>%
+                  round(digits = 2) %>%
+                  format(scientific = FALSE,
+                         big.mark = ","),
+                norm_rank = norm_rank %>%
+                  round(digits = 3),
+                total_guild_risk = total_guild_risk %>%
+                  round(digits = 2)) %>%
+  
+  character_to_factor()
+
+DT::datatable(dat, 
+          rownames = FALSE,
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```

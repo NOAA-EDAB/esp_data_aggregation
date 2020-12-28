@@ -42,7 +42,7 @@ all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
 list_species <- split(all_species, f = list(all_species))
 
 # render some reports
-purrr::map("Acadian redfish", ~rmarkdown::render(here::here("R", "full_report_template.Rmd"), 
+purrr::map(c("Goosefish", "Windowpane"), ~rmarkdown::render(here::here("R", "full_report_template.Rmd"), 
                                             params = list(species_ID = .x,
                                                           
                                                           latlong_data = latlong,
