@@ -2,7 +2,7 @@
 
 `%>%` <- dplyr::`%>%`
 
-## bf data
+## bf data ----
 #####
 bf <- assessmentdata::stockAssessmentSummary %>% 
   dplyr::filter(Jurisdiction == "NEFMC")
@@ -14,7 +14,7 @@ bf$Region <- split_info[,2]
 write.csv(bf, file = here::here("data", "bbmsy_ffmsy_data.csv"))
 #####
 
-## recruitment data
+## recruitment data ----
 #####
 recruit <- assessmentdata::stockAssessmentData %>%
   dplyr::filter(Metric == "Recruitment",
@@ -32,7 +32,7 @@ recruit <- assessmentdata::stockAssessmentData %>%
 write.csv(recruit, file = here::here("data", "recruitment_data.csv"))
 #####
 
-## survey data
+## survey data ----
 #####
 data <- readRDS(here::here("data", "survdat.RDS"))
 data <- tibble::as.tibble(data$survdat)
@@ -97,7 +97,7 @@ saveRDS(data3, file = here::here("data", "survey_data.RDS"))
 
 #####
 
-# assessmentdata ratings - same as bf data
+# assessmentdata ratings - same as bf data ----
 #####
 ad <- assessmentdata::stockAssessmentSummary %>% 
   dplyr::filter(Jurisdiction == "NEFMC" | 
@@ -112,7 +112,7 @@ unique(ad$Region)
 ad %>% write.csv(here::here("data", "assessmentdata_ratings.csv"))
 #####
 
-# lat/long data
+# lat/long data ----
 #####
 data <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 crs <-  "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0" 
@@ -151,7 +151,7 @@ data$Species <- stringr::str_to_sentence(data$COMNAME)
 write.csv(data, file = here::here("data", "geo_range_data.csv"))
 #####
 
-# recreational catch
+# recreational catch ----
 #####
 files <- dir(here::here("data/MRIP"))
 read_files <- files[stringr::str_detect(files, "catch_year") %>% which()]
@@ -175,7 +175,7 @@ big_data$Species <- stringr::str_to_sentence(big_data$common)
 write.csv(big_data, file = here::here("data/MRIP", "all_MRIP_catch_year.csv"))
 #####
 
-# commercial catch
+# commercial catch ----
 #####
 com <- read.csv(here::here("data", "com_landings_clean_20201222.csv"))
 com$Species <- stringr::str_to_sentence(com$common_name)
@@ -203,7 +203,7 @@ com <- com %>%
 write.csv(com, here::here("data", "com_landings_clean_20201222_formatted.csv"))
 #####
 
-## survey data 12/29/20 pull
+## survey data 12/29/20 pull ----
 #####
 data <- readRDS(here::here("data", "survdat_122920.RDS"))
 data <- tibble::as.tibble(data$survdat)
@@ -297,5 +297,64 @@ unique(data3$SVSPP )%>% stringr::str_sort()
 data3 %>% 
   dplyr::filter(SEASON == "SUMMER" | SEASON == "WINTER") %>%
   nrow()
+
+#####
+
+# test survdat functions - swept area ----
+#####
+`%>%` <- dplyr::`%>%`
+
+# need original pull (formatted data not working)
+og_pull <- readRDS(here::here("data", "survdat.RDS"))
+shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
+
+area <- survdat::get_area(stratum = shape, 
+                          col.name = "STRATA")
+
+#area <- survdat::getarea(stratum = shape, 
+#                          strat.col = "STRATA") # doesn't work
+
+survey_big$STRATUM <- as.numeric(survey_big$STRATUM) 
+# survey_big doesn't work in stratprep - why??
+
+og_pull$survdat$STRATUM <- as.numeric(og_pull$survdat$STRATUM)
+
+mod_data <- survdat::stratprep(survdat = og_pull$survdat,
+                               areas = area,
+                               strat.col = "STRATUM")
+
+mean_info <- survdat::strat_mean(survdat = mod_data,
+                                 strat.col = "STRATUM")
+
+test <- survdat::swept_area(survdat = mod_data, 
+                            stratmean = mean_info,  
+                            strat.col = "STRATUM",
+                            group.col = "SVSPP")
+test
+
+key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
+
+# parse out survey data for NE species only, add common name
+key2 <- data.frame(SVSPP = unique(key$SVSPP),
+                   Species = stringr::str_to_sentence(unique(key$COMNAME)))
+
+matches <- as.numeric(test$SVSPP) %in% as.numeric(key2$SVSPP)
+
+data <- test[matches, ]
+data
+
+species_name <- c()
+for(i in 1:length(data$SVSPP)){
+  svspp <- as.numeric(data$SVSPP[i])
+  r <- which(key2$SVSPP == svspp)
+  species_name[i] <- key2[r, 2]
+}
+
+data$Species <- species_name
+
+write.csv(data, here::here("data", "swept_area_info.csv"))
+# no regions - figure out how to retain regions
+# cut data into regions (by species??) 
+# can the pull be parsed or will that mess up survdat functions?
 
 #####

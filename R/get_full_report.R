@@ -62,7 +62,9 @@ purrr::map(c("Acadian redfish"), ~rmarkdown::render(here::here("R", "full_report
                                                           
                                                           risk_data = risk,
                                                           
-                                                          com_data = com
+                                                          com_data = com,
+                                                          
+                                                          swept_data = swept
                                                           ), 
                                             output_dir = here::here("docs/reports"),
                                             output_file = paste(.x, "_full", 
@@ -113,7 +115,9 @@ render_par <- function(x){
                                   
                                   risk_data = risk,
                                   
-                                  com_data = com
+                                  com_data = com,
+                                  
+                                  swept_data = swept
                                   ), 
                     intermediates_dir = tf,
                     output_dir = here::here("docs/reports"),
@@ -131,7 +135,8 @@ cl <- parallel::makeCluster(parallel::detectCores() - 1)
 
 # export data to cluster
 parallel::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
-                                 "latlong", "rec", "allfh", "cond", "com"))
+                                 "latlong", "rec", "allfh", "cond", "com",
+                                 "swept"))
 
 # set up cluster
 parallel::clusterEvalQ(cl, {

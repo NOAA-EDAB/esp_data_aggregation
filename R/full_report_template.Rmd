@@ -36,6 +36,8 @@ params:
   risk_data: data # relative risk rankings
   
   com_data: data # commercial catch
+  
+  swept_data: data # swept area estimates
 
 ---
 
@@ -62,6 +64,7 @@ source(here::here("R/full_report_functions", "get_com_catch.R"))
 source(here::here("R/full_report_functions", "get_com_money.R"))
 source(here::here("R/full_report_functions", "compare_rec_com.R"))
 source(here::here("R", "character_to_factor.R"))
+source(here::here("R/full_report_functions", "get_swept.R"))
 ```
 
 ```{r, data, include = FALSE}
@@ -107,6 +110,10 @@ risk_data <- risk_data[risk_data$Species == species, ]
 
 com_data <- params$com_data
 com_data <- com_data[com_data$Species == species, ]
+
+swept_data <- params$swept_data
+swept_data <- swept_data[swept_data$Species == species, ]
+
 ```
 
 ```{r, bf_status}
@@ -517,12 +524,21 @@ Abundance data were pulled from ``r params$survey_source`` and ``r params$asmt_s
 
 Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 
-Survey abundance:
+Survey abundance (raw measurements):
 ```{r, abun_survey}
 if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
   generate_plot(survey_data,
               variable = "ABUNDANCE", 
               ytitle = "Abundance")
+} else print("NO DATA")
+```
+
+Survey abundance (swept area estimates):
+
+Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
+```{r, abun_survey_swept}
+if(nrow(swept_data) > 0){
+  plot_swept_abun(swept_data)
 } else print("NO DATA")
 ```
 
@@ -542,17 +558,41 @@ plot_asmt(asmt_data,
 if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
   generate_table(survey_data,
               variable = "ABUNDANCE", 
-              cap = "")
+              cap = "Measured abundance")
 } else print("NO DATA")
 ```
 
 ##### Data
-Survey data:
+Survey data (raw measurements):
 ```{r, surv_abun_data}
 data <- get_var_data(survey_data, variable = "ABUNDANCE") %>%
   dplyr::mutate(variable = variable %>%
                   format(big.mark = ","))  %>%
   character_to_factor()
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
+```
+
+Survey data (swept area estimates):
+```{r, swept_abun_data}
+data <- swept_data %>%
+  dplyr::select(YEAR, tot.abundance, tot.abund.SE) %>%
+  dplyr::mutate(YEAR = as.numeric(YEAR),
+                tot.abundance = tot.abundance %>%
+                  format(big.mark = ","),
+                tot.abund.SE = tot.abund.SE %>%
+                  round(digits = 1) %>%
+                  format(big.mark = ","))
 
 DT::datatable(data, 
           rownames = FALSE,
@@ -592,9 +632,11 @@ DT::datatable(data,
 #### Biomass {.tabset .tabset-fade .tabset-pills}
 Biomass data were pulled from ``r params$survey_source``. 
 
-##### Figure
+##### Figures
 
 Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+
+Survey biomass (raw measurements):
 ```{r, biomass}
 if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
   generate_plot(survey_data,
@@ -603,16 +645,26 @@ if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
 } else print("NO DATA")
 ```
 
+Survey biomass (swept area estimates):
+
+Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
+```{r, bio_survey_swept}
+if(nrow(swept_data) > 0){
+  plot_swept_biomass(swept_data)
+} else print("NO DATA")
+```
+
 ##### Summary
 ```{r, biomass_summary}
 if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
   generate_table(survey_data,
               variable = "BIOMASS", 
-              cap = "Biomass")
+              cap = "Measured biomass")
 } else print("NO DATA")
 ```
 
 ##### Data
+Survey data (raw measurements):
 ```{r, biomass_data}
 data <- survey_data %>% 
   dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
@@ -622,6 +674,30 @@ data <- survey_data %>%
   dplyr::summarise(Biomass = sum(BIOMASS) %>%
                      format(big.mark = ",")) %>%
   character_to_factor()
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
+```
+
+Survey data (swept area estimates):
+```{r, swept_biomass_data}
+data <- swept_data %>%
+  dplyr::select(YEAR, tot.abundance, tot.abund.SE) %>%
+  dplyr::mutate(YEAR = as.numeric(YEAR),
+                tot.abundance = tot.abundance %>%
+                  format(big.mark = ","),
+                tot.abund.SE = tot.abund.SE %>%
+                  round(digits = 1) %>%
+                  format(big.mark = ","))
 
 DT::datatable(data, 
           rownames = FALSE,

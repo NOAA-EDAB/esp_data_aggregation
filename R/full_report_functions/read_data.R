@@ -59,3 +59,5 @@ com <- read.csv(here::here("data", "com_landings_clean_20201222_formatted.csv"))
 com$Species <- com$Species %>%
   stringr::str_replace("Windowpane flounder", "Windowpane") %>%
   stringr::str_replace("Monkfish", "Goosefish")
+
+swept <- read.csv(here::here("data", "swept_area_info.csv"))
