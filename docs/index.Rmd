@@ -25,6 +25,8 @@ rec_summary_pages <- rec_pages[stringr::str_which(rec_pages, pattern = "recreati
 
 rec_species_pages <- rec_pages[-stringr::str_which(rec_pages, pattern = "recreational")]
 
+com_pages <- list.files(here::here("docs/Commercial landings"), pattern = ".html")
+
 ```
 
 # Preliminary reports
@@ -56,6 +58,21 @@ purrr::map(rec_summary_pages,
 
 purrr::map(rec_species_pages, 
            ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
+                  .x, "'>",
+                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1] %>% 
+                    stringr::str_to_sentence(), 
+                  "</a>", sep = "")) %>%
+  unlist() %>%
+  knitr::kable(col.names = "Species name")
+
+```
+
+# Commercial data
+These reports are a preliminary analysis of commercial data only.
+
+```{r}
+purrr::map(com_pages, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Commercial landings/", 
                   .x, "'>",
                   stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1] %>% 
                     stringr::str_to_sentence(), 
