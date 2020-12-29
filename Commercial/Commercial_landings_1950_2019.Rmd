@@ -9,7 +9,7 @@ params:
     input: select
     choices: [atlantic hagfish, smooth dogfish, spiny dogfish, barndoor skate, winter skate, clearnose skate, rosette skate, little skate, smooth skate, thorny skate, atlantic herring, alewife, blueback herring, offshore hake, silver hake, atlantic cod, haddock, pollock, white hake, red hake, cusk, atlantic halibut, american plaice, summer flounder, yellowtail flounder, winter flounder, witch flounder, atlantic mackerel, butterfish, bluefish, black sea bass, scup, acadian redfish, atlantic wolffish, ocean pout, monkfish, american lobster, northern shrimp, northern shortfin squid, longfin inshore squid, atlantic menhaden, windowpane flounder ]
   
-title: "Commercial_landing of `r stringr::str_to_sentence(params$stock)`"
+title: "Commercial landings of `r stringr::str_to_sentence(params$stock)`"
 ---
 
 ```{r setup, include=FALSE}
@@ -78,7 +78,7 @@ joined_names<- dplyr::bind_rows(split_names,single_name)
 #final clean dataset
 com_landings_clean<-dplyr::full_join(stock_list,joined_names, by= "common_name")
 
-
+#write.csv(com_landings_clean, "com_landings_clean_20201222.csv")
 selected_com_sp<-com_landings_clean %>%
   dplyr::group_by(Year) %>%
   filter(common_name==params$stock) %>%
@@ -88,6 +88,19 @@ selected_com_state<-com_landings_clean %>%
   dplyr::group_by(Year,State) %>%
   filter(common_name==params$stock) %>%
   summarise(total_pounds=sum(Pounds,na.rm = FALSE),total_dollars=sum(Dollars,na.rm = FALSE))
+
+##########################
+
+#red hake
+data_qual<-TRUE
+
+num_states<-selected_com_state %>% group_by( State) %>% count()
+
+if(min(num_states$n)<5){data_qual<-FALSE
+} else{data_qual<-TRUE}
+
+
+
 
 
 ```
@@ -99,19 +112,7 @@ This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.no
 Figures produced reflect the coverage of the data. With stocks that have high coverage, a running average is calculated. In low coverage stocks, missing values are excluded and a simple time series is produced. 
 
 
-```{r landings of single stock, echo=FALSE}
-
-selected_com_sp<-com_landings_clean %>%
-  dplyr::group_by(Year) %>%
-  filter(common_name=="pollock") %>%
-  summarise(total_pounds=sum(Pounds,na.rm = FALSE),total_dollars=sum(Dollars,na.rm = FALSE), price_per_lb=(total_dollars/total_pounds))
-
-
-selected_com_state<-com_landings_clean %>%
-  dplyr::group_by(Year,State) %>%
-  filter(common_name=="pollock") %>%
-  summarise(total_pounds=sum(Pounds,na.rm = FALSE),total_dollars=sum(Dollars,na.rm = FALSE))
-
+```{r landings of single stock, warning= FALSE, message= FALSE, error= FALSE, echo=FALSE}
 
 
 selected_com_sp %>% 
@@ -123,20 +124,16 @@ selected_com_sp %>%
   ylab(label = "Dollar value of landings in millions ($) ")+
   theme_minimal()
 
-
-
-
-
 ```
 
 ## Commercial landings of `r params$stock` across states in the mid-Atlantic and north-east regions
 
-```{r ,echo=FALSE}
+```{r landings across states, for good data, echo=FALSE, eval=data_qual}
 
 
 selected_com_state %>% 
   ggplot2::ggplot(aes(x=Year, y=(total_dollars/10^6)))+
-  tidyquant::geom_ma(aes(color= State, lty= State) ,n=5, lwd=1.4)+
+  tidyquant::geom_ma(aes(color= State, lty= State) ,n=3, lwd=1.4)+
   ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
   xlab(label= "Year")+
   ylab(label = "Dollar value of landings in millions ($)  ")+
@@ -147,15 +144,32 @@ selected_com_state %>%
 
 ```
 
+
+```{r, landings across states for bad data, echo=FALSE, eval=!data_qual}
+
+
+selected_com_state %>% 
+  ggplot2::ggplot(aes(x=Year, y=(total_dollars/10^6)))+
+  geom_point(aes(color=State))+
+  geom_line(aes(color=State))+
+  ggtitle(label = params$stock ,subtitle = "Data coverage for some states is poor with >5 years reported")+
+  xlab(label= "Year")+
+  ylab(label = "Dollar value of landings in millions ($)  ")+
+  theme_minimal()
+
+```
+
+
+
+
 ## Non-inflation adjusted price history of `r params$stock`
-The calculated price is dollars per pound of reported landings across all states. 
+The calculated price is dollars per pound of reported landings. 
 
 
 
-```{r price acorss species }
+```{r Non-inflation adjusted price history , warning= FALSE, message= FALSE, error= FALSE, echo=FALSE }
 
 selected_com_sp %>%
-  group_by(Year) %>% 
   dplyr::mutate(price_per_lb=(total_dollars/total_pounds))%>%
   ggplot2::ggplot(aes(x=Year, y=price_per_lb))+
   tidyquant::geom_ma(n=5, lwd=1.4)+
@@ -169,18 +183,109 @@ selected_com_sp %>%
 
 ```
 
-##Non-inflation adjusted price history across states of `r params$stock`
+## Non-inflation adjusted price history of `r params$stock` across states in the mid-Atlantic and north-east regions
+The calculated price is dollars per pound of reported landings. 
 
-```{r, echo=FALSE}
+
+```{r Non-inflation adjusted price history across states for good data , warning= FALSE, message= FALSE, error= FALSE, echo=FALSE, eval=data_qual}
 
 selected_com_state %>%
-  group_by(Year) %>% 
   dplyr::mutate(price_per_lb=(total_dollars/total_pounds))%>%
   ggplot2::ggplot(aes(x=Year, y=price_per_lb))+
-  tidyquant::geom_ma(aes( color=State),n=5, lwd=1.4)+
+  tidyquant::geom_ma(aes(color= State, lty= State),n=5, lwd=1.4,show.legend = FALSE)+
+  facet_wrap(vars(State))+
   ggtitle(label = params$stock ,subtitle = "5 year rolling average ")+
   xlab(label= "Year")+
   ylab(label = "Price per pound (lb/$) ")+
   theme_minimal()
+
+
+
+
+
+```
+
+```{r Non-inflation adjusted price history across states for poor data , warning= FALSE, message= FALSE, error= FALSE, echo=FALSE, eval=!data_qual}
+
+
+selected_com_state %>%
+  dplyr::mutate(price_per_lb=(total_dollars/total_pounds))%>%
+  ggplot2::ggplot(aes(x=Year, y=price_per_lb))+
+  geom_point(aes(color=State),show.legend = FALSE)+
+  geom_line(aes(color=State),show.legend = FALSE)+
+  facet_wrap(vars(State))+
+  ggtitle(label = params$stock ,subtitle = "Data coverage for some states is poor with >5 years reported")+
+  xlab(label= "Year")+
+  ylab(label = "Price per pound (lb/$) ")+
+  theme_minimal()
+
+
+```
+
+
+
+
+
+## inflation adjusted price history of `r params$stock`
+The price history of `r params$stock` adjusted to 2019 values using data from the World Bank inflation data as informed by Inflation adjustment calculations in Principles of Macroeconomics by Gregory Mankiw et al (2014). Adjustements perfomed using the packages [priceR](https://github.com/stevecondylios/priceR).
+
+```{r, inflation adjusted price history , warning= FALSE, message= FALSE, error= FALSE, echo=FALSE}
+
+library(priceR)
+
+stock_price<-selected_com_state %>%
+  group_by(Year) %>% 
+  dplyr::mutate(price_per_lb=(total_dollars/total_pounds))
+country <- "US"
+stock_price$adj_price<-adjust_for_inflation(stock_price$price_per_lb, stock_price$Year,country, to_date = 2019)
+
+
+
+stock_price%>%
+  group_by(Year)%>%
+  summarise(adj_ave_price=mean(adj_price)) %>%
+  ggplot2::ggplot(aes(x=Year, y=adj_ave_price))+
+  tidyquant::geom_ma(n=5, lwd=1.4)+
+  ggtitle(label = params$stock ,subtitle = "5 year rolling average ")+
+  xlab(label= "Year")+
+  ylab(label = "Price per pound (lb/$) in 2019 value ")+
+  theme_minimal()
+
+```
+
+
+## inflation adjusted price history of `r params$stock` across states in the mid-Atlantic and north-east regions 
+
+
+
+```{r, inflation adjusted price across states for good data, warning= FALSE, message= FALSE, error= FALSE, echo=FALSE, eval=data_qual}
+
+stock_price%>%
+  ggplot2::ggplot(aes(x=Year, y=adj_price))+
+  tidyquant::geom_ma(aes( color=State),n=5, lwd=1.4,show.legend = FALSE)+
+  facet_wrap(vars(State))+
+  ggtitle(label = params$stock ,subtitle = "5 year rolling average ")+
+  xlab(label= "Year")+
+  ylab(label = "Price per pound (lb/$) in 2019 value ")+
+  theme_minimal()
+```
+
+
+
+
+
+```{r, inflation adjusted price across states for poor data, warning= FALSE, message= FALSE, error= FALSE, echo=FALSE, eval=!data_qual}
+
+stock_price %>%
+  ggplot2::ggplot(aes(x=Year, y=adj_price))+
+  geom_point(aes(color=State),show.legend = FALSE)+
+  geom_line(aes(color=State),show.legend = FALSE)+
+  facet_wrap(vars(State))+
+  ggtitle(label = params$stock ,subtitle = "Data coverage for some states is poor with >5 years reported ")+
+  xlab(label= "Year")+
+  ylab(label = "Price per pound (lb/$) in 2019 value")+
+  theme_minimal()
+  
+
 ```
 

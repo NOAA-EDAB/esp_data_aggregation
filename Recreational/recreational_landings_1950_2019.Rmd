@@ -123,8 +123,13 @@ rec_landings_1950_2019_clean <-rec_landings_1950_2019_whole
 
 
 
-Selected_sp<-rec_landings_1950_2019_clean %>% group_by(Year) %>% filter(!is.na(Pounds) & common_name==params$stock) %>% summarise(total=sum(Pounds,na.rm = FALSE))
-selected_by_state<-rec_landings_1950_2019_clean %>% filter(!is.na(Pounds) & common_name==params$stock) %>% group_by(State, Year)
+Selected_sp<-rec_landings_1950_2019_clean %>% 
+  group_by(Year) %>%
+  filter(!is.na(Pounds) & common_name==params$stock) %>%
+  summarise(total=sum(Pounds,na.rm = FALSE))
+selected_by_state<-rec_landings_1950_2019_clean %>%
+  filter(!is.na(Pounds) & common_name==params$stock) %>%
+  group_by(State, Year)
 sp_data_qual<-TRUE
 st_data_qual<-TRUE
 
@@ -175,7 +180,7 @@ Selected_sp%>%na.omit()%>%
 ```
 
 
-## Recreational landings of `r params$stock` across states in the mid-Atlantic and north-east states
+## Recreational landings of `r params$stock` across states in the mid-Atlantic and north-east regions
 
 ```{r state breakdown if data is good,messages=FALSE,warning=FALSE, error=FALSE, echo=FALSE, eval=st_data_qual}
 
