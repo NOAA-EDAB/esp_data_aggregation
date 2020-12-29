@@ -50,7 +50,7 @@ purrr::map(c("Acadian redfish"), ~rmarkdown::render(here::here("R", "full_report
                                                           
                                                           asmt_sum_data = asmt_sum,
 
-                                                          survey_data = survey,
+                                                          survey_data = survey_big,
                                                           
                                                           diet_data = allfh,
                                                           
@@ -101,7 +101,7 @@ render_par <- function(x){
                                   
                                   asmt_sum_data = asmt_sum,
                                   
-                                  survey_data = survey,
+                                  survey_data = survey_big,
                                   
                                   diet_data = allfh,
                                   
@@ -130,7 +130,7 @@ source(here::here("R/full_report_functions", "read_data.R"))
 cl <- parallel::makeCluster(parallel::detectCores() - 1)
 
 # export data to cluster
-parallel::clusterExport(cl, list("survey", "asmt", "asmt_sum", "risk",
+parallel::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
                                  "latlong", "rec", "allfh", "cond", "com"))
 
 # set up cluster

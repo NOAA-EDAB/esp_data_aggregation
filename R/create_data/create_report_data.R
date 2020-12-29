@@ -176,6 +176,7 @@ write.csv(big_data, file = here::here("data/MRIP", "all_MRIP_catch_year.csv"))
 #####
 
 # commercial catch
+#####
 com <- read.csv(here::here("data", "com_landings_clean_20201222.csv"))
 com$Species <- stringr::str_to_sentence(com$common_name)
 com <- com %>%
@@ -200,3 +201,101 @@ com <- com %>%
   dplyr::select(Species, Year, State, Pounds, Dollars_adj)
 
 write.csv(com, here::here("data", "com_landings_clean_20201222_formatted.csv"))
+#####
+
+## survey data 12/29/20 pull
+#####
+data <- readRDS(here::here("data", "survdat_122920.RDS"))
+data <- tibble::as.tibble(data$survdat)
+# missing data?? too few rows compared to previous survdat pull :(
+
+key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
+
+# parse out survey data for NE species only, add common name
+key2 <- data.frame(SVSPP = unique(key$SVSPP),
+                   Species = stringr::str_to_sentence(unique(key$COMNAME)))
+
+matches <- as.numeric(data$SVSPP) %in% as.numeric(key2$SVSPP)
+
+data2 <- data[matches, ]
+
+species_name <- c()
+for(i in 1:length(data2$SVSPP)){
+  svspp <- as.numeric(data2$SVSPP[i])
+  r <- which(key2$SVSPP == svspp)
+  species_name[i] <- key2[r, 2]
+}
+
+data2$Species <- species_name
+
+# add region to survey data
+
+# rename regions
+for(i in 1:length(key$stock_area)){
+  if(key$stock_area[i] == "gbk") {key$stock_area[i] <- "Georges Bank"}
+  if(key$stock_area[i] == "gom") {key$stock_area[i] <- "Gulf of Maine"}
+  if(key$stock_area[i] == "snemab") {key$stock_area[i] <- "Southern New England / Mid-Atlantic"}
+  if(key$stock_area[i] == "gbkgom") {key$stock_area[i] <- "Gulf of Maine / Georges Bank"}
+  if(key$stock_area[i] == "ccgom") {key$stock_area[i] <- "Cape Cod / Gulf of Maine"}
+  if(key$stock_area[i] == "south") {key$stock_area[i] <- "Southern Georges Bank / Mid"}
+  if(key$stock_area[i] == "north") {key$stock_area[i] <- "Gulf of Maine / Northern Georges Bank"}
+  if(key$stock_area[i] == "sne") {key$stock_area[i] <- "Georges Bank / Southern New England"}
+  if(key$stock_area[i] == "unit") {key$stock_area[i] <- "all"}
+}
+
+key$Species <- stringr::str_to_sentence(key$COMNAME)
+key$spst <- paste(key$Species, key$strata %>% as.numeric())
+key3 <- key %>% dplyr::select(spst, stock_area)
+
+data2$spst <- paste(data2$Species, data2$STRATUM %>% as.numeric())
+
+data2$spst %in% key3$spst
+
+data3 <- dplyr::left_join(data2, key3, by = "spst")
+data3$Region <- data3$stock_area
+
+# some NAs when survey caught fish outside stock areas - replace
+data3$Region <- tidyr::replace_na(data3$Region, "Outside stock area")
+
+# add unique way to identify fish observations
+date_time <- data3$EST_TOWDATE %>% stringr::str_split(" ", simplify = TRUE)
+data3$date <- date_time[, 1]
+data3$fish_id <- paste(data3$CRUISE6, data3$STRATUM, 
+                       data3$TOW, data3$date, data3$Species,
+                       sep = "_") # unique incidences of observing a species
+
+#write.csv(data3, file = here::here("data", "survey_data.csv"))
+saveRDS(data3, file = here::here("data", "survey_data_12292020.RDS"))
+
+# data problems...
+data3 %>% 
+  dplyr::filter(SEASON == "SUMMER" | SEASON == "WINTER") %>%
+  saveRDS(file = here::here("data", "survey_data_12292020_wintersummer.RDS"))
+
+which((survey$fish_id %in% data3$fish_id) == FALSE)
+
+survey[1,]
+data3 %>%
+  dplyr::filter(CRUISE6 == "196307",
+                SVSPP == "015")
+
+test <- pull$survdat %>%
+  dplyr::filter(CRUISE6 == "196307")
+test$SVSPP %>% unique
+
+survey %>%
+  dplyr::filter(CRUISE6 == "196307",
+                SVSPP == "015")
+
+test2 <- survey %>%
+  dplyr::filter(CRUISE6 == "196307")
+test2$SVSPP %>% unique
+
+unique(survey$SVSPP) %>% stringr::str_sort()
+unique(data3$SVSPP )%>% stringr::str_sort()
+
+data3 %>% 
+  dplyr::filter(SEASON == "SUMMER" | SEASON == "WINTER") %>%
+  nrow()
+
+#####

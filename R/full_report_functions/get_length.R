@@ -19,34 +19,38 @@ get_len_data <- function(x){
   return(y)
 }
 
-plot_len <- function(x, season) {
+plot_len <- function(x) {
   
-  y <- x %>% dplyr::filter(SEASON == season)
+  figs <- list()
   
-  fig <- ggplot(y,
-                aes(x = as.numeric(YEAR),
-                    y = value,
-                    color = name))+
-    geom_line()+
-    geom_point(cex = 2)+
-    facet_grid(rows = vars(Region))+
-    nmfspalette::scale_color_nmfs("regional web", 
-                                  name = "",
-                                  label = c("max", "mean", "min"))+
-    theme_bw()+
-    xlab("Year")+
-    ylab("Length")+
-    labs(title = season)
-  
-  ecodat <- y %>%
-    dplyr::filter(YEAR > 0) %>%
-    dplyr::group_by(Region) %>%
-    dplyr::mutate(num = length(value)) %>%
-    dplyr::filter(num > 30)
-
- # if (length(ecodat$num) > 1) {fig <- fig + ecodata::geom_gls()} 
-
-  return(fig)
+  for(i in unique(x$SEASON)){
+    y <- x %>% dplyr::filter(SEASON == i)
+    
+    fig <- ggplot(y,
+                  aes(x = as.numeric(YEAR),
+                      y = value,
+                      color = name))+
+      geom_line()+
+      geom_point(cex = 2)+
+      facet_grid(rows = vars(Region))+
+      nmfspalette::scale_color_nmfs("regional web", 
+                                    name = "",
+                                    label = c("max", "mean", "min"))+
+      theme_bw()+
+      xlab("Year")+
+      ylab("Length")+
+      labs(title = i)
+    
+    ecodat <- y %>%
+      dplyr::filter(YEAR > 0) %>%
+      dplyr::group_by(Region) %>%
+      dplyr::mutate(num = length(value)) %>%
+      dplyr::filter(num > 30)
+    
+    if (length(ecodat$num) > 1) {fig <- fig + ecodata::geom_gls()} 
+    
+    print(fig)
+  }
 }
 
 get_len_data_tbl <- function(x){
@@ -133,17 +137,13 @@ len_tbl_data_5yr <- function(x){
   return(x)
 }
 
-generate_len_plot <- function(x, ytitle){
+generate_len_plot <- function(x){
 
   data <- get_len_data(x)
   
-  spring_fig <- plot_len(data, season = "SPRING")
-  
-  fall_fig <- plot_len(data, season = "FALL")
-  
-  print(spring_fig)
-  print(fall_fig)
-}
+  plot_len(data)
+
+  }
 
 generate_len_table <- function(x){
 

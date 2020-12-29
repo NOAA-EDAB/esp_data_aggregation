@@ -3,6 +3,11 @@
 survey <- readRDS(here::here("data", "survey_data.RDS"))
 survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9), ] # remove error jonah crab
 
+survey_ws <- readRDS(here::here("data", "survey_data_12292020_wintersummer.RDS")) %>%
+  dplyr::select(colnames(survey))
+
+survey_big <- dplyr::union(survey, survey_ws)
+
 asmt_sum <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
 
 latlong <- read.csv(here::here("data", "geo_range_data.csv"))
