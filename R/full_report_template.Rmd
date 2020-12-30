@@ -654,6 +654,17 @@ if(nrow(swept_data) > 0){
 } else print("NO DATA")
 ```
 
+Assessment biomass:
+```{r, biomass_asmt}
+if(nrow(asmt_data %>% dplyr::filter(Metric == "Biomass")) > 0){
+plot_asmt(asmt_data, 
+          metric = "Biomass", 
+          ytitle = "Biomass",
+          lin = lines, 
+          col = colors)
+} else print("NO DATA")
+```
+
 ##### Summary
 ```{r, biomass_summary}
 if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
@@ -698,6 +709,28 @@ data <- swept_data %>%
                 tot.abund.SE = tot.abund.SE %>%
                   round(digits = 1) %>%
                   format(big.mark = ","))
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
+```
+
+Assessment data:
+```{r, asmt_biomass_data}
+data <- asmt_data %>% 
+                dplyr::filter(Metric == "Biomass") %>%
+                dplyr::select(-Species, -Metric) %>%
+                dplyr::mutate(Value = Value %>%
+                              format(big.mark = ",")) %>%
+  character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,

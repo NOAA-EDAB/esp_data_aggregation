@@ -43,11 +43,18 @@ plot_len <- function(x) {
     
     ecodat <- y %>%
       dplyr::filter(YEAR > 0) %>%
-      dplyr::group_by(Region) %>%
+      dplyr::group_by(Region, name) %>%
       dplyr::mutate(num = length(value)) %>%
       dplyr::filter(num > 30)
     
-    if (length(ecodat$num) > 1) {fig <- fig + ecodata::geom_gls()} 
+    if (length(ecodat$num) > 1) {
+      fig <- fig + ecodata::geom_gls(inherit.aes = FALSE,
+                                     data = ecodat,
+                                     mapping = aes(x = as.numeric(YEAR),
+                                                   y = value,
+                                                   group = name))
+      # i think this works even if one group's gls doesn't converge
+    }
     
     print(fig)
   }

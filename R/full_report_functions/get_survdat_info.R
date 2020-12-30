@@ -46,8 +46,8 @@ plot_variable <- function(x, ytitle) {
     dplyr::filter(num > 30)
   
   if (length(ecodat$num) > 1) {
-    lines <- c(1, 2)
-    names(lines) <- c("FALL", "SPRING")
+    lines <- c(1:4)
+    names(lines) <- c("FALL", "SPRING", "WINTER", "SUMMER")
     
     # override situations where geom_gls doesn't converge
     res <- try({ecodata::geom_gls(inherit.aes = FALSE,

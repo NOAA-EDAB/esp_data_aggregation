@@ -43,6 +43,20 @@ asmt$Species <- asmt$Species %>%
 asmt$Units <- asmt$Units %>%
   stringr::str_replace("Thousand Recruits", "Number x 1,000")
 
+for(i in 1:nrow(asmt)){
+  if(asmt$Metric[i] == "Abundance"){
+    if(asmt$Units[i] == "Metric Tons" |
+       asmt$Units[i] == "Kilograms/Tow" |
+       asmt$Units[i] == "Kilograms / Tow" |
+       asmt$Units[i] == "Thousand Metric Tons" |
+       asmt$Units[i] == "Average Kilograms / Tow" |
+       asmt$Units[i] == "mt" |
+       asmt$Units[i] == "Average Kilograms/Tow") {
+      asmt$Metric[i] <- "Biomass"
+    }
+  } 
+}
+
 cond <- rbind(read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GB.csv"),
               read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GOM.csv"),
               read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_MAB.csv"),
