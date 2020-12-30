@@ -207,11 +207,12 @@ yr10hist_indicator <- function(data, year_source, value_source, high, indicator_
 #
 
 # calculated from all time ----
-alltime_indicator_diet <- function(data, value_source, high, indicator_name){
+alltime_indicator_diet <- function(data, value_source, year_source, high, indicator_name){
   
   data <- data %>%
-    dplyr::select(Species, Region, value_source) %>%
-    dplyr::rename("Value" = value_source) %>%
+    dplyr::select(Species, Region, value_source, year_source) %>%
+    dplyr::rename("Value" = value_source,
+                  "Year" = year_source) %>%
     dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
     dplyr::filter(ne_stock == "TRUE", 
                   is.na(Value) == FALSE, 

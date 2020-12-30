@@ -54,7 +54,10 @@ catch <- maxalltime_indicator(data = asmt %>% dplyr::filter(Metric == "Catch"),
 
 # * mean of past 10 years as % of historical ----
 ### abundance, recruitment, biomass, mean length, max length
-dat <- asmt %>% dplyr::filter(Metric == "Abundance", Units == "Metric Tons")
+dat <- asmt %>% dplyr::filter(Metric == "Biomass" |
+                                Metric == "Abundance")
+# since this is a %, it doesn't matter that the units are different
+
 abun <- yr10hist_indicator(data = dat, 
                    year_source = "Year", 
                    value_source = "Value", 
@@ -133,6 +136,7 @@ diet <- alltime_indicator_diet(data = allfh %>%
                                               gensci != "",
                                               Region != "Outside stock area"),  
                               value_source = "gensci", 
+                              year_source = "year",
                               high = "low_risk",
                               indicator_name = "diet")
 diet <- diet %>%
@@ -186,13 +190,20 @@ all_ind <- rbind(b, f, catch, recruit, abun, biomass_f, biomass_s,
 
 # data wrangling -----
 
-# * standardize "Mid" "Mid-Atlantic" ----
-unique(all_ind$Region)
+# * standardize region names ----
+all_ind$Region %>% unique() %>% stringr::str_sort() %>% View
 
-all_ind$Region <- stringr::str_replace(all_ind$Region, "Mid", "Mid-Atlantic")
-all_ind$Region <- stringr::str_replace(all_ind$Region, "Mid-Atlantic-Atlantic", "Mid-Atlantic")
+all_ind$Region <- all_ind$Region %>%
+  stringr::str_replace("Atlantic Coast", "Atlantic") %>%
+  stringr::str_replace("Northwestern Atlantic Coast", "Atlantic") %>%
+  stringr::str_replace("Northwestern Atlantic", "Atlantic") %>%
+  stringr::str_replace("Mid-Atlantic Coast", "Mid-Atlantic") %>%
+  stringr::str_replace("Southern New England / Mid-Atlantic", 
+                       "Southern New England / Mid") %>%
+  stringr::str_replace("Southern Georges Bank / Mid-Atlantic", 
+                       "Southern Georges Bank / Mid")
 
-unique(all_ind$Region)
+all_ind$Region %>% unique() %>% stringr::str_sort() %>% View
 
 # * replace "all" with region name ----
 missing_names <- all_ind %>%
@@ -219,12 +230,14 @@ fixed_data$Region <- fixed_data$Region %>% tidyr::replace_na("Unknown")
 all_catch <- rbind(rec, com_max, com_5yr, com_hist, 
                    rev_max, rev_5yr, rev_hist)
 
-all_catch_new <- dplyr::left_join( 
-  fixed_data %>% 
-    dplyr::select(Species, Region) %>% 
-    dplyr::distinct(), 
-  all_catch,
-  by = "Species") %>%
+regions <-  fixed_data %>% 
+  dplyr::ungroup() %>%
+  dplyr::select(Species, Region) %>% 
+  dplyr::distinct()
+
+all_catch_new <- dplyr::left_join(regions, 
+                                  all_catch,
+                                  by = "Species") %>%
   dplyr::select(-Region.y) %>%
   dplyr::filter(Value > 0, is.na(Region.x) == FALSE) %>%
   dplyr::rename("Region" = "Region.x")
