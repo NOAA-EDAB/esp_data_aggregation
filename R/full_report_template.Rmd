@@ -171,19 +171,39 @@ F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1
 #### Latitude and longitude
 Latitude and longitude ranges were compiled from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
 ```{r, latlong}
-if(length(latlong_data$Species) >= 1){
-  get_latlong(species, latlong_data, shapefile = params$shape) %>%
-  tibble::as_tibble() %>%
-  knitr::kable()
-} else print("NO DATA")
+data <- get_latlong(species, latlong_data, shapefile = params$shape) %>%
+  character_to_factor()
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### Stock assessment and data quality information
 Stock assessment and data quality information were pulled from ``r params$asmt_sum_source``.
 ```{r, quality}
-if(length(ad_rating_data$Species) >= 1){
-  knitr::kable(ad_rating_data)
-} else print("NO DATA")
+data <- ad_rating_data %>%
+  character_to_factor()
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
 ```
 
 #### B/Bmsy  {.tabset .tabset-fade .tabset-pills}
@@ -210,6 +230,7 @@ data <- asmt_sum_data[which(is.na(asmt_sum_data$B.Bmsy) == FALSE), ] %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Region", "Year", "B/Bmsy"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -245,6 +266,7 @@ data <- asmt_sum_data[which(is.na(asmt_sum_data$F.Fmsy) == FALSE), ] %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+                    colnames = c("Region", "Year", "F/Fmsy"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -371,6 +393,8 @@ diet_data2$gensci <- diet_data2$gensci %>%
 
 DT::datatable(diet_data2, 
           rownames = FALSE,
+          colnames = c("Year", "Season", "Region", "Number of fish", 
+                       "Prey category", "Prey weight", "Prey proportion"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -438,6 +462,8 @@ data <- survey_data %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Year", "Season", "Region", 
+                       "Mean surface temperature", "Mean bottom temperature"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -505,6 +531,8 @@ data <- survey_data %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+                    colnames = c("Year", "Season", "Region", 
+                       "Mean surface salinity", "Mean bottom salinity"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -572,6 +600,7 @@ data <- get_var_data(survey_data, variable = "ABUNDANCE") %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Year", "Season", "Region", "Abundance"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -596,6 +625,7 @@ data <- swept_data %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Year", "Abundance", "Standard error"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -688,6 +718,7 @@ data <- survey_data %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Year", "Season", "Region", "Biomass"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -702,16 +733,17 @@ DT::datatable(data,
 Survey data (swept area estimates):
 ```{r, swept_biomass_data}
 data <- swept_data %>%
-  dplyr::select(YEAR, tot.abundance, tot.abund.SE) %>%
+  dplyr::select(YEAR, tot.biomass, tot.bio.SE) %>%
   dplyr::mutate(YEAR = as.numeric(YEAR),
-                tot.abundance = tot.abundance %>%
+                tot.biomass = tot.biomass %>%
                   format(big.mark = ","),
-                tot.abund.SE = tot.abund.SE %>%
+                tot.bio.SE = tot.bio.SE %>%
                   round(digits = 1) %>%
                   format(big.mark = ","))
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Year", "Biomass (kg)", "Standard error"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -820,6 +852,7 @@ data <- rec_data %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Year", "State", "Method", "Catch (lb)"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -866,6 +899,9 @@ data <- prop_catch_data(rec = rec_data, com = com_data) %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Year", "Recreational catch", "Commercial catch",
+                       "Total catch", "Proportion recreational",
+                       "Proportion commercial"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -903,6 +939,8 @@ data <- get_len_data2(survey_data) %>%
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Year", "Season", "Region", "Number of fish",
+                       "Mean length", "Minimum length", "Maximum length"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -960,12 +998,14 @@ data <- diet_data %>%
   dplyr::filter(n_fish > 10) %>% # only region-season with >10 fish)
   dplyr::mutate(condition = pdwgt/(pdlen^3)) %>%
   dplyr::mutate(condition = condition %>%
-                  round(digits = 2)) %>%
+                  round(digits = 4)) %>%
   dplyr::select(Region, year, season, pdlen, pdwgt, condition) %>%
   character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Region", "Year", "Season", "Fish length (cm)", 
+                       "Fish weight (kg)", "Condition (kg/cm^3)"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -981,13 +1021,15 @@ Relative weight condition factor
 Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
 ```{r, laurel_cond_data}
 data <- cond_data %>%
-  dplyr::select(-Species) %>%
+  dplyr::select(-Species, -n) %>%
   dplyr::mutate(MeanCond = MeanCond %>%
                   round(digits = 1)) %>%
   character_to_factor()
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("EPU", "Fish sex", "Year", "Mean condition",
+                       "Number of fish"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',
@@ -1012,6 +1054,8 @@ data <- risk_data %>% dplyr::mutate(Rank = paste(rank, "out of", n_stocks_per_in
 
 DT::datatable(data, 
           rownames = FALSE,
+          colnames = c("Region", "Category", "Indicator", "Year", "Value",
+                       "Rank", "Normalized rank"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',

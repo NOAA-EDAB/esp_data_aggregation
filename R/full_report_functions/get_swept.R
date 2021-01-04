@@ -12,7 +12,7 @@ plot_swept_biomass <- function(x){
                   y = tot.biomass),
               cex = 2)+
     theme_bw()+
-    scale_y_continuous(name = "Survey biomass estimate",
+    scale_y_continuous(name = "Survey biomass estimate (kg)",
                        labels = scales::comma)
   
   y <- x %>%

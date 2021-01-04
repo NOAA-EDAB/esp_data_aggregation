@@ -12,10 +12,14 @@ saveRDS(pull, here::here("data", "survdat_122920.RDS"))
 
 pull <- readRDS(here::here("data", "survdat_122920.RDS"))
 
+# apply conversion factors
+pull2 <- survdat::apply_conversion_factors(channel, pull) # not actually a function...
+
 pull$survdat %>% head
 pull$survdat %>% nrow
 pull$survdat %>% tail
 
+# pull from Andy
 survey <- readRDS(here::here("data", "survey_data.RDS"))
 survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9), ] # remove error jonah crab
 
