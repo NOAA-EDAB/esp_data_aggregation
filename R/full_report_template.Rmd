@@ -65,6 +65,7 @@ source(here::here("R/full_report_functions", "get_com_money.R"))
 source(here::here("R/full_report_functions", "compare_rec_com.R"))
 source(here::here("R", "character_to_factor.R"))
 source(here::here("R/full_report_functions", "get_swept.R"))
+source(here::here("R/full_report_functions", "map_strata_ecsa.R"))
 ```
 
 ```{r, data, include = FALSE}
@@ -169,7 +170,13 @@ F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1
 ### Indicator time series {.tabset .tabset-fade}
 
 #### Latitude and longitude
-Latitude and longitude ranges were compiled from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
+Strata maps were pulled and compiled using code from [NOAA/EDAB ECSA](https://github.com/NOAA-EDAB/ECSA). Please note, only fall and spring strata are shown on the map.
+```{r, ecsa_map}
+map_strata_ecsa(data = latlong_data,
+                species_name = species)
+```
+
+Latitude and longitude ranges were calculated from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
 ```{r, latlong}
 data <- get_latlong(species, latlong_data, shapefile = params$shape) %>%
   character_to_factor()
@@ -185,6 +192,7 @@ DT::datatable(data,
                          scrollX = TRUE,
                          scroller = TRUE,
                          language = list(thousands = ",")))
+
 ```
 
 #### Stock assessment and data quality information

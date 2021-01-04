@@ -6,9 +6,9 @@ get_latlong <- function(x, data, shapefile){
   
   for(i in unique(data$Region)){
     
-    for(j in unique(data$season_)){
+    for(j in unique(data$stock_season)){
       
-      data2 <- data %>% dplyr::filter(season_ == j, Region == i)
+      data2 <- data %>% dplyr::filter(stock_season == j, Region == i)
       
       if(length(data2[,1]) > 0){
         

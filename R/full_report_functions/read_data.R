@@ -10,7 +10,8 @@ survey_big <- dplyr::union(survey, survey_ws)
 
 asmt_sum <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
 
-latlong <- read.csv(here::here("data", "geo_range_data.csv"))
+latlong <- read.csv(here::here("data", "geo_range_data.csv")) %>%
+  dplyr::rename(stock_season = season_)
 shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
 
 rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%

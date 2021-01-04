@@ -15,7 +15,7 @@
 
 ## required to render reports
 # library(purrr) # for automated rendering
-# library(parallel) # for automated and parallelized rendering
+# library(snow) # for automated and parallelized rendering
 
 ## required to recreate data
 # library(assessmentdata)
@@ -125,21 +125,24 @@ render_par <- function(x){
                                         ".html", sep = ""))
 
   unlink(tf)
+
 }
 
 # read in data
 source(here::here("R/full_report_functions", "read_data.R"))
 
 # make cluster
-cl <- parallel::makeCluster(parallel::detectCores() - 1)
+cl <- snow::makeCluster(7, # 12.5 min with 4 cores, 7.5 min with 7 cores
+                        type = "SOCK",
+                        methods = FALSE)
 
 # export data to cluster
-parallel::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
+snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
                                  "latlong", "rec", "allfh", "cond", "com",
                                  "swept"))
 
 # set up cluster
-parallel::clusterEvalQ(cl, {
+snow::clusterEvalQ(cl, {
   # load libraries
   library(ggplot2)
   `%>%` <- dplyr::`%>%`
@@ -150,13 +153,14 @@ parallel::clusterEvalQ(cl, {
 }) %>% invisible()
 
 # generate reports
-parallel::parLapply(cl, all_species, render_par)
+snow::clusterApply(cl, all_species, render_par)
 
 # check what data is on clusters
 # parallel::clusterCall(cl, print(ls()))
 
 # stop cluster
-parallel::stopCluster(cl)
+snow::stopCluster(cl)
+
 #####
 
 ## make summary spreadsheet (old)
