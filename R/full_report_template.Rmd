@@ -51,6 +51,7 @@ library(ggplot2)
 ```
 
 ```{r, functions, include = FALSE}
+source(here::here("R", "character_to_factor.R"))
 source(here::here("R/full_report_functions", "get_diet.R"))
 source(here::here("R/full_report_functions", "get_latlong.R"))
 source(here::here("R/full_report_functions", "get_bf.R"))
@@ -63,7 +64,6 @@ source(here::here("R/full_report_functions", "get_relative_weight.R"))
 source(here::here("R/full_report_functions", "get_com_catch.R"))
 source(here::here("R/full_report_functions", "get_com_money.R"))
 source(here::here("R/full_report_functions", "compare_rec_com.R"))
-source(here::here("R", "character_to_factor.R"))
 source(here::here("R/full_report_functions", "get_swept.R"))
 source(here::here("R/full_report_functions", "map_strata_ecsa.R"))
 ```
@@ -1013,7 +1013,7 @@ data <- diet_data %>%
 DT::datatable(data, 
           rownames = FALSE,
           colnames = c("Region", "Year", "Season", "Fish length (cm)", 
-                       "Fish weight (kg)", "Condition (kg/cm^3)"),
+                       "Fish weight (g)", "Condition (g/cm^3)"),
           filter = list(position = 'top', 
                         clear = FALSE),
           extensions = 'Scroller',

@@ -70,25 +70,12 @@ format_numbers <- function(x) {as.numeric(as.character(unlist(x)))}
 
 data_summary <- function(x){
   table <- x %>% dplyr::group_by(SEASON, Region) %>%
-    dplyr::summarise(mean_value = paste(mean(variable) %>% 
-                                          round(digits = 2) %>%
-                                          format(big.mark = ","), 
-                                        " +- ",
-                                        sd(variable) %>% 
-                                          round(digits = 2) %>%
-                                          format(big.mark = ","),
-                                        " (", 
-                                        length(variable), 
-                                        ") ", 
-                                        sep = ""),
-                     
-                     range_proportion = paste(min(variable) %>% 
-                                                round(digits = 2) %>%
-                                                format(big.mark = ","),
-                                              max(variable) %>% 
-                                                round(digits = 2) %>%
-                                                format(big.mark = ","),
-                                              sep = " - "))
+    dplyr::filter(variable > 0) %>%
+    dplyr::summarise(total_years = length(variable),
+                     mean_value = mean(variable),
+                     sd_value = sd(variable),
+                     min_value = min(variable),
+                     max_value = max(variable))
   
   return(table)
   
@@ -99,26 +86,12 @@ data_summary_5yr <- function(x){
 
   table <- x %>%  dplyr::group_by(SEASON, Region) %>%
     dplyr::mutate(max_year = max(YEAR)) %>%
-    dplyr::filter(YEAR > max_year - 5) %>%
-    dplyr::summarise(mean_value = paste(mean(variable) %>% 
-                                          round(digits = 2) %>%
-                                          format(big.mark = ","), 
-                                        " +- ",
-                                        sd(variable) %>% 
-                                          round(digits = 2) %>%
-                                          format(big.mark = ","),
-                                        " (", 
-                                        length(variable), 
-                                        ") ", 
-                                        sep = ""),
-                     
-                     range_value = paste(min(variable) %>% 
-                                                round(digits = 2) %>%
-                                                format(big.mark = ","),
-                                              max(variable) %>% 
-                                                round(digits = 2) %>%
-                                                format(big.mark = ","),
-                                              sep = " - "))
+    dplyr::filter(YEAR > max_year - 5,
+                  variable > 0) %>%
+    dplyr::summarise(mean_value5 = mean(variable),
+                     sd_value5 = sd(variable),
+                     min_value5 = min(variable),
+                     max_value5 = max(variable))
   
   return(table)
   
@@ -138,23 +111,37 @@ generate_table <- function(x, variable, cap){
   data <- get_var_data(x, variable = variable)
   
   table <- data_summary(data)
+  table[ , 4:7] <- table[ , 4:7] %>%
+    round(digits = 2)
   
   table_5yr <- data_summary_5yr(data)
+  table_5yr[ , 3:6] <- table_5yr[ , 3:6] %>%
+    round(digits = 2)
   
-  total_table <- cbind(table[, 1:3],
-                       table_5yr[, 3],
-                       table[, 4],
-                       table_5yr[, 4]) %>%
-    knitr::kable(col.names = c("Season", "Region",
-                               "Mean value +- SD (n years)",
-                               "Mean value +- SD (past 5 years)",
-                               "Range (total)",
-                               "Range (past 5 years)"),
-                 caption = cap)
+  total_table <- cbind(table,
+                       table_5yr[ , -(1:2)]) %>%
+    DT::datatable(rownames = FALSE,
+                  colnames = c("Season", "Region", "Total years", "Mean", 
+                               "Standard deviation", "Minimum", "Maximum",
+                               "Mean (past 5 years)", 
+                               "Standard deviation (past 5 years)", 
+                               "Minimum (past 5 years)", 
+                               "Maximum (past 5 years)"),
+                  filter = list(position = 'top', 
+                                clear = FALSE),
+                  extensions = 'Scroller',
+                  caption = cap,
+                  options = list(search = list(regex = TRUE),
+                                 deferRender = TRUE,
+                                 scrollY = 200,
+                                 scrollX = TRUE,
+                                 scroller = TRUE,
+                                 language = list(thousands = ",")))
 
   return(total_table)
 }
 
+# not used anymore
 generate_info <- function(x, ytitle, variable){
   
   data <- get_var_data(x, variable = variable)

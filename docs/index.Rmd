@@ -86,10 +86,20 @@ purrr::map(com_pages,
 This is a preliminary risk analysis visualization.
 
 ```{r}
-paste("<a href='https://rtabandera.github.io/esp_data_aggregation/risk_ranking/", 
-                  "plot_all_risk", "'>",
+paste("<a href='https://rtabandera.github.io/esp_data_aggregation/risk_ranking/plot_all_risk'>",
                   "Preliminary risk analysis", 
                   "</a>", sep = "") %>%
   knitr::kable(col.names = "File name")
+
+```
+
+# Bookdown
+This is a test report compiled with the `bookdown` package.
+
+```{r}
+paste("<a href='https://rtabandera.github.io/esp_data_aggregation/docs/bookdown/index'>", 
+                  "Acadian redfish", 
+                  "</a>", sep = "") %>%
+  knitr::kable(col.names = "Species name")
 
 ```
