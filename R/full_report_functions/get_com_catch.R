@@ -23,7 +23,10 @@ plot_com <- function(data){
     geom_bar(color = "black", stat = "identity")+
     theme_bw()+
     scale_y_continuous(name = "Total catch (lb)",
-                       labels = scales::comma)+
+                       labels = scales::comma,
+                       sec.axis = sec_axis(trans = ~./2204.6, 
+                                           name = "Total catch (metric tons)",
+                                           labels = scales::comma))+
     xlab("Year")+
     scale_fill_manual(name = "State",
                       values = plot_colors)+

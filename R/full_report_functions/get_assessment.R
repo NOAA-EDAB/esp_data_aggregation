@@ -2,6 +2,11 @@ plot_asmt <- function(x, metric, ytitle, lin = lines, col = colors){
   
   x <- x %>% dplyr::filter(Metric == metric)
   
+  # mean by year because some years have two measurements?
+  x <- x %>%
+    dplyr::group_by(Year, Description, Units, Region) %>%
+    dplyr::summarise(Value = mean(Value))
+  
   x$facet_var <- paste(x$Description, "\n", x$Units, sep = "")
 
   fig <- ggplot(x,

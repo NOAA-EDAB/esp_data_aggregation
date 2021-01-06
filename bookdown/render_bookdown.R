@@ -1,4 +1,4 @@
-rmarkdown::render_site(encoding = 'UTF-8')
+#rmarkdown::render_site(encoding = 'UTF-8')
 
 source(here::here("R/full_report_functions", "read_data.R"))
 
@@ -27,7 +27,7 @@ bookdown::render_book(input = ".",
                                     
                                     swept_data = swept
                       ),
-                      output_dir = here::here("docs/bookdown"),
+                      output_dir = here::here("docs/bookdown/Acadian redfish"),
                       output_file = "Acadian_redfish_bookdown")
 
 # create .nojekyll file

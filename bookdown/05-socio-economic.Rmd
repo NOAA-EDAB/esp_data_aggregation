@@ -57,8 +57,7 @@ Stock assessment catch data are from ``r params$asmt_source``. Recreational catc
 ### Figures
 
 #### Stock assessment catch
-```{r, catch, eval = FALSE} 
-# why doesn't this work??
+```{r, catch} 
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0){
 plot_asmt(asmt_data, 
           metric = "Catch", 
