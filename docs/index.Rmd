@@ -97,7 +97,7 @@ paste("<a href='https://rtabandera.github.io/esp_data_aggregation/risk_ranking/p
 This is a test report compiled with the `bookdown` package.
 
 ```{r}
-paste("<a href='https://rtabandera.github.io/esp_data_aggregation/docs/bookdown/index'>", 
+paste("<a href='https://rtabandera.github.io/esp_data_aggregation/bookdown/index'>", 
                   "Acadian redfish", 
                   "</a>", sep = "") %>%
   knitr::kable(col.names = "Species name")
