@@ -26,7 +26,7 @@ plot_asmt <- function(x, metric, ytitle, lin = lines, col = colors){
   
   ecodat <- x %>%
     dplyr::filter(Year > 0, Value > 0) %>%
-    dplyr::group_by(Region, Units) %>%
+    dplyr::group_by(Region, Description, Units) %>%
     dplyr::mutate(num = length(Value)) %>%
     dplyr::filter(num > 30)
   

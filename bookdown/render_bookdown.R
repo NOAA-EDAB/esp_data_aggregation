@@ -4,7 +4,7 @@ source(here::here("R/full_report_functions", "read_data.R"))
 
 setwd(here::here("bookdown"))
 bookdown::render_book(input = ".",
-                      params = list(species_ID = "Acadian redfish",
+                      params = list(species_ID = "Atlantic cod",
                                     
                                     latlong_data = latlong,
                                     shape = shape,
@@ -27,8 +27,37 @@ bookdown::render_book(input = ".",
                                     
                                     swept_data = swept
                       ),
-                      output_dir = here::here("docs/bookdown/Acadian redfish"),
-                      output_file = "Acadian_redfish_bookdown")
+                      output_dir = here::here("docs/bookdown/Atlantic cod"),
+                      output_file = "Atlantic_cod_bookdown")
+
+purrr::map(list("Barndoor skate", "Butterfish", "American plaice",
+                "Atlantic cod", "Atlantic halibut", "Atlantic mackerel"), 
+           ~bookdown::render_book(input = ".",
+                                 params = list(species_ID = .x,
+                                               
+                                               latlong_data = latlong,
+                                               shape = shape,
+                                               
+                                               asmt_sum_data = asmt_sum,
+                                               
+                                               survey_data = survey_big,
+                                               
+                                               diet_data = allfh,
+                                               
+                                               rec_data = rec,
+                                               
+                                               asmt_data = asmt,
+                                               
+                                               cond_data = cond,
+                                               
+                                               risk_data = risk,
+                                               
+                                               com_data = com,
+                                               
+                                               swept_data = swept
+                                 ), 
+                              output_dir = here::here(paste("docs/bookdown/", .x, sep = "")),
+                              output_file = paste(.x, "bookdown", sep = "_")))
 
 # create .nojekyll file
 file.create(here::here("docs/bookdown", ".nojekyll"))
@@ -121,8 +150,11 @@ snow::clusterApply(cl, all_species, render_par)
 # parallel::clusterCall(cl, print(ls()))
 
 # stop cluster
+Sys.time()
 snow::stopCluster(cl)
-.rs.restartR()
+Sys.time()
+q(save = "yes")
+Sys.time()
 
 #####
 
