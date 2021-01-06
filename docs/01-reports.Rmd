@@ -1,0 +1,19 @@
+# Preliminary reports
+
+```{r list_reports, include=FALSE}
+reports <- list.dirs(here::here("docs/bookdown"),
+                     recursive = FALSE) %>%
+  stringr::str_split_fixed(pattern = "/", n = 8)
+reports <- reports[ , 8]
+```
+
+These reports are a preliminary analysis of ecological and socioeconomic data sourced from `assessmentdata`, `survdat`, and other public data sources.
+
+```{r}
+purrr::map(reports, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/bookdown/", 
+                  .x, "/index'>", .x, "</a>", sep = "")) %>%
+  unlist() %>%
+  knitr::kable(col.names = "Species name")
+
+```

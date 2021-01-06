@@ -1,5 +1,5 @@
 --- 
-title: "Introduction"
+title: "`r params$species_ID`"
 author: "Abigail Tyrell"
 date: "`r format(Sys.time(), '%d %b %Y')`"
 site: bookdown::bookdown_site

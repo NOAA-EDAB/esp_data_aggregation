@@ -1,0 +1,33 @@
+# Recreational data
+
+```{r list_rec, include=FALSE}
+rec_pages <- list.files(here::here("docs/Recreational landings"), pattern = ".html")
+
+rec_summary_pages <- rec_pages[stringr::str_which(rec_pages, pattern = "recreational")]
+
+rec_species_pages <- rec_pages[-stringr::str_which(rec_pages, pattern = "recreational")]
+```
+
+These reports are a preliminary analysis of recreational data only.
+
+```{r}
+purrr::map(rec_summary_pages, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
+                  .x, "'>",
+                  stringr::str_split_fixed(.x, pattern = ".h", n = 2)[,1] %>% 
+                    stringr::str_to_sentence() %>%
+                    stringr::str_replace("_", " "), 
+                  "</a>", sep = "")) %>%
+  unlist() %>%
+  knitr::kable(col.names = "File name")
+
+purrr::map(rec_species_pages, 
+           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
+                  .x, "'>",
+                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1] %>% 
+                    stringr::str_to_sentence(), 
+                  "</a>", sep = "")) %>%
+  unlist() %>%
+  knitr::kable(col.names = "Species name")
+
+```

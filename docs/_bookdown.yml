@@ -1,0 +1,5 @@
+book_filename: "bookdown-test"
+language:
+  ui:
+    chapter_name: "Section "
+delete_merged_file: true
