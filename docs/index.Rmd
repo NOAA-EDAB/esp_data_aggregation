@@ -1,105 +1,19 @@
----
-title: "Preliminary ESP reports"
+--- 
+title: "ESP Data Products"
 author: "Abigail Tyrell"
 date: "`r format(Sys.time(), '%d %b %Y')`"
-
-output: 
-  html_document:
-    toc: TRUE
-    number_sections: TRUE
-    toc_float: 
-      collapsed: FALSE
-    toc_depth: 5
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+github-repo: rtabandera/esp_data_aggregation
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+# Introduction
+
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 `%>%` <- dplyr::`%>%`
-
-report_pages <- list.files(here::here("docs/reports"), pattern = ".html")
-
-rec_pages <- list.files(here::here("docs/Recreational landings"), pattern = ".html")
-
-rec_summary_pages <- rec_pages[stringr::str_which(rec_pages, pattern = "recreational")]
-
-rec_species_pages <- rec_pages[-stringr::str_which(rec_pages, pattern = "recreational")]
-
-com_pages <- list.files(here::here("docs/Commercial landings"), pattern = ".html")
-
 ```
 
-# Preliminary reports
-These reports are a preliminary analysis of ecological and socioeconomic data sourced from `assessmentdata`, `survdat`, and other public data sources.
-
-```{r}
-purrr::map(report_pages, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/reports/", 
-                  .x, "'>",
-                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1], 
-                  "</a>", sep = "")) %>%
-  unlist() %>%
-  knitr::kable(col.names = "Species name")
-
-```
-
-# Recreational data
-These reports are a preliminary analysis of recreational data only.
-
-```{r}
-purrr::map(rec_summary_pages, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
-                  .x, "'>",
-                  stringr::str_split_fixed(.x, pattern = ".h", n = 2)[,1] %>% 
-                    stringr::str_to_sentence(), 
-                  "</a>", sep = "")) %>%
-  unlist() %>%
-  knitr::kable(col.names = "File name")
-
-purrr::map(rec_species_pages, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
-                  .x, "'>",
-                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1] %>% 
-                    stringr::str_to_sentence(), 
-                  "</a>", sep = "")) %>%
-  unlist() %>%
-  knitr::kable(col.names = "Species name")
-
-```
-
-# Commercial data
-These reports are a preliminary analysis of commercial data only.
-
-```{r}
-purrr::map(com_pages, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Commercial landings/", 
-                  .x, "'>",
-                  stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1] %>% 
-                    stringr::str_to_sentence(), 
-                  "</a>", sep = "")) %>%
-  unlist() %>%
-  knitr::kable(col.names = "Species name")
-
-```
-
-# Risk analysis
-This is a preliminary risk analysis visualization.
-
-```{r}
-paste("<a href='https://rtabandera.github.io/esp_data_aggregation/risk_ranking/plot_all_risk'>",
-                  "Preliminary risk analysis", 
-                  "</a>", sep = "") %>%
-  knitr::kable(col.names = "File name")
-
-```
-
-# Bookdown
-This is a test report compiled with the `bookdown` package.
-
-```{r}
-paste("<a href='https://rtabandera.github.io/esp_data_aggregation/bookdown/index'>", 
-                  "Acadian redfish", 
-                  "</a>", sep = "") %>%
-  knitr::kable(col.names = "Species name")
-
-```
+These are the preliminary data products from the Northeast ESP project.
