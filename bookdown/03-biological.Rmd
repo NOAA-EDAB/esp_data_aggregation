@@ -8,9 +8,9 @@ source(here::here("R/full_report_functions", "get_diet.R"))
 ```
 
 ```{r, biological_data, include = FALSE}
-# length data (survdat) read in with habitat data
-#survey_data <- params$survey_data
-#survey_data <- survey_data[survey_data$Species == species, ]
+# length data (survdat) already read in with habitat data
+survey_data <- params$survey_data
+survey_data <- survey_data[survey_data$Species == species, ]
 
 cond_data <- params$cond_data
 cond_data <- cond_data[cond_data$Species == species, ]

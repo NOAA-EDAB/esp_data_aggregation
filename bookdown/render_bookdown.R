@@ -2,36 +2,15 @@
 
 source(here::here("R/full_report_functions", "read_data.R"))
 
-setwd(here::here("bookdown"))
-bookdown::render_book(input = ".",
-                      params = list(species_ID = "Atlantic cod",
-                                    
-                                    latlong_data = latlong,
-                                    shape = shape,
-                                    
-                                    asmt_sum_data = asmt_sum,
-                                    
-                                    survey_data = survey_big,
-                                    
-                                    diet_data = allfh,
-                                    
-                                    rec_data = rec,
-                                    
-                                    asmt_data = asmt,
-                                    
-                                    cond_data = cond,
-                                    
-                                    risk_data = risk,
-                                    
-                                    com_data = com,
-                                    
-                                    swept_data = swept
-                      ),
-                      output_dir = here::here("docs/bookdown/Atlantic cod"),
-                      output_file = "Atlantic_cod_bookdown")
+# get NE stock names
+names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
+# tilefish has is NA in COMNAME column? omit for now
 
-purrr::map(list("Barndoor skate", "Butterfish", "American plaice",
-                "Atlantic cod", "Atlantic halibut", "Atlantic mackerel"), 
+all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
+list_species <- split(all_species, f = list(all_species))
+
+setwd(here::here("bookdown"))
+purrr::map(list_species, 
            ~bookdown::render_book(input = ".",
                                  params = list(species_ID = .x,
                                                
@@ -56,13 +35,14 @@ purrr::map(list("Barndoor skate", "Butterfish", "American plaice",
                                                
                                                swept_data = swept
                                  ), 
-                              output_dir = here::here(paste("docs/bookdown/", .x, sep = "")),
-                              output_file = paste(.x, "bookdown", sep = "_")))
+                                 knit_root_dir = here::here(paste("docs/bookdown/", .x, sep = "")),
+                                 output_dir = here::here(paste("docs/bookdown/", .x, sep = ""))))
 
 # create .nojekyll file
 file.create(here::here("docs/bookdown", ".nojekyll"))
 
 # parallelize all reports
+# problems with bookdown & paralellization - not reliable
 #####
 
 # using furrr and future doesn't speed up report generation
@@ -82,11 +62,13 @@ all_species <- all_species[!is.na(all_species)]
 
 # function to save reports, fix temp file problems
 render_par <- function(x){
-  setwd(here::here("bookdown"))
-  
+
   tf <- tempfile()
   dir.create(tf)
   
+  dir.create(here::here(paste("docs/bookdown/problem2/", x, sep = "")))
+  
+  setwd(here::here("bookdown"))
   bookdown::render_book(input = ".",
                         params = list(species_ID = x,
                                       
@@ -111,11 +93,13 @@ render_par <- function(x){
                                       
                                       swept_data = swept
                         ),
-                        output_dir = here::here(paste("docs/bookdown/", x, sep = "")),
-                        output_file = paste(x, "bookdown", sep = "_"))
+                        intermediates_dir = tf,
+                        knit_root_dir = here::here(paste("docs/bookdown/problem2/", x, sep = "")),
+                        #clean = TRUE,
+                        output_dir = here::here(paste("docs/bookdown/problem2/", x, sep = "")))
 
   unlink(tf)
-  return("done")
+  #return("done")
   
 }
 
@@ -144,7 +128,16 @@ snow::clusterEvalQ(cl, {
 }) %>% invisible()
 
 # generate reports
-snow::clusterApply(cl, all_species, render_par)
+snow::clusterApply(cl, #c("Barndoor skate",
+                          # "Atlantic herring",
+                           #"American lobster",
+                           #"American plaice",
+                           #"Black sea bass",
+                           #"Butterfish",
+                           #"White hake"), 
+                     all_species,
+                     render_par #, options(error = recover)
+                     )
 
 # check what data is on clusters
 # parallel::clusterCall(cl, print(ls()))
@@ -153,7 +146,7 @@ snow::clusterApply(cl, all_species, render_par)
 Sys.time()
 snow::stopCluster(cl)
 Sys.time()
-q(save = "yes")
+.restart.R()
 Sys.time()
 
 #####

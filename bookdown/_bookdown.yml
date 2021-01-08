@@ -3,3 +3,38 @@ language:
   ui:
     chapter_name: "Section "
 delete_merged_file: true
+
+title: "`r params$species_ID`"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+github-repo: rtabandera/esp_data_aggregation
+
+params: 
+  species_ID: "Acadian redfish" # common name of species
+  
+  latlong_data: data # strata
+  shape: shape # shapefile
+  
+  asmt_sum_data: data # bbmsy, ffmsy, assessment ratings
+  asmt_sum_source: "assessmentdata::stockAssessmentSummary"
+
+  diet_data: data # allfh diet data
+  
+  survey_data: data # survey data
+  survey_source: "survdat"
+
+  rec_data: data # recreational catch (MRIP)
+  
+  asmt_data: data # assessmentdata:stockAssessmentData, for recruitment and catch
+  asmt_source: "assessmentdata::stockAssessmentData"
+  
+  cond_data: data # Laurel's condition data
+  
+  risk_data: data # relative risk rankings
+  
+  com_data: data # commercial catch
+  
+  swept_data: data # swept area estimates

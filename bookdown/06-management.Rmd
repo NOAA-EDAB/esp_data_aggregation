@@ -5,9 +5,9 @@
 ```
 
 ```{r, management_data, include = FALSE}
-# assessment data read in with pop data
-#asmt_sum_data <- params$asmt_sum_data
-#asmt_sum_data <- asmt_sum_data[asmt_sum_data$Species == species, ]
+# assessment data also read in with pop data
+asmt_sum_data <- params$asmt_sum_data
+asmt_sum_data <- asmt_sum_data[asmt_sum_data$Species == species, ]
 
 ad_rating_data <- asmt_sum_data %>% 
   dplyr::select(Species, Region, Assessment.Year, Last.Data.Year,

@@ -1,9 +1,10 @@
 # Socio-economic information
 
 ```{r, soceco_functions, include = FALSE}
-# already run in pop section
-#source(here::here("R/full_report_functions", "get_bf.R")) 
-#source(here::here("R/full_report_functions", "get_assessment.R"))
+# also run in pop section
+source(here::here("R/full_report_functions", "get_bf.R")) 
+source(here::here("R/full_report_functions", "get_assessment.R"))
+
 source(here::here("R/full_report_functions", "get_rec_catch.R"))
 source(here::here("R/full_report_functions", "get_com_catch.R"))
 source(here::here("R/full_report_functions", "get_com_money.R"))
@@ -11,12 +12,12 @@ source(here::here("R/full_report_functions", "compare_rec_com.R"))
 ```
 
 ```{r, soceco_data, include = FALSE}
-# assessment data read in with pop data
-#asmt_sum_data <- params$asmt_sum_data
-#asmt_sum_data <- asmt_sum_data[asmt_sum_data$Species == species, ]
+# assessment data also read in with pop data
+asmt_sum_data <- params$asmt_sum_data
+asmt_sum_data <- asmt_sum_data[asmt_sum_data$Species == species, ]
 
-#asmt_data <- params$asmt_data
-#asmt_data <- asmt_data[asmt_data$Species == species, ]
+asmt_data <- params$asmt_data
+asmt_data <- asmt_data[asmt_data$Species == species, ]
 
 rec_data <- params$rec_data
 rec_data <- rec_data[rec_data$Species == species, ]

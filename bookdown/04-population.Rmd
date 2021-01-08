@@ -7,9 +7,9 @@ source(here::here("R/full_report_functions", "get_swept.R"))
 ```
 
 ```{r, pop_data, include = FALSE}
-# abun/biomass data (survdat) read in with habitat data
-#survey_data <- params$survey_data
-#survey_data <- survey_data[survey_data$Species == species, ]
+# abun/biomass data (survdat) already read in with habitat data
+survey_data <- params$survey_data
+survey_data <- survey_data[survey_data$Species == species, ]
 
 asmt_sum_data <- params$asmt_sum_data
 asmt_sum_data <- asmt_sum_data[asmt_sum_data$Species == species, ]
