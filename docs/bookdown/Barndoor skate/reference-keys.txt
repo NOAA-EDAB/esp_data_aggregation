@@ -1,4 +1,4 @@
-barndoor-skate
+acadian-redfish
 methods
 general-methods
 assessmentdata-methods
@@ -66,7 +66,6 @@ stock-assessment-catch-1
 recreational-catch-1
 commercial-catch-1
 commercial-vs-recreational-catch-1
-commercial-recreational-and-stock-assessment-catch
 ffmsy
 figure-2
 data-9

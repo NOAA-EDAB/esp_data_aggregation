@@ -1,0 +1,181 @@
+# Habitat information
+
+```{r, habitat_functions, include = FALSE}
+source(here::here("R/full_report_functions", "get_latlong.R"))
+source(here::here("R/full_report_functions", "get_survdat_info.R"))
+source(here::here("R/full_report_functions", "map_strata_ecsa.R"))
+```
+
+```{r, habitat_data, include = FALSE}
+latlong_data <- params$latlong_data
+latlong_data <- latlong_data[latlong_data$Species == species, ]
+
+survey_data <- params$survey_data
+survey_data <- survey_data[survey_data$Species == species, ]
+
+```
+
+## Map of distribution
+Strata maps were pulled and compiled using code from [NOAA/EDAB ECSA](https://github.com/NOAA-EDAB/ECSA). Please note, only fall and spring strata are shown on the map.
+```{r, ecsa_map}
+map_strata_ecsa(data = latlong_data,
+                species_name = species)
+```
+
+## Latitude and longitude ranges
+Latitude and longitude ranges were calculated from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
+```{r, latlong}
+data <- get_latlong(species, latlong_data, shapefile = params$shape) %>%
+  character_to_factor()
+
+DT::datatable(data, 
+          rownames = FALSE,
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
+
+```
+
+## Temperature
+
+Surface and bottom temperature data were pulled from ``r params$survey_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+```{r, temp}
+if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
+  generate_plot(survey_data,
+              variable = "SURFTEMP", 
+              ytitle = "Surface temperature")
+} else print("NO SURFACE DATA")
+
+if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
+  generate_plot(survey_data,
+              variable = "BOTTEMP", 
+              ytitle = "Bottom temperature")
+} else print("NO BOTTOM DATA")
+```
+
+### Summary
+```{r, temp_summary}
+if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
+  generate_table(survey_data,
+              variable = "SURFTEMP", 
+              cap = "Surface temperature")
+} else print("NO SURFACE DATA")
+
+if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
+  generate_table(survey_data,
+              variable = "BOTTEMP", 
+              cap = "Bottom temperature")
+} else print("NO BOTTOM DATA")
+```
+
+### Data
+```{r, temp_data}
+data <- survey_data %>% 
+                dplyr::select(YEAR, SEASON, Region, date, 
+                              fish_id, SURFTEMP, BOTTEMP) %>%
+                dplyr::filter(SURFTEMP > 0 | BOTTEMP > 0) %>%
+                dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+                dplyr::distinct() %>% # remove repeated row info
+                dplyr::summarise(day_mean_surf = mean(SURFTEMP),
+                                 day_mean_bot = mean(BOTTEMP)) %>% # mean by day
+                dplyr::ungroup() %>%
+                dplyr::group_by(YEAR, SEASON, Region) %>%
+                dplyr::summarise(Mean_surface_temperature = mean(day_mean_surf) %>%
+                                   round(digits = 2),
+                                 Mean_bottom_temperature = mean(day_mean_bot) %>%
+                                   round(digits = 2)) %>%
+  character_to_factor() # mean by season-year
+
+DT::datatable(data, 
+          rownames = FALSE,
+          colnames = c("Year", "Season", "Region", 
+                       "Mean surface temperature", "Mean bottom temperature"),
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
+```
+
+## Salinity
+
+Surface and bottom salinity data were pulled from ``r params$survey_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+```{r, surfsalin}
+if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
+  generate_plot(survey_data,
+              variable = "SURFSALIN", 
+              ytitle = "Surface salinity")
+} else print("NO SURFACE DATA")
+
+if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
+  generate_plot(survey_data,
+              variable = "BOTSALIN", 
+              ytitle = "Bottom salinity")
+} else print("NO BOTTOM DATA")
+```
+
+### Summary
+```{r, salin_summary}
+if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
+  generate_table(survey_data,
+              variable = "SURFSALIN", 
+              cap = "Surface salinity")
+} else print("NO SURFACE DATA")
+
+if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
+  generate_table(survey_data,
+              variable = "BOTSALIN", 
+              cap = "Bottom salinity")
+} else print("NO BOTTOM DATA")
+```
+
+### Data
+```{r, salin_data}
+data <- survey_data %>% 
+                dplyr::select(YEAR, SEASON, Region, date, 
+                              fish_id, SURFSALIN, BOTSALIN) %>%
+                dplyr::filter(SURFSALIN > 0 | BOTSALIN > 0) %>%
+                dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+                dplyr::distinct() %>% # remove repeated row info
+                dplyr::summarise(day_mean_surf = mean(SURFSALIN),
+                                 day_mean_bot = mean(BOTSALIN)) %>% # mean by day
+                dplyr::ungroup() %>%
+                dplyr::group_by(YEAR, SEASON, Region) %>%
+                dplyr::summarise(Mean_surface_salinity = mean(day_mean_surf) %>%
+                                   round(digits = 2),
+                                 Mean_bottom_salinity = mean(day_mean_bot) %>%
+                                   round(digits = 2)) %>%
+  character_to_factor() # mean by season-year
+
+DT::datatable(data, 
+          rownames = FALSE,
+                    colnames = c("Year", "Season", "Region", 
+                       "Mean surface salinity", "Mean bottom salinity"),
+          filter = list(position = 'top', 
+                        clear = FALSE),
+          extensions = 'Scroller',
+          options = list(search = list(regex = TRUE),
+                         deferRender = TRUE,
+                         scrollY = 200,
+                         scrollX = TRUE,
+                         scroller = TRUE,
+                         language = list(thousands = ",")))
+```
