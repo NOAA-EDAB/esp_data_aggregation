@@ -11,6 +11,9 @@ names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/
 all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
 list_species <- split(all_species, f = list(all_species))
 
+dir.create(here::here("docs/bookdown/Acadian redfish"))
+file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
+
 setwd(here::here("bookdown"))
 purrr::map(list_species[1], 
            ~bookdown::render_book(input = ".",
@@ -82,6 +85,8 @@ render_par <- function(x){
             overwrite = TRUE)
   
   setwd(new_dir)
+  file.create(".nojekyll")
+  
   bookdown::render_book(input = ".",
                         params = list(species_ID = x,
                                       
@@ -110,6 +115,12 @@ render_par <- function(x){
                         knit_root_dir = new_dir,
                         #clean = TRUE,
                         output_dir = new_dir)
+  
+  # copy images to right folder
+  file.copy(from = list.files(here::here(new_dir, "/_bookdown_files/"), full.names = TRUE),
+            to = new_dir,
+            recursive = TRUE,
+            overwrite = TRUE)
 
   unlink(tf)
   #return("done")
