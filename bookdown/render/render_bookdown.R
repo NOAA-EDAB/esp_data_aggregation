@@ -150,18 +150,9 @@ snow::clusterEvalQ(cl, {
 }) %>% invisible()
 
 # generate reports
-snow::clusterApply(cl, #c("Barndoor skate",
-                          # "Atlantic herring",
-                           #"American lobster",
-                           #"American plaice",
-                           #"Black sea bass",
-                           #"Butterfish",
-                           #"White hake"), 
+snow::clusterApply(cl, 
                      all_species,
-                     render_par #, 
-                  # chunk.size = 1
-                   #options(error = recover)
-                     )
+                     render_par)
 
 # check what data is on clusters
 # parallel::clusterCall(cl, print(ls()))
