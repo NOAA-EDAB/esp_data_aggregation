@@ -1,0 +1,122 @@
+--- 
+title: "`r params$species_ID`"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+github-repo: rtabandera/esp_data_aggregation
+
+params: 
+  species_ID: "Acadian redfish" # common name of species
+  
+  latlong_data: data # strata
+  shape: shape # shapefile
+  
+  asmt_sum_data: data # bbmsy, ffmsy, assessment ratings
+  asmt_sum_source: "assessmentdata::stockAssessmentSummary"
+
+  diet_data: data # allfh diet data
+  
+  survey_data: data # survey data
+  survey_source: "survdat"
+
+  rec_data: data # recreational catch (MRIP)
+  
+  asmt_data: data # assessmentdata:stockAssessmentData, for recruitment and catch
+  asmt_source: "assessmentdata::stockAssessmentData"
+  
+  cond_data: data # Laurel's condition data
+  
+  risk_data: data # relative risk rankings
+  
+  com_data: data # commercial catch
+  
+  swept_data: data # swept area estimates
+---
+
+# `r params$species`
+
+```{r, setup, include = FALSE}
+#dir.create(here::here(paste("docs/bookdown/problem2/", params$species, "/fig_cache//", sep = "")))
+#dir.create(here::here(paste("docs/bookdown/problem2/", params$species, "/cache//", sep = "")))
+
+# last folder in file path does not render?
+#new_dir <- here::here(paste("docs/bookdown/", params$species, "/figures/", sep = ""))
+#dir.create(new_dir)
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 8, 
+                      fig.align = 'center',
+                      fig.cap = params$species#,
+         #             fig.path = new_dir
+     #                 cache.path = here::here(paste("docs/bookdown/", 
+      #                                            params$species, 
+       #                                           "/cache//", 
+        #                                          sep = ""))
+                      )
+
+library(ggplot2)
+
+`%>%` <- dplyr::`%>%`
+```
+
+```{r, universal_functions, include = FALSE}
+source(here::here("R", "character_to_factor.R"))
+```
+
+```{r, universal_data, include = FALSE}
+species <- params$species_ID
+```
+
+```{r, all_params, include = FALSE}
+species <- params$species_ID
+
+latlong_data <- params$latlong_data
+latlong_data <- latlong_data[latlong_data$Species == species, ]
+
+asmt_sum_data <- params$asmt_sum_data
+asmt_sum_data <- asmt_sum_data[asmt_sum_data$Species == species, ]
+
+survey_data <- params$survey_data
+survey_data <- survey_data[survey_data$Species == species, ]
+
+ad_rating_data <- asmt_sum_data %>% 
+  dplyr::select(Species, Region, Assessment.Year, Last.Data.Year,
+                Biological.Input.Data, Life.History.Data, 
+                Composition.Input.Data, Ecosystem.Linkage, FSSI.Stock.,
+                Review.Result) %>%
+  dplyr::rename(`Assessment Year` = Assessment.Year,
+                         `Last Data Year` = Last.Data.Year,
+                         `Biological Data Rating (2019)` = Biological.Input.Data,
+                         `Biological Data Rating (before 2019)` = Life.History.Data,
+                         `Size Data Rating` = Composition.Input.Data,
+                         `Ecosystem Linkage Data Rating` = Ecosystem.Linkage,
+                         `FSSI status` = FSSI.Stock.,
+                         `Review Result` = Review.Result)
+
+diet_data <- params$diet_data
+diet_data <- diet_data[diet_data$Species == species, ]
+
+rec_data <- params$rec_data
+rec_data <- rec_data[rec_data$Species == species, ]
+
+asmt_data <- params$asmt_data
+asmt_data <- asmt_data[asmt_data$Species == species, ]
+
+cond_data <- params$cond_data
+cond_data <- cond_data[cond_data$Species == species, ]
+
+risk_data <- params$risk_data
+risk_data <- risk_data[risk_data$Species == species, ]
+
+com_data <- params$com_data
+com_data <- com_data[com_data$Species == species, ]
+
+swept_data <- params$swept_data
+swept_data <- swept_data[swept_data$Species == species, ]
+```
+
+This is a preliminary report of previously collected data. This report is pulling information on all Northeast `r species` stocks.
