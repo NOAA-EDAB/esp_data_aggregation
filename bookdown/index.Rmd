@@ -41,6 +41,9 @@ params:
 #dir.create(here::here(paste("docs/bookdown/problem2/", params$species, "/fig_cache//", sep = "")))
 #dir.create(here::here(paste("docs/bookdown/problem2/", params$species, "/cache//", sep = "")))
 
+# last folder in file path does not render?
+dir.create(here::here(paste("docs/bookdown/", params$species, "/figures/a/", sep = "")))
+
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE, 
                       warning = FALSE, 
@@ -49,7 +52,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.cap = params$species,
                       fig.path = here::here(paste("docs/bookdown/", 
                                                   params$species, 
-                                                  "/_bookdown_files/bookdown-test_files/figure-html", 
+                                                  "/figures/a/", 
                                                   sep = ""))
      #                 cache.path = here::here(paste("docs/bookdown/", 
       #                                            params$species, 
