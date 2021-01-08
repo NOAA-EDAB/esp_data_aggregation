@@ -42,29 +42,21 @@ params:
 #dir.create(here::here(paste("docs/bookdown/problem2/", params$species, "/cache//", sep = "")))
 
 # last folder in file path does not render?
-dir.create(here::here(paste("docs/bookdown/", params$species, "/figures/", sep = "")))
-
-current_dir <- getwd()
-
-setwd(here::here())
+#new_dir <- here::here(paste("docs/bookdown/", params$species, "/figures/", sep = ""))
+#dir.create(new_dir)
 
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE, 
                       warning = FALSE, 
                       fig.width = 8, 
                       fig.align = 'center',
-                      fig.cap = params$species,
-                      fig.path = paste("/docs/bookdown/", 
-                                                  params$species, 
-                                                  "/figures/", 
-                                                  sep = "")
+                      fig.cap = params$species#,
+         #             fig.path = new_dir
      #                 cache.path = here::here(paste("docs/bookdown/", 
       #                                            params$species, 
        #                                           "/cache//", 
         #                                          sep = ""))
                       )
-
-setwd(current_dir)
 
 library(ggplot2)
 
