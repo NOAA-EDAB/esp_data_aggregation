@@ -50,10 +50,10 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.width = 8, 
                       fig.align = 'center',
                       fig.cap = params$species,
-                      fig.path = here::here(paste("docs/bookdown/", 
+                      fig.path = paste("~/esp_data_aggregation/docs/bookdown/", 
                                                   params$species, 
                                                   "/figures/a/", 
-                                                  sep = ""))
+                                                  sep = "")
      #                 cache.path = here::here(paste("docs/bookdown/", 
       #                                            params$species, 
        #                                           "/cache//", 
