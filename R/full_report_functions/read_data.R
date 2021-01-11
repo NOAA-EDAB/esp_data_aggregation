@@ -41,8 +41,6 @@ asmt$Region <- asmt$Region %>%
   stringr::str_replace("Mid", "Mid-Atlantic")
 asmt$Species <- asmt$Species %>% 
   stringr::str_to_sentence()
-asmt$Units <- asmt$Units %>%
-  stringr::str_replace("Thousand Recruits", "Number x 1,000")
 
 for(i in 1:nrow(asmt)){
   if(asmt$Metric[i] == "Abundance"){
@@ -57,6 +55,40 @@ for(i in 1:nrow(asmt)){
     }
   } 
 }
+
+# standardize units...
+for(i in 1:nrow(asmt)){
+  if(asmt$Units[i] == "Number x 1,000" |
+     asmt$Units[i] == "Number x 1000"){
+    asmt$Value[i] <- asmt$Value[i]*10^3
+    asmt$Units[i] <- "Number"
+  } 
+  if(asmt$Units[i] == "Million Recruits" |
+     asmt$Units[i] == "Number x 1,000,000"){
+    asmt$Value[i] <- asmt$Value[i]*10^6
+    asmt$Units[i] <- "Number"
+  }
+  if(asmt$Units[i] == "Number x 10,000"){
+    asmt$Value[i] <- asmt$Value[i]*10^4
+    asmt$Units[i] <- "Number"
+  }
+  if(asmt$Units[i] == "Recruits"){
+    asmt$Units[i] <- "Number"
+  }
+  if(asmt$Units[i] == "Thousand Metric Tons"){
+    asmt$Value[i] <- asmt$Value[i]*10^3
+    asmt$Units[i] <- "Metric Tons"
+  }
+  if(asmt$Units[i] == "mt"){
+    asmt$Units[i] <- "Metric Tons"
+  }
+  if(asmt$Units[i] == "Million Metric Tons"){
+    asmt$Value[i] <- asmt$Value[i]*10^6
+    asmt$Units[i] <- "Metric Tons"
+  }
+}
+#asmt$Units <- asmt$Units %>%
+ # stringr::str_replace("Thousand Recruits", "Number x 1,000")
 
 cond <- rbind(read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GB.csv"),
               read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GOM.csv"),

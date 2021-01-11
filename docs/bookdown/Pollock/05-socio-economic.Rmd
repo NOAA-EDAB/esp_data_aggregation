@@ -68,7 +68,8 @@ ndesc <- asmt_data %>%
 ```
 
 #### Stock assessment catch
-```{r, catch, fig.height = ndesc * 10} 
+```{r, catch}
+#  fig.height = ndesc * 10
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0){
 plot_asmt(asmt_data, 
           metric = "Catch", 
