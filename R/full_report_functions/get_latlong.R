@@ -10,7 +10,7 @@ get_latlong <- function(x, data, shapefile){
       
       data2 <- data %>% dplyr::filter(stock_season == j, Region == i)
       
-      if(length(data2[,1]) > 0){
+      if(nrow(data2) > 0){
         
         log_statement <- paste("STRATA == ", unique(data2$strata), collapse = " | ")
         

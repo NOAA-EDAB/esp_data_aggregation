@@ -148,9 +148,10 @@ generate_len_plot <- function(x){
 
   data <- get_len_data(x)
   
-  plot_len(data)
-
-  }
+  if(nrow(data) > 0){
+    plot_len(data)
+  } else print("NO DATA")
+}
 
 generate_len_table <- function(x){
 
@@ -165,12 +166,15 @@ generate_len_table <- function(x){
                        table[, 4],
                        table_5yr[, 4])
   
-  return(total_table %>%
-           knitr::kable(col.names = c("Season", "Region",
-                                      "Mean value +- SD (n fish, n years)",
-                                      "Mean value +- SD (n fish, past 5 years)",
-                                      "Range (total)",
-                                      "Range (past 5 years)")))
+  if(nrow(total_table) > 0){
+    return(total_table %>%
+             knitr::kable(col.names = c("Season", "Region",
+                                        "Mean value +- SD (n fish, n years)",
+                                        "Mean value +- SD (n fish, past 5 years)",
+                                        "Range (total)",
+                                        "Range (past 5 years)")))
+  } else print("NO DATA")
+  
 }
 
 get_len_data2 <- function(x){

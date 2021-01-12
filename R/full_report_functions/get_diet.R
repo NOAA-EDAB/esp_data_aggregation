@@ -131,7 +131,7 @@ get_diet_table <- function(data){
       dplyr::summarise(mean_proportion = paste(mean(prop2) %>% round(digits = 3), 
                                                " +- ",
                                                sd(prop2) %>% round(digits = 3),
-                                               " (", length(prop2), ") ", 
+                                               " (", nrow(prop2), ") ", 
                                                sep = ""),
                        
                        range_proportion = paste(min(prop2) %>% round(digits = 3),

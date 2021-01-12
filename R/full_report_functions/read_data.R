@@ -59,7 +59,8 @@ for(i in 1:nrow(asmt)){
 # standardize units...
 for(i in 1:nrow(asmt)){
   if(asmt$Units[i] == "Number x 1,000" |
-     asmt$Units[i] == "Number x 1000"){
+     asmt$Units[i] == "Number x 1000" |
+     asmt$Units[i] == "Thousand Recruits"){
     asmt$Value[i] <- asmt$Value[i]*10^3
     asmt$Units[i] <- "Number"
   } 
@@ -87,6 +88,39 @@ for(i in 1:nrow(asmt)){
     asmt$Units[i] <- "Metric Tons"
   }
 }
+
+asmt$Description <- asmt$Description %>%
+ stringr::str_replace(" - ", ", ") %>%
+  stringr::str_replace("e Age", "e, Age")
+
+new_desc <- asmt$Description %>% 
+  stringr::str_split_fixed(" \\(", 2)
+
+details <- new_desc[ , 2] %>%
+  stringr::str_replace("\\)", "")
+
+new_desc2 <- new_desc[, 1] %>%
+  stringr::str_split_fixed(", ", 2)
+
+basic <- new_desc2[ , 1]
+detail_or_age <- new_desc2[ , 2]
+
+age <- c()
+for(i in 1:length(details)){
+  if(detail_or_age[i] %>% stringr::str_detect("Age") == TRUE){
+    age[i] <- detail_or_age[i]
+  }
+  if(details[i] %>% stringr::str_detect("Age") == TRUE){
+    age[i] <- details[i]
+  }
+  if(details[i] %>% stringr::str_detect("Age") == FALSE &
+     detail_or_age[i] %>% stringr::str_detect("Age") == FALSE){
+    age[i] <- "No age"
+  }
+}
+
+asmt$Age <- age
+
 #asmt$Units <- asmt$Units %>%
  # stringr::str_replace("Thousand Recruits", "Number x 1,000")
 
