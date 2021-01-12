@@ -1,4 +1,16 @@
-acadian-redfish
+fig:latlong
+fig:temp-1
+fig:temp-2
+fig:surfsalin-1
+fig:surfsalin-2
+fig:length-1
+fig:length-2
+fig:length-3
+fig:biomass
+fig:com
+fig:revenue
+fig:risk
+american-lobster
 methods
 general-methods
 assessmentdata-methods
@@ -66,6 +78,7 @@ stock-assessment-catch-1
 recreational-catch-1
 commercial-catch-1
 commercial-vs-recreational-catch-1
+commercial-recreational-and-stock-assessment-catch
 ffmsy
 figure-2
 data-9

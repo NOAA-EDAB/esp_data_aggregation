@@ -100,45 +100,55 @@ data_summary_5yr <- function(x){
 generate_plot <- function(x, ytitle, variable){
   
   data <- get_var_data(x, variable = variable)
-
-  fig <- plot_variable(data, ytitle = ytitle)
-
-  return(fig)
+  
+  if(nrow(data) > 0){
+    fig <- plot_variable(data, ytitle = ytitle)
+    
+    return(fig)
+  }
+  
+  else{print("NO DATA")}
+  
 }
 
 generate_table <- function(x, variable, cap){
   
   data <- get_var_data(x, variable = variable)
   
-  table <- data_summary(data)
-  table[ , 4:7] <- table[ , 4:7] %>%
-    round(digits = 2)
+  if(nrow(data) > 0){
+    table <- data_summary(data)
+    table[ , 4:7] <- table[ , 4:7] %>%
+      round(digits = 2)
+    
+    table_5yr <- data_summary_5yr(data)
+    table_5yr[ , 3:6] <- table_5yr[ , 3:6] %>%
+      round(digits = 2)
+    
+    total_table <- cbind(table,
+                         table_5yr[ , -(1:2)]) %>%
+      DT::datatable(rownames = FALSE,
+                    colnames = c("Season", "Region", "Total years", "Mean", 
+                                 "Standard deviation", "Minimum", "Maximum",
+                                 "Mean (past 5 years)", 
+                                 "Standard deviation (past 5 years)", 
+                                 "Minimum (past 5 years)", 
+                                 "Maximum (past 5 years)"),
+                    filter = list(position = 'top', 
+                                  clear = FALSE),
+                    extensions = 'Scroller',
+                    caption = cap,
+                    options = list(search = list(regex = TRUE),
+                                   deferRender = TRUE,
+                                   scrollY = 200,
+                                   scrollX = TRUE,
+                                   scroller = TRUE,
+                                   language = list(thousands = ",")))
+    
+    return(total_table)
+  }
   
-  table_5yr <- data_summary_5yr(data)
-  table_5yr[ , 3:6] <- table_5yr[ , 3:6] %>%
-    round(digits = 2)
+  else{print("NO DATA")}
   
-  total_table <- cbind(table,
-                       table_5yr[ , -(1:2)]) %>%
-    DT::datatable(rownames = FALSE,
-                  colnames = c("Season", "Region", "Total years", "Mean", 
-                               "Standard deviation", "Minimum", "Maximum",
-                               "Mean (past 5 years)", 
-                               "Standard deviation (past 5 years)", 
-                               "Minimum (past 5 years)", 
-                               "Maximum (past 5 years)"),
-                  filter = list(position = 'top', 
-                                clear = FALSE),
-                  extensions = 'Scroller',
-                  caption = cap,
-                  options = list(search = list(regex = TRUE),
-                                 deferRender = TRUE,
-                                 scrollY = 200,
-                                 scrollX = TRUE,
-                                 scroller = TRUE,
-                                 language = list(thousands = ",")))
-
-  return(total_table)
 }
 
 # not used anymore

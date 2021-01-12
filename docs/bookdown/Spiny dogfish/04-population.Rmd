@@ -76,15 +76,15 @@ if(nrow(swept_data) > 0){
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Abundance")) > 0){
 ndesc <- asmt_data %>% 
   dplyr::filter(Metric == "Abundance") %>% 
-  dplyr::mutate(options = paste(Description, Units)) %>%
-  dplyr::select(options) %>% 
+  #dplyr::mutate(options = paste(Description, Units)) %>%
+  dplyr::select(Age) %>% 
   unique() %>% 
-  length()
+  nrow()
 } else ndesc <- 1
 ```
 
-```{r, abun_asmt}
-# fig.height = ndesc * 10
+```{r, abun_asmt, fig.height = ndesc * 4}
+# 
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Abundance")) > 0){
 plot_asmt(asmt_data, 
           metric = "Abundance", 
@@ -204,15 +204,15 @@ if(nrow(swept_data) > 0){
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Biomass")) > 0){
 ndesc <- asmt_data %>% 
   dplyr::filter(Metric == "Biomass") %>% 
-  dplyr::mutate(options = paste(Description, Units)) %>%
-  dplyr::select(options) %>% 
+  #dplyr::mutate(options = paste(Description, Units)) %>%
+  dplyr::select(Age) %>% 
   unique() %>% 
-  length()
+  nrow()
 } else ndesc <- 1
 ```
 
-```{r, biomass_asmt}
-#  fig.height = ndesc * 10
+```{r, biomass_asmt,  fig.height = ndesc * 4 + 1}
+# 
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Biomass")) > 0){
 plot_asmt(asmt_data, 
           metric = "Biomass", 
@@ -350,15 +350,15 @@ Recruitment data were pulled from ``r params$asmt_source``. Separate geom_gls() 
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Recruitment")) > 0){
 ndesc <- asmt_data %>% 
   dplyr::filter(Metric == "Recruitment") %>% 
-  dplyr::mutate(options = paste(Description, Units)) %>%
-  dplyr::select(options) %>% 
+  #dplyr::mutate(options = paste(Description, Units)) %>%
+  dplyr::select(Age) %>% 
   unique() %>% 
-  length()
+  nrow()
 } else ndesc <- 1
 ```
 
-```{r, recruitment}
-# fig.height = ndesc * 10
+```{r, recruitment, fig.height = ndesc * 4 + 1}
+# 
 if(nrow(asmt_data %>% dplyr::filter(Metric == "Recruitment")) > 0){
 plot_asmt(asmt_data, 
           metric = "Recruitment", 
@@ -375,7 +375,8 @@ data <- asmt_data %>%
                 dplyr::filter(Metric == "Recruitment") %>%
                 dplyr::select(-Species, -Metric) %>%
                 dplyr::mutate(Value = Value %>%
-                              format(big.mark = ",")) %>%
+                              format(big.mark = ",",
+                                     scientific = FALSE)) %>%
   character_to_factor()
 
 DT::datatable(data, 

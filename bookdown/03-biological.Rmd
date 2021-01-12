@@ -27,16 +27,12 @@ Length data were pulled from ``r params$survey_source``. Only years with more th
 
 Separate geom_gls() functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, length}
-if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
-  generate_len_plot(survey_data)
-} else print("NO DATA")
+generate_len_plot(survey_data)
 ```
 
 ### Summary
 ```{r, length_summary}
-if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
-  generate_len_table(survey_data)
-} else print("NO DATA")
+generate_len_table(survey_data)
 ```
 
 ### Data
@@ -44,19 +40,8 @@ if(sum(is.na(survey_data$LENGTH)) < length(survey_data$LENGTH)){
 data <- get_len_data2(survey_data) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Year", "Season", "Region", "Number of fish",
-                       "Mean length", "Minimum length", "Maximum length"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Year", "Season", "Region", "Number of fish",
+                       "Mean length", "Minimum length", "Maximum length"))
 ```
 
 ## Condition
@@ -68,27 +53,21 @@ Condition information comes from [diet data](https://github.com/Laurels1/Conditi
 
 Please note, no trend lines were fit, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, lw}
-if(length(diet_data$Species) >= 1){
 plot_lw(diet_data)
-} else print("NO DATA")
 ```
 
 #### Condition factor: Weight-volume
 
 If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, condition}
-if(length(diet_data$Species) >= 1){
 plot_cond(diet_data)
-} else print("NO DATA")
 ```
 
 #### Condition factor: Relative weight
 
 Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
 ```{r, laurel_cond}
-if(length(cond_data$Species) >= 1){
 plot_relw(cond_data)
-} else print("NO DATA")
 ```
 
 ### Data
@@ -109,19 +88,8 @@ data <- diet_data %>%
   dplyr::select(Region, year, season, pdlen, pdwgt, condition) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Region", "Year", "Season", "Fish length (cm)", 
-                       "Fish weight (g)", "Condition (g/cm^3)"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Region", "Year", "Season", "Fish length (cm)", 
+                       "Fish weight (g)", "Condition (g/cm^3)"))
 ```
 
 #### Relative weight condition factor
@@ -133,17 +101,6 @@ data <- cond_data %>%
                   round(digits = 1)) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("EPU", "Fish sex", "Year", "Mean condition",
-                       "Number of fish"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("EPU", "Fish sex", "Year", "Mean condition",
+                       "Number of fish"))
 ```

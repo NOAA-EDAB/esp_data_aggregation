@@ -63,7 +63,7 @@ ndesc <- asmt_data %>%
   dplyr::mutate(options = paste(Description, Units)) %>%
   dplyr::select(options) %>% 
   unique() %>% 
-  length()
+  nrow()
 } else ndesc <- 1
 ```
 
