@@ -8,7 +8,14 @@ survey_ws <- readRDS(here::here("data", "survey_data_12292020_wintersummer.RDS")
 
 survey_big <- dplyr::union(survey, survey_ws)
 
-asmt_sum <- read.csv(here::here("data", "assessmentdata_ratings.csv"))
+# read assessmentdata directly from package
+asmt_sum <- assessmentdata::stockAssessmentSummary %>% 
+  dplyr::filter(Jurisdiction == "NEFMC" | 
+                  Jurisdiction == "NEFMC / MAFMC" | 
+                  Jurisdiction == "MAFMC")
+split_info <- stringr::str_split_fixed(asmt_sum$`Stock Name`, " - ", n = 2)
+asmt_sum$Species <- split_info[,1]
+asmt_sum$Region <- split_info[,2]
 
 latlong <- read.csv(here::here("data", "geo_range_data.csv")) %>%
   dplyr::rename(stock_season = season_)
@@ -19,6 +26,7 @@ rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
 
 source(here::here("data", "allfh_regions.R"))
 
+# assessmentdata ----
 asmt <- assessmentdata::stockAssessmentData %>%
   dplyr::filter(Region == "Gulf of Maine / Georges Bank" |
                   Region == "Eastern Georges Bank" |
@@ -146,6 +154,7 @@ asmt$Category <- category
 #asmt$Units <- asmt$Units %>%
  # stringr::str_replace("Thousand Recruits", "Number x 1,000")
 
+# ----
 cond <- rbind(read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GB.csv"),
               read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GOM.csv"),
               read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_MAB.csv"),

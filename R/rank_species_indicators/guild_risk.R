@@ -38,13 +38,13 @@ survey2 <- survey %>%
 survey2
 
 guild_risk2 <- dplyr::left_join(survey2, guild_risk, by = "Species") %>%
-  dplyr::group_by(Species, Scientific_name, Indicator, Guild, overall_mean_len) %>%
+  dplyr::group_by(Species, Scientific_name, Indicator, category, Guild, overall_mean_len) %>%
   dplyr::summarise(mean_norm_risk = mean(norm_rank)) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(size = ifelse(overall_mean_len < 40, "small", "large")) 
 
 guild_risk3 <- guild_risk2 %>%
-  dplyr::group_by(Guild, size, Indicator) %>%
+  dplyr::group_by(Guild, size, Indicator, category) %>%
   dplyr::summarise(guild_risk = sum(mean_norm_risk),
                    n_guild_species = length(mean_norm_risk),
                    avg_guild_risk = guild_risk/n_guild_species) %>%
@@ -59,19 +59,10 @@ guild_risk3 <- guild_risk2 %>%
 head(guild_risk3)
 
 dat <- guild_risk3 %>%
-  dplyr::mutate(category = ifelse(Indicator == "ffmsy" |
-                                    Indicator == "asmt_catch" |
-                                    Indicator == "rec_catch" |
-                                    Indicator == "com_catch_max" |
-                                    Indicator == "revenue_max" |
-                                    Indicator == "com_catch_5yr" |
-                                    Indicator == "revenue_5yr" |
-                                    Indicator == "com_catch_hist" |
-                                    Indicator == "revenue_hist",
-                                  "Social", "Biological"),
-                legend_label = paste(category, Indicator, sep = ":\n")) %>%
+  dplyr::mutate(legend_label = paste(category, Indicator, sep = ":\n")) %>%
   dplyr::arrange(legend_label) %>%
   dplyr::mutate(label_y = total_guild_risk - cumsum(avg_guild_risk))
+
 write.csv(dat,
           file = here::here("data/risk_ranking", "guild_data.csv"))
 

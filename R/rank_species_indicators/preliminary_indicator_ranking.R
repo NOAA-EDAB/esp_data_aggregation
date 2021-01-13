@@ -9,6 +9,9 @@ key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/se
 key2 <- data.frame(SVSPP = unique(key$SVSPP),
                    Species = stringr::str_to_sentence(unique(key$COMNAME)))
 
+# read in data
+source(here::here("R/full_report_functions", "read_data.R"))
+
 # high normalized rank = more risk
 
 # f/fmsy ----
@@ -16,12 +19,7 @@ key2 <- data.frame(SVSPP = unique(key$SVSPP),
 # rank f/fmsy by species
 # high f/fmsy = high risk
 
-bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
-colnames(bf)
-
-bf$Species %in% key2$Species
-
-f_rank <- bf %>% 
+f_rank <- asmt_sum %>% 
   dplyr::select(Species, Region, F.Fmsy, F.Year) %>%
   dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
   dplyr::filter(ne_stock == "TRUE", F.Fmsy > 0) %>%
@@ -45,9 +43,7 @@ f_rank
 # rank b/bmsy by species
 # low b/bmsy = high risk
 
-bf <- read.csv(here::here("data", "bbmsy_ffmsy_data.csv"))
-
-b_rank <- bf %>% 
+b_rank <- asmt_sum %>% 
   dplyr::select(Species, Region, B.Bmsy, B.Year) %>%
   dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
   dplyr::filter(ne_stock == "TRUE", B.Bmsy > 0) %>%
@@ -72,10 +68,6 @@ b_rank
 # species not separated into stock areas
 # high catch = more risk (the fish is more important)
 
-rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
-  dplyr::filter(sub_reg_f == "NORTH ATLANTIC")
-head(rec)
-
 max_year <- max(rec$year)
 rec_rank <- rec %>% 
   dplyr::select(Species, year, tot_cat) %>%
@@ -97,33 +89,9 @@ rec_rank
 
 # total catch ----
 
+# lots of catch descriptions in new assessmentdata package
+# which to use so analysis is consistent - highest overall?
 # rank by max of all time
-asmt <- assessmentdata::stockAssessmentData %>%
-  dplyr::filter(Region == "Gulf of Maine / Georges Bank" |
-                  Region == "Eastern Georges Bank" |
-                  Region == "Georges Bank" |
-                  Region == "Gulf of Maine" |
-                  Region == "Gulf of Maine / Cape Hatteras" |
-                  Region == "Georges Bank / Southern New England" |
-                  Region == "Southern New England / Mid" |
-                  Region == "Gulf of Maine / Northern Georges Bank" |
-                  Region == "Southern Georges Bank / Mid" |
-                  Region == "Cape Cod / Gulf of Maine")
-asmt$Region <- asmt$Region %>% 
-  stringr::str_replace("Mid", "Mid-Atlantic")
-asmt$Species <- asmt$Species %>% 
-  stringr::str_to_sentence()
-asmt$Units <- asmt$Units %>%
-  stringr::str_replace("Thousand Recruits", "Number x 1,000")
-
-# standardize units
-for(i in 1:nrow(asmt)){
-  if(asmt$Units[i] == "Thousand Metric Tons"){
-    asmt$Value [i] <- 1000 * asmt$Value[i]
-    asmt$Units[i] <- "Metric Tons"
-  }
-}
-
 catch_rank  <- asmt %>% dplyr::filter(Metric == "Catch") %>%
   dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
   dplyr::filter(ne_stock == "TRUE") %>%
@@ -140,9 +108,9 @@ catch_rank <- catch_rank %>%
                 norm_rank = rank/max(rank)) %>%
   dplyr::select(Species, Region, Value, Year_measured, Indicator, rank, norm_rank)
 
+# abundance ----
 # avg abundance of past 10 years as % of avg abundance of all times up to 10 years ago
-max(asmt$Year)
-abun_rank  <- asmt %>% dplyr::filter(Metric == "Abundance", Units == "Metric Tons") %>%
+abun_rank  <- asmt %>% dplyr::filter(Metric == "Abundance", Units == "Number") %>%
   dplyr::mutate(ne_stock = (Species %in% key2$Species),
                 recent = Year > max(Year) - 10) %>%
   dplyr::filter(ne_stock == "TRUE") %>%

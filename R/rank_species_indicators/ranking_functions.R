@@ -121,6 +121,14 @@ yr5mean_indicator <- function(data, year_source, value_source, high, indicator_n
 # max of all time ----
 maxalltime_indicator <- function(data, year_source, value_source, high, indicator_name){
   
+  # select assessmentdata just from most recent assessment for each species
+  if(sum(data %>% colnames %>% stringr::str_detect("AssessmentYear")) > 0){
+    data <- data %>%
+      dplyr::group_by(Species) %>%
+      dplyr::mutate(most_recent_asmt = max(AssessmentYear)) %>%
+      dplyr::filter(AssessmentYear == most_recent_asmt)
+  }
+  
   data <- data %>%
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
@@ -158,6 +166,14 @@ maxalltime_indicator <- function(data, year_source, value_source, high, indicato
 
 yr10hist_indicator <- function(data, year_source, value_source, high, indicator_name){
   
+  # select assessmentdata just from most recent assessment for each species
+  if(sum(data %>% colnames %>% stringr::str_detect("AssessmentYear")) > 0){
+    data <- data %>%
+      dplyr::group_by(Species) %>%
+      dplyr::mutate(most_recent_asmt = max(AssessmentYear)) %>%
+      dplyr::filter(AssessmentYear == most_recent_asmt)
+  }
+
   data <- data %>%
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
@@ -250,7 +266,7 @@ alltime_indicator_diet <- function(data, value_source, year_source, high, indica
 }
 
 alltime_indicator_review <- function(data, value_source, high, indicator_name){
-  
+  # not functional yet
   data <- data %>%
     dplyr::select(Species, Region, value_source) %>%
     dplyr::rename("Value" = value_source) %>%

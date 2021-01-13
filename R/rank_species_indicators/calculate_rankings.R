@@ -12,21 +12,22 @@ survey <- survey %>%
 # rank data ----
 
 # * most recent measurement ----
-### B/Bmsy, F/Fmsy
+### B/Bmsy ----
 b <- recent_indicator(data = asmt_sum, 
-                 year_source = "B.Year", 
-                 value_source = "B.Bmsy", 
+                 year_source = "B Year", 
+                 value_source = "B/Bmsy", 
                  high = "low_risk",
                  indicator_name = "bbmsy")
 
+### F/Fmsy ----
 f <- recent_indicator(data = asmt_sum, 
-                 year_source = "F.Year", 
-                 value_source = "F.Fmsy", 
+                      year_source = "F Year", 
+                      value_source = "F/Fmsy", 
                  high = "high_risk",
                  indicator_name = "ffmsy")
 
 # * mean of past 5 years ----
-### rec catch
+### rec catch ----
 rec$Region <- NA
 
 rec <- yr5mean_indicator(data = rec, 
@@ -36,34 +37,40 @@ rec <- yr5mean_indicator(data = rec,
                   indicator_name = "rec_catch")
 
 # * max of all time ----
-### total catch
+### total catch ----
 
-# standardize units
-for(i in 1:nrow(asmt)){
-  if(asmt$Units[i] == "Thousand Metric Tons"){
-    asmt$Value [i] <- 1000 * asmt$Value[i]
-    asmt$Units[i] <- "Metric Tons"
-  }
-}
-
-catch <- maxalltime_indicator(data = asmt %>% dplyr::filter(Metric == "Catch"), 
+# units standardized in read_data script
+dat <- asmt %>% dplyr::filter(Metric == "Catch",
+                              Units == "Metric Tons")
+catch <- maxalltime_indicator(data = dat, 
                      year_source = "Year", 
                      value_source = "Value", 
                      high = "high_risk",
-                     indicator_name = "asmt_catch")
+                     indicator_name = "asmt_catch") 
 
 # * mean of past 10 years as % of historical ----
-### abundance, recruitment, biomass, mean length, max length
-dat <- asmt %>% dplyr::filter(Metric == "Biomass" |
-                                Metric == "Abundance")
-# since this is a %, it doesn't matter that the units are different
+### abundance, recruitment, biomass, mean length, max length ----
 
+# since this is a %, it doesn't matter that the units are different by species
+# as long as units are consistent within each species
+
+### abundance ----
+dat <- asmt %>% dplyr::filter(Metric == "Abundance")
 abun <- yr10hist_indicator(data = dat, 
                    year_source = "Year", 
                    value_source = "Value", 
                    high = "low_risk",
-                   indicator_name = "abundance")
+                   indicator_name = "asmt_abundance")
 
+### biomass (asmt) ----
+dat <- asmt %>% dplyr::filter(Metric == "Biomass")
+biomass <- yr10hist_indicator(data = dat, 
+                           year_source = "Year", 
+                           value_source = "Value", 
+                           high = "low_risk",
+                           indicator_name = "asmt_biomass")
+
+### recruitment ----
 dat <- asmt %>% dplyr::filter(Metric == "Recruitment")
 recruit <- yr10hist_indicator(data = dat, 
                    year_source = "Year", 
@@ -71,24 +78,45 @@ recruit <- yr10hist_indicator(data = dat,
                    high = "low_risk",
                    indicator_name = "recruitment")
 
-biomass <- survey %>% 
+### biomass (survey) ----
+biomass_surv <- survey %>% 
   dplyr::select(Species, Region, YEAR, SEASON, BIOMASS, fish_id) %>%
   dplyr::distinct()
-biomass$YEAR <- as.numeric(biomass$YEAR)
+biomass_surv$YEAR <- as.numeric(biomass_surv$YEAR)
 
-biomass_f <- yr10hist_indicator(data = biomass %>% 
+biomass_f <- yr10hist_indicator(data = biomass_surv %>% 
                      dplyr::filter(SEASON == "FALL", Region != "Outside stock area"), 
                    year_source = "YEAR", 
                    value_source = "BIOMASS", 
                    high = "low_risk",
                    indicator_name = "biomass_fall")
-biomass_s <- yr10hist_indicator(data = biomass %>% 
+biomass_s <- yr10hist_indicator(data = biomass_surv %>% 
                      dplyr::filter(SEASON == "SPRING", Region != "Outside stock area"), 
                    year_source = "YEAR", 
                    value_source = "BIOMASS", 
                    high = "low_risk",
                    indicator_name = "biomass_spring")
 
+### abundance (survey) ----
+abun_survey <- survey %>% 
+  dplyr::select(Species, Region, YEAR, SEASON, ABUNDANCE, fish_id) %>%
+  dplyr::distinct()
+abun_survey$YEAR <- as.numeric(abun_survey$YEAR)
+
+abun_f <- yr10hist_indicator(data = abun_survey %>% 
+                                  dplyr::filter(SEASON == "FALL", Region != "Outside stock area"), 
+                                year_source = "YEAR", 
+                                value_source = "ABUNDANCE", 
+                                high = "low_risk",
+                                indicator_name = "abundance_fall")
+abun_s <- yr10hist_indicator(data = abun_survey %>% 
+                                  dplyr::filter(SEASON == "SPRING", Region != "Outside stock area"), 
+                                year_source = "YEAR", 
+                                value_source = "ABUNDANCE", 
+                                high = "low_risk",
+                                indicator_name = "abundance_spring")
+
+### length ----
 length <- survey %>% 
   dplyr::select(Species, Region, YEAR, SEASON, LENGTH, NUMLEN, fish_id) %>%
   dplyr::group_by(fish_id) %>%
@@ -127,6 +155,7 @@ max_len_s <- yr10hist_indicator(data = length %>%
 
 # * calculated from all time ----
 ### number of prey categories, % of rejected stock assessments
+### diet ----
 diet <- alltime_indicator_diet(data = allfh %>% 
                                 dplyr::filter(gensci != "EMPTY", 
                                               gensci != "BLOWN",
@@ -185,13 +214,14 @@ rev_hist <- yr10hist_indicator(data = com,
                                indicator_name = "revenue_hist")
 
 # * merge everything except rec and com ----
-all_ind <- rbind(b, f, catch, recruit, abun, biomass_f, biomass_s,
+all_ind <- rbind(b, f, catch, recruit, abun, biomass, biomass_f, biomass_s,
+                 abun_f, abun_s,
                  avg_len_f, avg_len_s, max_len_f, max_len_s, diet)
 
 # data wrangling -----
 
 # * standardize region names ----
-all_ind$Region %>% unique() %>% stringr::str_sort() %>% View
+#all_ind$Region %>% unique() %>% stringr::str_sort() %>% View
 
 all_ind$Region <- all_ind$Region %>%
   stringr::str_replace("Atlantic Coast", "Atlantic") %>%
@@ -224,7 +254,8 @@ names_added <- dplyr::left_join(missing_names, region_key,
 fixed_data <- rbind(has_names, names_added)
 
 # replace any NA Region with "Unknown"
-fixed_data$Region <- fixed_data$Region %>% tidyr::replace_na("Unknown")
+fixed_data$Region <- fixed_data$Region %>% 
+  tidyr::replace_na("Unknown")
 
 # * create dummy rec and com regions and add rec and com to the rest of the data ----
 all_catch <- rbind(rec, com_max, com_5yr, com_hist, 
@@ -256,7 +287,7 @@ data <- fixed_data %>%
                      values_from = "norm_rank")
 data[is.na(data)] <- 0.5
 
-data <- data %>% tidyr::pivot_longer(cols = colnames(data[3:21]),
+data <- data %>% tidyr::pivot_longer(cols = colnames(data[3:ncol(data)]),
                              names_to = "Indicator",
                              values_to = "norm_rank") %>%
   dplyr::group_by(Species, Region) %>%
@@ -267,18 +298,34 @@ data <- data %>% tidyr::pivot_longer(cols = colnames(data[3:21]),
                       sep = ", ")) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(overall_rank = dplyr::dense_rank(total_risk),
-                overall_stocks = stock %>% unique() %>% length(),
-                category = ifelse(Indicator == "ffmsy" |
-                                    Indicator == "asmt_catch" |
-                                    Indicator == "rec_catch" |
-                                    Indicator == "com_catch_max" |
-                                    Indicator == "revenue_max" |
-                                    Indicator == "com_catch_5yr" |
-                                    Indicator == "revenue_5yr" |
-                                    Indicator == "com_catch_hist" |
-                                    Indicator == "revenue_hist",
-                                  "Social", "Biological"))
-data 
+                overall_stocks = stock %>% unique() %>% length())
+
+# categorize indicators
+data$Indicator %>% unique()
+
+category <- c()
+for(i in 1:nrow(data)){
+  if(data$Indicator[i] %>% stringr::str_detect("length") == TRUE |
+     data$Indicator[i] %>% stringr::str_detect("diet") == TRUE
+     ){
+    category[i] <- "Biological"
+  }
+  if(data$Indicator[i] %>% stringr::str_detect("abundance") == TRUE |
+     data$Indicator[i] %>% stringr::str_detect("biomass") == TRUE |
+     data$Indicator[i] %>% stringr::str_detect("bbmsy") == TRUE |
+     data$Indicator[i] %>% stringr::str_detect("recruitment") == TRUE
+     ){
+    category[i] <- "Population"
+  }
+  if(data$Indicator[i] %>% stringr::str_detect("catch") == TRUE |
+     data$Indicator[i] %>% stringr::str_detect("ffmsy") == TRUE |
+     data$Indicator[i] %>% stringr::str_detect("revenue") == TRUE 
+  ){
+    category[i] <- "Socioeconomic"
+  }
+}
+
+data$category <- category
 
 # join fixed_data (with values and years) to data (with total ranks and labels)
 new_data <- dplyr::full_join(data, fixed_data,
@@ -293,6 +340,9 @@ new_data
 
 write.csv(new_data,
           file = here::here("data/risk_ranking", "full_risk_data.csv"))
+
+write.csv(new_data %>% dplyr::ungroup() %>% dplyr::select(category, Indicator) %>% dplyr::distinct(), 
+          file = here::here("data/risk_ranking", "indicator_key.csv"))
 
 # render Rmd report ----
 rmarkdown::render(here::here("R/rank_species_indicators", "plot_all_risk.Rmd"), 
