@@ -30,15 +30,5 @@ Stock assessment and data quality information were pulled from ``r params$asmt_s
 data <- ad_rating_data %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = colnames(data))
 ```

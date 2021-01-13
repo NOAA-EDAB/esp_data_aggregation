@@ -15,7 +15,7 @@ dir.create(here::here("docs/bookdown/Acadian redfish"))
 file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
 
 setwd(here::here("bookdown"))
-purrr::map("Goosefish", 
+purrr::map(list_species[18:37], 
            ~bookdown::render_book(input = ".",
                                  params = list(species_ID = .x,
                                                

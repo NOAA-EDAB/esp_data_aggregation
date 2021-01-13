@@ -121,6 +121,28 @@ for(i in 1:length(details)){
 
 asmt$Age <- age
 
+category <- c()
+for(i in 1:nrow(asmt)){
+  if(asmt$Description[i] %>% stringr::str_detect("Mature") == TRUE){
+    category[i] <- "Mature"
+  } 
+  if(asmt$Description[i] %>% stringr::str_detect("Spawning Stock") == TRUE |
+     asmt$Description[i] %>% stringr::str_detect("SSB") == TRUE){
+    category[i] <- "Spawning Stock"
+  }
+  if(asmt$Description[i] %>% stringr::str_detect("Survey") == TRUE){
+    category[i] <- "Survey"
+  }
+  if(asmt$Description[i] %>% stringr::str_detect("Survey") == FALSE &
+     asmt$Description[i] %>% stringr::str_detect("Mature") == FALSE &
+     asmt$Description[i] %>% stringr::str_detect("Spawning Stock") == FALSE &
+     asmt$Description[i] %>% stringr::str_detect("SSB") == FALSE
+     ){
+    category[i] <- "Other"
+  }
+}
+asmt$Category <- category
+
 #asmt$Units <- asmt$Units %>%
  # stringr::str_replace("Thousand Recruits", "Number x 1,000")
 

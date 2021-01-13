@@ -100,6 +100,8 @@ data <- asmt_data %>%
   dplyr::filter(Metric == "Catch") %>%
   dplyr::select(-Species, -Metric) %>%
   dplyr::mutate(Value = Value %>%
+                  round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
                   format(big.mark = ",")) %>%
   character_to_factor()
 

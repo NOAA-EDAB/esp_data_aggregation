@@ -20,17 +20,6 @@ data <- risk_data %>% dplyr::mutate(Rank = paste(rank, "out of", n_stocks_per_in
   dplyr::rename("Value" = "Value2") %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Region", "Category", "Indicator", "Year", "Value",
-                       "Rank", "Normalized rank"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Region", "Category", "Indicator", "Year", "Value",
+                       "Rank", "Normalized rank"))
 ```

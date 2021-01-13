@@ -28,18 +28,7 @@ Latitude and longitude ranges were calculated from NOAA/EDAB ECSA [seasonal spec
 data <- get_latlong(species, latlong_data, shapefile = params$shape) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
-
+make_html_table(data, col_names = colnames(data))
 ```
 
 ## Temperature
@@ -50,32 +39,24 @@ Surface and bottom temperature data were pulled from ``r params$survey_source``.
 
 Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, temp}
-if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
-  generate_plot(survey_data,
+generate_plot(survey_data,
               variable = "SURFTEMP", 
               ytitle = "Surface temperature")
-} else print("NO SURFACE DATA")
 
-if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
-  generate_plot(survey_data,
+generate_plot(survey_data,
               variable = "BOTTEMP", 
               ytitle = "Bottom temperature")
-} else print("NO BOTTOM DATA")
 ```
 
 ### Summary
 ```{r, temp_summary}
-if(sum(is.na(survey_data$SURFTEMP)) < length(survey_data$SURFTEMP)){
-  generate_table(survey_data,
+generate_table(survey_data,
               variable = "SURFTEMP", 
               cap = "Surface temperature")
-} else print("NO SURFACE DATA")
 
-if(sum(is.na(survey_data$BOTTEMP)) < length(survey_data$BOTTEMP)){
-  generate_table(survey_data,
+generate_table(survey_data,
               variable = "BOTTEMP", 
               cap = "Bottom temperature")
-} else print("NO BOTTOM DATA")
 ```
 
 ### Data
@@ -96,19 +77,8 @@ data <- survey_data %>%
                                    round(digits = 2)) %>%
   character_to_factor() # mean by season-year
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Year", "Season", "Region", 
-                       "Mean surface temperature", "Mean bottom temperature"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Year", "Season", "Region", 
+                       "Mean surface temperature", "Mean bottom temperature"))
 ```
 
 ## Salinity
@@ -119,32 +89,24 @@ Surface and bottom salinity data were pulled from ``r params$survey_source``.
 
 Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, surfsalin}
-if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
-  generate_plot(survey_data,
+generate_plot(survey_data,
               variable = "SURFSALIN", 
               ytitle = "Surface salinity")
-} else print("NO SURFACE DATA")
 
-if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
-  generate_plot(survey_data,
+generate_plot(survey_data,
               variable = "BOTSALIN", 
               ytitle = "Bottom salinity")
-} else print("NO BOTTOM DATA")
 ```
 
 ### Summary
 ```{r, salin_summary}
-if(sum(is.na(survey_data$SURFSALIN)) < length(survey_data$SURFSALIN)){
-  generate_table(survey_data,
+generate_table(survey_data,
               variable = "SURFSALIN", 
               cap = "Surface salinity")
-} else print("NO SURFACE DATA")
 
-if(sum(is.na(survey_data$BOTSALIN)) < length(survey_data$BOTSALIN)){
-  generate_table(survey_data,
+generate_table(survey_data,
               variable = "BOTSALIN", 
               cap = "Bottom salinity")
-} else print("NO BOTTOM DATA")
 ```
 
 ### Data
@@ -165,17 +127,6 @@ data <- survey_data %>%
                                    round(digits = 2)) %>%
   character_to_factor() # mean by season-year
 
-DT::datatable(data, 
-          rownames = FALSE,
-                    colnames = c("Year", "Season", "Region", 
-                       "Mean surface salinity", "Mean bottom salinity"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Year", "Season", "Region", 
+                       "Mean surface salinity", "Mean bottom salinity"))
 ```

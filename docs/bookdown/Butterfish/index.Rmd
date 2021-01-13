@@ -65,6 +65,7 @@ library(ggplot2)
 
 ```{r, universal_functions, include = FALSE}
 source(here::here("R", "character_to_factor.R"))
+source(here::here("R/full_report_functions", "make_html_table.R"))
 ```
 
 ```{r, universal_data, include = FALSE}

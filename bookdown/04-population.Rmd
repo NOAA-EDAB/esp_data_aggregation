@@ -126,6 +126,8 @@ data <- asmt_data %>%
                 dplyr::filter(Metric == "Abundance") %>%
                 dplyr::select(-Species, -Metric) %>%
                 dplyr::mutate(Value = Value %>%
+                                round(digits = 0)) %>%
+                dplyr::mutate(Value = Value %>%
                               format(big.mark = ",")) %>%
   character_to_factor()
 
@@ -174,7 +176,7 @@ plot_asmt(asmt_data,
           col = colors)
 ```
 
-### Summary
+### Survey summary
 ```{r, biomass_summary}
 generate_table(survey_data,
               variable = "BIOMASS", 
@@ -213,11 +215,13 @@ make_html_table(data, col_names = c("Year", "Biomass (kg)", "Standard error"))
 
 #### Assessment data
 ```{r, asmt_biomass_data}
-data <- asmt_data %>% 
-                dplyr::filter(Metric == "Biomass") %>%
-                dplyr::select(-Species, -Metric) %>%
-                dplyr::mutate(Value = Value %>%
-                              format(big.mark = ",")) %>%
+data <- asmt_data %>%
+  dplyr::filter(Metric == "Biomass") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+                  round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+                  format(big.mark = ",")) %>%
   character_to_factor()
 
 make_html_table(data, col_names = colnames(data))
@@ -276,11 +280,13 @@ plot_asmt(asmt_data,
 
 ```{r, recruit_data}
 data <- asmt_data %>% 
-                dplyr::filter(Metric == "Recruitment") %>%
-                dplyr::select(-Species, -Metric) %>%
-                dplyr::mutate(Value = Value %>%
-                              format(big.mark = ",",
-                                     scientific = FALSE)) %>%
+  dplyr::filter(Metric == "Recruitment") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+                  round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+                  format(big.mark = ",",
+                         scientific = FALSE)) %>%
   character_to_factor()
 
 make_html_table(data, col_names = colnames(data))

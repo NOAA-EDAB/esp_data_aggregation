@@ -55,20 +55,16 @@ Separate geom_gls() functions were fit for fall and spring measurements; trend l
 
 #### Survey abundance (raw measurements)
 ```{r, abun_survey}
-if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
-  generate_plot(survey_data,
+generate_plot(survey_data,
               variable = "ABUNDANCE", 
               ytitle = "Abundance")
-} else print("NO DATA")
 ```
 
 #### Survey abundance (swept area estimates)
 
 Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
 ```{r, abun_survey_swept}
-if(nrow(swept_data) > 0){
-  plot_swept_abun(swept_data)
-} else print("NO DATA")
+plot_swept_abun(swept_data)
 ```
 
 #### Assessment abundance
@@ -84,23 +80,18 @@ ndesc <- asmt_data %>%
 ```
 
 ```{r, abun_asmt, fig.height = ndesc * 4}
-# 
-if(nrow(asmt_data %>% dplyr::filter(Metric == "Abundance")) > 0){
 plot_asmt(asmt_data, 
           metric = "Abundance", 
           ytitle = "Abundance",
           lin = lines, 
           col = colors)
-} else print("NO DATA")
 ```
 
 ### Survey summary
 ```{r, abun_summary}
-if(sum(is.na(survey_data$ABUNDANCE)) < length(survey_data$ABUNDANCE)){
-  generate_table(survey_data,
+generate_table(survey_data,
               variable = "ABUNDANCE", 
               cap = "Measured abundance")
-} else print("NO DATA")
 ```
 
 ### Data
@@ -112,18 +103,7 @@ data <- get_var_data(survey_data, variable = "ABUNDANCE") %>%
                   format(big.mark = ","))  %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Year", "Season", "Region", "Abundance"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Year", "Season", "Region", "Abundance"))
 ```
 
 #### Survey data (swept area estimates)
@@ -137,18 +117,7 @@ data <- swept_data %>%
                   round(digits = 1) %>%
                   format(big.mark = ","))
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Year", "Abundance", "Standard error"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Year", "Abundance", "Standard error"))
 ```
 
 #### Assessment data
@@ -157,20 +126,12 @@ data <- asmt_data %>%
                 dplyr::filter(Metric == "Abundance") %>%
                 dplyr::select(-Species, -Metric) %>%
                 dplyr::mutate(Value = Value %>%
+                                round(digits = 0)) %>%
+                dplyr::mutate(Value = Value %>%
                               format(big.mark = ",")) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = colnames(data))
 ```
 
 ## Biomass
@@ -183,20 +144,16 @@ Separate geom_gls() functions were fit for fall and spring measurements; trend l
 
 #### Survey biomass (raw measurements)
 ```{r, biomass}
-if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
-  generate_plot(survey_data,
+generate_plot(survey_data,
               variable = "BIOMASS", 
               ytitle = "Biomass")
-} else print("NO DATA")
 ```
 
 #### Survey biomass (swept area estimates)
 
 Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
 ```{r, bio_survey_swept}
-if(nrow(swept_data) > 0){
-  plot_swept_biomass(swept_data)
-} else print("NO DATA")
+plot_swept_biomass(swept_data)
 ```
 
 #### Assessment biomass:
@@ -212,23 +169,18 @@ ndesc <- asmt_data %>%
 ```
 
 ```{r, biomass_asmt,  fig.height = ndesc * 4 + 1}
-# 
-if(nrow(asmt_data %>% dplyr::filter(Metric == "Biomass")) > 0){
 plot_asmt(asmt_data, 
           metric = "Biomass", 
           ytitle = "Biomass",
           lin = lines, 
           col = colors)
-} else print("NO DATA")
 ```
 
-### Summary
+### Survey summary
 ```{r, biomass_summary}
-if(sum(is.na(survey_data$BIOMASS)) < length(survey_data$BIOMASS)){
-  generate_table(survey_data,
+generate_table(survey_data,
               variable = "BIOMASS", 
               cap = "Measured biomass")
-} else print("NO DATA")
 ```
 
 ### Data
@@ -244,18 +196,7 @@ data <- survey_data %>%
                      format(big.mark = ",")) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Year", "Season", "Region", "Biomass"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Year", "Season", "Region", "Biomass"))
 ```
 
 #### Survey data (swept area estimates)
@@ -269,40 +210,21 @@ data <- swept_data %>%
                   round(digits = 1) %>%
                   format(big.mark = ","))
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Year", "Biomass (kg)", "Standard error"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Year", "Biomass (kg)", "Standard error"))
 ```
 
 #### Assessment data
 ```{r, asmt_biomass_data}
-data <- asmt_data %>% 
-                dplyr::filter(Metric == "Biomass") %>%
-                dplyr::select(-Species, -Metric) %>%
-                dplyr::mutate(Value = Value %>%
-                              format(big.mark = ",")) %>%
+data <- asmt_data %>%
+  dplyr::filter(Metric == "Biomass") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+                  round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+                  format(big.mark = ",")) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = colnames(data))
 ```
 
 ## B/Bmsy 
@@ -328,18 +250,7 @@ data <- asmt_sum_data[which(is.na(asmt_sum_data$B.Bmsy) == FALSE), ] %>%
                 dplyr::mutate(B.Bmsy = B.Bmsy %>% round(digits = 2)) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Region", "Year", "B/Bmsy"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Region", "Year", "B/Bmsy"))
 ```
 
 ## Recruitment {.tabset .tabset-fade .tabset-pills}
@@ -358,37 +269,25 @@ ndesc <- asmt_data %>%
 ```
 
 ```{r, recruitment, fig.height = ndesc * 4 + 1}
-# 
-if(nrow(asmt_data %>% dplyr::filter(Metric == "Recruitment")) > 0){
 plot_asmt(asmt_data, 
           metric = "Recruitment", 
           ytitle = "Recruitment",
           lin = lines, 
           col = colors)
-} else print("NO DATA")
 ```
 
 ### Data
 
 ```{r, recruit_data}
 data <- asmt_data %>% 
-                dplyr::filter(Metric == "Recruitment") %>%
-                dplyr::select(-Species, -Metric) %>%
-                dplyr::mutate(Value = Value %>%
-                              format(big.mark = ",",
-                                     scientific = FALSE)) %>%
+  dplyr::filter(Metric == "Recruitment") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+                  round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+                  format(big.mark = ",",
+                         scientific = FALSE)) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = colnames(data))
 ```
-

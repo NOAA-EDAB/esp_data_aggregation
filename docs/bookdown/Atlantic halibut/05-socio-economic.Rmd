@@ -70,34 +70,26 @@ ndesc <- asmt_data %>%
 #### Stock assessment catch
 ```{r, catch}
 #  fig.height = ndesc * 10
-if(nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0){
 plot_asmt(asmt_data, 
           metric = "Catch", 
           ytitle = "Catch",
           lin = lines, 
           col = colors)
-} else print("NO DATA")
 ```
 
 #### Recreational catch
 ```{r, rec}
-if(length(rec_data$Species) > 0){
-  get_rec_catch(rec_data)
-} else print("NO DATA")
+get_rec_catch(rec_data)
 ```
 
 #### Commercial catch
 ```{r, com}
-if(length(com_data$Species) > 0){
-  plot_com(com_data)
-} else print("NO DATA")
+plot_com(com_data)
 ```
 
 #### Commercial vs recreational catch
 ```{r, comvrec}
-if(length(com_data$Species) > 0 & length(rec_data$Species) > 0){
-  prop_catch(com = com_data, rec = rec_data)
-} else print("NO DATA")
+prop_catch(com = com_data, rec = rec_data)
 ```
 
 ### Data
@@ -108,20 +100,12 @@ data <- asmt_data %>%
   dplyr::filter(Metric == "Catch") %>%
   dplyr::select(-Species, -Metric) %>%
   dplyr::mutate(Value = Value %>%
+                  round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
                   format(big.mark = ",")) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = colnames(data))
 ```
 
 #### Recreational catch
@@ -137,18 +121,7 @@ data <- rec_data %>%
   dplyr::select(year, State, Method, Catch_pounds) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Year", "State", "Method", "Catch (lb)"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Year", "State", "Method", "Catch (lb)"))
 ```
 
 #### Commercial catch
@@ -166,17 +139,7 @@ data <- com_data %>%
                               "Commercial catch (lb)" = "Pounds") %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = colnames(data))
 ```
 
 #### Commercial vs recreational catch
@@ -184,20 +147,10 @@ DT::datatable(data,
 data <- prop_catch_data(rec = rec_data, com = com_data) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          colnames = c("Year", "Recreational catch", "Commercial catch",
-                       "Total catch", "Proportion recreational",
-                       "Proportion commercial"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Year", "Recreational catch", 
+                                    "Commercial catch", "Total catch", 
+                                    "Proportion recreational",
+                                    "Proportion commercial"))
 ```
 
 #### Commercial, recreational, and stock assessment catch
@@ -205,7 +158,7 @@ DT::datatable(data,
 stock <- asmt_data %>%
   dplyr::filter(Metric == "Catch",
                 Region != "Eastern Georges Bank") %>% # double counted
-  dplyr::mutate(options = paste(Description, Units, sep = " - ")) %>%
+  dplyr::mutate(options = paste(Description, Units, AssessmentYear, sep = " - ")) %>%
   dplyr::group_by(Year, options) %>%
   dplyr::summarise(Value = sum(Value)) %>%
   dplyr::ungroup() %>%
@@ -221,25 +174,37 @@ comm <- com_data %>%
   dplyr::group_by(Year) %>%
   dplyr::summarise(`Commercial catch (mt)` = sum(Pounds)/2204.6)
 
-all_catch <- dplyr::full_join(stock, recr, by = "Year")
-all_catch <- dplyr::full_join(all_catch, comm, by = "Year") %>%
-  dplyr::arrange(Year) %>%
-  round(digits = 0) %>%
-  #format(big.mark = ",") %>% # messing up formatting
-  as.data.frame()
+all_catch <- c()
+if(nrow(stock) > 0){
+  all_catch <- stock
+}
+if(nrow(recr) > 0){
+  if(is.null(all_catch) == FALSE){
+    all_catch <- dplyr::full_join(all_catch, recr, by = "Year")
+  } else all_catch <- recr
+}
+if(nrow(comm) > 0){
+  if(is.null(all_catch) == FALSE){
+    all_catch <- dplyr::full_join(all_catch, comm, by = "Year")
+  } else all_catch <- comm
+}
 
-DT::datatable(all_catch, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+if(is.null(all_catch) == FALSE &
+   ncol(all_catch > 2)){
+  all_catch <- all_catch %>% 
+    dplyr::arrange(Year) %>%
+    round(digits = 0) %>%
+    #format(big.mark = ",") %>% # messing up formatting
+    as.data.frame()
+}
 
+# make sure there is data on at least 2 types of catch
+test <- c(nrow(stock), nrow(recr), nrow(comm))
+sum_test <- sum(test == 0)
+
+if(sum_test >= 2){
+  print("NO DATA")
+} else make_html_table(all_catch, col_names = colnames(all_catch))
 ```
 
 
@@ -266,18 +231,7 @@ data <- asmt_sum_data[which(is.na(asmt_sum_data$F.Fmsy) == FALSE), ] %>%
                 dplyr::mutate(F.Fmsy = F.Fmsy %>% round(digits = 2)) %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-                    colnames = c("Region", "Year", "F/Fmsy"),
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = c("Region", "Year", "F/Fmsy"))
 ```
 
 ## Revenue 
@@ -286,9 +240,7 @@ Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.go
 
 ### Figure
 ```{r, revenue}
-if(length(com_data$Species) > 0){
-  plot_com_money(com_data)
-} else print("NO DATA")
+plot_com_money(com_data)
 ```
 
 ### Data
@@ -306,15 +258,5 @@ data <- com_data %>%
                               "Commercial catch (lb)" = "Pounds") %>%
   character_to_factor()
 
-DT::datatable(data, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(data, col_names = colnames(data))
 ```
