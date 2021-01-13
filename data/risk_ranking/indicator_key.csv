@@ -1,0 +1,23 @@
+Category,Indicator,Metric,Risk
+Population,bbmsy,Most recent value,Low is risky
+Socioeconomic,ffmsy,Most recent value,High is risky
+Socioeconomic,asmt_catch,Max of all time,High is risky
+Population,recruitment,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Population,asmt_abundance,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Population,asmt_biomass,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Population,biomass_fall,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Population,biomass_spring,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Population,abundance_fall,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Population,abundance_spring,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Biological,avg_length_fall,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Biological,avg_length_spring,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Biological,max_length_fall,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Biological,max_length_spring,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Biological,diet,Number of prey categories from all time,Low is risky
+Socioeconomic,rec_catch,Mean of past 5 years,High is risky
+Socioeconomic,com_catch_max,Max of all time,High is risky
+Socioeconomic,com_catch_5yr,Mean of past 5 years,High is risky
+Socioeconomic,com_catch_hist,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Socioeconomic,revenue_max,Max of all time,High is risky
+Socioeconomic,revenue_5yr,Mean of past 5 years,High is risky
+Socioeconomic,revenue_hist,Mean of past 10 years as a percent of the historical mean,Decrease is risky

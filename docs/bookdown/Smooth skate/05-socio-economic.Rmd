@@ -217,7 +217,7 @@ The most recent status of F/Fmsy is: `r ffmsy2`
 ### Figure
 ```{r, ffmsy}
 if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
- plot_ffmsy(asmt_sum_data[which(is.na(asmt_sum_data$F.Fmsy) == FALSE), ],
+ plot_ffmsy(asmt_sum_data[which(is.na(asmt_sum_data$`F/Fmsy`) == FALSE), ],
                       ytitle = "F / Fmsy",
              lin = lines,
              col = colors)
@@ -226,9 +226,9 @@ if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
 
 ### Data
 ```{r, ffmsy_data}
-data <- asmt_sum_data[which(is.na(asmt_sum_data$F.Fmsy) == FALSE), ] %>% 
-                dplyr::select(Region, F.Year, F.Fmsy) %>%
-                dplyr::mutate(F.Fmsy = F.Fmsy %>% round(digits = 2)) %>%
+data <- asmt_sum_data[which(is.na(asmt_sum_data$`F/Fmsy`) == FALSE), ] %>% 
+                dplyr::select(Region, `F Year`, `F/Fmsy`) %>%
+                dplyr::mutate(`F/Fmsy` = `F/Fmsy` %>% round(digits = 2)) %>%
   character_to_factor()
 
 make_html_table(data, col_names = c("Region", "Year", "F/Fmsy"))

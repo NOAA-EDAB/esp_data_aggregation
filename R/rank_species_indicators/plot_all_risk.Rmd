@@ -17,10 +17,12 @@ library(ggplot2)
 `%>%` <- dplyr::`%>%`
 
 source(here::here("R", "character_to_factor.R"))
+source(here::here("R/full_report_functions", "make_html_table.R"))
 
 data <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv"))
 guild_data <- read.csv(here::here("data/risk_ranking", "guild_data.csv"))
 guild_info <- read.csv(here::here("data/risk_ranking", "guild_info.csv"))
+indicator_info <- read.csv(here::here("data/risk_ranking", "indicator_key.csv"))
 ```
 
 # Risk ranking of Northeast stocks {.tabset .tabset-fade}
@@ -31,26 +33,9 @@ guild_info <- read.csv(here::here("data/risk_ranking", "guild_info.csv"))
 All stocks were ranked in order of increasing risk. The stock with the highest ranking is the stock determined to be at the highest risk. In this case, high risk has two meanings: (1) high importance (e.g., a stock with a high catch would have a high risk ranking for the catch indicator) or high vulnerability (e.g., a stock with low B/Bmsy would have a high risk ranking for the B/Bmsy indicator). The normalized rank was determined by dividing each stock's rank by the total number of stocks considered for that indicator. Stocks that were missing indicator measurements were assigned a normalized rank of 0.5.
 
 ```{r, indicators}
-indicators <- unique(data$Indicator)
-metric <- c(rep("Most recent value", 2), 
-            "Max of all time", 
-            rep("Mean of past 10 years as a percent of the historical mean", 8),
-            "Number of prey categories from all time",
-            rep(c("Max of all time", 
-            "Mean of past 5 years",
-            "Mean of past 10 years as a percent of the historical mean"), 2),
-            "Mean of past 5 years"
-            )
-risk <- c("Low is risky",
-          "High is risky",
-          "High is risky",
-          rep("Decrease is risky", 8),
-          "Low is risky",
-          rep(c("High is risky", "High is risky", "Decrease is risky"), 2),
-          "High is risky")
-
-cbind(indicators, metric, risk) %>%
-  knitr::kable(col.names = c("Indicator", "Metric", "Risk"))
+dat <- indicator_info %>%
+  dplyr::arrange(Category)
+make_html_table(dat, col_names = colnames(dat))
 ```
 
 ### Guilds
@@ -219,17 +204,7 @@ dat <- data %>%
   dplyr::select(-X, -stock, -label) %>%
   character_to_factor()
 
-DT::datatable(dat, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(dat, col_names = colnames(dat))
 ```
 
 ##### Total risk only
@@ -241,23 +216,13 @@ dat <- data %>%
   dplyr::distinct() %>%
   character_to_factor()
 
-DT::datatable(dat, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(dat, col_names = colnames(dat))
 ```
 
 ### Guild risk{.tabset .tabset-fade .tabset-pills}
 
 #### Figure
-```{r guild, fig.height = 10}
+```{r guild, fig.height = 12}
 mycolors <-  grDevices::colorRampPalette(
   nmfspalette::nmfs_palette("regional web")(6))(guild_data$Indicator %>% 
                                                   unique() %>% length())
@@ -282,7 +247,7 @@ ggplot(guild_data,
   theme_bw()+
   xlab("Guild")+
   ylab("Average risk within guild")+
-  ylim(c(0,12))+
+  ylim(c(0,14))+
   theme(legend.position = "bottom",
         legend.key.size = unit(1.75, 'lines'))+
       guides(fill=guide_legend(nrow=5))
@@ -305,15 +270,5 @@ dat <- guild_data %>%
   
   character_to_factor()
 
-DT::datatable(dat, 
-          rownames = FALSE,
-          filter = list(position = 'top', 
-                        clear = FALSE),
-          extensions = 'Scroller',
-          options = list(search = list(regex = TRUE),
-                         deferRender = TRUE,
-                         scrollY = 200,
-                         scrollX = TRUE,
-                         scroller = TRUE,
-                         language = list(thousands = ",")))
+make_html_table(dat, col_names = colnames(dat))
 ```

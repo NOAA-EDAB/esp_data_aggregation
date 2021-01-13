@@ -1,4 +1,8 @@
 plot_bbmsy <- function(x, ytitle, lin = lines, col = colors) {
+  
+  # fix colnames
+  x$B.Bmsy <- x$`B/Bmsy`
+  x$B.Year <- x$`B Year`
 
   fig <- ggplot(x,
                 aes(x = B.Year,
@@ -34,6 +38,10 @@ plot_bbmsy <- function(x, ytitle, lin = lines, col = colors) {
 
 plot_ffmsy <- function(x, ytitle, lin = lines, col = colors) {
 
+  # fix colnames
+  x$F.Fmsy <- x$`F/Fmsy`
+  x$F.Year <- x$`F Year`
+  
   fig <- ggplot(x,
                 aes(x = F.Year,
                     y = F.Fmsy,
@@ -70,8 +78,8 @@ status <- function(data, regions, metric){
   
   data <- dplyr::filter(data, Region == regions)
   
-  if(metric == "bbmsy") {data <- data$B.Bmsy}
-  if(metric == "ffmsy") {data <- data$F.Fmsy}
+  if(metric == "bbmsy") {data <- data$`B/Bmsy`}
+  if(metric == "ffmsy") {data <- data$`F/Fmsy`}
   
   if(sum(is.na(data)) == length(data)){
     data_info <- "MISSING"} else data_info <- "PRESENT"
