@@ -203,10 +203,10 @@ com <- com %>%
 write.csv(com, here::here("data", "com_landings_clean_20201222_formatted.csv"))
 #####
 
-## survey data 12/29/20 pull ----
+## survey data 1/14/20 pull ----
 #####
-data <- readRDS(here::here("data", "survdat_122920.RDS"))
-data <- tibble::as.tibble(data$survdat)
+data <- readRDS(here::here("data", "survdat_01142021.RDS"))
+data <- tibble::as_tibble(data$survdat)
 # missing data?? too few rows compared to previous survdat pull :(
 
 key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
