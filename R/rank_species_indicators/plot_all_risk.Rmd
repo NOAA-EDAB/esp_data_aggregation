@@ -156,23 +156,44 @@ print(fig_less)
 
 ##### In order of risk
 ```{r, all_stocks, fig.height = 15}
+# try faceting by risk category
+# remove labels in 2/3 categories
+new_label <- c()
+for(i in 1:nrow(data)){
+  if(data$category[i] == "Biological"){
+    new_label[i] <- paste(data$Region[i], " ", data$Species[i], ", ", 
+                              data$total_risk[i] %>% round(digits = 2), 
+                              sep = "")
+  } else{new_label[i] <- ""}
+}
+
+# shorten labels
+data$new_label <- new_label %>%
+  stringr::str_replace("Georges Bank", "GB") %>%
+  stringr::str_replace("Gulf of Maine", "GOM") %>%
+  stringr::str_replace("Northwestern", "NW") %>%
+  stringr::str_replace("Northern", "N") %>%
+  stringr::str_replace("Southern", "S") %>%
+  stringr::str_replace("Cape Cod", "CC") %>%
+  stringr::str_replace("New England", "NE") %>%
+  stringr::str_replace("Cape Hatteras", "C Hatteras") %>%
+  stringr::str_replace("Atlantic mackerel", "Atl mackerel") %>%
+  stringr::str_replace(" / ", "/")
+
 fig <- ggplot(data,
               aes(x = reorder(stock, -total_risk),
-                  y = paste(category, 
-                            ":\n", 
-                            Indicator %>% 
-                              stringr::str_replace_all("_", "\n"), 
-                            sep = ""),
+                  y = Indicator %>% 
+                              stringr::str_replace_all("_", " "),
                   fill = norm_rank ))+
   geom_raster(stat = "identity")+
   geom_text(aes(x = reorder(stock, -total_risk),
                 y = 0.5,
-                label = paste(Region, " ", Species, ", ", 
-                              total_risk %>% round(digits = 2), 
-                              sep = "")),
+                label = new_label),
             hjust = 0,
             #cex = 3,
             color = "black")+
+  facet_grid(cols = vars(category),
+             scales = "free_x")+
   theme_bw()+
   scale_fill_gradient2(high = "darkred", 
                        mid = "beige", 
@@ -182,6 +203,7 @@ fig <- ggplot(data,
   theme(axis.text.y = element_blank(),
         axis.ticks.y = element_blank(),
         axis.title.y = element_blank(),
+        axis.text.x = element_text(angle = 90),
         legend.position = "top")+
   ylab("Indicator")+
   coord_flip()
