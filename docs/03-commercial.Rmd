@@ -8,7 +8,7 @@ These reports are a preliminary analysis of commercial data only.
 
 ```{r}
 purrr::map(com_pages, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Commercial landings/", 
+           ~paste(beginning_of_link, "esp_data_aggregation/Commercial landings/", 
                   .x, "'>",
                   stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1] %>% 
                     stringr::str_to_sentence(), 

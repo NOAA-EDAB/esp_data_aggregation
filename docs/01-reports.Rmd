@@ -11,7 +11,7 @@ These reports are a preliminary analysis of ecological and socioeconomic data so
 
 ```{r}
 purrr::map(reports, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/bookdown/", 
+           ~paste(beginning_of_link, "esp_data_aggregation/bookdown/", 
                   .x, "/index'>", .x, "</a>", sep = "")) %>%
   unlist() %>%
   knitr::kable(col.names = "Species name")

@@ -12,7 +12,7 @@ These reports are a preliminary analysis of recreational data only.
 
 ```{r}
 purrr::map(rec_summary_pages, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
+           ~paste(beginning_of_link, "esp_data_aggregation/Recreational landings/", 
                   .x, "'>",
                   stringr::str_split_fixed(.x, pattern = ".h", n = 2)[,1] %>% 
                     stringr::str_to_sentence() %>%
@@ -22,7 +22,7 @@ purrr::map(rec_summary_pages,
   knitr::kable(col.names = "File name")
 
 purrr::map(rec_species_pages, 
-           ~paste("<a href='https://rtabandera.github.io/esp_data_aggregation/Recreational landings/", 
+           ~paste(beginning_of_link, "/esp_data_aggregation/Recreational landings/", 
                   .x, "'>",
                   stringr::str_split_fixed(.x, pattern = "_", n = 2)[,1] %>% 
                     stringr::str_to_sentence(), 
