@@ -1,7 +1,7 @@
 # Ecosystem and Socioeconomic Profiles
 
 ## View current data products
-https://rtabandera.github.io/esp_data_aggregation/index
+https://NOAA-EDAB.github.io/esp_data_aggregation/index
 
 ## Introduction
 Ecosystem and Socioeconomic Profiles (ESPs) are a scientific product to support [Integrated Ecosystem Assessment](https://www.integratedecosystemassessment.noaa.gov/) (IEA). IEA seeks to improve understanding and management of fisheries through incorporating natural, social, and economic data into fisheries analyses and management plans. ESPs are a structured framework developed by the Alaska Science Center to integrate ecosystem and socioeconomic information into the stock assessment process.<sup>[1]</sup>
@@ -13,7 +13,7 @@ Here we adapt the ESP process for use in the management of Northeast stocks. Our
 3. Create a detailed report for the most vulnerable stocks, incorporating data from the originial risk assessment as well as detailed species-specific information.
 
 ## Running a report
-The current preliminary report pulls data from many existing sources and creates several data visualizations. Reports for all northeast stocks have been compiled and can be viewed [here](https://rtabandera.github.io/esp_data_aggregation/index). 
+The current preliminary report pulls data from many existing sources and creates several data visualizations. Reports for all northeast stocks have been compiled and can be viewed [here](https://NOAA-EDAB.github.io/esp_data_aggregation/index). 
 
 To create a report, download the repo and run the file `R/get_full_report.R` with the common name of your species of interest specified in sentence case (ex, "Acadian redfish". Functions used for data analysis and visualization can be viewed in the `R/full_report_functions` folder. The report template is the file `R/full_report_template.Rmd`.
 
