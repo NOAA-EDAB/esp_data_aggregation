@@ -1,56 +1,18 @@
 #organizing life history parameters 
-install.packages("FSA")
+
 install.packages("ggrepel")
+install.packages("ggpubr")
 
 devtools::install_github("james-thorson/FishLife")
 library( FishLife )
 library(tidyverse)
 library(ggrepel)
-library(FSA)
 library(rfishbase)
+library(ggpubr)
 
 stock_list_all_strata<- readr::read_csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
 stock_list<-stock_list_all_strata %>% dplyr::distinct( common_name, .keep_all=TRUE)
 
-# stock_list$sci_name
-# 
-# 
-# Gadus morhua
-# Predict<-Plot_taxa( Search_species(Genus="Gadus",Species="morhua")$match_taxonomy, mfrow=c(2,2) )
-# 
-# 
-# # split sci name into parts to use purr::map2
-# 
-# stock_list %>% str_split_fixed(sci_name,"\\s" , n=2 )
-# split_sci<-stock_list %>% separate (col=sci_name,sep ="\\s", into = c("genus" ,"species"))
-# 
-# select_sci<-split_sci %>% select(genus, species)
-# t1<-cbind(select_sci$genus,select_sci$species)
-# 
-# as.vector(select_sci$genus)
-# 
-# stock_g<-c(select_sci$genus)
-# stock_s<-c(select_sci$species)
-# 
-# 
-# purrr::map2()
-# 
-# 
-# purrr::map2(stock_g,stock_s, plot_taxa(Search_species(Genus=x[1], Species=x[2])$match_taxonomy))
-# 
-# 
-# apply(t1,MARGIN= 1, FUN=get_fish_info)
-# 
-# 
-
-
-
-
-
-
-t2<-fecundity("Gadus morhua")
-t3<-maturity("Gadus morhua")
-t4<-fooditems("Gadus morhua")
 
 fishlife_predictions_NE<-read_csv(here::here("life history/fishlife","FishLife_extracted_data_11.16.20_northeast.csv"))
 predictions_NE_spaced<-fishlife_predictions_NE %>% mutate_all(funs(str_replace(., "\\_", " ")))
@@ -91,29 +53,68 @@ tzero<-function(Linf,K){logtzero<-(-0.3922 - (0.2752*log(Linf) - 1.038*log(K)))
 
 #select out needed cols
 prediction.select<-predictions_join %>% select(common_name, Linf,K,t0)
+
+#catagorize the Linf into rough bins
+prediction.select$body_cat<-cut(prediction.select$Linf, breaks=c(-Inf,50, 100, Inf), 
+                                labels=c("small","med","large"))
+
+
+
+
 #split into a set of lists for map use
-flist<-split(t1, f=t1$common_name)
+flist<-split(prediction.select, f=prediction.select$common_name)
 
 # vonb wants arguments in the order t,Linf,K,tzero)
 
-spec.age.growth.list<-map(flist, ~vonb(seq(1:50),.x[[2]],.x[[3]],.x[[4]]))
+spec.age.growth.list<-map(flist, ~vonb(seq(1:75),.x[[2]],.x[[3]],.x[[4]]))
 
-
+# turn the list of lists into a single object
 spec.age.growth<-do.call(cbind,spec.age.growth.list)
-
+#turn this object into a df for manipulation
 spec.age.growth.df<-data.frame(spec.age.growth)
-fish.names<-colnames(spec.age.growth.df)
+# make an index of years int he dataset 
+
+spec.age.growth.df$year<-seq(1:75)
+#Pivot from wide format to long to make graphing easy
+
+age.growth.curves<-spec.age.growth.df %>% pivot_longer(cols = fish.names,names_to = "common_name", values_to = "length" )
+#remove the period in common name to enable the matching fuction in dplyr join
+age.growth.curves$common_name<-str_replace(age.growth.curves$common_name,"\\."," " )
+
+age.growth.join<-right_join(prediction.select,age.growth.curves, by= "common_name")
+
+#
+
+small<-age.growth.join %>%
+  filter(body_cat=="small")%>%
+  ggplot(aes(x=year, y=length))+
+  geom_line(aes(color=common_name),size=1.4)+
+  xlab("Year")+
+  ylab(" Total length (cm)")+
+  labs(color="Common name of stock")+
+  ggtitle("Small bodied fish growth")+
+  theme_minimal()
+
+med<-age.growth.join %>%
+  filter(body_cat=="med")%>%
+  ggplot(aes(x=year, y=length))+
+  geom_line(aes(color=common_name),size=1.4)+
+  xlab("Year")+
+  ylab(" Total length (cm)")+
+  labs(color="Common name of stock")+
+  ggtitle("Medium bodied fish growth")+
+  theme_minimal()
 
 
+large<-age.growth.join %>%
+  filter(body_cat=="large")%>%
+  ggplot(aes(x=year, y=length))+
+  geom_line(aes(color=common_name),size=1.4)+
+  xlab("Year")+
+  ylab(" Total length (cm)")+
+  labs(color="Common name of stock")+
+  ggtitle("large bodied fish growth")+
+  theme_minimal()
 
-spec.age.growth.df$year<-seq(1:50)
-
-age.growth.curves<-spec.age.growth.df %>% pivot_longer(cols = fish.names,names_to = "species", values_to = "length" )
-
-
-
-age.growth.curves %>% ggplot(aes(x=year, y=length,label = species))+geom_line(aes(color=species))+geom_label_repel(box.padding = 0.5, max.overlaps = Inf)
-
-
-
+ggarrange(small,med,large)
 
