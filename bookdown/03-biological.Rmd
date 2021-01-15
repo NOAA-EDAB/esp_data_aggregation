@@ -1,6 +1,7 @@
 # Biological information
 
 ```{r, biological_functions, include = FALSE}
+source(here::here("R/rank_species_indicators", "plot_risk_by_year.R"))
 source(here::here("R/full_report_functions", "get_length.R"))
 source(here::here("R/full_report_functions", "get_lw.R"))
 source(here::here("R/full_report_functions", "get_relative_weight.R"))
@@ -17,6 +18,9 @@ cond_data <- cond_data[cond_data$Species == species, ]
 
 diet_data <- params$diet_data
 diet_data <- diet_data[diet_data$Species == species, ]
+
+risk_year_data <- params$risk_year_data
+risk_year_data <- risk_year_data[risk_year_data$Species == species, ]
 ```
 
 ## Length
@@ -29,6 +33,22 @@ Separate geom_gls() functions were fit for the minimum, mean, and maximum length
 ```{r, length}
 generate_len_plot(survey_data)
 ```
+
+#### Risk
+
+Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value plotted here reflects the normalized rank of this species compared to all other species in that year.
+```{r}
+indicators <- c("max_length_spring",
+               "max_length_fall",
+               "avg_length_spring",
+               "avg_length_fall")
+```
+
+```{r, length_risk, fig.height = length(indicators)}
+plot_risk_by_year(risk_year_data,
+                  indicator = indicators)
+```
+
 
 ### Summary
 ```{r, length_summary}
