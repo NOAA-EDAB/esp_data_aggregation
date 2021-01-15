@@ -23,6 +23,31 @@ get_var_data <- function(x, variable){
   return(y)
 }
 
+get_var_data2 <- function(x, variable){
+  # remove NA, zero abundance, length 
+  y <- x %>% dplyr::filter(get(variable) > 0, ABUNDANCE > 0) %>%
+    dplyr::select(Species, YEAR, SEASON, Region, fish_id, date, variable) %>%
+    dplyr::distinct() # remove repeated row info
+  
+  # mean by year
+  if(variable == "BIOMASS" | variable == "ABUNDANCE"){
+    y <- y %>% dplyr::group_by(Species, YEAR, SEASON, Region) %>% 
+      dplyr::summarise(variable2 = sum(get(variable))) %>%
+      dplyr::select(YEAR, SEASON, Species, Region, variable2)
+  } else {
+    y <- y %>% dplyr::group_by(Species, YEAR, SEASON, Region, fish_id, date) %>%
+      dplyr::summarise(variable2 = mean(get(variable))) %>% # mean by day
+      dplyr::ungroup() %>%
+      dplyr::group_by(Species, YEAR, SEASON, Region) %>%
+      dplyr::summarise(variable3 = mean(variable2)) %>% # mean by season-year
+      dplyr::select(YEAR, SEASON, Species, Region, variable3)
+  }
+  
+  colnames(y) <- c("YEAR", "SEASON","Species",  "Region", "variable")
+  
+  return(y)
+}
+
 plot_variable <- function(x, ytitle) {
 
   fig <- ggplot(x,

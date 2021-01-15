@@ -38,7 +38,7 @@ plot_risk_by_year <- function(data, indicator){
       labs(title = "Risk over time")
     
     return(fig)
-  } else pring("NO DATA")
+  } else print("NO DATA")
   
 }
 

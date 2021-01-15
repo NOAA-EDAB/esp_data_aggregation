@@ -98,7 +98,8 @@ generate_table(survey_data,
 
 #### Survey data (raw measurements)
 ```{r, surv_abun_data}
-data <- get_var_data(survey_data, variable = "ABUNDANCE") %>%
+data <- survey_data %>%
+  get_var_data(variable = "ABUNDANCE") %>%
   dplyr::mutate(variable = variable %>%
                   format(big.mark = ","))  %>%
   character_to_factor()
@@ -188,11 +189,8 @@ generate_table(survey_data,
 #### Survey data (raw measurements)
 ```{r, biomass_data}
 data <- survey_data %>% 
-  dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
-  dplyr::distinct() %>% # remove repeated row info
-  dplyr::ungroup() %>%
-  dplyr::group_by(YEAR, SEASON, Region) %>% # re-group
-  dplyr::summarise(Biomass = sum(BIOMASS) %>%
+  get_var_data(variable = "BIOMASS") %>%
+  dplyr::mutate(variable = variable %>%
                      format(big.mark = ",")) %>%
   character_to_factor()
 

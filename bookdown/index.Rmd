@@ -35,6 +35,8 @@ params:
   swept_data: data # swept area estimates
   
   risk_year_data: data # risk by year
+  
+  risk_species_data: data # species risk
 ---
 
 # `r params$species`

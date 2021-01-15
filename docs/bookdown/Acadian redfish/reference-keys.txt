@@ -104,3 +104,5 @@ stock-assessment-and-data-quality-information
 risk-assessment
 preliminary-risk-calculation
 preliminary-risk-visualization
+relative-to-all-other-stocks
+within-a-single-stock

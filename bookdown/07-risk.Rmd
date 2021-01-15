@@ -1,12 +1,19 @@
 # Risk assessment
 
 ```{r, risk_functions, include = FALSE}
-# none
+source(here::here("R/rank_species_indicators", "plot_risk_by_species.R"))
+source(here::here("R/rank_species_indicators", "plot_risk_by_year.R"))
 ```
 
 ```{r, risk_data, include = FALSE}
 risk_data <- params$risk_data
 risk_data <- risk_data[risk_data$Species == species, ]
+
+risk_year_data <- params$risk_year_data
+risk_year_data <- risk_year_data[risk_year_data$Species == species, ]
+
+risk_species_data <- params$risk_species_data
+risk_species_data <- risk_species_data[risk_species_data$Species == species, ]
 ```
 
 ## Preliminary risk calculation
@@ -28,9 +35,20 @@ make_html_table(data, col_names = c("Region", "Category", "Indicator", "Year", "
 
 ## Preliminary risk visualization
 
-Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value plotted here reflects the normalized rank of this species compared to all other species in that year.
+### Relative to all other stocks
 
-```{r, all_risk}
+Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value plotted here reflects the normalized rank of this stock compared to all other stocks in that year.
+
+```{r, year_risk}
 plot_risk_by_year(risk_year_data,
+                  indicator = "all")
+```
+
+### Within a single stock
+
+For each stock, each indicator was ranked for all years where a value was present. The normalized risk values plotted here reflects the normalized rank of each year compared to all other years.
+
+```{r, stock_risk}
+plot_risk_by_stock(risk_species_data,
                   indicator = "all")
 ```
