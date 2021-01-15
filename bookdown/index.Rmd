@@ -33,6 +33,10 @@ params:
   com_data: data # commercial catch
   
   swept_data: data # swept area estimates
+  
+  risk_year_data: data # risk by year
+  
+  risk_species_data: data # species risk
 ---
 
 # `r params$species`
@@ -72,7 +76,7 @@ source(here::here("R/full_report_functions", "make_html_table.R"))
 species <- params$species_ID
 ```
 
-```{r, all_params, include = FALSE}
+```{r, all_params, include = FALSE, eval = FALSE}
 species <- params$species_ID
 
 latlong_data <- params$latlong_data

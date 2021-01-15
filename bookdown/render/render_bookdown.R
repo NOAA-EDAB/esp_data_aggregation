@@ -15,7 +15,7 @@ dir.create(here::here("docs/bookdown/Acadian redfish"))
 file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
 
 setwd(here::here("bookdown"))
-purrr::map(list_species[3], 
+purrr::map(list_species[1], 
            ~bookdown::render_book(input = ".",
                                  params = list(species_ID = .x,
                                                
@@ -35,6 +35,10 @@ purrr::map(list_species[3],
                                                cond_data = cond,
                                                
                                                risk_data = risk,
+                                               
+                                               risk_year_data = risk_year,
+                                               
+                                               risk_species_data = risk_species,
                                                
                                                com_data = com,
                                                
