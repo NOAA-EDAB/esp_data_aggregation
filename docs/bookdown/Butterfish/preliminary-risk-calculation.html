@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7.1 Preliminary risk calculation | Butterfish</title>
+  <meta name="description" content="7.1 Preliminary risk calculation | Butterfish" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7.1 Preliminary risk calculation | Butterfish" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="rtabandera/esp_data_aggregation" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7.1 Preliminary risk calculation | Butterfish" />
+  
+  
+  
+
+<meta name="author" content="Abigail Tyrell" />
+
+
+<meta name="date" content="2021-01-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="risk-assessment-1.html"/>
+<link rel="next" href="preliminary-risk-visualization.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/dt-ext-scroller-1.10.20/css/scroller.dataTables.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-scroller-1.10.20/js/dataTables.scroller.min.js"></script>
+<link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Butterfish</a></li>
+<li class="chapter" data-level="1" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>1</b> Methods</a><ul>
+<li class="chapter" data-level="1.1" data-path="stock-identification.html"><a href="stock-identification.html"><i class="fa fa-check"></i><b>1.1</b> Stock identification</a></li>
+<li class="chapter" data-level="1.2" data-path="data-collection-and-presentation.html"><a href="data-collection-and-presentation.html"><i class="fa fa-check"></i><b>1.2</b> Data collection and presentation</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="data-collection-and-presentation.html"><a href="data-collection-and-presentation.html#assessmentdata-methods"><i class="fa fa-check"></i><b>1.2.1</b> <code>assessmentdata</code> methods</a></li>
+<li class="chapter" data-level="1.2.2" data-path="data-collection-and-presentation.html"><a href="data-collection-and-presentation.html#survdat-methods"><i class="fa fa-check"></i><b>1.2.2</b> <code>survdat</code> methods</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="risk-assessment.html"><a href="risk-assessment.html"><i class="fa fa-check"></i><b>1.3</b> Risk assessment</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="risk-assessment.html"><a href="risk-assessment.html#risk-across-stocks"><i class="fa fa-check"></i><b>1.3.1</b> Risk across stocks</a></li>
+<li class="chapter" data-level="1.3.2" data-path="risk-assessment.html"><a href="risk-assessment.html#risk-within-stocks"><i class="fa fa-check"></i><b>1.3.2</b> Risk within stocks</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="habitat-information.html"><a href="habitat-information.html"><i class="fa fa-check"></i><b>2</b> Habitat information</a><ul>
+<li class="chapter" data-level="2.1" data-path="map-of-distribution.html"><a href="map-of-distribution.html"><i class="fa fa-check"></i><b>2.1</b> Map of distribution</a></li>
+<li class="chapter" data-level="2.2" data-path="latitude-and-longitude-ranges.html"><a href="latitude-and-longitude-ranges.html"><i class="fa fa-check"></i><b>2.2</b> Latitude and longitude ranges</a></li>
+<li class="chapter" data-level="2.3" data-path="temperature.html"><a href="temperature.html"><i class="fa fa-check"></i><b>2.3</b> Temperature</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="temperature.html"><a href="temperature.html#figures"><i class="fa fa-check"></i><b>2.3.1</b> Figures</a></li>
+<li class="chapter" data-level="2.3.2" data-path="temperature.html"><a href="temperature.html#summary"><i class="fa fa-check"></i><b>2.3.2</b> Summary</a></li>
+<li class="chapter" data-level="2.3.3" data-path="temperature.html"><a href="temperature.html#data"><i class="fa fa-check"></i><b>2.3.3</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="salinity.html"><a href="salinity.html"><i class="fa fa-check"></i><b>2.4</b> Salinity</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="salinity.html"><a href="salinity.html#figures-1"><i class="fa fa-check"></i><b>2.4.1</b> Figures</a></li>
+<li class="chapter" data-level="2.4.2" data-path="salinity.html"><a href="salinity.html#summary-1"><i class="fa fa-check"></i><b>2.4.2</b> Summary</a></li>
+<li class="chapter" data-level="2.4.3" data-path="salinity.html"><a href="salinity.html#data-1"><i class="fa fa-check"></i><b>2.4.3</b> Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="biological-information.html"><a href="biological-information.html"><i class="fa fa-check"></i><b>3</b> Biological information</a><ul>
+<li class="chapter" data-level="3.1" data-path="length.html"><a href="length.html"><i class="fa fa-check"></i><b>3.1</b> Length</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="length.html"><a href="length.html#figures-2"><i class="fa fa-check"></i><b>3.1.1</b> Figures</a></li>
+<li class="chapter" data-level="3.1.2" data-path="length.html"><a href="length.html#summary-2"><i class="fa fa-check"></i><b>3.1.2</b> Summary</a></li>
+<li class="chapter" data-level="3.1.3" data-path="length.html"><a href="length.html#data-2"><i class="fa fa-check"></i><b>3.1.3</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="condition.html"><a href="condition.html"><i class="fa fa-check"></i><b>3.2</b> Condition</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="condition.html"><a href="condition.html#figures-3"><i class="fa fa-check"></i><b>3.2.1</b> Figures</a></li>
+<li class="chapter" data-level="3.2.2" data-path="condition.html"><a href="condition.html#data-3"><i class="fa fa-check"></i><b>3.2.2</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="diet.html"><a href="diet.html"><i class="fa fa-check"></i><b>3.3</b> Diet</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="diet.html"><a href="diet.html#figure"><i class="fa fa-check"></i><b>3.3.1</b> Figure</a></li>
+<li class="chapter" data-level="3.3.2" data-path="diet.html"><a href="diet.html#summary-3"><i class="fa fa-check"></i><b>3.3.2</b> Summary</a></li>
+<li class="chapter" data-level="3.3.3" data-path="diet.html"><a href="diet.html#data-4"><i class="fa fa-check"></i><b>3.3.3</b> Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="population-information.html"><a href="population-information.html"><i class="fa fa-check"></i><b>4</b> Population information</a><ul>
+<li class="chapter" data-level="4.1" data-path="abundance.html"><a href="abundance.html"><i class="fa fa-check"></i><b>4.1</b> Abundance</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="abundance.html"><a href="abundance.html#figures-4"><i class="fa fa-check"></i><b>4.1.1</b> Figures</a></li>
+<li class="chapter" data-level="4.1.2" data-path="abundance.html"><a href="abundance.html#survey-summary"><i class="fa fa-check"></i><b>4.1.2</b> Survey summary</a></li>
+<li class="chapter" data-level="4.1.3" data-path="abundance.html"><a href="abundance.html#data-5"><i class="fa fa-check"></i><b>4.1.3</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="biomass.html"><a href="biomass.html"><i class="fa fa-check"></i><b>4.2</b> Biomass</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="biomass.html"><a href="biomass.html#figures-5"><i class="fa fa-check"></i><b>4.2.1</b> Figures</a></li>
+<li class="chapter" data-level="4.2.2" data-path="biomass.html"><a href="biomass.html#survey-summary-1"><i class="fa fa-check"></i><b>4.2.2</b> Survey summary</a></li>
+<li class="chapter" data-level="4.2.3" data-path="biomass.html"><a href="biomass.html#data-6"><i class="fa fa-check"></i><b>4.2.3</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="bbmsy.html"><a href="bbmsy.html"><i class="fa fa-check"></i><b>4.3</b> B/Bmsy</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="bbmsy.html"><a href="bbmsy.html#figure-1"><i class="fa fa-check"></i><b>4.3.1</b> Figure</a></li>
+<li class="chapter" data-level="4.3.2" data-path="bbmsy.html"><a href="bbmsy.html#data-7"><i class="fa fa-check"></i><b>4.3.2</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="recruitment.html"><a href="recruitment.html"><i class="fa fa-check"></i><b>4.4</b> Recruitment</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="recruitment.html"><a href="recruitment.html#figure-2"><i class="fa fa-check"></i><b>4.4.1</b> Figure</a></li>
+<li class="chapter" data-level="4.4.2" data-path="recruitment.html"><a href="recruitment.html#data-8"><i class="fa fa-check"></i><b>4.4.2</b> Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="socio-economic-information.html"><a href="socio-economic-information.html"><i class="fa fa-check"></i><b>5</b> Socio-economic information</a><ul>
+<li class="chapter" data-level="5.1" data-path="catch.html"><a href="catch.html"><i class="fa fa-check"></i><b>5.1</b> Catch</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="catch.html"><a href="catch.html#figures-6"><i class="fa fa-check"></i><b>5.1.1</b> Figures</a></li>
+<li class="chapter" data-level="5.1.2" data-path="catch.html"><a href="catch.html#data-9"><i class="fa fa-check"></i><b>5.1.2</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ffmsy.html"><a href="ffmsy.html"><i class="fa fa-check"></i><b>5.2</b> F/Fmsy</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="ffmsy.html"><a href="ffmsy.html#figure-3"><i class="fa fa-check"></i><b>5.2.1</b> Figure</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ffmsy.html"><a href="ffmsy.html#data-10"><i class="fa fa-check"></i><b>5.2.2</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="revenue.html"><a href="revenue.html"><i class="fa fa-check"></i><b>5.3</b> Revenue</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="revenue.html"><a href="revenue.html#figure-4"><i class="fa fa-check"></i><b>5.3.1</b> Figure</a></li>
+<li class="chapter" data-level="5.3.2" data-path="revenue.html"><a href="revenue.html#data-11"><i class="fa fa-check"></i><b>5.3.2</b> Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="management-information.html"><a href="management-information.html"><i class="fa fa-check"></i><b>6</b> Management information</a><ul>
+<li class="chapter" data-level="6.1" data-path="stock-assessment-and-data-quality-information.html"><a href="stock-assessment-and-data-quality-information.html"><i class="fa fa-check"></i><b>6.1</b> Stock assessment and data quality information</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="risk-assessment-1.html"><a href="risk-assessment-1.html"><i class="fa fa-check"></i><b>7</b> Risk assessment</a><ul>
+<li class="chapter" data-level="7.1" data-path="preliminary-risk-calculation.html"><a href="preliminary-risk-calculation.html"><i class="fa fa-check"></i><b>7.1</b> Preliminary risk calculation</a></li>
+<li class="chapter" data-level="7.2" data-path="preliminary-risk-visualization.html"><a href="preliminary-risk-visualization.html"><i class="fa fa-check"></i><b>7.2</b> Preliminary risk visualization</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="preliminary-risk-visualization.html"><a href="preliminary-risk-visualization.html#relative-to-all-other-stocks"><i class="fa fa-check"></i><b>7.2.1</b> Relative to all other stocks</a></li>
+<li class="chapter" data-level="7.2.2" data-path="preliminary-risk-visualization.html"><a href="preliminary-risk-visualization.html#within-a-single-stock"><i class="fa fa-check"></i><b>7.2.2</b> Within a single stock</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Butterfish</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="preliminary-risk-calculation" class="section level2">
+<h2><span class="header-section-number">7.1</span> Preliminary risk calculation</h2>
+<p>A preliminary risk analysis was conducted by ranking all species according to their indicator values. A high rank number and a normalized rank near 1 indicates that the species is at risk or of importance based on the measured indicator values. When a species was missing an indicator, it was assigned a normalized rank of 0.5.</p>
+<div class="figure" style="text-align: center"><span id="fig:risk"></span>
+<div id="htmlwidget-66192b2d5f5122c96eac" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-66192b2d5f5122c96eac">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"disabled\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n  <\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;Biological&quot;,&quot;Population&quot;,&quot;Socioeconomic&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;abundance_fall&quot;,&quot;abundance_spring&quot;,&quot;asmt_abundance&quot;,&quot;asmt_biomass&quot;,&quot;asmt_catch&quot;,&quot;avg_length_fall&quot;,&quot;avg_length_spring&quot;,&quot;bbmsy&quot;,&quot;biomass_fall&quot;,&quot;biomass_spring&quot;,&quot;com_catch_5yr&quot;,&quot;com_catch_hist&quot;,&quot;com_catch_max&quot;,&quot;diet&quot;,&quot;ffmsy&quot;,&quot;max_length_fall&quot;,&quot;max_length_spring&quot;,&quot;rec_catch&quot;,&quot;recruitment&quot;,&quot;revenue_5yr&quot;,&quot;revenue_hist&quot;,&quot;revenue_max&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;1993&quot;,&quot;2016&quot;,&quot;2017&quot;,&quot;2019&quot;,&quot;all&quot;,&quot;average of 2014 - 2019 data&quot;,&quot;mean of last 10 years vs historic mean&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;           NA&quot;,&quot;        0.062&quot;,&quot;        0.630&quot;,&quot;        0.785&quot;,&quot;        0.927&quot;,&quot;        0.960&quot;,&quot;        1.017&quot;,&quot;        1.042&quot;,&quot;        1.357&quot;,&quot;        1.411&quot;,&quot;        1.566&quot;,&quot;        1.668&quot;,&quot;        1.759&quot;,&quot;        2.867&quot;,&quot;        3.459&quot;,&quot;       11.000&quot;,&quot;   12,185.000&quot;,&quot;  156,134.000&quot;,&quot;4,807,987.000&quot;,&quot;6,878,210.000&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;11 out of 41&quot;,&quot;11 out of 51&quot;,&quot;12 out of 36&quot;,&quot;14 out of 23&quot;,&quot;17 out of 36&quot;,&quot;18 out of 31&quot;,&quot;18 out of 40&quot;,&quot;21 out of 51&quot;,&quot;23 out of 35&quot;,&quot;24 out of 35&quot;,&quot;24 out of 36&quot;,&quot;26 out of 51&quot;,&quot;27 out of 51&quot;,&quot;28 out of 51&quot;,&quot;3 out of 34&quot;,&quot;3 out of 36&quot;,&quot;5 out of 11&quot;,&quot;9 out of 51&quot;,&quot;NA out of NA&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0.08\" data-max=\"0.69\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Scroller"],"data":[["Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras","Gulf of Maine / Cape Hatteras"],["Population","Socioeconomic","Socioeconomic","Population","Population","Population","Population","Population","Population","Population","Biological","Biological","Biological","Biological","Biological","Socioeconomic","Socioeconomic","Socioeconomic","Socioeconomic","Socioeconomic","Socioeconomic","Socioeconomic"],["bbmsy","ffmsy","asmt_catch","recruitment","asmt_abundance","asmt_biomass","biomass_fall","biomass_spring","abundance_fall","abundance_spring","avg_length_fall","avg_length_spring","max_length_fall","max_length_spring","diet","rec_catch","com_catch_max","com_catch_5yr","com_catch_hist","revenue_max","revenue_5yr","revenue_hist"],["2016","2016","1993","mean of last 10 years vs historic mean",null,"mean of last 10 years vs historic mean","mean of last 10 years vs historic mean","mean of last 10 years vs historic mean","mean of last 10 years vs historic mean","mean of last 10 years vs historic mean","mean of last 10 years vs historic mean","mean of last 10 years vs historic mean","mean of last 10 years vs historic mean","mean of last 10 years vs historic mean","all","average of 2014 - 2019 data","2017","average of 2014 - 2019 data","mean of last 10 years vs historic mean","2019","average of 2014 - 2019 data","mean of last 10 years vs historic mean"],["        1.411","        0.062","   12,185.000","        0.630","           NA","        0.785","        1.668","        1.357","        1.759","        1.566","        1.017","        0.927","        1.042","        0.960","       11.000","  156,134.000","6,878,210.000","6,878,210.000","        3.459","4,807,987.000","4,807,987.000","        2.867"],["11 out of 41","3 out of 36","18 out of 40","14 out of 23","NA out of NA","24 out of 36","21 out of 51","28 out of 51","28 out of 51","27 out of 51","9 out of 51","26 out of 51","11 out of 51","26 out of 51","5 out of 11","18 out of 31","12 out of 36","24 out of 35","3 out of 34","17 out of 36","23 out of 35","3 out of 34"],[0.27,0.08,0.45,0.61,0.5,0.67,0.41,0.55,0.55,0.53,0.18,0.51,0.22,0.51,0.45,0.58,0.33,0.69,0.08,0.47,0.66,0.08]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Region<\/th>\n      <th>Category<\/th>\n      <th>Indicator<\/th>\n      <th>Year<\/th>\n      <th>Value<\/th>\n      <th>Rank<\/th>\n      <th>Normalized rank<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"search":{"regex":true},"deferRender":true,"scrollY":200,"scrollX":true,"scroller":true,"language":{"thousands":","},"columnDefs":[{"className":"dt-right","targets":6}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 7.1: Butterfish
+</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="risk-assessment-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="preliminary-risk-visualization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
