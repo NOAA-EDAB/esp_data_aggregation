@@ -145,7 +145,7 @@ cl <- snow::makeCluster(7) # not the same as cores - can have more than 8??
 # export data to cluster
 snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
                              "latlong", "rec", "allfh", "cond", "com",
-                             "swept"))
+                             "swept", "risk_species", "risk_year"))
 
 # set up cluster
 snow::clusterEvalQ(cl, {
