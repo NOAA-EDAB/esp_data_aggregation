@@ -1,12 +1,11 @@
 #organizing life history parameters 
 
-install.packages("ggrepel")
-install.packages("ggpubr")
+#install.packages("ggrepel")
+#install.packages("ggpubr")
+#devtools::install_github("james-thorson/FishLife")
 
-devtools::install_github("james-thorson/FishLife")
 library( FishLife )
 library(tidyverse)
-library(ggrepel)
 library(rfishbase)
 library(ggpubr)
 
@@ -26,14 +25,7 @@ predictions_join<-predictions_join %>% mutate(Loo=as.numeric(Loo), K=as.numeric(
 predictions_join$Linf<-exp(predictions_join$Loo)
 predictions_join$K<-exp(predictions_join$K)
 predictions_join<-predictions_join %>% mutate(t0=tzero(Linf, K))
-write.csv(predictions_join, file = "predictions_join.csv")
-
-
-
-
-
-
-
+#write.csv(predictions_join, file = "predictions_join.csv")
 
 
 #function to calculate the fitted growth curve for von bertalanffy growth curve
@@ -59,8 +51,6 @@ prediction.select$body_cat<-cut(prediction.select$Linf, breaks=c(-Inf,50, 100, I
                                 labels=c("small","med","large"))
 
 
-
-
 #split into a set of lists for map use
 flist<-split(prediction.select, f=prediction.select$common_name)
 
@@ -83,7 +73,7 @@ age.growth.curves$common_name<-str_replace(age.growth.curves$common_name,"\\.","
 
 age.growth.join<-right_join(prediction.select,age.growth.curves, by= "common_name")
 
-#
+#plots can be seperated or arranged into one plot below 
 
 small<-age.growth.join %>%
   filter(body_cat=="small")%>%
@@ -118,3 +108,10 @@ large<-age.growth.join %>%
 
 ggarrange(small,med,large)
 
+#annotation for bookdown
+
+# The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth parameters of Linf (Length infinty), K (growth coefficient) 
+# were estimated using [James Thorson FishLife R package](https://github.com/James-Thorson-NOAA/FishLife). This package uses a mix of previously published
+# life history parameters extracted from fishbase and correlated higher taxon parameters to generate estimates for growth and population parameters. t0 (size at age 0) was
+# estimated using the method described by Pauly 1979 for generating a consistent value for t0 from Linf and K. Fish were categorized into three groups with 
+# small bodied species reaching max size < 50 cm,   medium 50-100 cm, and large >100 cm as rough divisions for comparisons of growth among similar body sizes.
