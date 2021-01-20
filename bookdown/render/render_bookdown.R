@@ -1,4 +1,3 @@
-#rmarkdown::render_site(encoding = 'UTF-8')
 
 # purrr ----
 
@@ -15,7 +14,7 @@ dir.create(here::here("docs/bookdown/Acadian redfish"))
 file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
 
 setwd(here::here("bookdown"))
-purrr::map(list_species[1], 
+purrr::map(list_species, 
            ~bookdown::render_book(input = ".",
                                  params = list(species_ID = .x,
                                                
@@ -45,7 +44,8 @@ purrr::map(list_species[1],
                                                swept_data = swept
                                  ), 
                                  knit_root_dir = here::here(paste("docs/bookdown/", .x, sep = "")),
-                                 output_dir = here::here(paste("docs/bookdown/", .x, sep = ""))))
+                                 output_dir = here::here(paste("docs/bookdown/", .x, sep = ""))
+                                 ))
 
 # create .nojekyll file
 file.create(here::here("docs/bookdown", ".nojekyll"))
@@ -111,6 +111,10 @@ render_par <- function(x){
                                       
                                       risk_data = risk,
                                       
+                                      risk_year_data = risk_year,
+                                      
+                                      risk_species_data = risk_species,
+                                      
                                       com_data = com,
                                       
                                       swept_data = swept
@@ -140,7 +144,7 @@ cl <- snow::makeCluster(7) # not the same as cores - can have more than 8??
 # export data to cluster
 snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
                              "latlong", "rec", "allfh", "cond", "com",
-                             "swept"))
+                             "swept", "risk_species", "risk_year"))
 
 # set up cluster
 snow::clusterEvalQ(cl, {
