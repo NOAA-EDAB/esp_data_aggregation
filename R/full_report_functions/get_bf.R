@@ -1,12 +1,25 @@
-plot_bbmsy <- function(x, ytitle, lin = lines, col = colors) {
+plot_msy <- function(x, ytitle, lin = lines, col = colors, type) {
   
   # fix colnames
   x$B.Bmsy <- x$`B/Bmsy`
   x$B.Year <- x$`B Year`
-
-  fig <- ggplot(x,
-                aes(x = B.Year,
-                    y = B.Bmsy,
+  
+  # get data
+  year <- x$`Assessment Year`
+  Region <- x$Region
+  if(type == "b"){
+    value <- x$`B/Bmsy`
+  } else if(type == "f"){
+    value <- x$`F/Fmsy`
+  }
+  
+  data <- data.frame(year = year,
+                     value = value,
+                     Region = Region)
+  
+  fig <- ggplot(data,
+                aes(x = year,
+                    y = value,
                     lty = Region,
                     color = Region))+
     geom_point(cex = 2)+
@@ -18,57 +31,18 @@ plot_bbmsy <- function(x, ytitle, lin = lines, col = colors) {
     scale_linetype_manual(values = lin)+
     scale_color_manual(values = col)
   
-  ecodat <- x %>%
-    dplyr::select(B.Bmsy, B.Year, Region) %>%
-    dplyr::filter(B.Bmsy > 0, B.Year > 0) %>%
+  ecodat <- data %>%
+    dplyr::filter(value > 0, year > 0) %>%
     dplyr::group_by(Region) %>%
-    dplyr::mutate(num = length(B.Bmsy)) %>%
+    dplyr::mutate(num = length(value)) %>%
     dplyr::filter(num > 30)
   
-  if (length(ecodat$B.Bmsy) > 1) {
+  if (length(ecodat$value) > 1) {
     fig <- fig + 
       ecodata::geom_gls(inherit.aes = FALSE,
                         data = ecodat,
-                        mapping = aes(x = B.Year,
-                                      y = B.Bmsy,
-                                      lty = Region))}
-  
-  return(fig)
-}
-
-plot_ffmsy <- function(x, ytitle, lin = lines, col = colors) {
-
-  # fix colnames
-  x$F.Fmsy <- x$`F/Fmsy`
-  x$F.Year <- x$`F Year`
-  
-  fig <- ggplot(x,
-                aes(x = F.Year,
-                    y = F.Fmsy,
-                    lty = Region,
-                    color = Region))+
-    geom_point(cex = 2)+
-    geom_line()+
-    theme_bw()+
-    xlab("Year")+
-    ylab(ytitle)+
-    theme(legend.position = "bottom")+
-    scale_linetype_manual(values = lin)+
-    scale_color_manual(values = col)
-  
-  ecodat <- x %>%
-    dplyr::select(F.Fmsy, F.Year, Region) %>%
-    dplyr::filter(F.Fmsy > 0, F.Year > 0) %>%
-    dplyr::group_by(Region) %>%
-    dplyr::mutate(num = length(F.Fmsy)) %>%
-    dplyr::filter(num > 30)
-  
-  if (length(ecodat$F.Fmsy) > 1) {
-    fig <- fig + 
-      ecodata::geom_gls(inherit.aes = FALSE,
-                        data = ecodat,
-                        mapping = aes(x = F.Year,
-                                      y = F.Fmsy,
+                        mapping = aes(x = year,
+                                      y = value,
                                       lty = Region))}
   
   return(fig)

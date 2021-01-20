@@ -29,7 +29,8 @@ The most recent status of B/Bmsy is: `r bbmsy2`
 ### Figure
 ```{r, bbmsy_fig} 
 if("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2){
-  plot_bbmsy(asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ], 
+  plot_msy(asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ], 
+           type = "b",
              ytitle = "B / Bmsy",
              lin = lines,
              col = colors)
@@ -49,7 +50,7 @@ indicators <- c("bbmsy")
 ### Data
 ```{r, bbmsy_data}
 data <- asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ] %>% 
-                dplyr::select(Region, `B Year`, `B/Bmsy`) %>%
+                dplyr::select(Region, `Assessment Year`, `B/Bmsy`) %>%
                 dplyr::mutate(`B/Bmsy` = `B/Bmsy` %>% round(digits = 2)) %>%
   character_to_factor()
 
