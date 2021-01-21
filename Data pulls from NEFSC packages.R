@@ -17,13 +17,15 @@ survdata<-svdbs$survdat
 saveRDS(survdata, file="survdat_pull_bio.rds")
 
 conversion_factors<-survdat::get_conversion_factors(con)
+
 getwd()
 
 
-survdat::
-survdat::strat_prep(survdata)
 
 
 apply_conversion_factors(con, survdat.raw, use.SAD = F)
 
 remotes::install_github("NOAA-EDAB/comlandr",build_vignettes = TRUE)
+library("comlandr")
+
+comlandr::get_comland_data(con,endyear= 2020)
