@@ -35,7 +35,9 @@ purrr::map(list_species[1],
                                                
                                                risk_data = risk,
                                                
-                                               risk_year_data = risk_year,
+                                               risk_year_hist_data = risk_year_hist,
+                                               
+                                               risk_year_value_data = risk_year_value,
                                                
                                                risk_species_data = risk_species,
                                                

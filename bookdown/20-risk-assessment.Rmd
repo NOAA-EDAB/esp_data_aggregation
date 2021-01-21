@@ -1,16 +1,21 @@
 # Risk assessment
 
 ```{r, risk_functions, include = FALSE}
-source(here::here("R/rank_species_indicators", "plot_risk_by_species.R"))
-source(here::here("R/rank_species_indicators", "plot_risk_by_year.R"))
+source(here::here("R/full_report_functions/risk_functions", "plot_risk_within_species.R"))
+source(here::here("R/full_report_functions/risk_functions", "plot_risk_by_year.R"))
 ```
 
-```{r, risk_data, include = FALSE}
+```{r, risk_data, include = FALSE, eval = FALSE}
+# don't use?
 risk_data <- params$risk_data
 risk_data <- risk_data[risk_data$Species == species, ]
 
-risk_year_data <- params$risk_year_data
-risk_year_data <- risk_year_data[risk_year_data$Species == species, ]
+# already read in
+risk_year_hist_data <- params$risk_year_hist_data
+risk_year_hist_data <- risk_year_hist_data[risk_year_hist_data$Species == species, ]
+
+risk_year_value_data <- params$risk_year_value_data
+risk_year_value_data <- risk_year_value_data[risk_year_value_data$Species == species, ]
 
 risk_species_data <- params$risk_species_data
 risk_species_data <- risk_species_data[risk_species_data$Species == species, ]
@@ -20,8 +25,36 @@ risk_species_data <- risk_species_data[risk_species_data$Species == species, ]
 
 A preliminary risk analysis was conducted by ranking all species according to their indicator values. A high rank number and a normalized rank near 1 indicates that the species is at risk or of importance based on the measured indicator values. When a species was missing an indicator, it was assigned a normalized rank of 0.5.
 
-```{r, risk}
-data <- risk_data %>% dplyr::mutate(Rank = paste(rank, "out of", n_stocks_per_indicator),
+### Relative to all other stocks
+```{r, risk_all}
+data <- risk_year_hist_data %>% 
+  dplyr::mutate(Rank = paste(rank, "out of", n_stocks_per_indicator),
+                       Value2 = Value %>% 
+                         format(big.mark = ",", scientific = FALSE, digits = 2),
+                       Normalized_rank = norm_rank %>% round(digits = 2)) %>%
+  dplyr::select(Region, category, Indicator, Year, Value2, Rank, Normalized_rank) %>%
+  dplyr::rename("Value" = "Value2") %>%
+  character_to_factor()
+
+make_html_table(data, col_names = c("Region", "Category", "Indicator", "Year", "Value (% of historical)",
+                       "Rank", "Normalized rank"))
+
+data <- risk_year_value_data %>% 
+  dplyr::mutate(Rank = paste(rank, "out of", n_stocks_per_indicator),
+                       Value2 = Value %>% 
+                         format(big.mark = ",", scientific = FALSE, digits = 2),
+                       Normalized_rank = norm_rank %>% round(digits = 2)) %>%
+  dplyr::select(Region, category, Indicator, Year, Value2, Rank, Normalized_rank) %>%
+  dplyr::rename("Value" = "Value2") %>%
+  character_to_factor()
+
+make_html_table(data, col_names = c("Region", "Category", "Indicator", "Year", "Value (magnitude)",
+                       "Rank", "Normalized rank"))
+```
+
+### Within each stock
+```{r, risk_within}
+data <- risk_species_data %>% dplyr::mutate(Rank = paste(rank, "out of", n_years_per_indicator),
                        Value2 = Value %>% 
                          format(big.mark = ",", scientific = FALSE, digits = 2),
                        Normalized_rank = norm_rank %>% round(digits = 2)) %>%
@@ -40,8 +73,13 @@ make_html_table(data, col_names = c("Region", "Category", "Indicator", "Year", "
 Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value plotted here reflects the normalized rank of this stock compared to all other stocks in that year.
 
 ```{r, year_risk}
-plot_risk_by_year(risk_year_data,
-                  indicator = "all")
+plot_risk_by_year(risk_year_hist_data,
+                  indicator = "all",
+                  title = "Change compared to historical")
+
+plot_risk_by_year(risk_year_hist_data,
+                  indicator = "all",
+                  title = "Value compared to other stocks")
 ```
 
 ### Within a single stock

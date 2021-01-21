@@ -1,6 +1,6 @@
 # risk over time
 
-source(here::here("R/rank_species_indicators", "get_running_risk.R"))
+source(here::here("R/full_report_functions/risk_functions", "get_running_historical_risk.R"))
 `%>%` <- dplyr::`%>%`
 
 # read in data from spreadsheets
@@ -160,7 +160,7 @@ rec <- get_running_risk(data = rec,
 
 # bbmsy compared to mean of all years previous
 b <- get_running_risk(data = asmt_sum, 
-                      year_source = "B Year", 
+                      year_source = "Assessment Year", 
                       value_source = "B/Bmsy", 
                       high = "low_risk",
                       indicator_name = "bbmsy",
@@ -168,7 +168,7 @@ b <- get_running_risk(data = asmt_sum,
 
 # ffmsy compared to mean of all years previous
 f <- get_running_risk(data = asmt_sum, 
-                      year_source = "F Year", 
+                      year_source = "Assessment Year", 
                       value_source = "F/Fmsy", 
                       high = "high_risk",
                       indicator_name = "ffmsy",
@@ -307,5 +307,5 @@ new_data <- dplyr::full_join(data, fixed_data,
 new_data
 
 write.csv(new_data,
-          file = here::here("data/risk_ranking", "full_risk_data_over_time.csv"))
+          file = here::here("data/risk_ranking", "full_historical_risk_data_over_time.csv"))
 

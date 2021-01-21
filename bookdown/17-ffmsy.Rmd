@@ -51,18 +51,6 @@ if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
 } else print("NO DATA")
 ```
 
-##### Risk across stocks
-
-Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value plotted here reflects the normalized rank of this species compared to all other species in that year.
-```{r}
-indicators <- c("ffmsy")
-```
-
-```{r, fig.height = length(indicators) + 1}
-plot_risk_by_year(risk_year_data,
-                  indicator = indicators)
-```
-
 ##### Risk {-}
 
 See Methods for risk calculation details.
