@@ -1,0 +1,75 @@
+```{r, f_functions, include = FALSE, eval = FALSE}
+# already run
+source(here::here("R/full_report_functions", "get_bf.R")) 
+```
+
+```{r, f_data, include = FALSE, eval = FALSE}
+# already run
+asmt_sum_data <- params$asmt_sum_data
+asmt_sum_data <- asmt_sum_data[asmt_sum_data$Species == species, ]
+```
+
+```{r, f_status}
+if(length(asmt_sum_data$Species) > 1){
+  list_regions <- split(unique(asmt_sum_data$Region), 
+                        f = list(unique(asmt_sum_data$Region)))
+  ffmsy2 <- purrr::map(list_regions, 
+                       ~status(data = asmt_sum_data, 
+                               regions = .x, 
+                               metric = "ffmsy"))
+} else ffmsy2 <- "UNKNOWN"
+
+```
+
+```{r, eval = FALSE}
+# already run 
+# set colors and linetypes to be constant for all regions
+reg <- c(asmt_sum_data$Region, asmt_data$Region) %>% unique()
+
+lines <- 1:length(reg)
+names(lines) <- reg
+
+colors <- nmfspalette::nmfs_palette("regional web")(length(reg))
+names(colors) <- reg
+
+```
+
+## F/Fmsy 
+
+F/Fmsy data were pulled from ``r params$asmt_sum_source``.
+
+The most recent status of F/Fmsy is: `r ffmsy2`
+
+### Figure
+```{r, ffmsy}
+if("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2){
+ plot_msy(asmt_sum_data[which(is.na(asmt_sum_data$`F/Fmsy`) == FALSE), ],
+          ytitle = "F / Fmsy",
+          type = "f",
+             lin = lines,
+             col = colors)
+} else print("NO DATA")
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("ffmsy")
+```
+
+```{r, ref.label = "risk_stock", fig.height = length(indicators) + 2}
+```
+
+```{r, ref.label = "risk_stock2", fig.height = length(indicators) + 1}
+```
+
+### Data
+```{r, ffmsy_data}
+data <- asmt_sum_data[which(is.na(asmt_sum_data$`F/Fmsy`) == FALSE), ] %>% 
+                dplyr::select(Region, `Assessment Year`, `F/Fmsy`) %>%
+                dplyr::mutate(`F/Fmsy` = `F/Fmsy` %>% round(digits = 2)) %>%
+  character_to_factor()
+
+make_html_table(data, col_names = c("Region", "Year", "F/Fmsy"))
+```

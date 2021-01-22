@@ -8,6 +8,9 @@ key2 <- data.frame(SVSPP = unique(key$SVSPP),
 
 get_species_risk <- function(data, year_source, value_source, high, indicator_name, n_run = 5){
   
+  data <- data %>%
+    dplyr::rename("Value" = value_source, "Year" = year_source)
+  
   # select assessmentdata just from most recent assessment for each species
   if(sum(data %>% colnames %>% stringr::str_detect("AssessmentYear")) > 0){
     data <- data %>%
@@ -16,9 +19,15 @@ get_species_risk <- function(data, year_source, value_source, high, indicator_na
       dplyr::filter(AssessmentYear == most_recent_asmt)
   }
   
+  # sum state data for commercial info
+  if(sum(data %>% colnames %>% stringr::str_detect("State")) > 0){
+    data <- data %>%
+      dplyr::group_by(Species, Year) %>%
+      dplyr::mutate(Value = sum(Value))
+  }
+  
   data <- data %>%
-    dplyr::select(Species, Region, value_source, year_source) %>%
-    dplyr::rename("Value" = value_source, "Year" = year_source) %>%
+    dplyr::select(Species, Region, Value, Year) %>%
     dplyr::mutate(ne_stock = (Species %in% key2$Species),
                   Year = as.numeric(Year)) %>%
     dplyr::filter(ne_stock == "TRUE", 
@@ -30,7 +39,7 @@ get_species_risk <- function(data, year_source, value_source, high, indicator_na
   
   years <- data$Year %>% 
     unique() 
-  
+
   results <- c()
   for(i in 1:((years %>% length) - n_run)){
     new_data <- data %>%
@@ -39,41 +48,42 @@ get_species_risk <- function(data, year_source, value_source, high, indicator_na
                     is.na(Year) == FALSE) %>%
       dplyr::mutate(recent = Year > years[i+n_run] - n_run) %>%
       dplyr::group_by(Species, Region, recent) %>%
-      dplyr::mutate(mean_value = mean(Value)) %>%
-      dplyr::select(Species, Region, recent, mean_value) %>%
+      dplyr::mutate(mean_value = mean(Value),
+                    Indicator = indicator_name,
+                    Year = paste(years[i+1], "-", years[i+n_run], " mean",
+                                 sep = "")) %>%
+      dplyr::select(Species, Region, recent, mean_value, Indicator, Year) %>%
       dplyr::distinct() %>%
       dplyr::filter(recent == TRUE,
                     is.na(mean_value) == FALSE) %>% # remove missing values
       dplyr::ungroup()
     
-    if(high == "low_risk"){
-      new_data <- new_data %>%
-        dplyr::mutate(Indicator = indicator_name,
-                      Year = paste(years[i+1], "-", years[i+n_run], " mean",
-                                   sep = ""),
-                      rank = rank(-mean_value), 
-                      norm_rank = rank/max(rank))
-    }
-    
-    if(high == "high_risk"){
-      new_data <- new_data %>%
-        dplyr::mutate(Indicator = indicator_name,
-                      Year = paste(years[i+1], "-", years[i+n_run], " mean",
-                                   sep = ""),
-                      rank = rank(mean_value), 
-                      norm_rank = rank/max(rank))
-      
-    }
-    
-    new_data <- new_data %>%
-      dplyr::ungroup() %>%
-      dplyr::select(Species, Region, Indicator, Year, mean_value, rank, norm_rank)  %>%
-      dplyr::rename("Value" = "mean_value")
-    
     results <- rbind(results, new_data)
+
+  }
+
+  if(high == "low_risk"){
+    results <- results %>%
+      dplyr::group_by(Species, Region) %>%
+      dplyr::mutate(rank = rank(-mean_value), 
+                    norm_rank = rank/max(rank))
   }
   
+  if(high == "high_risk"){
+    results <- results %>%
+      dplyr::group_by(Species, Region) %>%
+      dplyr::mutate(rank = rank(mean_value), 
+                    norm_rank = rank/max(rank))
+    
+  }
+  
+  results <- results %>%
+    dplyr::ungroup() %>%
+    dplyr::select(Species, Region, Indicator, Year, mean_value, rank, norm_rank)  %>%
+    dplyr::rename("Value" = "mean_value")
+
   return(results)
 }
+
 
   

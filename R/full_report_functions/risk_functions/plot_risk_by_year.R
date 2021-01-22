@@ -1,4 +1,4 @@
-plot_risk_by_year <- function(data, indicator, title){
+plot_risk_by_year <- function(data, indicator, title, include_legend){
 
   # filter data
   if(indicator != "all"){
@@ -35,7 +35,7 @@ plot_risk_by_year <- function(data, indicator, title){
                                name = "Normalized rank",
                                breaks = c(0, 0.5, 1),
                                limits = c(0, 1))+
-          theme(legend.position = "bottom")+
+          theme(legend.position = "top")+
           ylab("Indicator")+
           xlab("Year")+
           labs(title = title,
@@ -49,7 +49,13 @@ plot_risk_by_year <- function(data, indicator, title){
                        space = "free_y")
         }
         
+        if(include_legend == "no"){
+          fig <- fig +
+            theme(legend.position = "none")
+        }
+        
         return(fig)
+          
       } else print("NO DATA")
       
     }

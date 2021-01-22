@@ -36,7 +36,9 @@ params:
   
   swept_data: data # swept area estimates
   
-  risk_year_data: data # risk by year
+  risk_year_hist_data: data # historical risk by year
+  
+  risk_year_value_data: data # value risk by year
   
   risk_species_data: data # species risk
 ---
@@ -61,16 +63,19 @@ library(ggplot2)
 source(here::here("R", "character_to_factor.R"))
 source(here::here("R/full_report_functions", "make_html_table.R"))
 
-source(here::here("R/rank_species_indicators", "plot_risk_by_year.R"))
-source(here::here("R/rank_species_indicators", "plot_risk_by_species.R"))
+source(here::here("R/full_report_functions/risk_functions", "plot_risk_by_year.R"))
+source(here::here("R/full_report_functions/risk_functions", "plot_risk_within_species.R"))
 ```
 
 ```{r, universal_data, include = FALSE}
 # data used in multiple chapters
 species <- params$species_ID
 
-risk_year_data <- params$risk_year_data
-risk_year_data <- risk_year_data[risk_year_data$Species == species, ]
+risk_year_hist_data <- params$risk_year_hist_data
+risk_year_hist_data <- risk_year_hist_data[risk_year_hist_data$Species == species, ]
+
+risk_year_value_data <- params$risk_year_value_data
+risk_year_value_data <- risk_year_value_data[risk_year_value_data$Species == species, ]
 
 risk_species_data <- params$risk_species_data
 risk_species_data <- risk_species_data[risk_species_data$Species == species, ]

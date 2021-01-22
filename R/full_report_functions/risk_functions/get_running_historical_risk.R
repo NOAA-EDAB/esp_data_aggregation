@@ -9,6 +9,9 @@ key2 <- data.frame(SVSPP = unique(key$SVSPP),
 
 get_running_risk <- function(data, year_source, value_source, 
                              high, indicator_name, n_run){
+  
+  data <- data %>%
+    dplyr::rename("Value" = value_source, "Year" = year_source)
 
   # select assessmentdata just from most recent assessment for each species
   if(sum(data %>% colnames %>% stringr::str_detect("AssessmentYear")) > 0){
@@ -18,9 +21,15 @@ get_running_risk <- function(data, year_source, value_source,
       dplyr::filter(AssessmentYear == most_recent_asmt)
   }
   
+  # sum state data for commercial info
+  if(sum(data %>% colnames %>% stringr::str_detect("State")) > 0){
+    data <- data %>%
+      dplyr::group_by(Species, Year) %>%
+      dplyr::mutate(Value = sum(Value))
+  }
+  
   data <- data %>%
-    dplyr::select(Species, Region, value_source, year_source) %>%
-    dplyr::rename("Value" = value_source, "Year" = year_source) %>%
+    dplyr::select(Species, Region, Value, Year) %>%
     dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
     dplyr::filter(ne_stock == "TRUE",
                   is.na(Value) == FALSE, 

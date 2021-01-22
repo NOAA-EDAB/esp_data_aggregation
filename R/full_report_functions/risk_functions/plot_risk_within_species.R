@@ -1,4 +1,4 @@
-plot_risk_by_stock <- function(data, indicator){
+plot_risk_by_stock <- function(data, indicator, include_legend){
   
   # filter data
   if(indicator != "all"){
@@ -8,6 +8,12 @@ plot_risk_by_stock <- function(data, indicator){
   }
   
   if(nrow(data) > 0){
+    
+    # format year
+    year <- data$Year %>%
+      stringr::str_trunc(9, "right", ellipsis = "") %>%
+      stringr::str_split_fixed("-", n = 2)
+    data$new_year <- year[ , 2]
 
     # plot
     for(i in unique(data$Region)){
@@ -17,7 +23,7 @@ plot_risk_by_stock <- function(data, indicator){
       
       if(sum(new_data$norm_rank == 0.5) != nrow(new_data)){
         fig <- ggplot(new_data,
-                      aes(x = Year %>% as.numeric,
+                      aes(x = new_year %>% as.numeric,
                           y = Indicator %>% 
                             stringr::str_replace_all("_", " "),
                           fill = norm_rank ))+
@@ -30,7 +36,7 @@ plot_risk_by_stock <- function(data, indicator){
                                name = "Normalized rank",
                                breaks = c(0, 0.5, 1),
                                limits = c(0, 1))+
-          theme(legend.position = "bottom")+
+          theme(legend.position = "top")+
           ylab("Indicator")+
           xlab("Year")+
           labs(title = "Within-stock risk over time",
@@ -44,7 +50,13 @@ plot_risk_by_stock <- function(data, indicator){
                        space = "free_y")
         }
         
+        if(include_legend == "no"){
+          fig <- fig +
+            theme(legend.position = "none")
+        }
+        
         return(fig) 
+        
       } else print("NO DATA")
       
     }

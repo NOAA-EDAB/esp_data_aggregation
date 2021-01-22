@@ -113,7 +113,9 @@ render_par <- function(x){
                                       
                                       risk_data = risk,
                                       
-                                      risk_year_data = risk_year,
+                                      risk_year_hist_data = risk_year_hist,
+                                      
+                                      risk_year_value_data = risk_year_value,
                                       
                                       risk_species_data = risk_species,
                                       
@@ -146,7 +148,8 @@ cl <- snow::makeCluster(7) # not the same as cores - can have more than 8??
 # export data to cluster
 snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
                              "latlong", "rec", "allfh", "cond", "com",
-                             "swept", "risk_species", "risk_year"))
+                             "swept", "risk_species", "risk_year_hist", 
+                             "risk_year_value"))
 
 # set up cluster
 snow::clusterEvalQ(cl, {
