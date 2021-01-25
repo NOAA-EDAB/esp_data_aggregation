@@ -2,6 +2,8 @@
 
 survey <- readRDS(here::here("data", "survey_data.RDS"))
 survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9), ] # remove error jonah crab
+# sum(numlen) and abundance may not be equal 
+# abundnace has been corrected with conversion factor, but numlen has not
 
 survey_ws <- readRDS(here::here("data", "survey_data_12292020_wintersummer.RDS")) %>%
   dplyr::select(colnames(survey))
@@ -22,7 +24,11 @@ latlong <- read.csv(here::here("data", "geo_range_data.csv")) %>%
 shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
 
 rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
-  dplyr::filter(sub_reg_f == "NORTH ATLANTIC")
+  dplyr::filter(sub_reg_f == "NORTH ATLANTIC" | 
+                  sub_reg_f == "MID-ATLANTIC") %>%
+  dplyr::mutate(lbs_ab1 = lbs_ab1 %>%
+                  stringr::str_replace_all(",", "") %>%
+                  as.numeric()) 
 
 source(here::here("data", "allfh_regions.R"))
 

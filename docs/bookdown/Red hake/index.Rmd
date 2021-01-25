@@ -7,7 +7,7 @@ output:
   bookdown::gitbook:
     split_by: section
 documentclass: book
-github-repo: rtabandera/esp_data_aggregation
+github-repo: NOAA-EDAB/esp_data_aggregation
 
 params: 
   species_ID: "Acadian redfish" # common name of species

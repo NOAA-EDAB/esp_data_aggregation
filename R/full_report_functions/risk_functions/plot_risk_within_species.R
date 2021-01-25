@@ -43,6 +43,7 @@ plot_risk_by_stock <- function(data, indicator, include_legend){
                subtitle = i)
         
         n_category <- data$category %>% unique() %>% length()
+        
         if(n_category > 1){
           fig <- fig +
             facet_grid(rows = vars(category),
@@ -55,9 +56,9 @@ plot_risk_by_stock <- function(data, indicator, include_legend){
             theme(legend.position = "none")
         }
         
-        return(fig) 
+        print(fig) 
         
-      } else print("NO DATA")
+      } else print(paste("NO", i, "DATA"))
       
     }
     

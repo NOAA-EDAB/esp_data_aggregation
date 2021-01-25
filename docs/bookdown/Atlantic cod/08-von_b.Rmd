@@ -100,15 +100,17 @@ is_large<-FALSE
 
 sizeclass<-age.growth.join %>% filter(common_name==ricky_stock)
 
-if(nrow(sizeclass) > 0){
+if(nrow(sizeclass) > 0 &
+   species != "Black sea bass"){ # formatting problem with Black sea bass, omit for now
+  
   if(sizeclass$body_cat=="small"){
   is_small<-TRUE}
 
-if(sizeclass$body_cat=="med"){
-  is_med<-TRUE}
-
-if(sizeclass$body_cat=="large"){
-  is_large<-TRUE}
+  if(sizeclass$body_cat=="med"){
+    is_med<-TRUE}
+  
+  if(sizeclass$body_cat=="large"){
+    is_large<-TRUE}
 } else missing <- TRUE
  
 ```

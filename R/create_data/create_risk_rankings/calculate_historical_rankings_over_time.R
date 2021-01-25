@@ -13,27 +13,21 @@ survey <- survey %>%
 # calculate running risks ----
 
 # avg & max lengths of past 5 years compared to mean of all years previous (fall and spring)
-length <- survey %>% 
-  dplyr::select(Species, Region, YEAR, SEASON, LENGTH, NUMLEN, fish_id) %>%
-  dplyr::group_by(fish_id) %>%
-  dplyr::mutate(avg_length = sum(LENGTH*NUMLEN)/sum(NUMLEN),
-                max_length = max(LENGTH)) %>%
-  dplyr::ungroup() %>%
-  dplyr::select(Species, Region, YEAR, SEASON, avg_length, max_length) %>%
-  dplyr::distinct()
+source(here::here("R/full_report_functions/", "get_length.R"))
+length <- survey %>% get_len_data_risk
 length$YEAR <- as.numeric(length$YEAR)
 
 avg_len_f <- get_running_risk(data = length %>% 
                                   dplyr::filter(SEASON == "FALL", Region != "Outside stock area"), 
                                 year_source = "YEAR", 
-                                value_source = "avg_length", 
+                                value_source = "mean_len", 
                                 high = "low_risk",
                                 indicator_name = "avg_length_fall",
                                 n_run = 5)
 avg_len_s <- get_running_risk(data = length %>% 
                                   dplyr::filter(SEASON == "SPRING", Region != "Outside stock area"), 
                                 year_source = "YEAR", 
-                                value_source = "avg_length", 
+                                value_source = "mean_len", 
                                 high = "low_risk",
                                 indicator_name = "avg_length_spring",
                                 n_run = 5)
@@ -41,14 +35,14 @@ avg_len_s <- get_running_risk(data = length %>%
 max_len_f <- get_running_risk(data = length %>% 
                                   dplyr::filter(SEASON == "FALL", Region != "Outside stock area"), 
                                 year_source = "YEAR", 
-                                value_source = "max_length", 
+                                value_source = "max_len", 
                                 high = "low_risk",
                                 indicator_name = "max_length_fall",
                                 n_run = 5)
 max_len_s <- get_running_risk(data = length %>% 
                                   dplyr::filter(SEASON == "SPRING", Region != "Outside stock area"), 
                                 year_source = "YEAR", 
-                                value_source = "max_length", 
+                                value_source = "max_len", 
                                 high = "low_risk",
                                 indicator_name = "max_length_spring",
                                 n_run = 5)
@@ -135,25 +129,34 @@ catch <- get_running_risk(data = dat,
 
 # com catch & revenue of past 5 years compared to mean of all years previous 
 com$Region <- NA
-com_run <- get_running_risk(data = com, 
+com_sum <- com %>%
+  dplyr::group_by(Species, Region, Year) %>%
+  dplyr::summarise(total_catch = sum(Pounds),
+                   total_dollars = sum(Dollars_adj))
+
+com_run <- get_running_risk(data = com_sum, 
                                 year_source = "Year", 
-                                value_source = "Pounds", 
+                                value_source = "total_catch", 
                                 high = "high_risk",
                                 indicator_name = "com_catch",
                                 n_run = 5)
 
-rev_run <- get_running_risk(data = com, 
+rev_run <- get_running_risk(data = com_sum, 
                                 year_source = "Year", 
-                                value_source = "Dollars_adj", 
+                                value_source = "total_dollars", 
                                 high = "high_risk",
                                 indicator_name = "revenue",
                                 n_run = 5)
 
 # rec catch of past 5 years compared to mean of all years previous 
 rec$Region <- NA
-rec <- get_running_risk(data = rec, 
+rec_sum <- rec %>%
+  dplyr::group_by(Species, Region, year) %>%
+  dplyr::summarise(total_catch = sum(lbs_ab1))
+
+rec <- get_running_risk(data = rec_sum, 
                         year_source = "year", 
-                        value_source = "tot_cat", 
+                        value_source = "total_catch", 
                         high = "high_risk",
                         indicator_name = "rec_catch",
                         n_run = 5)

@@ -10,11 +10,11 @@ names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/
 all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
 list_species <- split(all_species, f = list(all_species))
 
-dir.create(here::here("docs/bookdown/Acadian redfish"))
-file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
+#dir.create(here::here("docs/bookdown/Acadian redfish"))
+#file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
 
 setwd(here::here("bookdown"))
-purrr::map("Black sea bass", 
+purrr::map("Bluefish", 
            ~bookdown::render_book(input = ".",
                                  params = list(species_ID = .x,
                                                

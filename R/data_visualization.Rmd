@@ -1,0 +1,118 @@
+---
+title: "ESP data widgets"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+github-repo: NOAA-EDAB/esp_data_aggregation
+---
+
+```{r, eval = FALSE}
+rmarkdown::render(input = here::here("R", "data_visualization.Rmd"),
+                  output_dir = here::here("docs"))
+```
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE, 
+                      warning = FALSE)
+
+`%>%` <- dplyr::`%>%`
+
+source(here::here("R/full_report_functions", "read_data.R"))
+source(here::here("R", "character_to_factor.R"))
+source(here::here("R/full_report_functions", "make_html_table.R"))
+```
+
+This document provides interactive html tables for all data sources used in the preliminary Northeast ESP reports. Data is presented as raw as possible, with column names updated for easier interpretation. In some cases, summary columns have been appended (most commonly to add a region name in addition to a strata ID number). In cases where data is categorized by descriptors beyond year and stock region (for example, also aggregated by state), a summary table is presented with the data aggregated by year and stock region only; this highlights annual trends.
+
+# {- .tabset .tabset-fade}
+
+## Survey data {.tabset .tabset-fade .tabset-pills}
+
+This data was pulled from `svdbs` using the `survdat` package.
+
+### Raw data {-}
+`fish_id` is a derived column that identifies fish observed on a unique cruise-tow-station-date.
+```{r, eval = FALSE}
+# data is too big
+data <- survey %>%
+  dplyr::select(Species, Region, CRUISE6, STATION, STRATUM, TOW, SVSPP, 
+                CATCHSEX, SVVESSEL, YEAR, SEASON, LAT, LON, EST_TOWDATE, 
+                fish_id,DEPTH, SURFTEMP, SURFSALIN, BOTTEMP, BOTSALIN, 
+                ABUNDANCE, BIOMASS, LENGTH, NUMLEN) %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+### Aggregated physical data {-}
+Aggregated by `fish_id`.
+```{r, coming_soon}
+print("Coming soon!")
+```
+
+### Abundance and biomass data {-}
+Duplicates removed
+```{r, ref.label = "coming_soon"}
+```
+
+### Processed data {-}
+Mean values calculated by year and region; minimum and maximum lengths also included.
+```{r, ref.label = "coming_soon"}
+```
+
+## Stock assessment summary data {.tabset .tabset-fade .tabset-pills}
+
+### Raw data {-}
+```{r}
+data <- asmt_sum %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+## Stock assessment full data {.tabset .tabset-fade .tabset-pills}
+
+### Raw data {-}
+```{r}
+data <- asmt %>%
+  dplyr::select(-Age, -Category) %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+## Recreational catch {.tabset .tabset-fade .tabset-pills}
+
+### Raw data {-}
+```{r}
+data <- rec %>%
+  dplyr::select(Species, year, sub_reg_f, st_f, mode_fx_f, lbs_ab1) %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+### Aggregated by fishing mode {-}
+```{r}
+data <- rec %>%
+  dplyr::select(Species, year, sub_reg_f, st_f, mode_fx_f, lbs_ab1) %>%
+  dplyr::group_by(Species, year, mode_fx_f) %>%
+  dplyr::summarise(catch = sum(lbs_ab1)) %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+### Aggregated by year only {-}
+```{r}
+data <- rec %>%
+  dplyr::select(Species, year, sub_reg_f, st_f, mode_fx_f, lbs_ab1) %>%
+  dplyr::group_by(Species, year) %>%
+  dplyr::summarise(catch = sum(lbs_ab1)) %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+

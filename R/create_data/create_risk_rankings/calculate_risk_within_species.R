@@ -14,17 +14,9 @@ survey <- survey %>%
 # risk within each stock ----
 
 # avg & max lengths of past 5 years compared to mean of all years previous (fall and spring)
-length <- survey %>% dplyr::filter(LENGTH > 0, ABUNDANCE > 0) %>%
-  dplyr::select(Species, YEAR, SEASON, Region, fish_id, LENGTH, NUMLEN) %>%
-  dplyr::distinct() %>% # problem with repeat rows
-  dplyr::group_by(Species, YEAR, SEASON, Region) %>%
-  dplyr::mutate(n_fish = sum(NUMLEN)) %>%
-  dplyr::filter(n_fish > 10) %>% # only year-season-region with >10 fish
-  dplyr::group_by(Species, YEAR, SEASON, Region) %>%
-  dplyr::summarise(mean_len = sum(LENGTH*NUMLEN)/sum(NUMLEN),
-                   min_len = min(LENGTH),
-                   max_len = max(LENGTH)
-  )
+source(here::here("R/full_report_functions/", "get_length.R"))
+length <- survey %>% get_len_data_risk
+length$YEAR <- as.numeric(length$YEAR)
 
 avg_len_f <- get_species_risk(data = length %>% 
                                 dplyr::filter(SEASON == "FALL", Region != "Outside stock area"), 
@@ -126,23 +118,32 @@ catch <- get_species_risk(data = dat,
 
 # com catch & revenue 
 com$Region <- NA
-com_run <- get_species_risk(data = com, 
+com_sum <- com %>%
+  dplyr::group_by(Species, Region, Year) %>%
+  dplyr::summarise(total_catch = sum(Pounds),
+                   total_dollars = sum(Dollars_adj))
+
+com_run <- get_species_risk(data = com_sum, 
                             year_source = "Year", 
-                            value_source = "Pounds", 
+                            value_source = "total_catch", 
                             high = "high_risk",
                             indicator_name = "com_catch")
 
-rev_run <- get_species_risk(data = com, 
+rev_run <- get_species_risk(data = com_sum, 
                             year_source = "Year", 
-                            value_source = "Dollars_adj", 
+                            value_source = "total_dollars", 
                             high = "high_risk",
                             indicator_name = "revenue")
 
 # rec catch 
 rec$Region <- NA
-rec <- get_species_risk(data = rec, 
+rec_sum <- rec %>%
+  dplyr::group_by(Species, Region, year) %>%
+  dplyr::summarise(total_catch = sum(lbs_ab1))
+
+rec <- get_species_risk(data = rec_sum, 
                         year_source = "year", 
-                        value_source = "tot_cat", 
+                        value_source = "total_catch", 
                         high = "high_risk",
                         indicator_name = "rec_catch")
 
