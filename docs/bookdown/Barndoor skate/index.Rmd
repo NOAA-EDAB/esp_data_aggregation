@@ -22,6 +22,8 @@ params:
   
   survey_data: data # survey data
   survey_source: "survdat"
+  
+  ricky_survey_data: data # ricky survey data
 
   rec_data: data # recreational catch (MRIP)
   

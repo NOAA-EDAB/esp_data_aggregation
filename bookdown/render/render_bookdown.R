@@ -25,6 +25,8 @@ purrr::map("Bluefish",
                                                
                                                survey_data = survey_big,
                                                
+                                               ricky_survey_data = ricky_survey,
+                                               
                                                diet_data = allfh,
                                                
                                                rec_data = rec,
@@ -103,6 +105,8 @@ render_par <- function(x){
                                       
                                       survey_data = survey_big,
                                       
+                                      ricky_survey_data = ricky_survey,
+                                      
                                       diet_data = allfh,
                                       
                                       rec_data = rec,
@@ -149,7 +153,7 @@ cl <- snow::makeCluster(7) # not the same as cores - can have more than 8??
 snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
                              "latlong", "rec", "allfh", "cond", "com",
                              "swept", "risk_species", "risk_year_hist", 
-                             "risk_year_value"))
+                             "risk_year_value", "ricky_survey"))
 
 # set up cluster
 snow::clusterEvalQ(cl, {

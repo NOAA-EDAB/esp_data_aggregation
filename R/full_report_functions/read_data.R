@@ -10,6 +10,8 @@ survey_ws <- readRDS(here::here("data", "survey_data_12292020_wintersummer.RDS")
 
 survey_big <- dplyr::union(survey, survey_ws)
 
+ricky_survey <- readRDS(here::here("data", "survdat_pull_bio.rds"))
+
 # read assessmentdata directly from package
 asmt_sum <- assessmentdata::stockAssessmentSummary %>% 
   dplyr::filter(Jurisdiction == "NEFMC" | 
