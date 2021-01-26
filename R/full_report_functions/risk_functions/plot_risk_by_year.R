@@ -21,7 +21,7 @@ plot_risk_by_year <- function(data, indicator, title, include_legend){
         dplyr::filter(Region == i)
       
       if(sum(new_data$norm_rank == 0.5) != nrow(new_data)){
-        fig <- ggplot(data,
+        fig <- ggplot(new_data,
                       aes(x = new_year %>% as.numeric,
                           y = Indicator %>% 
                             stringr::str_replace_all("_", " "),
@@ -42,6 +42,7 @@ plot_risk_by_year <- function(data, indicator, title, include_legend){
                subtitle = i)
         
         n_category <- data$category %>% unique() %>% length()
+        
         if(n_category > 1){
           fig <- fig +
             facet_grid(rows = vars(category),
@@ -54,9 +55,9 @@ plot_risk_by_year <- function(data, indicator, title, include_legend){
             theme(legend.position = "none")
         }
         
-        return(fig)
+        print(fig)
           
-      } else print("NO DATA")
+      } else print(paste("NO", i, "DATA"))
       
     }
    

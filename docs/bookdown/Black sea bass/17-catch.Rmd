@@ -66,10 +66,7 @@ See Methods for risk calculation details.
 indicators <- c("asmt_catch")
 ```
 
-```{r, ref.label = "risk_stock", fig.height = length(indicators) + 2}
-```
-
-```{r, ref.label = "risk_stock2", fig.height = length(indicators) + 1}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 #### Recreational catch
@@ -84,10 +81,7 @@ See Methods for risk calculation details.
 indicators <- c("rec_catch")
 ```
 
-```{r, ref.label = "risk_stock", fig.height = length(indicators) + 2}
-```
-
-```{r, ref.label = "risk_stock2", fig.height = length(indicators) + 1}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 #### Commercial catch
@@ -102,10 +96,7 @@ See Methods for risk calculation details.
 indicators <- c("com_catch")
 ```
 
-```{r, ref.label = "risk_stock", fig.height = length(indicators) + 2}
-```
-
-```{r, ref.label = "risk_stock2", fig.height = length(indicators) + 1}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 #### Commercial vs recreational catch
@@ -132,12 +123,12 @@ make_html_table(data, col_names = colnames(data))
 #### Recreational catch
 ```{r, rec_data}
 data <- rec_data %>% 
-  dplyr::select(year, st_f, mode_fx_f, tot_cat) %>%
+  dplyr::select(year, st_f, mode_fx_f, lbs_ab1) %>%
   dplyr::mutate(State = st_f %>%
                   stringr::str_to_title(),
                 Method = mode_fx_f %>% 
                   stringr::str_to_sentence(),
-                Catch_pounds = tot_cat %>%
+                Catch_pounds = lbs_ab1 %>%
                   format(big.mark = ",")) %>%
   dplyr::select(year, State, Method, Catch_pounds) %>%
   character_to_factor()
@@ -187,9 +178,12 @@ stock <- asmt_data %>%
                      values_from = Value)
 
 recr <- rec_data %>%
+    dplyr::mutate(catch = lbs_ab1 %>%
+                  stringr::str_replace_all(",", "") %>%
+                  as.numeric()) %>%
   dplyr::group_by(year) %>%
   dplyr::rename(Year = year) %>%
-  dplyr::summarise(`Recreational catch (mt)` = sum(tot_cat)/2204.6)
+  dplyr::summarise(`Recreational catch (mt)` = sum(catch)/2204.6)
 
 comm <- com_data %>%
   dplyr::group_by(Year) %>%

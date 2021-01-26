@@ -29,23 +29,9 @@ indicators <- c("max_length_spring",
                "avg_length_fall")
 ```
 
-```{r, risk_stock, fig.height = length(indicators) + 2}
-plot_risk_by_year(risk_year_hist_data,
-                  indicator = indicators,
-                  title = "Change compared to historical",
-                  include_legend = "yes")
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
-```{r, risk_stock2, fig.height = length(indicators) + 1}
-plot_risk_by_year(risk_year_value_data,
-                  indicator = indicators,
-                  title = "Value compared to other stocks",
-                  include_legend = "no")
-
-plot_risk_by_stock(risk_species_data,
-                  indicator = indicators,
-                  include_legend = "no")
-```
 
 ### Summary
 ```{r, length_summary}

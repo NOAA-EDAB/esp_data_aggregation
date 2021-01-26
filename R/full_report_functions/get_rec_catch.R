@@ -4,9 +4,10 @@ library(ggplot2)
 get_rec_catch <- function(data){
   
   if(nrow(data) > 0){
+    
     summary <- data %>%
       dplyr::group_by(mode_fx_f, year) %>%
-      dplyr::summarise(total_catch = sum(tot_cat))
+      dplyr::summarise(total_catch = sum(lbs_ab1))
     
     # add in zeros
     combo <- expand.grid(year = min(summary$year):max(summary$year),
@@ -18,7 +19,8 @@ get_rec_catch <- function(data){
       dplyr::mutate(total_catch2 = ifelse(is.na(total_catch), 0, total_catch))
     
     # get order of most important - least important category
-    cat <- summary2 %>% dplyr::group_by(mode_fx_f) %>%
+    cat <- summary2 %>% 
+      dplyr::group_by(mode_fx_f) %>%
       dplyr::summarise(imp = max(total_catch2)) %>%
       dplyr::arrange(dplyr::desc(imp))
     
@@ -47,7 +49,7 @@ get_rec_catch <- function(data){
       xlab("Year")+
       scale_fill_manual(name = "Category",
                         values = plot_colors)+
-      guides(fill=guide_legend(nrow=2, byrow = TRUE, title = "Category"))+
+      guides(fill = guide_legend(nrow = 2, byrow = TRUE, title = "Category"))+
       theme(legend.position = "bottom")
     
     return(fig)

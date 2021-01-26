@@ -54,10 +54,7 @@ indicators <- c("biomass_spring",
                 "biomass_fall")
 ```
 
-```{r, ref.label = "risk_stock", fig.height = length(indicators) + 2}
-```
-
-```{r, ref.label = "risk_stock2", fig.height = length(indicators) + 1}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 #### Survey biomass (swept area estimates)
@@ -94,10 +91,7 @@ See Methods for risk calculation details.
 indicators <- c("asmt_biomass")
 ```
 
-```{r, ref.label = "risk_stock", fig.height = length(indicators) + 2}
-```
-
-```{r, ref.label = "risk_stock2", fig.height = length(indicators) + 1}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 ### Survey summary

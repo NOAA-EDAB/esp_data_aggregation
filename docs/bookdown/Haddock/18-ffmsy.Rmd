@@ -58,10 +58,7 @@ See Methods for risk calculation details.
 indicators <- c("ffmsy")
 ```
 
-```{r, ref.label = "risk_stock", fig.height = length(indicators) + 2}
-```
-
-```{r, ref.label = "risk_stock2", fig.height = length(indicators) + 1}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 ### Data

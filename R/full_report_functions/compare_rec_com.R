@@ -1,9 +1,10 @@
 prop_catch <- function(rec, com){
   
   if(nrow(rec) > 0 & nrow(com) > 0){
+
     rec <- rec %>%
       dplyr::group_by(year) %>%
-      dplyr::summarise(tot_catch_rec = sum(tot_cat)) %>%
+      dplyr::summarise(tot_catch_rec = sum(lbs_ab1)) %>%
       dplyr::rename("Year" = "year")
     
     com <- com %>%
@@ -40,7 +41,7 @@ prop_catch_data <- function(rec, com){
   if(nrow(rec) > 0 & nrow(com) > 0){
     rec <- rec %>%
       dplyr::group_by(year) %>%
-      dplyr::summarise(tot_catch_rec = sum(tot_cat)) %>%
+      dplyr::summarise(tot_catch_rec = sum(lbs_ab1)) %>%
       dplyr::rename("Year" = "year")
     
     com <- com %>%
@@ -61,7 +62,7 @@ prop_catch_data <- function(rec, com){
                     tot_catch_com = tot_catch_com %>%
                       format(big.mark = ","),
                     total_catch = total_catch %>%
-                      format(big.mark = ","),)
+                      format(big.mark = ","))
     return(data)
   } 
 
