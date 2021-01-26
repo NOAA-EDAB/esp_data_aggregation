@@ -47,7 +47,7 @@ params:
 
 # `r params$species` {-}
 
-```{r, setup, include = FALSE}
+```{r, setup, include = FALSE, cache = TRUE}
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE, 
                       warning = FALSE, 
@@ -61,7 +61,7 @@ library(ggplot2)
 `%>%` <- dplyr::`%>%`
 ```
 
-```{r, universal_functions, include = FALSE}
+```{r, universal_functions, include = FALSE, cache = TRUE}
 source(here::here("R", "character_to_factor.R"))
 source(here::here("R/full_report_functions", "make_html_table.R"))
 
@@ -69,17 +69,23 @@ source(here::here("R/full_report_functions/risk_functions", "plot_risk_by_year.R
 source(here::here("R/full_report_functions/risk_functions", "plot_risk_within_species.R"))
 ```
 
-```{r, universal_data, include = FALSE}
+```{r, universal_data, include = FALSE, cache = TRUE}
+# data used in multiple chapters
+risk_year_hist_data <- params$risk_year_hist_data
+
+risk_year_value_data <- params$risk_year_value_data
+
+risk_species_data <- params$risk_species_data
+```
+
+```{r, species_data, include = FALSE}
 # data used in multiple chapters
 species <- params$species_ID
 
-risk_year_hist_data <- params$risk_year_hist_data
 risk_year_hist_data <- risk_year_hist_data[risk_year_hist_data$Species == species, ]
 
-risk_year_value_data <- params$risk_year_value_data
 risk_year_value_data <- risk_year_value_data[risk_year_value_data$Species == species, ]
 
-risk_species_data <- params$risk_species_data
 risk_species_data <- risk_species_data[risk_species_data$Species == species, ]
 ```
 

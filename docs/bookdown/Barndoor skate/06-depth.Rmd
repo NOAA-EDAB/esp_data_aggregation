@@ -14,14 +14,16 @@ The range of depths that a species occupies is linked to many other habitat char
 ```{r, depth_data}
 
 #survdata<-readRDS(here::here("survdat_pull_bio.rds"))
+#survdata <- ricky_survey 
 
 survdata <- params$ricky_survey_data
-survdata<-survdata %>% mutate(SVSPP=as.numeric(SVSPP))
+survdata<-survdata %>% dplyr::mutate(SVSPP=as.numeric(SVSPP))
 stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
-stock_list_all_strata<-stock_list_all_strata %>% rename(SVSPP=svspp)
+stock_list_all_strata<-stock_list_all_strata %>% dplyr::rename(SVSPP=svspp)
 stock_list<-stock_list_all_strata %>% dplyr::distinct(SVSPP,.keep_all =T)
 
-survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
+survdata.w.codes <- dplyr::inner_join(survdata, stock_list, by= "SVSPP" ) %>%
+  dplyr::mutate(common_name = stringr::str_to_sentence(common_name))
 
 # # abundance is adjusted but not length for bigalo data
 # #groupdiscription =svspp
@@ -36,21 +38,22 @@ survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
 
 test.sp.code<-c(141,135)
 
-selected.spp<-survdata.w.codes %>% filter(common_name == species %>%
-                                            stringr::str_to_lower())
+selected.spp<-survdata.w.codes %>% dplyr::filter(common_name == species)
 
 selected.spp.sum<- selected.spp %>% 
-  group_by(YEAR, SEASON) %>% 
-  summarise(ave.d=mean(DEPTH), 
+  dplyr::group_by(YEAR, SEASON) %>% 
+  dplyr::summarise(ave.d=mean(DEPTH), 
             sd.d= sd(DEPTH,na.rm = TRUE),
             ave.t=mean(BOTTEMP), 
             sd.t=sd(BOTTEMP,na.rm = TRUE))
+
+has_data <- nrow(selected.spp.sum) > 0
 
 ```
 
 ### Figures
 
-```{r, depth_fig}
+```{r, depth_fig, eval = has_data}
 
 selected.spp.sum %>%
   ggplot(aes(x=YEAR %>% as.numeric(), 
@@ -69,7 +72,7 @@ selected.spp.sum %>%
 
 ```
 
-```{r, depth_fig2}
+```{r, depth_fig2, eval = has_data}
 
 selected.spp.sum %>%
   ggplot(aes(x=YEAR %>% as.numeric(), 
@@ -88,4 +91,7 @@ selected.spp.sum %>%
 
 ```
 
+```{r, no_data, eval = has_data == FALSE}
+print("NO DATA")
+```
 

@@ -14,7 +14,7 @@ list_species <- split(all_species, f = list(all_species))
 #file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
 
 setwd(here::here("bookdown"))
-purrr::map("Bluefish", 
+purrr::map("Acadian redfish", 
            ~bookdown::render_book(input = ".",
                                  params = list(species_ID = .x,
                                                
