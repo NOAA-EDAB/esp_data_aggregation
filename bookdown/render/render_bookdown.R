@@ -2,6 +2,7 @@
 # purrr ----
 
 source(here::here("R/full_report_functions", "read_data.R"))
+source(here::here("R/full_report_functions", "get_updated_files.R"))
 
 # get NE stock names
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
@@ -10,14 +11,19 @@ names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/
 all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
 list_species <- split(all_species, f = list(all_species))
 
-dir.create(here::here("docs/bookdown"))
+#dir.create(here::here("docs/bookdown"))
 #dir.create(here::here("docs/bookdown/Acadian redfish"))
 #file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
 
 setwd(here::here("bookdown"))
+
 start <- Sys.time()
-purrr::map(list_species, 
-           ~bookdown::render_book(input = ".",
+files <- get_updated_files("2021-01-27")
+prev <- TRUE
+
+purrr::map(list_species[1], 
+           ~bookdown::render_book(input = files,
+                                  preview = prev,
                                  params = list(species_ID = .x,
                                                
                                                latlong_data = latlong,
@@ -50,7 +56,8 @@ purrr::map(list_species,
                                                swept_data = swept
                                  ), 
                                  knit_root_dir = here::here(paste("docs/bookdown/", .x, sep = "")),
-                                 output_dir = here::here(paste("docs/bookdown/", .x, sep = ""))
+                                 output_dir = here::here(paste("docs/bookdown/", .x, sep = "")) #,
+                                # config_file = "https://raw.githubusercontent.com/NOAA-EDAB/esp_data_aggregation/main/bookdown/_bookdown.yml"
                                  ))
 end <- Sys.time()
 end - start
