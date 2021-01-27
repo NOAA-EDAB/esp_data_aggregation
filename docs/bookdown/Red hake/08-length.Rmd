@@ -1,11 +1,10 @@
-```{r, len_functions, include = FALSE}
+```{r, len_functions, include = FALSE, cache = params$cache}
 source(here::here("R/full_report_functions", "get_length.R"))
 ```
 
 ```{r, len_data, include = FALSE}
 # length data (survdat) already read in with habitat data
-#survey_data <- params$survey_data
-#survey_data <- survey_data[survey_data$Species == species, ]
+#survey_data <- params$survey_data[params$survey_data$Species == species, ]
 ```
 
 ## Length

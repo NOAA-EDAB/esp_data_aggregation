@@ -1,4 +1,4 @@
-```{r, biomass_functions, include = FALSE, eval = FALSE}
+```{r, biomass_functions, include = FALSE, eval = FALSE, cache = params$cache}
 # already read in with abundance
 source(here::here("R/full_report_functions", "get_assessment.R"))
 source(here::here("R/full_report_functions", "get_swept.R"))
@@ -8,14 +8,11 @@ source(here::here("R/full_report_functions", "get_swept.R"))
 # already read in with abundance
 
 # abun/biomass data (survdat) already read in with habitat data
-#survey_data <- params$survey_data
-#survey_data <- survey_data[survey_data$Species == species, ]
+#survey_data <- params$survey_data[params$survey_data$Species == species, ]
 
-asmt_data <- params$asmt_data
-asmt_data <- asmt_data[asmt_data$Species == species, ]
+asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
 
-swept_data <- params$swept_data
-swept_data <- swept_data[swept_data$Species == species, ]
+swept_data <-  params$swept_data[ params$swept_data$Species == species, ]
 ```
 
 ```{r, eval = FALSE}

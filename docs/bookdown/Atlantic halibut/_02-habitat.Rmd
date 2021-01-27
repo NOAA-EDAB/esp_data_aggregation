@@ -1,18 +1,15 @@
 # Habitat information
 
-```{r, habitat_functions, include = FALSE}
+```{r, habitat_functions, include = FALSE, cache = TRUE}
 source(here::here("R/full_report_functions", "get_latlong.R"))
 source(here::here("R/full_report_functions", "get_survdat_info.R"))
 source(here::here("R/full_report_functions", "map_strata_ecsa.R"))
 ```
 
 ```{r, habitat_data, include = FALSE}
-latlong_data <- params$latlong_data
-latlong_data <- latlong_data[latlong_data$Species == species, ]
-
-survey_data <- params$survey_data
-survey_data <- survey_data[survey_data$Species == species, ]
-
+latlong_data <- params$latlong_data[params$latlong_data$Species == species, ]
+ 
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
 ```
 
 ## Map of distribution

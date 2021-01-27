@@ -43,19 +43,24 @@ params:
   risk_year_value_data: data # value risk by year
   
   risk_species_data: data # species risk
+  
+  cache: FALSE
 ---
 
 # `r params$species` {-}
 
-```{r, setup, include = FALSE, cache = TRUE}
+```{r, setup, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE, 
                       warning = FALSE, 
                       fig.width = 8, 
                       fig.align = 'center',
-                      fig.cap = params$species
+                      fig.cap = params$species #,
+                     # cache.path = here::here("bookdown/cache/", "")
                       )
+```
 
+```{r, setup2, include = FALSE, cache = TRUE}
 library(ggplot2)
 
 `%>%` <- dplyr::`%>%`

@@ -4,8 +4,7 @@
 ```
 
 ```{r,sal_data, include = FALSE}
-#survey_data <- params$survey_data
-#survey_data <- survey_data[survey_data$Species == species, ]
+#survey_data <- params$survey_data[params$survey_data$Species == species, ]
 ```
 
 ## Salinity

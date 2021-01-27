@@ -1,12 +1,11 @@
 
-```{r, revenue_functions, include = FALSE}
+```{r, revenue_functions, include = FALSE, cache = params$cache}
 source(here::here("R/full_report_functions", "get_com_money.R"))
 ```
 
 ```{r, revenue_raw_data, include = FALSE, eval = FALSE}
 # already read
-com_data <- params$com_data
-com_data <- com_data[com_data$Species == species, ]
+com_data <- params$com_data[params$com_data$Species == species, ]
 ```
 
 

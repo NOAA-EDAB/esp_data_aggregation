@@ -1,14 +1,12 @@
-```{r, cond_functions, include = FALSE}
+```{r, cond_functions, include = FALSE, cache = params$cache}
 source(here::here("R/full_report_functions", "get_lw.R"))
 source(here::here("R/full_report_functions", "get_relative_weight.R"))
 ```
 
-```{r, cond_data, include = FALSE}
-cond_data <- params$cond_data
-cond_data <- cond_data[cond_data$Species == species, ]
+```{r, cond_data_species, include = FALSE}
+cond_data <- params$cond_data[params$cond_data$Species == species, ]
 
-diet_data <- params$diet_data
-diet_data <- diet_data[diet_data$Species == species, ]
+diet_data <- params$diet_data[params$diet_data$Species == species, ]
 ```
 
 ## Condition

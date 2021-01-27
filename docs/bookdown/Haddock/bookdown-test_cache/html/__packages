@@ -1,0 +1,17 @@
+base
+snow
+ggplot2
+dplyr
+tidyverse
+tibble
+tidyr
+readr
+purrr
+stringr
+forcats
+here
+survdat
+dbutils
+FishLife
+rfishbase
+ggpubr

@@ -1,11 +1,10 @@
 
-```{r, temp_functions, include = FALSE}
+```{r, temp_functions, include = FALSE, cache = params$cache}
 source(here::here("R/full_report_functions", "get_survdat_info.R"))
 ```
 
-```{r, tempe_data, include = FALSE}
-survey_data <- params$survey_data
-survey_data <- survey_data[survey_data$Species == species, ]
+```{r, tempe_data_species, include = FALSE}
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
 ```
 
 ## Temperature

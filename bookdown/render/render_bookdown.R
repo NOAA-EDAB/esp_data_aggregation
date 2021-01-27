@@ -10,11 +10,13 @@ names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/
 all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
 list_species <- split(all_species, f = list(all_species))
 
+dir.create(here::here("docs/bookdown"))
 #dir.create(here::here("docs/bookdown/Acadian redfish"))
 #file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
 
 setwd(here::here("bookdown"))
-purrr::map("Acadian redfish", 
+start <- Sys.time()
+purrr::map(list_species, 
            ~bookdown::render_book(input = ".",
                                  params = list(species_ID = .x,
                                                
@@ -50,6 +52,10 @@ purrr::map("Acadian redfish",
                                  knit_root_dir = here::here(paste("docs/bookdown/", .x, sep = "")),
                                  output_dir = here::here(paste("docs/bookdown/", .x, sep = ""))
                                  ))
+end <- Sys.time()
+end - start
+# first run - 2.6 minutes
+# second run - 2.0 minutes, faster with cached data!
 
 # create .nojekyll file
 file.create(here::here("docs/bookdown", ".nojekyll"))
@@ -64,6 +70,8 @@ file.create(here::here("docs/bookdown", ".nojekyll"))
 # cuts batch generation time by ~80%
 # but very slow cluster creating and closing - how to speed up??
 # make sure there are no NAs in the species name vector or it will break
+
+start <- Sys.time()
 
 `%>%` <- dplyr::`%>%`
 
@@ -178,6 +186,10 @@ snow::clusterApply(cl,
 Sys.time()
 snow::stopCluster(cl)
 Sys.time()
+
+end <- Sys.time()
+end - start
+
 .restart.R()
 Sys.time()
 

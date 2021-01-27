@@ -1,13 +1,11 @@
 
-```{r, recruit_functions, include = FALSE, eval = FALSE}
+```{r, recruit_functions, include = FALSE, eval = FALSE, cache = params$cache}
 # already read in 
 source(here::here("R/full_report_functions", "get_assessment.R"))
 ```
 
 ```{r, recruit_raw_data, include = FALSE, eval = FALSE}
-# already read in
-asmt_data <- params$asmt_data
-asmt_data <- asmt_data[asmt_data$Species == species, ]
+asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
 ```
 
 ## Recruitment
