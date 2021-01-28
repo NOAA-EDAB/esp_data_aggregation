@@ -82,4 +82,95 @@ microbenchmark::microbenchmark(fxn1(allfh),
                                fxn2(allfh),
                                times = 10)
 
+# reading in data vs exporting to 1 cluster
+# reading in data is 4x slower than exporting to cluster
+microbenchmark::microbenchmark(source(here::here("R/full_report_functions", "read_data.R")),
+                               {# make cluster
+                                 cl <- snow::makeCluster(1) # not the same as cores - can have more than 8??
+                                 
+                                 # export data to cluster
+                                 snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
+                                                              "latlong", "rec", "allfh", "cond", "com",
+                                                              "swept", "risk_species", "risk_year_hist", 
+                                                              "risk_year_value", "ricky_survey", "render_par"))
+                                 
+                                 # set up cluster
+                                 snow::clusterEvalQ(cl, {
+                                   # load libraries
+                                   library(ggplot2)
+                                   `%>%` <- dplyr::`%>%`
+                                   
+                                   # load shapefile
+                                   shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
+                                   
+                                 }) %>% invisible()
+                               },
+                               times = 10)
 
+# read in data to 1 cluster vs 7 clusters
+# takes slightly less than 7x time to set up 7 clusters - ~5x time
+# 26 s vs 133 s
+c_fxn <- function(n){
+  cl <- snow::makeCluster(n) # not the same as cores - can have more than 8??
+  
+  # export data to cluster
+  snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
+                               "latlong", "rec", "allfh", "cond", "com",
+                               "swept", "risk_species", "risk_year_hist", 
+                               "risk_year_value", "ricky_survey", "render_par"))
+  
+  # set up cluster
+  snow::clusterEvalQ(cl, {
+    # load libraries
+    library(ggplot2)
+    `%>%` <- dplyr::`%>%`
+    
+    # load shapefile
+    shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
+    
+  }) %>% invisible()
+  
+  snow::stopCluster(cl)
+}
+
+microbenchmark::microbenchmark(c_fxn(1),
+                               c_fxn(7),
+                               times = 3)
+
+# read in data to 1 cluster vs read & run (calculate time to run)
+# additional ~100 s to run (126s vs 25s)
+c_fxn2 <- function(n){
+  cl <- snow::makeCluster(n) # not the same as cores - can have more than 8??
+  
+  # export data to cluster
+  snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
+                               "latlong", "rec", "allfh", "cond", "com",
+                               "swept", "risk_species", "risk_year_hist", 
+                               "risk_year_value", "ricky_survey", "render_par"))
+  
+  # set up cluster
+  snow::clusterEvalQ(cl, {
+    # load libraries
+    library(ggplot2)
+    `%>%` <- dplyr::`%>%`
+    
+    # load shapefile
+    shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
+    
+  }) %>% invisible()
+  
+  # generate reports
+  snow::clusterApply(cl, 
+                     all_species[1],
+                     fun = function(all_species) render_par(all_species, files = "index.Rmd", prev = FALSE))
+  
+  snow::stopCluster(cl)
+}
+
+microbenchmark::microbenchmark(c_fxn(1),
+                               c_fxn2(1),
+                               times = 3)
+
+# time to set up 10 clusters - 213s
+microbenchmark::microbenchmark(c_fxn(10),
+                               times = 3)

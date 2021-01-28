@@ -1,10 +1,9 @@
 plot_risk_by_stock <- function(data, indicator, include_legend){
   
   # filter data
-  if(indicator != "all"){
+  if(indicator[1] != "all"){
     data <- data %>%
-      dplyr::mutate(include = Indicator %in% indicator) %>%
-      dplyr::filter(include == TRUE)
+      dplyr::filter(Indicator %in% indicator)
   }
   
   if(nrow(data) > 0){

@@ -6,15 +6,16 @@ output: html_document
 github-repo: NOAA-EDAB/esp_data_aggregation
 ---
 
-```{r, eval = FALSE}
+```{r, eval = FALSE, include = FALSE}
 rmarkdown::render(input = here::here("R", "data_visualization.Rmd"),
                   output_dir = here::here("docs"))
 ```
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE,
-                      message = FALSE, 
-                      warning = FALSE)
+                      message = FALSE #, 
+                      #warning = FALSE
+                      )
 
 `%>%` <- dplyr::`%>%`
 
@@ -31,29 +32,78 @@ This document provides interactive html tables for all data sources used in the 
 
 This data was pulled from `svdbs` using the `survdat` package.
 
-### Raw data {-}
-`fish_id` is a derived column that identifies fish observed on a unique cruise-tow-station-date.
-```{r, eval = FALSE}
-# data is too big
+### Raw data {- .tabset .tabset-fade}
+Duplicates removed.
+
+#### Temperature
+```{r, temp, eval = FALSE}
 data <- survey %>%
-  dplyr::select(Species, Region, CRUISE6, STATION, STRATUM, TOW, SVSPP, 
-                CATCHSEX, SVVESSEL, YEAR, SEASON, LAT, LON, EST_TOWDATE, 
-                fish_id,DEPTH, SURFTEMP, SURFSALIN, BOTTEMP, BOTSALIN, 
-                ABUNDANCE, BIOMASS, LENGTH, NUMLEN) %>%
+  dplyr::filter(is.na(SURFTEMP) == FALSE |
+                  is.na(BOTTEMP) == FALSE) %>%
+  dplyr::select(Species, Region, YEAR, SEASON, EST_TOWDATE, CRUISE6, STATION, 
+                STRATUM, DEPTH, SURFTEMP, BOTTEMP) %>%
+  dplyr::distinct() %>%
   character_to_factor()
 
 make_html_table(data, col_names = colnames(data))
 ```
 
-### Aggregated physical data {-}
+#### Salinity
+```{r, salin, eval = FALSE}
+data <- survey %>%
+  dplyr::filter(is.na(SURFSALIN) == FALSE |
+                  is.na(BOTSALIN) == FALSE) %>%
+  dplyr::select(Species, Region, YEAR, SEASON, EST_TOWDATE, CRUISE6, STATION, 
+                STRATUM, DEPTH, SURFSALIN, BOTSALIN) %>%
+  dplyr::distinct() %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+#### Length
+```{r, length, eval = FALSE}
+data <- survey %>%
+  dplyr::filter(is.na(SURFSALIN) == FALSE |
+                  is.na(BOTSALIN) == FALSE) %>%
+  dplyr::select(Species, Region, YEAR, SEASON, EST_TOWDATE, CRUISE6, STATION, 
+                STRATUM, DEPTH, LENGTH, NUMLEN) %>%
+  dplyr::distinct() %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+#### Abundance
+```{r, abun, eval = FALSE}
+data <- survey %>%
+  dplyr::filter(is.na(SURFSALIN) == FALSE |
+                  is.na(BOTSALIN) == FALSE) %>%
+  dplyr::select(Species, Region, YEAR, SEASON, EST_TOWDATE, CRUISE6, STATION, 
+                STRATUM, DEPTH, ABUNDANCE) %>%
+  dplyr::distinct() %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+#### Biomass
+```{r, biomass, eval = FALSE}
+data <- survey %>%
+  dplyr::filter(is.na(SURFSALIN) == FALSE |
+                  is.na(BOTSALIN) == FALSE) %>%
+  dplyr::select(Species, Region, YEAR, SEASON, EST_TOWDATE, CRUISE6, STATION, 
+                STRATUM, DEPTH, BIOMASS) %>%
+  dplyr::distinct() %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+### Aggregated data {-}
 Aggregated by `fish_id`.
 ```{r, coming_soon}
 print("Coming soon!")
-```
-
-### Abundance and biomass data {-}
-Duplicates removed
-```{r, ref.label = "coming_soon"}
 ```
 
 ### Processed data {-}
@@ -73,10 +123,47 @@ make_html_table(data, col_names = colnames(data))
 
 ## Stock assessment full data {.tabset .tabset-fade .tabset-pills}
 
-### Raw data {-}
+### Raw data {- .tabset .tabset-fade}
+
+#### Catch
 ```{r}
 data <- asmt %>%
   dplyr::select(-Age, -Category) %>%
+  dplyr::filter(Metric == "Catch") %>%
+  dplyr::filter(is.na(Value) == FALSE) %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+#### Biomass
+```{r}
+data <- asmt %>%
+  dplyr::select(-Age, -Category) %>%
+  dplyr::filter(Metric == "Biomass") %>%
+  dplyr::filter(is.na(Value) == FALSE) %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+#### Abundance
+```{r}
+data <- asmt %>%
+  dplyr::select(-Age, -Category) %>%
+  dplyr::filter(Metric == "Abundance") %>%
+  dplyr::filter(is.na(Value) == FALSE) %>%
+  character_to_factor()
+
+make_html_table(data, col_names = colnames(data))
+```
+
+#### Recruitment
+```{r}
+data <- asmt %>%
+  dplyr::select(-Age, -Category) %>%
+  dplyr::filter(Metric == "Recruitment") %>%
+  dplyr::filter(is.na(Value) == FALSE) %>%
   character_to_factor()
 
 make_html_table(data, col_names = colnames(data))

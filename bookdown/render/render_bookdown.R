@@ -18,12 +18,10 @@ list_species <- split(all_species, f = list(all_species))
 setwd(here::here("bookdown"))
 
 start <- Sys.time()
-files <- get_updated_files("2021-01-27")
-prev <- TRUE
 
 purrr::map(list_species[1], 
-           ~bookdown::render_book(input = files,
-                                  preview = prev,
+           ~bookdown::render_book(input = ".",
+                                  preview = FALSE,
                                  params = list(species_ID = .x,
                                                
                                                latlong_data = latlong,
@@ -56,8 +54,7 @@ purrr::map(list_species[1],
                                                swept_data = swept
                                  ), 
                                  knit_root_dir = here::here(paste("docs/bookdown/", .x, sep = "")),
-                                 output_dir = here::here(paste("docs/bookdown/", .x, sep = "")) #,
-                                # config_file = "https://raw.githubusercontent.com/NOAA-EDAB/esp_data_aggregation/main/bookdown/_bookdown.yml"
+                                 output_dir = here::here(paste("docs/bookdown/", .x, sep = ""))
                                  ))
 end <- Sys.time()
 end - start
@@ -68,14 +65,10 @@ end - start
 file.create(here::here("docs/bookdown", ".nojekyll"))
 
 # parallelize all reports ----
-# problems with bookdown & paralellization - not reliable
-# i think it's fixed now
+# issues with previewing bookdown chapters in parallel
+# use parallelization only to generate full reports
 #####
 
-# using furrr and future doesn't speed up report generation
-# use parallel
-# cuts batch generation time by ~80%
-# but very slow cluster creating and closing - how to speed up??
 # make sure there are no NAs in the species name vector or it will break
 
 start <- Sys.time()
@@ -101,12 +94,7 @@ render_par <- function(x){
   
   new_dir <- here::here(paste("docs/bookdown/", x, sep = ""))
   dir.create(new_dir)
-  
-  file.copy(from = list.files(here::here("bookdown"), full.names = TRUE),
-            to = new_dir,
-            recursive = FALSE,
-            overwrite = TRUE)
-  
+
   setwd(new_dir)
   file.create(".nojekyll")
   
@@ -162,7 +150,7 @@ render_par <- function(x){
 source(here::here("R/full_report_functions", "read_data.R"))
 
 # make cluster
-cl <- snow::makeCluster(7) # not the same as cores - can have more than 8??
+cl <- snow::makeCluster(13) # not the same as cores - can have more than 8??
 
 # export data to cluster
 snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
