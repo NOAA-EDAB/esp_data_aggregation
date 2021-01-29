@@ -12,3 +12,5 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Test knitting .Rmds with github actions
 
 Hello world!
+
+Here is a change
