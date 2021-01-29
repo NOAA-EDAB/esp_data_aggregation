@@ -44,7 +44,7 @@ jobs:
 #       - name: Install npm
 #         uses: actions/setup-node@v1
       - name: Cleanup files
-        run: rm -v ! "docs/*"
+        run: rm -v !"*/docs/*"
 
 
       - name: Deploy to github
