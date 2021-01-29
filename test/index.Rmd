@@ -1,0 +1,33 @@
+---
+title: "Test"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Test knitting .Rmds with github actions
+
+Hello world!
+
+Here is a change
+
+Here is another change
+
+And another
+
+Change
+
+Change
+
+
+
+
+
+
+
+
+
