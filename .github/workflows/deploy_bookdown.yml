@@ -42,7 +42,7 @@ jobs:
          # Destination path
          path: _book # optional
      - name: Deploy to GitHub Pages
-       uses: NOAA-EDAB/GitHub-Pages-deploy@main
+       uses: esp_data_aggregation/GitHub-Pages-deploy@main
        env:
           EMAIL: ${{ secrets.EMAIL }}               # must be a verified email
           GH_TOKEN: ${{ secrets.GH_PAT }} # https://github.com/settings/tokens
