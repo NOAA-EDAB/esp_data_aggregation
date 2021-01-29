@@ -1,14 +1,12 @@
+## Temperature
 
-```{r, temp_functions, include = FALSE}
+```{r, temp_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_survdat_info.R"))
 ```
 
-```{r, tempe_data, include = FALSE}
-survey_data <- params$survey_data
-survey_data <- survey_data[survey_data$Species == species, ]
+```{r, tempe_data_species}
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
 ```
-
-## Temperature
 
 Surface and bottom temperature data were pulled from ``r params$survey_source``. 
 

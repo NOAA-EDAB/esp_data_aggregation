@@ -4,10 +4,9 @@
 # none
 ```
 
-```{r, management_data, include = FALSE}
+```{r, management_data, include = FALSE, cache = params$cache}
 # already read in
-#asmt_sum_data <- params$asmt_sum_data
-#asmt_sum_data <- asmt_sum_data[asmt_sum_data$Species == species, ]
+#asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
 
 ad_rating_data <- params$asmt_sum_data %>% 
   dplyr::select(Species, Region, `Assessment Year`, `Last Data Year`,

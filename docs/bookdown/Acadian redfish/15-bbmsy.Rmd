@@ -1,11 +1,10 @@
 
-```{r, b_functions, include = FALSE}
+```{r, b_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_bf.R"))
 ```
 
-```{r, b_data, include = FALSE}
-asmt_sum_data <- params$asmt_sum_data
-asmt_sum_data <- asmt_sum_data[asmt_sum_data$Species == species, ]
+```{r, b_data_species}
+asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
 ```
 
 ```{r, b_status}
@@ -18,6 +17,9 @@ if(length(asmt_sum_data$Species) > 1){
                                metric = "bbmsy"))
 } else bbmsy2 <- "UNKNOWN"
 
+```
+
+```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
 ```
 
 ## B/Bmsy 
@@ -37,7 +39,7 @@ if("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2){
 } else print("NO DATA")
 ```
 
-##### Risk
+##### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}

@@ -1,10 +1,9 @@
 plot_risk_by_year <- function(data, indicator, title, include_legend){
 
   # filter data
-  if(indicator != "all"){
+  if(indicator[1] != "all"){
     data <- data %>%
-      dplyr::mutate(include = Indicator %in% indicator) %>%
-      dplyr::filter(include == TRUE)
+      dplyr::filter(Indicator %in% indicator)
   }
   
   if(nrow(data) > 0){
@@ -57,7 +56,7 @@ plot_risk_by_year <- function(data, indicator, title, include_legend){
         
         print(fig)
           
-      } else print(paste("NO", i, "DATA"))
+      } else print(paste("No", i, "data"))
       
     }
    

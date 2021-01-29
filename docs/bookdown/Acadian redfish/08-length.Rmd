@@ -1,14 +1,13 @@
-```{r, len_functions, include = FALSE}
+## Length
+
+```{r, len_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_length.R"))
 ```
 
-```{r, len_data, include = FALSE}
+```{r, len_data}
 # length data (survdat) already read in with habitat data
-#survey_data <- params$survey_data
-#survey_data <- survey_data[survey_data$Species == species, ]
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
 ```
-
-## Length
 
 Length data were pulled from ``r params$survey_source``. Only years with more than 10 fish lengths were considered for analysis. 
 
@@ -31,7 +30,6 @@ indicators <- c("max_length_spring",
 
 ```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
-
 
 ### Summary
 ```{r, length_summary}

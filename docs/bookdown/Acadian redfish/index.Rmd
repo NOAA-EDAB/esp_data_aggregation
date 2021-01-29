@@ -1,4 +1,4 @@
---- 
+---
 title: "`r params$species_ID`"
 author: "Abigail Tyrell"
 date: "`r format(Sys.time(), '%d %b %Y')`"
@@ -8,6 +8,10 @@ output:
     split_by: section
 documentclass: book
 github-repo: NOAA-EDAB/esp_data_aggregation
+
+language:
+  ui:
+    chapter_name: "Section "
 
 params: 
   species_ID: "Acadian redfish" # common name of species
@@ -43,25 +47,46 @@ params:
   risk_year_value_data: data # value risk by year
   
   risk_species_data: data # species risk
+  
+  cache: FALSE
 ---
 
 # `r params$species` {-}
 
 ```{r, setup, include = FALSE}
+knitr::knit_hooks$set(time_it = local({
+  now <- NULL
+  function(before, options) {
+    if (before) {
+      # record the current time before each chunk
+      now <<- Sys.time()
+    } else {
+      # calculate the time difference after a chunk
+      res <- difftime(Sys.time(), now) %>% round(digits = 2)
+      # return a character string to show the time
+      paste("Time for this code chunk to run:", res)
+    }
+  }
+}))
+
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE, 
                       warning = FALSE, 
                       fig.width = 8, 
                       fig.align = 'center',
-                      fig.cap = params$species
+                      fig.cap = params$species,
+                      time_it = TRUE
+                     # cache.path = here::here("bookdown/cache/", "")
                       )
+```
 
+```{r, setup2, cache = params$cache}
 library(ggplot2)
 
 `%>%` <- dplyr::`%>%`
 ```
 
-```{r, universal_functions, include = FALSE}
+```{r, universal_functions, cache = params$cache}
 source(here::here("R", "character_to_factor.R"))
 source(here::here("R/full_report_functions", "make_html_table.R"))
 
@@ -69,18 +94,15 @@ source(here::here("R/full_report_functions/risk_functions", "plot_risk_by_year.R
 source(here::here("R/full_report_functions/risk_functions", "plot_risk_within_species.R"))
 ```
 
-```{r, universal_data, include = FALSE}
+```{r, species_data}
 # data used in multiple chapters
 species <- params$species_ID
 
-risk_year_hist_data <- params$risk_year_hist_data
-risk_year_hist_data <- risk_year_hist_data[risk_year_hist_data$Species == species, ]
+risk_year_hist_data <- params$risk_year_hist_data[params$risk_year_hist_data$Species == species, ]
 
-risk_year_value_data <- params$risk_year_value_data
-risk_year_value_data <- risk_year_value_data[risk_year_value_data$Species == species, ]
+risk_year_value_data <- params$risk_year_value_data[params$risk_year_value_data$Species == species, ]
 
-risk_species_data <- params$risk_species_data
-risk_species_data <- risk_species_data[risk_species_data$Species == species, ]
+risk_species_data <- params$risk_species_data[params$risk_species_data$Species == species, ]
 ```
 
 This is a preliminary report of previously collected data. This report is pulling information on all Northeast `r species` stocks.

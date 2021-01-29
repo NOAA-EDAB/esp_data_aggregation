@@ -1,12 +1,11 @@
 
-```{r, geo_functions, include = FALSE}
+```{r, geo_functions, include = FALSE, cache = params$cache}
 source(here::here("R/full_report_functions", "get_latlong.R"))
 source(here::here("R/full_report_functions", "map_strata_ecsa.R"))
 ```
 
-```{r, geo_data, include = FALSE}
-latlong_data <- params$latlong_data
-latlong_data <- latlong_data[latlong_data$Species == species, ]
+```{r, geo_data_species, include = FALSE}
+latlong_data <- params$latlong_data[params$latlong_data$Species == species, ]
 ```
 
 ## Map of distribution

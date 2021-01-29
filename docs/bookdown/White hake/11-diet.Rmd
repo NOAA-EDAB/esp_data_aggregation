@@ -1,12 +1,11 @@
 
-```{r, diet_functions, include = FALSE}
+```{r, diet_functions, include = FALSE, cache = params$cache}
 source(here::here("R/full_report_functions", "get_diet.R"))
 ```
 
 ```{r, diet_raw_data, include = FALSE, eval = FALSE}
 # already read in
-diet_data <- params$diet_data
-diet_data <- diet_data[diet_data$Species == species, ]
+diet_data <- params$diet_data[params$diet_data$Species == species, ]
 ```
 
 ## Diet

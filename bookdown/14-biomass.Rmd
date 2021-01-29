@@ -1,34 +1,17 @@
-```{r, biomass_functions, include = FALSE, eval = FALSE}
-# already read in with abundance
+```{r, biomass_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_assessment.R"))
 source(here::here("R/full_report_functions", "get_swept.R"))
 ```
 
-```{r, biomass_raw_data, include = FALSE, eval = FALSE}
-# already read in with abundance
+```{r, biomass_raw_data}
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
 
-# abun/biomass data (survdat) already read in with habitat data
-#survey_data <- params$survey_data
-#survey_data <- survey_data[survey_data$Species == species, ]
+asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
 
-asmt_data <- params$asmt_data
-asmt_data <- asmt_data[asmt_data$Species == species, ]
-
-swept_data <- params$swept_data
-swept_data <- swept_data[swept_data$Species == species, ]
+swept_data <-  params$swept_data[ params$swept_data$Species == species, ]
 ```
 
-```{r, eval = FALSE}
-# already read in with abundance
-# set colors and linetypes to be constant for all regions
-reg <- c(asmt_sum_data$Region, asmt_data$Region) %>% unique()
-
-lines <- 1:length(reg)
-names(lines) <- reg
-
-colors <- nmfspalette::nmfs_palette("regional web")(length(reg))
-names(colors) <- reg
-
+```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
 ```
 
 ## Biomass

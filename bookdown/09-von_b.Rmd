@@ -2,7 +2,7 @@
 
 Ricky Tabandera
 
-```{r setup_vonb, include=FALSE}
+```{r setup_vonb, cache = params$cache}
 #install.packages("ggrepel")
 #install.packages("ggpubr")
 #devtools::install_github("james-thorson/FishLife")
@@ -11,14 +11,11 @@ suppressPackageStartupMessages(library(FishLife))
 suppressPackageStartupMessages(library(tidyverse))
 library(rfishbase)
 library(ggpubr)
-
-ricky_stock <- stringr::str_to_lower(species)
-
 ```
 
 
 
-```{r data_wrangling}
+```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
 
 #function to calculate the fitted growth function for von bertalanffy growth curve
 vonb<-function(t,Linf,K,tzero){Latthisage<-Linf*(1-exp(-K*(t-tzero)))
@@ -90,7 +87,10 @@ age.growth.join$common_name<-  str_to_lower(age.growth.join$common_name)
 #recode black sea.bass to black sea bass inorder to be consistant with other datasets 
 
 age.growth.join$common_name<- recode(age.growth.join$common_name, "black sea.bass" = "black sea bass")
+```
 
+```{r, vonb_species}
+ricky_stock <- stringr::str_to_lower(species)
 #########################################################
 #logical filtering of params for plotting
 
@@ -138,7 +138,7 @@ if(nrow(sizeclass) > 0){
 
 Fish were categorized into three groups with small bodied species reaching max size < 50 cm, medium 50-100 cm, and large >100 cm as rough divisions for comparisons of growth among similar body sizes.
 
-```{r small_growth_curves, eval=is_small}
+```{r small_growth_curves, eval=is_small, cache = params$cache}
 
 if(nrow(sizeclass) > 0){
   age.growth.join %>%
@@ -155,7 +155,7 @@ if(nrow(sizeclass) > 0){
 
 ```
 
-```{r med_growth_curves, eval=is_med}
+```{r med_growth_curves, eval=is_med, cache = params$cache}
 if(nrow(sizeclass) > 0){
   age.growth.join %>%
     filter(body_cat=="med")%>%
@@ -171,7 +171,7 @@ if(nrow(sizeclass) > 0){
 
 ```
 
-```{r large_growth_curves, eval=is_large}
+```{r large_growth_curves, eval=is_large, cache = params$cache}
 if(nrow(sizeclass) > 0){
   age.growth.join %>%
     filter(body_cat=="large")%>%

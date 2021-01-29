@@ -2,7 +2,7 @@
 ## Depth
 Ricky Tabandera
 
-```{r, include=FALSE}
+```{r, include=FALSE, cache = params$cache}
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(here))
 suppressPackageStartupMessages(library(survdat))
@@ -11,16 +11,19 @@ suppressPackageStartupMessages(library(dbutils))
 
 The range of depths that a species occupies is linked to many other habitat characteristics such as benthic structure, food availability, or temperature. Thus, observed depth can signal changes in habitat suitability. Changes in this metric can indicate the required resources are changing their distribution on the landscape. Seasonal differences in occurrence can also help identify essential habitat and the timing of migration to acquire seasonal resources 
 
-```{r, depth_data}
-
+```{r, depth_data_cache, cache = params$cache}
 #survdata<-readRDS(here::here("survdat_pull_bio.rds"))
 #survdata <- ricky_survey 
 
 survdata <- params$ricky_survey_data
-survdata<-survdata %>% dplyr::mutate(SVSPP=as.numeric(SVSPP))
+
 stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
 stock_list_all_strata<-stock_list_all_strata %>% dplyr::rename(SVSPP=svspp)
 stock_list<-stock_list_all_strata %>% dplyr::distinct(SVSPP,.keep_all =T)
+```
+
+```{r, depth_data}
+survdata<-survdata %>% dplyr::mutate(SVSPP=as.numeric(SVSPP))
 
 survdata.w.codes <- dplyr::inner_join(survdata, stock_list, by= "SVSPP" ) %>%
   dplyr::mutate(common_name = stringr::str_to_sentence(common_name))

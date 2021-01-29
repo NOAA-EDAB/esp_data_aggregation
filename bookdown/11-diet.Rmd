@@ -1,15 +1,13 @@
+## Diet
 
-```{r, diet_functions, include = FALSE}
+```{r, diet_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_diet.R"))
 ```
 
-```{r, diet_raw_data, include = FALSE, eval = FALSE}
-# already read in
-diet_data <- params$diet_data
-diet_data <- diet_data[diet_data$Species == species, ]
+```{r, diet_raw_data}
+diet_data <- params$diet_data[params$diet_data$Species == species, ]
 ```
 
-## Diet
 Diet data were compiled from [existing data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). For analysis, all geographic samples were grouped by season, year, and region, and only year-season-region combinations with more than 20 predators sampled were considered. Prey items that made up more than 5% of the predator's diet in at least one year-season-region were identified to the broad category level; all other prey are grouped into the "other" category.
 
 ### Figure

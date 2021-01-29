@@ -1,5 +1,5 @@
 
-```{r, catch_functions, include = FALSE}
+```{r, catch_functions, include = FALSE, cache = params$cache}
 # already run
 #source(here::here("R/full_report_functions", "get_assessment.R"))
 
@@ -8,16 +8,13 @@ source(here::here("R/full_report_functions", "get_com_catch.R"))
 source(here::here("R/full_report_functions", "compare_rec_com.R"))
 ```
 
-```{r, catch_raw_data, include = FALSE}
+```{r, catch_raw_data_species, include = FALSE}
 # already read in
-#asmt_data <- params$asmt_data
-#asmt_data <- asmt_data[asmt_data$Species == species, ]
+#asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
 
-rec_data <- params$rec_data
-rec_data <- rec_data[rec_data$Species == species, ]
+rec_data <- params$rec_data[params$rec_data$Species == species, ]
 
-com_data <- params$com_data
-com_data <- com_data[com_data$Species == species, ]
+com_data <- params$com_data[params$com_data$Species == species, ]
 ```
 
 ```{r, eval = FALSE}
