@@ -36,10 +36,10 @@ jobs:
 
       - name: Install packages
         run: |
-          R -e 'install.packages("bookdown", "rmarkdown", "knitr")'
+          R -e 'install.packages("bookdown")'
 #          R -e 'renv::restore()'
       - name: Build site
-        run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
+        run: Rscript -e 'bookdown::render_book("test_actions.Rmd", quiet = TRUE)'
 #
 #       - name: Install npm
 #         uses: actions/setup-node@v1
