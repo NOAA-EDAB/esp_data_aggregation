@@ -1,0 +1,55 @@
+on:
+  push:
+    branches: main
+
+name: bookdown
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    env:
+      EMAIL: ${{ secrets.EMAIL }}
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@main
+
+      - name: Install pandoc
+        run: |
+          brew install pandoc
+#      - name: Cache Renv packages
+#        uses: actions/cache@v1
+#        with:
+#          path: $HOME/.local/share/renv
+#          key: r-${{ hashFiles('renv.lock') }}
+#          restore-keys: r-
+
+      - name: Cache bookdown results
+        uses: actions/cache@v1
+        with:
+          path: _bookdown_files
+          key: bookdown-${{ hashFiles('**/*Rmd') }}
+          restore-keys: bookdown-
+
+      - name: Install packages
+        run: |
+          R -e 'install.packages("bookdown", "rmarkdown", "knitr")'
+#          R -e 'renv::restore()'
+      - name: Build site
+        run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
+#
+#       - name: Install npm
+#         uses: actions/setup-node@v1
+
+
+      - name: Deploy to github
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          EMAIL: ${{ secrets.EMAIL }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: _book # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
