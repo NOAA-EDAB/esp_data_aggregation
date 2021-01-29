@@ -7,3 +7,5 @@ remove <- files[-keep]
 
 file.remove(remove)
 unlink(remove, recursive = TRUE)
+
+warnings()
