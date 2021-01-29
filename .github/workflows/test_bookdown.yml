@@ -46,7 +46,7 @@ jobs:
 
 
       - name: Deploy to github
-        uses: Cecilapp/GitHub-Pages-deploy@master
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
 #          EMAIL: ${{ secrets.EMAIL }}
 #          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
