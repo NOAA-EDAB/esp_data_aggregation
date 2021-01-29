@@ -54,4 +54,4 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: . # The folder the action should deploy.
           TARGET_FOLDER: docs
-#          CLEAN: true # Automatically remove deleted files from the deploy branch
+          CLEAN: true # Automatically remove deleted files from the deploy branch
