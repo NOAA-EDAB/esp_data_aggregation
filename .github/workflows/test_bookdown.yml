@@ -43,8 +43,8 @@ jobs:
 #
 #       - name: Install npm
 #         uses: actions/setup-node@v1
-      - name: Cleanup files
-        run: Rscript -e 'source("remove_files.R")'
+#      - name: Cleanup files
+#        run: Rscript -e 'source("remove_files.R")'
 
 
       - name: Deploy to github
