@@ -39,7 +39,7 @@ jobs:
           R -e 'install.packages(c("rmarkdown"))'
 #          R -e 'renv::restore()'
       - name: Build site
-        run: Rscript -e 'rmarkdown::render("index.Rmd", quiet = TRUE)'
+        run: Rscript -e 'rmarkdown::render("test/index.Rmd", quiet = TRUE)'
 #
 #       - name: Install npm
 #         uses: actions/setup-node@v1
@@ -52,6 +52,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 #          REPOSITORY_NAME: esp_data_aggregation
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: test # The folder the action should deploy.
+          FOLDER: . # The folder the action should deploy.
           TARGET_FOLDER: docs
 #          CLEAN: true # Automatically remove deleted files from the deploy branch
