@@ -1,13 +1,3 @@
---- 
-title: "ESP Methods"
-author: "Abigail Tyrell"
-date: "`r format(Sys.time(), '%d %b %Y')`"
-site: bookdown::bookdown_site
-output: bookdown::gitbook
-documentclass: book
-github-repo: rtabandera/esp_data_aggregation
----
-
 # Methods
 
 ## Stock identification

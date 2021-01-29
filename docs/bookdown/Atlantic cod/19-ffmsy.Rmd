@@ -1,10 +1,10 @@
-```{r, f_functions, include = FALSE, eval = FALSE, cache = params$cache}
-# already run
+## F/Fmsy 
+
+```{r, f_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_bf.R")) 
 ```
 
-```{r, f_data, include = FALSE, eval = FALSE}
-# already run
+```{r, f_data}
 asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
 ```
 
@@ -20,20 +20,8 @@ if(length(asmt_sum_data$Species) > 1){
 
 ```
 
-```{r, eval = FALSE}
-# already run 
-# set colors and linetypes to be constant for all regions
-reg <- c(asmt_sum_data$Region, asmt_data$Region) %>% unique()
-
-lines <- 1:length(reg)
-names(lines) <- reg
-
-colors <- nmfspalette::nmfs_palette("regional web")(length(reg))
-names(colors) <- reg
-
+```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
 ```
-
-## F/Fmsy 
 
 F/Fmsy data were pulled from ``r params$asmt_sum_source``.
 

@@ -1,60 +1,53 @@
 
 # not sure how survdat deals with seasons 
 
-plot_swept_biomass <- function(x){
+plot_swept <- function(x, var){
   
+  if(var == "biomass") {
+    x <- x %>%
+      dplyr::rename(value = tot.biomass,
+                    error = tot.bio.SE)
+    name <- "Survey biomass estimate (kg)"
+  }
+    
+  if(var == "abundance") {
+    x <- x %>%
+      dplyr::rename(value = tot.abundance,
+                    error = tot.abund.SE)
+
+    name <- "Survey abundance estimate"
+  }
+    
   if(nrow(x) > 0){
     fig <- ggplot(x)+
       geom_ribbon(aes(x = YEAR,
-                      ymin = tot.biomass - 2*tot.bio.SE,
-                      ymax = tot.biomass + 2*tot.bio.SE),
-                  fill = "gray80")+
+                      ymin = value - 2*error,
+                      ymax = value + 2*error,
+                      fill = Season),
+                  alpha = 0.5)+
       geom_line(aes(x = YEAR,
-                    y = tot.biomass),
+                    y = value,
+                    color = Season),
                 cex = 2)+
+      nmfspalette::scale_color_nmfs("regional web")+
+      nmfspalette::scale_fill_nmfs("regional web")+
       theme_bw()+
-      scale_y_continuous(name = "Survey biomass estimate (kg)",
+      scale_y_continuous(name = name,
                          labels = scales::comma)
     
     y <- x %>%
-      dplyr::filter(is.na(tot.biomass) == FALSE)
+      dplyr::filter(is.na(value) == FALSE)
     
     if (nrow(y) > 30) { 
       fig <- fig + 
         ecodata::geom_gls(aes(x = YEAR,
-                              y = tot.biomass)) 
+                              y = value,
+                              color = Season)) 
     }
     
     return(fig)
+    
   } else print("NO DATA")
 
 }
 
-plot_swept_abun <- function(x){
-  
-  if(nrow(x) > 0){
-    fig <- ggplot(x)+
-      geom_ribbon(aes(x = YEAR,
-                      ymin = tot.abundance - 2*tot.abund.SE,
-                      ymax = tot.abundance + 2*tot.abund.SE),
-                  fill = "gray80")+
-      geom_line(aes(x = YEAR,
-                    y = tot.abundance),
-                cex = 2)+
-      theme_bw()+
-      scale_y_continuous(name = "Survey abundance estimate",
-                         labels = scales::comma)
-    
-    y <- x %>%
-      dplyr::filter(is.na(tot.abundance) == FALSE)
-    
-    if (nrow(y) > 30) { 
-      fig <- fig + 
-        ecodata::geom_gls(aes(x = YEAR,
-                              y = tot.abundance)) 
-    }
-    
-    return(fig)
-  } else print("NO DATA")
-  
-}

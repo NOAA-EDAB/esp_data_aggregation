@@ -1,14 +1,16 @@
+## Recruitment
 
-```{r, recruit_functions, include = FALSE, eval = FALSE, cache = params$cache}
-# already read in 
+```{r, recruit_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_assessment.R"))
 ```
 
-```{r, recruit_raw_data, include = FALSE, eval = FALSE}
+```{r, recruit_raw_data}
 asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
 ```
 
-## Recruitment
+```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
+```
+
 Recruitment data were pulled from ``r params$asmt_source``. Separate geom_gls() functions were fit for each region; trend lines are only shown when the trend was statistically significant, so some plots may have fewer trend lines than regions.
 
 ### Figure

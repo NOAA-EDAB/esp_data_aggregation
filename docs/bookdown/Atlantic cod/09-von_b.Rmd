@@ -2,7 +2,7 @@
 
 Ricky Tabandera
 
-```{r setup_vonb, include=FALSE, cache = params$cache}
+```{r setup_vonb, cache = params$cache}
 #install.packages("ggrepel")
 #install.packages("ggpubr")
 #devtools::install_github("james-thorson/FishLife")

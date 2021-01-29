@@ -2,6 +2,7 @@
 
 ```{r, abun_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_assessment.R"))
+source(here::here("R/full_report_functions", "get_survdat_info.R"))
 source(here::here("R/full_report_functions", "get_swept.R"))
 ```
 
@@ -46,7 +47,7 @@ indicators <- c("abundance_spring",
 
 Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
 ```{r, abun_survey_swept}
-plot_swept_abun(swept_data)
+plot_swept(swept_data, var = "abundance")
 ```
 
 #### Assessment abundance

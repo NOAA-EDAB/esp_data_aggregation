@@ -308,8 +308,7 @@ data3 %>%
 og_pull <- readRDS(here::here("data", "survdat.RDS"))
 shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
 
-area <- survdat::get_area(stratum = shape, 
-                          col.name = "STRATA")
+area <- survdat::get_area(shape, "STRATA")
 
 #area <- survdat::getarea(stratum = shape, 
 #                          strat.col = "STRATA") # doesn't work
@@ -319,17 +318,19 @@ survey_big$STRATUM <- as.numeric(survey_big$STRATUM)
 
 og_pull$survdat$STRATUM <- as.numeric(og_pull$survdat$STRATUM)
 
-mod_data <- survdat::stratprep(survdat = og_pull$survdat,
+mod_data <- survdat::stratprep(survdat = og_pull$survdat %>%
+                                 #dplyr::filter(SEASON == "FALL"),
+                                 dplyr::filter(SEASON == "SPRING"),
                                areas = area,
                                strat.col = "STRATUM")
 
-mean_info <- survdat::strat_mean(survdat = mod_data,
-                                 strat.col = "STRATUM")
+mean_info <- survdat::strat_mean(mod_data,
+                                 areaDescription = "STRATUM",
+                                 poststratFlag = FALSE)
 
-test <- survdat::swept_area(survdat = mod_data, 
-                            stratmean = mean_info,  
-                            strat.col = "STRATUM",
-                            group.col = "SVSPP")
+test <- survdat::swept_area(mod_data, 
+                            stratmeanData = mean_info,  
+                            areaDescription = "STRATUM")
 test
 
 key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
@@ -352,7 +353,19 @@ for(i in 1:length(data$SVSPP)){
 
 data$Species <- species_name
 
-write.csv(data, here::here("data", "swept_area_info.csv"))
+write.csv(data, here::here("data", "swept_area_info_spring.csv"))
+
+spring <- read.csv(here::here("data", "swept_area_info_spring.csv"))
+fall <- read.csv(here::here("data", "swept_area_info_fall.csv"))
+
+spring <- spring %>%
+  dplyr::mutate(Season = "Spring")
+fall <- fall %>%
+  dplyr::mutate(Season = "Fall")
+
+all <- rbind(spring, fall)
+write.csv(all, here::here("data", "swept_area_info.csv"))
+
 # no regions - figure out how to retain regions
 # cut data into regions (by species??) 
 # can the pull be parsed or will that mess up survdat functions?

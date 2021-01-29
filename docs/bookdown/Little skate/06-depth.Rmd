@@ -1,8 +1,7 @@
-
 ## Depth
 Ricky Tabandera
 
-```{r, include=FALSE, cache = params$cache}
+```{r, cache = params$cache}
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(here))
 suppressPackageStartupMessages(library(survdat))

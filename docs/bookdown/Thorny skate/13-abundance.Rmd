@@ -1,11 +1,13 @@
-```{r, abun_functions, include = FALSE, cache = params$cache}
+## Abundance
+
+```{r, abun_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_assessment.R"))
+source(here::here("R/full_report_functions", "get_survdat_info.R"))
 source(here::here("R/full_report_functions", "get_swept.R"))
 ```
 
-```{r, abun_data_species, include = FALSE}
-# abun/biomass data (survdat) already read in with habitat data
-#survey_data <- params$survey_data[params$survey_data$Species == species, ]
+```{r, abun_data_species}
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
 
 asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
 
@@ -14,19 +16,8 @@ asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
 swept_data <- params$swept_data[params$swept_data$Species == species, ]
 ```
 
-```{r, legend}
-# set colors and linetypes to be constant for all regions
-reg <- c(asmt_sum_data$Region, asmt_data$Region) %>% unique()
-
-lines <- 1:length(reg)
-names(lines) <- reg
-
-colors <- nmfspalette::nmfs_palette("regional web")(length(reg))
-names(colors) <- reg
-
+```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
 ```
-
-## Abundance
 
 Abundance data were pulled from ``r params$survey_source`` and ``r params$asmt_source``. 
 
@@ -56,7 +47,7 @@ indicators <- c("abundance_spring",
 
 Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
 ```{r, abun_survey_swept}
-plot_swept_abun(swept_data)
+plot_swept(swept_data, var = "abundance")
 ```
 
 #### Assessment abundance

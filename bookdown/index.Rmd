@@ -72,10 +72,10 @@ knitr::knit_hooks$set(time_it = local({
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE, 
                       warning = FALSE, 
+                      #time_it = TRUE,
                       fig.width = 8, 
                       fig.align = 'center',
-                      fig.cap = params$species,
-                      time_it = TRUE
+                      fig.cap = params$species
                      # cache.path = here::here("bookdown/cache/", "")
                       )
 ```

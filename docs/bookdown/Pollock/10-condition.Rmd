@@ -1,15 +1,15 @@
-```{r, cond_functions, include = FALSE, cache = params$cache}
+## Condition
+
+```{r, cond_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_lw.R"))
 source(here::here("R/full_report_functions", "get_relative_weight.R"))
 ```
 
-```{r, cond_data_species, include = FALSE}
+```{r, cond_data_species}
 cond_data <- params$cond_data[params$cond_data$Species == species, ]
 
 diet_data <- params$diet_data[params$diet_data$Species == species, ]
 ```
-
-## Condition
 
 Condition information comes from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData); only regions and seasons with more than 10 fish observations were considered. We calculated a rough condition factor as: Weight / Length^3, and relative weight was [previously calculated](https://github.com/Laurels1/Condition/tree/master/data).
 

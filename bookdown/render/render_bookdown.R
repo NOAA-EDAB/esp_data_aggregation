@@ -20,8 +20,8 @@ setwd(here::here("bookdown"))
 start <- Sys.time()
 
 purrr::map(list_species[1], 
-           ~bookdown::render_book(input = ".",
-                                  preview = FALSE,
+           ~bookdown::render_book(input = c("index.Rmd", "13-abundance.Rmd", "14-biomass.Rmd"),
+                                  preview = TRUE,
                                  params = list(species_ID = .x,
                                                
                                                latlong_data = latlong,
@@ -95,6 +95,11 @@ render_par <- function(x){
   new_dir <- here::here(paste("docs/bookdown/", x, sep = ""))
   dir.create(new_dir)
 
+  file.copy(from = list.files(here::here("bookdown"), full.names = TRUE),
+            to = new_dir,
+            recursive = FALSE,
+            overwrite = TRUE)
+  
   setwd(new_dir)
   file.create(".nojekyll")
   

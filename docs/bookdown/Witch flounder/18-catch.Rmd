@@ -1,36 +1,20 @@
+## Catch
 
-```{r, catch_functions, include = FALSE, cache = params$cache}
-# already run
-#source(here::here("R/full_report_functions", "get_assessment.R"))
-
+```{r, catch_functions, cache = params$cache}
+source(here::here("R/full_report_functions", "get_assessment.R"))
 source(here::here("R/full_report_functions", "get_rec_catch.R"))
 source(here::here("R/full_report_functions", "get_com_catch.R"))
 source(here::here("R/full_report_functions", "compare_rec_com.R"))
 ```
 
-```{r, catch_raw_data_species, include = FALSE}
-# already read in
-#asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
-
+```{r, catch_raw_data_species}
+asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
 rec_data <- params$rec_data[params$rec_data$Species == species, ]
-
 com_data <- params$com_data[params$com_data$Species == species, ]
 ```
 
-```{r, eval = FALSE}
-# already run in pop section
-# set colors and linetypes to be constant for all regions
-reg <- c(asmt_sum_data$Region, asmt_data$Region) %>% unique()
-
-lines <- 1:length(reg)
-names(lines) <- reg
-
-colors <- nmfspalette::nmfs_palette("regional web")(length(reg))
-names(colors) <- reg
-
+```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
 ```
-
-## Catch
 
 Stock assessment catch data are from ``r params$asmt_source``. Recreational catch data were downloaded from [NOAA MRIP](https://www.st.nmfs.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/). Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
 

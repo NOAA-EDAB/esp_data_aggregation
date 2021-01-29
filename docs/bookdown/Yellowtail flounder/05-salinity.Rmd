@@ -1,13 +1,12 @@
-
-```{r, sal_functions, include = FALSE}
-#source(here::here("R/full_report_functions", "get_survdat_info.R"))
-```
-
-```{r,sal_data, include = FALSE}
-#survey_data <- params$survey_data[params$survey_data$Species == species, ]
-```
-
 ## Salinity
+
+```{r, sal_functions}
+source(here::here("R/full_report_functions", "get_survdat_info.R"))
+```
+
+```{r,sal_data}
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
+```
 
 Surface and bottom salinity data were pulled from ``r params$survey_source``. 
 

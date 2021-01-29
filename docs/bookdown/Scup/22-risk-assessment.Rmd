@@ -1,15 +1,14 @@
 # Risk assessment
 
-```{r, risk_functions, include = FALSE, cache = params$cache}
+```{r, risk_functions, cache = params$cache}
 source(here::here("R/full_report_functions/risk_functions", "plot_risk_within_species.R"))
 source(here::here("R/full_report_functions/risk_functions", "plot_risk_by_year.R"))
 ```
 
-```{r, risk_data, include = FALSE, eval = FALSE}
+```{r, risk_data}
 # don't use?
 risk_data <- params$risk_data[params$risk_data$Species == species, ]
 
-# already read in
 risk_year_hist_data <- params$risk_year_hist_data[params$risk_year_hist_data$Species == species, ]
 
 risk_year_value_data <- params$risk_year_value_data[params$risk_year_value_data$Species == species, ]
