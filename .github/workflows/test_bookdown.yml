@@ -36,7 +36,7 @@ jobs:
 
       - name: Install packages
         run: |
-          R -e 'install.packages("rmarkdown", "here")'
+          R -e 'install.packages(c("rmarkdown", "here"))'
 #          R -e 'renv::restore()'
       - name: Build site
         run: Rscript -e 'rmarkdown::render(here::here("test_actions.Rmd"), quiet = TRUE)'
