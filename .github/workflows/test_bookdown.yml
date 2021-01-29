@@ -2,7 +2,7 @@ on:
   push:
     branches: main
 
-name: bookdown
+name: rmarkdown
 
 jobs:
   build:
@@ -36,10 +36,10 @@ jobs:
 
       - name: Install packages
         run: |
-          R -e 'install.packages("bookdown")'
+          R -e 'install.packages("rmarkdown")'
 #          R -e 'renv::restore()'
       - name: Build site
-        run: Rscript -e 'bookdown::render_book("test_actions.Rmd", quiet = TRUE)'
+        run: Rscript -e 'rmarkdown::render("test_actions.Rmd", quiet = TRUE)'
 #
 #       - name: Install npm
 #         uses: actions/setup-node@v1
