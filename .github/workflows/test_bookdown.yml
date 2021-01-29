@@ -50,6 +50,7 @@ jobs:
         with:
 #          EMAIL: ${{ secrets.EMAIL }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          REPOSITORY_NAME: esp_data_aggregation
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: _book # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
