@@ -43,6 +43,8 @@ jobs:
 #
 #       - name: Install npm
 #         uses: actions/setup-node@v1
+#      - name: Cleanup files
+#        run: Rscript -e 'source("remove_files.R")'
 
 
       - name: Deploy to github
@@ -53,5 +55,5 @@ jobs:
 #          REPOSITORY_NAME: esp_data_aggregation
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: . # The folder the action should deploy.
-          TARGET_FOLDER: docs
+          TARGET_FOLDER: .
           CLEAN: true # Automatically remove deleted files from the deploy branch

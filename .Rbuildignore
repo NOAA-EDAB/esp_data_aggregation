@@ -1,1 +1,22 @@
 ^\.github$
+^bookdown$
+^Commercial$
+^data$
+^Data pulls from NEFSC packages\.R$
+^esp_data_aggregation\.Rproj$
+^Fish growth curves from fishlife\.png$
+^Food Habits$
+^get_food_diversity\.R$
+^LICENSE\.txt$
+^Life history$
+^microbenchmark_testing$
+^NA$
+^predictions_join\.csv$
+^prey density plot\.png$
+^R$
+^README\.md$
+^Recreational$
+^remove_files\.R$
+^Seascape$
+^shiny$
+^test$
