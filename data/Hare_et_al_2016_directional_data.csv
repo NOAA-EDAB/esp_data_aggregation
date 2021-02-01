@@ -1,0 +1,83 @@
+Species, Functional Group, Negative, Neutral, Positive
+Alewife,Diadromous,6,6,0
+American Eel,Diadromous,3,7,2
+American Lobster,Invertebrates,4,6,2
+American Plaice,Groundfish,10,2,0
+American Shad,Diadromous,5,6,1
+Anchovies,Pelagic,0,5,7
+Atlantic Cod,Groundfish,11,1,0
+Atlantic Croaker,Coastal,0,3,9
+Atlantic Hagfish,Groundfish,3,6,3
+Atlantic Halibut,Groundfish,9,3,0
+Atlantic Herring,Pelagic,6,5,1
+Atlantic Mackerel,Pelagic,9,3,0
+Atlantic Menahden,Coastal,0,6,6
+Atlantic Salmon,Diadromous,10,2,0
+Atlantic Sea Scallop,Invertebrates,7,5,0
+Atlantic Sturgeon,Diadromous,4,8,0
+Atlantic Saury,Pelagic,2,4,6
+Atlantic Surfclam,Invertebrates,7,5,0
+Atlantic Wolffish,Groundfish,10,2,0
+Barndoor Skate,Elasmobranch,4,8,0
+Bay Scallop,Invertebrates,10,2,0
+Black Sea Bass,Coastal,0,3,9
+Bloodworm,Invertebrates,5,6,1
+Blue Crab,Invertebrates,4,5,3
+Blue Mussel,Invertebrates,7,5,0
+Blueback Herring,Diadromous,5,5,2
+Bluefish,Pelagic,0,5,7
+Butterfish,Pelagic,0,5,7
+Cancer Crabs,Invertebrates,4,6,2
+Channeled Whelk,Invertebrates,8,4,0
+Cleanrnose Skate,Elasmobranch,1,9,2
+Conger Eel,Diadromous,3,8,1
+Cusk,Groundfish,11,1,0
+Deep-sea Red Crab,Invertebrates,4,6,2
+Dusky Shark,Elasmobranch,0,11,1
+Eastern Oyster,Invertebrates,9,3,0
+Green Sea Urchin,Invertebrates,7,5,0
+Haddock,Groundfish,6,5,1
+Hickory Shad,Diadromous,5,5,2
+Horseshoe Crab,Invertebrates,6,6,0
+Knobbed Whelk,Invertebrates,8,4,0
+Little Skate,Elasmobranch,4,8,0
+Longfin Inshore Squid,Pelagic,1,4,7
+Monkfish,Groundfish,4,5,3
+Northern Kingfish,Coastal,1,5,6
+Northern Quahog,Invertebrates,11,1,0
+Northern Shortfin Squid,Pelagic,1,6,5
+Northern Shrimp,Invertebrates,7,5,0
+Ocean Pout,Groundfish,6,5,1
+Ocean Quahog,Invertebrates,9,3,0
+Offshore Hake,Groundfish,6,4,2
+Pollock,Groundfish,9,3,0
+Porbeagle,Elasmobranch,1,10,1
+Rainbow Smelt,Diadromous,7,5,0
+Red Drum,Coastal,2,4,6
+Red Hake,Groundfish,3,6,3
+Acadian Redfish,Groundfish,9,3,0
+Rosette Skate,Elasmobranch,3,9,0
+Sand Lances,Pelagic,6,5,1
+Sand Tiger,Elasmobranch,1,10,1
+Scup,Coastal,1,6,5
+Shortnose Sturgeon,Diadromous,4,7,1
+Silver Hake,Groundfish,8,4,0
+Smooth Dogfish,Elasmobranch,2,9,1
+Smooth Skate,Elasmobranch,7,5,0
+Softshell Clam,Invertebrates,6,6,0
+Spanish Mackerel,Coastal,0,4,8
+Spiny Dogfish,Elasmobranch,1,11,0
+Spot,Coastal,0,3,9
+Spotted Seatrout,Coastal,3,3,6
+Striped Bass,Coastal,3,5,4
+Summer Flounder,Coastal,1,7,4
+Tautog,Coastal,4,6,2
+Thorny Skate,Elasmobranch,8,4,0
+Tilefish,Groundfish,2,6,4
+Weakfish,Coastal,2,6,4
+White Hake,Groundfish,8,3,1
+Windowpane,Groundfish,2,8,2
+Winter Flounder,Coastal,10,2,0
+Winter Skate,Elasmobranch,4,8,0
+Witch Flounder,Groundfish,7,3,2
+Yellowtail Flounder,Groundfish,10,2,0

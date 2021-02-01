@@ -53,59 +53,9 @@ params:
 
 # `r params$species` {-}
 
-```{r, setup, include = FALSE}
-knitr::knit_hooks$set(time_it = local({
-  now <- NULL
-  function(before, options) {
-    if (before) {
-      # record the current time before each chunk
-      now <<- Sys.time()
-    } else {
-      # calculate the time difference after a chunk
-      res <- difftime(Sys.time(), now) %>% round(digits = 2)
-      # return a character string to show the time
-      paste("Time for this code chunk to run:", res)
-    }
-  }
-}))
+Placeholder
 
-knitr::opts_chunk$set(echo = FALSE,
-                      message = FALSE, 
-                      warning = FALSE, 
-                      #time_it = TRUE,
-                      fig.width = 8, 
-                      fig.align = 'center',
-                      fig.cap = params$species,
-                     # cache.path = here::here("bookdown/cache/", "")
-                      )
-```
 
-```{r, setup2, cache = params$cache}
-library(ggplot2)
-
-`%>%` <- dplyr::`%>%`
-```
-
-```{r, universal_functions, cache = params$cache}
-source(here::here("R", "character_to_factor.R"))
-source(here::here("R/full_report_functions", "make_html_table.R"))
-
-source(here::here("R/full_report_functions/risk_functions", "plot_risk_by_year.R"))
-source(here::here("R/full_report_functions/risk_functions", "plot_risk_within_species.R"))
-```
-
-```{r, species_data}
-# data used in multiple chapters
-species <- params$species_ID
-
-risk_year_hist_data <- params$risk_year_hist_data[params$risk_year_hist_data$Species == species, ]
-
-risk_year_value_data <- params$risk_year_value_data[params$risk_year_value_data$Species == species, ]
-
-risk_species_data <- params$risk_species_data[params$risk_species_data$Species == species, ]
-```
-
-This is a preliminary report of previously collected data. This report is pulling information on all Northeast `r species` stocks.
 
 <!--chapter:end:index.Rmd-->
 
@@ -233,265 +183,37 @@ make_html_table(data, col_names = colnames(data))
 
 <!--chapter:end:12-population-title-page.Rmd-->
 
+
+
 ## Abundance
-
-```{r, abun_functions, cache = params$cache}
-source(here::here("R/full_report_functions", "get_assessment.R"))
-source(here::here("R/full_report_functions", "get_survdat_info.R"))
-source(here::here("R/full_report_functions", "get_swept.R"))
-```
-
-```{r, abun_data_species}
-survey_data <- params$survey_data[params$survey_data$Species == species, ]
-
-asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
-
-asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
-
-swept_data <- params$swept_data[params$swept_data$Species == species, ]
-```
-
-```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
-```
-
-Abundance data were pulled from ``r params$survey_source`` and ``r params$asmt_source``. 
-
 ### Figures
-
-Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
-
 #### Survey abundance (raw measurements)
-```{r, abun_survey}
-generate_plot(survey_data,
-              variable = "ABUNDANCE", 
-              ytitle = "Abundance")
-```
-
 ##### Risk {-}
-
-See Methods for risk calculation details.
-```{r}
-indicators <- c("abundance_spring", 
-                "abundance_fall")
-```
-
-```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
-```
-
 #### Survey abundance (swept area estimates)
-
-Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
-```{r, abun_survey_swept}
-plot_swept(swept_data, var = "abundance")
-```
-
 #### Assessment abundance
-```{r}
-if(nrow(asmt_data %>% dplyr::filter(Metric == "Abundance")) > 0){
-ndesc <- asmt_data %>% 
-  dplyr::filter(Metric == "Abundance") %>% 
-  #dplyr::mutate(options = paste(Description, Units)) %>%
-  dplyr::select(Age) %>% 
-  unique() %>% 
-  nrow()
-} else ndesc <- 1
-```
-
-```{r, abun_asmt, fig.height = ndesc * 4}
-plot_asmt(asmt_data, 
-          metric = "Abundance", 
-          ytitle = "Abundance",
-          lin = lines, 
-          col = colors)
-```
-
 ##### Risk {-}
-
-See Methods for risk calculation details.
-```{r}
-indicators <- c("asmt_abundance")
-```
-
-```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
-```
-
 ### Survey summary
-```{r, abun_summary}
-generate_table(survey_data,
-              variable = "ABUNDANCE", 
-              cap = "Measured abundance")
-```
-
 ### Data
-
 #### Survey data (raw measurements)
-```{r, surv_abun_data}
-data <- survey_data %>%
-  get_var_data(variable = "ABUNDANCE") %>%
-  dplyr::mutate(variable = variable %>%
-                  format(big.mark = ","))  %>%
-  character_to_factor()
-
-make_html_table(data, col_names = c("Year", "Season", "Region", "Abundance"))
-```
-
 #### Survey data (swept area estimates)
-```{r, swept_abun_data}
-data <- swept_data %>%
-  dplyr::select(YEAR, tot.abundance, tot.abund.SE) %>%
-  dplyr::mutate(YEAR = as.numeric(YEAR),
-                tot.abundance = tot.abundance %>%
-                  format(big.mark = ","),
-                tot.abund.SE = tot.abund.SE %>%
-                  round(digits = 1) %>%
-                  format(big.mark = ","))
-
-make_html_table(data, col_names = c("Year", "Abundance", "Standard error"))
-```
-
 #### Assessment data
-```{r, asmt_abun_data}
-data <- asmt_data %>% 
-                dplyr::filter(Metric == "Abundance") %>%
-                dplyr::select(-Species, -Metric) %>%
-                dplyr::mutate(Value = Value %>%
-                                round(digits = 0)) %>%
-                dplyr::mutate(Value = Value %>%
-                              format(big.mark = ",")) %>%
-  character_to_factor()
-
-make_html_table(data, col_names = colnames(data))
-```
 
 <!--chapter:end:13-abundance.Rmd-->
 
-```{r, biomass_functions, cache = params$cache}
-source(here::here("R/full_report_functions", "get_assessment.R"))
-source(here::here("R/full_report_functions", "get_survdat_info.R"))
-source(here::here("R/full_report_functions", "get_swept.R"))
-```
 
-```{r, biomass_raw_data}
-survey_data <- params$survey_data[params$survey_data$Species == species, ]
-
-asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
-
-swept_data <-  params$swept_data[ params$swept_data$Species == species, ]
-```
-
-```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
-```
 
 ## Biomass
-
-Biomass data were pulled from ``r params$survey_source``. 
-
 ### Figures
-
-Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
-
 #### Survey biomass (raw measurements)
-```{r, biomass}
-generate_plot(survey_data,
-              variable = "BIOMASS", 
-              ytitle = "Biomass")
-```
-
 ##### Risk {-}
-
-See Methods for risk calculation details.
-```{r}
-indicators <- c("biomass_spring", 
-                "biomass_fall")
-```
-
-```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
-```
-
 #### Survey biomass (swept area estimates)
-
-Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
-```{r, bio_survey_swept}
-plot_swept(swept_data, var = "biomass")
-```
-
 #### Assessment biomass
-```{r}
-if(nrow(asmt_data %>% dplyr::filter(Metric == "Biomass")) > 0){
-ndesc <- asmt_data %>% 
-  dplyr::filter(Metric == "Biomass") %>% 
-  #dplyr::mutate(options = paste(Description, Units)) %>%
-  dplyr::select(Age) %>% 
-  unique() %>% 
-  nrow()
-} else ndesc <- 1
-```
-
-```{r, biomass_asmt,  fig.height = ndesc * 4 + 1}
-plot_asmt(asmt_data, 
-          metric = "Biomass", 
-          ytitle = "Biomass",
-          lin = lines, 
-          col = colors)
-```
-
 ##### Risk {-}
-
-See Methods for risk calculation details.
-```{r}
-indicators <- c("asmt_biomass")
-```
-
-```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
-```
-
 ### Survey summary
-```{r, biomass_summary}
-generate_table(survey_data,
-              variable = "BIOMASS", 
-              cap = "Measured biomass")
-```
-
 ### Data
-
 #### Survey data (raw measurements)
-```{r, biomass_data}
-data <- survey_data %>% 
-  get_var_data(variable = "BIOMASS") %>%
-  dplyr::mutate(variable = variable %>%
-                     format(big.mark = ",")) %>%
-  character_to_factor()
-
-make_html_table(data, col_names = c("Year", "Season", "Region", "Biomass"))
-```
-
 #### Survey data (swept area estimates)
-```{r, swept_biomass_data}
-data <- swept_data %>%
-  dplyr::select(YEAR, tot.biomass, tot.bio.SE) %>%
-  dplyr::mutate(YEAR = as.numeric(YEAR),
-                tot.biomass = tot.biomass %>%
-                  format(big.mark = ","),
-                tot.bio.SE = tot.bio.SE %>%
-                  round(digits = 1) %>%
-                  format(big.mark = ","))
-
-make_html_table(data, col_names = c("Year", "Biomass (kg)", "Standard error"))
-```
-
 #### Assessment data
-```{r, asmt_biomass_data}
-data <- asmt_data %>%
-  dplyr::filter(Metric == "Biomass") %>%
-  dplyr::select(-Species, -Metric) %>%
-  dplyr::mutate(Value = Value %>%
-                  round(digits = 0)) %>%
-  dplyr::mutate(Value = Value %>%
-                  format(big.mark = ",")) %>%
-  character_to_factor()
-
-make_html_table(data, col_names = colnames(data))
-```
 
 <!--chapter:end:14-biomass.Rmd-->
 
@@ -565,6 +287,60 @@ Placeholder
 
 <!--chapter:end:21-management.Rmd-->
 
+# Vulnerability
+
+```{r, vul_functions}
+source(here::here("R/full_report_functions", "plot_vulnerability.R"))
+```
+
+## Climate vulnerability
+
+Climate vulnerability is sourced from Hare et al. (2016).
+
+```{r, clim_vul}
+data <- read.csv(url("https://doi.org/10.1371/journal.pone.0146756.s001")) %>%
+  dplyr::mutate(Species = Species %>%
+                  stringr::str_to_sentence()) %>%
+  dplyr::filter(Species == species) %>%
+  dplyr::select(-Species)
+```
+
+### Figures
+```{r, fig.height = 10}
+plot_climate_vulnerability(data)
+```
+
+### Data
+```{r}
+make_html_table(data,
+                col_names = c("Functional group", "Attribute", "Attribute category", 
+                             "Expert score: low",
+                             "Expert score: moderate",
+                             "Expert score: high",
+                             "Expert score: very high"))
+```
+
+## Habitat vulnerability
+
+Habitat information is sourced from the `ecodata` package. 
+
+```{r, hab_vul}
+data <- ecodata::habitat_vulnerability %>%
+  dplyr::filter(Species == species) %>%
+  dplyr::select(-Species)
+
+make_html_table(data,
+                col_names = c("EPU", "Habitat name", "Habitat vulnerability", 
+                             "Importance of habitat to eggs/larvae",
+                             "Importance of habitat to juveniles/YOY",
+                             "Importance of habitat to adults",
+                             "Importance of habitat to spawning adults",
+                             "Overall species vulnerability"))
+
+```
+
+<!--chapter:end:22-vulnerability.Rmd-->
+
 
 # Risk assessment
 
@@ -578,5 +354,5 @@ Placeholder
 ### Relative to all other stocks
 ### Within a single stock
 
-<!--chapter:end:22-risk-assessment.Rmd-->
+<!--chapter:end:23-risk-assessment.Rmd-->
 

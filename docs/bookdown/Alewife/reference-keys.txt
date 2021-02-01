@@ -75,3 +75,9 @@ data-10
 management-information
 stock-assessment-and-data-quality-information
 risk-assessment
+fig:unnamed-chunk-1-1
+fig:unnamed-chunk-1-2
+fig:unnamed-chunk-2
+vulnerability
+climate-vulnerability
+habitat-vulnerability
