@@ -1,6 +1,7 @@
-# install github packages
-install.packages("remotes")
+# these packages have to be installed for other packages to get installed
+install.packages("remotes", "ggplot2")
 
+# install github packages
 remotes::install_github("NOAA-EDAB/assessmentdata")
 
 remotes::install_github("NOAA-EDAB/ecodata")
