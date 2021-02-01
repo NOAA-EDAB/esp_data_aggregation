@@ -1,5 +1,3 @@
-`%>%` <- dplyr::`%>%`
-
 # install github packages
 remotes::install_github("NOAA-EDAB/assessmentdata",
                         build_vignettes = TRUE)
@@ -15,6 +13,8 @@ remotes::install_github("nmfs-general-modeling-tools/nmfspalette",
 
 # load all packages
 renv::restore(lockfile = here::here("bookdown", "renv.lock"))
+
+`%>%` <- dplyr::`%>%`
 
 # get NE stock names
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
