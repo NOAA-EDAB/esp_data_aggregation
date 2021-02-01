@@ -36,9 +36,9 @@ jobs:
 
       - name: Install packages
         run: |
+          sudo R CMD javareconf
           R -e 'install.packages(c("rmarkdown", "dplyr", "ggplot2", "here", "stringr",
-          "sf", "tibble", "knitr", "scales", "ecodata", "DT", "snow", "assessmentdata",
-          "grDevices", "nmfspalette", "bookdown"))'
+          "sf", "tibble", "knitr", "scales", "DT", "snow", "bookdown", "remotes"))'
 #         R -e 'renv::restore()'
 
       - name: Build site

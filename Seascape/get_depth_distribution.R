@@ -1,24 +1,20 @@
-library(here)
-library(survdat)
-library(dbutils)
-library(tidyverse)
+# unique(survdata.w.codes$common_name) run this from depthdistrbution.rmd to get species contained in the pull of survdat
+fishlist<-c(
+ "haddock",                 "yellowtail flounder" ,    "Atlantic cod"  ,          "red hake"    ,            "pollock"     ,           
+ "scup",                    "alewife"      ,           "silver hake"     ,        "Atlantic mackerel"  ,     "Acadian redfish"    ,    
+ "winter flounder",         "summer flounder" ,        "American plaice"   ,      "witch flounder"   ,       "butterfish"        ,     
+ "white hake",              "blueback herring"  ,      "black sea bass"   ,       "bluefish"    ,            "Atlantic herring"     ,  
+ "ocean pout",              "monkfish"         ,       "little skate"   ,         "winter skate" ,           "windowpane flounder"   , 
+ "thorny skate",            "Atlantic wolffish" ,      "cusk"      ,              "Atlantic halibut" ,       "clearnose skate"   ,     
+ "smooth skate",            "offshore hake" ,          "rosette skate"  ,         "barndoor skate" ,         "spiny dogfish"  ,        
+ "American lobster",       "smooth dogfish",          "Atlantic menhaden" ,      "longfin inshore squid" ,  "Atlantic hagfish"  ,     
+ "northern shortfin squid")
+library("here")
 
-channel <- connect_to_database(server="sole",uid="RTABANDERA")
+list_species <- split(fishlist, f = list(fishlist))
 
-survdata<-readRDS("survdat_pull_bio.rds")
-
-
-# abundance is adjusted but not length for bigalo data
-groupdiscription =svspp
-# filter by group giv list of svspp codes
-get_fish_info()
-surv.species<-survdat::get_species(channel)
-
-surv.species.1<-surv.species$data
-surv.code<-surv.species.1 %>% dplyr::distinct(SVSPP,.keep_all =T)
-# black sea bass is svspp= 	141 bluefish =135
-
-test.sp.code<-c(141,135)
-
-
-black_and_blue<-
+purrr::map(list_species, ~rmarkdown::render(here::here("Seascape", "depth_distribution.Rmd"), 
+                                            params = list(stock = .x), 
+                                            output_dir = here::here("docs","Seascape"),
+                                            output_file = paste(.x, "_depth", 
+                                                                ".html", sep = "")))

@@ -57,7 +57,7 @@ selected.spp<-survdata.w.codes %>% filter(common_name==params$stock)
 
 ## 
 
-```{r depth graph by season, echo=FALSE, message=FALSE, error=FALSE}
+```{r depth graph by season, echo=FALSE, message=FALSE, error=FALSE,, warning=FALSE}
 
 
 selected.spp.sum<- selected.spp %>% group_by(YEAR, SEASON) %>% summarise(ave.d=mean(DEPTH), sd.d= sd(DEPTH,na.rm = TRUE),ave.t=mean(BOTTEMP), sd.t=sd(BOTTEMP,na.rm = TRUE))
@@ -73,7 +73,7 @@ selected.spp.sum %>%
   theme(axis.text.x = element_text(angle = 90))
 
 ```
-```{r, bottom temp, echo=FALSE, message=FALSE, error=FALSE}
+```{r, bottom temp, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}
 
 
 selected.spp.sum %>%
