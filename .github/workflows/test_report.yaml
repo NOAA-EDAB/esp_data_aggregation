@@ -36,6 +36,7 @@ jobs:
 
       - name: Install packages
         run: |
+          R CMD javareconf
           R -e 'install.packages(c("rmarkdown", "dplyr", "ggplot2", "here", "stringr",
           "sf", "tibble", "knitr", "scales", "ecodata", "DT", "snow", "assessmentdata",
           "grDevices", "nmfspalette", "bookdown", "remotes"))'
