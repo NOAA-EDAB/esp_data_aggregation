@@ -38,7 +38,7 @@ jobs:
         run: |
           R -e 'install.packages(c("rmarkdown", "dplyr", "ggplot2", "here", "stringr",
           "sf", "tibble", "knitr", "scales", "ecodata", "DT", "snow", "assessmentdata",
-          "grDevices", "nmfspalette", "bookdown"))'
+          "grDevices", "nmfspalette", "bookdown", "remotes"))'
 #         R -e 'renv::restore()'
 
       - name: Build site
