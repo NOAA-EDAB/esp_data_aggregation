@@ -1,6 +1,9 @@
+# libraries needed
+renv::snapshot()
 
 # purrr ----
 
+source(here::here("R", "update_species_names.R"))
 source(here::here("R/full_report_functions", "read_data.R"))
 #source(here::here("R/full_report_functions", "get_updated_files.R"))
 
@@ -8,14 +11,16 @@ source(here::here("R/full_report_functions", "read_data.R"))
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 # tilefish has is NA in COMNAME column? omit for now
 
-all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence()
+all_species <- names$COMNAME %>% unique() %>% 
+  stringr::str_to_sentence() %>%
+  stringr::str_replace("Goosefish", "Monkfish") # change goosefish to monkfish
 list_species <- split(all_species, f = list(all_species))
 
 #dir.create(here::here("docs/bookdown"))
 #dir.create(here::here("docs/bookdown/Acadian redfish"))
 #file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
 
-setwd(here::here("bookdown/test"))
+setwd(here::here("bookdown/"))
 
 start <- Sys.time()
 

@@ -1,6 +1,10 @@
 `%>%` <- dplyr::`%>%`
 
-survey <- readRDS(here::here("data", "survey_data.RDS"))
+source(here::here("R", "update_species_names.R"))
+
+# survey ----
+survey <- readRDS(here::here("data", "survey_data.RDS")) %>%
+  update_species_names(species_col = "Species")
 survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9), ] # remove error jonah crab
 # sum(numlen) and abundance may not be equal 
 # abundnace has been corrected with conversion factor, but numlen has not
@@ -16,32 +20,44 @@ survey <- survey %>%
                 YEAR = YEAR %>% as.numeric())
 
 survey_ws <- readRDS(here::here("data", "survey_data_02012021_wintersummer.RDS")) %>%
-  dplyr::select(colnames(survey))
+  dplyr::select(colnames(survey))  %>%
+  update_species_names(species_col = "Species")
 
 survey_big <- dplyr::union(survey, survey_ws)
 
 ricky_survey <- readRDS(here::here("data", "survdat_pull_bio.rds"))
 
-# read assessmentdata directly from package
+# assessmentdata summary ----
 asmt_sum <- assessmentdata::stockAssessmentSummary %>% 
   dplyr::filter(Jurisdiction == "NEFMC" | 
                   Jurisdiction == "NEFMC / MAFMC" | 
                   Jurisdiction == "MAFMC")
+ 
+
 split_info <- stringr::str_split_fixed(asmt_sum$`Stock Name`, " - ", n = 2)
 asmt_sum$Species <- split_info[,1]
 asmt_sum$Region <- split_info[,2]
 
+asmt_sum <- asmt_sum %>%
+  update_species_names(species_col = "Species")
+
+# latlong ----
 latlong <- read.csv(here::here("data", "geo_range_data.csv")) %>%
-  dplyr::rename(stock_season = season_)
+  dplyr::rename(stock_season = season_) %>%
+  update_species_names(species_col = "Species")
+
 shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
 
+# rec catch ----
 rec <- read.csv(here::here("data/MRIP", "all_MRIP_catch_year.csv")) %>%
   dplyr::filter(sub_reg_f == "NORTH ATLANTIC" | 
                   sub_reg_f == "MID-ATLANTIC") %>%
   dplyr::mutate(lbs_ab1 = lbs_ab1 %>%
                   stringr::str_replace_all(",", "") %>%
-                  as.numeric()) 
+                  as.numeric()) %>%
+  update_species_names(species_col = "Species")
 
+# diet ----
 source(here::here("data", "allfh_regions.R"))
 
 # assessmentdata ----
@@ -66,7 +82,10 @@ asmt <- assessmentdata::stockAssessmentData %>%
 asmt$Region <- asmt$Region %>% 
   stringr::str_replace("Mid", "Mid-Atlantic")
 asmt$Species <- asmt$Species %>% 
-  stringr::str_to_sentence()
+  stringr::str_to_sentence() 
+
+asmt <- asmt %>%
+  update_species_names(species_col = "Species")
 
 for(i in 1:nrow(asmt)){
   if(asmt$Metric[i] == "Abundance"){
@@ -172,25 +191,33 @@ asmt$Category <- category
 #asmt$Units <- asmt$Units %>%
  # stringr::str_replace("Thousand Recruits", "Number x 1,000")
 
-# ----
+# condition ----
 cond <- rbind(read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GB.csv"),
               read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_GOM.csv"),
               read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_MAB.csv"),
-              read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_SS.csv"))
+              read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_SS.csv")) %>%
+  update_species_names(species_col = "Species")
 cond$Species <- stringr::str_to_sentence(cond$Species)
 cond$Species <- cond$Species %>% stringr::str_replace("Atl cod", "Atlantic cod")
 cond$Species <- cond$Species %>% stringr::str_replace("Atl herring", "Atlantic herring")
 cond$Species <- cond$Species %>% stringr::str_replace("Yellowtail", "Yellowtail flounder")
 cond$Species <- cond$Species %>% stringr::str_replace("Windowpane flounder", "Windowpane")
 
-risk <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv"))
-risk_year_hist <- read.csv(here::here("data/risk_ranking", "full_historical_risk_data_over_time.csv"))
-risk_year_value <- read.csv(here::here("data/risk_ranking", "full_risk_data_value_over_time.csv"))
-risk_species <- read.csv(here::here("data/risk_ranking", "full_risk_data_by_species.csv"))
+# risk ----
+risk <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv")) %>%
+  update_species_names(species_col = "Species")
+risk_year_hist <- read.csv(here::here("data/risk_ranking", "full_historical_risk_data_over_time.csv")) %>%
+  update_species_names(species_col = "Species")
+risk_year_value <- read.csv(here::here("data/risk_ranking", "full_risk_data_value_over_time.csv")) %>%
+  update_species_names(species_col = "Species")
+risk_species <- read.csv(here::here("data/risk_ranking", "full_risk_data_by_species.csv")) %>%
+  update_species_names(species_col = "Species")
 
-com <- read.csv(here::here("data", "com_landings_clean_20201222_formatted.csv"))
+# commercial ----
+com <- read.csv(here::here("data", "com_landings_clean_20201222_formatted.csv")) 
 com$Species <- com$Species %>%
-  stringr::str_replace("Windowpane flounder", "Windowpane") %>%
-  stringr::str_replace("Monkfish", "Goosefish")
+  stringr::str_replace("Windowpane flounder", "Windowpane")
 
-swept <- read.csv(here::here("data", "swept_area_info.csv"))
+# swept ----
+swept <- read.csv(here::here("data", "swept_area_info.csv")) %>%
+  update_species_names(species_col = "Species")

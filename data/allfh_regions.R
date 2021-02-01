@@ -30,3 +30,5 @@ allfh$Region <- tidyr::replace_na(allfh$stock_area, "Outside stock area")
 allfh$fish_id <- paste(allfh$cruise6, allfh$stratum, allfh$tow, 
                        allfh$Species, allfh$pdid)
 
+allfh <- allfh %>%
+  update_species_names(species_col = "Species")

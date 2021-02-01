@@ -13,11 +13,15 @@ remotes::install_github("ropensci/rnaturalearthhires",
 remotes::install_github("nmfs-general-modeling-tools/nmfspalette",
                         build_vignettes = TRUE)
 
+# load all packages
+renv::restore(lockfile = here::here("bookdown", "renv.lock"))
+
 # get NE stock names
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 # tilefish has is NA in COMNAME column? omit for now
 
-all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence() 
+all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence() %>%
+  stringr::str_replace("Goosefish", "Monkfish") # change goosefish to monkfish
 all_species <- all_species[!is.na(all_species)]
 
 # function to save reports, fix temp file problems
