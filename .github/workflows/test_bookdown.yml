@@ -2,7 +2,7 @@ on:
   push:
     branches: main
 
-name: rmarkdown
+name: rmarkdown_test
 
 jobs:
   build:
