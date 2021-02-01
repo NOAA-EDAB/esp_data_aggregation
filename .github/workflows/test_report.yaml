@@ -2,7 +2,7 @@ on:
   push:
     branches: main
 
-name: rmarkdown
+name: bookdown_reports
 
 jobs:
   build:
