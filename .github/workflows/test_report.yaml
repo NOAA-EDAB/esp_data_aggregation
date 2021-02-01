@@ -37,6 +37,7 @@ jobs:
       - name: Install renv and here
         run: |
           sudo R CMD javareconf
+          sudo yum -y install libcurl-devel
           R -e 'install.packages(c("renv", "here"))'
 #         R -e 'renv::restore()'
 
