@@ -71,17 +71,6 @@ selected.surv.vonb<-data.frame(AGE=seq(1, 50, length = 250), LENGTH=predict(f.fi
 
 #########################################################
 
-#logical filtering of params for plotting
-
-
-if(f.fit.summary$coefficients[1]<50){
-  is_small<-TRUE}
-
-if(f.fit.summary$coefficients[1]>50 & f.fit.summary$coefficients[1]<100){
-  is_med<-TRUE}
-
-if(f.fit.summary$coefficients[1]>100){
-  is_large<-TRUE}
 
 
 
@@ -90,11 +79,13 @@ if(f.fit.summary$coefficients[1]>100){
 
 ## Length at age growth curve
 
-The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth parameters of Linf (Length infinty), K (growth coefficient), and t0 (size at time 0) were estimated using non-linear least square model. The starting point for model building is accomplished using FSA::vbStarts. 
+The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth parameters of Linf (Length infinty), K (growth coefficient), and t0 (size at time 0) were estimated using non-linear least square model. The starting point for model building is accomplished using FSA::vbStarts. Age and length data sourced from Survdat and spans all years and survey areas. 
+
+`r if(params$stock == "monkfish"){"The age determination method for monkfish has not been validated, and the anatomic structure used has changed through time. In addition these stocks display a high degree of sexual dimorphisms making fitting of single growth curves unreliable.  This results a high degree of uncertainty in assessing the age structure of the stock and the effects of fishing pressure."}`
 
 
 
-```{r single growth curve,echo=FALSE}
+```{r single growth curve,echo=FALSE, warning=FALSE, message=FALSE}
 
 selected.surv.vonb %>%
   ggplot(aes(x=AGE, y=LENGTH))+
@@ -111,4 +102,6 @@ selected.surv.vonb %>%
 
 ```
 
+
+The parameter estimates for `r params$stock ` are Linf = `r f.fit.summary$parameters[1] ` K= `r f.fit.summary$parameters[2] `, and t0 = `r f.fit.summary$parameters[3] `
 

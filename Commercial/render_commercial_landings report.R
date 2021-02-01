@@ -15,7 +15,7 @@ all_species<-c(        "smooth dogfish",          "spiny dogfish",           "ba
 library("here")
 
 all_species<-stringr::str_sort(all_species)
-all_species<-c("white hake")
+
 
 list_species <- split(all_species, f = list(all_species))
 
