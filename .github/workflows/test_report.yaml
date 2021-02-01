@@ -37,7 +37,7 @@ jobs:
       - name: Install renv and here
         run: |
           sudo R CMD javareconf
-          sudo yum -y install libcurl-devel
+          sudo apt-get install libcurl4-openssl-dev
           R -e 'install.packages(c("renv", "here"))'
 #         R -e 'renv::restore()'
 
