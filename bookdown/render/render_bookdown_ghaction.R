@@ -1,5 +1,18 @@
 `%>%` <- dplyr::`%>%`
 
+# install github packages
+remotes::install_github("NOAA-EDAB/assessmentdata",
+                        build_vignettes = TRUE)
+
+remotes::install_github("NOAA-EDAB/ecodata",
+                        build_vignettes = TRUE)
+
+remotes::install_github("ropensci/rnaturalearthhires",
+                        build_vignettes = TRUE)
+
+remotes::install_github("nmfs-general-modeling-tools/nmfspalette",
+                        build_vignettes = TRUE)
+
 # get NE stock names
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 # tilefish has is NA in COMNAME column? omit for now
