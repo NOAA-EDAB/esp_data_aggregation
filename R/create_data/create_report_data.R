@@ -3,7 +3,6 @@
 `%>%` <- dplyr::`%>%`
 
 ## bf data ----
-#####
 bf <- assessmentdata::stockAssessmentSummary %>% 
   dplyr::filter(Jurisdiction == "NEFMC")
 
@@ -12,10 +11,8 @@ bf$Species <- split_info[,1]
 bf$Region <- split_info[,2]
 
 write.csv(bf, file = here::here("data", "bbmsy_ffmsy_data.csv"))
-#####
 
 ## recruitment data ----
-#####
 recruit <- assessmentdata::stockAssessmentData %>%
   dplyr::filter(Metric == "Recruitment",
                 Region == "Gulf of Maine / Georges Bank" |
@@ -30,12 +27,10 @@ recruit <- assessmentdata::stockAssessmentData %>%
                 Region == "Cape Cod / Gulf of Maine")
 
 write.csv(recruit, file = here::here("data", "recruitment_data.csv"))
-#####
 
 ## survey data ----
-#####
 data <- readRDS(here::here("data", "survdat.RDS"))
-data <- tibble::as.tibble(data$survdat)
+data <- tibble::as_tibble(data$survdat)
 
 key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 
@@ -95,10 +90,9 @@ data3$fish_id <- paste(data3$CRUISE6, data3$STRATUM,
 #write.csv(data3, file = here::here("data", "survey_data.csv"))
 saveRDS(data3, file = here::here("data", "survey_data.RDS"))
 
-#####
 
-# assessmentdata ratings - same as bf data ----
-#####
+
+## assessmentdata ratings - same as bf data ----
 ad <- assessmentdata::stockAssessmentSummary %>% 
   dplyr::filter(Jurisdiction == "NEFMC" | 
                   Jurisdiction == "NEFMC / MAFMC" | 
@@ -110,10 +104,8 @@ head(ad)
 unique(ad$Region)
 
 ad %>% write.csv(here::here("data", "assessmentdata_ratings.csv"))
-#####
 
-# lat/long data ----
-#####
+## lat/long data ----
 data <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 crs <-  "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0" 
 
@@ -149,10 +141,8 @@ data$Region <- Region
 data$Species <- stringr::str_to_sentence(data$COMNAME)
 
 write.csv(data, file = here::here("data", "geo_range_data.csv"))
-#####
 
-# recreational catch ----
-#####
+## recreational catch ----
 files <- dir(here::here("data/MRIP"))
 read_files <- files[stringr::str_detect(files, "catch_year") %>% which()]
 col_to_keep <-  read.csv(here::here("data/MRIP", read_files[1])) %>%
@@ -173,10 +163,8 @@ big_data$tot_cat <- stringr::str_replace_all(big_data$tot_cat, ",", "") #%>%
 big_data$Species <- stringr::str_to_sentence(big_data$common)
 
 write.csv(big_data, file = here::here("data/MRIP", "all_MRIP_catch_year.csv"))
-#####
 
-# commercial catch ----
-#####
+## commercial catch ----
 com <- read.csv(here::here("data", "com_landings_clean_20201222.csv"))
 com$Species <- stringr::str_to_sentence(com$common_name)
 com <- com %>%
@@ -201,11 +189,9 @@ com <- com %>%
   dplyr::select(Species, Year, State, Pounds, Dollars_adj)
 
 write.csv(com, here::here("data", "com_landings_clean_20201222_formatted.csv"))
-#####
 
-## survey data 1/14/20 pull ----
-#####
-data <- readRDS(here::here("data", "survdat_01142021.RDS"))
+## survey data 2/1/21 pull ----
+data <- readRDS(here::here("data", "survdat_02012021.RDS"))
 data <- tibble::as_tibble(data$survdat)
 # missing data?? too few rows compared to previous survdat pull :(
 
@@ -265,12 +251,12 @@ data3$fish_id <- paste(data3$CRUISE6, data3$STRATUM,
                        sep = "_") # unique incidences of observing a species
 
 #write.csv(data3, file = here::here("data", "survey_data.csv"))
-saveRDS(data3, file = here::here("data", "survey_data_12292020.RDS"))
+saveRDS(data3, file = here::here("data", "survey_data_02012021.RDS"))
 
 # data problems...
 data3 %>% 
   dplyr::filter(SEASON == "SUMMER" | SEASON == "WINTER") %>%
-  saveRDS(file = here::here("data", "survey_data_12292020_wintersummer.RDS"))
+  saveRDS(file = here::here("data", "survey_data_02012021_wintersummer.RDS"))
 
 which((survey$fish_id %in% data3$fish_id) == FALSE)
 
@@ -298,10 +284,8 @@ data3 %>%
   dplyr::filter(SEASON == "SUMMER" | SEASON == "WINTER") %>%
   nrow()
 
-#####
 
-# test survdat functions - swept area ----
-#####
+## test survdat functions - swept area ----
 `%>%` <- dplyr::`%>%`
 
 # need original pull (formatted data not working)
@@ -369,5 +353,3 @@ write.csv(all, here::here("data", "swept_area_info.csv"))
 # no regions - figure out how to retain regions
 # cut data into regions (by species??) 
 # can the pull be parsed or will that mess up survdat functions?
-
-#####

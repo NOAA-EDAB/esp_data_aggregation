@@ -2,7 +2,7 @@
 # purrr ----
 
 source(here::here("R/full_report_functions", "read_data.R"))
-source(here::here("R/full_report_functions", "get_updated_files.R"))
+#source(here::here("R/full_report_functions", "get_updated_files.R"))
 
 # get NE stock names
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
@@ -15,13 +15,14 @@ list_species <- split(all_species, f = list(all_species))
 #dir.create(here::here("docs/bookdown/Acadian redfish"))
 #file.create(here::here("docs/bookdown/Acadian redfish", ".nojekyll"))
 
-setwd(here::here("bookdown"))
+setwd(here::here("bookdown/test"))
 
 start <- Sys.time()
 
-purrr::map(list_species[1], 
-           ~bookdown::render_book(input = c("index.Rmd", "13-abundance.Rmd", "14-biomass.Rmd"),
+purrr::map("Alewife", 
+           ~bookdown::render_book(input = c("index.Rmd", "22-vulnerability.Rmd"),
                                   preview = TRUE,
+                                  #preview = FALSE,
                                  params = list(species_ID = .x,
                                                
                                                latlong_data = latlong,

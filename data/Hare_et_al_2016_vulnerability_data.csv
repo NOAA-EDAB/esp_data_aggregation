@@ -1,0 +1,1969 @@
+Species, Functional Group, Attribute, Attribute Category, Low, Moderate, High, Very High
+Acadian Redfish,Groundfish,Adult Mobility,Sensitivity Attribute,0,5,19,1
+Acadian Redfish,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Acadian Redfish,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,11,8,3,3
+Acadian Redfish,Groundfish,Currents,Exposure Factor,3,11,6,0
+Acadian Redfish,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,7,16,2,0
+Acadian Redfish,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,6,9,9,1
+Acadian Redfish,Groundfish,Habitat Specificity,Sensitivity Attribute,12,13,0,0
+Acadian Redfish,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Acadian Redfish,Groundfish,Mean Sea Surface Salinity,Exposure Factor,18,2,0,0
+Acadian Redfish,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Acadian Redfish,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Acadian Redfish,Groundfish,Other Stressors,Sensitivity Attribute,6,15,4,0
+Acadian Redfish,Groundfish,Population Growth Rate,Sensitivity Attribute,0,2,8,15
+Acadian Redfish,Groundfish,Prey Specificity,Sensitivity Attribute,6,14,5,0
+Acadian Redfish,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Acadian Redfish,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,22,3,0,0
+Acadian Redfish,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,2,16,7,0
+Acadian Redfish,Groundfish,Spawning Cycle,Sensitivity Attribute,0,13,9,3
+Acadian Redfish,Groundfish,Stock Size/Status,Sensitivity Attribute,1,22,2,0
+Acadian Redfish,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Acadian Redfish,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Acadian Redfish,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Acadian Redfish,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Acadian Redfish,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Alewife,Diadromous Fish,Adult Mobility,Sensitivity Attribute,11,13,1,0
+Alewife,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Alewife,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,0,2,16,7
+Alewife,Diadromous Fish,Currents,Exposure Factor,7,8,3,2
+Alewife,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,0,10,9,6
+Alewife,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,2,14,9
+Alewife,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,4,7,10,4
+Alewife,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+Alewife,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,11,5,3,1
+Alewife,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Alewife,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Alewife,Diadromous Fish,Other Stressors,Sensitivity Attribute,0,4,10,11
+Alewife,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,3,15,7,0
+Alewife,Diadromous Fish,Prey Specificity,Sensitivity Attribute,14,10,1,0
+Alewife,Diadromous Fish,Sea Level Rise,Exposure Factor,1,8,6,5
+Alewife,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,13,11,1,0
+Alewife,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,6,14,4,1
+Alewife,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,0,5,11,9
+Alewife,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,3,8,12,2
+Alewife,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Alewife,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Alewife,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+Alewife,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Alewife,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+American Eel,Diadromous Fish,Adult Mobility,Sensitivity Attribute,20,5,0,0
+American Eel,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+American Eel,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,1,10,9,5
+American Eel,Diadromous Fish,Currents,Exposure Factor,2,9,8,1
+American Eel,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,23,2,0,0
+American Eel,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,1,10,13,1
+American Eel,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,1,13,7,4
+American Eel,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+American Eel,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,10,7,3,0
+American Eel,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+American Eel,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+American Eel,Diadromous Fish,Other Stressors,Sensitivity Attribute,1,10,8,6
+American Eel,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,2,9,6,8
+American Eel,Diadromous Fish,Prey Specificity,Sensitivity Attribute,23,2,0,0
+American Eel,Diadromous Fish,Sea Level Rise,Exposure Factor,2,8,5,5
+American Eel,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,22,3,0,0
+American Eel,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,17,8,0,0
+American Eel,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,2,9,13,1
+American Eel,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,2,8,10,5
+American Eel,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+American Eel,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+American Eel,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+American Eel,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+American Eel,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+American Lobster,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,4,15,6,0
+American Lobster,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,5,4,10,1
+American Lobster,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,16,8,1,0
+American Lobster,Benthic Invertebrate,Currents,Exposure Factor,3,11,6,0
+American Lobster,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,5,18,2,0
+American Lobster,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,2,11,12,0
+American Lobster,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,12,12,1,0
+American Lobster,Benthic Invertebrate,Mean Precipitation,Exposure Factor,16,4,0,0
+American Lobster,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,13,5,2,0
+American Lobster,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+American Lobster,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+American Lobster,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,1,10,13,1
+American Lobster,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,0,4,9,12
+American Lobster,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,22,3,0,0
+American Lobster,Benthic Invertebrate,Sea Level Rise,Exposure Factor,14,6,0,0
+American Lobster,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,10,7,3,5
+American Lobster,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,3,12,9,1
+American Lobster,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,2,7,12,4
+American Lobster,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,5,10,8,2
+American Lobster,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+American Lobster,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+American Lobster,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,15,5,0,0
+American Lobster,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+American Lobster,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+American Plaice,Groundfish,Adult Mobility,Sensitivity Attribute,2,11,11,1
+American Plaice,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+American Plaice,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,12,11,2,0
+American Plaice,Groundfish,Currents,Exposure Factor,3,11,6,0
+American Plaice,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,15,10,0,0
+American Plaice,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,4,14,6,1
+American Plaice,Groundfish,Habitat Specificity,Sensitivity Attribute,22,3,0,0
+American Plaice,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+American Plaice,Groundfish,Mean Sea Surface Salinity,Exposure Factor,18,2,0,0
+American Plaice,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+American Plaice,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+American Plaice,Groundfish,Other Stressors,Sensitivity Attribute,19,6,0,0
+American Plaice,Groundfish,Population Growth Rate,Sensitivity Attribute,1,13,9,2
+American Plaice,Groundfish,Prey Specificity,Sensitivity Attribute,5,17,3,0
+American Plaice,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+American Plaice,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,4,15,6,0
+American Plaice,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,9,12,4,0
+American Plaice,Groundfish,Spawning Cycle,Sensitivity Attribute,2,19,4,0
+American Plaice,Groundfish,Stock Size/Status,Sensitivity Attribute,0,1,23,1
+American Plaice,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+American Plaice,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+American Plaice,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+American Plaice,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+American Plaice,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+American Shad,Diadromous Fish,Adult Mobility,Sensitivity Attribute,17,6,2,0
+American Shad,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+American Shad,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,0,2,13,10
+American Shad,Diadromous Fish,Currents,Exposure Factor,7,8,3,2
+American Shad,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,0,3,14,8
+American Shad,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,3,11,11
+American Shad,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,4,4,7,10
+American Shad,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+American Shad,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,11,7,2,0
+American Shad,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+American Shad,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+American Shad,Diadromous Fish,Other Stressors,Sensitivity Attribute,0,1,6,18
+American Shad,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,3,12,9,1
+American Shad,Diadromous Fish,Prey Specificity,Sensitivity Attribute,10,14,1,0
+American Shad,Diadromous Fish,Sea Level Rise,Exposure Factor,0,9,6,5
+American Shad,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,17,7,1,0
+American Shad,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,12,12,1,0
+American Shad,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,0,1,5,19
+American Shad,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,1,6,12,6
+American Shad,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+American Shad,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+American Shad,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+American Shad,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+American Shad,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Anchovies,Pelagic Fish and Cephalapods,Adult Mobility,Sensitivity Attribute,2,16,7,0
+Anchovies,Pelagic Fish and Cephalapods,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,2,9,9
+Anchovies,Pelagic Fish and Cephalapods,Complexity in Reproductive Strategy,Sensitivity Attribute,18,7,0,0
+Anchovies,Pelagic Fish and Cephalapods,Currents,Exposure Factor,3,10,6,1
+Anchovies,Pelagic Fish and Cephalapods,Dispersal of Early Life Stages,Sensitivity Attribute,6,16,3,0
+Anchovies,Pelagic Fish and Cephalapods,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,2,9,13,1
+Anchovies,Pelagic Fish and Cephalapods,Habitat Specificity,Sensitivity Attribute,13,11,1,0
+Anchovies,Pelagic Fish and Cephalapods,Mean Precipitation,Exposure Factor,17,3,0,0
+Anchovies,Pelagic Fish and Cephalapods,Mean Sea Surface Salinity,Exposure Factor,0,9,10,1
+Anchovies,Pelagic Fish and Cephalapods,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Anchovies,Pelagic Fish and Cephalapods,Ocean Acidification,Exposure Factor,0,0,0,20
+Anchovies,Pelagic Fish and Cephalapods,Other Stressors,Sensitivity Attribute,6,11,7,1
+Anchovies,Pelagic Fish and Cephalapods,Population Growth Rate,Sensitivity Attribute,21,4,0,0
+Anchovies,Pelagic Fish and Cephalapods,Prey Specificity,Sensitivity Attribute,20,5,0,0
+Anchovies,Pelagic Fish and Cephalapods,Sea Level Rise,Exposure Factor,2,10,8,0
+Anchovies,Pelagic Fish and Cephalapods,Sensitivity to Ocean Acidification,Sensitivity Attribute,14,11,0,0
+Anchovies,Pelagic Fish and Cephalapods,Sensitivity to Temperature,Sensitivity Attribute,14,11,0,0
+Anchovies,Pelagic Fish and Cephalapods,Spawning Cycle,Sensitivity Attribute,11,12,2,0
+Anchovies,Pelagic Fish and Cephalapods,Stock Size/Status,Sensitivity Attribute,12,9,3,1
+Anchovies,Pelagic Fish and Cephalapods,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Anchovies,Pelagic Fish and Cephalapods,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Anchovies,Pelagic Fish and Cephalapods,Variability in Precipitation,Exposure Factor,17,3,0,0
+Anchovies,Pelagic Fish and Cephalapods,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Anchovies,Pelagic Fish and Cephalapods,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Atlantic Cod,Groundfish,Adult Mobility,Sensitivity Attribute,3,14,8,0
+Atlantic Cod,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Atlantic Cod,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,1,13,11,0
+Atlantic Cod,Groundfish,Currents,Exposure Factor,3,11,6,0
+Atlantic Cod,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,14,11,0,0
+Atlantic Cod,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,1,7,14,3
+Atlantic Cod,Groundfish,Habitat Specificity,Sensitivity Attribute,9,13,3,0
+Atlantic Cod,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Atlantic Cod,Groundfish,Mean Sea Surface Salinity,Exposure Factor,14,5,1,0
+Atlantic Cod,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Atlantic Cod,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Cod,Groundfish,Other Stressors,Sensitivity Attribute,6,14,5,0
+Atlantic Cod,Groundfish,Population Growth Rate,Sensitivity Attribute,1,6,16,2
+Atlantic Cod,Groundfish,Prey Specificity,Sensitivity Attribute,19,6,0,0
+Atlantic Cod,Groundfish,Sea Level Rise,Exposure Factor,11,6,3,0
+Atlantic Cod,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,17,8,0,0
+Atlantic Cod,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,7,12,6,0
+Atlantic Cod,Groundfish,Spawning Cycle,Sensitivity Attribute,4,18,3,0
+Atlantic Cod,Groundfish,Stock Size/Status,Sensitivity Attribute,0,0,3,22
+Atlantic Cod,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Cod,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Cod,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Atlantic Cod,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Cod,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Atlantic Croaker,Coastal Fish,Adult Mobility,Sensitivity Attribute,12,13,0,0
+Atlantic Croaker,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Atlantic Croaker,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,7,10,7,1
+Atlantic Croaker,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Atlantic Croaker,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,6,17,2,0
+Atlantic Croaker,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,5,16,4
+Atlantic Croaker,Coastal Fish,Habitat Specificity,Sensitivity Attribute,10,5,10,0
+Atlantic Croaker,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Atlantic Croaker,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,3,4,6,7
+Atlantic Croaker,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Atlantic Croaker,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Croaker,Coastal Fish,Other Stressors,Sensitivity Attribute,5,12,7,1
+Atlantic Croaker,Coastal Fish,Population Growth Rate,Sensitivity Attribute,10,13,2,0
+Atlantic Croaker,Coastal Fish,Prey Specificity,Sensitivity Attribute,17,8,0,0
+Atlantic Croaker,Coastal Fish,Sea Level Rise,Exposure Factor,1,12,3,4
+Atlantic Croaker,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,12,12,1,0
+Atlantic Croaker,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,15,9,1,0
+Atlantic Croaker,Coastal Fish,Spawning Cycle,Sensitivity Attribute,6,17,2,0
+Atlantic Croaker,Coastal Fish,Stock Size/Status,Sensitivity Attribute,9,11,3,2
+Atlantic Croaker,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Croaker,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Croaker,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Atlantic Croaker,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Croaker,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Atlantic Hagfish,Groundfish,Adult Mobility,Sensitivity Attribute,0,3,20,2
+Atlantic Hagfish,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Atlantic Hagfish,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,11,8,4,2
+Atlantic Hagfish,Groundfish,Currents,Exposure Factor,3,11,6,0
+Atlantic Hagfish,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,3,9,6,7
+Atlantic Hagfish,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,22,3,0,0
+Atlantic Hagfish,Groundfish,Habitat Specificity,Sensitivity Attribute,20,5,0,0
+Atlantic Hagfish,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Atlantic Hagfish,Groundfish,Mean Sea Surface Salinity,Exposure Factor,14,4,2,0
+Atlantic Hagfish,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Atlantic Hagfish,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Hagfish,Groundfish,Other Stressors,Sensitivity Attribute,16,5,2,2
+Atlantic Hagfish,Groundfish,Population Growth Rate,Sensitivity Attribute,5,6,9,5
+Atlantic Hagfish,Groundfish,Prey Specificity,Sensitivity Attribute,25,0,0,0
+Atlantic Hagfish,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Atlantic Hagfish,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,12,13,0,0
+Atlantic Hagfish,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,13,10,2,0
+Atlantic Hagfish,Groundfish,Spawning Cycle,Sensitivity Attribute,23,2,0,0
+Atlantic Hagfish,Groundfish,Stock Size/Status,Sensitivity Attribute,6,7,7,5
+Atlantic Hagfish,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Hagfish,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Hagfish,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Atlantic Hagfish,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Hagfish,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Atlantic Halibut,Groundfish,Adult Mobility,Sensitivity Attribute,4,19,2,0
+Atlantic Halibut,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Atlantic Halibut,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,16,8,1,0
+Atlantic Halibut,Groundfish,Currents,Exposure Factor,3,11,6,0
+Atlantic Halibut,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,18,7,0,0
+Atlantic Halibut,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,16,6,0
+Atlantic Halibut,Groundfish,Habitat Specificity,Sensitivity Attribute,21,4,0,0
+Atlantic Halibut,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Atlantic Halibut,Groundfish,Mean Sea Surface Salinity,Exposure Factor,18,2,0,0
+Atlantic Halibut,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Atlantic Halibut,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Halibut,Groundfish,Other Stressors,Sensitivity Attribute,10,9,5,1
+Atlantic Halibut,Groundfish,Population Growth Rate,Sensitivity Attribute,0,0,2,23
+Atlantic Halibut,Groundfish,Prey Specificity,Sensitivity Attribute,25,0,0,0
+Atlantic Halibut,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Atlantic Halibut,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,15,7,3,0
+Atlantic Halibut,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,2,19,4,0
+Atlantic Halibut,Groundfish,Spawning Cycle,Sensitivity Attribute,2,22,1,0
+Atlantic Halibut,Groundfish,Stock Size/Status,Sensitivity Attribute,0,0,1,24
+Atlantic Halibut,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Halibut,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Halibut,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Atlantic Halibut,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Halibut,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Adult Mobility,Sensitivity Attribute,22,3,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,10,4,3,3
+Atlantic Herring,Pelagic Fish and Cephalapods,Complexity in Reproductive Strategy,Sensitivity Attribute,4,12,8,1
+Atlantic Herring,Pelagic Fish and Cephalapods,Currents,Exposure Factor,3,11,6,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Dispersal of Early Life Stages,Sensitivity Attribute,16,7,2,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,9,13,3
+Atlantic Herring,Pelagic Fish and Cephalapods,Habitat Specificity,Sensitivity Attribute,13,7,5,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Mean Precipitation,Exposure Factor,19,1,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Mean Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Atlantic Herring,Pelagic Fish and Cephalapods,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Herring,Pelagic Fish and Cephalapods,Other Stressors,Sensitivity Attribute,11,10,4,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Population Growth Rate,Sensitivity Attribute,8,12,5,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Prey Specificity,Sensitivity Attribute,18,7,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Sea Level Rise,Exposure Factor,14,6,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Sensitivity to Ocean Acidification,Sensitivity Attribute,13,11,1,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Sensitivity to Temperature,Sensitivity Attribute,7,12,6,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Spawning Cycle,Sensitivity Attribute,3,10,11,1
+Atlantic Herring,Pelagic Fish and Cephalapods,Stock Size/Status,Sensitivity Attribute,16,9,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Variability in Precipitation,Exposure Factor,18,2,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Herring,Pelagic Fish and Cephalapods,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Adult Mobility,Sensitivity Attribute,22,3,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,10,4,3,3
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Complexity in Reproductive Strategy,Sensitivity Attribute,5,14,6,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Currents,Exposure Factor,3,11,6,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Dispersal of Early Life Stages,Sensitivity Attribute,12,13,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,8,10,4
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Habitat Specificity,Sensitivity Attribute,14,9,2,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Mean Precipitation,Exposure Factor,19,1,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Mean Sea Surface Salinity,Exposure Factor,13,6,1,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Other Stressors,Sensitivity Attribute,13,11,1,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Population Growth Rate,Sensitivity Attribute,13,10,2,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Prey Specificity,Sensitivity Attribute,22,3,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Sea Level Rise,Exposure Factor,18,2,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Sensitivity to Ocean Acidification,Sensitivity Attribute,16,9,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Sensitivity to Temperature,Sensitivity Attribute,15,7,3,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Spawning Cycle,Sensitivity Attribute,0,12,13,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Stock Size/Status,Sensitivity Attribute,1,10,11,3
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Variability in Precipitation,Exposure Factor,18,2,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Mackerel,Pelagic Fish and Cephalapods,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Atlantic Menhaden,Coastal Fish,Adult Mobility,Sensitivity Attribute,14,7,4,0
+Atlantic Menhaden,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Atlantic Menhaden,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,7,14,4,0
+Atlantic Menhaden,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Atlantic Menhaden,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,5,19,1,0
+Atlantic Menhaden,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,6,16,3
+Atlantic Menhaden,Coastal Fish,Habitat Specificity,Sensitivity Attribute,8,10,7,0
+Atlantic Menhaden,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Atlantic Menhaden,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,3,7,9,1
+Atlantic Menhaden,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Atlantic Menhaden,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Menhaden,Coastal Fish,Other Stressors,Sensitivity Attribute,8,8,7,2
+Atlantic Menhaden,Coastal Fish,Population Growth Rate,Sensitivity Attribute,21,3,1,0
+Atlantic Menhaden,Coastal Fish,Prey Specificity,Sensitivity Attribute,13,11,1,0
+Atlantic Menhaden,Coastal Fish,Sea Level Rise,Exposure Factor,11,8,1,0
+Atlantic Menhaden,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,12,7,6,0
+Atlantic Menhaden,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,14,10,1,0
+Atlantic Menhaden,Coastal Fish,Spawning Cycle,Sensitivity Attribute,7,17,1,0
+Atlantic Menhaden,Coastal Fish,Stock Size/Status,Sensitivity Attribute,3,10,10,2
+Atlantic Menhaden,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Menhaden,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Menhaden,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Atlantic Menhaden,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Menhaden,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Atlantic Salmon,Diadromous Fish,Adult Mobility,Sensitivity Attribute,14,9,2,0
+Atlantic Salmon,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Atlantic Salmon,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,0,1,10,14
+Atlantic Salmon,Diadromous Fish,Currents,Exposure Factor,3,10,6,1
+Atlantic Salmon,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,0,1,9,15
+Atlantic Salmon,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,1,8,16
+Atlantic Salmon,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,3,6,8,8
+Atlantic Salmon,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+Atlantic Salmon,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,19,1,0,0
+Atlantic Salmon,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Atlantic Salmon,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Salmon,Diadromous Fish,Other Stressors,Sensitivity Attribute,0,1,13,11
+Atlantic Salmon,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,7,15,3,0
+Atlantic Salmon,Diadromous Fish,Prey Specificity,Sensitivity Attribute,7,11,6,1
+Atlantic Salmon,Diadromous Fish,Sea Level Rise,Exposure Factor,0,9,6,5
+Atlantic Salmon,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,15,8,2,0
+Atlantic Salmon,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,0,7,15,3
+Atlantic Salmon,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,0,2,9,14
+Atlantic Salmon,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,0,0,4,21
+Atlantic Salmon,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Salmon,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Salmon,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+Atlantic Salmon,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Salmon,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Adult Mobility,Sensitivity Attribute,14,10,1,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,17,3,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Complexity in Reproductive Strategy,Sensitivity Attribute,10,9,4,2
+Atlantic Saury,Pelagic Fish and Cephalapods,Currents,Exposure Factor,0,10,10,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Dispersal of Early Life Stages,Sensitivity Attribute,16,7,2,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,6,8,8,3
+Atlantic Saury,Pelagic Fish and Cephalapods,Habitat Specificity,Sensitivity Attribute,22,3,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Mean Precipitation,Exposure Factor,19,1,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Mean Sea Surface Salinity,Exposure Factor,5,7,4,4
+Atlantic Saury,Pelagic Fish and Cephalapods,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Atlantic Saury,Pelagic Fish and Cephalapods,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Saury,Pelagic Fish and Cephalapods,Other Stressors,Sensitivity Attribute,18,5,2,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Population Growth Rate,Sensitivity Attribute,17,8,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Prey Specificity,Sensitivity Attribute,20,5,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Sea Level Rise,Exposure Factor,19,1,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Sensitivity to Ocean Acidification,Sensitivity Attribute,14,11,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Sensitivity to Temperature,Sensitivity Attribute,7,12,6,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Spawning Cycle,Sensitivity Attribute,4,15,6,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Stock Size/Status,Sensitivity Attribute,11,10,3,1
+Atlantic Saury,Pelagic Fish and Cephalapods,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Variability in Precipitation,Exposure Factor,18,2,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Saury,Pelagic Fish and Cephalapods,Variability in Sea Surface Temperature,Exposure Factor,15,2,3,0
+Atlantic Sea Scallop,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,0,7,18
+Atlantic Sea Scallop,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Atlantic Sea Scallop,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,10,12,3,0
+Atlantic Sea Scallop,Benthic Invertebrate,Currents,Exposure Factor,3,11,6,0
+Atlantic Sea Scallop,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,5,11,9,0
+Atlantic Sea Scallop,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,5,9,11,0
+Atlantic Sea Scallop,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,20,4,1,0
+Atlantic Sea Scallop,Benthic Invertebrate,Mean Precipitation,Exposure Factor,20,0,0,0
+Atlantic Sea Scallop,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,7,9,4,0
+Atlantic Sea Scallop,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Atlantic Sea Scallop,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Sea Scallop,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,11,9,5,0
+Atlantic Sea Scallop,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,8,9,7,1
+Atlantic Sea Scallop,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,18,5,2,0
+Atlantic Sea Scallop,Benthic Invertebrate,Sea Level Rise,Exposure Factor,18,2,0,0
+Atlantic Sea Scallop,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,0,0,0,25
+Atlantic Sea Scallop,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,4,7,13,1
+Atlantic Sea Scallop,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,5,16,4,0
+Atlantic Sea Scallop,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,5,20,0,0
+Atlantic Sea Scallop,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Sea Scallop,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Sea Scallop,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,20,0,0,0
+Atlantic Sea Scallop,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Sea Scallop,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Atlantic Sturgeon,Diadromous Fish,Adult Mobility,Sensitivity Attribute,20,5,0,0
+Atlantic Sturgeon,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Atlantic Sturgeon,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,0,7,17,1
+Atlantic Sturgeon,Diadromous Fish,Currents,Exposure Factor,7,8,3,2
+Atlantic Sturgeon,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,0,8,9,8
+Atlantic Sturgeon,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,2,17,6,0
+Atlantic Sturgeon,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,0,4,14,7
+Atlantic Sturgeon,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+Atlantic Sturgeon,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,5,9,4,2
+Atlantic Sturgeon,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Atlantic Sturgeon,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Sturgeon,Diadromous Fish,Other Stressors,Sensitivity Attribute,0,5,17,3
+Atlantic Sturgeon,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,0,0,3,22
+Atlantic Sturgeon,Diadromous Fish,Prey Specificity,Sensitivity Attribute,15,9,1,0
+Atlantic Sturgeon,Diadromous Fish,Sea Level Rise,Exposure Factor,1,9,5,5
+Atlantic Sturgeon,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,13,10,2,0
+Atlantic Sturgeon,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,9,14,2,0
+Atlantic Sturgeon,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,0,14,6,5
+Atlantic Sturgeon,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,1,2,5,17
+Atlantic Sturgeon,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Sturgeon,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Sturgeon,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+Atlantic Sturgeon,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Sturgeon,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Atlantic Surfclam,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,0,5,20
+Atlantic Surfclam,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,10,2,8,0
+Atlantic Surfclam,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,16,6,3,0
+Atlantic Surfclam,Benthic Invertebrate,Currents,Exposure Factor,3,11,6,0
+Atlantic Surfclam,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,7,12,6,0
+Atlantic Surfclam,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,10,10,5,0
+Atlantic Surfclam,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,19,6,0,0
+Atlantic Surfclam,Benthic Invertebrate,Mean Precipitation,Exposure Factor,18,2,0,0
+Atlantic Surfclam,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,4,10,5,1
+Atlantic Surfclam,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Atlantic Surfclam,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Surfclam,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,6,14,5,0
+Atlantic Surfclam,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,5,10,7,3
+Atlantic Surfclam,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,9,13,3,0
+Atlantic Surfclam,Benthic Invertebrate,Sea Level Rise,Exposure Factor,18,2,0,0
+Atlantic Surfclam,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,1,1,3,20
+Atlantic Surfclam,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,8,11,6,0
+Atlantic Surfclam,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,3,13,8,1
+Atlantic Surfclam,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,1,23,1,0
+Atlantic Surfclam,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Surfclam,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Surfclam,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,17,3,0,0
+Atlantic Surfclam,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Surfclam,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Atlantic Wolffish,Groundfish,Adult Mobility,Sensitivity Attribute,4,5,14,2
+Atlantic Wolffish,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Atlantic Wolffish,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,6,18,1,0
+Atlantic Wolffish,Groundfish,Currents,Exposure Factor,3,11,6,0
+Atlantic Wolffish,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,9,4,11,1
+Atlantic Wolffish,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,6,16,3,0
+Atlantic Wolffish,Groundfish,Habitat Specificity,Sensitivity Attribute,22,3,0,0
+Atlantic Wolffish,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Atlantic Wolffish,Groundfish,Mean Sea Surface Salinity,Exposure Factor,18,2,0,0
+Atlantic Wolffish,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Atlantic Wolffish,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Atlantic Wolffish,Groundfish,Other Stressors,Sensitivity Attribute,16,8,1,0
+Atlantic Wolffish,Groundfish,Population Growth Rate,Sensitivity Attribute,0,2,7,16
+Atlantic Wolffish,Groundfish,Prey Specificity,Sensitivity Attribute,22,3,0,0
+Atlantic Wolffish,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Atlantic Wolffish,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,0,13,11,1
+Atlantic Wolffish,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,6,13,6,0
+Atlantic Wolffish,Groundfish,Spawning Cycle,Sensitivity Attribute,3,2,12,8
+Atlantic Wolffish,Groundfish,Stock Size/Status,Sensitivity Attribute,0,2,6,17
+Atlantic Wolffish,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Atlantic Wolffish,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Atlantic Wolffish,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Atlantic Wolffish,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Atlantic Wolffish,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Barndoor Skate,Elasmobranch,Adult Mobility,Sensitivity Attribute,8,12,5,0
+Barndoor Skate,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Barndoor Skate,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,17,8,0,0
+Barndoor Skate,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Barndoor Skate,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,13,7,5,0
+Barndoor Skate,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,25,0,0,0
+Barndoor Skate,Elasmobranch,Habitat Specificity,Sensitivity Attribute,21,4,0,0
+Barndoor Skate,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Barndoor Skate,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,9,10,1,0
+Barndoor Skate,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Barndoor Skate,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Barndoor Skate,Elasmobranch,Other Stressors,Sensitivity Attribute,17,6,1,1
+Barndoor Skate,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,6,14,5
+Barndoor Skate,Elasmobranch,Prey Specificity,Sensitivity Attribute,21,4,0,0
+Barndoor Skate,Elasmobranch,Sea Level Rise,Exposure Factor,18,2,0,0
+Barndoor Skate,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,14,11,0,0
+Barndoor Skate,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,2,16,7,0
+Barndoor Skate,Elasmobranch,Spawning Cycle,Sensitivity Attribute,6,9,8,2
+Barndoor Skate,Elasmobranch,Stock Size/Status,Sensitivity Attribute,1,6,15,3
+Barndoor Skate,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Barndoor Skate,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Barndoor Skate,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Barndoor Skate,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Barndoor Skate,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Bay Scallop,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,0,3,22
+Bay Scallop,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,2,18
+Bay Scallop,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,3,11,10,1
+Bay Scallop,Benthic Invertebrate,Currents,Exposure Factor,7,8,3,2
+Bay Scallop,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,0,10,14,1
+Bay Scallop,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,1,5,19
+Bay Scallop,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,0,3,8,14
+Bay Scallop,Benthic Invertebrate,Mean Precipitation,Exposure Factor,14,6,0,0
+Bay Scallop,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,8,5,6,1
+Bay Scallop,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Bay Scallop,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Bay Scallop,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,0,1,8,16
+Bay Scallop,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,12,13,0,0
+Bay Scallop,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,19,4,2,0
+Bay Scallop,Benthic Invertebrate,Sea Level Rise,Exposure Factor,0,0,2,18
+Bay Scallop,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,0,0,2,23
+Bay Scallop,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,7,4,11,3
+Bay Scallop,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,0,10,10,5
+Bay Scallop,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,3,6,13,3
+Bay Scallop,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Bay Scallop,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Bay Scallop,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,13,7,0,0
+Bay Scallop,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Bay Scallop,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Black Sea Bass,Coastal Fish,Adult Mobility,Sensitivity Attribute,6,18,1,0
+Black Sea Bass,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Black Sea Bass,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,1,9,12,3
+Black Sea Bass,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Black Sea Bass,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,6,18,1,0
+Black Sea Bass,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,10,15,0
+Black Sea Bass,Coastal Fish,Habitat Specificity,Sensitivity Attribute,5,9,10,1
+Black Sea Bass,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Black Sea Bass,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,2,7,6,5
+Black Sea Bass,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Black Sea Bass,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Black Sea Bass,Coastal Fish,Other Stressors,Sensitivity Attribute,14,8,3,0
+Black Sea Bass,Coastal Fish,Population Growth Rate,Sensitivity Attribute,11,13,1,0
+Black Sea Bass,Coastal Fish,Prey Specificity,Sensitivity Attribute,20,4,1,0
+Black Sea Bass,Coastal Fish,Sea Level Rise,Exposure Factor,10,9,1,0
+Black Sea Bass,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,7,15,3,0
+Black Sea Bass,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,15,10,0,0
+Black Sea Bass,Coastal Fish,Spawning Cycle,Sensitivity Attribute,1,22,2,0
+Black Sea Bass,Coastal Fish,Stock Size/Status,Sensitivity Attribute,2,20,3,0
+Black Sea Bass,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Black Sea Bass,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Black Sea Bass,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Black Sea Bass,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Black Sea Bass,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Bloodworm,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,0,20,5
+Bloodworm,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,7,13
+Bloodworm,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,3,12,10,0
+Bloodworm,Benthic Invertebrate,Currents,Exposure Factor,7,8,3,2
+Bloodworm,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,0,3,10,12
+Bloodworm,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,11,10,1
+Bloodworm,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,13,10,2,0
+Bloodworm,Benthic Invertebrate,Mean Precipitation,Exposure Factor,14,6,0,0
+Bloodworm,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,10,7,2,1
+Bloodworm,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Bloodworm,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Bloodworm,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,3,11,9,2
+Bloodworm,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,12,8,5,0
+Bloodworm,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,17,8,0,0
+Bloodworm,Benthic Invertebrate,Sea Level Rise,Exposure Factor,0,11,4,5
+Bloodworm,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,20,5,0,0
+Bloodworm,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,20,4,1,0
+Bloodworm,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,0,6,12,7
+Bloodworm,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,3,9,11,2
+Bloodworm,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Bloodworm,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Bloodworm,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,13,7,0,0
+Bloodworm,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Bloodworm,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Blue Crab,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,9,14,2,0
+Blue Crab,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,1,19
+Blue Crab,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,0,4,17,4
+Blue Crab,Benthic Invertebrate,Currents,Exposure Factor,7,8,3,2
+Blue Crab,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,10,14,1,0
+Blue Crab,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,9,13,3
+Blue Crab,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,3,12,8,2
+Blue Crab,Benthic Invertebrate,Mean Precipitation,Exposure Factor,14,6,0,0
+Blue Crab,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,2,5,9,4
+Blue Crab,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Blue Crab,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Blue Crab,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,0,6,13,6
+Blue Crab,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,19,6,0,0
+Blue Crab,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,22,3,0,0
+Blue Crab,Benthic Invertebrate,Sea Level Rise,Exposure Factor,1,9,5,5
+Blue Crab,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,16,4,4,1
+Blue Crab,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,10,14,1,0
+Blue Crab,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,1,18,6,0
+Blue Crab,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,2,7,10,6
+Blue Crab,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Blue Crab,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Blue Crab,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,13,7,0,0
+Blue Crab,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Blue Crab,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Blue Mussel,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,0,5,20
+Blue Mussel,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,7,13
+Blue Mussel,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,13,9,3,0
+Blue Mussel,Benthic Invertebrate,Currents,Exposure Factor,7,8,3,2
+Blue Mussel,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,3,9,12,1
+Blue Mussel,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,8,10,6,1
+Blue Mussel,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,3,13,8,1
+Blue Mussel,Benthic Invertebrate,Mean Precipitation,Exposure Factor,14,6,0,0
+Blue Mussel,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,12,7,1,0
+Blue Mussel,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Blue Mussel,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Blue Mussel,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,2,14,9,0
+Blue Mussel,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,12,12,1,0
+Blue Mussel,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,11,11,3,0
+Blue Mussel,Benthic Invertebrate,Sea Level Rise,Exposure Factor,3,12,4,1
+Blue Mussel,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,1,2,3,19
+Blue Mussel,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,16,8,1,0
+Blue Mussel,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,5,17,3,0
+Blue Mussel,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,6,13,4,2
+Blue Mussel,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Blue Mussel,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Blue Mussel,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,13,7,0,0
+Blue Mussel,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Blue Mussel,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Blueback Herring,Diadromous Fish,Adult Mobility,Sensitivity Attribute,18,7,0,0
+Blueback Herring,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Blueback Herring,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,0,3,13,9
+Blueback Herring,Diadromous Fish,Currents,Exposure Factor,7,8,3,2
+Blueback Herring,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,0,3,14,8
+Blueback Herring,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,2,14,9
+Blueback Herring,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,8,6,7,4
+Blueback Herring,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+Blueback Herring,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,9,7,3,1
+Blueback Herring,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Blueback Herring,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Blueback Herring,Diadromous Fish,Other Stressors,Sensitivity Attribute,1,11,7,6
+Blueback Herring,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,2,14,9,0
+Blueback Herring,Diadromous Fish,Prey Specificity,Sensitivity Attribute,8,15,2,0
+Blueback Herring,Diadromous Fish,Sea Level Rise,Exposure Factor,2,8,5,5
+Blueback Herring,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,14,10,1,0
+Blueback Herring,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,8,14,3,0
+Blueback Herring,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,0,1,10,14
+Blueback Herring,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,2,7,12,4
+Blueback Herring,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Blueback Herring,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Blueback Herring,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+Blueback Herring,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Blueback Herring,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Bluefish,Pelagic Fish and Cephalapods,Adult Mobility,Sensitivity Attribute,23,2,0,0
+Bluefish,Pelagic Fish and Cephalapods,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,8,4,5,3
+Bluefish,Pelagic Fish and Cephalapods,Complexity in Reproductive Strategy,Sensitivity Attribute,10,12,3,0
+Bluefish,Pelagic Fish and Cephalapods,Currents,Exposure Factor,3,11,6,0
+Bluefish,Pelagic Fish and Cephalapods,Dispersal of Early Life Stages,Sensitivity Attribute,14,11,0,0
+Bluefish,Pelagic Fish and Cephalapods,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,1,7,15,2
+Bluefish,Pelagic Fish and Cephalapods,Habitat Specificity,Sensitivity Attribute,5,18,2,0
+Bluefish,Pelagic Fish and Cephalapods,Mean Precipitation,Exposure Factor,18,2,0,0
+Bluefish,Pelagic Fish and Cephalapods,Mean Sea Surface Salinity,Exposure Factor,3,5,10,2
+Bluefish,Pelagic Fish and Cephalapods,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Bluefish,Pelagic Fish and Cephalapods,Ocean Acidification,Exposure Factor,0,0,0,20
+Bluefish,Pelagic Fish and Cephalapods,Other Stressors,Sensitivity Attribute,4,13,8,0
+Bluefish,Pelagic Fish and Cephalapods,Population Growth Rate,Sensitivity Attribute,4,20,1,0
+Bluefish,Pelagic Fish and Cephalapods,Prey Specificity,Sensitivity Attribute,23,2,0,0
+Bluefish,Pelagic Fish and Cephalapods,Sea Level Rise,Exposure Factor,12,6,2,0
+Bluefish,Pelagic Fish and Cephalapods,Sensitivity to Ocean Acidification,Sensitivity Attribute,19,6,0,0
+Bluefish,Pelagic Fish and Cephalapods,Sensitivity to Temperature,Sensitivity Attribute,22,3,0,0
+Bluefish,Pelagic Fish and Cephalapods,Spawning Cycle,Sensitivity Attribute,1,24,0,0
+Bluefish,Pelagic Fish and Cephalapods,Stock Size/Status,Sensitivity Attribute,1,23,1,0
+Bluefish,Pelagic Fish and Cephalapods,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Bluefish,Pelagic Fish and Cephalapods,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Bluefish,Pelagic Fish and Cephalapods,Variability in Precipitation,Exposure Factor,18,2,0,0
+Bluefish,Pelagic Fish and Cephalapods,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Bluefish,Pelagic Fish and Cephalapods,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Butterfish,Pelagic Fish and Cephalapods,Adult Mobility,Sensitivity Attribute,22,3,0,0
+Butterfish,Pelagic Fish and Cephalapods,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,8,4,5,3
+Butterfish,Pelagic Fish and Cephalapods,Complexity in Reproductive Strategy,Sensitivity Attribute,14,10,1,0
+Butterfish,Pelagic Fish and Cephalapods,Currents,Exposure Factor,3,11,6,0
+Butterfish,Pelagic Fish and Cephalapods,Dispersal of Early Life Stages,Sensitivity Attribute,16,9,0,0
+Butterfish,Pelagic Fish and Cephalapods,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,5,12,8,0
+Butterfish,Pelagic Fish and Cephalapods,Habitat Specificity,Sensitivity Attribute,15,8,2,0
+Butterfish,Pelagic Fish and Cephalapods,Mean Precipitation,Exposure Factor,18,2,0,0
+Butterfish,Pelagic Fish and Cephalapods,Mean Sea Surface Salinity,Exposure Factor,6,7,5,2
+Butterfish,Pelagic Fish and Cephalapods,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Butterfish,Pelagic Fish and Cephalapods,Ocean Acidification,Exposure Factor,0,0,0,20
+Butterfish,Pelagic Fish and Cephalapods,Other Stressors,Sensitivity Attribute,18,5,2,0
+Butterfish,Pelagic Fish and Cephalapods,Population Growth Rate,Sensitivity Attribute,23,2,0,0
+Butterfish,Pelagic Fish and Cephalapods,Prey Specificity,Sensitivity Attribute,12,12,1,0
+Butterfish,Pelagic Fish and Cephalapods,Sea Level Rise,Exposure Factor,12,6,2,0
+Butterfish,Pelagic Fish and Cephalapods,Sensitivity to Ocean Acidification,Sensitivity Attribute,16,7,2,0
+Butterfish,Pelagic Fish and Cephalapods,Sensitivity to Temperature,Sensitivity Attribute,7,17,1,0
+Butterfish,Pelagic Fish and Cephalapods,Spawning Cycle,Sensitivity Attribute,1,18,6,0
+Butterfish,Pelagic Fish and Cephalapods,Stock Size/Status,Sensitivity Attribute,21,3,1,0
+Butterfish,Pelagic Fish and Cephalapods,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Butterfish,Pelagic Fish and Cephalapods,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Butterfish,Pelagic Fish and Cephalapods,Variability in Precipitation,Exposure Factor,18,2,0,0
+Butterfish,Pelagic Fish and Cephalapods,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Butterfish,Pelagic Fish and Cephalapods,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Cancer Crabs,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,1,7,16,1
+Cancer Crabs,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,5,3,4,8
+Cancer Crabs,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,19,6,0,0
+Cancer Crabs,Benthic Invertebrate,Currents,Exposure Factor,3,11,6,0
+Cancer Crabs,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,8,17,0,0
+Cancer Crabs,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,5,16,4,0
+Cancer Crabs,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,19,6,0,0
+Cancer Crabs,Benthic Invertebrate,Mean Precipitation,Exposure Factor,17,3,0,0
+Cancer Crabs,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,7,7,6,0
+Cancer Crabs,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Cancer Crabs,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Cancer Crabs,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,7,11,7,0
+Cancer Crabs,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,18,7,0,0
+Cancer Crabs,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,23,2,0,0
+Cancer Crabs,Benthic Invertebrate,Sea Level Rise,Exposure Factor,11,5,1,3
+Cancer Crabs,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,12,2,5,6
+Cancer Crabs,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,9,12,3,1
+Cancer Crabs,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,3,8,9,5
+Cancer Crabs,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,9,9,5,2
+Cancer Crabs,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Cancer Crabs,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Cancer Crabs,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,17,3,0,0
+Cancer Crabs,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Cancer Crabs,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Channeled Whelk,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,4,21,0
+Channeled Whelk,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,1,8,11
+Channeled Whelk,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,13,10,1,1
+Channeled Whelk,Benthic Invertebrate,Currents,Exposure Factor,7,8,3,2
+Channeled Whelk,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,1,2,5,17
+Channeled Whelk,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,6,11,8,0
+Channeled Whelk,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,15,10,0,0
+Channeled Whelk,Benthic Invertebrate,Mean Precipitation,Exposure Factor,14,6,0,0
+Channeled Whelk,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,11,7,2,0
+Channeled Whelk,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Channeled Whelk,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Channeled Whelk,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,9,13,3,0
+Channeled Whelk,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,0,9,10,6
+Channeled Whelk,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,16,8,1,0
+Channeled Whelk,Benthic Invertebrate,Sea Level Rise,Exposure Factor,11,6,2,1
+Channeled Whelk,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,0,0,3,22
+Channeled Whelk,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,7,16,2,0
+Channeled Whelk,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,0,7,11,7
+Channeled Whelk,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,5,11,6,3
+Channeled Whelk,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Channeled Whelk,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Channeled Whelk,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,14,6,0,0
+Channeled Whelk,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Channeled Whelk,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Clearnose Skate,Elasmobranch,Adult Mobility,Sensitivity Attribute,8,13,4,0
+Clearnose Skate,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Clearnose Skate,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,19,6,0,0
+Clearnose Skate,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Clearnose Skate,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,6,11,8,0
+Clearnose Skate,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,24,1,0,0
+Clearnose Skate,Elasmobranch,Habitat Specificity,Sensitivity Attribute,20,5,0,0
+Clearnose Skate,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Clearnose Skate,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,3,5,8,4
+Clearnose Skate,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Clearnose Skate,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Clearnose Skate,Elasmobranch,Other Stressors,Sensitivity Attribute,20,5,0,0
+Clearnose Skate,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,7,15,3
+Clearnose Skate,Elasmobranch,Prey Specificity,Sensitivity Attribute,21,4,0,0
+Clearnose Skate,Elasmobranch,Sea Level Rise,Exposure Factor,18,2,0,0
+Clearnose Skate,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,16,9,0,0
+Clearnose Skate,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,4,14,3,4
+Clearnose Skate,Elasmobranch,Spawning Cycle,Sensitivity Attribute,7,13,5,0
+Clearnose Skate,Elasmobranch,Stock Size/Status,Sensitivity Attribute,5,14,4,2
+Clearnose Skate,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Clearnose Skate,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Clearnose Skate,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Clearnose Skate,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Clearnose Skate,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Conger Eel,Diadromous Fish,Adult Mobility,Sensitivity Attribute,14,10,1,0
+Conger Eel,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Conger Eel,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,2,13,9,1
+Conger Eel,Diadromous Fish,Currents,Exposure Factor,3,10,6,1
+Conger Eel,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,19,5,1,0
+Conger Eel,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,2,9,13,1
+Conger Eel,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,4,10,7,4
+Conger Eel,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+Conger Eel,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,3,9,6,2
+Conger Eel,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Conger Eel,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Conger Eel,Diadromous Fish,Other Stressors,Sensitivity Attribute,3,12,4,6
+Conger Eel,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,7,11,4,3
+Conger Eel,Diadromous Fish,Prey Specificity,Sensitivity Attribute,14,8,2,1
+Conger Eel,Diadromous Fish,Sea Level Rise,Exposure Factor,5,7,3,5
+Conger Eel,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,20,5,0,0
+Conger Eel,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,10,14,1,0
+Conger Eel,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,1,3,18,3
+Conger Eel,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,5,9,7,4
+Conger Eel,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Conger Eel,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Conger Eel,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+Conger Eel,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Conger Eel,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Cusk,Groundfish,Adult Mobility,Sensitivity Attribute,0,7,18,0
+Cusk,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Cusk,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,18,7,0,0
+Cusk,Groundfish,Currents,Exposure Factor,3,11,6,0
+Cusk,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,12,7,6,0
+Cusk,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,9,9,4
+Cusk,Groundfish,Habitat Specificity,Sensitivity Attribute,0,9,15,1
+Cusk,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Cusk,Groundfish,Mean Sea Surface Salinity,Exposure Factor,18,2,0,0
+Cusk,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Cusk,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Cusk,Groundfish,Other Stressors,Sensitivity Attribute,15,8,2,0
+Cusk,Groundfish,Population Growth Rate,Sensitivity Attribute,1,3,13,8
+Cusk,Groundfish,Prey Specificity,Sensitivity Attribute,22,3,0,0
+Cusk,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Cusk,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,19,6,0,0
+Cusk,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,5,14,6,0
+Cusk,Groundfish,Spawning Cycle,Sensitivity Attribute,0,4,17,4
+Cusk,Groundfish,Stock Size/Status,Sensitivity Attribute,3,4,9,9
+Cusk,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Cusk,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Cusk,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Cusk,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Cusk,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,5,13,7,0
+Deep-sea Red Crab,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,15,9,1,0
+Deep-sea Red Crab,Benthic Invertebrate,Currents,Exposure Factor,3,11,6,0
+Deep-sea Red Crab,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,14,10,1,0
+Deep-sea Red Crab,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,9,13,3,0
+Deep-sea Red Crab,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,18,7,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Mean Precipitation,Exposure Factor,20,0,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,8,9,3,0
+Deep-sea Red Crab,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Deep-sea Red Crab,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Deep-sea Red Crab,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,13,11,1,0
+Deep-sea Red Crab,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,4,15,5,1
+Deep-sea Red Crab,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,19,6,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Sea Level Rise,Exposure Factor,18,2,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,14,1,4,6
+Deep-sea Red Crab,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,6,12,4,3
+Deep-sea Red Crab,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,7,10,7,1
+Deep-sea Red Crab,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,6,8,8,3
+Deep-sea Red Crab,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,20,0,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Deep-sea Red Crab,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Dusky Shark,Elasmobranch,Adult Mobility,Sensitivity Attribute,25,0,0,0
+Dusky Shark,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Dusky Shark,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,14,10,1,0
+Dusky Shark,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Dusky Shark,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,21,3,1,0
+Dusky Shark,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,24,1,0,0
+Dusky Shark,Elasmobranch,Habitat Specificity,Sensitivity Attribute,22,3,0,0
+Dusky Shark,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Dusky Shark,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,2,5,8,5
+Dusky Shark,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Dusky Shark,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Dusky Shark,Elasmobranch,Other Stressors,Sensitivity Attribute,8,14,3,0
+Dusky Shark,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,0,0,25
+Dusky Shark,Elasmobranch,Prey Specificity,Sensitivity Attribute,23,2,0,0
+Dusky Shark,Elasmobranch,Sea Level Rise,Exposure Factor,18,2,0,0
+Dusky Shark,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,24,1,0,0
+Dusky Shark,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,22,3,0,0
+Dusky Shark,Elasmobranch,Spawning Cycle,Sensitivity Attribute,9,7,3,6
+Dusky Shark,Elasmobranch,Stock Size/Status,Sensitivity Attribute,0,0,2,23
+Dusky Shark,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Dusky Shark,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Dusky Shark,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Dusky Shark,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Dusky Shark,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Eastern Oyster,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,0,0,25
+Eastern Oyster,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,1,19
+Eastern Oyster,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,6,6,13,0
+Eastern Oyster,Benthic Invertebrate,Currents,Exposure Factor,7,8,3,2
+Eastern Oyster,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,3,12,10,0
+Eastern Oyster,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,2,9,12,2
+Eastern Oyster,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,8,14,3,0
+Eastern Oyster,Benthic Invertebrate,Mean Precipitation,Exposure Factor,14,6,0,0
+Eastern Oyster,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,8,5,5,2
+Eastern Oyster,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Eastern Oyster,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Eastern Oyster,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,0,4,6,15
+Eastern Oyster,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,5,9,4,7
+Eastern Oyster,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,6,10,9,0
+Eastern Oyster,Benthic Invertebrate,Sea Level Rise,Exposure Factor,7,3,1,9
+Eastern Oyster,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,0,0,3,22
+Eastern Oyster,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,17,6,2,0
+Eastern Oyster,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,9,11,5,0
+Eastern Oyster,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,3,8,11,3
+Eastern Oyster,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Eastern Oyster,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Eastern Oyster,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,13,7,0,0
+Eastern Oyster,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Eastern Oyster,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Green Sea Urchin,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,1,19,5
+Green Sea Urchin,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,5,0,4,11
+Green Sea Urchin,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,15,9,1,0
+Green Sea Urchin,Benthic Invertebrate,Currents,Exposure Factor,4,9,5,2
+Green Sea Urchin,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,5,17,3,0
+Green Sea Urchin,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,6,11,5
+Green Sea Urchin,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,2,12,11,0
+Green Sea Urchin,Benthic Invertebrate,Mean Precipitation,Exposure Factor,16,4,0,0
+Green Sea Urchin,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,17,3,0,0
+Green Sea Urchin,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Green Sea Urchin,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Green Sea Urchin,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,9,13,3,0
+Green Sea Urchin,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,3,10,9,3
+Green Sea Urchin,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,10,8,6,1
+Green Sea Urchin,Benthic Invertebrate,Sea Level Rise,Exposure Factor,18,2,0,0
+Green Sea Urchin,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,0,7,4,14
+Green Sea Urchin,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,9,14,2,0
+Green Sea Urchin,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,0,1,12,12
+Green Sea Urchin,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,4,9,8,4
+Green Sea Urchin,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Green Sea Urchin,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Green Sea Urchin,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,15,5,0,0
+Green Sea Urchin,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Green Sea Urchin,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Haddock,Groundfish,Adult Mobility,Sensitivity Attribute,3,16,6,0
+Haddock,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Haddock,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,6,15,4,0
+Haddock,Groundfish,Currents,Exposure Factor,3,11,6,0
+Haddock,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,10,14,1,0
+Haddock,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,2,9,13,1
+Haddock,Groundfish,Habitat Specificity,Sensitivity Attribute,7,12,6,0
+Haddock,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Haddock,Groundfish,Mean Sea Surface Salinity,Exposure Factor,15,3,2,0
+Haddock,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Haddock,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Haddock,Groundfish,Other Stressors,Sensitivity Attribute,18,6,1,0
+Haddock,Groundfish,Population Growth Rate,Sensitivity Attribute,8,15,2,0
+Haddock,Groundfish,Prey Specificity,Sensitivity Attribute,17,7,1,0
+Haddock,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Haddock,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,22,3,0,0
+Haddock,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,2,12,11,0
+Haddock,Groundfish,Spawning Cycle,Sensitivity Attribute,2,13,7,3
+Haddock,Groundfish,Stock Size/Status,Sensitivity Attribute,1,16,8,0
+Haddock,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Haddock,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Haddock,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Haddock,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Haddock,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Hickory Shad,Diadromous Fish,Adult Mobility,Sensitivity Attribute,17,8,0,0
+Hickory Shad,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Hickory Shad,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,0,2,12,11
+Hickory Shad,Diadromous Fish,Currents,Exposure Factor,7,8,3,2
+Hickory Shad,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,0,7,12,6
+Hickory Shad,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,1,2,8,14
+Hickory Shad,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,1,8,10,6
+Hickory Shad,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+Hickory Shad,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,7,9,3,1
+Hickory Shad,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Hickory Shad,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Hickory Shad,Diadromous Fish,Other Stressors,Sensitivity Attribute,0,1,8,16
+Hickory Shad,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,4,11,8,2
+Hickory Shad,Diadromous Fish,Prey Specificity,Sensitivity Attribute,11,10,4,0
+Hickory Shad,Diadromous Fish,Sea Level Rise,Exposure Factor,6,6,3,5
+Hickory Shad,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,19,5,1,0
+Hickory Shad,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,1,11,12,1
+Hickory Shad,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,0,0,7,18
+Hickory Shad,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,2,6,9,8
+Hickory Shad,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Hickory Shad,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Hickory Shad,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+Hickory Shad,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Hickory Shad,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Horseshoe Crab,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,11,13,1
+Horseshoe Crab,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,5,0,3,12
+Horseshoe Crab,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,0,2,18,5
+Horseshoe Crab,Benthic Invertebrate,Currents,Exposure Factor,7,8,3,2
+Horseshoe Crab,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,0,7,14,4
+Horseshoe Crab,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,5,14,6,0
+Horseshoe Crab,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,5,10,8,2
+Horseshoe Crab,Benthic Invertebrate,Mean Precipitation,Exposure Factor,14,6,0,0
+Horseshoe Crab,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,2,8,9,1
+Horseshoe Crab,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Horseshoe Crab,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Horseshoe Crab,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,1,12,12,0
+Horseshoe Crab,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,0,2,11,12
+Horseshoe Crab,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,3,15,7,0
+Horseshoe Crab,Benthic Invertebrate,Sea Level Rise,Exposure Factor,0,0,8,12
+Horseshoe Crab,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,12,2,7,4
+Horseshoe Crab,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,5,14,5,1
+Horseshoe Crab,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,0,6,17,2
+Horseshoe Crab,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,3,19,3,0
+Horseshoe Crab,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Horseshoe Crab,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Horseshoe Crab,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,13,7,0,0
+Horseshoe Crab,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Horseshoe Crab,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Knobbed Whelk,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,4,16,5
+Knobbed Whelk,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,1,8,11
+Knobbed Whelk,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,8,12,5,0
+Knobbed Whelk,Benthic Invertebrate,Currents,Exposure Factor,7,8,3,2
+Knobbed Whelk,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,1,2,2,20
+Knobbed Whelk,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,15,8,2,0
+Knobbed Whelk,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,9,11,4,1
+Knobbed Whelk,Benthic Invertebrate,Mean Precipitation,Exposure Factor,14,6,0,0
+Knobbed Whelk,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,11,7,2,0
+Knobbed Whelk,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Knobbed Whelk,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Knobbed Whelk,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,2,15,7,1
+Knobbed Whelk,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,7,10,5,3
+Knobbed Whelk,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,3,12,6,4
+Knobbed Whelk,Benthic Invertebrate,Sea Level Rise,Exposure Factor,11,6,2,1
+Knobbed Whelk,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,0,0,3,22
+Knobbed Whelk,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,10,13,2,0
+Knobbed Whelk,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,0,20,5,0
+Knobbed Whelk,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,5,10,6,4
+Knobbed Whelk,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Knobbed Whelk,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Knobbed Whelk,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,14,6,0,0
+Knobbed Whelk,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Knobbed Whelk,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Little Skate,Elasmobranch,Adult Mobility,Sensitivity Attribute,3,11,11,0
+Little Skate,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Little Skate,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,18,6,1,0
+Little Skate,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Little Skate,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,8,11,6,0
+Little Skate,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,22,3,0,0
+Little Skate,Elasmobranch,Habitat Specificity,Sensitivity Attribute,20,5,0,0
+Little Skate,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Little Skate,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,6,8,6,0
+Little Skate,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Little Skate,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Little Skate,Elasmobranch,Other Stressors,Sensitivity Attribute,16,7,1,1
+Little Skate,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,8,12,5
+Little Skate,Elasmobranch,Prey Specificity,Sensitivity Attribute,20,5,0,0
+Little Skate,Elasmobranch,Sea Level Rise,Exposure Factor,18,2,0,0
+Little Skate,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,13,11,1,0
+Little Skate,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,9,9,3,4
+Little Skate,Elasmobranch,Spawning Cycle,Sensitivity Attribute,21,3,1,0
+Little Skate,Elasmobranch,Stock Size/Status,Sensitivity Attribute,1,22,2,0
+Little Skate,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Little Skate,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Little Skate,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Little Skate,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Little Skate,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Adult Mobility,Sensitivity Attribute,21,4,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,10,6,4,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Complexity in Reproductive Strategy,Sensitivity Attribute,13,11,1,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Currents,Exposure Factor,3,11,6,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Dispersal of Early Life Stages,Sensitivity Attribute,7,15,3,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,1,10,12,2
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Habitat Specificity,Sensitivity Attribute,22,3,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Mean Precipitation,Exposure Factor,19,1,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Mean Sea Surface Salinity,Exposure Factor,4,7,7,2
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Ocean Acidification,Exposure Factor,0,0,0,20
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Other Stressors,Sensitivity Attribute,16,8,1,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Population Growth Rate,Sensitivity Attribute,21,4,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Prey Specificity,Sensitivity Attribute,16,9,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Sea Level Rise,Exposure Factor,14,6,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Sensitivity to Ocean Acidification,Sensitivity Attribute,16,9,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Sensitivity to Temperature,Sensitivity Attribute,14,10,1,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Spawning Cycle,Sensitivity Attribute,16,8,1,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Stock Size/Status,Sensitivity Attribute,4,21,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Variability in Precipitation,Exposure Factor,18,2,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Longfin Inshore Squid,Pelagic Fish and Cephalapods,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Monkfish,Groundfish,Adult Mobility,Sensitivity Attribute,0,18,7,0
+Monkfish,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Monkfish,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,10,12,3,0
+Monkfish,Groundfish,Currents,Exposure Factor,3,11,6,0
+Monkfish,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,4,18,3,0
+Monkfish,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,10,9,4,2
+Monkfish,Groundfish,Habitat Specificity,Sensitivity Attribute,16,6,3,0
+Monkfish,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Monkfish,Groundfish,Mean Sea Surface Salinity,Exposure Factor,12,6,2,0
+Monkfish,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Monkfish,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Monkfish,Groundfish,Other Stressors,Sensitivity Attribute,13,11,1,0
+Monkfish,Groundfish,Population Growth Rate,Sensitivity Attribute,0,4,16,5
+Monkfish,Groundfish,Prey Specificity,Sensitivity Attribute,18,6,1,0
+Monkfish,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Monkfish,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,23,2,0,0
+Monkfish,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,3,18,4,0
+Monkfish,Groundfish,Spawning Cycle,Sensitivity Attribute,2,12,10,1
+Monkfish,Groundfish,Stock Size/Status,Sensitivity Attribute,4,18,3,0
+Monkfish,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Monkfish,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Monkfish,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Monkfish,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Monkfish,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Northern Kingfish,Coastal Fish,Adult Mobility,Sensitivity Attribute,14,11,0,0
+Northern Kingfish,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Northern Kingfish,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,7,10,6,2
+Northern Kingfish,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Northern Kingfish,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,3,13,5,4
+Northern Kingfish,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,10,9,3
+Northern Kingfish,Coastal Fish,Habitat Specificity,Sensitivity Attribute,15,10,0,0
+Northern Kingfish,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Northern Kingfish,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,2,4,6,8
+Northern Kingfish,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Northern Kingfish,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Northern Kingfish,Coastal Fish,Other Stressors,Sensitivity Attribute,4,14,7,0
+Northern Kingfish,Coastal Fish,Population Growth Rate,Sensitivity Attribute,19,6,0,0
+Northern Kingfish,Coastal Fish,Prey Specificity,Sensitivity Attribute,12,12,1,0
+Northern Kingfish,Coastal Fish,Sea Level Rise,Exposure Factor,14,6,0,0
+Northern Kingfish,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,11,13,1,0
+Northern Kingfish,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,19,6,0,0
+Northern Kingfish,Coastal Fish,Spawning Cycle,Sensitivity Attribute,3,17,5,0
+Northern Kingfish,Coastal Fish,Stock Size/Status,Sensitivity Attribute,7,9,6,3
+Northern Kingfish,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Northern Kingfish,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Northern Kingfish,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Northern Kingfish,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Northern Kingfish,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Northern Quahog,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,0,3,22
+Northern Quahog,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,5,0,2,13
+Northern Quahog,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,6,8,10,1
+Northern Quahog,Benthic Invertebrate,Currents,Exposure Factor,6,8,4,2
+Northern Quahog,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,4,13,8,0
+Northern Quahog,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,2,14,9,0
+Northern Quahog,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,3,10,9,3
+Northern Quahog,Benthic Invertebrate,Mean Precipitation,Exposure Factor,15,5,0,0
+Northern Quahog,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,8,7,5,0
+Northern Quahog,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Northern Quahog,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Northern Quahog,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,0,1,9,15
+Northern Quahog,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,3,12,7,3
+Northern Quahog,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,18,6,1,0
+Northern Quahog,Benthic Invertebrate,Sea Level Rise,Exposure Factor,5,6,4,5
+Northern Quahog,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,0,0,5,20
+Northern Quahog,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,11,11,3,0
+Northern Quahog,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,4,12,9,0
+Northern Quahog,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,5,10,8,2
+Northern Quahog,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Northern Quahog,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Northern Quahog,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,15,5,0,0
+Northern Quahog,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Northern Quahog,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Adult Mobility,Sensitivity Attribute,24,1,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,10,6,4,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Complexity in Reproductive Strategy,Sensitivity Attribute,15,8,2,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Currents,Exposure Factor,3,10,7,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Dispersal of Early Life Stages,Sensitivity Attribute,19,6,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,4,8,11,2
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Habitat Specificity,Sensitivity Attribute,21,4,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Mean Precipitation,Exposure Factor,19,1,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Mean Sea Surface Salinity,Exposure Factor,10,7,2,1
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Ocean Acidification,Exposure Factor,0,0,0,20
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Other Stressors,Sensitivity Attribute,21,4,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Population Growth Rate,Sensitivity Attribute,23,2,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Prey Specificity,Sensitivity Attribute,18,7,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Sea Level Rise,Exposure Factor,17,3,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Sensitivity to Ocean Acidification,Sensitivity Attribute,14,6,0,5
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Sensitivity to Temperature,Sensitivity Attribute,17,8,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Spawning Cycle,Sensitivity Attribute,19,5,1,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Stock Size/Status,Sensitivity Attribute,7,10,7,1
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Variability in Precipitation,Exposure Factor,18,2,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Northern Shortfin Squid,Pelagic Fish and Cephalapods,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Northern Shrimp,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,10,12,3,0
+Northern Shrimp,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,13,5,2,0
+Northern Shrimp,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,0,8,14,3
+Northern Shrimp,Benthic Invertebrate,Currents,Exposure Factor,3,11,6,0
+Northern Shrimp,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,3,16,6,0
+Northern Shrimp,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,5,18,2
+Northern Shrimp,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,2,8,13,2
+Northern Shrimp,Benthic Invertebrate,Mean Precipitation,Exposure Factor,18,2,0,0
+Northern Shrimp,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,19,1,0,0
+Northern Shrimp,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Northern Shrimp,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Northern Shrimp,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,5,9,9,2
+Northern Shrimp,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,21,3,1,0
+Northern Shrimp,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,8,17,0,0
+Northern Shrimp,Benthic Invertebrate,Sea Level Rise,Exposure Factor,11,7,1,1
+Northern Shrimp,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,12,3,4,6
+Northern Shrimp,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,0,4,11,10
+Northern Shrimp,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,0,6,10,9
+Northern Shrimp,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,0,0,10,15
+Northern Shrimp,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Northern Shrimp,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Northern Shrimp,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,18,2,0,0
+Northern Shrimp,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Northern Shrimp,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Ocean Pout,Groundfish,Adult Mobility,Sensitivity Attribute,0,4,19,2
+Ocean Pout,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Ocean Pout,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,12,13,0,0
+Ocean Pout,Groundfish,Currents,Exposure Factor,3,11,6,0
+Ocean Pout,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,0,0,8,17
+Ocean Pout,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,11,9,2
+Ocean Pout,Groundfish,Habitat Specificity,Sensitivity Attribute,14,5,5,1
+Ocean Pout,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Ocean Pout,Groundfish,Mean Sea Surface Salinity,Exposure Factor,13,5,2,0
+Ocean Pout,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Ocean Pout,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Ocean Pout,Groundfish,Other Stressors,Sensitivity Attribute,10,13,2,0
+Ocean Pout,Groundfish,Population Growth Rate,Sensitivity Attribute,0,4,16,5
+Ocean Pout,Groundfish,Prey Specificity,Sensitivity Attribute,11,11,3,0
+Ocean Pout,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Ocean Pout,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,13,10,2,0
+Ocean Pout,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,1,6,16,2
+Ocean Pout,Groundfish,Spawning Cycle,Sensitivity Attribute,1,21,3,0
+Ocean Pout,Groundfish,Stock Size/Status,Sensitivity Attribute,0,2,5,18
+Ocean Pout,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Ocean Pout,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Ocean Pout,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Ocean Pout,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Ocean Pout,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Ocean Quahog,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,0,3,22
+Ocean Quahog,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,10,1,8,1
+Ocean Quahog,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,15,7,3,0
+Ocean Quahog,Benthic Invertebrate,Currents,Exposure Factor,3,11,6,0
+Ocean Quahog,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,7,14,3,1
+Ocean Quahog,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,7,10,8,0
+Ocean Quahog,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,9,12,4,0
+Ocean Quahog,Benthic Invertebrate,Mean Precipitation,Exposure Factor,18,2,0,0
+Ocean Quahog,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,6,9,5,0
+Ocean Quahog,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Ocean Quahog,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Ocean Quahog,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,13,10,2,0
+Ocean Quahog,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,0,0,2,23
+Ocean Quahog,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,15,9,1,0
+Ocean Quahog,Benthic Invertebrate,Sea Level Rise,Exposure Factor,14,1,1,4
+Ocean Quahog,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,0,0,3,22
+Ocean Quahog,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,3,10,10,2
+Ocean Quahog,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,7,16,2,0
+Ocean Quahog,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,20,5,0,0
+Ocean Quahog,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Ocean Quahog,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Ocean Quahog,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,18,2,0,0
+Ocean Quahog,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Ocean Quahog,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Offshore Hake,Groundfish,Adult Mobility,Sensitivity Attribute,12,10,3,0
+Offshore Hake,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Offshore Hake,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,10,8,5,2
+Offshore Hake,Groundfish,Currents,Exposure Factor,3,11,6,0
+Offshore Hake,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,6,15,4,0
+Offshore Hake,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,4,10,9,2
+Offshore Hake,Groundfish,Habitat Specificity,Sensitivity Attribute,13,12,0,0
+Offshore Hake,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Offshore Hake,Groundfish,Mean Sea Surface Salinity,Exposure Factor,10,7,3,0
+Offshore Hake,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Offshore Hake,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Offshore Hake,Groundfish,Other Stressors,Sensitivity Attribute,13,8,3,1
+Offshore Hake,Groundfish,Population Growth Rate,Sensitivity Attribute,3,13,8,1
+Offshore Hake,Groundfish,Prey Specificity,Sensitivity Attribute,16,9,0,0
+Offshore Hake,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Offshore Hake,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,15,10,0,0
+Offshore Hake,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,11,10,4,0
+Offshore Hake,Groundfish,Spawning Cycle,Sensitivity Attribute,15,9,1,0
+Offshore Hake,Groundfish,Stock Size/Status,Sensitivity Attribute,4,11,6,4
+Offshore Hake,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Offshore Hake,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Offshore Hake,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Offshore Hake,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Offshore Hake,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Pollock,Groundfish,Adult Mobility,Sensitivity Attribute,8,16,1,0
+Pollock,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Pollock,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,11,13,1,0
+Pollock,Groundfish,Currents,Exposure Factor,3,11,6,0
+Pollock,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,22,3,0,0
+Pollock,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,11,14,0
+Pollock,Groundfish,Habitat Specificity,Sensitivity Attribute,17,8,0,0
+Pollock,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Pollock,Groundfish,Mean Sea Surface Salinity,Exposure Factor,16,3,1,0
+Pollock,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Pollock,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Pollock,Groundfish,Other Stressors,Sensitivity Attribute,15,10,0,0
+Pollock,Groundfish,Population Growth Rate,Sensitivity Attribute,0,6,14,5
+Pollock,Groundfish,Prey Specificity,Sensitivity Attribute,12,13,0,0
+Pollock,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Pollock,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,13,10,2,0
+Pollock,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,6,15,4,0
+Pollock,Groundfish,Spawning Cycle,Sensitivity Attribute,1,19,5,0
+Pollock,Groundfish,Stock Size/Status,Sensitivity Attribute,23,2,0,0
+Pollock,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Pollock,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Pollock,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Pollock,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Pollock,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Porbeagle,Elasmobranch,Adult Mobility,Sensitivity Attribute,25,0,0,0
+Porbeagle,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Porbeagle,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,17,7,1,0
+Porbeagle,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Porbeagle,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,25,0,0,0
+Porbeagle,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,25,0,0,0
+Porbeagle,Elasmobranch,Habitat Specificity,Sensitivity Attribute,19,5,1,0
+Porbeagle,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Porbeagle,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,8,6,4,2
+Porbeagle,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Porbeagle,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Porbeagle,Elasmobranch,Other Stressors,Sensitivity Attribute,16,8,1,0
+Porbeagle,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,0,1,24
+Porbeagle,Elasmobranch,Prey Specificity,Sensitivity Attribute,19,6,0,0
+Porbeagle,Elasmobranch,Sea Level Rise,Exposure Factor,18,2,0,0
+Porbeagle,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,23,2,0,0
+Porbeagle,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,6,14,5,0
+Porbeagle,Elasmobranch,Spawning Cycle,Sensitivity Attribute,8,5,12,0
+Porbeagle,Elasmobranch,Stock Size/Status,Sensitivity Attribute,0,0,4,21
+Porbeagle,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Porbeagle,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Porbeagle,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Porbeagle,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Porbeagle,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Rainbow Smelt,Diadromous Fish,Adult Mobility,Sensitivity Attribute,7,13,5,0
+Rainbow Smelt,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Rainbow Smelt,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,1,7,13,4
+Rainbow Smelt,Diadromous Fish,Currents,Exposure Factor,7,8,3,2
+Rainbow Smelt,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,0,7,14,4
+Rainbow Smelt,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,3,13,9
+Rainbow Smelt,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,4,4,9,8
+Rainbow Smelt,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+Rainbow Smelt,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,18,2,0,0
+Rainbow Smelt,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Rainbow Smelt,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Rainbow Smelt,Diadromous Fish,Other Stressors,Sensitivity Attribute,0,2,13,10
+Rainbow Smelt,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,16,8,1,0
+Rainbow Smelt,Diadromous Fish,Prey Specificity,Sensitivity Attribute,14,10,1,0
+Rainbow Smelt,Diadromous Fish,Sea Level Rise,Exposure Factor,0,4,9,7
+Rainbow Smelt,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,10,14,1,0
+Rainbow Smelt,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,1,9,11,4
+Rainbow Smelt,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,0,3,11,11
+Rainbow Smelt,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,2,6,10,7
+Rainbow Smelt,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Rainbow Smelt,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Rainbow Smelt,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+Rainbow Smelt,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Rainbow Smelt,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Red Drum,Coastal Fish,Adult Mobility,Sensitivity Attribute,13,10,2,0
+Red Drum,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Red Drum,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,13,12,0,0
+Red Drum,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Red Drum,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,1,18,6,0
+Red Drum,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,9,13,3
+Red Drum,Coastal Fish,Habitat Specificity,Sensitivity Attribute,5,15,5,0
+Red Drum,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Red Drum,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,3,5,5,7
+Red Drum,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Red Drum,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Red Drum,Coastal Fish,Other Stressors,Sensitivity Attribute,2,11,11,1
+Red Drum,Coastal Fish,Population Growth Rate,Sensitivity Attribute,0,6,15,4
+Red Drum,Coastal Fish,Prey Specificity,Sensitivity Attribute,14,11,0,0
+Red Drum,Coastal Fish,Sea Level Rise,Exposure Factor,0,3,8,9
+Red Drum,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,11,10,3,1
+Red Drum,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,13,11,1,0
+Red Drum,Coastal Fish,Spawning Cycle,Sensitivity Attribute,0,12,12,1
+Red Drum,Coastal Fish,Stock Size/Status,Sensitivity Attribute,5,14,5,1
+Red Drum,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Red Drum,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Red Drum,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Red Drum,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Red Drum,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Red Hake,Groundfish,Adult Mobility,Sensitivity Attribute,16,8,1,0
+Red Hake,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Red Hake,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,10,13,2,0
+Red Hake,Groundfish,Currents,Exposure Factor,3,11,6,0
+Red Hake,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,3,12,5,5
+Red Hake,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,5,9,9,2
+Red Hake,Groundfish,Habitat Specificity,Sensitivity Attribute,12,7,6,0
+Red Hake,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Red Hake,Groundfish,Mean Sea Surface Salinity,Exposure Factor,9,8,3,0
+Red Hake,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Red Hake,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Red Hake,Groundfish,Other Stressors,Sensitivity Attribute,6,15,4,0
+Red Hake,Groundfish,Population Growth Rate,Sensitivity Attribute,9,14,2,0
+Red Hake,Groundfish,Prey Specificity,Sensitivity Attribute,19,6,0,0
+Red Hake,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Red Hake,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,10,11,4,0
+Red Hake,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,8,15,2,0
+Red Hake,Groundfish,Spawning Cycle,Sensitivity Attribute,3,18,4,0
+Red Hake,Groundfish,Stock Size/Status,Sensitivity Attribute,22,3,0,0
+Red Hake,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Red Hake,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Red Hake,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Red Hake,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Red Hake,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Rosette Skate,Elasmobranch,Adult Mobility,Sensitivity Attribute,3,11,10,1
+Rosette Skate,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Rosette Skate,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,16,7,1,1
+Rosette Skate,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Rosette Skate,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,9,10,6,0
+Rosette Skate,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,24,1,0,0
+Rosette Skate,Elasmobranch,Habitat Specificity,Sensitivity Attribute,21,4,0,0
+Rosette Skate,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Rosette Skate,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,3,5,7,5
+Rosette Skate,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Rosette Skate,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Rosette Skate,Elasmobranch,Other Stressors,Sensitivity Attribute,18,5,1,1
+Rosette Skate,Elasmobranch,Population Growth Rate,Sensitivity Attribute,1,6,13,5
+Rosette Skate,Elasmobranch,Prey Specificity,Sensitivity Attribute,23,2,0,0
+Rosette Skate,Elasmobranch,Sea Level Rise,Exposure Factor,18,2,0,0
+Rosette Skate,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,15,10,0,0
+Rosette Skate,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,20,5,0,0
+Rosette Skate,Elasmobranch,Spawning Cycle,Sensitivity Attribute,18,6,1,0
+Rosette Skate,Elasmobranch,Stock Size/Status,Sensitivity Attribute,0,1,22,2
+Rosette Skate,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Rosette Skate,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Rosette Skate,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Rosette Skate,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Rosette Skate,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Sand Lances,Pelagic Fish and Cephalapods,Adult Mobility,Sensitivity Attribute,0,9,13,3
+Sand Lances,Pelagic Fish and Cephalapods,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,1,6,11,2
+Sand Lances,Pelagic Fish and Cephalapods,Complexity in Reproductive Strategy,Sensitivity Attribute,10,13,2,0
+Sand Lances,Pelagic Fish and Cephalapods,Currents,Exposure Factor,3,10,6,1
+Sand Lances,Pelagic Fish and Cephalapods,Dispersal of Early Life Stages,Sensitivity Attribute,12,12,1,0
+Sand Lances,Pelagic Fish and Cephalapods,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,11,11,0
+Sand Lances,Pelagic Fish and Cephalapods,Habitat Specificity,Sensitivity Attribute,7,11,7,0
+Sand Lances,Pelagic Fish and Cephalapods,Mean Precipitation,Exposure Factor,18,2,0,0
+Sand Lances,Pelagic Fish and Cephalapods,Mean Sea Surface Salinity,Exposure Factor,9,6,5,0
+Sand Lances,Pelagic Fish and Cephalapods,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Sand Lances,Pelagic Fish and Cephalapods,Ocean Acidification,Exposure Factor,0,0,0,20
+Sand Lances,Pelagic Fish and Cephalapods,Other Stressors,Sensitivity Attribute,7,12,5,1
+Sand Lances,Pelagic Fish and Cephalapods,Population Growth Rate,Sensitivity Attribute,15,10,0,0
+Sand Lances,Pelagic Fish and Cephalapods,Prey Specificity,Sensitivity Attribute,17,8,0,0
+Sand Lances,Pelagic Fish and Cephalapods,Sea Level Rise,Exposure Factor,2,5,10,3
+Sand Lances,Pelagic Fish and Cephalapods,Sensitivity to Ocean Acidification,Sensitivity Attribute,15,10,0,0
+Sand Lances,Pelagic Fish and Cephalapods,Sensitivity to Temperature,Sensitivity Attribute,2,10,12,1
+Sand Lances,Pelagic Fish and Cephalapods,Spawning Cycle,Sensitivity Attribute,0,8,17,0
+Sand Lances,Pelagic Fish and Cephalapods,Stock Size/Status,Sensitivity Attribute,11,11,3,0
+Sand Lances,Pelagic Fish and Cephalapods,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Sand Lances,Pelagic Fish and Cephalapods,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Sand Lances,Pelagic Fish and Cephalapods,Variability in Precipitation,Exposure Factor,17,3,0,0
+Sand Lances,Pelagic Fish and Cephalapods,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Sand Lances,Pelagic Fish and Cephalapods,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Sand Tiger,Elasmobranch,Adult Mobility,Sensitivity Attribute,24,1,0,0
+Sand Tiger,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Sand Tiger,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,8,15,2,0
+Sand Tiger,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Sand Tiger,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,24,1,0,0
+Sand Tiger,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,24,1,0,0
+Sand Tiger,Elasmobranch,Habitat Specificity,Sensitivity Attribute,18,6,1,0
+Sand Tiger,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Sand Tiger,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,2,5,7,6
+Sand Tiger,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Sand Tiger,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Sand Tiger,Elasmobranch,Other Stressors,Sensitivity Attribute,9,12,4,0
+Sand Tiger,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,0,6,19
+Sand Tiger,Elasmobranch,Prey Specificity,Sensitivity Attribute,17,8,0,0
+Sand Tiger,Elasmobranch,Sea Level Rise,Exposure Factor,16,4,0,0
+Sand Tiger,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,24,1,0,0
+Sand Tiger,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,18,7,0,0
+Sand Tiger,Elasmobranch,Spawning Cycle,Sensitivity Attribute,9,11,5,0
+Sand Tiger,Elasmobranch,Stock Size/Status,Sensitivity Attribute,0,5,13,7
+Sand Tiger,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Sand Tiger,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Sand Tiger,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Sand Tiger,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Sand Tiger,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Scup,Coastal Fish,Adult Mobility,Sensitivity Attribute,12,13,0,0
+Scup,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Scup,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,18,7,0,0
+Scup,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Scup,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,2,15,7,1
+Scup,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,13,12,0
+Scup,Coastal Fish,Habitat Specificity,Sensitivity Attribute,15,10,0,0
+Scup,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Scup,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,3,7,6,4
+Scup,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Scup,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Scup,Coastal Fish,Other Stressors,Sensitivity Attribute,10,11,4,0
+Scup,Coastal Fish,Population Growth Rate,Sensitivity Attribute,4,8,10,3
+Scup,Coastal Fish,Prey Specificity,Sensitivity Attribute,17,8,0,0
+Scup,Coastal Fish,Sea Level Rise,Exposure Factor,11,8,1,0
+Scup,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,17,8,0,0
+Scup,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,12,12,1,0
+Scup,Coastal Fish,Spawning Cycle,Sensitivity Attribute,0,4,13,8
+Scup,Coastal Fish,Stock Size/Status,Sensitivity Attribute,24,1,0,0
+Scup,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Scup,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Scup,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Scup,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Scup,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Shortnose Sturgeon,Diadromous Fish,Adult Mobility,Sensitivity Attribute,0,9,15,1
+Shortnose Sturgeon,Diadromous Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Shortnose Sturgeon,Diadromous Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,2,10,11,2
+Shortnose Sturgeon,Diadromous Fish,Currents,Exposure Factor,7,8,3,2
+Shortnose Sturgeon,Diadromous Fish,Dispersal of Early Life Stages,Sensitivity Attribute,0,7,12,6
+Shortnose Sturgeon,Diadromous Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,7,11,7
+Shortnose Sturgeon,Diadromous Fish,Habitat Specificity,Sensitivity Attribute,2,11,9,3
+Shortnose Sturgeon,Diadromous Fish,Mean Precipitation,Exposure Factor,14,6,0,0
+Shortnose Sturgeon,Diadromous Fish,Mean Sea Surface Salinity,Exposure Factor,15,4,1,0
+Shortnose Sturgeon,Diadromous Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Shortnose Sturgeon,Diadromous Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Shortnose Sturgeon,Diadromous Fish,Other Stressors,Sensitivity Attribute,0,13,11,1
+Shortnose Sturgeon,Diadromous Fish,Population Growth Rate,Sensitivity Attribute,0,1,4,20
+Shortnose Sturgeon,Diadromous Fish,Prey Specificity,Sensitivity Attribute,18,6,1,0
+Shortnose Sturgeon,Diadromous Fish,Sea Level Rise,Exposure Factor,2,8,5,5
+Shortnose Sturgeon,Diadromous Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,12,11,2,0
+Shortnose Sturgeon,Diadromous Fish,Sensitivity to Temperature,Sensitivity Attribute,5,16,3,1
+Shortnose Sturgeon,Diadromous Fish,Spawning Cycle,Sensitivity Attribute,0,2,11,12
+Shortnose Sturgeon,Diadromous Fish,Stock Size/Status,Sensitivity Attribute,0,2,6,17
+Shortnose Sturgeon,Diadromous Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Shortnose Sturgeon,Diadromous Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Shortnose Sturgeon,Diadromous Fish,Variability in Precipitation,Exposure Factor,13,7,0,0
+Shortnose Sturgeon,Diadromous Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Shortnose Sturgeon,Diadromous Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Silver Hake,Groundfish,Adult Mobility,Sensitivity Attribute,18,7,0,0
+Silver Hake,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Silver Hake,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,8,13,4,0
+Silver Hake,Groundfish,Currents,Exposure Factor,3,11,6,0
+Silver Hake,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,7,15,3,0
+Silver Hake,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,6,12,6,1
+Silver Hake,Groundfish,Habitat Specificity,Sensitivity Attribute,19,6,0,0
+Silver Hake,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Silver Hake,Groundfish,Mean Sea Surface Salinity,Exposure Factor,8,7,4,1
+Silver Hake,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Silver Hake,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Silver Hake,Groundfish,Other Stressors,Sensitivity Attribute,17,7,1,0
+Silver Hake,Groundfish,Population Growth Rate,Sensitivity Attribute,9,15,1,0
+Silver Hake,Groundfish,Prey Specificity,Sensitivity Attribute,12,13,0,0
+Silver Hake,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Silver Hake,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,20,5,0,0
+Silver Hake,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,12,12,1,0
+Silver Hake,Groundfish,Spawning Cycle,Sensitivity Attribute,14,11,0,0
+Silver Hake,Groundfish,Stock Size/Status,Sensitivity Attribute,3,15,7,0
+Silver Hake,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Silver Hake,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Silver Hake,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Silver Hake,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Silver Hake,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Smooth Dogfish,Elasmobranch,Adult Mobility,Sensitivity Attribute,22,3,0,0
+Smooth Dogfish,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Smooth Dogfish,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,15,8,2,0
+Smooth Dogfish,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Smooth Dogfish,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,25,0,0,0
+Smooth Dogfish,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,25,0,0,0
+Smooth Dogfish,Elasmobranch,Habitat Specificity,Sensitivity Attribute,16,8,1,0
+Smooth Dogfish,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Smooth Dogfish,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,4,7,6,3
+Smooth Dogfish,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Smooth Dogfish,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Smooth Dogfish,Elasmobranch,Other Stressors,Sensitivity Attribute,10,10,5,0
+Smooth Dogfish,Elasmobranch,Population Growth Rate,Sensitivity Attribute,1,6,18,0
+Smooth Dogfish,Elasmobranch,Prey Specificity,Sensitivity Attribute,19,6,0,0
+Smooth Dogfish,Elasmobranch,Sea Level Rise,Exposure Factor,17,3,0,0
+Smooth Dogfish,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,17,8,0,0
+Smooth Dogfish,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,5,18,2,0
+Smooth Dogfish,Elasmobranch,Spawning Cycle,Sensitivity Attribute,9,7,6,3
+Smooth Dogfish,Elasmobranch,Stock Size/Status,Sensitivity Attribute,4,11,8,2
+Smooth Dogfish,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Smooth Dogfish,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Smooth Dogfish,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Smooth Dogfish,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Smooth Dogfish,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Smooth Skate,Elasmobranch,Adult Mobility,Sensitivity Attribute,6,13,6,0
+Smooth Skate,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Smooth Skate,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,18,7,0,0
+Smooth Skate,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Smooth Skate,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,5,7,8,5
+Smooth Skate,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,23,2,0,0
+Smooth Skate,Elasmobranch,Habitat Specificity,Sensitivity Attribute,19,6,0,0
+Smooth Skate,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Smooth Skate,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,15,3,2,0
+Smooth Skate,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Smooth Skate,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Smooth Skate,Elasmobranch,Other Stressors,Sensitivity Attribute,21,4,0,0
+Smooth Skate,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,4,17,4
+Smooth Skate,Elasmobranch,Prey Specificity,Sensitivity Attribute,19,6,0,0
+Smooth Skate,Elasmobranch,Sea Level Rise,Exposure Factor,18,2,0,0
+Smooth Skate,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,13,10,1,1
+Smooth Skate,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,8,11,2,4
+Smooth Skate,Elasmobranch,Spawning Cycle,Sensitivity Attribute,22,2,1,0
+Smooth Skate,Elasmobranch,Stock Size/Status,Sensitivity Attribute,0,11,12,2
+Smooth Skate,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Smooth Skate,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Smooth Skate,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Smooth Skate,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Smooth Skate,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Softshell Clam,Benthic Invertebrate,Adult Mobility,Sensitivity Attribute,0,0,0,25
+Softshell Clam,Benthic Invertebrate,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,1,8,11
+Softshell Clam,Benthic Invertebrate,Complexity in Reproductive Strategy,Sensitivity Attribute,3,12,9,1
+Softshell Clam,Benthic Invertebrate,Currents,Exposure Factor,7,8,3,2
+Softshell Clam,Benthic Invertebrate,Dispersal of Early Life Stages,Sensitivity Attribute,6,16,3,0
+Softshell Clam,Benthic Invertebrate,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,11,10,1
+Softshell Clam,Benthic Invertebrate,Habitat Specificity,Sensitivity Attribute,12,8,4,1
+Softshell Clam,Benthic Invertebrate,Mean Precipitation,Exposure Factor,15,5,0,0
+Softshell Clam,Benthic Invertebrate,Mean Sea Surface Salinity,Exposure Factor,14,5,1,0
+Softshell Clam,Benthic Invertebrate,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Softshell Clam,Benthic Invertebrate,Ocean Acidification,Exposure Factor,0,0,0,20
+Softshell Clam,Benthic Invertebrate,Other Stressors,Sensitivity Attribute,1,8,15,1
+Softshell Clam,Benthic Invertebrate,Population Growth Rate,Sensitivity Attribute,8,13,3,1
+Softshell Clam,Benthic Invertebrate,Prey Specificity,Sensitivity Attribute,10,12,3,0
+Softshell Clam,Benthic Invertebrate,Sea Level Rise,Exposure Factor,10,8,1,1
+Softshell Clam,Benthic Invertebrate,Sensitivity to Ocean Acidification,Sensitivity Attribute,1,2,6,16
+Softshell Clam,Benthic Invertebrate,Sensitivity to Temperature,Sensitivity Attribute,12,7,4,2
+Softshell Clam,Benthic Invertebrate,Spawning Cycle,Sensitivity Attribute,2,12,11,0
+Softshell Clam,Benthic Invertebrate,Stock Size/Status,Sensitivity Attribute,6,9,7,3
+Softshell Clam,Benthic Invertebrate,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Softshell Clam,Benthic Invertebrate,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Softshell Clam,Benthic Invertebrate,Variability in Precipitation,Exposure Factor,14,6,0,0
+Softshell Clam,Benthic Invertebrate,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Softshell Clam,Benthic Invertebrate,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Spanish Mackerel,Coastal Fish,Adult Mobility,Sensitivity Attribute,18,7,0,0
+Spanish Mackerel,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Spanish Mackerel,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,7,9,8,1
+Spanish Mackerel,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Spanish Mackerel,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,3,19,3,0
+Spanish Mackerel,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,5,9,9,2
+Spanish Mackerel,Coastal Fish,Habitat Specificity,Sensitivity Attribute,17,3,3,2
+Spanish Mackerel,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Spanish Mackerel,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,2,3,4,11
+Spanish Mackerel,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Spanish Mackerel,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Spanish Mackerel,Coastal Fish,Other Stressors,Sensitivity Attribute,5,13,7,0
+Spanish Mackerel,Coastal Fish,Population Growth Rate,Sensitivity Attribute,8,16,1,0
+Spanish Mackerel,Coastal Fish,Prey Specificity,Sensitivity Attribute,17,8,0,0
+Spanish Mackerel,Coastal Fish,Sea Level Rise,Exposure Factor,16,4,0,0
+Spanish Mackerel,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,22,3,0,0
+Spanish Mackerel,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,18,7,0,0
+Spanish Mackerel,Coastal Fish,Spawning Cycle,Sensitivity Attribute,1,16,6,2
+Spanish Mackerel,Coastal Fish,Stock Size/Status,Sensitivity Attribute,7,14,3,1
+Spanish Mackerel,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Spanish Mackerel,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Spanish Mackerel,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Spanish Mackerel,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Spanish Mackerel,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Spiny Dogfish,Elasmobranch,Adult Mobility,Sensitivity Attribute,25,0,0,0
+Spiny Dogfish,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Spiny Dogfish,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,17,7,1,0
+Spiny Dogfish,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Spiny Dogfish,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,25,0,0,0
+Spiny Dogfish,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,25,0,0,0
+Spiny Dogfish,Elasmobranch,Habitat Specificity,Sensitivity Attribute,22,3,0,0
+Spiny Dogfish,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Spiny Dogfish,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,8,8,3,1
+Spiny Dogfish,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Spiny Dogfish,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Spiny Dogfish,Elasmobranch,Other Stressors,Sensitivity Attribute,19,6,0,0
+Spiny Dogfish,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,0,4,21
+Spiny Dogfish,Elasmobranch,Prey Specificity,Sensitivity Attribute,24,1,0,0
+Spiny Dogfish,Elasmobranch,Sea Level Rise,Exposure Factor,16,4,0,0
+Spiny Dogfish,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,22,3,0,0
+Spiny Dogfish,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,15,9,1,0
+Spiny Dogfish,Elasmobranch,Spawning Cycle,Sensitivity Attribute,9,8,8,0
+Spiny Dogfish,Elasmobranch,Stock Size/Status,Sensitivity Attribute,6,15,4,0
+Spiny Dogfish,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Spiny Dogfish,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Spiny Dogfish,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Spiny Dogfish,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Spiny Dogfish,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Spot,Coastal Fish,Adult Mobility,Sensitivity Attribute,15,10,0,0
+Spot,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Spot,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,7,12,4,2
+Spot,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Spot,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,3,20,2,0
+Spot,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,1,11,13,0
+Spot,Coastal Fish,Habitat Specificity,Sensitivity Attribute,11,8,5,1
+Spot,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Spot,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,2,4,7,7
+Spot,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Spot,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Spot,Coastal Fish,Other Stressors,Sensitivity Attribute,1,14,9,1
+Spot,Coastal Fish,Population Growth Rate,Sensitivity Attribute,20,5,0,0
+Spot,Coastal Fish,Prey Specificity,Sensitivity Attribute,20,5,0,0
+Spot,Coastal Fish,Sea Level Rise,Exposure Factor,0,5,6,9
+Spot,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,9,15,1,0
+Spot,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,16,8,1,0
+Spot,Coastal Fish,Spawning Cycle,Sensitivity Attribute,2,21,2,0
+Spot,Coastal Fish,Stock Size/Status,Sensitivity Attribute,6,13,6,0
+Spot,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Spot,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Spot,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Spot,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Spot,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Spotted Seatrout,Coastal Fish,Adult Mobility,Sensitivity Attribute,5,17,3,0
+Spotted Seatrout,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Spotted Seatrout,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,3,11,10,1
+Spotted Seatrout,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Spotted Seatrout,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,1,14,10,0
+Spotted Seatrout,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,8,15,2
+Spotted Seatrout,Coastal Fish,Habitat Specificity,Sensitivity Attribute,7,12,6,0
+Spotted Seatrout,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Spotted Seatrout,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,2,6,7,5
+Spotted Seatrout,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Spotted Seatrout,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Spotted Seatrout,Coastal Fish,Other Stressors,Sensitivity Attribute,1,10,14,0
+Spotted Seatrout,Coastal Fish,Population Growth Rate,Sensitivity Attribute,11,10,4,0
+Spotted Seatrout,Coastal Fish,Prey Specificity,Sensitivity Attribute,19,6,0,0
+Spotted Seatrout,Coastal Fish,Sea Level Rise,Exposure Factor,0,5,3,12
+Spotted Seatrout,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,15,10,0,0
+Spotted Seatrout,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,16,9,0,0
+Spotted Seatrout,Coastal Fish,Spawning Cycle,Sensitivity Attribute,0,21,4,0
+Spotted Seatrout,Coastal Fish,Stock Size/Status,Sensitivity Attribute,6,12,6,1
+Spotted Seatrout,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Spotted Seatrout,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Spotted Seatrout,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Spotted Seatrout,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Spotted Seatrout,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Striped Bass,Coastal Fish,Adult Mobility,Sensitivity Attribute,9,16,0,0
+Striped Bass,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Striped Bass,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,3,12,9,1
+Striped Bass,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Striped Bass,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,1,13,11,0
+Striped Bass,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,4,16,5
+Striped Bass,Coastal Fish,Habitat Specificity,Sensitivity Attribute,10,8,7,0
+Striped Bass,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Striped Bass,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,8,8,4,0
+Striped Bass,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Striped Bass,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Striped Bass,Coastal Fish,Other Stressors,Sensitivity Attribute,2,10,10,3
+Striped Bass,Coastal Fish,Population Growth Rate,Sensitivity Attribute,0,11,13,1
+Striped Bass,Coastal Fish,Prey Specificity,Sensitivity Attribute,20,5,0,0
+Striped Bass,Coastal Fish,Sea Level Rise,Exposure Factor,1,11,5,3
+Striped Bass,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,19,6,0,0
+Striped Bass,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,11,11,3,0
+Striped Bass,Coastal Fish,Spawning Cycle,Sensitivity Attribute,0,3,12,10
+Striped Bass,Coastal Fish,Stock Size/Status,Sensitivity Attribute,8,11,5,1
+Striped Bass,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Striped Bass,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Striped Bass,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Striped Bass,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Striped Bass,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Summer Flounder,Coastal Fish,Adult Mobility,Sensitivity Attribute,12,13,0,0
+Summer Flounder,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Summer Flounder,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,17,8,0,0
+Summer Flounder,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Summer Flounder,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,4,19,2,0
+Summer Flounder,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,5,10,10,0
+Summer Flounder,Coastal Fish,Habitat Specificity,Sensitivity Attribute,15,10,0,0
+Summer Flounder,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Summer Flounder,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,2,7,7,4
+Summer Flounder,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Summer Flounder,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Summer Flounder,Coastal Fish,Other Stressors,Sensitivity Attribute,4,9,12,0
+Summer Flounder,Coastal Fish,Population Growth Rate,Sensitivity Attribute,5,16,4,0
+Summer Flounder,Coastal Fish,Prey Specificity,Sensitivity Attribute,19,6,0,0
+Summer Flounder,Coastal Fish,Sea Level Rise,Exposure Factor,1,12,5,2
+Summer Flounder,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,18,7,0,0
+Summer Flounder,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,19,6,0,0
+Summer Flounder,Coastal Fish,Spawning Cycle,Sensitivity Attribute,2,20,3,0
+Summer Flounder,Coastal Fish,Stock Size/Status,Sensitivity Attribute,2,22,1,0
+Summer Flounder,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Summer Flounder,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Summer Flounder,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Summer Flounder,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Summer Flounder,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Tautog,Coastal Fish,Adult Mobility,Sensitivity Attribute,0,4,15,6
+Tautog,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Tautog,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,12,12,1,0
+Tautog,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Tautog,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,1,18,6,0
+Tautog,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,10,10,2
+Tautog,Coastal Fish,Habitat Specificity,Sensitivity Attribute,4,10,9,2
+Tautog,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Tautog,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,5,9,5,1
+Tautog,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Tautog,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Tautog,Coastal Fish,Other Stressors,Sensitivity Attribute,2,9,12,2
+Tautog,Coastal Fish,Population Growth Rate,Sensitivity Attribute,0,3,11,11
+Tautog,Coastal Fish,Prey Specificity,Sensitivity Attribute,7,13,5,0
+Tautog,Coastal Fish,Sea Level Rise,Exposure Factor,11,5,3,1
+Tautog,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,4,12,8,1
+Tautog,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,3,10,12,0
+Tautog,Coastal Fish,Spawning Cycle,Sensitivity Attribute,2,9,13,1
+Tautog,Coastal Fish,Stock Size/Status,Sensitivity Attribute,8,9,5,3
+Tautog,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Tautog,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Tautog,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Tautog,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Tautog,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Thorny Skate,Elasmobranch,Adult Mobility,Sensitivity Attribute,7,15,3,0
+Thorny Skate,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Thorny Skate,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,13,11,1,0
+Thorny Skate,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Thorny Skate,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,13,7,5,0
+Thorny Skate,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,25,0,0,0
+Thorny Skate,Elasmobranch,Habitat Specificity,Sensitivity Attribute,20,5,0,0
+Thorny Skate,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Thorny Skate,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,16,3,1,0
+Thorny Skate,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Thorny Skate,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Thorny Skate,Elasmobranch,Other Stressors,Sensitivity Attribute,13,11,1,0
+Thorny Skate,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,0,10,15
+Thorny Skate,Elasmobranch,Prey Specificity,Sensitivity Attribute,21,4,0,0
+Thorny Skate,Elasmobranch,Sea Level Rise,Exposure Factor,18,2,0,0
+Thorny Skate,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,15,10,0,0
+Thorny Skate,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,3,14,8,0
+Thorny Skate,Elasmobranch,Spawning Cycle,Sensitivity Attribute,18,5,2,0
+Thorny Skate,Elasmobranch,Stock Size/Status,Sensitivity Attribute,0,0,4,21
+Thorny Skate,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Thorny Skate,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Thorny Skate,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Thorny Skate,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Thorny Skate,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Tilefish,Groundfish,Adult Mobility,Sensitivity Attribute,0,0,23,2
+Tilefish,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Tilefish,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,5,11,6,3
+Tilefish,Groundfish,Currents,Exposure Factor,3,11,6,0
+Tilefish,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,9,9,6,1
+Tilefish,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,8,10,6,1
+Tilefish,Groundfish,Habitat Specificity,Sensitivity Attribute,0,5,18,2
+Tilefish,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Tilefish,Groundfish,Mean Sea Surface Salinity,Exposure Factor,4,9,6,1
+Tilefish,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Tilefish,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Tilefish,Groundfish,Other Stressors,Sensitivity Attribute,3,17,5,0
+Tilefish,Groundfish,Population Growth Rate,Sensitivity Attribute,0,0,4,21
+Tilefish,Groundfish,Prey Specificity,Sensitivity Attribute,20,5,0,0
+Tilefish,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Tilefish,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,15,9,1,0
+Tilefish,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,1,20,4,0
+Tilefish,Groundfish,Spawning Cycle,Sensitivity Attribute,1,21,3,0
+Tilefish,Groundfish,Stock Size/Status,Sensitivity Attribute,1,19,5,0
+Tilefish,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Tilefish,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Tilefish,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Tilefish,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Tilefish,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Weakfish,Coastal Fish,Adult Mobility,Sensitivity Attribute,12,13,0,0
+Weakfish,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Weakfish,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,4,15,6,0
+Weakfish,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Weakfish,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,0,11,14,0
+Weakfish,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,1,13,11,0
+Weakfish,Coastal Fish,Habitat Specificity,Sensitivity Attribute,12,12,1,0
+Weakfish,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Weakfish,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,3,5,6,6
+Weakfish,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Weakfish,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Weakfish,Coastal Fish,Other Stressors,Sensitivity Attribute,2,9,14,0
+Weakfish,Coastal Fish,Population Growth Rate,Sensitivity Attribute,8,13,4,0
+Weakfish,Coastal Fish,Prey Specificity,Sensitivity Attribute,19,6,0,0
+Weakfish,Coastal Fish,Sea Level Rise,Exposure Factor,1,12,3,4
+Weakfish,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,12,8,5,0
+Weakfish,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,6,15,4,0
+Weakfish,Coastal Fish,Spawning Cycle,Sensitivity Attribute,1,18,6,0
+Weakfish,Coastal Fish,Stock Size/Status,Sensitivity Attribute,3,11,9,2
+Weakfish,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Weakfish,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Weakfish,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Weakfish,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Weakfish,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+White Hake,Groundfish,Adult Mobility,Sensitivity Attribute,14,11,0,0
+White Hake,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+White Hake,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,14,10,1,0
+White Hake,Groundfish,Currents,Exposure Factor,3,11,6,0
+White Hake,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,4,11,6,4
+White Hake,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,5,12,8,0
+White Hake,Groundfish,Habitat Specificity,Sensitivity Attribute,21,3,1,0
+White Hake,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+White Hake,Groundfish,Mean Sea Surface Salinity,Exposure Factor,17,3,0,0
+White Hake,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+White Hake,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+White Hake,Groundfish,Other Stressors,Sensitivity Attribute,13,5,4,3
+White Hake,Groundfish,Population Growth Rate,Sensitivity Attribute,3,7,13,2
+White Hake,Groundfish,Prey Specificity,Sensitivity Attribute,21,4,0,0
+White Hake,Groundfish,Sea Level Rise,Exposure Factor,15,5,0,0
+White Hake,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,19,6,0,0
+White Hake,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,3,18,4,0
+White Hake,Groundfish,Spawning Cycle,Sensitivity Attribute,1,6,17,1
+White Hake,Groundfish,Stock Size/Status,Sensitivity Attribute,1,14,5,5
+White Hake,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+White Hake,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+White Hake,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+White Hake,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+White Hake,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Windowpane,Groundfish,Adult Mobility,Sensitivity Attribute,7,15,3,0
+Windowpane,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Windowpane,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,4,18,3,0
+Windowpane,Groundfish,Currents,Exposure Factor,3,11,6,0
+Windowpane,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,0,13,12,0
+Windowpane,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,8,11,5,1
+Windowpane,Groundfish,Habitat Specificity,Sensitivity Attribute,16,9,0,0
+Windowpane,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Windowpane,Groundfish,Mean Sea Surface Salinity,Exposure Factor,5,9,4,2
+Windowpane,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Windowpane,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Windowpane,Groundfish,Other Stressors,Sensitivity Attribute,1,14,10,0
+Windowpane,Groundfish,Population Growth Rate,Sensitivity Attribute,8,16,1,0
+Windowpane,Groundfish,Prey Specificity,Sensitivity Attribute,6,15,4,0
+Windowpane,Groundfish,Sea Level Rise,Exposure Factor,15,5,0,0
+Windowpane,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,16,9,0,0
+Windowpane,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,11,13,1,0
+Windowpane,Groundfish,Spawning Cycle,Sensitivity Attribute,17,8,0,0
+Windowpane,Groundfish,Stock Size/Status,Sensitivity Attribute,3,8,9,5
+Windowpane,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Windowpane,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Windowpane,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Windowpane,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Windowpane,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Winter Flounder,Coastal Fish,Adult Mobility,Sensitivity Attribute,7,13,5,0
+Winter Flounder,Coastal Fish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,0,0,0,20
+Winter Flounder,Coastal Fish,Complexity in Reproductive Strategy,Sensitivity Attribute,2,12,10,1
+Winter Flounder,Coastal Fish,Currents,Exposure Factor,7,8,3,2
+Winter Flounder,Coastal Fish,Dispersal of Early Life Stages,Sensitivity Attribute,1,9,11,4
+Winter Flounder,Coastal Fish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,0,2,16,7
+Winter Flounder,Coastal Fish,Habitat Specificity,Sensitivity Attribute,10,11,4,0
+Winter Flounder,Coastal Fish,Mean Precipitation,Exposure Factor,16,4,0,0
+Winter Flounder,Coastal Fish,Mean Sea Surface Salinity,Exposure Factor,14,5,1,0
+Winter Flounder,Coastal Fish,Mean Sea Surface Temperature,Exposure Factor,0,0,1,19
+Winter Flounder,Coastal Fish,Ocean Acidification,Exposure Factor,0,0,0,20
+Winter Flounder,Coastal Fish,Other Stressors,Sensitivity Attribute,4,10,9,2
+Winter Flounder,Coastal Fish,Population Growth Rate,Sensitivity Attribute,4,13,8,0
+Winter Flounder,Coastal Fish,Prey Specificity,Sensitivity Attribute,18,7,0,0
+Winter Flounder,Coastal Fish,Sea Level Rise,Exposure Factor,5,10,1,4
+Winter Flounder,Coastal Fish,Sensitivity to Ocean Acidification,Sensitivity Attribute,15,10,0,0
+Winter Flounder,Coastal Fish,Sensitivity to Temperature,Sensitivity Attribute,4,14,7,0
+Winter Flounder,Coastal Fish,Spawning Cycle,Sensitivity Attribute,1,10,11,3
+Winter Flounder,Coastal Fish,Stock Size/Status,Sensitivity Attribute,0,1,13,11
+Winter Flounder,Coastal Fish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Winter Flounder,Coastal Fish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Winter Flounder,Coastal Fish,Variability in Precipitation,Exposure Factor,14,6,0,0
+Winter Flounder,Coastal Fish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Winter Flounder,Coastal Fish,Variability in Sea Surface Temperature,Exposure Factor,19,1,0,0
+Winter Skate,Elasmobranch,Adult Mobility,Sensitivity Attribute,7,12,5,1
+Winter Skate,Elasmobranch,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Winter Skate,Elasmobranch,Complexity in Reproductive Strategy,Sensitivity Attribute,15,10,0,0
+Winter Skate,Elasmobranch,Currents,Exposure Factor,3,11,6,0
+Winter Skate,Elasmobranch,Dispersal of Early Life Stages,Sensitivity Attribute,9,9,7,0
+Winter Skate,Elasmobranch,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,24,1,0,0
+Winter Skate,Elasmobranch,Habitat Specificity,Sensitivity Attribute,19,6,0,0
+Winter Skate,Elasmobranch,Mean Precipitation,Exposure Factor,20,0,0,0
+Winter Skate,Elasmobranch,Mean Sea Surface Salinity,Exposure Factor,12,5,3,0
+Winter Skate,Elasmobranch,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Winter Skate,Elasmobranch,Ocean Acidification,Exposure Factor,0,0,0,20
+Winter Skate,Elasmobranch,Other Stressors,Sensitivity Attribute,11,12,2,0
+Winter Skate,Elasmobranch,Population Growth Rate,Sensitivity Attribute,0,1,12,12
+Winter Skate,Elasmobranch,Prey Specificity,Sensitivity Attribute,22,3,0,0
+Winter Skate,Elasmobranch,Sea Level Rise,Exposure Factor,18,2,0,0
+Winter Skate,Elasmobranch,Sensitivity to Ocean Acidification,Sensitivity Attribute,10,13,2,0
+Winter Skate,Elasmobranch,Sensitivity to Temperature,Sensitivity Attribute,6,12,7,0
+Winter Skate,Elasmobranch,Spawning Cycle,Sensitivity Attribute,20,4,1,0
+Winter Skate,Elasmobranch,Stock Size/Status,Sensitivity Attribute,6,16,3,0
+Winter Skate,Elasmobranch,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Winter Skate,Elasmobranch,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Winter Skate,Elasmobranch,Variability in Precipitation,Exposure Factor,20,0,0,0
+Winter Skate,Elasmobranch,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Winter Skate,Elasmobranch,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Witch Flounder,Groundfish,Adult Mobility,Sensitivity Attribute,0,13,11,1
+Witch Flounder,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Witch Flounder,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,4,18,3,0
+Witch Flounder,Groundfish,Currents,Exposure Factor,3,11,6,0
+Witch Flounder,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,21,4,0,0
+Witch Flounder,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,7,14,4,0
+Witch Flounder,Groundfish,Habitat Specificity,Sensitivity Attribute,20,5,0,0
+Witch Flounder,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Witch Flounder,Groundfish,Mean Sea Surface Salinity,Exposure Factor,14,4,2,0
+Witch Flounder,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Witch Flounder,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Witch Flounder,Groundfish,Other Stressors,Sensitivity Attribute,15,8,2,0
+Witch Flounder,Groundfish,Population Growth Rate,Sensitivity Attribute,0,3,10,12
+Witch Flounder,Groundfish,Prey Specificity,Sensitivity Attribute,8,14,3,0
+Witch Flounder,Groundfish,Sea Level Rise,Exposure Factor,17,3,0,0
+Witch Flounder,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,17,7,1,0
+Witch Flounder,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,8,16,1,0
+Witch Flounder,Groundfish,Spawning Cycle,Sensitivity Attribute,2,18,5,0
+Witch Flounder,Groundfish,Stock Size/Status,Sensitivity Attribute,0,0,3,22
+Witch Flounder,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Witch Flounder,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Witch Flounder,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Witch Flounder,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Witch Flounder,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0
+Yellowtail Flounder,Groundfish,Adult Mobility,Sensitivity Attribute,5,15,5,0
+Yellowtail Flounder,Groundfish,Air Temperature (Proxy for Nearshore Ocean Temp),Exposure Factor,20,0,0,0
+Yellowtail Flounder,Groundfish,Complexity in Reproductive Strategy,Sensitivity Attribute,20,5,0,0
+Yellowtail Flounder,Groundfish,Currents,Exposure Factor,3,11,6,0
+Yellowtail Flounder,Groundfish,Dispersal of Early Life Stages,Sensitivity Attribute,20,5,0,0
+Yellowtail Flounder,Groundfish,Early Life History Survival and Settlement Requirements,Sensitivity Attribute,3,10,11,1
+Yellowtail Flounder,Groundfish,Habitat Specificity,Sensitivity Attribute,17,8,0,0
+Yellowtail Flounder,Groundfish,Mean Precipitation,Exposure Factor,20,0,0,0
+Yellowtail Flounder,Groundfish,Mean Sea Surface Salinity,Exposure Factor,14,4,2,0
+Yellowtail Flounder,Groundfish,Mean Sea Surface Temperature,Exposure Factor,0,0,2,18
+Yellowtail Flounder,Groundfish,Ocean Acidification,Exposure Factor,0,0,0,20
+Yellowtail Flounder,Groundfish,Other Stressors,Sensitivity Attribute,10,10,5,0
+Yellowtail Flounder,Groundfish,Population Growth Rate,Sensitivity Attribute,8,13,4,0
+Yellowtail Flounder,Groundfish,Prey Specificity,Sensitivity Attribute,13,11,1,0
+Yellowtail Flounder,Groundfish,Sea Level Rise,Exposure Factor,18,2,0,0
+Yellowtail Flounder,Groundfish,Sensitivity to Ocean Acidification,Sensitivity Attribute,20,5,0,0
+Yellowtail Flounder,Groundfish,Sensitivity to Temperature,Sensitivity Attribute,3,9,11,2
+Yellowtail Flounder,Groundfish,Spawning Cycle,Sensitivity Attribute,1,18,6,0
+Yellowtail Flounder,Groundfish,Stock Size/Status,Sensitivity Attribute,0,3,13,9
+Yellowtail Flounder,Groundfish,Variability in Air Temperature,Exposure Factor,20,0,0,0
+Yellowtail Flounder,Groundfish,Variability in Ocean Acidification,Exposure Factor,20,0,0,0
+Yellowtail Flounder,Groundfish,Variability in Precipitation,Exposure Factor,20,0,0,0
+Yellowtail Flounder,Groundfish,Variability in Sea Surface Salinity,Exposure Factor,16,4,0,0
+Yellowtail Flounder,Groundfish,Variability in Sea Surface Temperature,Exposure Factor,20,0,0,0

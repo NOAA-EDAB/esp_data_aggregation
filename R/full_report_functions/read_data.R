@@ -5,7 +5,17 @@ survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9),
 # sum(numlen) and abundance may not be equal 
 # abundnace has been corrected with conversion factor, but numlen has not
 
-survey_ws <- readRDS(here::here("data", "survey_data_12292020_wintersummer.RDS")) %>%
+# fix survey numbers treated as characters
+survey <- survey %>%
+  dplyr::mutate(CRUISE6 = CRUISE6 %>% as.numeric(), 
+                STATION = STATION %>% as.numeric(), 
+                STRATUM = STRATUM %>% as.numeric(), 
+                TOW = TOW %>% as.numeric(), 
+                SVSPP = SVSPP %>% as.numeric(), 
+                CATCHSEX = CATCHSEX %>% as.numeric(), 
+                YEAR = YEAR %>% as.numeric())
+
+survey_ws <- readRDS(here::here("data", "survey_data_02012021_wintersummer.RDS")) %>%
   dplyr::select(colnames(survey))
 
 survey_big <- dplyr::union(survey, survey_ws)
