@@ -34,11 +34,10 @@ jobs:
 #          key: bookdown-${{ hashFiles('**/*Rmd') }}
 #          restore-keys: bookdown-
 
-      - name: Install packages
+      - name: Install renv
         run: |
           sudo R CMD javareconf
-          R -e 'install.packages(c("rmarkdown", "dplyr", "ggplot2", "here", "stringr",
-          "sf", "tibble", "knitr", "scales", "DT", "snow", "bookdown", "remotes"))'
+          R -e 'install.packages(c("renv"))'
 #         R -e 'renv::restore()'
 
       - name: Build site
