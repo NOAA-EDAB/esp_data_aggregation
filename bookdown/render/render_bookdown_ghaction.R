@@ -1,4 +1,6 @@
 # install github packages
+install.packages("remotes")
+
 remotes::install_github("NOAA-EDAB/assessmentdata",
                         build_vignettes = TRUE)
 
@@ -13,6 +15,8 @@ remotes::install_github("nmfs-general-modeling-tools/nmfspalette",
 
 # load all packages
 renv::restore(lockfile = here::here("bookdown", "renv.lock"))
+
+install.packages("snow")
 
 `%>%` <- dplyr::`%>%`
 
