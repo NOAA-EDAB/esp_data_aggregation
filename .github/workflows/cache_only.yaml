@@ -27,9 +27,8 @@ jobs:
         id: cache2
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
-          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-renv-
+          key: r-${{ hashFiles('renv.lock') }}
+          restore-keys: r-
       - name: Restore packages
         run: |
           R -e 'if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
