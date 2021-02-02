@@ -10,6 +10,8 @@ jobs:
     env:
 #      EMAIL: ${{ secrets.EMAIL }}
       GITHUB_PAT: ${{ secrets.GH_PAT }}
+      RENV_PATHS_ROOT: ~/.local/share/renv
+      
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -20,6 +22,20 @@ jobs:
       - name: Install pandoc
         run: |
           brew install pandoc
+          
+      - name: Cache packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+
+      - name: Restore packages
+        run: |
+          R -e 'if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()'
+          
 #      - name: Cache Renv packages
 #        uses: actions/cache@v1
 #        with:
@@ -34,7 +50,8 @@ jobs:
 #          key: bookdown-${{ hashFiles('**/*Rmd') }}
 #          restore-keys: bookdown-
 
-      - name: Install renv and here
+      - name: Install renv and here (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           sudo R CMD javareconf
           sudo apt-get install libcurl4-openssl-dev
@@ -44,7 +61,11 @@ jobs:
           R -e 'install.packages(c("renv", "here"))'
 #         R -e 'renv::restore()'
 
-      - name: Build site
+      - name: Install dependencies (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: Rscript -e 'source(here::here("bookdown/render", "install_dependencies.R"))'
+
+      - name: Generate bookdowns
         run: Rscript -e 'source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
 #
 #       - name: Install npm
