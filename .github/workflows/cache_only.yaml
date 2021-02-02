@@ -1,0 +1,60 @@
+on:
+  push:
+    branches: main
+
+name: cache_only
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      RENV_PATHS_ROOT: ~/.local/share/renv
+      
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@master
+
+      - name: Install pandoc
+        run: |
+          brew install pandoc
+          
+      - name: Cache packages
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+      - name: Restore packages
+        run: |
+          R -e 'if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()'
+     
+      - name: Install renv and here (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          sudo R CMD javareconf
+          sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install libgdal-dev
+          sudo apt-get install libgit2-dev 
+          sudo apt-get install libudunits2-dev
+          R -e 'install.packages(c("renv", "here"))'
+#         R -e 'renv::restore()'
+
+      - name: Install dependencies (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: Rscript -e 'source(here::here("bookdown/render", "install_dependencies.R"))'
+        
+      - name: Deploy to github
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: . # The folder the action should deploy.
+          TARGET_FOLDER: .
+          CLEAN: true # Automatically remove deleted files from the deploy branch
