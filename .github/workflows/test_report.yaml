@@ -25,12 +25,11 @@ jobs:
           
       - name: Cache packages
         uses: actions/cache@v1
-        id: cache
+        id: cache2
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
-          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-renv-
+          key: r-${{ hashFiles('renv.lock') }}
+          restore-keys: r-
 
       - name: Restore packages
         run: |
@@ -52,7 +51,7 @@ jobs:
 #          restore-keys: bookdown-
 
       - name: Install renv and here (if not cached)
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cache2.outputs.cache-hit != 'true'
         run: |
           sudo R CMD javareconf
           sudo apt-get install libcurl4-openssl-dev
@@ -63,7 +62,7 @@ jobs:
 #         R -e 'renv::restore()'
 
       - name: Install dependencies (if not cached)
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cache2.outputs.cache-hit != 'true'
         run: Rscript -e 'source(here::here("bookdown/render", "install_dependencies.R"))'
 
       - name: Generate bookdowns
