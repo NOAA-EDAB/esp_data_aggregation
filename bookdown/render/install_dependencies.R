@@ -1,7 +1,8 @@
 # these packages have to be installed for other packages to get installed
 #install.packages(c("remotes", "ggplot2", "nlstools", "rgeos", "viridis", "ggthemes", "here"))
 
-install.packages("devtools")
+install.packages("devtools",
+                 dependencies = TRUE)
 devtools::install_deps()
 
 # install github packages
