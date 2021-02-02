@@ -190,6 +190,66 @@ window.buildTabsets = function(tocID) {
 };
 
 </script>
+<script>
+window.initializeCodeFolding = function(show) {
+
+  // handlers for show-all and hide all
+  $("#rmd-show-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('show');
+    });
+  });
+  $("#rmd-hide-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('hide');
+    });
+  });
+
+  // index for unique code element ids
+  var currentIndex = 1;
+
+  // select all R code blocks
+  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.julia, pre.foldable');
+  rCodeBlocks.each(function() {
+
+    // create a collapsable div to wrap the code in
+    var div = $('<div class="collapse r-code-collapse"></div>');
+    var showThis = (show || $(this).hasClass('fold-show')) && !$(this).hasClass('fold-hide');
+    if (showThis) div.addClass('in');
+    var id = 'rcode-643E0F36' + currentIndex++;
+    div.attr('id', id);
+    $(this).before(div);
+    $(this).detach().appendTo(div);
+
+    // add a show code button right above
+    var showCodeText = $('<span>' + (showThis ? 'Hide' : 'Code') + '</span>');
+    var showCodeButton = $('<button type="button" class="btn btn-default btn-xs code-folding-btn pull-right"></button>');
+    showCodeButton.append(showCodeText);
+    showCodeButton
+        .attr('data-toggle', 'collapse')
+        .attr('data-target', '#' + id)
+        .attr('aria-expanded', showThis)
+        .attr('aria-controls', id);
+
+    var buttonRow = $('<div class="row"></div>');
+    var buttonCol = $('<div class="col-md-12"></div>');
+
+    buttonCol.append(showCodeButton);
+    buttonRow.append(buttonCol);
+
+    div.before(buttonRow);
+
+    // update state of button on show/hide
+    div.on('hidden.bs.collapse', function () {
+      showCodeText.text('Code');
+    });
+    div.on('show.bs.collapse', function () {
+      showCodeText.text('Hide');
+    });
+  });
+
+}
+</script>
 <style type="text/css">.hljs-literal {
 color: #990073;
 }
@@ -2952,6 +3012,9 @@ summary {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -2968,6 +3031,14 @@ summary {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">NOAA-EDAB dependencies</h1>
@@ -2977,9 +3048,61 @@ summary {
 </div>
 
 
-<p>This is a list of all the files in the <code>esp_data_aggregation</code> repo with dependencies on the NOAA-EDAB github.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> The dependencies within each file are printed below the file name.</p>
-<div id="htmlwidget-b41764881f8cd3e2a3fe" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b41764881f8cd3e2a3fe">{"x":{"filter":"none","extensions":["Scroller"],"data":[["bookdown/_02-habitat.Rmd","bookdown/01-methods.Rmd","bookdown/03-latlong.Rmd","bookdown/06-depth.Rmd","bookdown/09-von_b.Rmd","bookdown/index.Rmd","bookdown/render/install_dependencies.R","bookdown/render/render_bookdown.R","bookdown/render/render_bookdown_ghaction.R","Commercial/commercial_abby.R","Commercial/Commercial_landings_1950_2019.Rmd","data/allfh_regions.R","Food Habits/Food_habits.Rmd","git_migration/NOAA-EDAB_dependencies.Rmd","Life history/FishLife/FishLife_testing.R","Life history/Lifehistory.R","Life history/rfishbase_testing.R","Life history/von-Bertalanffy-growth-curve-archive.R","Life history/von Bertalanffy growth curve.Rmd","R/assessmentdata_comparison.R","R/create_data/create_report_data.R","R/create_data/create_risk_rankings/calculate_guild_risk.R","R/data_visualization.Rmd","R/full_report_functions/map_strata_ecsa.R","R/full_report_functions/risk_functions/get_risk_within_species.R","R/full_report_functions/risk_functions/get_running_historical_risk.R","R/full_report_functions/risk_functions/get_running_value_risk.R","R/full_report_template.Rmd","R/get_full_report.R","R/install_git_packages.R","R/paralllel_troubleshooting.R","R/preliminary_files/assessmentdata_and_survdat_report_template.Rmd","R/preliminary_files/get_survdat_report.R","R/preliminary_files/latlong_testing.R","R/preliminary_files/MRIP_testing.R","R/rank_species_indicators/preliminary_indicator_ranking.R","R/rank_species_indicators/preliminary_ranking_functions.R","Recreational/recreational_landings_1950_2019.Rmd","Seascape/depth_distribution.Rmd"],["16, 23","4","13, 20","19","24","10","10, 11","11, 86","4","5","25","5","26","2, 15, 18, 28, 46, 69","19, 31","12","6","16, 84","41","35","35, 109, 198, 320","4","6","1","2","2","2","151, 173, 179","38, 86","3, 8, 11","8","378, 396","7","5","5","6","20","35","34"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>File name<\/th>\n      <th>Content location<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"search":{"regex":true},"deferRender":true,"paging":false,"scrollY":800,"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p>This is a list of all the files in the <code>esp_data_aggregation</code> repo with dependencies on the NOAA-EDAB github.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<pre class="r"><code># find all files referencing &quot;NOAA-EDAB&quot;
+
+# content of root folder
+all &lt;- dir(here::here())
+
+# docs files will be regenerated from .Rmds
+all_but_docs &lt;- all[-which(all == &quot;docs&quot;)]
+
+# get full names of all other files
+setwd(here::here())
+all_files &lt;- list.files(all_but_docs, 
+                         #pattern = &quot;NOAA-EDAB&quot;, 
+                         all.files = FALSE, 
+                         full.names = TRUE,
+                         recursive = TRUE) 
+
+r_files &lt;- all_files %&gt;%
+  stringr::str_subset(&quot;.R&quot;)
+
+# remove rdata files (too big to search)
+rdata_files &lt;- r_files %&gt;%
+  stringr::str_which(&quot;.RDS&quot;)
+
+r_files &lt;- r_files[-rdata_files]
+
+# search files with a loop
+out &lt;- c()
+for(i in 1:length(r_files)){
+  
+  results &lt;- grep(&quot;NOAA-EDAB&quot;, readLines(r_files[i]), value = FALSE)
+  
+  if(length(results) &gt; 0){
+    
+    results &lt;- paste(results, collapse = &quot;, &quot;)
+    
+    this_data &lt;- c(r_files[i], results)
+    
+    out &lt;- rbind(out, this_data)
+  }
+  
+}
+
+# display output
+out %&gt;% 
+  DT::datatable(rownames = FALSE,
+                colnames = c(&quot;File name&quot;, &quot;Content location (line)&quot;),
+                extensions = &#39;Scroller&#39;,
+                options = list(search = list(regex = TRUE),
+                              deferRender = TRUE,
+                              paging = FALSE,
+                              scrollY = 800))</code></pre>
+<div id="htmlwidget-842090fc5f5ae5c4ffda" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-842090fc5f5ae5c4ffda">{"x":{"filter":"none","extensions":["Scroller"],"data":[["bookdown/_02-habitat.Rmd","bookdown/01-methods.Rmd","bookdown/03-latlong.Rmd","bookdown/06-depth.Rmd","bookdown/09-von_b.Rmd","bookdown/index.Rmd","bookdown/render/install_dependencies.R","bookdown/render/render_bookdown.R","bookdown/render/render_bookdown_ghaction.R","Commercial/commercial_abby.R","Commercial/Commercial_landings_1950_2019.Rmd","data/allfh_regions.R","Food Habits/Food_habits.Rmd","git_migration/NOAA-EDAB_dependencies.Rmd","Life history/FishLife/FishLife_testing.R","Life history/Lifehistory.R","Life history/rfishbase_testing.R","Life history/von-Bertalanffy-growth-curve-archive.R","Life history/von Bertalanffy growth curve.Rmd","R/assessmentdata_comparison.R","R/create_data/create_report_data.R","R/create_data/create_risk_rankings/calculate_guild_risk.R","R/data_visualization.Rmd","R/full_report_functions/map_strata_ecsa.R","R/full_report_functions/risk_functions/get_risk_within_species.R","R/full_report_functions/risk_functions/get_running_historical_risk.R","R/full_report_functions/risk_functions/get_running_value_risk.R","R/full_report_template.Rmd","R/get_full_report.R","R/install_git_packages.R","R/paralllel_troubleshooting.R","R/preliminary_files/assessmentdata_and_survdat_report_template.Rmd","R/preliminary_files/get_survdat_report.R","R/preliminary_files/latlong_testing.R","R/preliminary_files/MRIP_testing.R","R/rank_species_indicators/preliminary_indicator_ranking.R","R/rank_species_indicators/preliminary_ranking_functions.R","Recreational/recreational_landings_1950_2019.Rmd","Seascape/depth_distribution.Rmd"],["16, 23","4","13, 20","19","24","10","10, 11","11, 86","4","5","25","5","26","2, 16, 19, 30, 48, 71","19, 31","12","6","16, 84","41","35","35, 109, 198, 320","4","6","1","2","2","2","151, 173, 179","38, 86","3, 8, 11","8","378, 396","7","5","5","6","20","35","34"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>File name<\/th>\n      <th>Content location (line)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"search":{"regex":true},"deferRender":true,"paging":false,"scrollY":800,"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code># can probably replace NOAA-EDAB using gsub() in a loop</code></pre>
 <div class="footnotes">
 <hr />
 <ol>
@@ -3020,6 +3143,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

@@ -2,21 +2,23 @@
 title: "NOAA-EDAB dependencies"
 author: "Abigail Tyrell"
 date: "`r format(Sys.time(), '%d %b %Y')`"
-output: html_document
+output: 
+  html_document:
+    code_folding: hide
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE,
-                      warning = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
 
 `%>%` <- dplyr::`%>%`
 ```
 
-This is a list of all the files in the `esp_data_aggregation` repo with dependencies on the NOAA-EDAB github.[^1] The dependencies within each file are printed below the file name.
+This is a list of all the files in the `esp_data_aggregation` repo with dependencies on the NOAA-EDAB github.[^1] 
 
 ```{r}
 # find all files referencing "NOAA-EDAB"
 
+# content of root folder
 all <- dir(here::here())
 
 # docs files will be regenerated from .Rmds
@@ -59,7 +61,7 @@ for(i in 1:length(r_files)){
 # display output
 out %>% 
   DT::datatable(rownames = FALSE,
-                colnames = c("File name", "Content location"),
+                colnames = c("File name", "Content location (line)"),
                 extensions = 'Scroller',
                 options = list(search = list(regex = TRUE),
                               deferRender = TRUE,
