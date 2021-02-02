@@ -60,25 +60,29 @@ if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
 
 ### Length at age growth curve
 
-The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth parameters of Linf (Length infinty), K (growth coefficient), and t0 (size at time 0) were estimated using non-linear least square model. The starting point for model building is accomplished using FSA::vbStarts. Age and length data sourced from Survdat and spans all years and survey areas. 
+The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth parameters of `Linf` (Length infinty), `K` (growth coefficient), and `t0` (size at time 0) were estimated using non-linear least square model. The starting point for model building is accomplished using `FSA::vbStarts`. Age and length data sourced from `survdat` and spans all years and survey areas. 
 
 `r if(params$species == "Monkfish"){"The age determination method for monkfish has not been validated, and the anatomic structure used has changed through time. In addition these stocks display a high degree of sexual dimorphisms making fitting of single growth curves unreliable.  This results a high degree of uncertainty in assessing the age structure of the stock and the effects of fishing pressure."}`
 
 ```{r single_growth_curve}
+# palette
 if(nrow(selected.surv.clean) > 0){
-  
+
   fig <- ggplot(data=selected.surv.clean,
                 aes(x=AGE, 
-                    y=LENGTH))+
-    geom_point(color="red")+
-    xlim(0,(1.5*max(AGE)))+
-    ylim(0,(1.5*max(LENGTH, na.rm = TRUE)))+
-    xlab("Age")+
-    ylab(" Total length (cm)")+
+                    y=LENGTH,
+                    color = YEAR %>% as.numeric()))+
+    geom_jitter(alpha = 0.5)+
+    scale_color_gradientn(colors = nmfspalette::nmfs_palette("regional web")(4),
+                         name = "Year")+
+    xlim(0,(1.5*max(selected.surv.clean$AGE)))+
+    ylim(0,(1.5*max(selected.surv.clean$LENGTH, na.rm = TRUE)))+
+    xlab("Age (jittered)")+
+    ylab(" Total length (cm) (jittered)")+
     ggtitle(species, subtitle = "Length at age")+
     theme_minimal()
   
-  if(exists(selected.surv.vonb)){
+  if(nrow(selected.surv.vonb) > 0){
     fig <- fig +
       geom_line(data = selected.surv.vonb,
                 inherit.aes = FALSE,

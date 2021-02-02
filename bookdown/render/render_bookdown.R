@@ -25,8 +25,8 @@ setwd(here::here("bookdown/"))
 
 start <- Sys.time()
 
-purrr::map("Alewife", 
-           ~bookdown::render_book(input = c("index.Rmd", "22-vulnerability.Rmd"),
+purrr::map("Acadian redfish", 
+           ~bookdown::render_book(input = c("index.Rmd", "09-von_b.Rmd"),
                                   preview = TRUE,
                                   #preview = FALSE,
                                  params = list(species_ID = .x,
