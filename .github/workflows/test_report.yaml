@@ -67,7 +67,9 @@ jobs:
         run: Rscript -e 'source(here::here("bookdown/render", "install_dependencies.R"))'
 
       - name: Generate bookdowns
-        run: Rscript -e 'source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
+        run: |
+          Rscript -e 'install.packages(c("here", "dplyr"))'
+          Rscript -e 'source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
 #
 #       - name: Install npm
 #         uses: actions/setup-node@v1
