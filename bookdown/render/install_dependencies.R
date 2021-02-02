@@ -1,5 +1,5 @@
 # these packages have to be installed for other packages to get installed
-install.packages(c("remotes", "ggplot2", "nlstools", "rgeos", "viridis"))
+install.packages(c("remotes", "ggplot2", "nlstools", "rgeos", "viridis", "ggthemes"))
 
 # install github packages
 remotes::install_github("NOAA-EDAB/assessmentdata")
