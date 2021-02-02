@@ -1,0 +1,72 @@
+---
+title: "NOAA-EDAB dependencies"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE)
+
+`%>%` <- dplyr::`%>%`
+```
+
+This is a list of all the files in the `esp_data_aggregation` repo with dependencies on the NOAA-EDAB github.[^1] The dependencies within each file are printed below the file name.
+
+```{r}
+# find all files referencing "NOAA-EDAB"
+
+all <- dir(here::here())
+
+# docs files will be regenerated from .Rmds
+all_but_docs <- all[-which(all == "docs")]
+
+# get full names of all other files
+setwd(here::here())
+all_files <- list.files(all_but_docs, 
+                         #pattern = "NOAA-EDAB", 
+                         all.files = FALSE, 
+                         full.names = TRUE,
+                         recursive = TRUE) 
+
+r_files <- all_files %>%
+  stringr::str_subset(".R")
+
+# remove rdata files (too big to search)
+rdata_files <- r_files %>%
+  stringr::str_which(".RDS")
+
+r_files <- r_files[-rdata_files]
+
+# search files with a loop
+out <- c()
+for(i in 1:length(r_files)){
+  
+  results <- grep("NOAA-EDAB", readLines(r_files[i]), value = FALSE)
+  
+  if(length(results) > 0){
+    
+    results <- paste(results, collapse = ", ")
+    
+    this_data <- c(r_files[i], results)
+    
+    out <- rbind(out, this_data)
+  }
+  
+}
+
+# display output
+out %>% 
+  DT::datatable(rownames = FALSE,
+                colnames = c("File name", "Content location"),
+                extensions = 'Scroller',
+                options = list(search = list(regex = TRUE),
+                              deferRender = TRUE,
+                              paging = FALSE,
+                              scrollY = 800))
+
+# can probably replace NOAA-EDAB using gsub() in a loop
+```
+
+[^1]: RDS files and files in the docs folders were not considered. RDS files are too large, and docs files can be re-compiled after migration.
