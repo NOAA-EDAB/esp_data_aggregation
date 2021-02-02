@@ -100,15 +100,15 @@ render_par <- function(x){
 source(here::here("R/full_report_functions", "read_data.R"))
 
 # make cluster
-cl <- snow::makeCluster(length(all_species), 
+cl <- parallel::makeCluster(length(all_species), 
                   type = "FORK")
 
 # don't have to set up clusters when using forking (global environment is accessable)
 
 # generate reports
-snow::parLapply(cl, 
+parallel::parLapply(cl, 
                 all_species[1],
                 render_par)
 
 # stop cluster
-snow::stopCluster(cl)
+parallel::stopCluster(cl)
