@@ -11,7 +11,8 @@ source(here::here("R/full_report_functions", "read_data.R"))
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 # tilefish has is NA in COMNAME column? omit for now
 
-all_species <- names$COMNAME %>% unique() %>% 
+all_species <- names$COMNAME %>% 
+  unique() %>% 
   stringr::str_to_sentence() %>%
   stringr::str_replace("Goosefish", "Monkfish") # change goosefish to monkfish
 list_species <- split(all_species, f = list(all_species))
@@ -85,7 +86,10 @@ start <- Sys.time()
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 # tilefish has is NA in COMNAME column? omit for now
 
-all_species <- names$COMNAME %>% unique() %>% stringr::str_to_sentence() 
+all_species <- names$COMNAME %>% 
+  unique() %>% 
+  stringr::str_to_sentence() %>%
+  stringr::str_replace("Goosefish", "Monkfish") # change goosefish to monkfish
 all_species <- all_species[!is.na(all_species)]
 
 # function to save reports, fix temp file problems
