@@ -25,6 +25,7 @@ jobs:
           
       - name: Cache packages
         uses: actions/cache@v1
+        id: cache
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
           key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
