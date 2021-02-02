@@ -8,6 +8,8 @@ remotes::install_github("NOAA-EDAB/ecodata")
 
 remotes::install_github("ropensci/rnaturalearthhires")
 
+remotes::install_github("ropensci/rnaturalearth")
+
 remotes::install_github("nmfs-general-modeling-tools/nmfspalette")
 
 # load all packages
