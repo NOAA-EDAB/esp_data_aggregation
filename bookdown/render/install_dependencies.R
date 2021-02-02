@@ -9,6 +9,8 @@ devtools::install_deps(dependencies = TRUE)
 # installed but not used in reports (ignore for now): ‘dbutils’, ‘survdat’, 
 remotes::install_github("NOAA-EDAB/assessmentdata")
 remotes::install_github("NOAA-EDAB/ecodata")
+remotes::install_github("NOAA-EDAB/survdat")
+remotes::install_github("andybeet/dbutils")
 remotes::install_github("ropensci/rnaturalearthhires")
 remotes::install_github("nmfs-general-modeling-tools/nmfspalette")
 remotes::install_github("kaskr/TMB_contrib_R/TMBhelper")

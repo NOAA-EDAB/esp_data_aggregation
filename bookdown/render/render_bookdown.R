@@ -27,8 +27,8 @@ start <- Sys.time()
 
 purrr::map("Acadian redfish", 
            ~bookdown::render_book(input = c("index.Rmd", "09-von_b.Rmd"),
-                                  preview = TRUE,
-                                  #preview = FALSE,
+                                  #preview = TRUE,
+                                  preview = FALSE,
                                  params = list(species_ID = .x,
                                                
                                                latlong_data = latlong,
