@@ -63,6 +63,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs # The folder the action should deploy.
-          TARGET_FOLDER: .
+          FOLDER: docs/action_reports # The folder the action should deploy.
+          TARGET_FOLDER: docs
           CLEAN: true # Automatically remove deleted files from the deploy branch
