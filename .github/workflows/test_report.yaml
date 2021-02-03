@@ -8,9 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-#      EMAIL: ${{ secrets.EMAIL }}
       GITHUB_PAT: ${{ secrets.GH_PAT }}
-#      RENV_PATHS_ROOT: ~/.local/share/renv
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       
     steps:
@@ -24,78 +22,44 @@ jobs:
         run: |
           brew install pandoc
           
-#      - name: Cache packages
-#        uses: actions/cache@v1
-#        env:
-#          cache-name: cache3
-#        id: cache3
-#        with:
-#          path: ${{ env.RENV_PATHS_ROOT }}
-#          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('renv.lock') }}
+#      - name: Install npm
+#        uses: actions/setup-node@v1
           
       - name: Cache R packages
         uses: actions/cache@v1
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: small-cache-${{ hashFiles('DESCRIPTION') }}
-
-#      - name: Restore packages
-#        run: |
-#          R -e 'if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
-#          renv::restore()'
+          key: little-cache-${{ hashFiles('**/renv.lock') }}
           
-#      - name: Cache Renv packages
+#      - name: Cache node modules
 #        uses: actions/cache@v1
+#        id: cache-nodes
 #        with:
-#          path: $HOME/.local/share/renv
-#          key: r-${{ hashFiles('renv.lock') }}
-#          restore-keys: r-
+#          path: ~/.npm
+#          key: ${{ runner.os }}-cache-nodes-${{ hashFiles('**/package-lock.json') }}
 
-#      - name: Cache bookdown results
-#        uses: actions/cache@v1
-#        with:
-#          path: _bookdown_files
-#          key: bookdown-${{ hashFiles('**/*Rmd') }}
-#          restore-keys: bookdown-
-
-#      - name: Install renv and here (if not cached)
-#        if: steps.cache3.outputs.cache-hit != 'true'
-#        run: |
-#          sudo R CMD javareconf
-#          sudo apt-get install libcurl4-openssl-dev
-#          sudo apt-get install libgdal-dev
-#          sudo apt-get install libgit2-dev 
-#          sudo apt-get install libudunits2-dev
-#          R -e 'install.packages(c("renv", "here"))'
-#         R -e 'renv::restore()'
-
-      - name: Install dependencies (if not cached)
+      - name: Install command line packages 
+        run: |        
+          sudo R CMD javareconf
+          npm install libcurl4
+          npm libgdal
+          npm libgit2
+          npm libudunits2
+          
+      - name: Install R dependencies (if not cached)
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          sudo R CMD javareconf
-          sudo apt-get install libcurl4-openssl-dev
-          sudo apt-get install libgdal-dev
-          sudo apt-get install libgit2-dev 
-          sudo apt-get install libudunits2-dev
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
 
       - name: Generate bookdowns
-        run: |
-          Rscript -e 'source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
-#
-#       - name: Install npm
-#         uses: actions/setup-node@v1
-#      - name: Cleanup files
-#        run: Rscript -e 'source("remove_files.R")'
+        run: Rscript -e 'source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
 
       - name: Deploy to github
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-#          EMAIL: ${{ secrets.EMAIL }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-#          REPOSITORY_NAME: esp_data_aggregation
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: . # The folder the action should deploy.
           TARGET_FOLDER: .
