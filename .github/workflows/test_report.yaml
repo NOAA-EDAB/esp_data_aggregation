@@ -25,12 +25,14 @@ jobs:
 #      - name: Install npm
 #        uses: actions/setup-node@v1
           
+# big cache key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+
       - name: Cache R packages
         uses: actions/cache@v1
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: little-cache-${{ hashFiles('**/renv.lock') }}
+          key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
           
 #      - name: Cache node modules
 #        uses: actions/cache@v1
@@ -61,6 +63,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: . # The folder the action should deploy.
+          FOLDER: docs # The folder the action should deploy.
           TARGET_FOLDER: .
           CLEAN: true # Automatically remove deleted files from the deploy branch
