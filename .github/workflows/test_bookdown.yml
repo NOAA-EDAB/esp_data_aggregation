@@ -46,7 +46,7 @@ jobs:
         
       - name: Store lockfile
         if: steps.cache.outputs.cache-hit != 'false'
-        run: R -e 'renv::snapshot()'
+        run: R -e 'renv::snapshot(lockfile = "~/.local/share/renv")'
 
       - name: Deploy to github
         uses: JamesIves/github-pages-deploy-action@3.7.1
