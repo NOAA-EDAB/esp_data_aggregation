@@ -45,11 +45,10 @@ jobs:
       - name: Install command line packages (if not cached)
         if: steps.cache-nodes.outputs.cache-hit != 'true'
         run: |        
-          sudo R CMD javareconf
-          npm install libcurl4-openssl-dev
-          npm libgdal-dev
-          npm libgit2-dev 
-          npm libudunits2-dev
+          npm install libcurl4-openssl
+          npm libgdal
+          npm libgit2
+          npm libudunits2
           
       - name: Install R dependencies (if not cached)
         if: steps.cache.outputs.cache-hit != 'true'
