@@ -26,9 +26,9 @@ setwd(here::here("bookdown/"))
 start <- Sys.time()
 
 purrr::map("Acadian redfish", 
-           ~bookdown::render_book(input = c("index.Rmd", "09-von_b.Rmd"),
-                                  #preview = TRUE,
-                                  preview = FALSE,
+           ~bookdown::render_book(input = c("test/index.Rmd"),
+                                  preview = TRUE,
+                                  #preview = FALSE,
                                  params = list(species_ID = .x,
                                                
                                                latlong_data = latlong,
@@ -59,7 +59,7 @@ purrr::map("Acadian redfish",
                                                com_data = com,
                                                
                                                swept_data = swept
-                                 ), 
+                                               ), 
                                  knit_root_dir = here::here(paste("docs/bookdown/", .x, sep = "")),
                                  output_dir = here::here(paste("docs/bookdown/", .x, sep = ""))
                                  ))
