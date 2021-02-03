@@ -26,17 +26,13 @@ jobs:
           
       - name: Cache packages
         uses: actions/cache@v2
+        id: cache
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
           key: cache8-renv-${{ hashFiles('**/renv.lock') }}
-          
-      - name: Install renv and restore packages
-        run: |
-          R -e 'install.packages("renv")
-          renv::restore()'
      
       - name: Install dependencies (if not cached)
-        if: steps.cache8-renv-${{ hashFiles('**/renv.lock') }}.outputs.cache-hit != 'true'
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           R -e 'install.packages(c("rmarkdown"))'
 
