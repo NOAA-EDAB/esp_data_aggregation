@@ -29,7 +29,7 @@ jobs:
         id: cache
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
-          key: cache9-renv-${{ hashFiles('**/renv.lock') }}
+          key: cache10-renv-${{ hashFiles('**/renv.lock') }}
      
       - name: Install renv and restore packages
         run: |
@@ -48,11 +48,11 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'false'
         run: R -e 'renv::snapshot(lockfile = "~/.local/share/renv")'
 
-      - name: Deploy to github
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: . # The folder the action should deploy.
-          TARGET_FOLDER: .
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+#      - name: Deploy to github
+#        uses: JamesIves/github-pages-deploy-action@3.7.1
+#        with:
+#          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+#          BRANCH: gh-pages # The branch the action should deploy to.
+#          FOLDER: . # The folder the action should deploy.
+#          TARGET_FOLDER: .
+#          CLEAN: true # Automatically remove deleted files from the deploy branch
