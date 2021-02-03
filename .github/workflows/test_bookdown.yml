@@ -29,7 +29,7 @@ jobs:
         id: cache
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
-          key: cache10-renv-${{ hashFiles('**/renv.lock') }}
+          key: cache11-renv-${{ hashFiles('**/renv.lock') }}
      
       - name: Install renv and restore packages (if cache exists)
         if: steps.cache.outputs.cache-hit != 'false'
