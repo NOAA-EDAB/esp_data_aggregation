@@ -92,7 +92,7 @@ render_par <- function(x){
 source(here::here("R/full_report_functions", "read_data.R"))
 
 # make cluster
-cl <- parallel::makeCluster(4, 
+cl <- parallel::makeCluster(2, 
                   type = "FORK")
 
 # don't have to set up clusters when using forking (global environment is accessible)
