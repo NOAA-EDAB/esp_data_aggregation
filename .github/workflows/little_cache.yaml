@@ -25,10 +25,10 @@ jobs:
           
       - name: Cache packages
         uses: actions/cache@v1
-        id: cache5
+#        id: cache6
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
-          key: cache5-renv-${{ hashFiles('**/renv.lock') }}
+          key: cache6-renv-${{ hashFiles('**/renv.lock') }}
 #          restore-keys: r-
 
       - name: Install renv and restore packages
@@ -37,7 +37,7 @@ jobs:
           renv::restore()'
      
       - name: Install dependencies (if not cached)
-        if: steps.cache5.outputs.cache-hit != 'true'
+        if: steps.cache6-renv-.outputs.cache-hit != 'true'
         run: |
           R -e 'install.packages(c("glue"))
           renv::snapshot()'
