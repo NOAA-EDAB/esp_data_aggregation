@@ -36,7 +36,7 @@ jobs:
           renv::restore()'
      
       - name: Install dependencies (if not cached)
-        if: steps.cache8-renv-.outputs.cache-hit != 'true'
+        if: steps.cache8-renv-${{ hashFiles('**/renv.lock') }}.outputs.cache-hit != 'true'
         run: |
           R -e 'install.packages(c("rmarkdown"))'
 
