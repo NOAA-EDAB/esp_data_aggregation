@@ -58,3 +58,4 @@ jobs:
 #          FOLDER: . # The folder the action should deploy.
 #          TARGET_FOLDER: .
 #          CLEAN: true # Automatically remove deleted files from the deploy branch
+
