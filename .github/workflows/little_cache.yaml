@@ -24,11 +24,11 @@ jobs:
   #        brew install pandoc
           
       - name: Cache packages
-        uses: actions/cache@v1
+        uses: actions/cache@v2
 #        id: cache6
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
-          key: cache6-renv-${{ hashFiles('**/renv.lock') }}
+          key: cache7-renv-${{ hashFiles('**/renv.lock') }}
 #          restore-keys: r-
 
       - name: Install renv and restore packages
@@ -37,7 +37,7 @@ jobs:
           renv::restore()'
      
       - name: Install dependencies (if not cached)
-        if: steps.cache6-renv-.outputs.cache-hit != 'true'
+        if: steps.cache7-renv-.outputs.cache-hit != 'true'
         run: |
           R -e 'install.packages(c("glue"))'
         
