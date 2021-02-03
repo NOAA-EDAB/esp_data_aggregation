@@ -38,7 +38,7 @@ jobs:
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-${{ hashFiles('DESCRIPTION') }}
+          key: small-cache-${{ hashFiles('DESCRIPTION') }}
 
 #      - name: Restore packages
 #        run: |
