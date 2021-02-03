@@ -8,9 +8,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-#      EMAIL: ${{ secrets.EMAIL }}
       GITHUB_PAT: ${{ secrets.GH_PAT }}
+      RENV_PATHS_ROOT: ~/.local/share/renv
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+
     steps:
+      
       - name: Checkout repo
         uses: actions/checkout@v2
 
@@ -20,39 +23,30 @@ jobs:
       - name: Install pandoc
         run: |
           brew install pandoc
-#      - name: Cache Renv packages
-#        uses: actions/cache@v1
-#        with:
-#          path: $HOME/.local/share/renv
-#          key: r-${{ hashFiles('renv.lock') }}
-#          restore-keys: r-
-
-#      - name: Cache bookdown results
-#        uses: actions/cache@v1
-#        with:
-#          path: _bookdown_files
-#          key: bookdown-${{ hashFiles('**/*Rmd') }}
-#          restore-keys: bookdown-
-
-      - name: Install packages
+          
+      - name: Cache packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: cache8-renv-${{ hashFiles('**/renv.lock') }}
+          
+      - name: Install renv and restore packages
+        run: |
+          R -e 'install.packages("renv")
+          renv::restore()'
+     
+      - name: Install dependencies (if not cached)
+        if: steps.cache7-renv-.outputs.cache-hit != 'true'
         run: |
           R -e 'install.packages(c("rmarkdown"))'
-#          R -e 'renv::restore()'
+
       - name: Build site
         run: Rscript -e 'rmarkdown::render("test/index.Rmd", quiet = TRUE)'
-#
-#       - name: Install npm
-#         uses: actions/setup-node@v1
-#      - name: Cleanup files
-#        run: Rscript -e 'source("remove_files.R")'
-
 
       - name: Deploy to github
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-#          EMAIL: ${{ secrets.EMAIL }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-#          REPOSITORY_NAME: esp_data_aggregation
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: . # The folder the action should deploy.
           TARGET_FOLDER: .
