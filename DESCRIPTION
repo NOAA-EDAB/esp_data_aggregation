@@ -1,15 +1,7 @@
 Package: esp_data_aggregation
-Title: What the Package Does (One Line, Title Case)
+Title: Generate Preliminary ESP Reports for the Northeast
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Description: Generates preliminary Ecosystem and Socioeconomic Profiles for Northeast and Mid-Atlantic USA fishery stocks.
 Suggests: 
     abind,
     AICcmodavg,
@@ -261,6 +253,16 @@ Suggests:
     ymlthis,
     zip,
     zoo
+Remotes:
+    NOAA-EDAB/assessmentdata,
+    NOAA-EDAB/ecodata,
+    NOAA-EDAB/survdat,
+    andybeet/dbutils,
+    ropensci/rnaturalearthhires,
+    nmfs-general-modeling-tools/nmfspalette,
+    kaskr/TMB_contrib_R/TMBhelper,
+    James-Thorson/utilities,
+    James-Thorson-NOAA/FishLife
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
