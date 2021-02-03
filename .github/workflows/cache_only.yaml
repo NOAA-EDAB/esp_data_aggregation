@@ -31,7 +31,7 @@ jobs:
           key: cache4-${{ hashFiles('renv.lock') }}
 #          restore-keys: r-
 
-      - name: Restore packages
+      - name: Install renv and restore packages
         run: |
           R -e 'if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
           renv::restore()'
@@ -44,7 +44,7 @@ jobs:
           sudo apt-get install libgdal-dev
           sudo apt-get install libgit2-dev 
           sudo apt-get install libudunits2-dev
-          R -e 'install.packages(c("devtools", "renv")
+          R -e 'install.packages(c("devtools"))
           devtools::install_deps(dependencies = TRUE)
           renv::snapshot()'
         
