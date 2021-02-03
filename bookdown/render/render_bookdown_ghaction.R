@@ -74,9 +74,18 @@ render_par <- function(x){
             recursive = TRUE,
             overwrite = TRUE)
   
+  # remove temp files and extra images
   unlink(tf)
-  #return("done")
+  unlink("/_bookdown_files/")
   
+  # remove .Rmd and yml files in docs folders
+  rmds <- dir() %>%
+    stringr::str_subset(".Rmd")
+  
+  ymls <- dir() %>%
+    stringr::str_subset(".yml")
+  
+  file.remove(c(rmds, ymls))
 }
 
 # read in data
@@ -86,7 +95,7 @@ source(here::here("R/full_report_functions", "read_data.R"))
 cl <- parallel::makeCluster(length(all_species), 
                   type = "FORK")
 
-# don't have to set up clusters when using forking (global environment is accessable)
+# don't have to set up clusters when using forking (global environment is accessible)
 
 # generate reports
 parallel::parLapply(cl, 
