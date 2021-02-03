@@ -71,23 +71,18 @@ jobs:
 #         R -e 'renv::restore()'
 
       - name: Install command line packages
-        run: |
-          sudo apt-get install libudunits2-dev
-#          sudo R CMD javareconf
-#          sudo apt-get install libcurl4-openssl-dev
-#          sudo apt-get install libgdal-dev
-#          sudo apt-get install libgit2-dev 
-          
-      - name: Install dependencies (if not cached)
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
+        run: |        
           sudo R CMD javareconf
           sudo apt-get install libcurl4-openssl-dev
           sudo apt-get install libgdal-dev
           sudo apt-get install libgit2-dev 
+          sudo apt-get install libudunits2-dev
+          
+      - name: Install dependencies (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
-#          sudo apt-get install libudunits2-dev
 
 
       - name: Generate bookdowns
