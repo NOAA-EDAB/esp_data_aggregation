@@ -32,13 +32,13 @@ jobs:
           key: cache11-renv-${{ hashFiles('**/renv.lock') }}
      
       - name: Install renv and restore packages (if cache exists)
-        if: steps.cache.outputs.cache-hit != 'false'
+        if: steps.cache.outputs.cache-hit == 'true'
         run: |
           R -e 'install.packages("renv")
           renv::restore(lockfile = "~/.local/share/renv")'
           
       - name: Install dependencies (if not cached)
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cache.outputs.cache-hit == 'false'
         run: |
           R -e 'install.packages(c("rmarkdown"))'
 
@@ -46,7 +46,7 @@ jobs:
         run: Rscript -e 'rmarkdown::render("test/index.Rmd", quiet = TRUE)'
         
       - name: Store lockfile (if not cached)
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cache.outputs.cache-hit == 'false'
         run: R -e 'renv::snapshot(lockfile = "~/.local/share/renv")'
 
 #      - name: Deploy to github
