@@ -45,7 +45,7 @@ jobs:
       - name: Install command line packages (if not cached)
         if: steps.cache-nodes.outputs.cache-hit != 'true'
         run: |        
-          npm install libcurl4-openssl
+          npm install libcurl4
           npm libgdal
           npm libgit2
           npm libudunits2
