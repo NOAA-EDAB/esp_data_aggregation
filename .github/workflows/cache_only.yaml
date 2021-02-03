@@ -28,12 +28,12 @@ jobs:
         id: cache4
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
-          key: cache4-${{ hashFiles('renv.lock') }}
+          key: cache4-renv-${{ hashFiles('renv.lock') }}
 #          restore-keys: r-
 
       - name: Install renv and restore packages
         run: |
-          R -e 'if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          R -e 'install.packages("renv")
           renv::restore()'
      
       - name: Install dependencies (if not cached)
