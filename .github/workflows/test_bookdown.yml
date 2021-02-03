@@ -29,7 +29,7 @@ jobs:
         id: cache
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
-          key: cache8-renv-${{ hashFiles('**/renv.lock') }}
+          key: cache9-renv-${{ hashFiles('**/renv.lock') }}
      
       - name: Install renv and restore packages
         run: |
@@ -43,6 +43,10 @@ jobs:
 
       - name: Build site
         run: Rscript -e 'rmarkdown::render("test/index.Rmd", quiet = TRUE)'
+        
+      - name: Store lockfile
+        if: steps.cache.outputs.cache-hit != 'false'
+        run: R -e 'renv::snapshot()'
 
       - name: Deploy to github
         uses: JamesIves/github-pages-deploy-action@3.7.1
