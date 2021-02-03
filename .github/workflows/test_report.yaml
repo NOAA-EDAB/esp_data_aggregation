@@ -22,29 +22,26 @@ jobs:
         run: |
           brew install pandoc
           
-      - name: Install npm
-        uses: actions/setup-node@v1
+#      - name: Install npm
+#        uses: actions/setup-node@v1
           
       - name: Cache R packages
         uses: actions/cache@v1
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+          key: little-cache-${{ hashFiles('**/renv.lock') }}
           
-      - name: Cache node modules
-        uses: actions/cache@v1
-        id: cache-nodes
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-cache-nodes-${{ hashFiles('**/package-lock.json') }}
+#      - name: Cache node modules
+#        uses: actions/cache@v1
+#        id: cache-nodes
+#        with:
+#          path: ~/.npm
+#          key: ${{ runner.os }}-cache-nodes-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Reconfigre Java
-        run: sudo R CMD javareconf
-         
-      - name: Install command line packages (if not cached)
-        if: steps.cache-nodes.outputs.cache-hit != 'true'
+      - name: Install command line packages 
         run: |        
+          sudo R CMD javareconf
           npm install libcurl4
           npm libgdal
           npm libgit2
