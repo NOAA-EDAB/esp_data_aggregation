@@ -38,9 +38,9 @@ Imports:
     ymlthis,
     zoo
 Remotes:
+    andybeet/dbutils,
     NOAA-EDAB/assessmentdata,
     NOAA-EDAB/survdat,
-    andybeet/dbutils,
     ropensci/rnaturalearthhires,
     nmfs-general-modeling-tools/nmfspalette,
     kaskr/TMB_contrib_R/TMBhelper,
