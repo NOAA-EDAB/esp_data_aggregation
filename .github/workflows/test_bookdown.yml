@@ -35,7 +35,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'false'
         run: |
           R -e 'install.packages("renv")
-          renv::restore(lockfile = "~/.local/share/renv/renv.lock")'
+          renv::restore(lockfile = "~/.local/share/renv")'
           
       - name: Install dependencies (if not cached)
         if: steps.cache.outputs.cache-hit != 'true'
