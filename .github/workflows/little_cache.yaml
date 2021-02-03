@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GH_PAT }}
- #     RENV_PATHS_ROOT: ~/.local/share/renv
+      RENV_PATHS_ROOT: ~/.local/share/renv
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       
     steps:
@@ -27,7 +27,7 @@ jobs:
         uses: actions/cache@v1
         id: cache5
         with:
-#          path: ${{ env.RENV_PATHS_ROOT }}
+          path: ${{ env.RENV_PATHS_ROOT }}
           key: cache5-renv-${{ hashFiles('**/renv.lock') }}
 #          restore-keys: r-
 
