@@ -31,11 +31,12 @@ jobs:
           path: ${{ env.RENV_PATHS_ROOT }}
           key: cache11-renv-${{ hashFiles('**/renv.lock') }}
      
-      - name: Install renv and restore packages (if cache exists)
+      - name: Install renv
+        run: R -e 'install.packages("renv")'
+          
+      - name: Restore packages (if cache exists)
         if: steps.cache.outputs.cache-hit == 'true'
-        run: |
-          R -e 'install.packages("renv")
-          renv::restore(lockfile = "~/.local/share/renv")'
+        run: R -e 'renv::restore(lockfile = "~/.local/share/renv")'
           
       - name: Install dependencies (if not cached)
         if: steps.cache.outputs.cache-hit != 'true'
