@@ -28,7 +28,7 @@ jobs:
         id: cache5
         with:
 #          path: ${{ env.RENV_PATHS_ROOT }}
-          key: cache5-renv-${{ hashFiles('renv.lock') }}
+          key: cache5-renv-${{ hashFiles('**/renv.lock') }}
 #          restore-keys: r-
 
       - name: Install renv and restore packages
