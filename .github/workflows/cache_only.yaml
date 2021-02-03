@@ -25,30 +25,28 @@ jobs:
           
       - name: Cache packages
         uses: actions/cache@v1
-        id: cache2
+        id: cache4
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
-          key: r-${{ hashFiles('renv.lock') }}
-          restore-keys: r-
-      - name: Restore packages
+          key: cache4-renv-${{ hashFiles('renv.lock') }}
+#          restore-keys: r-
+
+      - name: Install renv and restore packages
         run: |
-          R -e 'if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          R -e 'install.packages("renv")
           renv::restore()'
      
-      - name: Install renv and here (if not cached)
-        if: steps.cache2.outputs.cache-hit != 'true'
+      - name: Install dependencies (if not cached)
+        if: steps.cache4.outputs.cache-hit != 'true'
         run: |
           sudo R CMD javareconf
           sudo apt-get install libcurl4-openssl-dev
           sudo apt-get install libgdal-dev
           sudo apt-get install libgit2-dev 
           sudo apt-get install libudunits2-dev
-          R -e 'install.packages(c("renv", "here"))'
-#         R -e 'renv::restore()'
-
-      - name: Install dependencies (if not cached)
-        if: steps.cache2.outputs.cache-hit != 'true'
-        run: Rscript -e 'source(here::here("bookdown/render", "install_dependencies.R"))'
+          R -e 'install.packages(c("devtools"))
+          devtools::install_deps(dependencies = TRUE)
+          renv::snapshot()'
         
       - name: Deploy to github
         uses: JamesIves/github-pages-deploy-action@3.7.1
