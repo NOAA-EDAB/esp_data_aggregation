@@ -91,16 +91,21 @@ render_par <- function(x){
 # read in data
 source(here::here("R/full_report_functions", "read_data.R"))
 
+# generate reports
+lapply(cl, 
+       all_species[nums],
+       render_par)
+
 # make cluster
-cl <- parallel::makeCluster(1, 
-                  type = "FORK")
+#cl <- parallel::makeCluster(1, 
+#                  type = "FORK")
 
 # don't have to set up clusters when using forking (global environment is accessible)
 
 # generate reports
-parallel::parLapply(cl, 
-                all_species[nums],
-                render_par)
+#parallel::parLapply(cl, 
+#                all_species[nums],
+#                render_par)
 
 # stop cluster
-parallel::stopCluster(cl)
+#parallel::stopCluster(cl)
