@@ -12,7 +12,26 @@ jobs:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
     
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
+      - name: Setup R
+        uses: r-lib/actions/setup-r@master
+      
+      - name: Cache R packages
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+
+      - name: Load R packages (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          Rscript -e 'install.packages("devtools")
+          devtools::install_deps(dependencies = TRUE)'
+        
       - name: try action
-        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@v1.3-beta
+        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@v1.4-beta
         with: 
           species: '1'
