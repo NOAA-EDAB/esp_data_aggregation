@@ -62,7 +62,7 @@ jobs:
           
       - name: Generate bookdowns
         run: |
-          Rscript -e 'nums <- 1:9
+          R{0} -e 'nums <- 1:9
           source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
 
       - name: Deploy to github
