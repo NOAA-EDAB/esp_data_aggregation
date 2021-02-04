@@ -54,7 +54,11 @@ render_bks <- function(x){
                         ),
                         intermediates_dir = new_dir,
                         knit_root_dir = new_dir,
-                        output_dir = new_dir)
+                        output_dir = new_dir,
+                        clean = FALSE,
+                        quiet = TRUE)
+  
+  print("Done with", x "!")
   
 }
 
