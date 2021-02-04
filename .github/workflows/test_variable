@@ -3,7 +3,7 @@ on:
   push:
     branches: main
 
-name: bookdown_reports
+name: test_variable
 
 jobs:
 ####  
