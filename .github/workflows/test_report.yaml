@@ -89,32 +89,32 @@ jobs:
 
 ####
   build3:
-    - name: Generate bookdowns
+      - name: Generate bookdowns
         run: |
-          Rscript -e 'nums <- 19:27
-          source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
+            Rscript -e 'nums <- 19:27
+            source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
 
       - name: Deploy to github
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs/action_reports # The folder the action should deploy.
-          TARGET_FOLDER: docs
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          uses: JamesIves/github-pages-deploy-action@3.7.1
+          with:
+            GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+            BRANCH: gh-pages # The branch the action should deploy to.
+            FOLDER: docs/action_reports # The folder the action should deploy.
+            TARGET_FOLDER: docs
+            CLEAN: true # Automatically remove deleted files from the deploy branch
           
 ####
   build4:
-    - name: Generate bookdowns
+      - name: Generate bookdowns
         run: |
-          Rscript -e 'nums <- 28:37
-          source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
+            Rscript -e 'nums <- 28:37
+            source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
 
       - name: Deploy to github
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs/action_reports # The folder the action should deploy.
-          TARGET_FOLDER: docs
-          CLEAN: true # Automatically remove deleted files from the deploy branch          
+          uses: JamesIves/github-pages-deploy-action@3.7.1
+          with:
+            GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+            BRANCH: gh-pages # The branch the action should deploy to.
+            FOLDER: docs/action_reports # The folder the action should deploy.
+            TARGET_FOLDER: docs
+            CLEAN: true # Automatically remove deleted files from the deploy branch          
