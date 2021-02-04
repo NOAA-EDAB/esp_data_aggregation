@@ -28,7 +28,7 @@ We continue to synthesize existing data on Northeast stocks, environment, and so
 
 | [atyrell3](https://github.com/atyrell3)                                                         | [rtabandera](https://github.com/rtabandera)                                                                                                    |
 |-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| [![](https://avatars.githubusercontent.com/u/77738923?s=100&u=92e54f60ca179f3e41c1a3610fb3ecdb9e233434&v=4](https://github.com/atyrell3) | [![](https://avatars.githubusercontent.com/u/64960823?s=100&u=ea5abeca602e43d461e964fe8283f703aef63c61&v=4)](https://github.com/rtabandera) |
+| [![](https://avatars.githubusercontent.com/u/77738923?s=100&u=92e54f60ca179f3e41c1a3610fb3ecdb9e233434&v=4)](https://github.com/atyrell3) | [![](https://avatars.githubusercontent.com/u/64960823?s=100&u=ea5abeca602e43d461e964fe8283f703aef63c61&v=4)](https://github.com/rtabandera) |
 
 #### Legal disclaimer
 
