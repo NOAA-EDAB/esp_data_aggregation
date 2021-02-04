@@ -2,7 +2,7 @@ on:
   push:
     branches: abby
 
-name: runn_all_bookdown_reports
+name: run_all_bookdown_reports
 
 jobs: 
   build1:
