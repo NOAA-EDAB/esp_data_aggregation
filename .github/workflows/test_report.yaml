@@ -5,7 +5,8 @@ on:
 name: bookdown_reports
 
 jobs:
-  build:
+####  
+  build1:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GH_PAT }}
@@ -56,7 +57,9 @@ jobs:
           devtools::install_deps(dependencies = TRUE)'
 
       - name: Generate bookdowns
-        run: Rscript -e 'source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
+        run: |
+          Rscript -e 'nums <- 1:9
+          source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
 
       - name: Deploy to github
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -66,3 +69,168 @@ jobs:
           FOLDER: docs/action_reports # The folder the action should deploy.
           TARGET_FOLDER: docs
           CLEAN: true # Automatically remove deleted files from the deploy branch
+          
+####       
+  build2:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@master
+
+      - name: Install pandoc
+        run: |
+          brew install pandoc
+          
+# big cache key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+
+      - name: Install command line packages 
+        run: |        
+          sudo R CMD javareconf
+          sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install libgdal-dev
+          sudo apt-get install libgit2-dev 
+          sudo apt-get install libudunits2-dev
+          
+      - name: Install R dependencies (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          Rscript -e 'install.packages("devtools")
+          devtools::install_deps(dependencies = TRUE)'
+
+      - name: Generate bookdowns
+        run: |
+          Rscript -e 'nums <- 10:18
+          source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
+
+      - name: Deploy to github
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs/action_reports # The folder the action should deploy.
+          TARGET_FOLDER: docs
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+
+####
+  build3:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@master
+
+      - name: Install pandoc
+        run: |
+          brew install pandoc
+          
+# big cache key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+
+      - name: Install command line packages 
+        run: |        
+          sudo R CMD javareconf
+          sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install libgdal-dev
+          sudo apt-get install libgit2-dev 
+          sudo apt-get install libudunits2-dev
+          
+      - name: Install R dependencies (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          Rscript -e 'install.packages("devtools")
+          devtools::install_deps(dependencies = TRUE)'
+
+      - name: Generate bookdowns
+        run: |
+          Rscript -e 'nums <- 19:27
+          source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
+
+      - name: Deploy to github
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs/action_reports # The folder the action should deploy.
+          TARGET_FOLDER: docs
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+          
+####
+  build4:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@master
+
+      - name: Install pandoc
+        run: |
+          brew install pandoc
+          
+# big cache key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+
+      - name: Install command line packages 
+        run: |        
+          sudo R CMD javareconf
+          sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install libgdal-dev
+          sudo apt-get install libgit2-dev 
+          sudo apt-get install libudunits2-dev
+          
+      - name: Install R dependencies (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          Rscript -e 'install.packages("devtools")
+          devtools::install_deps(dependencies = TRUE)'
+
+      - name: Generate bookdowns
+        run: |
+          Rscript -e 'nums <- 28:37
+          source(here::here("bookdown/render", "render_bookdown_ghaction.R"))'
+
+      - name: Deploy to github
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs/action_reports # The folder the action should deploy.
+          TARGET_FOLDER: docs
+          CLEAN: true # Automatically remove deleted files from the deploy branch          
