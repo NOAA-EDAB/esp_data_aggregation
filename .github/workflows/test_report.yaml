@@ -14,6 +14,6 @@ jobs:
     
     steps:
       - name: try action
-        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render/report_action
+        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render/report_action.yaml
         with: 
           species: '1'
