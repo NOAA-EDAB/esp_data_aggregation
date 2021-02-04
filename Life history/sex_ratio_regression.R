@@ -36,12 +36,12 @@ bsb <- bsb %>% mutate(YEAR=as.numeric(YEAR))
 
 
 #sex codes 1 male, 2 female, 4 transitional, 0 unsexed   
-bsb.m.f<-bsb %>% filter(SEX== 1 | SEX==2, YEAR>2000)
-
+bsb.m.f<-bsb %>% filter(SEX== 1 | SEX==2)
+#, YEAR<2015
 
 bsb.m.f$SEX <-recode(bsb.m.f$SEX, "1"="MALE" , "2"="FEMALE")
 bsb.m.f <-bsb.m.f %>% mutate(SEX= as.factor(SEX))
-bsb.m.f <- bsb.m.f %>% mutate(SEX, SEX= as.numeric(bsb.m.f$SEX))
+#bsb.m.f <- bsb.m.f %>% mutate(SEX, SEX= as.numeric(bsb.m.f$SEX))
 
 # bsb.m.f<-bsb.m.f %>% mutate(SEX=as.factor(SEX))
 # bsb.m.f %>% ggplot(aes(x=SEX))+geom_histogram(stat="count")
@@ -51,9 +51,30 @@ bsb.m.f <- bsb.m.f %>% mutate(SEX, SEX= as.numeric(bsb.m.f$SEX))
 
 
 
+
+#sex ratio plot
+
+bsb.ratio<-bsb.m.f %>%  group_by(LENGTH) %>% mutate(sex.count=sum(SEX=="MALE")/length(SEX), fish.count=length(SEX))
+
+ggplot(data = bsb.ratio)+
+  geom_point(aes(x=LENGTH,y=sex.count, size=fish.count))+
+  xlab("Body Length")+
+  ylab("Sex ratio (M/F) ")+
+  guides(size=guide_legend(title="n"))+
+  theme_minimal()
+  
+
+
+
+
 bsb.mod<-glm(SEX~LENGTH, data=bsb.m.f, binomial(link = "logit"))
 
 summary(bsb.mod)
+
+exp(confint(bsb.mod))
+
+newdata1 <- with(bsb.m.f, data.frame(LENGTH=mean(LENGTH)))
+newdata1$ratio<-predict(bsb.mod, newdata = newdata1, type = "response")
 
 bsb.new<-data.frame(LENGTH=seq(5,60))
 predict(bsb.mod, newdata=bsb.new)
@@ -62,6 +83,10 @@ bsb.new$prob<-predict(bsb.mod, data.frame(LENGTH=seq(5,60)), type="response")
 bsb.new %>% ggplot(aes(x=LENGTH, y=prob))+stat_smooth()+ geom_point(data=bsb.m.f,aes(x=LENGTH, y=SEX))
 
 bsb.demo<-merge(bsb.new,bsb.m.f, by = "LENGTH")
+
+
+ggplot(data= bsb.demo)+geom_boxplot(aes(x=SEX, y=LENGTH))
+ggplot(data= bsb.demo)+geom_point(aes(x=LENGTH,y=SEX, color=SEX))
 
 
 ggplot(data = bsb.demo,aes(x=LENGTH, y=prob))+
@@ -86,4 +111,27 @@ ggplot(data = bsb.m.f)+geom_point(aes(x=LENGTH , y= SEX , size=AGE))+
   # Add a second axis and specify its features
   sec.axis = sec_axis( trans =~., name="Probability")
 )
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  dplyr::summarise(sex.ratio= length())
+
+
+
+
+
+
+
+
 
