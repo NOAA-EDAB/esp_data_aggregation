@@ -6,12 +6,16 @@ inputs:
     required: true
     default: '1'
     
+defaults:
+  run:
+    shell: bash
+  
 runs:
    using: "composite"
    steps:
    
       - uses: actions/checkout@v2
-
+        
       - uses: r-lib/actions/setup-r@master
 
       - run: brew install pandoc
