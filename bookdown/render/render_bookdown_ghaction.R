@@ -94,7 +94,7 @@ source(here::here("R/full_report_functions", "read_data.R"))
 
 # generate reports
 lapply(all_species[nums],
-       render_par)
+       render_bks)
 
 # make cluster
 #cl <- parallel::makeCluster(1, 
