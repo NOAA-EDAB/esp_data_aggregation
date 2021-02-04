@@ -21,6 +21,7 @@ To recreate the reports:
 - Download the repo
 - Open the file `bookdown/render/render_bookdown_ghaction.R`. 
 - Replace `all_species[num]` in the `lapply` function (line 69) with the common name of your species of interest in sentence case (ex, "Acadian redfish"). Alternatively, change `num` to the numerical indices of your species of interest in the `all_species` vector.
+- Run all code in `render_bookdown_ghaction.R`.
 - Please note, this will take some time (2+ minutes per species). 
 
 ## Next steps
