@@ -76,7 +76,7 @@ render_par <- function(x){
   
   # remove temp files and extra images
   unlink(tf)
-  unlink(here::here(new_dir, "/_bookdown_files/"))
+  unlink(here::here(new_dir, "/_bookdown_files/"), recursive = TRUE)
   
   # remove .Rmd and yml files in docs folders
   rmds <- dir() %>%
@@ -99,7 +99,7 @@ cl <- parallel::makeCluster(1,
 
 # generate reports
 parallel::parLapply(cl, 
-                all_species,
+                all_species[nums],
                 render_par)
 
 # stop cluster
