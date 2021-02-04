@@ -5,13 +5,14 @@ on:
 name: bookdown_reports
 
 defaults:
-  run: |
-    brew install pandoc
-    sudo R CMD javareconf
-    sudo apt-get install libcurl4-openssl-dev
-    sudo apt-get install libgdal-dev
-    sudo apt-get install libgit2-dev 
-    sudo apt-get install libudunits2-dev
+  run: 
+    shell: bash |
+      brew install pandoc
+      sudo R CMD javareconf
+      sudo apt-get install libcurl4-openssl-dev
+      sudo apt-get install libgdal-dev
+      sudo apt-get install libgit2-dev 
+      sudo apt-get install libudunits2-dev
 
 #      - name: Install pandoc
 #        run: |
