@@ -13,6 +13,6 @@ jobs:
     
     steps:
       - name: try action
-        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@v1.2-beta
+        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@v1.3-beta
         with: 
           species: '1'
