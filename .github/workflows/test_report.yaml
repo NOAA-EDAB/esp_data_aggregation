@@ -34,7 +34,7 @@ jobs:
       - name: Create reports
         uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@v1.5-beta
         with: 
-          species: '2'
+          species: '1'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -42,5 +42,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: docs/action_reports # The folder the action should deploy.
-          TARGET_FOLDER: .
+          TARGET_FOLDER: Reports
           CLEAN: false # Automatically remove deleted files from the deploy branch
