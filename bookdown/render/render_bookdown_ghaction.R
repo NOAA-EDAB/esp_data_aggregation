@@ -92,8 +92,7 @@ render_par <- function(x){
 source(here::here("R/full_report_functions", "read_data.R"))
 
 # generate reports
-lapply(cl, 
-       all_species[nums],
+lapply(all_species[nums],
        render_par)
 
 # make cluster
