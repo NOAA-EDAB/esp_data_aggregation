@@ -2,6 +2,7 @@ Package: esp_data_aggregation
 Title: Generate Preliminary ESP Reports for the Northeast
 Version: 0.0.0.9000
 Description: Generates preliminary Ecosystem and Socioeconomic Profiles for Northeast and Mid-Atlantic USA fishery stocks.
+License: file LICENSE
 Imports:
     AICcmodavg,
     bookdown,
