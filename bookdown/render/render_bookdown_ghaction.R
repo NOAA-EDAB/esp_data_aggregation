@@ -58,7 +58,7 @@ render_bks <- function(x){
                         clean = FALSE,
                         quiet = TRUE)
   
-  print("Done with", x "!")
+  print("Done with", x, "!")
   
 }
 
