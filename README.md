@@ -1,5 +1,7 @@
 # Ecosystem and Socioeconomic Profiles
 
+![gitleaks](https://github.com/NOAA-EDAB/esp_data_aggregation/workflows/gitleaks/badge.svg)
+
 ## View current data products
 https://NOAA-EDAB.github.io/esp_data_aggregation
 
@@ -22,5 +24,24 @@ We continue to synthesize existing data on Northeast stocks, environment, and so
 
 [1]: https://meetings.npfmc.org/CommentReview/DownloadFile?p=8f5233fb-3b62-4571-9b49-8bb7ce675916.pdf&fileName=ESP_Shotwell.pdf
 
-##
-This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
+## Developers
+
+| [atyrell3](https://github.com/atyrell3)                                                         | [rtabandera](https://github.com/rtabandera)                                                                                                    |
+|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| [![](https://avatars.githubusercontent.com/u/77738923?s=100&u=92e54f60ca179f3e41c1a3610fb3ecdb9e233434&v=4](https://github.com/atyrell3) | [![](https://avatars.githubusercontent.com/u/64960823?s=100&u=ea5abeca602e43d461e964fe8283f703aef63c61&v=4)](https://github.com/rtabandera) |
+
+#### Legal disclaimer
+
+*This repository is a scientific product and is not official
+communication of the National Oceanic and Atmospheric Administration, or
+the United States Department of Commerce. All NOAA GitHub project code
+is provided on an 'as is' basis and the user assumes responsibility for
+its use. Any claims against the Department of Commerce or Department of
+Commerce bureaus stemming from the use of this GitHub project will be
+governed by all applicable Federal law. Any reference to specific
+commercial products, processes, or services by service mark, trademark,
+manufacturer, or otherwise, does not constitute or imply their
+endorsement, recommendation or favoring by the Department of Commerce.
+The Department of Commerce seal and logo, or the seal and logo of a DOC
+bureau, shall not be used in any manner to imply endorsement of any
+commercial product or activity by DOC or the United States Government.*
