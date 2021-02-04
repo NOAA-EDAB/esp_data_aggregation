@@ -7,11 +7,6 @@ inputs:
     default: '1'
     
 runs:
-   runs-on: ubuntu-latest
-   env:
-      GITHUB_PAT: ${{ secrets.GH_PAT }}
-      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-      
    steps:
       - name: Checkout repo
         uses: actions/checkout@v2
