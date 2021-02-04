@@ -14,24 +14,25 @@ all_species <- all_species[!is.na(all_species)]
 # try copying bookdown .rmd files to new directories
 #list.files(here::here("bookdown"), full.names = TRUE)
 
+bookdown_files <- list.files(path = here::here("bookdown"),
+                             recursive = FALSE)
+
 dir.create(here::here("docs/action_reports/"))
-render_par <- function(x){
-  
-  tf <- tempfile()
-  dir.create(tf)
+
+render_bks <- function(x){
   
   new_dir <- here::here(paste("docs/action_reports/", x, sep = ""))
   dir.create(new_dir)
   
-  file.copy(from = list.files(here::here("bookdown"), full.names = TRUE),
-            to = new_dir,
-            recursive = FALSE,
-            overwrite = TRUE)
+#  file.copy(from = list.files(here::here("bookdown"), full.names = TRUE),
+#            to = new_dir,
+#            recursive = FALSE,
+#            overwrite = TRUE)
   
   setwd(new_dir)
   file.create(".nojekyll")
   
-  bookdown::render_book(input = ".",
+  bookdown::render_book(input = bookdown_files,
                         params = list(species_ID = x,
                                       
                                       latlong_data = latlong,
@@ -63,29 +64,29 @@ render_par <- function(x){
                                       
                                       swept_data = swept
                         ),
-                        intermediates_dir = tf,
-                        knit_root_dir = new_dir,
+                       # intermediates_dir = tf,
+                        #knit_root_dir = new_dir,
                         #clean = TRUE,
                         output_dir = new_dir)
   
   # copy images to right folder
-  file.copy(from = list.files(here::here(new_dir, "/_bookdown_files/"), full.names = TRUE),
-            to = new_dir,
-            recursive = TRUE,
-            overwrite = TRUE)
+  #file.copy(from = list.files(here::here(new_dir, "/_bookdown_files/"), full.names = TRUE),
+  #          to = new_dir,
+  #          recursive = TRUE,
+  #          overwrite = TRUE)
   
   # remove temp files and extra images
-  unlink(tf)
-  unlink(here::here(new_dir, "/_bookdown_files/"), recursive = TRUE)
+  #unlink(tf)
+  #unlink(here::here(new_dir, "/_bookdown_files/"), recursive = TRUE)
   
   # remove .Rmd and yml files in docs folders
-  rmds <- dir() %>%
-    stringr::str_subset(".Rmd")
+ # rmds <- dir() %>%
+#    stringr::str_subset(".Rmd")
   
-  ymls <- dir() %>%
-    stringr::str_subset(".yml")
+ # ymls <- dir() %>%
+  #  stringr::str_subset(".yml")
   
-  file.remove(c(rmds, ymls))
+  #file.remove(c(rmds, ymls))
 }
 
 # read in data
