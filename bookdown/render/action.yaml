@@ -5,26 +5,13 @@ inputs:
     description: 'Which all_species to include (numeric)'
     required: true
     default: '1'
-    
-defaults:
-  run:
-    shell: bash
-  
+
 runs:
    using: "composite"
    steps:
    
-      - uses: actions/checkout@v2
-        
-      - uses: r-lib/actions/setup-r@master
-
       - run: brew install pandoc
-
-      - uses: actions/cache@v1
-        id: cache
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+        shell: bash
 
       - run: |        
           sudo R CMD javareconf
@@ -32,12 +19,8 @@ runs:
           sudo apt-get install libgdal-dev
           sudo apt-get install libgit2-dev 
           sudo apt-get install libudunits2-dev
+        shell: bash
           
-      - if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          Rscript -e 'install.packages("devtools")
-          devtools::install_deps(dependencies = TRUE)'
-
       - run: |
           nums <- ${{ inputs.species }}
           source(here::here("bookdown/render", "render_bookdown_ghaction.R"))
