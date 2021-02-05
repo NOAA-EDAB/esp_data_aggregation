@@ -29,8 +29,7 @@ recent_indicator <- function(data, year_source, value_source, high, indicator_na
   data <- data %>%
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
-    dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", 
+    dplyr::filter(Species %in% key2$Species, 
                   is.na(Value) == FALSE, 
                   is.na(Year) == FALSE) %>%
     
@@ -76,8 +75,7 @@ yr5mean_indicator <- function(data, year_source, value_source, high, indicator_n
   data <- data %>%
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
-    dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", 
+    dplyr::filter(Species %in% key2$Species, 
                   is.na(Value) == FALSE, 
                   is.na(Year) == FALSE)
   
@@ -132,8 +130,7 @@ maxalltime_indicator <- function(data, year_source, value_source, high, indicato
   data <- data %>%
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
-    dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", 
+    dplyr::filter(Species %in% key2$Species, 
                   is.na(Value) == FALSE, 
                   is.na(Year) == FALSE) %>%
     dplyr::group_by(Species, Region) %>%
@@ -177,8 +174,7 @@ yr10hist_indicator <- function(data, year_source, value_source, high, indicator_
   data <- data %>%
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source, "Year" = year_source) %>%
-    dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE",
+    dplyr::filter(Species %in% key2$Species,
                   is.na(Value) == FALSE, 
                   is.na(Year) == FALSE)
   
@@ -229,16 +225,14 @@ alltime_indicator_diet <- function(data, value_source, year_source, high, indica
     dplyr::select(Species, Region, value_source, year_source) %>%
     dplyr::rename("Value" = value_source,
                   "Year" = year_source) %>%
-    dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE", 
+    dplyr::filter(Species %in% key2$Species, 
                   is.na(Value) == FALSE, 
                   is.na(Year) == FALSE) %>%
     
     dplyr::group_by(Species, Region) %>%
     dplyr::mutate(diet_diversity = length(unique(Value)),
                   diet = paste(stringr::str_sort(unique(Value)), 
-                               collapse = ", ")
-                  ) %>%
+                               collapse = ", ")) %>%
     dplyr::select(Species, Region, diet_diversity, diet) %>%
     dplyr::distinct() %>%
     dplyr::ungroup()

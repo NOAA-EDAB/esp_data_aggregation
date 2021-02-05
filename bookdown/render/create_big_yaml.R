@@ -1,16 +1,18 @@
 `%>%` <- dplyr::`%>%`
 
-yaml <- readLines(here::here(".github/workflows", "test_report.yaml"))
+yaml <- readLines(here::here(".github/workflows", "building_block.yaml"))
 
 all_yamls <- c()
-for(i in 1:length(all_species)){
-  new_yaml <- yaml[-c(1:7)] %>%
+for(i in 1:37){
+  new_yaml <- yaml %>%
     stringr::str_replace("build1", paste("build", i, sep = "")) %>%
-    stringr::str_replace("species: '1'", paste("species: ", i, sep = ""))
+    stringr::str_replace("REPLACE", i %>% as.character)
   all_yamls <- c(all_yamls, new_yaml)
 }
-all_yamls <- c(yaml[1:7], all_yamls)
 
-all_yamls %>%
- ymlthis::use_yml_file(path = here::here(".github/workflows/big_yaml.yaml"))
-
+write.table(all_yamls, 
+            file = here::here(".github/workflows/test.txt"),
+            quote = FALSE,
+            row.names = FALSE)
+# add header, copy file text and add on github web
+# personal access token issue with pushing from local
