@@ -9,9 +9,12 @@ output:
       collapsed: FALSE
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, message = F, warning = F, 
-                      fig.width = 8, fig.align = 'center')
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE,
+                      warning = FALSE, 
+                      fig.width = 8, 
+                      fig.align = 'center')
 
 library(ggplot2)
 `%>%` <- dplyr::`%>%`
@@ -39,6 +42,8 @@ make_html_table(dat, col_names = colnames(dat))
 ```
 
 ### Guilds
+*Guild risk needs to be updated as of 2/5/2021*
+
 Guilds were determined from [previous reporting](https://repository.library.noaa.gov/view/noaa/5277). Guilds were further broken into small (<40cm) and large (>=40cm) size classes. To determine guild risk, the risk values for each species were averaged over all stock areas. Then risk values were averaged by guild. Guilds were ranked in each indicator category.
 
 ```{r, guild_info, results = "asis"}
@@ -160,7 +165,7 @@ print(fig_less)
 # remove labels in 2/3 categories
 new_label <- c()
 for(i in 1:nrow(data)){
-  if(data$category[i] == "Biological"){
+  if(data$category[i] == "Socioeconomic"){
     new_label[i] <- paste(data$Region[i], " ", data$Species[i], ", ", 
                               data$total_risk[i] %>% round(digits = 2), 
                               sep = "")
@@ -180,6 +185,9 @@ data$new_label <- new_label %>%
   stringr::str_replace("Atlantic mackerel", "Atl mackerel") %>%
   stringr::str_replace(" / ", "/")
 
+data$category <- factor(data$category, 
+                        c("Socioeconomic", "Biological", "Population", "Habitat"))
+
 fig <- ggplot(data,
               aes(x = reorder(stock, -total_risk),
                   y = Indicator %>% 
@@ -193,7 +201,8 @@ fig <- ggplot(data,
             #cex = 3,
             color = "black")+
   facet_grid(cols = vars(category),
-             scales = "free_x")+
+             scales = "free_x",
+             space = "free_x")+
   theme_bw()+
   scale_fill_gradient2(high = "darkred", 
                        mid = "beige", 
@@ -242,7 +251,7 @@ make_html_table(dat, col_names = colnames(dat))
 ```
 
 ### Guild risk{.tabset .tabset-fade .tabset-pills}
-
+*Guild risk needs to be updated as of 2/5/2021*
 #### Figure
 ```{r guild, fig.height = 12}
 mycolors <-  grDevices::colorRampPalette(

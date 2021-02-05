@@ -30,8 +30,7 @@ get_running_value_risk <- function(data, year_source, value_source,
   
   data <- data %>%
     dplyr::select(Species, Region, Value, Year) %>%
-    dplyr::mutate(ne_stock = (Species %in% key2$Species)) %>%
-    dplyr::filter(ne_stock == "TRUE",
+    dplyr::filter(Species %in% key2$Species,
                   is.na(Value) == FALSE, 
                   is.na(Year) == FALSE)
   
