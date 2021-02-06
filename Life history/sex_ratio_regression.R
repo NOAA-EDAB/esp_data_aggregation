@@ -22,70 +22,98 @@ survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
 
 library(survdat)
 library(dbutils)
+
 channel<-dbutils::connect_to_database("sole", uid="RTABANDERA")
+#get discriptions of codes of sex and maturity
 sex.codes<-survdat::get_sex(channel)
 sex.fcs<-survdat::get_sex_fscs(channel)
+sex.maturity<-survdat::get_maturity(channel)
 
-survdat::
+
 bsb<-survdata.w.codes %>% filter(common_name == "black sea bass")
-surv.maturity<-survdat::get_maturity(channel)
-bsb %>% distinct(SEX)
+#change year from char to numeric 
 bsb <- bsb %>% mutate(YEAR=as.numeric(YEAR))
 
+#recode sexed fish to readable names
+#sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown   
+bsb$SEX <-recode(bsb$SEX, "1"="male" , "2"="female", "0"="unknown", "4"= "transitional")
+#change sex from chr to factor
+bsb <-bsb %>% mutate(SEX= as.factor(SEX))
+#filter out just m anf f fish for analysis and plotting
+bsb.m.f<-bsb %>% filter(SEX== "male" | SEX=="female")
 
 
 
-#sex codes 1 male, 2 female, 4 transitional, 0 unsexed   
-bsb.m.f<-bsb %>% filter(SEX== 1 | SEX==2)
+#remove unaged fish
+#bsb<-bsb %>% drop_na(AGE)
+
+
+
 #, YEAR<2015
 
-bsb.m.f$SEX <-recode(bsb.m.f$SEX, "1"="MALE" , "2"="FEMALE")
-bsb.m.f <-bsb.m.f %>% mutate(SEX= as.factor(SEX))
-#bsb.m.f <- bsb.m.f %>% mutate(SEX, SEX= as.numeric(bsb.m.f$SEX))
-
-# bsb.m.f<-bsb.m.f %>% mutate(SEX=as.factor(SEX))
-# bsb.m.f %>% ggplot(aes(x=SEX))+geom_histogram(stat="count")
-# 
-# bsb.m.f %>% ggplot(aes(x=SEX, y=LENGTH))+geom_boxplot()
-# 
 
 
+bsb.m.f$bins<-ggplot2::cut_width(bsb.m.f$LENGTH,5)
+
+t1<-bsb.m.f %>%  group_by(bins) %>% mutate(sex.ratio=(sum(SEX=="male")/sum(SEX=="female")), fish.count=length(SEX))
+t1 %>% ggplot()+geom_point(aes(x=bins, y=sex.ratio, size=fish.count))
 
 
 #sex ratio plot
-
-bsb.ratio<-bsb.m.f %>%  group_by(LENGTH) %>% mutate(sex.count=sum(SEX=="MALE")/length(SEX), fish.count=length(SEX))
+#calculate ratio as m/f for each length class 
+bsb.ratio<-bsb.m.f %>%  group_by(LENGTH) %>% mutate(sex.ratio=((sum(SEX=="male")/length(SEX))*100), fish.count=length(SEX))
 
 ggplot(data = bsb.ratio)+
-  geom_point(aes(x=LENGTH,y=sex.count, size=fish.count))+
-  xlab("Body Length")+
-  ylab("Sex ratio (M/F) ")+
-  guides(size=guide_legend(title="n"))+
+  geom_point(aes(x=LENGTH,y=sex.ratio, size=fish.count))+
+  xlab("Body Length (cm)")+
+  ylab("Percent male  (%) ")+
+  guides(size=guide_legend(title=" n"))+
+  ggtitle("Male across bodysize ")+
   theme_minimal()
   
 
-
-
+#Using a binonmial generalized linear model of body size and sex
 
 bsb.mod<-glm(SEX~LENGTH, data=bsb.m.f, binomial(link = "logit"))
 
 summary(bsb.mod)
 
+((bsb.mod$null.deviance-bsb.mod$deviance)/bsb.mod$null.deviance)
 exp(confint(bsb.mod))
+
+ggplot(data= bsb.m.f)+geom_point(aes( x=jitter(LENGTH), y=SEX ,size=AGE)  )
+
+
 
 newdata1 <- with(bsb.m.f, data.frame(LENGTH=mean(LENGTH)))
 newdata1$ratio<-predict(bsb.mod, newdata = newdata1, type = "response")
+#make a new dataset with range of lengths that are observed
+bsb.new<-data.frame(LENGTH=seq(min(bsb.m.f$LENGTH),max(bsb.m.f$LENGTH)))
 
-bsb.new<-data.frame(LENGTH=seq(5,60))
-predict(bsb.mod, newdata=bsb.new)
 
-bsb.new$prob<-predict(bsb.mod, data.frame(LENGTH=seq(5,60)), type="response")
-bsb.new %>% ggplot(aes(x=LENGTH, y=prob))+stat_smooth()+ geom_point(data=bsb.m.f,aes(x=LENGTH, y=SEX))
+p(male)=1/e^(-2.084707*length)
+bsb.new$prob<-predict(bsb.mod, data.frame(LENGTH=seq(min(bsb.m.f$LENGTH),max(bsb.m.f$LENGTH))), type="response")
+
+bsb.demo<-merge(bsb.new,bsb.m.f, by = "LENGTH")
+bsb.demo$SEX<-bsb.demo %>% mutate(SEX, as.numeric(SEX))
+
+bsb.demo %>%
+  ggplot(aes(x=LENGTH, y=prob))+
+  geom_smooth(size=3)+
+  geom_point(aes(x=LENGTH,y=SEX))
+  xlab("Length (cm)")+
+  ylab("Probablity of being male ")+
+  geom_text(aes(10,1,label = "Male", vjust = -.5))+
+  geom_text(aes(11,0,label = "Female", vjust = -.5))+
+  geom_hline(yintercept=c(1,0))+
+  annotate("text",x=20,y=.8,label="p(male)=1/e^(-2.084707*length),  P-value= <<0.001")+
+  theme_minimal()
+  
 
 bsb.demo<-merge(bsb.new,bsb.m.f, by = "LENGTH")
 
 
-ggplot(data= bsb.demo)+geom_boxplot(aes(x=SEX, y=LENGTH))
+
 ggplot(data= bsb.demo)+geom_point(aes(x=LENGTH,y=SEX, color=SEX))
 
 
