@@ -21,3 +21,5 @@ Socioeconomic,com_catch_hist,Mean of past 10 years as a percent of the historica
 Socioeconomic,revenue_max,Max of all time,High is risky
 Socioeconomic,revenue_5yr,Mean of past 5 years,High is risky
 Socioeconomic,revenue_hist,Mean of past 10 years as a percent of the historical mean,Decrease is risky
+Habitat,habitat_vulnerability,ecodata habitat vulnerability,High is risky
+Population,climate_vulnerability,Hare et al. 2016,High is risky

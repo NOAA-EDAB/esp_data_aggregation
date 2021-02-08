@@ -18,7 +18,9 @@ guild_risk <- dplyr::left_join(guilds, risk, by = "Species")
 head(guild_risk)
 
 # add length classes
-survey <- readRDS(here::here("data", "survey_data.RDS"))
+survey <- readRDS(here::here("data", "survey_data.RDS")) %>%
+  dplyr::mutate(Species = Species %>%
+                  stringr::str_replace("Goosefish", "Monkfish"))
 head(survey)
 
 survey2 <- survey %>%
