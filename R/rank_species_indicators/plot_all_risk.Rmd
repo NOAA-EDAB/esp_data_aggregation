@@ -32,6 +32,13 @@ data$category <- factor(data$category,
 
 guild_data$category <- factor(guild_data$category, 
                         c("Socioeconomic", "Biological", "Population", "Habitat"))
+
+# distinguish between 0.5 due to missing data and true 0.5 ranking
+for(i in 1:nrow(data)){
+  if(data$Value[i] %>% is.na()){
+    data$norm_rank[i] <- NA
+  }
+}
 ```
 
 # Risk ranking of Northeast stocks {.tabset .tabset-fade}
@@ -39,6 +46,7 @@ guild_data$category <- factor(guild_data$category,
 ## Methods {.tabset .tabset-fade}
 
 ### Risk ranking
+
 All stocks were ranked in order of increasing risk. The stock with the highest ranking is the stock determined to be at the highest risk. In this case, high risk has two meanings: (1) high importance (e.g., a stock with a high catch would have a high risk ranking for the catch indicator) or high vulnerability (e.g., a stock with low B/Bmsy would have a high risk ranking for the B/Bmsy indicator). The normalized rank was determined by dividing each stock's rank by the total number of stocks considered for that indicator. Stocks that were missing indicator measurements were assigned a normalized rank of 0.5.
 
 ```{r, indicators}
@@ -101,33 +109,20 @@ data$Region2 <- data$Region %>%
     stringr::str_replace("Mid-Atlantic", "Mid") %>%
     stringr::str_replace("Cape Hatteras", "Cape\nHatteras")
 
-new_label <- c()
-for(i in 1:nrow(data)){
-  if(data$category[i] == "Socioeconomic"){
-    new_label[i] <- data$label[i]
-  } else{new_label[i] <- ""}
-}
-
 fig <- ggplot(data,
                    aes(y = reorder(label, -total_risk),
                        x = Indicator %>% 
                               stringr::str_replace_all("_", " "),
                        fill = norm_rank ))+
   geom_raster(stat = "identity")+
-  geom_text(aes(y = reorder(label, -total_risk),
-                x = 0.5,
-                label = new_label),
-            hjust = 0,
-            color = "black")+
   theme_bw()+
-  scale_fill_gradient2(high = "darkred", 
-                       mid = "beige", 
-                       low = "forestgreen", 
-                       midpoint = 0.5,
-                       name = "Normalized rank")+
+  viridis::scale_fill_viridis(limits = c(0, 1),
+                              breaks = c(0, 0.5, 1),
+                              direction = -1,
+                              na.value = "gray90",
+                              name = "Normalized rank")+
   theme(axis.text.x = element_text(angle = 90),
-        axis.text.y = element_blank(),
-        axis.ticks.y =element_blank(),
+        
         panel.grid.major.x = element_blank(),
         panel.grid.minor.x = element_blank(),
         strip.text.y = element_text(angle = 0),
@@ -146,14 +141,9 @@ print(fig)
 
 ##### In order of risk
 ```{r, all_stocks, fig.height = 15}
-new_label <- c()
-for(i in 1:nrow(data)){
-  if(data$category[i] == "Socioeconomic"){
-    new_label[i] <- paste(data$Region[i], " ", data$Species[i], ", ", 
-                              data$total_risk[i] %>% round(digits = 2), 
+new_label <- paste(data$Region, " ", data$Species, ", ", 
+                              data$total_risk %>% round(digits = 2), 
                               sep = "")
-  } else{new_label[i] <- ""}
-}
 
 # shorten labels
 data$new_label <- new_label %>%
@@ -169,34 +159,25 @@ data$new_label <- new_label %>%
   stringr::str_replace(" / ", "/")
 
 fig <- ggplot(data,
-              aes(x = reorder(stock, -total_risk),
-                  y = Indicator %>% 
+              aes(y = reorder(new_label, -total_risk),
+                  x = Indicator %>% 
                               stringr::str_replace_all("_", " "),
                   fill = norm_rank ))+
   geom_raster(stat = "identity")+
-  geom_text(aes(x = reorder(stock, -total_risk),
-                y = 0.5,
-                label = new_label),
-            hjust = 0,
-            #cex = 3,
-            color = "black")+
   facet_grid(cols = vars(category),
              scales = "free_x",
              space = "free_x")+
   theme_bw()+
-  scale_fill_gradient2(high = "darkred", 
-                       mid = "beige", 
-                       low = "forestgreen", 
-                       midpoint = 0.5,
-                       name = "Normalized rank")+
-  theme(axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        axis.title.y = element_blank(),
+  viridis::scale_fill_viridis(limits = c(0, 1),
+                              breaks = c(0, 0.5, 1),
+                              direction = -1,
+                              na.value = "gray90",
+                              name = "Normalized rank")+
+  theme(axis.title.y = element_blank(),
         axis.text.x = element_text(angle = 90),
         strip.text.x = element_text(angle = 75),
         legend.position = "top")+
-  ylab("Indicator")+
-  coord_flip()
+  xlab("Indicator")
 
 print(fig)
 ```
@@ -217,7 +198,7 @@ dat <- data %>%
   dplyr::select(-X, -stock, -label, -Region2, -new_label, -n_stocks_per_region) %>%
   character_to_factor()
 
-make_html_table_thin(dat, col_names = colnames(dat))
+make_html_table(dat, col_names = colnames(dat))
 ```
 
 ##### Total risk only
@@ -252,11 +233,11 @@ ggplot(guild_data,
   facet_grid(cols = vars(category),
              scales = "free",
              space = "free")+
-  scale_fill_gradient2(high = "darkred", 
-                       mid = "beige", 
-                       low = "forestgreen", 
-                       midpoint = 0.5,
-                       name = "Average normalized rank")+
+  viridis::scale_fill_viridis(limits = c(0, 1),
+                              breaks = c(0, 0.5, 1),
+                              direction = -1,
+                              na.value = "gray90",
+                              name = "Average normalized rank")+
   theme_bw()+
   ylab("Guild")+
   xlab("")+

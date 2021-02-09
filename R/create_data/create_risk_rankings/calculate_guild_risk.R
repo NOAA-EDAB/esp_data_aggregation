@@ -14,6 +14,13 @@ head(guilds)
 risk <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv"))
 head(risk)
 
+# remove 0.5 due to missing data
+for(i in 1:nrow(risk)){
+  if(risk$Value[i] %>% is.na()){
+    risk$norm_rank[i] <- NA
+  }
+}
+
 guild_risk <- dplyr::left_join(guilds, risk, by = "Species")
 head(guild_risk)
 
@@ -39,24 +46,28 @@ survey2 <- survey %>%
   dplyr::mutate(len_class = round(overall_mean_len, digits = -1))
 survey2
 
+# mean by species (combind stocks of same species)
 guild_risk2 <- dplyr::left_join(survey2, guild_risk, by = "Species") %>%
   dplyr::group_by(Species, Scientific_name, Indicator, category, Guild, overall_mean_len) %>%
-  dplyr::summarise(mean_norm_risk = mean(norm_rank)) %>%
+  dplyr::summarise(mean_norm_risk = mean(norm_rank, na.rm = TRUE)) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(size = ifelse(overall_mean_len < 40, "small", "large")) 
 
+# mean by guild
 guild_risk3 <- guild_risk2 %>%
   dplyr::group_by(Guild, size, Indicator, category) %>%
-  dplyr::summarise(guild_risk = sum(mean_norm_risk),
+  dplyr::summarise(guild_risk = sum(mean_norm_risk, na.rm = TRUE),
                    n_guild_species = length(mean_norm_risk),
-                   avg_guild_risk = guild_risk/n_guild_species) %>%
+                   n_guild_species_measured = sum(is.na(mean_norm_risk) == FALSE),
+                   avg_guild_risk = guild_risk/n_guild_species_measured) %>%
   dplyr::filter(Guild != "") %>%
   dplyr::ungroup() %>% 
   dplyr::group_by(Indicator) %>%
   dplyr::mutate(rank = rank(avg_guild_risk),
                 norm_rank = rank/max(rank)) %>%
   dplyr::group_by(Guild, size) %>%
-  dplyr::mutate(total_guild_risk = sum(avg_guild_risk),
+  dplyr::mutate(total_guild_risk = sum(avg_guild_risk, na.rm = TRUE) +
+                  0.5 * sum(is.na(avg_guild_risk)), # add 0.5 for missing values
                 sum_ranks = sum(rank))
 head(guild_risk3)
 
