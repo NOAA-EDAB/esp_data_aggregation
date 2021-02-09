@@ -111,7 +111,7 @@ catch <- get_risk(data = dat,
                   high = "high_risk",
                   indicator_name = "asmt_catch") 
 
-# * mean of past 10 years as % of historical ----
+# * mean of past 10 years as % of historical - magnitude ----
 ### abundance, recruitment, biomass, mean length, max length ----
 
 # since this is a %, it doesn't matter that the units are different by species
@@ -124,7 +124,7 @@ abun <- get_risk(data = dat,
                  year_source = "Year",
                  value_source = "Value", 
                  analysis = "past10_hist",
-                 high = "low_risk",
+                 high = "high_risk",
                  indicator_name = "asmt_abundance")
 
 ### biomass (asmt) ----
@@ -134,7 +134,7 @@ biomass <- get_risk(data = dat,
                     year_source = "Year",
                     value_source = "Value", 
                     analysis = "past10_hist",
-                    high = "low_risk",
+                    high = "high_risk",
                     indicator_name = "asmt_biomass")
 
 ### recruitment ----
@@ -143,7 +143,7 @@ recruit <- get_risk(data = dat,
                     year_source = "Year",
                     value_source = "Value", 
                     analysis = "past10_hist",
-                    high = "low_risk",
+                    high = "high_risk",
                     indicator_name = "recruitment")
 
 ### biomass (survey) ----
@@ -157,14 +157,14 @@ biomass_f <- get_risk(data = biomass_surv %>%
                       year_source = "YEAR",
                       value_source = "BIOMASS",
                       analysis = "past10_hist",
-                      high = "low_risk",
+                      high = "high_risk",
                       indicator_name = "biomass_fall")
 biomass_s <- get_risk(data = biomass_surv %>%
                         dplyr::filter(SEASON == "SPRING", Region != "Outside stock area"), 
                       year_source = "YEAR",
                       value_source = "BIOMASS",
                       analysis = "past10_hist",
-                      high = "low_risk",
+                      high = "high_risk",
                       indicator_name = "biomass_spring")
 
 ### abundance (survey) ----
@@ -178,14 +178,14 @@ abun_f <- get_risk(data = abun_survey %>%
                    year_source = "YEAR", 
                    value_source = "ABUNDANCE", 
                    analysis = "past10_hist",
-                   high = "low_risk",
+                   high = "high_risk",
                    indicator_name = "abundance_fall")
 abun_s <- get_risk(data = abun_survey %>% 
                      dplyr::filter(SEASON == "SPRING", Region != "Outside stock area"), 
                    year_source = "YEAR", 
                    value_source = "ABUNDANCE", 
                    analysis = "past10_hist",
-                   high = "low_risk",
+                   high = "high_risk",
                    indicator_name = "abundance_spring")
 
 ### length ----
@@ -198,14 +198,14 @@ avg_len_f <- get_risk(data = length %>%
                       year_source = "YEAR", 
                       value_source = "mean_len", 
                       analysis = "past10_hist",
-                      high = "low_risk",
+                      high = "high_risk",
                       indicator_name = "avg_length_fall")
 avg_len_s <- get_risk(data = length %>%
                         dplyr::filter(SEASON == "SPRING", Region != "Outside stock area"), 
                       year_source = "YEAR", 
                       value_source = "mean_len", 
                       analysis = "past10_hist",
-                      high = "low_risk",
+                      high = "high_risk",
                       indicator_name = "avg_length_spring")
 
 max_len_f <- get_risk(data = length %>%
@@ -213,14 +213,14 @@ max_len_f <- get_risk(data = length %>%
                       year_source = "YEAR", 
                       value_source = "max_len", 
                       analysis = "past10_hist",
-                      high = "low_risk",
+                      high = "high_risk",
                       indicator_name = "max_length_fall")
 max_len_s <- get_risk(data = length %>% 
                         dplyr::filter(SEASON == "SPRING", Region != "Outside stock area"), 
                       year_source = "YEAR", 
                       value_source = "max_len", 
                       analysis = "past10_hist",
-                      high = "low_risk",
+                      high = "high_risk",
                       indicator_name = "max_length_spring")
 
 # * calculated from all time ----
@@ -279,14 +279,14 @@ com_hist <- get_risk(data = com_sum,
                      year_source = "Year", 
                      value_source = "total_catch", 
                      analysis = "past10_hist",
-                     high = "low_risk",
+                     high = "high_risk",
                      indicator_name = "com_catch_hist")
 
 rev_hist <- get_risk(data = com_sum, 
                      year_source = "Year", 
                      value_source = "total_dollars", 
                      analysis = "past10_hist",
-                     high = "low_risk",
+                     high = "high_risk",
                      indicator_name = "revenue_hist")
 
 # * merge everything except rec, com, clim_vul, hab_vul ----
@@ -420,14 +420,14 @@ new_data <- dplyr::full_join(data, fixed_data,
 new_data
 
 new_data$Year <- new_data$Year %>%
-  stringr::str_replace("mean of 2010 - 2020", "mean of 2010 - 2020 vs historic") %>%
-  stringr::str_replace("mean of 2010 - 2020", "mean of 2009 - 2019 vs historic")
+  stringr::str_replace("mean of 2010 - 2020", "magnitude of % change, mean of 2010 - 2020 vs historic") %>%
+  stringr::str_replace("mean of 2010 - 2020", "magnitude of % change, mean of 2009 - 2019 vs historic")
 
 write.csv(new_data,
           file = here::here("data/risk_ranking", "full_risk_data.csv"))
 
-write.csv(new_data %>% dplyr::ungroup() %>% dplyr::select(category, Indicator) %>% dplyr::distinct(), 
-          file = here::here("data/risk_ranking", "indicator_key.csv"))
+#write.csv(new_data %>% dplyr::ungroup() %>% dplyr::select(category, Indicator) %>% dplyr::distinct(), 
+ #         file = here::here("data/risk_ranking", "indicator_key.csv"))
 
 # render Rmd report ----
 rmarkdown::render(here::here("R/rank_species_indicators", "plot_all_risk.Rmd"), 

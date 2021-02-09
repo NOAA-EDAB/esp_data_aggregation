@@ -4,7 +4,8 @@ key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/se
 
 # parse out survey data for NE species only, add common name
 key2 <- data.frame(SVSPP = unique(key$SVSPP),
-                   Species = stringr::str_to_sentence(unique(key$COMNAME)))
+                   Species = stringr::str_to_sentence(unique(key$COMNAME))) %>%
+  dplyr::mutate(Species = Species %>% stringr::str_replace("Goosefish", "Monkfish"))
 
 # most recent measurement ----
 get_risk <- function(data, year_source, value_source, 
@@ -39,7 +40,7 @@ get_risk <- function(data, year_source, value_source,
         # mean value because yellowtail flounder has two ffmsys
         
         dplyr::group_by(Species, Region, Year) %>%
-        dplyr::summarise(Value2 = mean (Value)) %>%
+        dplyr::summarise(Value2 = mean(Value, na.rm = TRUE)) %>%
         dplyr::ungroup() %>%
         dplyr::rename("Value" = "Value2")
     }
@@ -50,7 +51,7 @@ get_risk <- function(data, year_source, value_source,
     data <- data %>%
       dplyr::filter(Year > max_yr - 5) %>%
       dplyr::group_by(Species, Region) %>%
-      dplyr::summarise(Value2 = max(Value)) %>%
+      dplyr::summarise(Value2 = mean(Value, na.rm = TRUE)) %>%
       dplyr::rename("Value" = "Value2") %>%
       dplyr::mutate(Year = paste("mean of", max_yr - 5, "-", max_yr)) %>%
       dplyr::ungroup() %>%
@@ -74,13 +75,13 @@ get_risk <- function(data, year_source, value_source,
     data <- data %>%
       dplyr::mutate(recent = Year > max_yr - 10) %>%
       dplyr::group_by(Species, Region, recent) %>%
-      dplyr::mutate(mean_abun = mean(Value)) %>%
+      dplyr::mutate(mean_abun = mean(Value, na.rm = TRUE)) %>%
       dplyr::select(Species, Region, recent, mean_abun) %>%
       dplyr::distinct() %>%
       tidyr::pivot_wider(names_from = recent,
                          values_from = mean_abun,
                          names_prefix = "recent_") %>%
-      dplyr::mutate(Value = recent_TRUE/recent_FALSE) %>%
+      dplyr::mutate(Value = abs(recent_TRUE - recent_FALSE)/recent_FALSE) %>% # magnitude of % change
       dplyr::select(Species, Region, Value) %>%
       dplyr::mutate(Year = paste("mean of", max_yr - 10, "-", max_yr)) %>%
       dplyr::ungroup()

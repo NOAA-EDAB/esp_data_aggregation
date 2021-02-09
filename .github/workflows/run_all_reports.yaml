@@ -1,6 +1,7 @@
 on:
   push:
-    branches: abby
+    branches: main
+    paths: bookdown/**
 
 name: run_all_bookdown_reports
 
