@@ -48,15 +48,13 @@ bsb.m.f<-bsb %>% filter(SEX== "male" | SEX=="female")
 #bsb<-bsb %>% drop_na(AGE)
 
 
+#bin the years of fish into decades to compare if model parameters are chaging 
+bsb.m.f<-bsb.m.f %>% mutate(decade=cut_width(YEAR, width = 10, boundary = 1980))
+#levels(bsb.m.f$decade)
+levels(bsb.m.f$decade)<-c( "1980","1990", "2000","2010")
 
-#, YEAR<2015
 
 
-
-bsb.m.f$bins<-ggplot2::cut_width(bsb.m.f$LENGTH,5)
-
-t1<-bsb.m.f %>%  group_by(bins) %>% mutate(sex.ratio=(sum(SEX=="male")/sum(SEX=="female")), fish.count=length(SEX))
-t1 %>% ggplot()+geom_point(aes(x=bins, y=sex.ratio, size=fish.count))
 
 
 #sex ratio plot
@@ -74,9 +72,14 @@ ggplot(data = bsb.ratio)+
 
 #Using a binonmial generalized linear model of body size and sex
 
-bsb.mod<-glm(SEX~LENGTH, data=bsb.m.f, binomial(link = "logit"))
+library(boot)
 
+bsb.mod<-glm(SEX~LENGTH+decade+LENGTH*decade, data=bsb.m.f, binomial(link = "logit"))
 summary(bsb.mod)
+
+boot::inv.logit(bsb.mod$coefficients)
+exp(-1.566383)/(1+exp(-1.566383))
+exp(-1.566383-0.218066)/(1+exp(-1.566383-0.218066))
 
 ((bsb.mod$null.deviance-bsb.mod$deviance)/bsb.mod$null.deviance)
 exp(confint(bsb.mod))
@@ -109,6 +112,7 @@ bsb.demo %>%
   annotate("text",x=20,y=.8,label="p(male)=1/e^(-2.084707*length),  P-value= <<0.001")+
   theme_minimal()
   
+  plot(bsb.mod)
 
 bsb.demo<-merge(bsb.new,bsb.m.f, by = "LENGTH")
 
