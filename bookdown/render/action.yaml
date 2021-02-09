@@ -10,12 +10,12 @@ runs:
    using: "composite"
    steps:
    
-      - run: brew install -qq pandoc > /dev/null
+      - run: brew install -qq pandoc < /dev/null
         shell: bash
 
       - run: |        
-          sudo R CMD -qq javareconf > /dev/null
-          sudo apt-get install -qq libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev > /dev/null
+          sudo R CMD -qq javareconf < /dev/null
+          sudo apt-get install -qq libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev < /dev/null
         shell: bash
           
       - run: |
