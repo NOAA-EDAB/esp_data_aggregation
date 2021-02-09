@@ -44,7 +44,7 @@ All stocks were ranked in order of increasing risk. The stock with the highest r
 ```{r, indicators}
 dat <- indicator_info %>%
   dplyr::arrange(Category)
-make_html_table(dat, col_names = colnames(dat))
+make_html_table_thin(dat, col_names = colnames(dat))
 ```
 
 ### Guilds
@@ -68,7 +68,23 @@ Ranks for all stocks.
 
 #### Figures {.tabset .tabset-fade}
 
-The total risk (sum of all normalized risk values) is shown for each stock.
+The number following the species name is the total risk (sum of all normalized risk values).
+
+```{r, regions}
+dat <- data.frame(Abbreviation = c("CC", "GOM", "GB", "NE", "Mid", 
+                                   "E", "N", "S"),
+                  Region = c("Cape Cod", "Gulf of Maine", "Georges Bank", 
+                             "New England", "Mid-Atlantic", "East", "North", 
+                             "South"))
+
+dat %>% DT::datatable(rownames = FALSE,
+                      extensions = 'Scroller',
+                      caption = "Region abbreviations",
+                      options = list(deferRender = TRUE,
+                                     scrollY = 100,
+                                     scrollX = TRUE,
+                                     scroller = TRUE))
+```
 
 ##### By region
 ```{r plot_region, fig.height = 15}
@@ -201,7 +217,7 @@ dat <- data %>%
   dplyr::select(-X, -stock, -label, -Region2, -new_label, -n_stocks_per_region) %>%
   character_to_factor()
 
-make_html_table(dat, col_names = colnames(dat))
+make_html_table_thin(dat, col_names = colnames(dat))
 ```
 
 ##### Total risk only
@@ -219,19 +235,19 @@ make_html_table(dat, col_names = colnames(dat))
 ### Guild risk{.tabset .tabset-fade .tabset-pills}
 
 #### Figure
-```{r guild, fig.height = 8}
-#mycolors <-  grDevices::colorRampPalette(
- # nmfspalette::nmfs_palette("regional web")(6))(guild_data$Indicator %>% 
-  #                                                unique() %>% length())
 
+The number following the guild name is the total risk (sum of all average normalized risk values).
+
+```{r guild, fig.height = 8}
 ggplot(guild_data,
        aes(y = reorder(paste(Guild, "\n", 
                              size, "\n", 
                              total_guild_risk %>% round(digits = 2)) %>%
                          stringr::str_replace("_", "\n"), 
                        total_guild_risk),
-           x = Indicator, 
-           fill = norm_rank %>% as.numeric())) +
+           x = Indicator %>% 
+             stringr::str_replace_all("_", " "), 
+           fill = avg_guild_risk)) +
   geom_raster(stat = "identity")+
   facet_grid(cols = vars(category),
              scales = "free",
@@ -240,7 +256,7 @@ ggplot(guild_data,
                        mid = "beige", 
                        low = "forestgreen", 
                        midpoint = 0.5,
-                       name = "Normalized rank")+
+                       name = "Average normalized rank")+
   theme_bw()+
   ylab("Guild")+
   xlab("")+
@@ -255,16 +271,13 @@ ggplot(guild_data,
 dat <- guild_data %>% 
   dplyr::mutate(Guild = paste(Guild, size)) %>%
   dplyr::select(Guild, n_guild_species, category, Indicator, avg_guild_risk, 
-                rank, norm_rank, total_guild_risk, sum_ranks) %>%
+                total_guild_risk) %>%
   dplyr::mutate(avg_guild_risk = avg_guild_risk %>%
                   round(digits = 2) %>%
                   format(scientific = FALSE,
                          big.mark = ","),
-                norm_rank = norm_rank %>%
-                  round(digits = 3),
                 total_guild_risk = total_guild_risk %>%
                   round(digits = 2)) %>%
-  
   character_to_factor()
 
 make_html_table(dat, col_names = colnames(dat))

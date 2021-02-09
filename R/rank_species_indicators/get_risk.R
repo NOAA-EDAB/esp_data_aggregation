@@ -81,7 +81,7 @@ get_risk <- function(data, year_source, value_source,
       tidyr::pivot_wider(names_from = recent,
                          values_from = mean_abun,
                          names_prefix = "recent_") %>%
-      dplyr::mutate(Value = recent_TRUE/recent_FALSE) %>%
+      dplyr::mutate(Value = abs(recent_TRUE - recent_FALSE)/recent_FALSE) %>% # magnitude of % change
       dplyr::select(Species, Region, Value) %>%
       dplyr::mutate(Year = paste("mean of", max_yr - 10, "-", max_yr)) %>%
       dplyr::ungroup()
