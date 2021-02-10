@@ -33,7 +33,7 @@ plot_asmt(asmt_data,
           col = colors)
 ```
 
-##### Risk
+##### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}
