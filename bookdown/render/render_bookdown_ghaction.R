@@ -10,6 +10,9 @@ all_species <- names$COMNAME %>%
   stringr::str_replace("Goosefish", "Monkfish") # change goosefish to monkfish
 all_species <- all_species[!is.na(all_species)]
 
+# remove any existing reports that could cause a conflict (?)
+unlink(here::here("action_reports"))
+
 dir.create(here::here("action_reports"))
 
 render_bks <- function(x){
