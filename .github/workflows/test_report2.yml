@@ -40,6 +40,11 @@ jobs:
         run: |
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
+          
+      - name: Uninstall and re-install assessmentdata
+        run: |
+          Rscript -e 'remove.packages("assessmentdata")
+          remotes::install_github("NOAA-EDAB/assessmentdata")'
         
       - name: Create reports
         uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@v1.5-beta
