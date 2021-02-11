@@ -19,8 +19,7 @@ data <- dplyr::left_join(bluefish, ecodata::cold_pool,
                          by = "Time")
 
 ggplot(data %>%
-         dplyr::filter(is.na(Var) == FALSE)
-       ,
+         dplyr::filter(is.na(Var) == FALSE),
        aes(x = Val,
            y = Value))+
   geom_line()+
