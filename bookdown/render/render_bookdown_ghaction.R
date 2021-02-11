@@ -59,7 +59,8 @@ render_bks <- function(x){
                         knit_root_dir = new_dir,
                         output_dir = new_dir,
                         clean = FALSE,
-                        quiet = FALSE)
+                        quiet = TRUE) %>% 
+    suppressMessages()
   
   print(paste("Done with", x, "!"))
   
