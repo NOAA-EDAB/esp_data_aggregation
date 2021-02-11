@@ -130,23 +130,24 @@ get_diet_table <- function(data){
         dplyr::summarise(prop2 = sum(proportion))
       
       # summary table
-      table <- normalized %>% dplyr::group_by(gensci, season, Region, year) %>%
+      table <- normalized %>% 
+        dplyr::group_by(gensci, season, Region, year) %>%
         dplyr::filter(sum(prop2) > 0) %>%
         dplyr::group_by(gensci, season, Region) %>%
         dplyr::summarise(mean_proportion = paste(mean(prop2) %>% round(digits = 3), 
                                                  " +- ",
                                                  sd(prop2) %>% round(digits = 3),
-                                                 " (", nrow(prop2), ") ", 
+                                                 " (", length(prop2), ") ", 
                                                  sep = ""),
                          
                          range_proportion = paste(min(prop2) %>% round(digits = 3),
                                                   max(prop2) %>% round(digits = 3),
                                                   sep = " - "))
       
-      return(knitr::kable(table, 
-                          col.names = c("Prey category", "Season", "Region",
+      make_html_table(table, 
+                          col_names = c("Prey category", "Season", "Region",
                                         "Mean proportion +- SD (n years)", 
-                                        "Range")))
+                                        "Range"))
       
     } else print("NOT ENOUGH DATA")
     

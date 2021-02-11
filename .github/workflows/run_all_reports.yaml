@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
         
-      - name: Setup R
+      - name: Set up R
         uses: r-lib/actions/setup-r@master
       
       - name: Cache R packages
@@ -31,14 +31,24 @@ jobs:
         run: |
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
+
+      - name: Install Pandoc
+        run: brew install pandoc
+        shell: bash
+
+      - name: Install command line packages
+        run: |        
+          sudo R CMD javareconf
+          sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
+        shell: bash
         
       - name: Create reports
-        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@v1.5-beta
+        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@main
         with: 
           species: '1:37'
           
       - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@main
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages # The branch the action should deploy to.
