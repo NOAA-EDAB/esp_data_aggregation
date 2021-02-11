@@ -7,8 +7,8 @@ inputs:
     default: '1'
 
 runs:
-  steps:
-    - run: |
-      nums <- ${{ inputs.species }}
-      source(here::here("bookdown/render", "render_bookdown_ghaction.R"))
-      shell: Rscript {0}
+   steps:
+      - run: |
+          nums <- ${{ inputs.species }}
+          source(here::here("bookdown/render", "render_bookdown_ghaction.R"))
+        shell: Rscript {0}
