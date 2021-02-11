@@ -6,7 +6,9 @@ inputs:
     required: true
     default: '1'
 
-run: |
-nums <- ${{ inputs.species }}
-source(here::here("bookdown/render", "render_bookdown_ghaction.R"))
-shell: Rscript {0}
+runs:
+  steps:
+    run: |
+    nums <- ${{ inputs.species }}
+    source(here::here("bookdown/render", "render_bookdown_ghaction.R"))
+    shell: Rscript {0}
