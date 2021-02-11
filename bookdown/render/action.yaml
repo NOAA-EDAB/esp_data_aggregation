@@ -1,24 +1,12 @@
 name: 'Create reports'
-description: 'Render and deploy ESP reports'
+description: 'Render ESP reports'
 inputs:
   species:  #  species indices
     description: 'Which all_species to include (numeric)'
     required: true
     default: '1'
 
-runs:
-   using: "composite"
-   steps:
-   
-      - run: brew install pandoc
-        shell: bash
-
-      - run: |        
-          sudo R CMD javareconf
-          sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
-        shell: bash
-          
-      - run: |
-          nums <- ${{ inputs.species }}
-          source(here::here("bookdown/render", "render_bookdown_ghaction.R"))
-        shell: Rscript {0}
+run: |
+nums <- ${{ inputs.species }}
+source(here::here("bookdown/render", "render_bookdown_ghaction.R"))
+shell: Rscript {0}
