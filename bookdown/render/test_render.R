@@ -7,13 +7,18 @@ source(here::here("R/full_report_functions", "read_data.R"))
 dir.create(here::here("test"))
 setwd(here::here("test"))
 
-file.copy(from = c(here::here("bookdown", "index.Rmd"),
-                   here::here("bookdown", "24-risk-assessment.Rmd")),
+file.copy(#from = c(here::here("bookdown", "index.Rmd"),
+           #        here::here("bookdown", "16-bbmsy.Rmd"),
+            #       here::here("bookdown", "21-ffmsy.Rmd")),
+          
+          recursive = TRUE,
+          from = here::here("bookdown"),
+          
           to = here::here("test"),
           overwrite = TRUE)
 
 bookdown::render_book(input = ".",
-  params = list(species_ID = "Acadian redfish",
+  params = list(species_ID = "Bluefish",
                 
                 latlong_data = latlong,
                 shape = shape,
@@ -46,4 +51,4 @@ bookdown::render_book(input = ".",
   ),
   intermediates_dir = here::here("test"),
   clean = FALSE,
-  quiet = FALSE)
+  quiet = TRUE) %>% suppressMessages()
