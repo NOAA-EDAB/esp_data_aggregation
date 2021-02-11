@@ -1,3 +1,4 @@
+## B/Bmsy 
 
 ```{r, b_functions, cache = params$cache}
 source(here::here("R/full_report_functions", "get_bf.R"))
@@ -10,7 +11,11 @@ asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
 ```{r, check_data}
 print(asmt_sum_data)
 
-params$asmt_sum_data %>% head() %>% print()
+asmt_sum_data %>% 
+  dplyr::filter(Species == species) %>%
+  print()
+
+params$asmt_sum_data %>% print()
 ```
 
 ```{r, b_status}
@@ -27,8 +32,6 @@ if(length(asmt_sum_data$Species) > 1){
 
 ```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
 ```
-
-## B/Bmsy 
 
 B/Bmsy data were pulled from ``r params$asmt_sum_source``.
 
