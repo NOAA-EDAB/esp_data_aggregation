@@ -28,8 +28,11 @@ survey_big <- dplyr::union(survey, survey_ws)
 ricky_survey <- readRDS(here::here("data", "survdat_pull_bio.rds"))
 
 # assessmentdata summary ----
-asmt_sum <- assessmentdata::stockAssessmentSummary 
-#asmt_sum <- read.csv(here::here("data", "assessmentdata_stockAssessmentSummary.csv"))
+#asmt_sum <- assessmentdata::stockAssessmentSummary 
+asmt_sum <- read.csv(here::here("data", "assessmentdata_stockAssessmentSummary.csv"), 
+                     check.names = FALSE,
+                     header = TRUE)[, -1] %>%
+  tibble::as_tibble()
 
 asmt_sum <- asmt_sum %>% 
   dplyr::filter(Jurisdiction == "NEFMC" | 
