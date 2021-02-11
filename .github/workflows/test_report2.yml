@@ -14,16 +14,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      
-      - name: Install Pandoc
-        run: brew install pandoc
-        shell: bash
-
-      - name: Install command line packages
-        run: |        
-          sudo R CMD javareconf
-          sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
-        shell: bash
         
       - name: Set up R
         uses: r-lib/actions/setup-r@master
@@ -40,6 +30,16 @@ jobs:
         run: |
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
+          
+      - name: Install Pandoc
+        run: brew install pandoc
+        shell: bash
+
+      - name: Install command line packages
+        run: |        
+          sudo R CMD javareconf
+          sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
+        shell: bash
         
       - name: Create reports
         uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@abby
