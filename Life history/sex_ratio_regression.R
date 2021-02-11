@@ -68,7 +68,7 @@ ggplot(data = bsb.ratio)+
   guides(size=guide_legend(title=" n"))+
   ggtitle("Male across bodysize ")+
   theme_minimal()
-  
+
 
 #Using a binonmial generalized linear model of body size and sex
 
@@ -104,15 +104,15 @@ bsb.demo %>%
   ggplot(aes(x=LENGTH, y=prob))+
   geom_smooth(size=3)+
   geom_point(aes(x=LENGTH,y=SEX))
-  xlab("Length (cm)")+
+xlab("Length (cm)")+
   ylab("Probablity of being male ")+
   geom_text(aes(10,1,label = "Male", vjust = -.5))+
   geom_text(aes(11,0,label = "Female", vjust = -.5))+
   geom_hline(yintercept=c(1,0))+
   annotate("text",x=20,y=.8,label="p(male)=1/e^(-2.084707*length),  P-value= <<0.001")+
   theme_minimal()
-  
-  plot(bsb.mod)
+
+plot(bsb.mod)
 
 bsb.demo<-merge(bsb.new,bsb.m.f, by = "LENGTH")
 
@@ -136,13 +136,13 @@ ggplot(data = bsb.demo,aes(x=LENGTH, y=prob))+
 ggplot(data = bsb.m.f)+geom_point(aes(x=LENGTH , y= SEX , size=AGE))+
   geom_smooth(data= bsb.new,aes(x=LENGTH,y=(prob+1)))+
   scale_y_continuous(
-  
-  # Features of the first axis
-  name = "SEX",
-  
-  # Add a second axis and specify its features
-  sec.axis = sec_axis( trans =~., name="Probability")
-)
+    
+    # Features of the first axis
+    name = "SEX",
+    
+    # Add a second axis and specify its features
+    sec.axis = sec_axis( trans =~., name="Probability")
+  )
 
 
 
@@ -154,16 +154,18 @@ ggplot(data = bsb.m.f)+geom_point(aes(x=LENGTH , y= SEX , size=AGE))+
 
 
 
-  
-  
-  
-  dplyr::summarise(sex.ratio= length())
 
 
 
+dplyr::summarise(sex.ratio= length())
 
 
+library(tidyverse)
 
+bsb.10<-bsb.m.f %>% filter(YEAR>2010)
 
+t1<-bsb.10 %>%  group_by(LENGTH) %>% mutate(sex.ratio=((sum(SEX=="male")/length(SEX))*100), fish.count=length(SEX))
 
+bsb.10
+t1 %>% ggplot(aes(x=LENGTH,y = sex.ratio))+geom_point()
 
