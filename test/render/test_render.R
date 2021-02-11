@@ -18,7 +18,7 @@ file.copy(#from = c(here::here("bookdown", "index.Rmd"),
           overwrite = TRUE)
 
 bookdown::render_book(input = ".",
-  params = list(species_ID = "Acadian redfish",
+  params = list(species_ID = "Bluefish",
                 
                 latlong_data = latlong,
                 shape = shape,
