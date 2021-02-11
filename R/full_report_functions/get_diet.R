@@ -147,7 +147,7 @@ get_diet_table <- function(data){
       make_html_table(table, 
                           col_names = c("Prey category", "Season", "Region",
                                         "Mean proportion +- SD (n years)", 
-                                        "Range")))
+                                        "Range"))
       
     } else print("NOT ENOUGH DATA")
     
