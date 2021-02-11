@@ -1,0 +1,25 @@
+on:
+  schedule:
+    - cron: "0 0 * * 1,4"
+
+name: maintain_large_cache
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:
+        
+      - name: Setup R
+        uses: r-lib/actions/setup-r@master
+      
+      - name: Check cached R packages
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+        
+

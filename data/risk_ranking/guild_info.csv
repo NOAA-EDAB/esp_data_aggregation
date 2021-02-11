@@ -1,38 +1,38 @@
-"","Species","Scientific_name","Guild","size"
-"1","Acadian redfish","Sebastes fasciatus","demersal_benthivore","small"
-"2","Alewife","Alosa pseudoharengus","pelagic","small"
-"3","American lobster","Homarus americanus","megabenthos","small"
-"4","American plaice","Hippoglossoides platessoides","demersal_benthivore","small"
-"5","Atlantic cod","Gadus morhua","demersal_piscivore","large"
-"6","Atlantic halibut","Hippoglossus hippoglossus","demersal_piscivore","large"
-"7","Atlantic herring","Clupea harengus","pelagic","small"
-"8","Atlantic mackerel","Scomber scombrus","pelagic","small"
-"9","Atlantic wolffish","Anarhichas lupus","demersal_benthivore","large"
-"10","Barndoor skate","Dipturus laevis","demersal_omnivore","large"
-"11","Black sea bass","Centropristis striata","demersal_omnivore","small"
-"12","Blueback herring","Alosa aestivalis","pelagic","small"
-"13","Bluefish","Pomatomus saltatrix","","small"
-"14","Butterfish","Peprilus triacanthus","pelagic","small"
-"15","Clearnose skate","Raja eglanteria","demersal_benthivore","large"
-"16","Goosefish","Lophius americanus","demersal_piscivore","large"
-"17","Haddock","Melanogrammus aeglefinus","demersal_benthivore","small"
-"18","Jonah crab","Cancer borealis","megabenthos","small"
-"19","Little skate","Leucoraja erinacea","demersal_omnivore","small"
-"20","Ocean pout","Zoarces americanus","demersal_benthivore","large"
-"21","Offshore hake","Merluccius albidus","demersal_piscivore","small"
-"22","Pollock","Pollachius virens","demersal_piscivore","large"
-"23","Red hake","Urophycis chuss","demersal_benthivore","small"
-"24","Rosette skate","Leucoraja garmani","demersal_benthivore","small"
-"25","Scup","Stenotomus chrysops","demersal_benthivore","small"
-"26","Silver hake","Merluccius bilinearis","demersal_piscivore","small"
-"27","Smooth dogfish","Mustelus canis","demersal_piscivore","large"
-"28","Smooth skate","Malacoraja senta","demersal_benthivore","large"
-"29","Spiny dogfish","Squalus acanthias","demersal_piscivore","large"
-"30","Summer flounder","Paralichthys dentatus","demersal_piscivore","small"
-"31","Thorny skate","Amblyraja radiata","demersal_omnivore","large"
-"32","White hake","Urophycis tenuis","demersal_piscivore","large"
-"33","Windowpane","Scophthalmus aquosus","demersal_benthivore","small"
-"34","Winter flounder","Pseudopleuronectes americanus","demersal_benthivore","small"
-"35","Winter skate","Leucoraja ocellata","demersal_omnivore","large"
-"36","Witch flounder","Glyptocephalus cynoglossus","demersal_benthivore","small"
-"37","Yellowtail flounder","Limanda ferruginea","demersal_benthivore","small"
+Species,Scientific_name,Guild,size
+Acadian redfish,Sebastes fasciatus,demersal_benthivore,small
+Alewife,Alosa pseudoharengus,pelagic,small
+American lobster,Homarus americanus,megabenthos,small
+American plaice,Hippoglossoides platessoides,demersal_benthivore,small
+Atlantic cod,Gadus morhua,demersal_piscivore,large
+Atlantic halibut,Hippoglossus hippoglossus,demersal_piscivore,large
+Atlantic herring,Clupea harengus,pelagic,small
+Atlantic mackerel,Scomber scombrus,pelagic,small
+Atlantic wolffish,Anarhichas lupus,demersal_benthivore,large
+Barndoor skate,Dipturus laevis,demersal_omnivore,large
+Black sea bass,Centropristis striata,demersal_omnivore,small
+Blueback herring,Alosa aestivalis,pelagic,small
+Bluefish,Pomatomus saltatrix,,small
+Butterfish,Peprilus triacanthus,pelagic,small
+Clearnose skate,Raja eglanteria,demersal_benthivore,large
+Monkfish,Lophius americanus,demersal_piscivore,large
+Haddock,Melanogrammus aeglefinus,demersal_benthivore,small
+Jonah crab,Cancer borealis,megabenthos,small
+Little skate,Leucoraja erinacea,demersal_omnivore,small
+Ocean pout,Zoarces americanus,demersal_benthivore,large
+Offshore hake,Merluccius albidus,demersal_piscivore,small
+Pollock,Pollachius virens,demersal_piscivore,large
+Red hake,Urophycis chuss,demersal_benthivore,small
+Rosette skate,Leucoraja garmani,demersal_benthivore,small
+Scup,Stenotomus chrysops,demersal_benthivore,small
+Silver hake,Merluccius bilinearis,demersal_piscivore,small
+Smooth dogfish,Mustelus canis,demersal_piscivore,large
+Smooth skate,Malacoraja senta,demersal_benthivore,large
+Spiny dogfish,Squalus acanthias,demersal_piscivore,large
+Summer flounder,Paralichthys dentatus,demersal_piscivore,small
+Thorny skate,Amblyraja radiata,demersal_omnivore,large
+White hake,Urophycis tenuis,demersal_piscivore,large
+Windowpane,Scophthalmus aquosus,demersal_benthivore,small
+Winter flounder,Pseudopleuronectes americanus,demersal_benthivore,small
+Winter skate,Leucoraja ocellata,demersal_omnivore,large
+Witch flounder,Glyptocephalus cynoglossus,demersal_benthivore,small
+Yellowtail flounder,Limanda ferruginea,demersal_benthivore,small

@@ -19,7 +19,7 @@ plot_risk_by_year <- function(data, indicator, title, include_legend){
       new_data <- data %>%
         dplyr::filter(Region == i)
       
-      if(sum(new_data$norm_rank == 0.5) != nrow(new_data)){
+      if(sum(new_data$norm_rank %>% is.na()) != nrow(new_data)){
         fig <- ggplot(new_data,
                       aes(x = new_year %>% as.numeric,
                           y = Indicator %>% 
@@ -27,13 +27,11 @@ plot_risk_by_year <- function(data, indicator, title, include_legend){
                           fill = norm_rank ))+
           geom_raster(stat = "identity")+
           theme_bw()+
-          scale_fill_gradient2(high = "darkred", 
-                               mid = "beige", 
-                               low = "forestgreen", 
-                               midpoint = 0.5,
-                               name = "Normalized rank",
-                               breaks = c(0, 0.5, 1),
-                               limits = c(0, 1))+
+          viridis::scale_fill_viridis(limits = c(0, 1),
+                                      breaks = c(0, 0.5, 1),
+                                      direction = -1,
+                                      na.value = "gray90",
+                                      name = "Normalized rank")+
           theme(legend.position = "top")+
           ylab("Indicator")+
           xlab("Year")+
