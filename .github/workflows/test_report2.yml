@@ -1,7 +1,6 @@
 on:
   push:
     branches: abby
-    paths: bookdown/**
 
 name: test_bookdown_report
 
