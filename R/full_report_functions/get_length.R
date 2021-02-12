@@ -38,9 +38,7 @@ get_len_data_risk <- function(x){
 }
 
 plot_len <- function(x) {
-  
-  figs <- list()
-  
+
   for(i in unique(x$SEASON)){
     y <- x %>% dplyr::filter(SEASON == i)
     
@@ -77,6 +75,63 @@ plot_len <- function(x) {
     print(fig)
   }
 }
+
+plot_len_hist <- function(x) {
+  # x = direct survdat data
+  y <- x %>% dplyr::filter(LENGTH > 0, ABUNDANCE > 0) %>%
+    dplyr::select(YEAR, SEASON, Region, fish_id, LENGTH, NUMLEN) %>%
+    dplyr::distinct() %>% # problem with repeat rows
+    dplyr::mutate(Decade = YEAR %>% 
+                    stringr::str_trunc(width = 3,
+                                       side = "right",
+                                       ellipsis = "") %>%
+                    paste("0", sep = ""),
+                  LENGTH = LENGTH %>%
+                    round(digits = 0)) %>%
+    dplyr::group_by(Decade, SEASON, Region, LENGTH) %>%
+    dplyr::summarise(Count = sum(NUMLEN)) %>%
+    dplyr::group_by(Decade, SEASON, Region) %>%
+    dplyr::mutate(Proportion = Count/sum(Count))
+  
+  mycolors <-  nmfspalette::nmfs_palette("regional web")(7)
+  mycolors <- mycolors[c(4, 7, 1, 6, 2, 5, 3)] # reorder for better contrast
+  names(mycolors) <- c(1960, 1970, 1980, 1990, 2000, 2010, 2020)
+
+  for(i in unique(y$SEASON)){
+    x <- y %>% dplyr::filter(SEASON == i)
+    
+    fig_count <- ggplot(x,
+                  aes(x = LENGTH,
+                      y = Count,
+                      color = Decade))+
+      geom_line(cex = 1.5)+
+      facet_grid(rows = vars(Region))+
+      scale_color_manual(values = mycolors)+
+      scale_y_continuous(labels = scales::comma,
+                         limits = c(0, max(x$Count)))+
+      theme_bw()+
+      xlab("Length (cm)")
+    
+    fig_prop <- ggplot(x,
+                  aes(x = LENGTH,
+                      y = Proportion,
+                      color = Decade))+
+      geom_line(cex = 1.5      )+
+      facet_grid(rows = vars(Region))+
+      scale_color_manual(values = mycolors)+
+      scale_y_continuous(limits = c(0, max(x$Proportion)))+
+      theme_bw()+
+      xlab("Length (cm)")
+    
+    ggpubr::ggarrange(fig_count, fig_prop, 
+                      common.legend = TRUE,
+                      legend = "bottom") %>%
+      ggpubr::annotate_figure(top = i) %>% 
+      print()
+  }
+}
+
+plot_len_hist(survey %>% dplyr::filter(Species == "Acadian redfish"))
 
 get_len_data_tbl <- function(x){
 
