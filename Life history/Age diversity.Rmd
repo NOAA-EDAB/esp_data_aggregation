@@ -1,0 +1,65 @@
+---
+
+author: "Ricky Tabandera"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+params:
+  stock:
+    label: "Stock:"
+    value: black sea bass
+    input: select
+    choices: [haddock, yellowtail flounder, atlantic cod,  red hake, pollock, scup, alewife, silver hake, atlantic mackerel, acadian redfish, winter flounder, summer flounder, american plaice, witch flounder, butterfish, white hake, blueback herring, black sea bass,   bluefish, atlantic herring,  ocean pout, monkfish,  little skate, winter skate,  windowpane flounder,  thorny skate, atlantic wolffish, cusk,   atlantic halibut, clearnose skate, smooth skate, offshore hake,  rosette skate,  barndoor skate, spiny dogfish, american lobster, smooth dogfish,  atlantic menhaden, longfin inshore squid, atlantic hagfish, northern shortfin squid ]
+  
+title: "Age diversity of `r stringr::str_to_sentence(params$stock)`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(here))
+suppressPackageStartupMessages(library(survdat))
+suppressPackageStartupMessages(library(dbutils))
+
+
+```
+
+## Age divserity 
+
+Diversity in age measurments of a stock is a useful indicator of several factors. A decrease in diversity can be due to either truncation, the lack of older or younger ages, or an increase of a single/few ages relative to.
+
+
+```{r data wrangling, echo=FALSE}
+#load survdat 
+survdata<-readRDS(here::here("survdat_pull_bio.rds"))
+#change from char to numeric
+survdata<-survdata %>% mutate(SVSPP=as.numeric(SVSPP))
+#load ECSA data with common names 
+stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+stock_list_all_strata<-stock_list_all_strata %>% rename(SVSPP=svspp)
+stock_list<-stock_list_all_strata %>% dplyr::distinct(SVSPP,.keep_all =T)
+#link common names to  this dataset 
+survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
+#filter down to a single stock 
+selected.spp<- survdata.w.codes %>% filter(common_name==params$stock)
+
+
+
+```
+
+## Density plots of age
+
+You can also embed plots, for example:
+
+```{r age density, echo=FALSE}
+
+selected.spp %>% 
+  drop_na(AGE)%>% 
+  group_by(YEAR)%>%
+  ggplot(aes(x=AGE, y=YEAR, fill= YEAR))+
+  ggridges::geom_density_ridges2()+
+  scale_x_continuous(limits = c(0,10), breaks = 0:10)
+  
+```
+
+
