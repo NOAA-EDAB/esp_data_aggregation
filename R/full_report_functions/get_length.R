@@ -131,7 +131,7 @@ plot_len_hist <- function(x) {
   }
 }
 
-plot_len_hist(survey %>% dplyr::filter(Species == "Acadian redfish"))
+#plot_len_hist(survey %>% dplyr::filter(Species == "Acadian redfish"))
 
 get_len_data_tbl <- function(x){
 
