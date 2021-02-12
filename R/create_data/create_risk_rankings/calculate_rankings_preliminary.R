@@ -41,19 +41,12 @@ clim_vul <- data %>%
   dplyr::mutate(Region = NA,
                 Indicator = "climate_vulnerability",
                 Year = "Hare et al. 2016",
-                Overall_climate_vulnerability = Overall_climate_vulnerability  %>% 
+                Value = Overall_climate_vulnerability  %>% 
                   stringr::str_replace("Very high", "4") %>%
                   stringr::str_replace("High", "3") %>%
                   stringr::str_replace("Moderate", "2") %>%
                   stringr::str_replace("Low", "1") %>%
                   as.numeric(),
-                Certainty = Certainty  %>% 
-                  stringr::str_replace("Very high", "4") %>%
-                  stringr::str_replace("High", "3") %>%
-                  stringr::str_replace("Moderate", "2") %>%
-                  stringr::str_replace("Low", "1") %>%
-                  as.numeric(),
-                Value = Overall_climate_vulnerability * Certainty,
                 rank = dplyr::dense_rank(Value), 
                 norm_rank = rank/max(rank),
                 rank = paste(rank, "(dense rank)")) %>%
