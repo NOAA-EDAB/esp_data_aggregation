@@ -1,0 +1,174 @@
+---
+title: "Black sea bass Sex at length model"
+author: "Ricky Tabandera"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(here))
+library(survdat)
+library(dbutils)
+library(boot)
+#library("papeR")
+
+```
+
+## Black sea bass 
+
+Black sea bass are known to be protogynous hermaphrodites. This species will often begin life as female, and switch to male at some life stage due to a variety of unknown circumstances. One easily collected metric that is correlated with other vital metrics is body size. The relationship between body size of Black sea bass and sex is investigated here as potential indicator of population pressures and sex ratios. The parameter estimates changing through time could signal changes in the underlying causes of the sex ratio in sea bass.
+
+
+```{r data wrangling, echo=FALSE, message=FALSE}
+#install.packages("aod")
+# library(here)
+# library(tidyverse)
+# library(aod)
+
+
+
+#logtistic regression of sex ratio
+
+
+#load in survdat
+
+survdata<-readRDS(here::here("survdat_pull_bio.rds"))
+#change the svspp to capitials to merge to ecsa stock list
+survdata<-survdata %>% mutate(SVSPP=as.numeric(SVSPP))
+stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+stock_list_all_strata<-stock_list_all_strata %>% rename(SVSPP=svspp)
+stock_list<-stock_list_all_strata %>% dplyr::distinct(SVSPP,.keep_all =T)
+
+survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
+
+
+
+#channel<-dbutils::connect_to_database("sole", uid="")
+#get discriptions of codes of sex and maturity
+#used for reference, does not need to run every time
+
+# sex.codes<-survdat::get_sex(channel)
+# sex.fcs<-survdat::get_sex_fscs(channel)
+# sex.maturity<-survdat::get_maturity(channel)
+
+
+bsb<-survdata.w.codes %>% filter(common_name == "black sea bass")
+#change year from char to numeric 
+bsb <- bsb %>% mutate(YEAR=as.numeric(YEAR))
+
+#recode sexed fish to readable names
+#sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown   
+bsb$SEX <-recode(bsb$SEX, "1"="male" , "2"="female", "0"="unknown", "4"= "transitional")
+#change sex from chr to factor
+bsb <-bsb %>% mutate(SEX= as.factor(SEX))
+#filter out just m anf f fish for analysis and plotting
+bsb.m.f<-bsb %>% filter(SEX== "male" | SEX=="female")
+
+
+
+#remove unaged fish
+#bsb<-bsb %>% drop_na(AGE)
+
+
+#bin the years of fish into decades to compare if model parameters are chaging 
+bsb.m.f<-bsb.m.f %>% mutate(decade=cut_width(YEAR, width = 10, boundary = 1980))
+#levels(bsb.m.f$decade)
+levels(bsb.m.f$decade)<-c( "1980","1990", "2000","2010")
+
+
+
+
+
+
+
+#Using a binonmial generalized linear model of body size and sex with interaction between length and decade
+
+
+bsb.mod<-glm(SEX~LENGTH+decade+LENGTH*decade, data=bsb.m.f, family=binomial)
+
+
+
+#summary(bsb.mod)
+
+
+
+pretty_mod<-papeR::prettify(summary(bsb.mod))
+
+
+
+```
+
+## Sex ratio
+
+The percentage of fish that are male across body length appears to be positively correlated with largest body sizes being over represented by males. The presence of males at al body sizes indicates that body size is not the sole predictor of sex determination 
+
+
+```{r sex by length, echo=FALSE}
+#sex ratio plot
+#calculate ratio as m/f for each length class 
+bsb.ratio<-bsb.m.f %>%  group_by(LENGTH) %>% mutate(sex.ratio=((sum(SEX=="male")/length(SEX))*100), fish.count=length(SEX))
+
+
+
+ggplot(data = bsb.ratio)+
+  geom_point(aes(x=LENGTH,y=sex.ratio, size=fish.count))+
+  xlab("Body Length (cm)")+
+  ylab("Percent male  (%) ")+
+  guides(size=guide_legend(title=" n"))+
+  ggtitle("Male percentage by body length ")+
+  theme_minimal()
+
+```
+
+
+
+```{r, results='asis', echo=FALSE}
+knitr::kable(pretty_mod)
+
+```
+
+## Model ouput 
+The model predicting the relationship between sex and length was significant ( z-value = -7.24, df = 9842, P-value=0.001). This model predicts a positive increase in the probability of being male as body length increases. This relationship was not different among the 1980,1990, and 2000 decade groups, but was significantly different in 2010. The model for 2010, has a stronger relationship between sex and length with the probability of being male at size=4 in previous decades being ~18.2%, and in 2010 being 5.7%. The slope of the model for 2010 is steeper with beta = 0.07 as compared to all other decades beta = 0.03. This increased slope means the probability of being male inflection point occurs at lower lengths, and overall probability at the highest lengths are >80% at 60 cm, in comparison to 60% at 60 cm in other decades.
+
+
+
+
+```{r, model visualization, echo=FALSE ,message=FALSE}
+
+
+#make a new dataset with range of lengths that are observed and predict values based on the model for each decade 
+
+
+decade1980<-boot::inv.logit(predict(bsb.mod, data.frame(LENGTH=seq(min(bsb.m.f$LENGTH),max(bsb.m.f$LENGTH)), decade=rep("1980",61), type="response")))
+decade1990<-boot::inv.logit(predict(bsb.mod, data.frame(LENGTH=seq(min(bsb.m.f$LENGTH),max(bsb.m.f$LENGTH)), decade=rep("1990",61), type="response")))
+decade2000<-boot::inv.logit(predict(bsb.mod, data.frame(LENGTH=seq(min(bsb.m.f$LENGTH),max(bsb.m.f$LENGTH)), decade=rep("2000",61), type="response")))
+decade2010<-boot::inv.logit(predict(bsb.mod, data.frame(LENGTH=seq(min(bsb.m.f$LENGTH),max(bsb.m.f$LENGTH)), decade=rep("2010",61), type="response")))
+bsb.LENGTH<-seq(min(bsb.m.f$LENGTH),max(bsb.m.f$LENGTH))
+
+bsb.simlulation<-data.frame(decade1980, decade1990, decade2000,decade2010,bsb.LENGTH)
+bsb.simlulation<-bsb.simlulation %>% pivot_longer(!bsb.LENGTH, names_to="decade", values_to="pred")
+
+
+bsb.simlulation %>%
+  ggplot(aes(x=bsb.LENGTH,y=pred, color=decade))+
+  geom_smooth(size=3)+
+  xlab("Length (cm)")+
+  ylab("Probability")+
+  annotate("text", label=c("Male","Female"), x=30,y= c(1.05,-.05))+
+  geom_hline(yintercept=c(1,0))+
+  scale_color_manual(labels=c("<1980"," 1981-1990","1991-2000",">2010"), values =c( "blue","firebrick","darkviolet","deepskyblue"), name="Decade")+
+  theme_minimal()
+
+
+
+```
+
+
+
+
+
+

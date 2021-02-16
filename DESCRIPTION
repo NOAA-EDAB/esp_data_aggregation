@@ -6,7 +6,7 @@ License: file LICENSE
 Imports:
     AICcmodavg,
     bookdown,
-    devtools,
+    #devtools,
     DT,
     ggpubr,
     ggrepel,

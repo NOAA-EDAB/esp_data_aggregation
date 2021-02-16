@@ -1,6 +1,6 @@
 #load(here::here("data", "allfh.RData")) #read directly from github
-#load(url("http://github.com/Laurels1/Condition/raw/master/data/allfh.RData"))
-load(here::here("data", "allfh.RData")) # if the internet is slow
+load(url("http://github.com/Laurels1/Condition/raw/master/data/allfh.RData"))
+#load(here::here("data", "allfh.RData")) # if the internet is slow
 allfh$Species <- stringr::str_to_sentence(allfh$pdcomnam)
 
 key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")

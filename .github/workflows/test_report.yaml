@@ -1,10 +1,9 @@
 on:
-  workflow_dispatch:
-#  push:
-#    branches: main
-#    paths: bookdown/**
+  push:
+    branches: abby
+    paths: bookdown/**
 
-name: run_all_bookdown_reports
+name: test_bookdown_report
 
 jobs: 
   build1:
@@ -16,12 +15,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-        
-      - name: Set up R
-        uses: r-lib/actions/setup-r@master
-        with: 
-          r-version: '4.0.3' # problem with using 4.0.4
-          
+      
       - name: Install Pandoc
         run: brew install pandoc
         shell: bash
@@ -31,24 +25,27 @@ jobs:
           sudo R CMD javareconf
           sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
         shell: bash
+        
+      - name: Set up R
+        uses: r-lib/actions/setup-r@master
       
       - name: Cache R packages
-        uses: actions/cache@v2
+        uses: actions/cache@v1
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-v2-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+          key: big-cache-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
 
       - name: Load R packages (if not cached)
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
-       
+        
       - name: Create reports
-        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@main
+        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@abby
         with: 
-          species: '1:37'
+          species: '1'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
