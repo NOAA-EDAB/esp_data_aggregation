@@ -41,19 +41,12 @@ clim_vul <- data %>%
   dplyr::mutate(Region = NA,
                 Indicator = "climate_vulnerability",
                 Year = "Hare et al. 2016",
-                Overall_climate_vulnerability = Overall_climate_vulnerability  %>% 
+                Value = Overall_climate_vulnerability  %>% 
                   stringr::str_replace("Very high", "4") %>%
                   stringr::str_replace("High", "3") %>%
                   stringr::str_replace("Moderate", "2") %>%
                   stringr::str_replace("Low", "1") %>%
                   as.numeric(),
-                Certainty = Certainty  %>% 
-                  stringr::str_replace("Very high", "4") %>%
-                  stringr::str_replace("High", "3") %>%
-                  stringr::str_replace("Moderate", "2") %>%
-                  stringr::str_replace("Low", "1") %>%
-                  as.numeric(),
-                Value = Overall_climate_vulnerability * Certainty,
                 rank = dplyr::dense_rank(Value), 
                 norm_rank = rank/max(rank),
                 rank = paste(rank, "(dense rank)")) %>%
@@ -82,6 +75,10 @@ hab_vul <- ecodata::habitat_vulnerability %>%
   dplyr::arrange(Species) %>%
   dplyr::select(-`Species Vulnerability Rank (FCVA)`)
 hab_vul
+
+### NRCC risk ranking ----
+nrcc <- read.csv(here::here("data/risk_ranking", "NRCC_total_scores.csv")) %>%
+  dplyr::filter(Species != "Jonah crab") # no region specified
 
 # * mean of past 5 years ----
 ### rec catch ----
@@ -291,7 +288,8 @@ rev_hist <- get_risk(data = com_sum,
 
 # * merge everything except rec, com, clim_vul, hab_vul ----
 all_ind <- rbind(b, f, catch, recruit, abun, biomass, biomass_f, biomass_s,
-                 abun_f, abun_s, avg_len_f, avg_len_s, max_len_f, max_len_s, diet)
+                 abun_f, abun_s, avg_len_f, avg_len_s, max_len_f, max_len_s, 
+                 nrcc, diet)
 
 # data wrangling -----
 
@@ -397,6 +395,10 @@ for(i in 1:nrow(data)){
   if(data$Indicator[i] %>% stringr::str_detect("habitat") == TRUE 
   ){
     category[i] <- "Habitat"
+  }
+  if(data$Indicator[i] %>% stringr::str_detect("NRCC") == TRUE 
+  ){
+    category[i] <- "Management"
   }
   if(data$Indicator[i] %>% stringr::str_detect("catch") == TRUE |
      data$Indicator[i] %>% stringr::str_detect("ffmsy") == TRUE |

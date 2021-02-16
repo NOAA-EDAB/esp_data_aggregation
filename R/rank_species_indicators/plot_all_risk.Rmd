@@ -28,10 +28,10 @@ guild_info <- read.csv(here::here("data/risk_ranking", "guild_info.csv"))
 indicator_info <- read.csv(here::here("data/risk_ranking", "indicator_key.csv"))
 
 data$category <- factor(data$category, 
-                        c("Socioeconomic", "Biological", "Population", "Habitat"))
+                        c("Socioeconomic", "Biological", "Population", "Habitat", "Management"))
 
 guild_data$category <- factor(guild_data$category, 
-                        c("Socioeconomic", "Biological", "Population", "Habitat"))
+                        c("Socioeconomic", "Biological", "Population", "Habitat", "Management"))
 
 # distinguish between 0.5 due to missing data and true 0.5 ranking
 for(i in 1:nrow(data)){

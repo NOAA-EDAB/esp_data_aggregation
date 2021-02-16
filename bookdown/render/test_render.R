@@ -9,13 +9,15 @@ setwd(here::here("test"))
 
 file.copy(#from = c(here::here("bookdown", "index.Rmd"),
            #        here::here("bookdown", "16-bbmsy.Rmd"),
-            #       here::here("bookdown", "21-ffmsy.Rmd")),
+           #        here::here("bookdown", "09-length.Rmd")),
           
           recursive = TRUE,
           from = here::here("bookdown"),
           
           to = here::here("test"),
           overwrite = TRUE)
+
+setwd(here::here("test/bookdown"))
 
 bookdown::render_book(input = ".",
   params = list(species_ID = "Acadian redfish",
@@ -51,4 +53,4 @@ bookdown::render_book(input = ".",
   ),
   intermediates_dir = here::here("test"),
   clean = FALSE,
-  quiet = TRUE) %>% suppressMessages()
+  quiet = FALSE)
