@@ -52,3 +52,4 @@ bookdown::render_book(input = ".",
   intermediates_dir = here::here("test"),
   clean = FALSE,
   quiet = TRUE) %>% suppressMessages()
+
