@@ -19,7 +19,7 @@ jobs:
       - name: Set up R
         uses: r-lib/actions/setup-r@master
         with: 
-          r-version: v '4.0.3' # problem with using 4.0.4
+          r-version: '4.0.3' # problem with using 4.0.4
       
       - name: Cache R packages
         uses: actions/cache@v1
