@@ -1,0 +1,9 @@
+## Summary of statistically significant indicators
+
+```{r, output_summary}
+source(here::here("R/full_report_functions", "make_html_table.R"))
+
+output %>% 
+  make_html_table(col_names =  c("Response_variable", "Indicator", "Slope", "P-value", "R2_adj"))
+```
+

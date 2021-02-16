@@ -68,28 +68,9 @@ correlation_data <- function(bluefish, eco, lag){
         summary
       
       if(results[[4]][2,4] < 0.05){
-       # print(paste(i, j, sep = " vs "))
-       # knitr::kable(results$coefficients %>%
-      #                 round(digits = 2),
-      #               col.names = c("Estimate", "St Error", 
-      #                             "t-value", "p-value"),
-      #               caption = paste(i, j, sep = " vs ")) %>%
-      #    kableExtra::kable_styling(full_width = FALSE) %>%
-      #    print()
         
-      #  knitr::kable(data.frame(Name = c("F-statistic", "df", "R2", "R2-adj"),
-      #                          Value = c(results$fstatistic[1] %>%
-      #                                      round(digits = 2), 
-      #                                    paste(results$fstatistic[2:3], 
-      #                                          collapse = ", "),
-      #                                    results$r.squared %>%
-      #                                      round(digits = 2), 
-      #                                    results$adj.r.squared %>%
-      #                                      round(digits = 2)
-      #                          ))) %>%
-      #    kableExtra::kable_styling(full_width = FALSE) %>%
-      #    print()
         cat('\n\n<!-- -->\n\n')
+        
         knitr::kable(
           list(
             results$coefficients %>%
@@ -108,10 +89,57 @@ correlation_data <- function(bluefish, eco, lag){
           caption = paste(i, j, sep = " vs "), 
           booktabs = TRUE
         ) %>% print()
+        
         cat('\n\n<!-- -->\n\n')
+        
         }
       }
     }
+  }
+}
+
+correlation_summary <- function(bluefish, eco, lag){
+  bluefish2 <- bluefish %>%
+    dplyr::mutate(Time = Time + lag,
+                  facet = paste(Metric, Description, Units, sep = "\n"))
+  
+  data <- dplyr::left_join(bluefish2, eco,
+                           by = "Time") %>%
+    dplyr::filter(is.na(Var) == FALSE) %>%
+    dplyr::group_by(Metric, Var) %>%
+    dplyr::mutate(pval = coefficients(summary(lm(Value ~ Val)))[2,4],
+                  sig = pval < 0.05)
+  
+  # test correlations
+  
+  if(min(data$pval) < 0.05){
+    
+    output <- c()
+    
+    for(i in unique(data$Metric)){
+      
+      for(j in unique(data$Var)){
+        dat <- data %>%
+          dplyr::filter(Metric == i, Var == j)
+        
+        results <- lm(Value ~ Val, 
+                      data = dat) %>%
+          summary
+        
+        if(results[[4]][2,4] < 0.05){
+          output <- rbind(output, c(i, 
+                                    j, 
+                                    results$coefficients[2, 1] %>%
+                                      round(digits = 2), # slope
+                                    results$coefficients[2, 4] %>%
+                                      signif(digits = 2), # p-value
+                                    results$adj.r.squared %>%
+                                      round(digits = 2))) # adjusted r2
+        }
+      }
+    }
+    
+    return(output)
   }
 }
 

@@ -8,15 +8,19 @@ output:
     split_by: section
 documentclass: book
 github-repo: NOAA-EDAB/esp_data_aggregation
+params:
+  lag: 0 # lag for correlations
 ---
 
 
 
 # Introduction
 
-These are prliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators.
+These are preliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators. The indicators are lagged by 0 years.
 
 # Regression analysis
+
+All regressions are simple linear correlations assessed at the p < 0.5 level. Please note, due to the large number of indicators tested, a certain amount of statistically significant results are expected even if there are no underlying mechanistic connections. These correlations do not necessarily imply causation.
 
 <!--chapter:end:index.Rmd-->
 
@@ -3777,5 +3781,248 @@ degreesW</caption>
 
 ### CPUE by catch strategy
 
+### Recreational CPUE
+
+#### Figures {-}
+<img src="bluefish-esp_files/figure-html/unnamed-chunk-92-1.png" width="768" style="display: block; margin: auto;" />
+
+#### Regression statistics {-}
+
+<!-- -->
+
+<table class="kable_wrapper">
+<caption>(\#tab:unnamed-chunk-93)Catch vs recreational CPUE
+number of fish caught per day fished</caption>
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> Estimate </th>
+   <th style="text-align:right;"> Std. Error </th>
+   <th style="text-align:right;"> t value </th>
+   <th style="text-align:right;"> Pr(&gt;|t|) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:right;"> 6742.08 </td>
+   <td style="text-align:right;"> 2392.80 </td>
+   <td style="text-align:right;"> 2.82 </td>
+   <td style="text-align:right;"> 0.01 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Val </td>
+   <td style="text-align:right;"> 8702.26 </td>
+   <td style="text-align:right;"> 722.87 </td>
+   <td style="text-align:right;"> 12.04 </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Name </th>
+   <th style="text-align:left;"> Value </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> F-statistic </td>
+   <td style="text-align:left;"> 144.93 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> df </td>
+   <td style="text-align:left;"> 1, 32 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2 </td>
+   <td style="text-align:left;"> 0.82 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2-adj </td>
+   <td style="text-align:left;"> 0.81 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+  </tr>
+</tbody>
+</table>
+
+
+<!-- -->
+
+
+
+<!-- -->
+
+<table class="kable_wrapper">
+<caption>(\#tab:unnamed-chunk-93)Fmort vs recreational CPUE
+number of fish caught per day fished</caption>
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> Estimate </th>
+   <th style="text-align:right;"> Std. Error </th>
+   <th style="text-align:right;"> t value </th>
+   <th style="text-align:right;"> Pr(&gt;|t|) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:right;"> 0.23 </td>
+   <td style="text-align:right;"> 0.03 </td>
+   <td style="text-align:right;"> 7.45 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Val </td>
+   <td style="text-align:right;"> 0.04 </td>
+   <td style="text-align:right;"> 0.01 </td>
+   <td style="text-align:right;"> 4.35 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Name </th>
+   <th style="text-align:left;"> Value </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> F-statistic </td>
+   <td style="text-align:left;"> 18.93 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> df </td>
+   <td style="text-align:left;"> 1, 32 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2 </td>
+   <td style="text-align:left;"> 0.37 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2-adj </td>
+   <td style="text-align:left;"> 0.35 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+  </tr>
+</tbody>
+</table>
+
+
+<!-- -->
+
+
+
+<!-- -->
+
+<table class="kable_wrapper">
+<caption>(\#tab:unnamed-chunk-93)Abundance vs recreational CPUE
+number of fish caught per day fished</caption>
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> Estimate </th>
+   <th style="text-align:right;"> Std. Error </th>
+   <th style="text-align:right;"> t value </th>
+   <th style="text-align:right;"> Pr(&gt;|t|) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:right;"> 74298.60 </td>
+   <td style="text-align:right;"> 7636.68 </td>
+   <td style="text-align:right;"> 9.73 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Val </td>
+   <td style="text-align:right;"> 10443.69 </td>
+   <td style="text-align:right;"> 2307.05 </td>
+   <td style="text-align:right;"> 4.53 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Name </th>
+   <th style="text-align:left;"> Value </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> F-statistic </td>
+   <td style="text-align:left;"> 20.49 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> df </td>
+   <td style="text-align:left;"> 1, 32 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2 </td>
+   <td style="text-align:left;"> 0.39 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2-adj </td>
+   <td style="text-align:left;"> 0.37 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+  </tr>
+</tbody>
+</table>
+
+
+<!-- -->
+
 <!--chapter:end:07-socioeconomic.Rmd-->
+
+## Summary of statistically significant indicators
+
+preserve6368cfe006a5da60
+
+
+<!--chapter:end:08-summary.Rmd-->
 

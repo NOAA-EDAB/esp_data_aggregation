@@ -8,6 +8,8 @@ output:
     split_by: section
 documentclass: book
 github-repo: NOAA-EDAB/esp_data_aggregation
+params:
+  lag: 0 # lag for correlations
 ---
 
 ```{r setup, include = FALSE}
@@ -28,10 +30,14 @@ bluefish <- assessmentdata::stockAssessmentData %>%
   dplyr::filter(Species == "Bluefish", AssessmentYear == 2019) %>%
   dplyr::rename(Time = Year)
 
+output <- c()
+
 ```
 
 # Introduction
 
-These are prliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators.
+These are preliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators. The indicators are lagged by `r params$lag` years.
 
 # Regression analysis
+
+All regressions are simple linear correlations assessed at the p < 0.5 level. Please note, due to the large number of indicators tested, a certain amount of statistically significant results are expected even if there are no underlying mechanistic connections. These correlations do not necessarily imply causation.

@@ -8,15 +8,19 @@ output:
     split_by: section
 documentclass: book
 github-repo: NOAA-EDAB/esp_data_aggregation
+params:
+  lag: 0 # lag for correlations
 ---
 
 
 
 # Introduction
 
-These are prliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators.
+These are preliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators. The indicators are lagged by 0 years.
 
 # Regression analysis
+
+All regressions are simple linear correlations assessed at the p < 0.5 level. Please note, due to the large number of indicators tested, a certain amount of statistically significant results are expected even if there are no underlying mechanistic connections. These correlations do not necessarily imply causation.
 
 <!--chapter:end:index.Rmd-->
 
@@ -3777,5 +3781,249 @@ degreesW</caption>
 
 ### CPUE by catch strategy
 
+### Recreational CPUE
+
+#### Figures {-}
+<img src="bluefish-esp_files/figure-html/unnamed-chunk-92-1.png" width="768" style="display: block; margin: auto;" />
+
+#### Regression statistics {-}
+
+<!-- -->
+
+<table class="kable_wrapper">
+<caption>(\#tab:unnamed-chunk-93)Catch vs recreational CPUE
+number of fish caught per day fished</caption>
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> Estimate </th>
+   <th style="text-align:right;"> Std. Error </th>
+   <th style="text-align:right;"> t value </th>
+   <th style="text-align:right;"> Pr(&gt;|t|) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:right;"> 6742.08 </td>
+   <td style="text-align:right;"> 2392.80 </td>
+   <td style="text-align:right;"> 2.82 </td>
+   <td style="text-align:right;"> 0.01 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Val </td>
+   <td style="text-align:right;"> 8702.26 </td>
+   <td style="text-align:right;"> 722.87 </td>
+   <td style="text-align:right;"> 12.04 </td>
+   <td style="text-align:right;"> 0.00 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Name </th>
+   <th style="text-align:left;"> Value </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> F-statistic </td>
+   <td style="text-align:left;"> 144.93 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> df </td>
+   <td style="text-align:left;"> 1, 32 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2 </td>
+   <td style="text-align:left;"> 0.82 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2-adj </td>
+   <td style="text-align:left;"> 0.81 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+  </tr>
+</tbody>
+</table>
+
+
+<!-- -->
+
+
+
+<!-- -->
+
+<table class="kable_wrapper">
+<caption>(\#tab:unnamed-chunk-93)Fmort vs recreational CPUE
+number of fish caught per day fished</caption>
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> Estimate </th>
+   <th style="text-align:right;"> Std. Error </th>
+   <th style="text-align:right;"> t value </th>
+   <th style="text-align:right;"> Pr(&gt;|t|) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:right;"> 0.23 </td>
+   <td style="text-align:right;"> 0.03 </td>
+   <td style="text-align:right;"> 7.45 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Val </td>
+   <td style="text-align:right;"> 0.04 </td>
+   <td style="text-align:right;"> 0.01 </td>
+   <td style="text-align:right;"> 4.35 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Name </th>
+   <th style="text-align:left;"> Value </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> F-statistic </td>
+   <td style="text-align:left;"> 18.93 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> df </td>
+   <td style="text-align:left;"> 1, 32 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2 </td>
+   <td style="text-align:left;"> 0.37 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2-adj </td>
+   <td style="text-align:left;"> 0.35 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+  </tr>
+</tbody>
+</table>
+
+
+<!-- -->
+
+
+
+<!-- -->
+
+<table class="kable_wrapper">
+<caption>(\#tab:unnamed-chunk-93)Abundance vs recreational CPUE
+number of fish caught per day fished</caption>
+<tbody>
+  <tr>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> Estimate </th>
+   <th style="text-align:right;"> Std. Error </th>
+   <th style="text-align:right;"> t value </th>
+   <th style="text-align:right;"> Pr(&gt;|t|) </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> (Intercept) </td>
+   <td style="text-align:right;"> 74298.60 </td>
+   <td style="text-align:right;"> 7636.68 </td>
+   <td style="text-align:right;"> 9.73 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Val </td>
+   <td style="text-align:right;"> 10443.69 </td>
+   <td style="text-align:right;"> 2307.05 </td>
+   <td style="text-align:right;"> 4.53 </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+   <td> 
+
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Name </th>
+   <th style="text-align:left;"> Value </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> F-statistic </td>
+   <td style="text-align:left;"> 20.49 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> df </td>
+   <td style="text-align:left;"> 1, 32 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2 </td>
+   <td style="text-align:left;"> 0.39 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> R2-adj </td>
+   <td style="text-align:left;"> 0.37 </td>
+  </tr>
+</tbody>
+</table>
+
+ </td>
+  </tr>
+</tbody>
+</table>
+
+
+<!-- -->
+
 <!--chapter:end:07-socioeconomic.Rmd-->
+
+## Summary of statistically significant indicators
+
+<!--html_preserve--><div id="htmlwidget-355a3ac122a34d83ff84" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-355a3ac122a34d83ff84">{"x":{"filter":"top","filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Scroller"],"data":[["Catch","Fmort","Fmort","Recruitment","Recruitment","Fmort","Abundance","Fmort","Catch","Catch","Catch","Fmort","Fmort","Fmort","Recruitment","Catch","Abundance","Abundance","Catch","Catch","Fmort","Abundance","Fmort","Catch","Fmort","Abundance","Abundance","Abundance","Fmort","Abundance","Fmort","Abundance","Fmort","Catch","Catch","Catch","Abundance","Catch","Catch","Catch","Fmort","Fmort","Fmort","Recruitment","Catch","Abundance","Catch","Fmort","Abundance"],["Time","Time","Warm Core Rings\nn","cumulative intensity\ndegrees C","maximum intensity\ndegrees C","tke winter\nJ/kg","total wind speed winter\nJ/kg","tke spring\nJ/kg","hcly summer\nm^2/sec^2","tke summer\nJ/kg","total wind speed summer\nJ/kg","hcly summer\nm^2/sec^2","tke summer\nJ/kg","total wind speed summer\nJ/kg","vwnd fall\nJ/kg","gulf stream index\nlatitude anomaly","gulf stream index\nlatitude anomaly","north atlantic oscillation\nunitless","centropages zoo spring\nlog N m^-3","temora zoo spring\nlog N m^-3","centropages zoo spring\nlog N m^-3","temora zoo spring\nlog N m^-3","pseudocalanus zoo fall\nlog N m^-3","Euphausiacea\nAbsolute Number of Individuals","SmallCalanoida\nAbsolute Number of Individuals","Euphausiacea\nAbsolute Number of Individuals","SmallCalanoida\nAbsolute Number of Individuals","Calanus CV and adult","small\nAbundance anomaly unitless","small\nAbundance anomaly unitless","Zoo_Shannon-Wiener_Diversity_index\nUnitless","Sm-Lg copepod anom\nAbundance anomaly unitless","Number_Of_Species_Caught\nUnitless","Forage_Lower","Forage_Mean","Forage_Upper","Forage_Upper","along-shelf distance\nkm","Latitude\ndegreesN","Longitude\ndegreesW","along-shelf distance\nkm","Latitude\ndegreesN","Longitude\ndegreesW","Recruitment","Abundance","Abundance","recreational CPUE\nnumber of fish caught per day fished","recreational CPUE\nnumber of fish caught per day fished","recreational CPUE\nnumber of fish caught per day fished"],["-889.38","-0.01","-0.01","-42.06","-16430.84","-0.62","19019.5","-1.02","786.09","-254762.88","-11754.86","0.01","-1.96","-0.07","8618.42","-4143.45","-10612.06","-3833.18","-24919.68","-7310.29","-0.13","-14869.74","0.07","0","0","0","0","1.04","0.11","-25087.12","-0.16","-21094","0.01","-6375.72","-6821.8","-7113.19","-14739.45","-301.72","-42323.45","-38010.96","0","-0.23","-0.25","1","0.38","1","8702.26","0.04","10443.69"],["0.00011","9.8e-05","0.0015","0.038","0.035","0.0034","0.012","0.048","0.022","0.0092","0.008","0.0056","0.0033","0.022","0.048","0.0016","0.02","0.047","0.025","0.041","0.041","0.015","0.00091","0.028","0.047","0.013","6e-04","0.0098","0.034","0.048","0.0087","0.0056","0.00098","0.046","0.03","0.02","0.045","0.0015","0.0021","0.0019","0.0074","0.021","0.0031","0","2.9e-05","0","2e-13","0.00013","7.8e-05"],["0.36","0.36","0.25","0.11","0.12","0.21","0.16","0.09","0.13","0.17","0.18","0.19","0.22","0.13","0.09","0.32","0.17","0.09","0.15","0.12","0.12","0.18","0.31","0.12","0.09","0.15","0.29","0.17","0.11","0.09","0.17","0.19","0.73","0.17","0.2","0.24","0.17","0.25","0.24","0.24","0.18","0.13","0.22","1","0.41","1","0.81","0.35","0.37"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Response_variable<\/th>\n      <th>Indicator<\/th>\n      <th>Slope<\/th>\n      <th>P-value<\/th>\n      <th>R2_adj<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"search":{"regex":true},"deferRender":true,"scrollY":200,"scrollX":true,"scroller":true,"language":{"thousands":","},"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+
+
+<!--chapter:end:08-summary.Rmd-->
 

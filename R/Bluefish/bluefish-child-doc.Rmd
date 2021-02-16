@@ -15,17 +15,22 @@ if(n_measurements > n_years * n_var){
   test <- test %>%
     dplyr::mutate(Var = paste(Var, "(annual mean)", sep = "\n"))
 }
+
+# correlation summary
+output <- rbind(output, correlation_summary(bluefish = bluefish, 
+                                            eco = test, 
+                                            lag = params$lag))
 ```
 #### Figures {-}
 ```{r, fig.height = 10}
 plot_correlation(bluefish = bluefish, 
                  eco = test, 
-                 lag = 0)
+                 lag = params$lag)
 ```
 
 #### Regression statistics {-}
 ```{r, results = "asis"}
 correlation_data(bluefish = bluefish, 
                  eco = test, 
-                 lag = 0)
+                 lag = params$lag)
 ```
