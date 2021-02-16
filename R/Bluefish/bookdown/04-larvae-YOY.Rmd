@@ -1,0 +1,12 @@
+## Larvae and YOY indicators
+
+### Recruitment
+```{r, recruit}
+test <- bluefish %>%
+  dplyr::filter(Metric == "Recruitment") %>%
+  dplyr::rename(Var = Metric,
+                Val = Value)
+render_indicator(test)
+```
+
+### Larval growth

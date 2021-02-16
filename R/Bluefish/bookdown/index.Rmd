@@ -1,0 +1,37 @@
+---
+title: "Preliminary Bluefish ESP"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    split_by: section
+documentclass: book
+github-repo: NOAA-EDAB/esp_data_aggregation
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE,
+                      warning = FALSE, 
+                      #cache = TRUE,
+                      results = "asis",
+                      fig.width = 8, 
+                      fig.align = 'center')
+
+library(ggplot2)
+`%>%` <- dplyr::`%>%`
+
+source(here::here("R/Bluefish", "indicator_functions.R"))
+
+bluefish <- assessmentdata::stockAssessmentData %>% 
+  dplyr::filter(Species == "Bluefish", AssessmentYear == 2019) %>%
+  dplyr::rename(Time = Year)
+
+```
+
+# Introduction
+
+These are prliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators.
+
+# Regression analysis

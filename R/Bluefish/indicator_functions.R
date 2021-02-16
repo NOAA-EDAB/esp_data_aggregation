@@ -28,6 +28,7 @@ plot_correlation <- function(bluefish, eco, lag){
     scale_color_manual(values = c("black", "#B2292E"),
                        name = "Statistically significant\n(p < 0.05)")+
     scale_y_continuous(labels = scales::comma)+
+    scale_x_continuous(labels = scales::comma)+
     theme_bw()+
     theme(axis.title = element_blank(),
           legend.position = "bottom")
@@ -68,26 +69,46 @@ correlation_data <- function(bluefish, eco, lag){
       
       if(results[[4]][2,4] < 0.05){
        # print(paste(i, j, sep = " vs "))
-        knitr::kable(results$coefficients %>%
-                       round(digits = 2),
-                     col.names = c("Estimate", "St Error", 
-                                   "t-value", "p-value"),
-                     caption = paste(i, j, sep = " vs ")) %>%
-          kableExtra::kable_styling(full_width = FALSE) %>%
-          print()
+       # knitr::kable(results$coefficients %>%
+      #                 round(digits = 2),
+      #               col.names = c("Estimate", "St Error", 
+      #                             "t-value", "p-value"),
+      #               caption = paste(i, j, sep = " vs ")) %>%
+      #    kableExtra::kable_styling(full_width = FALSE) %>%
+      #    print()
         
-        knitr::kable(data.frame(Name = c("F-statistic", "df", "R2", "R2-adj"),
-                                Value = c(results$fstatistic[1] %>%
-                                            round(digits = 2), 
-                                          paste(results$fstatistic[2:3], 
-                                                collapse = ", "),
-                                          results$r.squared %>%
-                                            round(digits = 2), 
-                                          results$adj.r.squared %>%
-                                            round(digits = 2)
-                                ))) %>%
-          kableExtra::kable_styling(full_width = FALSE) %>%
-          print()
+      #  knitr::kable(data.frame(Name = c("F-statistic", "df", "R2", "R2-adj"),
+      #                          Value = c(results$fstatistic[1] %>%
+      #                                      round(digits = 2), 
+      #                                    paste(results$fstatistic[2:3], 
+      #                                          collapse = ", "),
+      #                                    results$r.squared %>%
+      #                                      round(digits = 2), 
+      #                                    results$adj.r.squared %>%
+      #                                      round(digits = 2)
+      #                          ))) %>%
+      #    kableExtra::kable_styling(full_width = FALSE) %>%
+      #    print()
+        cat('\n\n<!-- -->\n\n')
+        knitr::kable(
+          list(
+            results$coefficients %>%
+              round(digits = 2),
+            data.frame(Name = c("F-statistic", "df", "R2", "R2-adj"),
+                       Value = c(results$fstatistic[1] %>%
+                                   round(digits = 2), 
+                                 paste(results$fstatistic[2:3], 
+                                       collapse = ", "),
+                                 results$r.squared %>%
+                                   round(digits = 2), 
+                                 results$adj.r.squared %>%
+                                   round(digits = 2)
+                       ))
+          ),
+          caption = paste(i, j, sep = " vs "), 
+          booktabs = TRUE
+        ) %>% print()
+        cat('\n\n<!-- -->\n\n')
         }
       }
     }
