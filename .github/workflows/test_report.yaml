@@ -1,10 +1,9 @@
 on:
-  workflow_dispatch:
-#  push:
-#    branches: main
-#    paths: bookdown/**
+  push:
+    branches: abby
+    paths: bookdown/**
 
-name: run_all_bookdown_reports
+name: test_bookdown_report
 
 jobs: 
   build1:
@@ -16,7 +15,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-              
+      
       - name: Install Pandoc
         run: brew install pandoc
         shell: bash
@@ -24,16 +23,14 @@ jobs:
       - name: Install command line packages
         run: |        
           sudo R CMD javareconf
-          sudo apt-get install libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
+          sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
         shell: bash
         
       - name: Set up R
         uses: r-lib/actions/setup-r@master
-        with: 
-          r-version: '4.0.3' # problem with using 4.0.4
       
       - name: Cache R packages
-        uses: actions/cache@v2
+        uses: actions/cache@v1
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
@@ -44,11 +41,11 @@ jobs:
         run: |
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
-       
+        
       - name: Create reports
-        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@main
+        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@abby
         with: 
-          species: '1:37'
+          species: '1'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
