@@ -1,5 +1,4 @@
 ---
-
 author: "Ricky Tabandera"
 date: "`r format(Sys.time(), '%d %b %Y')`"
 output: html_document
@@ -24,12 +23,8 @@ suppressPackageStartupMessages(library(dbutils))
 
 ```
 
-## Age divserity 
 
-Diversity in age measurments of a stock is a useful indicator of several factors. A decrease in diversity can be due to either truncation, the lack of older or younger ages, or an increase of a single/few ages relative to.
-
-
-```{r data wrangling, echo=FALSE}
+```{r data wrangling, echo=FALSE, message=FALSE, error=FALSE}
 #load survdat 
 survdata<-readRDS(here::here("survdat_pull_bio.rds"))
 #change from char to numeric
@@ -47,19 +42,55 @@ selected.spp<- survdata.w.codes %>% filter(common_name==params$stock)
 
 ```
 
+## Age diversity 
+
+Diversity in age measurements of a stock is a useful indicator of several factors relating to fishing pressure and recruitment. A decrease in diversity can be due to either truncation, the lack of older or younger ages. Diversity changes as a funtion of an increase of a single/few ages relative to the usual stock age structure or as more ages become less reprisented. Diagnostic plots of age are constructed below using fisheries independent data from Survdata.
+
+`r if(params$stock == "monkfish"){"The age determination method for monkfish has not been validated, and the anatomic structure used has changed through time. In addition these stocks display a high degree of sexual dimorphisms making fitting of single growth curves unreliable.  This results a high degree of uncertainty in assessing the age structure of the stock and the effects of fishing pressure."}`
+
+
+```{r, age diversity calculations, echo= FALSE, message=FALSE, error=FALSE}
+
+selected.age<- selected.spp %>% filter(!is.na(AGE))
+
+age.freq<-selected.age %>% 
+      group_by(YEAR, AGE)%>%
+      summarise(age.n=n())
+age.freq<-age.freq %>% group_by(YEAR) %>% mutate(prop=(age.n/sum(age.n))) %>% mutate(prop.ln=(prop*log(prop)))  
+
+
+age.freq<-age.freq %>% group_by(YEAR) %>% summarise(shanon.h=(-1*(sum(prop.ln))))          
+
+age.freq %>%
+  ggplot(aes(x=YEAR,y=shanon.h))+
+  geom_path(group = 1, size=1.2, color="blue")+
+  geom_point(size=3, shape=23, fill="Black")+
+  xlab("Year")+
+  ylab("Shannon diversity index (H)")+
+  theme(axis.text.x = element_text(angle = 90))+
+  ggtitle("Age diversity of", subtitle =params$stock )
+                                               
+                                               
+```
+
+
+
+
 ## Density plots of age
 
-You can also embed plots, for example:
+Age distribution across years of survey data of `r params$stock`. These plots can help identify strong year classes of recruits and how these classes persist in the fishery 
 
-```{r age density, echo=FALSE}
+```{r age density, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}
 
 selected.spp %>% 
   drop_na(AGE)%>% 
   group_by(YEAR)%>%
   ggplot(aes(x=AGE, y=YEAR, fill= YEAR))+
   ggridges::geom_density_ridges2()+
-  scale_x_continuous(limits = c(0,10), breaks = 0:10)
+  scale_x_continuous(limits = c(0,(max(selected.spp$AGE, na.rm = TRUE))), breaks = 0:max(selected.spp$AGE, na.rm = TRUE))
   
 ```
+
+
 
 
