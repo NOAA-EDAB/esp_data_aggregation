@@ -21,6 +21,16 @@ jobs:
         uses: r-lib/actions/setup-r@master
         with: 
           r-version: '4.0.3' # problem with using 4.0.4
+          
+      - name: Install Pandoc
+        run: brew install pandoc
+        shell: bash
+
+      - name: Install command line packages
+        run: |        
+          sudo R CMD javareconf
+          sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
+        shell: bash
       
       - name: Cache R packages
         uses: actions/cache@v2
@@ -34,17 +44,7 @@ jobs:
         run: |
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
-
-      - name: Install Pandoc
-        run: brew install pandoc
-        shell: bash
-
-      - name: Install command line packages
-        run: |        
-          sudo R CMD javareconf
-          sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
-        shell: bash
-        
+       
       - name: Create reports
         uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@main
         with: 
