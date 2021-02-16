@@ -7,17 +7,17 @@ source(here::here("R/full_report_functions", "read_data.R"))
 dir.create(here::here("test"))
 setwd(here::here("test"))
 
-file.copy(#from = c(here::here("bookdown", "index.Rmd"),
-           #        here::here("bookdown", "16-bbmsy.Rmd"),
-           #        here::here("bookdown", "09-length.Rmd")),
+file.copy(from = c(here::here("bookdown", "index.Rmd"),
+          #         here::here("bookdown", "16-bbmsy.Rmd"),
+                   here::here("bookdown", "18-age-diversity.Rmd")),
           
-          recursive = TRUE,
-          from = here::here("bookdown"),
+          #recursive = TRUE,
+          #from = here::here("bookdown"),
           
           to = here::here("test"),
           overwrite = TRUE)
 
-setwd(here::here("test/bookdown"))
+#setwd(here::here("test/bookdown"))
 
 bookdown::render_book(input = ".",
   params = list(species_ID = "Acadian redfish",
