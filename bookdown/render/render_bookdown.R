@@ -204,4 +204,16 @@ end - start
 Sys.time()
 
 #####
-              
+
+# clean up files (when locally rendered with parallelization)
+rmds <- list.files(here::here("Reports"), recursive = TRUE, full.names = TRUE) %>%
+  stringr::str_subset(".Rmd")
+file.remove(rmds)
+
+folders <- list.dirs(here::here("Reports"), recursive = TRUE, full.names = TRUE) %>%
+  stringr::str_subset("_bookdown_files")
+unlink(folders, recursive = TRUE)
+
+locks <- list.files(here::here("Reports"), recursive = TRUE, full.names = TRUE) %>%
+  stringr::str_subset("renv.lock")
+file.remove(locks)
