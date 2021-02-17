@@ -37,7 +37,16 @@ Imports:
     utils,
     viridis,
     ymlthis,
-    zoo
+    zoo,
+    dbutils,
+    assessmentdata,
+    survdat,
+    rnaturalearthhires,
+    nmfspalette,
+    TMBhelper,
+    utilities,
+    FishLife,
+    ecodata
 Remotes:
     andybeet/dbutils,
     NOAA-EDAB/assessmentdata,
