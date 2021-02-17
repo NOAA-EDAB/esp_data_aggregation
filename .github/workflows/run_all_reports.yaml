@@ -37,7 +37,7 @@ jobs:
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-DESCRIPTION-02172021
+          key: big-cache-DESCRIPTION-02172021-2
 
       - name: Load R packages (if not cached)
         if: steps.cache.outputs.cache-hit != 'true'
