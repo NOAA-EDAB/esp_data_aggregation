@@ -42,8 +42,8 @@ jobs:
       - name: Load R packages (if not cached)
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          Rscript -e 'install.packages("devtools")
-          devtools::install_deps(dependencies = TRUE)'
+          Rscript -e 'install.packages("here")
+          source(here::here("bookdown/render", "install_dependencies.R"))'
        
       - name: Create reports
         uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@main
