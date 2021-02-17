@@ -11,6 +11,7 @@ Imports:
     FSA,
     ggpubr,
     ggrepel,
+    ggridges,
     ggsci,
     ggsignif,
     ggthemes,
