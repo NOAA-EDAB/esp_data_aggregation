@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.2 Data collection and presentation | Butterfish</title>
+  <meta name="description" content="1.2 Data collection and presentation | Butterfish" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.2 Data collection and presentation | Butterfish" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="NOAA-EDAB/esp_data_aggregation" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.2 Data collection and presentation | Butterfish" />
+  
+  
+  
+
+<meta name="author" content="Abigail Tyrell" />
+
+
+<meta name="date" content="2021-02-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="stock-identification.html"/>
+<link rel="next" href="risk-assessment.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/dt-ext-scroller-1.10.20/css/scroller.dataTables.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-scroller-1.10.20/js/dataTables.scroller.min.js"></script>
+<link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Butterfish</a></li>
+<li class="chapter" data-level="1" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>1</b> Methods</a><ul>
+<li class="chapter" data-level="1.1" data-path="stock-identification.html"><a href="stock-identification.html"><i class="fa fa-check"></i><b>1.1</b> Stock identification</a></li>
+<li class="chapter" data-level="1.2" data-path="data-collection-and-presentation.html"><a href="data-collection-and-presentation.html"><i class="fa fa-check"></i><b>1.2</b> Data collection and presentation</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="data-collection-and-presentation.html"><a href="data-collection-and-presentation.html#assessmentdata-methods"><i class="fa fa-check"></i><b>1.2.1</b> <code>assessmentdata</code> methods</a></li>
+<li class="chapter" data-level="1.2.2" data-path="data-collection-and-presentation.html"><a href="data-collection-and-presentation.html#survdat-methods"><i class="fa fa-check"></i><b>1.2.2</b> <code>survdat</code> methods</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="risk-assessment.html"><a href="risk-assessment.html"><i class="fa fa-check"></i><b>1.3</b> Risk assessment</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="risk-assessment.html"><a href="risk-assessment.html#risk-across-stocks"><i class="fa fa-check"></i><b>1.3.1</b> Risk across stocks</a></li>
+<li class="chapter" data-level="1.3.2" data-path="risk-assessment.html"><a href="risk-assessment.html#risk-within-stocks"><i class="fa fa-check"></i><b>1.3.2</b> Risk within stocks</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="habitat-information.html"><a href="habitat-information.html"><i class="fa fa-check"></i><b>2</b> Habitat information</a><ul>
+<li class="chapter" data-level="2.1" data-path="distribution.html"><a href="distribution.html"><i class="fa fa-check"></i><b>2.1</b> Distribution</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="distribution.html"><a href="distribution.html#map-of-distribution"><i class="fa fa-check"></i><b>2.1.1</b> Map of distribution</a></li>
+<li class="chapter" data-level="2.1.2" data-path="distribution.html"><a href="distribution.html#latitude-and-longitude-ranges"><i class="fa fa-check"></i><b>2.1.2</b> Latitude and longitude ranges</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="temperature.html"><a href="temperature.html"><i class="fa fa-check"></i><b>2.2</b> Temperature</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="temperature.html"><a href="temperature.html#figures"><i class="fa fa-check"></i><b>2.2.1</b> Figures</a></li>
+<li class="chapter" data-level="2.2.2" data-path="temperature.html"><a href="temperature.html#summary"><i class="fa fa-check"></i><b>2.2.2</b> Summary</a></li>
+<li class="chapter" data-level="2.2.3" data-path="temperature.html"><a href="temperature.html#data"><i class="fa fa-check"></i><b>2.2.3</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="salinity.html"><a href="salinity.html"><i class="fa fa-check"></i><b>2.3</b> Salinity</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="salinity.html"><a href="salinity.html#figures-1"><i class="fa fa-check"></i><b>2.3.1</b> Figures</a></li>
+<li class="chapter" data-level="2.3.2" data-path="salinity.html"><a href="salinity.html#summary-1"><i class="fa fa-check"></i><b>2.3.2</b> Summary</a></li>
+<li class="chapter" data-level="2.3.3" data-path="salinity.html"><a href="salinity.html#data-1"><i class="fa fa-check"></i><b>2.3.3</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="depth.html"><a href="depth.html"><i class="fa fa-check"></i><b>2.4</b> Depth</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="depth.html"><a href="depth.html#figures-2"><i class="fa fa-check"></i><b>2.4.1</b> Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="habitat-vulnerability.html"><a href="habitat-vulnerability.html"><i class="fa fa-check"></i><b>2.5</b> Habitat vulnerability</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="biological-information.html"><a href="biological-information.html"><i class="fa fa-check"></i><b>3</b> Biological information</a><ul>
+<li class="chapter" data-level="3.1" data-path="length.html"><a href="length.html"><i class="fa fa-check"></i><b>3.1</b> Length</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="length.html"><a href="length.html#figures-3"><i class="fa fa-check"></i><b>3.1.1</b> Figures</a></li>
+<li class="chapter" data-level="3.1.2" data-path="length.html"><a href="length.html#summary-2"><i class="fa fa-check"></i><b>3.1.2</b> Summary</a></li>
+<li class="chapter" data-level="3.1.3" data-path="length.html"><a href="length.html#data-2"><i class="fa fa-check"></i><b>3.1.3</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="von-bertalanffy-growth-curve.html"><a href="von-bertalanffy-growth-curve.html"><i class="fa fa-check"></i><b>3.2</b> von Bertalanffy growth curve</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="von-bertalanffy-growth-curve.html"><a href="von-bertalanffy-growth-curve.html#length-at-age-growth-curve"><i class="fa fa-check"></i><b>3.2.1</b> Length at age growth curve</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="condition.html"><a href="condition.html"><i class="fa fa-check"></i><b>3.3</b> Condition</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="condition.html"><a href="condition.html#figures-4"><i class="fa fa-check"></i><b>3.3.1</b> Figures</a></li>
+<li class="chapter" data-level="3.3.2" data-path="condition.html"><a href="condition.html#data-3"><i class="fa fa-check"></i><b>3.3.2</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="diet.html"><a href="diet.html"><i class="fa fa-check"></i><b>3.4</b> Diet</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="diet.html"><a href="diet.html#figure"><i class="fa fa-check"></i><b>3.4.1</b> Figure</a></li>
+<li class="chapter" data-level="3.4.2" data-path="diet.html"><a href="diet.html#summary-3"><i class="fa fa-check"></i><b>3.4.2</b> Summary</a></li>
+<li class="chapter" data-level="3.4.3" data-path="diet.html"><a href="diet.html#data-4"><i class="fa fa-check"></i><b>3.4.3</b> Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="population-information.html"><a href="population-information.html"><i class="fa fa-check"></i><b>4</b> Population information</a><ul>
+<li class="chapter" data-level="4.1" data-path="abundance.html"><a href="abundance.html"><i class="fa fa-check"></i><b>4.1</b> Abundance</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="abundance.html"><a href="abundance.html#figures-5"><i class="fa fa-check"></i><b>4.1.1</b> Figures</a></li>
+<li class="chapter" data-level="4.1.2" data-path="abundance.html"><a href="abundance.html#survey-summary"><i class="fa fa-check"></i><b>4.1.2</b> Survey summary</a></li>
+<li class="chapter" data-level="4.1.3" data-path="abundance.html"><a href="abundance.html#data-5"><i class="fa fa-check"></i><b>4.1.3</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="biomass.html"><a href="biomass.html"><i class="fa fa-check"></i><b>4.2</b> Biomass</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="biomass.html"><a href="biomass.html#figures-6"><i class="fa fa-check"></i><b>4.2.1</b> Figures</a></li>
+<li class="chapter" data-level="4.2.2" data-path="biomass.html"><a href="biomass.html#survey-summary-1"><i class="fa fa-check"></i><b>4.2.2</b> Survey summary</a></li>
+<li class="chapter" data-level="4.2.3" data-path="biomass.html"><a href="biomass.html#data-6"><i class="fa fa-check"></i><b>4.2.3</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="bbmsy.html"><a href="bbmsy.html"><i class="fa fa-check"></i><b>4.3</b> B/Bmsy</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="bbmsy.html"><a href="bbmsy.html#figure-1"><i class="fa fa-check"></i><b>4.3.1</b> Figure</a></li>
+<li class="chapter" data-level="4.3.2" data-path="bbmsy.html"><a href="bbmsy.html#data-7"><i class="fa fa-check"></i><b>4.3.2</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="recruitment.html"><a href="recruitment.html"><i class="fa fa-check"></i><b>4.4</b> Recruitment</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="recruitment.html"><a href="recruitment.html#figure-2"><i class="fa fa-check"></i><b>4.4.1</b> Figure</a></li>
+<li class="chapter" data-level="4.4.2" data-path="recruitment.html"><a href="recruitment.html#data-8"><i class="fa fa-check"></i><b>4.4.2</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="age-diversity.html"><a href="age-diversity.html"><i class="fa fa-check"></i><b>4.5</b> Age diversity</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="age-diversity.html"><a href="age-diversity.html#figures-7"><i class="fa fa-check"></i><b>4.5.1</b> Figures</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="climate-vulnerability.html"><a href="climate-vulnerability.html"><i class="fa fa-check"></i><b>4.6</b> Climate vulnerability</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="climate-vulnerability.html"><a href="climate-vulnerability.html#figures-8"><i class="fa fa-check"></i><b>4.6.1</b> Figures</a></li>
+<li class="chapter" data-level="4.6.2" data-path="climate-vulnerability.html"><a href="climate-vulnerability.html#data-9"><i class="fa fa-check"></i><b>4.6.2</b> Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="socio-economic-information.html"><a href="socio-economic-information.html"><i class="fa fa-check"></i><b>5</b> Socio-economic information</a><ul>
+<li class="chapter" data-level="5.1" data-path="catch.html"><a href="catch.html"><i class="fa fa-check"></i><b>5.1</b> Catch</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="catch.html"><a href="catch.html#figures-9"><i class="fa fa-check"></i><b>5.1.1</b> Figures</a></li>
+<li class="chapter" data-level="5.1.2" data-path="catch.html"><a href="catch.html#data-10"><i class="fa fa-check"></i><b>5.1.2</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ffmsy.html"><a href="ffmsy.html"><i class="fa fa-check"></i><b>5.2</b> F/Fmsy</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="ffmsy.html"><a href="ffmsy.html#figure-3"><i class="fa fa-check"></i><b>5.2.1</b> Figure</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ffmsy.html"><a href="ffmsy.html#data-11"><i class="fa fa-check"></i><b>5.2.2</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="revenue.html"><a href="revenue.html"><i class="fa fa-check"></i><b>5.3</b> Revenue</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="revenue.html"><a href="revenue.html#figure-4"><i class="fa fa-check"></i><b>5.3.1</b> Figure</a></li>
+<li class="chapter" data-level="5.3.2" data-path="revenue.html"><a href="revenue.html#data-12"><i class="fa fa-check"></i><b>5.3.2</b> Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="management-information.html"><a href="management-information.html"><i class="fa fa-check"></i><b>6</b> Management information</a><ul>
+<li class="chapter" data-level="6.1" data-path="stock-assessment-and-data-quality-information.html"><a href="stock-assessment-and-data-quality-information.html"><i class="fa fa-check"></i><b>6.1</b> Stock assessment and data quality information</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="risk-assessment-1.html"><a href="risk-assessment-1.html"><i class="fa fa-check"></i><b>7</b> Risk assessment</a><ul>
+<li class="chapter" data-level="7.1" data-path="figures-10.html"><a href="figures-10.html"><i class="fa fa-check"></i><b>7.1</b> Figures</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="figures-10.html"><a href="figures-10.html#relative-to-all-other-stocks"><i class="fa fa-check"></i><b>7.1.1</b> Relative to all other stocks</a></li>
+<li class="chapter" data-level="7.1.2" data-path="figures-10.html"><a href="figures-10.html#within-a-single-stock"><i class="fa fa-check"></i><b>7.1.2</b> Within a single stock</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="data-13.html"><a href="data-13.html"><i class="fa fa-check"></i><b>7.2</b> Data</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="data-13.html"><a href="data-13.html#relative-to-all-other-stocks-1"><i class="fa fa-check"></i><b>7.2.1</b> Relative to all other stocks</a></li>
+<li class="chapter" data-level="7.2.2" data-path="data-13.html"><a href="data-13.html#value-within-each-stock-ranked-by-year"><i class="fa fa-check"></i><b>7.2.2</b> Value within each stock, ranked by year</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Butterfish</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-collection-and-presentation" class="section level2">
+<h2><span class="header-section-number">1.2</span> Data collection and presentation</h2>
+<p>Data sources for each analysis are identified in the Results.</p>
+<p>All continuous temporal data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit.</p>
+<div id="assessmentdata-methods" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> <code>assessmentdata</code> methods</h3>
+<p>Stock assessment and data quality information were compiled into a summary table.</p>
+<p>B/Bmsy was classified as “DANGER” if it was below 1 and “GOOD” if it was above 1.</p>
+<p>F/Fmsy was classified as “DANGER” if it was above 1 and “GOOD” if it was below 1.</p>
+</div>
+<div id="survdat-methods" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> <code>survdat</code> methods</h3>
+<p><code>survdat</code> data with zero abundance were not included in this analysis. Abundance and biomass were summed for each year and season. All other metrics were averaged for each year and season. The tables show summary statistics for the entire time series and for the most recent 5 years in the time series.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="stock-identification.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="risk-assessment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

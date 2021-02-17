@@ -3,7 +3,9 @@ key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/se
 
 # parse out survey data for NE species only, add common name
 key2 <- data.frame(SVSPP = unique(key$SVSPP),
-                   Species = stringr::str_to_sentence(unique(key$COMNAME)))
+                   Species = stringr::str_to_sentence(unique(key$COMNAME)))  %>%
+  dplyr::mutate(Species = Species %>%
+                  stringr::str_replace("Goosefish", "Monkfish"))
 # rank values within species
 
 get_species_risk <- function(data, year_source, value_source, high, indicator_name, n_run = 5){

@@ -211,13 +211,13 @@ cond$Species <- cond$Species %>% stringr::str_replace("Windowpane flounder", "Wi
 
 # risk ----
 risk <- read.csv(here::here("data/risk_ranking", "full_risk_data.csv")) %>%
-  update_species_names(species_col = "Species")
+  dplyr::mutate(Species = Species %>% stringr::str_replace("Goosefish", "Monkfish"))
 risk_year_hist <- read.csv(here::here("data/risk_ranking", "full_historical_risk_data_over_time.csv")) %>%
-  update_species_names(species_col = "Species")
+  dplyr::mutate(Species = Species %>% stringr::str_replace("Goosefish", "Monkfish"))
 risk_year_value <- read.csv(here::here("data/risk_ranking", "full_risk_data_value_over_time.csv")) %>%
-  update_species_names(species_col = "Species")
+  dplyr::mutate(Species = Species %>% stringr::str_replace("Goosefish", "Monkfish"))
 risk_species <- read.csv(here::here("data/risk_ranking", "full_risk_data_by_species.csv")) %>%
-  update_species_names(species_col = "Species")
+  dplyr::mutate(Species = Species %>% stringr::str_replace("Goosefish", "Monkfish"))
 
 # commercial ----
 com <- read.csv(here::here("data", "com_landings_clean_20201222_formatted.csv")) 
