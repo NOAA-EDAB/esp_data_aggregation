@@ -42,6 +42,7 @@ jobs:
       - name: Install assessmentdata specifically
 #        if: steps.cache.outputs.cache-hit != 'true'
         run: |
+          sudo R CMD javareconf
           Rscript -e 'install.packages(c("remotes", "rJava", "tabulizer", "tabulizerjars"))
           remotes::install_github("NOAA-EDAB/assessmentdata")'
 
