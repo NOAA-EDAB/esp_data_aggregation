@@ -10,7 +10,7 @@ info <- read.csv(here::here("R/regressions", "regression_species_regions.csv"))
 
 render_reg_report <- function(stock_var, epus_var, region_var, lag_var, parent_folder){
   
-  new_dir <- here::here("Regressions", parent_folder, stock_var)
+  new_dir <- here::here("Regressions", parent_folder, paste(stock_var, region_var))
   dir.create(new_dir, 
              recursive = TRUE)
   
