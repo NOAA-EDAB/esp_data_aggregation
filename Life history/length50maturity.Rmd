@@ -1,0 +1,128 @@
+---
+title: "L50 maturity"
+author: "Ricky Tabandera"
+date: "2/18/2021"
+output: html_document
+params:
+  stock:
+    label: "Stock:"
+    value: black sea bass
+    input: select
+    choices: [atlantic hagfish, smooth dogfish, spiny dogfish, barndoor skate, winter skate, clearnose skate, rosette skate, little skate, smooth skate, thorny skate, Atlantic herring, alewife, blueback herring, offshore hake, silver hake, Atlantic cod, haddock, pollock, white hake, red hake, cusk, atlantic halibut, american plaice, summer flounder, yellowtail flounder, winter flounder, witch flounder, atlantic mackerel, butterfish, bluefish, scup, acadian redfish atlantic wolffish, ocean pout, monkfish, atlantic menhaden, windowpane flounder, black sea bass ]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(nlstools))
+library(dbutils)
+library(survdat)
+```
+
+## Length at maturity 
+
+The body size at weich 
+
+```{r data wrangling}
+
+survdata<-readRDS(here::here("data", "survdat_pull_bio.rds"))
+
+survdata<-survdata %>% mutate(SVSPP=as.numeric(SVSPP))
+stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+stock_list_all_strata<-stock_list_all_strata %>% rename(SVSPP=svspp)
+stock_list<-stock_list_all_strata %>% dplyr::distinct(SVSPP,.keep_all =T)
+
+survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
+
+selected.surv<-survdata.w.codes %>% 
+   dplyr::filter(common_name == params$stock)
+
+
+
+# selected.surv<-survdata.w.codes %>% 
+#   dplyr::mutate(common_name = common_name %>%
+#                   stringr::str_to_sentence()) %>%
+#   dplyr::filter(common_name == species)
+
+#con <- connect_to_database(server="sole",uid="RTABANDERA")
+surv.maturity<-get_maturity(con)
+surv_maturity<-surv.maturity$data
+#write.csv(surv.maturity, file = "surv_maturity_codes.csv")
+#only take records with a maturity status associated
+selected.surv.clean<-selected.surv %>% drop_na(MATURITY) 
+
+
+
+#recode sexed fish to readable names
+#sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown   
+selected.surv.clean$MATURITY <-recode(selected.surv.clean$MATURITY, "D"="Mature" , "I"="Immature", "R"="Mature", "S"= "Mature", "T"= "Mature", "U"="Mature")
+selected.surv.f<- selected.surv.clean %>% filter(SEX=="female" & MATURITY !="X")
+
+
+# X= unknown , I = immature, D= developing, R S T U convert to developed
+
+
+#bin the years of fish into decades to compare if model parameters are chaging 
+selected.surv.f<-selected.surv.f %>% mutate(decade=cut_width(YEAR, width = 10, boundary = 1980))
+levels(selected.surv.f$decade)<-c( "1980","1990", "2000","2010")
+#recode the maturity col into factor
+selected.surv.f<-selected.surv.f %>% mutate(MATURITY=as.factor(MATURITY))
+
+
+maturity.mod<-glm(MATURITY~LENGTH+decade+LENGTH*decade, data=selected.surv.f, family=binomial)
+
+
+
+pretty_mod<-papeR::prettify(summary(maturity.mod))
+
+summary(maturity.mod)
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r model prep, echo=FALSE}
+knitr::kable(pretty_mod, digits = 3)
+
+
+selected.surv.f %>% ggplot(aes(x=LENGTH, y= MATURITY)) +geom_point()
+```
+```{r}
+selected.surv.f
+
+decade1980<-boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("1980",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
+decade1990<-boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("1990",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
+decade2000<-boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("2000",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
+decade2010<-boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("2010",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
+selected.surv.LENGTH<-seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH))
+
+selected.surv.simlulation<-data.frame(decade1980, decade1990, decade2000,decade2010,selected.surv.LENGTH)
+selected.surv.simlulation<-selected.surv.simlulation %>% pivot_longer(!selected.surv.LENGTH, names_to="decade", values_to="pred")
+
+1980.L50=boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("1980",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
+
+
+
+
+
+
+
+selected.surv.simlulation %>%
+  ggplot(aes(x=selected.surv.LENGTH,y=pred, color=decade))+
+  geom_line(size=3)+
+  xlab("Length (cm)")+
+  ylab("Probability")+
+  annotate("text", label=c("Mature","Immature"), x=30,y= c(1.05,-.05))+
+  geom_hline(yintercept=c(1,0,0.5))+
+  scale_color_manual(labels=c("<1980"," 1981-1990","1991-2000",">2010"), values =c( "blue","firebrick","darkviolet","deepskyblue"), name="Decade")+
+  theme_minimal()
+
+
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
