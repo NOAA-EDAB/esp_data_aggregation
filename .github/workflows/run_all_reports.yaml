@@ -37,31 +37,25 @@ jobs:
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-DESCRIPTION-02162021
-          
-      - name: Install assessmentdata specifically
-#        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          sudo R CMD javareconf
-          Rscript -e 'install.packages(c("remotes", "rJava", "tabulizer", "tabulizerjars"))
-          remotes::install_github("NOAA-EDAB/assessmentdata")'
+          key: big-cache-DESCRIPTION-02172021-2
 
       - name: Load R packages (if not cached)
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          Rscript -e 'install.packages("here")
-          source(here::here("bookdown/render", "install_dependencies.R"))'
+          sudo R CMD javareconf
+          Rscript -e 'install.packages("devtools")
+          devtools::install_deps(dependencies = TRUE)'
                  
-#      - name: Create reports
-#        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@main
-#        with: 
-#          species: '1:37'
+      - name: Create reports
+        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@main
+        with: 
+          species: '1:37'
           
-#      - name: Deploy to Github
-#        uses: JamesIves/github-pages-deploy-action@3.7.1
-#        with:
-#          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-#          BRANCH: gh-pages # The branch the action should deploy to.
-#          FOLDER: action_reports # The folder the action should deploy.
-#          TARGET_FOLDER: Reports
- #         CLEAN: false # Automatically remove deleted files from the deploy branch
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: action_reports # The folder the action should deploy.
+          TARGET_FOLDER: Reports
+          CLEAN: false # Automatically remove deleted files from the deploy branch

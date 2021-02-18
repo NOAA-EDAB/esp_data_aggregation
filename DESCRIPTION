@@ -6,10 +6,12 @@ License: file LICENSE
 Imports:
     AICcmodavg,
     bookdown,
-    #devtools,
+    devtools,
     DT,
+    FSA,
     ggpubr,
     ggrepel,
+    ggridges,
     ggsci,
     ggsignif,
     ggthemes,
