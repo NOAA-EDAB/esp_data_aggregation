@@ -17,14 +17,28 @@ dir.create(here::here("action_reports"))
 
 render_bks <- function(x){
   
-  new_dir <- here::here(paste("action_reports/", x, sep = ""))
+  new_dir <- here::here("action_reports/", x)
   dir.create(new_dir)
   
   file.create(here::here(new_dir, ".nojekyll"))
   
-  setwd(here::here("bookdown"))
+  bookdown_template <- c(list.files(here::here("bookdown/"),
+                                    full.names = TRUE) %>%
+                           stringr::str_subset(".Rmd"),
+                         list.files(here::here("bookdown/"),
+                                    full.names = TRUE) %>%
+                           stringr::str_subset(".yml"))
+
+  file.copy(from = bookdown_template,
+            to = here::here(new_dir),
+            overwrite = TRUE)
+  
+  setwd(here::here(new_dir))
+
   bookdown::render_book(input = ".",
                         params = list(species_ID = x,
+                                      
+                                      path = here::here(new_dir, "figures//"),
                                       
                                       latlong_data = latlong,
                                       shape = shape,
@@ -58,9 +72,18 @@ render_bks <- function(x){
                         intermediates_dir = new_dir,
                         knit_root_dir = new_dir,
                         output_dir = new_dir,
-                        clean = FALSE,
-                        quiet = TRUE) %>% 
-    suppressMessages()
+                        clean = TRUE,
+                        quiet = TRUE) 
+  
+  # clean up files
+  clean <- c(list.files(here::here(new_dir),
+                        full.names = TRUE) %>%
+               stringr::str_subset(".Rmd"),
+             list.files(here::here(new_dir),
+                        full.names = TRUE) %>%
+               stringr::str_subset(".yml"))
+  
+  file.remove(clean)
   
   print(paste("Done with", x, "!"))
   
@@ -70,6 +93,9 @@ render_bks <- function(x){
 source(here::here("R/full_report_functions", "read_data.R"))
 
 # generate reports
+#nums <- 1
 lapply(all_species[nums],
-       render_bks)
+       render_bks) %>%
+  suppressMessages() %>%
+  suppressWarnings()
 

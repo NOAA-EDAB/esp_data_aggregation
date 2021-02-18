@@ -49,6 +49,8 @@ params:
   risk_species_data: data # species risk
   
   cache: FALSE
+  
+  path: "" # figure path
 ---
 
 # `r params$species` {-}
@@ -75,7 +77,8 @@ knitr::opts_chunk$set(echo = FALSE,
                       #time_it = TRUE,
                       fig.width = 8, 
                       fig.align = 'center',
-                      fig.cap = params$species
+                      fig.cap = params$species,
+                      fig.path = params$path
                      # cache.path = here::here("bookdown/cache/", "")
                       )
 ```
