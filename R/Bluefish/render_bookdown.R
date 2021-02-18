@@ -1,6 +1,7 @@
 setwd(here::here("R/Bluefish/bookdown"))
 bookdown::render_book(input = ".",
-                      params = list(lag = 0),
+                      params = list(lag = 0,
+                                    cache = FALSE),
                       output_dir = "Bluefish_lag0_book",
                       clean = TRUE,
                       quiet = FALSE) 

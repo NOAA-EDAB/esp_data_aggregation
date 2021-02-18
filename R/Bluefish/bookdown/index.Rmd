@@ -11,13 +11,14 @@ github-repo: NOAA-EDAB/esp_data_aggregation
 params:
   lag: 0 # lag for correlations
   remove_recent: FALSE
+  cache: FALSE
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE,
                       warning = FALSE, 
-                      #cache = TRUE,
+                      cache = params$cache,
                       results = "asis",
                       fig.width = 8, 
                       fig.align = 'center')
@@ -44,7 +45,7 @@ output <- c()
 
 # Introduction
 
-These are preliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators. The indicators are lagged by `r params$lag` years.
+These are preliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators taken from the `ecodata` package. The indicators are lagged by `r params$lag` years.
 
 # Regression analysis
 
