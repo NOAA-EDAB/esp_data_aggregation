@@ -11,7 +11,8 @@ n_years <- length(unique(test$Time))
 n_var <- length(unique(test$Var))
 n_measurements <- length(test$Time)
 
-if(n_measurements > n_years * n_var){
+if(n_measurements > n_years * n_var &
+   n_measurements > 0){
   test <- test %>%
     dplyr::mutate(Var = paste(Var, "(annual mean)", sep = "\n"))
 }
