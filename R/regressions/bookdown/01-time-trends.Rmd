@@ -3,6 +3,7 @@
 test <- stock %>%
   dplyr::mutate(Val = Time,
                 Var = "Time") %>%
-  dplyr::select(Time, Val, Var)
+  dplyr::select(Time, Val, Var) %>%
+  dplyr::distinct()
 render_indicator(test)
 ```
