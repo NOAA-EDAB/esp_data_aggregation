@@ -1,4 +1,4 @@
-safe_model <- purrr::safely(coef(summary(lm)))
+#safe_model <- purrr::safely(coef(summary(lm)))
 
 data_prep <- function(stock_data, eco_data, lag_data){
   stock2 <- stock_data %>%
@@ -11,10 +11,10 @@ data_prep <- function(stock_data, eco_data, lag_data){
                            by = "Time") %>%
     dplyr::filter(is.na(Var) == FALSE) %>%
     dplyr::group_by(Metric, Var) %>%
-    dplyr::filter(Metric != Var) %>% # remove self-correlations
-    dplyr::mutate(pval = safe_model(Value ~ Val,
-                                    singular.ok = TRUE)[2,4]) %>% 
-    dplyr::filter(pval %>% is.numeric()) %>% # only numeric p-vals (no NA or errors)
+    dplyr::filter(Var %>% stringr::str_detect(Metric) == FALSE) %>% # remove self-correlations
+    dplyr::mutate(pval = coef(summary(lm(Value ~ Val,
+                                         singular.ok = TRUE)))[2,4]) %>% 
+    #dplyr::filter(pval %>% is.numeric()) %>% # only numeric p-vals (no NA or errors)
     dplyr::mutate(sig = pval < 0.05)
   
   return(data)
