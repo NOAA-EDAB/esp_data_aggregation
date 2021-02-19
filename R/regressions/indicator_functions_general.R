@@ -1,14 +1,16 @@
 data_prep <- function(stock_data, eco_data, lag_data){
   stock2 <- stock_data %>%
-    dplyr::mutate(Time = Time - lag_data,
+    dplyr::mutate(Time = as.numeric(Time) - lag_data,
                   facet = paste(Metric, Description, Units, sep = "\n"))
+  
+  eco_data$Time <- as.numeric(eco_data$Time)
   
   data <- dplyr::left_join(stock2, eco_data,
                            by = "Time") %>%
     dplyr::filter(is.na(Var) == FALSE) %>%
     dplyr::group_by(Metric, Var) %>%
-    dplyr::mutate(pval = coefficients(summary(lm(Value ~ Val)))[2,4],
-                  sig = pval < 0.05)
+    dplyr::mutate(pval = coefficients(summary(lm(Value ~ Val)))[2,4]) %>%
+    dplyr::mutate(sig = pval < 0.05)
   
   return(data)
 }
