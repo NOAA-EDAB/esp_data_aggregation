@@ -9,8 +9,8 @@ data_prep <- function(stock_data, eco_data, lag_data){
                            by = "Time") %>%
     dplyr::filter(is.na(Var) == FALSE) %>%
     dplyr::group_by(Metric, Var) %>%
-    dplyr::mutate(pval = coefficients(summary(lm(Value ~ Val)))[2,4],
-                  sig = pval < 0.05)
+    dplyr::mutate(pval = coefficients(summary(lm(Value ~ Val)))[2,4]) %>%
+    dplyr::mutate(sig = pval < 0.05)
   
   return(data)
 }
