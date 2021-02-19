@@ -9,7 +9,8 @@ data_prep <- function(stock_data, eco_data, lag_data){
                            by = "Time") %>%
     dplyr::filter(is.na(Var) == FALSE) %>%
     dplyr::group_by(Metric, Var) %>%
-    dplyr::mutate(pval = coef(summary(lm(Value ~ Val)))[2,4]) %>%
+    dplyr::mutate(pval = coef(summary(lm(Value ~ Val)))[2,4] %>% 
+                    suppressWarnings()) %>%
     dplyr::mutate(sig = pval < 0.05)
   
   return(data)
@@ -63,7 +64,7 @@ correlation_data <- function(stock, eco, lag){
   data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag) %>%
-    dplyr::filter(sig == TRUE) # if there are <3 data points, the correlation won't work
+    dplyr::filter(is.na(sig) == FALSE) # if there are <3 data points, the correlation won't work
   
   # test correlations
   
@@ -117,7 +118,7 @@ correlation_summary <- function(stock, eco, lag){
   data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag) %>%
-    dplyr::filter(sig == TRUE) # if there are <3 data points, the correlation won't work
+    dplyr::filter(is.na(sig) == FALSE) # if there are <3 data points, the correlation won't work
   
   # test correlations
   
