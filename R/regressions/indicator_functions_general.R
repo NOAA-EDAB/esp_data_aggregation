@@ -26,7 +26,8 @@ plot_correlation <- function(stock, eco, lag){
 
   data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
-                    lag_data = lag)
+                    lag_data = lag) %>%
+    purrr::safely()
   
   if(nrow(data) > 0){
     
