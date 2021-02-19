@@ -13,7 +13,7 @@ data_prep <- function(stock_data, eco_data, lag_data){
     dplyr::group_by(Metric, Var) %>%
     dplyr::filter(Metric != Var) %>% # remove self-correlations
     dplyr::mutate(pval = safe_model(Value ~ Val,
-                                    singular.ok = TRUE)[2,4] %>% 
+                                    singular.ok = TRUE)[2,4]) %>% 
     dplyr::filter(pval %>% is.numeric()) %>% # only numeric p-vals (no NA or errors)
     dplyr::mutate(sig = pval < 0.05)
   
