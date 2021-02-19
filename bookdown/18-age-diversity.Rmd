@@ -52,7 +52,10 @@ age.freq<-age.freq %>% group_by(YEAR) %>% mutate(prop=(age.n/sum(age.n))) %>% mu
 
 age.freq<-age.freq %>% group_by(YEAR) %>% summarise(shanon.h=(-1*(sum(prop.ln))))          
 
-}else print ("NOT ENOUGH DATA TO GENERATE METRIC")
+} else {
+  print ("NOT ENOUGH DATA TO GENERATE METRIC")
+  age.freq <- tibble::tibble() # make empty tibble for next logical test
+}
 
 if(nrow(age.freq) > 0){
   

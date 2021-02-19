@@ -8,13 +8,17 @@ output:
     split_by: section
 documentclass: book
 github-repo: NOAA-EDAB/esp_data_aggregation
+params:
+  lag: 0 # lag for correlations
+  remove_recent: FALSE
+  cache: FALSE
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE, 
                       message = FALSE,
                       warning = FALSE, 
-                      #cache = TRUE,
+                      cache = params$cache,
                       results = "asis",
                       fig.width = 8, 
                       fig.align = 'center')
@@ -25,13 +29,24 @@ library(ggplot2)
 source(here::here("R/Bluefish", "indicator_functions.R"))
 
 bluefish <- assessmentdata::stockAssessmentData %>% 
-  dplyr::filter(Species == "Bluefish", AssessmentYear == 2019) %>%
+  dplyr::filter(Species == "Bluefish", 
+                AssessmentYear == 2019) %>%
   dplyr::rename(Time = Year)
+
+if(params$remove_recent){
+  max_year <- max(bluefish$Time)
+  bluefish <- bluefish %>%
+    dplyr::filter(Time <= (max_year - 10))
+} 
+
+output <- c()
 
 ```
 
 # Introduction
 
-These are prliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators.
+These are preliminary regressions that compare bluefish catch, abundance, recruitment, and F to various indicators taken from the `ecodata` package. The indicators are lagged by `r params$lag` years.
 
 # Regression analysis
+
+All regressions are simple linear correlations assessed at the p < 0.5 level. Please note, due to the large number of indicators tested, a certain amount of statistically significant results are expected even if there are no underlying mechanistic connections. These correlations do not necessarily imply causation.

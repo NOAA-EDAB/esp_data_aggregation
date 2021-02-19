@@ -16,12 +16,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-        
-      - name: Set up R
-        uses: r-lib/actions/setup-r@master
-        with: 
-          r-version: '4.0.3' # problem with using 4.0.4
-          
+              
       - name: Install Pandoc
         run: brew install pandoc
         shell: bash
@@ -29,22 +24,28 @@ jobs:
       - name: Install command line packages
         run: |        
           sudo R CMD javareconf
-          sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
+          sudo apt-get install libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
         shell: bash
+        
+      - name: Set up R
+        uses: r-lib/actions/setup-r@master
+        with: 
+          r-version: '4.0.3' # problem with using 4.0.4
       
       - name: Cache R packages
         uses: actions/cache@v2
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-v2-3dfeec915c65af830b4ce8d69a745ee510b348f69532ef96ae49f0082eadd7c3
+          key: big-cache-DESCRIPTION-02172021-2
 
       - name: Load R packages (if not cached)
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
+          sudo R CMD javareconf
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
-       
+                 
       - name: Create reports
         uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@main
         with: 
