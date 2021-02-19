@@ -1,3 +1,5 @@
+safe_model <- purrr::safely(coef(summary(lm)))
+
 data_prep <- function(stock_data, eco_data, lag_data){
   stock2 <- stock_data %>%
     dplyr::mutate(Time = as.numeric(Time) - lag_data,
@@ -10,15 +12,13 @@ data_prep <- function(stock_data, eco_data, lag_data){
     dplyr::filter(is.na(Var) == FALSE) %>%
     dplyr::group_by(Metric, Var) %>%
     dplyr::filter(Metric != Var) %>% # remove self-correlations
-    dplyr::mutate(pval = coef(summary(lm(Value ~ Val,
-                                         singular.ok = TRUE)))[2,4] %>% 
-                    suppressWarnings()) %>%
+    dplyr::mutate(pval = safe_model(Value ~ Val,
+                                    singular.ok = TRUE)[2,4] %>% 
+    dplyr::filter(pval %>% is.numeric()) %>% # only numeric p-vals (no NA or errors)
     dplyr::mutate(sig = pval < 0.05)
   
   return(data)
 }
-
-safe_data_prep <- purrr::safely(data_prep)
 
 plot_correlation <- function(stock, eco, lag){
   # both data sets must have a column called "Time"
@@ -26,10 +26,10 @@ plot_correlation <- function(stock, eco, lag){
   # the eco data numeric values should be in a column called "Val"
   # the eco data category values should be in a column called "Var"
 
-  data <- safe_data_prep(stock_data = stock, 
+  data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag)
-  
+
   if(nrow(data) > 0){
     
     my_colors <- c("black", "#B2292E")
@@ -65,7 +65,7 @@ plot_correlation <- function(stock, eco, lag){
 
 correlation_data <- function(stock, eco, lag){
 
-  data <- safe_data_prep(stock_data = stock, 
+  data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag) %>%
     dplyr::filter(is.na(sig) == FALSE) # if there are <3 data points, the correlation won't work
@@ -119,7 +119,7 @@ correlation_data <- function(stock, eco, lag){
 
 correlation_summary <- function(stock, eco, lag){
 
-  data <- safe_data_prep(stock_data = stock, 
+  data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag) %>%
     dplyr::filter(is.na(sig) == FALSE) # if there are <3 data points, the correlation won't work
