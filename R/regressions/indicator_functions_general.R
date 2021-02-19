@@ -18,16 +18,17 @@ data_prep <- function(stock_data, eco_data, lag_data){
   return(data)
 }
 
+safe_data_prep <- purrr::safely(data_prep)
+
 plot_correlation <- function(stock, eco, lag){
   # both data sets must have a column called "Time"
   # the stock data should be from assessmentdata::stockAssessmentData
   # the eco data numeric values should be in a column called "Val"
   # the eco data category values should be in a column called "Var"
 
-  data <- data_prep(stock_data = stock, 
+  data <- safe_data_prep(stock_data = stock, 
                     eco_data = eco, 
-                    lag_data = lag) %>%
-    purrr::safely()
+                    lag_data = lag)
   
   if(nrow(data) > 0){
     
@@ -64,7 +65,7 @@ plot_correlation <- function(stock, eco, lag){
 
 correlation_data <- function(stock, eco, lag){
 
-  data <- data_prep(stock_data = stock, 
+  data <- safe_data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag) %>%
     dplyr::filter(is.na(sig) == FALSE) # if there are <3 data points, the correlation won't work
@@ -118,7 +119,7 @@ correlation_data <- function(stock, eco, lag){
 
 correlation_summary <- function(stock, eco, lag){
 
-  data <- data_prep(stock_data = stock, 
+  data <- safe_data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag) %>%
     dplyr::filter(is.na(sig) == FALSE) # if there are <3 data points, the correlation won't work
