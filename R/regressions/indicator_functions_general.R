@@ -1,7 +1,9 @@
 data_prep <- function(stock_data, eco_data, lag_data){
   stock2 <- stock_data %>%
-    dplyr::mutate(Time = Time - lag_data,
+    dplyr::mutate(Time = as.numeric(Time) - lag_data,
                   facet = paste(Metric, Description, Units, sep = "\n"))
+  
+  eco_data$Time <- as.numeric(eco_data$Time)
   
   data <- dplyr::left_join(stock2, eco_data,
                            by = "Time") %>%
