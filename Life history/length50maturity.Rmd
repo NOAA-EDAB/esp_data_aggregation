@@ -103,11 +103,14 @@ selected.surv.LENGTH<-seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH
 selected.surv.simlulation<-data.frame(decade1980, decade1990, decade2000,decade2010,selected.surv.LENGTH)
 selected.surv.simlulation<-selected.surv.simlulation %>% pivot_longer(!selected.surv.LENGTH, names_to="decade", values_to="pred")
 
-1980.L50=boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("1980",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
+L50.1980<-predict.glm(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("1980",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="terms"))
+selected.surv.LENGTH
+t1<-data.frame(L50.1980,selected.surv.LENGTH)
 
+t1 %>% ggplot(aes(x=selected.surv.LENGTH, y=boot::inv.logit(L50.1980)))+geom_point()
 
-
-
+coef(maturity.mod)
+boot::logit()
 
 
 
