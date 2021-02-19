@@ -1,3 +1,5 @@
+`%>%` <- dplyr::`%>%`
+
 # get list of species and regions, manually assign to EPUs
 #assessmentdata::stockAssessmentData %>% 
 #  dplyr::select(Species, Region) %>% 
