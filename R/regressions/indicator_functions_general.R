@@ -168,6 +168,6 @@ correlation_summary <- function(stock, eco, lag){
 
 render_indicator <- function(test){
   res <- knitr::knit_child(here::here("R/regressions", "general-child-doc.Rmd"), 
-                           quiet = FALSE)
+                           quiet = TRUE)
   cat(res, sep = '\n')
 }

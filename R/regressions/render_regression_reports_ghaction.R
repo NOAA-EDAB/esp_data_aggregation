@@ -42,7 +42,7 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
                         intermediates_dir = new_dir,
                         knit_root_dir = new_dir,
                         clean = TRUE,
-                        quiet = FALSE) %>% 
+                        quiet = TRUE) %>% 
     suppressMessages() %>%
     suppressWarnings()
   
@@ -61,8 +61,8 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
               sep = ": "))
 }
 
-for(i in 1
-    #1:nrow(info)
+for(i in #1
+    1:nrow(info)
     ){
   # make 0 lag reports
   render_reg_report(stock_var = info[i, 1], 
