@@ -43,7 +43,8 @@ library(ggplot2)
 source(here::here("R/regressions", "indicator_functions_general.R"))
 
 stock <- assessmentdata::stockAssessmentData %>% 
-  dplyr::filter(Species == params$stock) %>%
+  dplyr::filter(Species == params$stock,
+                Region == params$region) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(max_year = max(AssessmentYear)) %>%
   dplyr::filter(AssessmentYear == max_year) %>%
@@ -288,13 +289,16 @@ if(nrow(test) > 0){
 
 ## Adult indicators
 
-### Size of spawning stock
+### Abundance
 ```{r, ssb}
 test <- stock %>%
   dplyr::filter(Metric == "Abundance") %>%
   dplyr::rename(Var = Metric,
                 Val = Value)
-render_indicator(test)
+
+if(nrow(test) > 0){
+  render_indicator(test)
+} else print("No data")
 ```
 
 ### Mean age of spawning stock

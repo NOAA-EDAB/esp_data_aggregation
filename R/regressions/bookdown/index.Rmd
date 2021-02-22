@@ -43,7 +43,8 @@ library(ggplot2)
 source(here::here("R/regressions", "indicator_functions_general.R"))
 
 stock <- assessmentdata::stockAssessmentData %>% 
-  dplyr::filter(Species == params$stock) %>%
+  dplyr::filter(Species == params$stock,
+                Region == params$region) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(max_year = max(AssessmentYear)) %>%
   dplyr::filter(AssessmentYear == max_year) %>%

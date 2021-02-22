@@ -1,5 +1,7 @@
-`%>%` <- dplyr::`%>%`
+
 install.packages("purrr")
+
+`%>%` <- dplyr::`%>%`
 
 # get list of species and regions, manually assign to EPUs
 #assessmentdata::stockAssessmentData %>% 
@@ -40,7 +42,7 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
                         intermediates_dir = new_dir,
                         knit_root_dir = new_dir,
                         clean = TRUE,
-                        quiet = FALSE) %>% 
+                        quiet = TRUE) %>% 
     suppressMessages() %>%
     suppressWarnings()
   
@@ -59,8 +61,8 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
               sep = ": "))
 }
 
-for(i in 5
-    #1:nrow(info)
+for(i in #5
+    1:nrow(info)
     ){
   # make 0 lag reports
   render_reg_report(stock_var = info[i, 1], 

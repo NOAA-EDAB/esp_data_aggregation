@@ -1,0 +1,3902 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Regression analysis | test</title>
+  <meta name="description" content="2 Regression analysis | test" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Regression analysis | test" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="NOAA-EDAB/esp_data_aggregation" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Regression analysis | test" />
+  
+  
+  
+
+<meta name="author" content="Abigail Tyrell" />
+
+
+<meta name="date" content="2021-02-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="atlantic-cod.html"><a href="atlantic-cod.html"><i class="fa fa-check"></i>Atlantic cod</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="regression-analysis.html"><a href="regression-analysis.html"><i class="fa fa-check"></i><b>2</b> Regression analysis</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regression-analysis" class="section level1">
+<h1><span class="header-section-number">2</span> Regression analysis</h1>
+<p>All regressions are simple linear correlations assessed at the p &lt; 0.5 level. Please note, due to the large number of indicators tested, a certain amount of statistically significant results are expected even if there are no underlying mechanistic connections. These correlations do not necessarily imply causation.</p>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="15%" />
+<col width="3%" />
+<col width="8%" />
+<col width="7%" />
+<col width="23%" />
+<col width="13%" />
+<col width="11%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Species</th>
+<th align="left">Region</th>
+<th align="right">Time</th>
+<th align="right">Value</th>
+<th align="left">Metric</th>
+<th align="left">Description</th>
+<th align="left">Units</th>
+<th align="right">AssessmentYear</th>
+<th align="right">max_year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1978</td>
+<td align="right">5502.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1979</td>
+<td align="right">6408.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1980</td>
+<td align="right">6418.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1981</td>
+<td align="right">8092.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1982</td>
+<td align="right">8565.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1983</td>
+<td align="right">8572.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1984</td>
+<td align="right">10558.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1985</td>
+<td align="right">6641.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1986</td>
+<td align="right">5696.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1987</td>
+<td align="right">4793.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1988</td>
+<td align="right">7645.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1989</td>
+<td align="right">6267.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1990</td>
+<td align="right">6483.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1991</td>
+<td align="right">6464.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1992</td>
+<td align="right">5257.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1993</td>
+<td align="right">4077.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1994</td>
+<td align="right">1003.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1995</td>
+<td align="right">544.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1996</td>
+<td align="right">677.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1997</td>
+<td align="right">555.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1998</td>
+<td align="right">686.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">1999</td>
+<td align="right">1204.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2000</td>
+<td align="right">788.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2001</td>
+<td align="right">1634.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2002</td>
+<td align="right">1697.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2003</td>
+<td align="right">1935.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2004</td>
+<td align="right">1063.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2005</td>
+<td align="right">370.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2006</td>
+<td align="right">226.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2007</td>
+<td align="right">513.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2008</td>
+<td align="right">244.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Eastern Georges Bank</td>
+<td align="right">2009</td>
+<td align="right">580.00000</td>
+<td align="left">Catch</td>
+<td align="left">Estimated Total Catch - USA</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1981</td>
+<td align="right">45029.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1982</td>
+<td align="right">62762.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1983</td>
+<td align="right">51554.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1984</td>
+<td align="right">41321.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1985</td>
+<td align="right">39861.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1986</td>
+<td align="right">27366.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1987</td>
+<td align="right">33395.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1988</td>
+<td align="right">45833.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1989</td>
+<td align="right">35309.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1990</td>
+<td align="right">43775.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1991</td>
+<td align="right">39700.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1992</td>
+<td align="right">30272.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1993</td>
+<td align="right">25513.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1994</td>
+<td align="right">15992.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1995</td>
+<td align="right">10133.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1996</td>
+<td align="right">9765.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1997</td>
+<td align="right">13226.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1998</td>
+<td align="right">9912.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1999</td>
+<td align="right">10770.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2000</td>
+<td align="right">10099.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2001</td>
+<td align="right">13457.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2002</td>
+<td align="right">11506.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2003</td>
+<td align="right">8898.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2004</td>
+<td align="right">5127.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2005</td>
+<td align="right">4352.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2006</td>
+<td align="right">4421.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2007</td>
+<td align="right">5705.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2008</td>
+<td align="right">5305.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2009</td>
+<td align="right">4744.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1987</td>
+<td align="right">6.96000</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1988</td>
+<td align="right">8.32800</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1989</td>
+<td align="right">8.97400</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1990</td>
+<td align="right">8.85100</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1991</td>
+<td align="right">8.03000</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1992</td>
+<td align="right">6.10700</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1993</td>
+<td align="right">3.86600</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1994</td>
+<td align="right">3.73200</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1995</td>
+<td align="right">4.66100</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1996</td>
+<td align="right">5.54200</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1997</td>
+<td align="right">5.73600</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1998</td>
+<td align="right">5.17500</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1999</td>
+<td align="right">5.07100</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2000</td>
+<td align="right">4.29900</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2001</td>
+<td align="right">3.91200</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2002</td>
+<td align="right">5.05800</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2003</td>
+<td align="right">6.58000</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2004</td>
+<td align="right">7.18200</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2005</td>
+<td align="right">6.01200</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2006</td>
+<td align="right">4.24700</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2007</td>
+<td align="right">3.27000</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2008</td>
+<td align="right">3.22300</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2009</td>
+<td align="right">3.22700</td>
+<td align="left">Abundance</td>
+<td align="left">Smoothed Survey CPUE</td>
+<td align="left">kg / tow</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1987</td>
+<td align="right">2.06600</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1988</td>
+<td align="right">2.36971</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1989</td>
+<td align="right">1.69417</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1990</td>
+<td align="right">2.12957</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1991</td>
+<td align="right">2.12879</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1992</td>
+<td align="right">2.13438</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1993</td>
+<td align="right">2.84157</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1994</td>
+<td align="right">1.84510</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1995</td>
+<td align="right">0.93609</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1996</td>
+<td align="right">0.75869</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1997</td>
+<td align="right">0.99284</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1998</td>
+<td align="right">0.82472</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">1999</td>
+<td align="right">0.91449</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2000</td>
+<td align="right">1.01151</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2001</td>
+<td align="right">1.48118</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2002</td>
+<td align="right">0.97950</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2003</td>
+<td align="right">0.58227</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2004</td>
+<td align="right">0.30738</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2005</td>
+<td align="right">0.31169</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2006</td>
+<td align="right">0.44823</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2007</td>
+<td align="right">0.75122</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2008</td>
+<td align="right">0.70873</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Georges Bank</td>
+<td align="right">2009</td>
+<td align="right">0.63300</td>
+<td align="left">Fmort</td>
+<td align="left">Catch / Smoothed Survey Biomass</td>
+<td align="left">Exploitation Rate</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1982</td>
+<td align="right">17534.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1983</td>
+<td align="right">17988.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1984</td>
+<td align="right">14457.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1985</td>
+<td align="right">18101.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1986</td>
+<td align="right">14686.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1987</td>
+<td align="right">14307.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1988</td>
+<td align="right">12143.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1989</td>
+<td align="right">15284.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1990</td>
+<td align="right">21932.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1991</td>
+<td align="right">21375.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1992</td>
+<td align="right">13023.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1993</td>
+<td align="right">11178.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1994</td>
+<td align="right">9775.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1995</td>
+<td align="right">8445.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1996</td>
+<td align="right">8014.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1997</td>
+<td align="right">6015.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1998</td>
+<td align="right">4894.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">1999</td>
+<td align="right">3878.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2000</td>
+<td align="right">6581.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2001</td>
+<td align="right">8600.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2002</td>
+<td align="right">7142.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2003</td>
+<td align="right">6686.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2004</td>
+<td align="right">7005.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2005</td>
+<td align="right">7088.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2006</td>
+<td align="right">4264.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2007</td>
+<td align="right">5966.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="even">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2008</td>
+<td align="right">8303.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+<tr class="odd">
+<td align="left">Atlantic cod</td>
+<td align="left">Gulf of Maine</td>
+<td align="right">2009</td>
+<td align="right">9485.00000</td>
+<td align="left">Catch</td>
+<td align="left">Total Catch</td>
+<td align="left">Metric Tons</td>
+<td align="right">2019</td>
+<td align="right">2019</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Var</th>
+<th align="right">Time</th>
+<th align="right">Val</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1979</td>
+<td align="right">71.6333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1980</td>
+<td align="right">81.6666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1981</td>
+<td align="right">68.0333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1982</td>
+<td align="right">73.3666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1983</td>
+<td align="right">69.9333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1984</td>
+<td align="right">71.6333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1985</td>
+<td align="right">72.5000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1986</td>
+<td align="right">85.2000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1987</td>
+<td align="right">83.9333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1988</td>
+<td align="right">80.1000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1989</td>
+<td align="right">81.2333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1990</td>
+<td align="right">70.9333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1991</td>
+<td align="right">85.7666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1992</td>
+<td align="right">82.8333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1993</td>
+<td align="right">77.2000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1994</td>
+<td align="right">72.2666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1995</td>
+<td align="right">77.4666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1996</td>
+<td align="right">73.4000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1997</td>
+<td align="right">77.3666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1998</td>
+<td align="right">77.2333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">1999</td>
+<td align="right">68.6666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2000</td>
+<td align="right">77.7000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2001</td>
+<td align="right">70.1333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2002</td>
+<td align="right">69.6666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2003</td>
+<td align="right">83.0000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2004</td>
+<td align="right">68.8333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2005</td>
+<td align="right">69.7333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2006</td>
+<td align="right">77.8333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2007</td>
+<td align="right">70.8000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2008</td>
+<td align="right">69.1333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2009</td>
+<td align="right">78.4000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2010</td>
+<td align="right">81.4333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2011</td>
+<td align="right">72.8666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2012</td>
+<td align="right">72.2666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2013</td>
+<td align="right">62.3000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2014</td>
+<td align="right">74.1000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2015</td>
+<td align="right">60.3000000</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2016</td>
+<td align="right">71.0666667</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2017</td>
+<td align="right">75.4333333</td>
+</tr>
+<tr class="odd">
+<td align="left">hcly summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">m<sup>2/sec</sup>2</td>
+<td align="right">2018</td>
+<td align="right">75.1333333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1979</td>
+<td align="right">0.2650000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1980</td>
+<td align="right">0.2930000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1981</td>
+<td align="right">0.3030000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1982</td>
+<td align="right">0.2513333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1983</td>
+<td align="right">0.2563333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1984</td>
+<td align="right">0.2823333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1985</td>
+<td align="right">0.2666667</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1986</td>
+<td align="right">0.2873333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1987</td>
+<td align="right">0.2470000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1988</td>
+<td align="right">0.2753333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1989</td>
+<td align="right">0.2960000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1990</td>
+<td align="right">0.2783333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1991</td>
+<td align="right">0.2993333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1992</td>
+<td align="right">0.2693333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1993</td>
+<td align="right">0.2536667</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1994</td>
+<td align="right">0.3003333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1995</td>
+<td align="right">0.3023333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1996</td>
+<td align="right">0.2840000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1997</td>
+<td align="right">0.2573333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1998</td>
+<td align="right">0.2510000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1999</td>
+<td align="right">0.2913333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2000</td>
+<td align="right">0.2600000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2001</td>
+<td align="right">0.2813333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2002</td>
+<td align="right">0.2890000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2003</td>
+<td align="right">0.2720000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2004</td>
+<td align="right">0.2863333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2005</td>
+<td align="right">0.2743333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2006</td>
+<td align="right">0.3180000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2007</td>
+<td align="right">0.2790000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2008</td>
+<td align="right">0.3053333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2009</td>
+<td align="right">0.2993333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2010</td>
+<td align="right">0.3243333</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2011</td>
+<td align="right">0.2986667</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2012</td>
+<td align="right">0.2666667</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2013</td>
+<td align="right">0.2916667</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2014</td>
+<td align="right">0.3156667</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2015</td>
+<td align="right">0.2736667</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2016</td>
+<td align="right">0.3060000</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2017</td>
+<td align="right">0.3196667</td>
+</tr>
+<tr class="odd">
+<td align="left">tke summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2018</td>
+<td align="right">0.3010000</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1979</td>
+<td align="right">1.9322715</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1980</td>
+<td align="right">2.2235373</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1981</td>
+<td align="right">1.4909929</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1982</td>
+<td align="right">1.9334223</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1983</td>
+<td align="right">1.8290912</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1984</td>
+<td align="right">2.2902481</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1985</td>
+<td align="right">1.5943043</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1986</td>
+<td align="right">1.4245276</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1987</td>
+<td align="right">0.9331244</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1988</td>
+<td align="right">3.1427344</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1989</td>
+<td align="right">1.3482651</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1990</td>
+<td align="right">0.8067348</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1991</td>
+<td align="right">2.4762291</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1992</td>
+<td align="right">1.4216043</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1993</td>
+<td align="right">1.5485410</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1994</td>
+<td align="right">2.7849290</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1995</td>
+<td align="right">2.0644346</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1996</td>
+<td align="right">1.9171234</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1997</td>
+<td align="right">1.7948572</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1998</td>
+<td align="right">2.0449286</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1999</td>
+<td align="right">2.2215034</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2000</td>
+<td align="right">1.2653458</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2001</td>
+<td align="right">2.1829486</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2002</td>
+<td align="right">1.6216598</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2003</td>
+<td align="right">3.1749143</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2004</td>
+<td align="right">2.0167634</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2005</td>
+<td align="right">1.5458006</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2006</td>
+<td align="right">2.0345718</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2007</td>
+<td align="right">2.0104652</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2008</td>
+<td align="right">2.2519291</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2009</td>
+<td align="right">2.1258378</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2010</td>
+<td align="right">1.7360234</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2011</td>
+<td align="right">1.9278932</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2012</td>
+<td align="right">1.6553297</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2013</td>
+<td align="right">2.5840764</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2014</td>
+<td align="right">1.6347278</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2015</td>
+<td align="right">1.3121897</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2016</td>
+<td align="right">1.7039550</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2017</td>
+<td align="right">1.2145362</td>
+</tr>
+<tr class="odd">
+<td align="left">total wind speed summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2018</td>
+<td align="right">2.3602657</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1979</td>
+<td align="right">1.3140000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1980</td>
+<td align="right">1.8233333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1981</td>
+<td align="right">1.2110000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1982</td>
+<td align="right">1.6173333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1983</td>
+<td align="right">1.6700000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1984</td>
+<td align="right">1.3496667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1985</td>
+<td align="right">0.9310000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1986</td>
+<td align="right">1.2936667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1987</td>
+<td align="right">0.7670000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1988</td>
+<td align="right">2.2700000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1989</td>
+<td align="right">0.8546667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1990</td>
+<td align="right">0.4700000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1991</td>
+<td align="right">1.9753333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1992</td>
+<td align="right">0.9083333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1993</td>
+<td align="right">1.2563333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1994</td>
+<td align="right">2.1460000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1995</td>
+<td align="right">1.0676667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1996</td>
+<td align="right">1.1666667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1997</td>
+<td align="right">1.4990000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1998</td>
+<td align="right">1.6050000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1999</td>
+<td align="right">1.4313333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2000</td>
+<td align="right">0.8053333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2001</td>
+<td align="right">1.5836667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2002</td>
+<td align="right">1.2866667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2003</td>
+<td align="right">2.2493333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2004</td>
+<td align="right">0.7826667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2005</td>
+<td align="right">1.0616667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2006</td>
+<td align="right">1.4503333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2007</td>
+<td align="right">1.4256667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2008</td>
+<td align="right">1.5020000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2009</td>
+<td align="right">1.1093333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2010</td>
+<td align="right">1.3256667</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2011</td>
+<td align="right">1.1673333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2012</td>
+<td align="right">1.1563333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2013</td>
+<td align="right">2.0020000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2014</td>
+<td align="right">0.8440000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2015</td>
+<td align="right">0.8880000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2016</td>
+<td align="right">1.3460000</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2017</td>
+<td align="right">0.8253333</td>
+</tr>
+<tr class="odd">
+<td align="left">uwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2018</td>
+<td align="right">1.2530000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1979</td>
+<td align="right">1.3916667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1980</td>
+<td align="right">1.2066667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1981</td>
+<td align="right">0.1560000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1982</td>
+<td align="right">0.7613333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1983</td>
+<td align="right">0.6693333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1984</td>
+<td align="right">0.7740000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1985</td>
+<td align="right">0.9296667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1986</td>
+<td align="right">0.4623333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1987</td>
+<td align="right">0.3036667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1988</td>
+<td align="right">1.8996667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1989</td>
+<td align="right">0.7663333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1990</td>
+<td align="right">0.3300000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1991</td>
+<td align="right">1.3040000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1992</td>
+<td align="right">0.9863333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1993</td>
+<td align="right">0.8943333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1994</td>
+<td align="right">1.2180000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1995</td>
+<td align="right">-0.0686667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1996</td>
+<td align="right">1.4413333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1997</td>
+<td align="right">0.9706667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1998</td>
+<td align="right">1.0733333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">1999</td>
+<td align="right">1.5840000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2000</td>
+<td align="right">0.8516667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2001</td>
+<td align="right">1.0413333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2002</td>
+<td align="right">0.9206667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2003</td>
+<td align="right">1.9840000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2004</td>
+<td align="right">1.3423333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2005</td>
+<td align="right">0.9666667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2006</td>
+<td align="right">0.9413333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2007</td>
+<td align="right">1.1370000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2008</td>
+<td align="right">0.9570000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2009</td>
+<td align="right">1.2510000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2010</td>
+<td align="right">1.0820000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2011</td>
+<td align="right">1.4596667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2012</td>
+<td align="right">1.1486667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2013</td>
+<td align="right">1.2403333</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2014</td>
+<td align="right">1.0720000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2015</td>
+<td align="right">0.9126667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2016</td>
+<td align="right">0.8826667</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2017</td>
+<td align="right">0.8370000</td>
+</tr>
+<tr class="odd">
+<td align="left">vwnd summer</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">J/kg</td>
+<td align="right">2018</td>
+<td align="right">1.4833333</td>
+</tr>
+</tbody>
+</table>
+<div id="figures" class="section level4 unnumbered">
+<h4>Figures</h4>
+<p><img src="unnamed-chunk-1-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="regression-statistics" class="section level4 unnumbered">
+<h4>Regression statistics</h4>
+<p>[1] “No statistically significant results”
+[1] “No statistically significant results”
+[1] “No statistically significant results”
+[1] “No statistically significant results”</p>
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-3">Table 2.1: </span>Catch vs vwnd summer
+J/kg
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">19514.97</td>
+<td align="right">3214.86</td>
+<td align="right">6.07</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-7408.13</td>
+<td align="right">3022.48</td>
+<td align="right">-2.45</td>
+<td align="right">0.02</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">6.01</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 85</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.07</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.06</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<p>[1] “No statistically significant results”
+[1] “No statistically significant results”
+[1] “No statistically significant results”
+[1] “No statistically significant results”
+[1] “No statistically significant results”</p>
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-3">Table 2.1: </span>Fmort vs hcly summer
+m<sup>2/sec</sup>2
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">-4.74</td>
+<td align="right">1.67</td>
+<td align="right">-2.83</td>
+<td align="right">0.01</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">0.08</td>
+<td align="right">0.02</td>
+<td align="right">3.59</td>
+<td align="right">0.00</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">12.91</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 21</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.38</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.35</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<p>[1] “No statistically significant results”</p>
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-3">Table 2.1: </span>Fmort vs total wind speed summer
+J/kg
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">2.33</td>
+<td align="right">0.46</td>
+<td align="right">5.02</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-0.56</td>
+<td align="right">0.23</td>
+<td align="right">-2.43</td>
+<td align="right">0.02</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">5.91</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 21</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.22</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.18</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<p>[1] “No statistically significant results”
+[1] “No statistically significant results”</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+</body>
+
+</html>

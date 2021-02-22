@@ -1,12 +1,15 @@
 ## Adult indicators
 
-### Size of spawning stock
+### Abundance
 ```{r, ssb}
 test <- stock %>%
   dplyr::filter(Metric == "Abundance") %>%
   dplyr::rename(Var = Metric,
                 Val = Value)
-render_indicator(test)
+
+if(nrow(test) > 0){
+  render_indicator(test)
+} else print("No data")
 ```
 
 ### Mean age of spawning stock
