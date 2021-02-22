@@ -24,7 +24,7 @@
 <meta name="author" content="Abigail Tyrell" />
 
 
-<meta name="date" content="2021-02-19" />
+<meta name="date" content="2021-02-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -121,7 +121,7 @@
 <li class="chapter" data-level="2.5.3" data-path="juvenile-indicators.html"><a href="juvenile-indicators.html#cpue"><i class="fa fa-check"></i><b>2.5.3</b> CPUE</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="adult-indicators.html"><a href="adult-indicators.html"><i class="fa fa-check"></i><b>2.6</b> Adult indicators</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="adult-indicators.html"><a href="adult-indicators.html#size-of-spawning-stock"><i class="fa fa-check"></i><b>2.6.1</b> Size of spawning stock</a></li>
+<li class="chapter" data-level="2.6.1" data-path="adult-indicators.html"><a href="adult-indicators.html#abundance"><i class="fa fa-check"></i><b>2.6.1</b> Abundance</a></li>
 <li class="chapter" data-level="2.6.2" data-path="adult-indicators.html"><a href="adult-indicators.html#mean-age-of-spawning-stock"><i class="fa fa-check"></i><b>2.6.2</b> Mean age of spawning stock</a></li>
 <li class="chapter" data-level="2.6.3" data-path="adult-indicators.html"><a href="adult-indicators.html#age-distribution"><i class="fa fa-check"></i><b>2.6.3</b> Age distribution</a></li>
 <li class="chapter" data-level="2.6.4" data-path="adult-indicators.html"><a href="adult-indicators.html#length-age-curves-1"><i class="fa fa-check"></i><b>2.6.4</b> Length-age curves</a></li>
@@ -135,7 +135,7 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="summary-of-statistically-significant-indicators.html"><a href="summary-of-statistically-significant-indicators.html"><i class="fa fa-check"></i><b>3</b> Summary of statistically significant indicators</a><ul>
-<li class="chapter" data-level="3.1" data-path="abundance.html"><a href="abundance.html"><i class="fa fa-check"></i><b>3.1</b> Abundance</a></li>
+<li class="chapter" data-level="3.1" data-path="abundance-1.html"><a href="abundance-1.html"><i class="fa fa-check"></i><b>3.1</b> Abundance</a></li>
 <li class="chapter" data-level="3.2" data-path="recruitment-1.html"><a href="recruitment-1.html"><i class="fa fa-check"></i><b>3.2</b> Recruitment</a></li>
 <li class="chapter" data-level="3.3" data-path="catch.html"><a href="catch.html"><i class="fa fa-check"></i><b>3.3</b> Catch</a></li>
 <li class="chapter" data-level="3.4" data-path="fmort.html"><a href="fmort.html"><i class="fa fa-check"></i><b>3.4</b> Fmort</a></li>
@@ -467,6 +467,144 @@ n
 <!-- -->
 <table class="kable_wrapper">
 <caption>
+<span id="tab:unnamed-chunk-27">Table 2.3: </span>Catch vs maximum intensity
+degrees C
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">11256.35</td>
+<td align="right">2639.93</td>
+<td align="right">4.26</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-3398.33</td>
+<td align="right">1125.33</td>
+<td align="right">-3.02</td>
+<td align="right">0.01</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">9.12</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 25</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.27</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.24</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-27">Table 2.3: </span>Fmort vs maximum intensity
+degrees C
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">1.00</td>
+<td align="right">0.17</td>
+<td align="right">6.01</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-0.27</td>
+<td align="right">0.07</td>
+<td align="right">-3.85</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">14.84</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 25</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.37</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.35</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
 <span id="tab:unnamed-chunk-27">Table 2.3: </span>Fmort vs cumulative intensity
 degrees C
 </caption>
@@ -487,16 +625,16 @@ degrees C
 <tr class="odd">
 <td align="left">(Intercept)</td>
 <td align="right">0.52</td>
-<td align="right">0.06</td>
-<td align="right">8.15</td>
-<td align="right">0.00</td>
+<td align="right">0.05</td>
+<td align="right">10.18</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
 <td align="right">0.00</td>
 <td align="right">0.00</td>
-<td align="right">-2.75</td>
-<td align="right">0.01</td>
+<td align="right">-4.19</td>
+<td align="right">0</td>
 </tr>
 </tbody>
 </table>
@@ -512,7 +650,7 @@ degrees C
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">7.58</td>
+<td align="left">17.59</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -520,11 +658,11 @@ degrees C
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.23</td>
+<td align="left">0.41</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.2</td>
+<td align="left">0.39</td>
 </tr>
 </tbody>
 </table>
@@ -565,16 +703,16 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.44</td>
+<td align="right">0.45</td>
 <td align="right">0.05</td>
-<td align="right">8.50</td>
+<td align="right">8.53</td>
 <td align="right">0.00</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-0.14</td>
-<td align="right">0.06</td>
-<td align="right">-2.49</td>
+<td align="right">-0.18</td>
+<td align="right">0.07</td>
+<td align="right">-2.61</td>
 <td align="right">0.02</td>
 </tr>
 </tbody>
@@ -591,7 +729,7 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">6.21</td>
+<td align="left">6.82</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -599,11 +737,11 @@ degreesC
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.21</td>
+<td align="left">0.22</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.17</td>
+<td align="left">0.19</td>
 </tr>
 </tbody>
 </table>
@@ -634,16 +772,16 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">9404.77</td>
-<td align="right">724.61</td>
-<td align="right">12.98</td>
+<td align="right">8992.78</td>
+<td align="right">681.52</td>
+<td align="right">13.20</td>
 <td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">2942.76</td>
-<td align="right">806.83</td>
-<td align="right">3.65</td>
+<td align="right">4114.84</td>
+<td align="right">891.06</td>
+<td align="right">4.62</td>
 <td align="right">0</td>
 </tr>
 </tbody>
@@ -660,7 +798,7 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">13.3</td>
+<td align="left">21.33</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -668,11 +806,11 @@ degreesC
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.36</td>
+<td align="left">0.47</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.33</td>
+<td align="left">0.45</td>
 </tr>
 </tbody>
 </table>
@@ -861,16 +999,16 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">4186.94</td>
-<td align="right">495.35</td>
-<td align="right">8.45</td>
+<td align="right">4438.38</td>
+<td align="right">483.10</td>
+<td align="right">9.19</td>
 <td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-1923.78</td>
-<td align="right">572.85</td>
-<td align="right">-3.36</td>
+<td align="right">-1785.99</td>
+<td align="right">437.06</td>
+<td align="right">-4.09</td>
 <td align="right">0</td>
 </tr>
 </tbody>
@@ -887,7 +1025,7 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">11.28</td>
+<td align="left">16.7</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -895,80 +1033,11 @@ degreesC
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.24</td>
+<td align="left">0.32</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.22</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-45">Table 2.6: </span>Fmort vs fall OI SST Anomaly
-degreesC
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">0.47</td>
-<td align="right">0.04</td>
-<td align="right">12.0</td>
-<td align="right">0.00</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">-0.14</td>
-<td align="right">0.05</td>
-<td align="right">-2.9</td>
-<td align="right">0.01</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">8.4</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 35</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.19</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.17</td>
+<td align="left">0.3</td>
 </tr>
 </tbody>
 </table>
@@ -999,16 +1068,16 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.47</td>
-<td align="right">0.04</td>
-<td align="right">12.45</td>
+<td align="right">0.50</td>
+<td align="right">0.03</td>
+<td align="right">16.20</td>
 <td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-0.14</td>
-<td align="right">0.04</td>
-<td align="right">-3.26</td>
+<td align="right">-0.17</td>
+<td align="right">0.03</td>
+<td align="right">-6.03</td>
 <td align="right">0</td>
 </tr>
 </tbody>
@@ -1025,7 +1094,7 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">10.63</td>
+<td align="left">36.39</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -1033,11 +1102,287 @@ degreesC
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.23</td>
+<td align="left">0.51</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.21</td>
+<td align="left">0.5</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-45">Table 2.6: </span>Fmort vs fall OI SST Anomaly
+degreesC
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">0.49</td>
+<td align="right">0.04</td>
+<td align="right">13.08</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-0.17</td>
+<td align="right">0.05</td>
+<td align="right">-3.86</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">14.87</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 35</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.3</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.28</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-45">Table 2.6: </span>Fmort vs spring OI SST Anomaly
+degreesC
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">0.47</td>
+<td align="right">0.04</td>
+<td align="right">13.30</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-0.18</td>
+<td align="right">0.05</td>
+<td align="right">-3.99</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">15.94</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 35</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.31</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.29</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-45">Table 2.6: </span>Fmort vs winter OI SST Anomaly
+degreesC
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">0.46</td>
+<td align="right">0.04</td>
+<td align="right">11.66</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-0.14</td>
+<td align="right">0.05</td>
+<td align="right">-2.51</td>
+<td align="right">0.02</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">6.3</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 35</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.15</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.13</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-45">Table 2.6: </span>Recruitment vs summer OI SST Anomaly
+degreesC
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">23266.17</td>
+<td align="right">1866.85</td>
+<td align="right">12.46</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-3983.67</td>
+<td align="right">1688.95</td>
+<td align="right">-2.36</td>
+<td align="right">0.02</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">5.56</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 35</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.14</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.11</td>
 </tr>
 </tbody>
 </table>
@@ -1068,16 +1413,16 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">23630.66</td>
-<td align="right">1724.7</td>
-<td align="right">13.70</td>
+<td align="right">23994.41</td>
+<td align="right">1739.33</td>
+<td align="right">13.80</td>
 <td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-6943.58</td>
-<td align="right">2052.6</td>
-<td align="right">-3.38</td>
+<td align="right">-7414.16</td>
+<td align="right">2108.18</td>
+<td align="right">-3.52</td>
 <td align="right">0</td>
 </tr>
 </tbody>
@@ -1094,7 +1439,7 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">11.44</td>
+<td align="left">12.37</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -1102,11 +1447,80 @@ degreesC
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.25</td>
+<td align="left">0.26</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.22</td>
+<td align="left">0.24</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-45">Table 2.6: </span>Recruitment vs spring OI SST Anomaly
+degreesC
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">22779.98</td>
+<td align="right">1811.93</td>
+<td align="right">12.57</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-5362.69</td>
+<td align="right">2345.44</td>
+<td align="right">-2.29</td>
+<td align="right">0.03</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">5.23</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 35</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.13</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.11</td>
 </tr>
 </tbody>
 </table>
@@ -1137,17 +1551,17 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">23106.16</td>
-<td align="right">1742.09</td>
-<td align="right">13.26</td>
-<td align="right">0.00</td>
+<td align="right">23309.01</td>
+<td align="right">1719.91</td>
+<td align="right">13.55</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-7648.83</td>
-<td align="right">2584.47</td>
-<td align="right">-2.96</td>
-<td align="right">0.01</td>
+<td align="right">-7522.32</td>
+<td align="right">2334.74</td>
+<td align="right">-3.22</td>
+<td align="right">0</td>
 </tr>
 </tbody>
 </table>
@@ -1163,7 +1577,7 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">8.76</td>
+<td align="left">10.38</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -1171,11 +1585,11 @@ degreesC
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.2</td>
+<td align="left">0.23</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.18</td>
+<td align="left">0.21</td>
 </tr>
 </tbody>
 </table>
@@ -1206,17 +1620,17 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">10548.21</td>
-<td align="right">790.56</td>
-<td align="right">13.34</td>
-<td align="right">0.00</td>
+<td align="right">10212.63</td>
+<td align="right">754.92</td>
+<td align="right">13.53</td>
+<td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">2177.97</td>
-<td align="right">940.86</td>
-<td align="right">2.31</td>
-<td align="right">0.03</td>
+<td align="right">3022.24</td>
+<td align="right">915.01</td>
+<td align="right">3.30</td>
+<td align="right">0</td>
 </tr>
 </tbody>
 </table>
@@ -1232,7 +1646,7 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">5.36</td>
+<td align="left">10.91</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -1240,11 +1654,11 @@ degreesC
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.13</td>
+<td align="left">0.24</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.11</td>
+<td align="left">0.22</td>
 </tr>
 </tbody>
 </table>
@@ -1275,16 +1689,16 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">10480.29</td>
-<td align="right">723.63</td>
-<td align="right">14.48</td>
+<td align="right">10411.83</td>
+<td align="right">719.84</td>
+<td align="right">14.46</td>
 <td align="right">0</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">3609.56</td>
-<td align="right">1073.54</td>
-<td align="right">3.36</td>
+<td align="right">3427.15</td>
+<td align="right">977.16</td>
+<td align="right">3.51</td>
 <td align="right">0</td>
 </tr>
 </tbody>
@@ -1301,7 +1715,7 @@ degreesC
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">11.31</td>
+<td align="left">12.3</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -1309,11 +1723,11 @@ degreesC
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.24</td>
+<td align="left">0.26</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.22</td>
+<td align="left">0.24</td>
 </tr>
 </tbody>
 </table>
@@ -1354,17 +1768,17 @@ kg m^-3
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">9439.68</td>
-<td align="right">1391.16</td>
-<td align="right">6.79</td>
-<td align="right">0</td>
+<td align="right">9705.52</td>
+<td align="right">3132.74</td>
+<td align="right">3.10</td>
+<td align="right">0.00</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-767340.77</td>
-<td align="right">158219.42</td>
-<td align="right">-4.85</td>
-<td align="right">0</td>
+<td align="right">-350362.10</td>
+<td align="right">157617.08</td>
+<td align="right">-2.22</td>
+<td align="right">0.04</td>
 </tr>
 </tbody>
 </table>
@@ -1380,157 +1794,19 @@ kg m^-3
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">23.52</td>
+<td align="left">4.94</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
-<td align="left">1, 29</td>
+<td align="left">1, 26</td>
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.45</td>
+<td align="left">0.16</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.43</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-51">Table 2.7: </span>Fmort vs stratification (0-50 m)
-kg m^-3
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">1.25</td>
-<td align="right">0.22</td>
-<td align="right">5.62</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">-97.38</td>
-<td align="right">25.22</td>
-<td align="right">-3.86</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">14.9</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 29</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.34</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.32</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-51">Table 2.7: </span>Recruitment vs stratification (0-50 m)
-kg m^-3
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">58404.91</td>
-<td align="right">11857.59</td>
-<td align="right">4.93</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">-4282868.20</td>
-<td align="right">1348582.48</td>
-<td align="right">-3.18</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">10.09</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 29</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.26</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.23</td>
+<td align="left">0.13</td>
 </tr>
 </tbody>
 </table>
@@ -1549,75 +1825,6 @@ kg m^-3
 </div>
 <div id="regression-statistics-8" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-57">Table 2.8: </span>Catch vs uwnd winter
-J/kg
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">8899.51</td>
-<td align="right">2192.35</td>
-<td align="right">4.06</td>
-<td align="right">0.00</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">-1496.62</td>
-<td align="right">697.96</td>
-<td align="right">-2.14</td>
-<td align="right">0.04</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">4.6</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 38</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.11</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.08</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
 <!-- -->
 <table class="kable_wrapper">
 <caption>
@@ -1640,17 +1847,17 @@ J/kg
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">1.10</td>
-<td align="right">0.27</td>
-<td align="right">4.09</td>
+<td align="right">1.11</td>
+<td align="right">0.31</td>
+<td align="right">3.59</td>
 <td align="right">0.00</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-0.78</td>
-<td align="right">0.31</td>
-<td align="right">-2.51</td>
-<td align="right">0.02</td>
+<td align="right">-0.86</td>
+<td align="right">0.39</td>
+<td align="right">-2.21</td>
+<td align="right">0.03</td>
 </tr>
 </tbody>
 </table>
@@ -1666,7 +1873,7 @@ J/kg
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">6.28</td>
+<td align="left">4.88</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -1674,11 +1881,11 @@ J/kg
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.15</td>
+<td align="left">0.12</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.12</td>
+<td align="left">0.09</td>
 </tr>
 </tbody>
 </table>
@@ -1697,7 +1904,7 @@ J/kg
 </div>
 <div id="regression-statistics-9" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<p>[1] “No statistically significant data”</p>
 </div>
 </div>
 <div id="summer-wind-speed" class="section level3">
@@ -1711,7 +1918,7 @@ J/kg
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-69">Table 2.9: </span>Catch vs tke summer
+<span id="tab:unnamed-chunk-69">Table 2.9: </span>Catch vs uwnd summer
 J/kg
 </caption>
 <tbody>
@@ -1730,17 +1937,17 @@ J/kg
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">24624.73</td>
-<td align="right">8253.17</td>
-<td align="right">2.98</td>
-<td align="right">0.00</td>
+<td align="right">-745.54</td>
+<td align="right">1696.60</td>
+<td align="right">-0.44</td>
+<td align="right">0.66</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-71219.44</td>
-<td align="right">28955.28</td>
-<td align="right">-2.46</td>
-<td align="right">0.02</td>
+<td align="right">4513.93</td>
+<td align="right">1410.92</td>
+<td align="right">3.20</td>
+<td align="right">0.00</td>
 </tr>
 </tbody>
 </table>
@@ -1756,7 +1963,7 @@ J/kg
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">6.05</td>
+<td align="left">10.24</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -1764,11 +1971,11 @@ J/kg
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.14</td>
+<td align="left">0.21</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.11</td>
+<td align="left">0.19</td>
 </tr>
 </tbody>
 </table>
@@ -1799,17 +2006,17 @@ J/kg
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">1.91</td>
-<td align="right">0.49</td>
-<td align="right">3.89</td>
-<td align="right">0</td>
+<td align="right">1.76</td>
+<td align="right">0.64</td>
+<td align="right">2.75</td>
+<td align="right">0.01</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-5.18</td>
-<td align="right">1.72</td>
-<td align="right">-3.02</td>
-<td align="right">0</td>
+<td align="right">-5.17</td>
+<td align="right">2.49</td>
+<td align="right">-2.08</td>
+<td align="right">0.04</td>
 </tr>
 </tbody>
 </table>
@@ -1825,7 +2032,7 @@ J/kg
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">9.13</td>
+<td align="left">4.32</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -1833,11 +2040,11 @@ J/kg
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.2</td>
+<td align="left">0.1</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.18</td>
+<td align="left">0.08</td>
 </tr>
 </tbody>
 </table>
@@ -1868,17 +2075,17 @@ m<sup>2/sec</sup>2
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">-25154.80</td>
-<td align="right">23091.90</td>
-<td align="right">-1.09</td>
-<td align="right">0.28</td>
+<td align="right">-64655.98</td>
+<td align="right">22629.69</td>
+<td align="right">-2.86</td>
+<td align="right">0.01</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">638.24</td>
-<td align="right">308.43</td>
-<td align="right">2.07</td>
-<td align="right">0.05</td>
+<td align="right">1133.72</td>
+<td align="right">293.67</td>
+<td align="right">3.86</td>
+<td align="right">0.00</td>
 </tr>
 </tbody>
 </table>
@@ -1894,7 +2101,7 @@ m<sup>2/sec</sup>2
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">4.28</td>
+<td align="left">14.9</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -1902,11 +2109,149 @@ m<sup>2/sec</sup>2
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.1</td>
+<td align="left">0.29</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.08</td>
+<td align="left">0.27</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-69">Table 2.9: </span>Recruitment vs total wind speed summer
+J/kg
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">1608.63</td>
+<td align="right">9488.60</td>
+<td align="right">0.17</td>
+<td align="right">0.87</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">11352.66</td>
+<td align="right">5066.66</td>
+<td align="right">2.24</td>
+<td align="right">0.03</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">5.02</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 37</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.12</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.1</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-69">Table 2.9: </span>Abundance vs vwnd summer
+J/kg
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">22583.13</td>
+<td align="right">4905.80</td>
+<td align="right">4.60</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-8111.58</td>
+<td align="right">3785.12</td>
+<td align="right">-2.14</td>
+<td align="right">0.04</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">4.59</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 37</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.11</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.09</td>
 </tr>
 </tbody>
 </table>
@@ -1925,7 +2270,7 @@ m<sup>2/sec</sup>2
 </div>
 <div id="regression-statistics-11" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<p>[1] “No statistically significant data”</p>
 </div>
 </div>
 <div id="gulf-stream-index" class="section level3">
@@ -2015,7 +2360,7 @@ latitude anomaly
 </div>
 <div id="regression-statistics-13" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<p>[1] “No statistically significant data”</p>
 </div>
 </div>
 <div id="chlorophyll" class="section level3">
@@ -2026,7 +2371,7 @@ latitude anomaly
 </div>
 <div id="regression-statistics-14" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<p>[1] “No statistically significant data”</p>
 
 </div>
 </div>

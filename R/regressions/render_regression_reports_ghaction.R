@@ -1,5 +1,5 @@
 
-install.packages("purrr")
+#install.packages("purrr")
 
 `%>%` <- dplyr::`%>%`
 
@@ -42,7 +42,7 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
                         intermediates_dir = new_dir,
                         knit_root_dir = new_dir,
                         clean = TRUE,
-                        quiet = TRUE) %>% 
+                        quiet = FALSE) %>% 
     suppressMessages() %>%
     suppressWarnings()
   
@@ -61,7 +61,7 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
               sep = ": "))
 }
 
-for(i in #5
+for(i in #6:7
     1:nrow(info)
     ){
   # make 0 lag reports

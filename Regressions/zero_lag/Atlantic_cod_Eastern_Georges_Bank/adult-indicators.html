@@ -121,7 +121,7 @@
 <li class="chapter" data-level="2.5.3" data-path="juvenile-indicators.html"><a href="juvenile-indicators.html#cpue"><i class="fa fa-check"></i><b>2.5.3</b> CPUE</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="adult-indicators.html"><a href="adult-indicators.html"><i class="fa fa-check"></i><b>2.6</b> Adult indicators</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="adult-indicators.html"><a href="adult-indicators.html#size-of-spawning-stock"><i class="fa fa-check"></i><b>2.6.1</b> Size of spawning stock</a></li>
+<li class="chapter" data-level="2.6.1" data-path="adult-indicators.html"><a href="adult-indicators.html#abundance"><i class="fa fa-check"></i><b>2.6.1</b> Abundance</a></li>
 <li class="chapter" data-level="2.6.2" data-path="adult-indicators.html"><a href="adult-indicators.html#mean-age-of-spawning-stock"><i class="fa fa-check"></i><b>2.6.2</b> Mean age of spawning stock</a></li>
 <li class="chapter" data-level="2.6.3" data-path="adult-indicators.html"><a href="adult-indicators.html#age-distribution"><i class="fa fa-check"></i><b>2.6.3</b> Age distribution</a></li>
 <li class="chapter" data-level="2.6.4" data-path="adult-indicators.html"><a href="adult-indicators.html#length-age-curves-1"><i class="fa fa-check"></i><b>2.6.4</b> Length-age curves</a></li>
@@ -135,7 +135,7 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="summary-of-statistically-significant-indicators.html"><a href="summary-of-statistically-significant-indicators.html"><i class="fa fa-check"></i><b>3</b> Summary of statistically significant indicators</a><ul>
-<li class="chapter" data-level="3.1" data-path="abundance.html"><a href="abundance.html"><i class="fa fa-check"></i><b>3.1</b> Abundance</a></li>
+<li class="chapter" data-level="3.1" data-path="abundance-1.html"><a href="abundance-1.html"><i class="fa fa-check"></i><b>3.1</b> Abundance</a></li>
 <li class="chapter" data-level="3.2" data-path="recruitment-1.html"><a href="recruitment-1.html"><i class="fa fa-check"></i><b>3.2</b> Recruitment</a></li>
 <li class="chapter" data-level="3.3" data-path="catch.html"><a href="catch.html"><i class="fa fa-check"></i><b>3.3</b> Catch</a></li>
 <li class="chapter" data-level="3.4" data-path="fmort.html"><a href="fmort.html"><i class="fa fa-check"></i><b>3.4</b> Fmort</a></li>
@@ -159,153 +159,9 @@
             <section class="normal" id="section-">
 <div id="adult-indicators" class="section level2">
 <h2><span class="header-section-number">2.6</span> Adult indicators</h2>
-<div id="size-of-spawning-stock" class="section level3">
-<h3><span class="header-section-number">2.6.1</span> Size of spawning stock</h3>
-<div id="figures-26" class="section level4 unnumbered">
-<h4>Figures</h4>
-<p><img src="figures/unnamed-chunk-163-1.png" width="768" style="display: block; margin: auto;" /></p>
-</div>
-<div id="regression-statistics-26" class="section level4 unnumbered">
-<h4>Regression statistics</h4>
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-165">Table 2.19: </span>Catch vs Abundance
-kg / tow
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">-6625.91</td>
-<td align="right">2358.05</td>
-<td align="right">-2.81</td>
-<td align="right">0.01</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">2869.15</td>
-<td align="right">447.00</td>
-<td align="right">6.42</td>
-<td align="right">0.00</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">41.2</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 94</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.3</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.3</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-165">Table 2.19: </span>Fmort vs Abundance
-kg / tow
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">-0.05</td>
-<td align="right">0.33</td>
-<td align="right">-0.17</td>
-<td align="right">0.87</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">0.21</td>
-<td align="right">0.06</td>
-<td align="right">3.39</td>
-<td align="right">0.00</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">11.5</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 30</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.28</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.25</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-</div>
+<div id="abundance" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> Abundance</h3>
+<p>[1] “No data”</p>
 </div>
 <div id="mean-age-of-spawning-stock" class="section level3">
 <h3><span class="header-section-number">2.6.2</span> Mean age of spawning stock</h3>

@@ -24,7 +24,7 @@
 <meta name="author" content="Abigail Tyrell" />
 
 
-<meta name="date" content="2021-02-19" />
+<meta name="date" content="2021-02-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -121,7 +121,7 @@
 <li class="chapter" data-level="2.5.3" data-path="juvenile-indicators.html"><a href="juvenile-indicators.html#cpue"><i class="fa fa-check"></i><b>2.5.3</b> CPUE</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="adult-indicators.html"><a href="adult-indicators.html"><i class="fa fa-check"></i><b>2.6</b> Adult indicators</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="adult-indicators.html"><a href="adult-indicators.html#size-of-spawning-stock"><i class="fa fa-check"></i><b>2.6.1</b> Size of spawning stock</a></li>
+<li class="chapter" data-level="2.6.1" data-path="adult-indicators.html"><a href="adult-indicators.html#abundance"><i class="fa fa-check"></i><b>2.6.1</b> Abundance</a></li>
 <li class="chapter" data-level="2.6.2" data-path="adult-indicators.html"><a href="adult-indicators.html#mean-age-of-spawning-stock"><i class="fa fa-check"></i><b>2.6.2</b> Mean age of spawning stock</a></li>
 <li class="chapter" data-level="2.6.3" data-path="adult-indicators.html"><a href="adult-indicators.html#age-distribution"><i class="fa fa-check"></i><b>2.6.3</b> Age distribution</a></li>
 <li class="chapter" data-level="2.6.4" data-path="adult-indicators.html"><a href="adult-indicators.html#length-age-curves-1"><i class="fa fa-check"></i><b>2.6.4</b> Length-age curves</a></li>
@@ -135,7 +135,7 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="summary-of-statistically-significant-indicators.html"><a href="summary-of-statistically-significant-indicators.html"><i class="fa fa-check"></i><b>3</b> Summary of statistically significant indicators</a><ul>
-<li class="chapter" data-level="3.1" data-path="abundance.html"><a href="abundance.html"><i class="fa fa-check"></i><b>3.1</b> Abundance</a></li>
+<li class="chapter" data-level="3.1" data-path="abundance-1.html"><a href="abundance-1.html"><i class="fa fa-check"></i><b>3.1</b> Abundance</a></li>
 <li class="chapter" data-level="3.2" data-path="recruitment-1.html"><a href="recruitment-1.html"><i class="fa fa-check"></i><b>3.2</b> Recruitment</a></li>
 <li class="chapter" data-level="3.3" data-path="catch.html"><a href="catch.html"><i class="fa fa-check"></i><b>3.3</b> Catch</a></li>
 <li class="chapter" data-level="3.4" data-path="fmort.html"><a href="fmort.html"><i class="fa fa-check"></i><b>3.4</b> Fmort</a></li>
@@ -170,7 +170,7 @@
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-99">Table 2.11: </span>Catch vs temora zoo spring
+<span id="tab:unnamed-chunk-99">Table 2.12: </span>Catch vs temora zoo spring
 log N m^-3
 </caption>
 <tbody>
@@ -189,17 +189,17 @@ log N m^-3
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">7513.98</td>
-<td align="right">1224.18</td>
-<td align="right">6.14</td>
+<td align="right">6726.37</td>
+<td align="right">1141.78</td>
+<td align="right">5.89</td>
 <td align="right">0.00</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">-2046.65</td>
-<td align="right">733.80</td>
-<td align="right">-2.79</td>
-<td align="right">0.01</td>
+<td align="right">-2384.34</td>
+<td align="right">1045.80</td>
+<td align="right">-2.28</td>
+<td align="right">0.03</td>
 </tr>
 </tbody>
 </table>
@@ -215,7 +215,7 @@ log N m^-3
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">7.78</td>
+<td align="left">5.2</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -223,11 +223,149 @@ log N m^-3
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.19</td>
+<td align="left">0.13</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.16</td>
+<td align="left">0.11</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-99">Table 2.12: </span>Fmort vs pseudocalanus zoo spring
+log N m^-3
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">0.05</td>
+<td align="right">0.19</td>
+<td align="right">0.24</td>
+<td align="right">0.81</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">0.12</td>
+<td align="right">0.06</td>
+<td align="right">2.08</td>
+<td align="right">0.05</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">4.32</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 32</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.12</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.09</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-99">Table 2.12: </span>Abundance vs centropages zoo spring
+log N m^-3
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">6070.56</td>
+<td align="right">2301.87</td>
+<td align="right">2.64</td>
+<td align="right">0.01</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">3224.06</td>
+<td align="right">1058.34</td>
+<td align="right">3.05</td>
+<td align="right">0.00</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">9.28</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 32</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.22</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.2</td>
 </tr>
 </tbody>
 </table>
@@ -249,7 +387,7 @@ log N m^-3
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-105">Table 2.12: </span>Recruitment vs pseudocalanus zoo fall
+<span id="tab:unnamed-chunk-105">Table 2.13: </span>Fmort vs pseudocalanus zoo fall
 log N m^-3
 </caption>
 <tbody>
@@ -268,17 +406,17 @@ log N m^-3
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">7990.56</td>
-<td align="right">5434.50</td>
-<td align="right">1.47</td>
-<td align="right">0.15</td>
+<td align="right">-0.05</td>
+<td align="right">0.22</td>
+<td align="right">-0.21</td>
+<td align="right">0.84</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">6652.12</td>
-<td align="right">2611.95</td>
-<td align="right">2.55</td>
-<td align="right">0.02</td>
+<td align="right">0.18</td>
+<td align="right">0.09</td>
+<td align="right">2.15</td>
+<td align="right">0.04</td>
 </tr>
 </tbody>
 </table>
@@ -294,7 +432,7 @@ log N m^-3
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">6.49</td>
+<td align="left">4.63</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -302,11 +440,80 @@ log N m^-3
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.16</td>
+<td align="left">0.12</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.14</td>
+<td align="left">0.1</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-105">Table 2.13: </span>Recruitment vs pseudocalanus zoo fall
+log N m^-3
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">-5828.49</td>
+<td align="right">9401.79</td>
+<td align="right">-0.62</td>
+<td align="right">0.54</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">10371.16</td>
+<td align="right">3560.72</td>
+<td align="right">2.91</td>
+<td align="right">0.01</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">8.48</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 33</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.2</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.18</td>
 </tr>
 </tbody>
 </table>
@@ -328,7 +535,7 @@ log N m^-3
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-111">Table 2.13: </span>Catch vs Cnidaria
+<span id="tab:unnamed-chunk-111">Table 2.14: </span>Catch vs LargeCalanoida
 Absolute Number of Individuals
 </caption>
 <tbody>
@@ -347,14 +554,14 @@ Absolute Number of Individuals
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">5500.18</td>
-<td align="right">766.54</td>
-<td align="right">7.18</td>
+<td align="right">6281.3</td>
+<td align="right">1043.21</td>
+<td align="right">6.02</td>
 <td align="right">0.00</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">0.00</td>
+<td align="right">0.0</td>
 <td align="right">0.00</td>
 <td align="right">-2.08</td>
 <td align="right">0.04</td>
@@ -373,7 +580,7 @@ Absolute Number of Individuals
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">4.31</td>
+<td align="left">4.32</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -397,7 +604,7 @@ Absolute Number of Individuals
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-111">Table 2.13: </span>Catch vs Euphausiacea
+<span id="tab:unnamed-chunk-111">Table 2.14: </span>Fmort vs LargeCalanoida
 Absolute Number of Individuals
 </caption>
 <tbody>
@@ -416,17 +623,17 @@ Absolute Number of Individuals
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">6897.63</td>
-<td align="right">1211.25</td>
-<td align="right">5.69</td>
+<td align="right">0.56</td>
+<td align="right">0.06</td>
+<td align="right">8.95</td>
 <td align="right">0.00</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
 <td align="right">0.00</td>
 <td align="right">0.00</td>
-<td align="right">-2.27</td>
-<td align="right">0.03</td>
+<td align="right">-2.56</td>
+<td align="right">0.01</td>
 </tr>
 </tbody>
 </table>
@@ -442,214 +649,7 @@ Absolute Number of Individuals
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">5.13</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 39</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.12</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.09</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-111">Table 2.13: </span>Catch vs SmallCalanoida
-Absolute Number of Individuals
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">7293.92</td>
-<td align="right">1320.65</td>
-<td align="right">5.52</td>
-<td align="right">0.00</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">0.00</td>
-<td align="right">0.00</td>
-<td align="right">-2.36</td>
-<td align="right">0.02</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">5.57</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 39</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.13</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.1</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-111">Table 2.13: </span>Recruitment vs LargeCalanoida
-Absolute Number of Individuals
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">15984.69</td>
-<td align="right">3668.12</td>
-<td align="right">4.36</td>
-<td align="right">0.00</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">0.00</td>
-<td align="right">0.00</td>
-<td align="right">2.04</td>
-<td align="right">0.05</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">4.16</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 37</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.1</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.08</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-111">Table 2.13: </span>Recruitment vs SmallCalanoida
-Absolute Number of Individuals
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">31312.82</td>
-<td align="right">3918.83</td>
-<td align="right">7.99</td>
-<td align="right">0.00</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">0.00</td>
-<td align="right">0.00</td>
-<td align="right">-2.53</td>
-<td align="right">0.02</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">6.39</td>
+<td align="left">6.57</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -661,7 +661,76 @@ Absolute Number of Individuals
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.12</td>
+<td align="left">0.13</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-111">Table 2.14: </span>Fmort vs Euphausiacea
+Absolute Number of Individuals
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">0.49</td>
+<td align="right">0.04</td>
+<td align="right">10.95</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">-2.18</td>
+<td align="right">0.04</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">4.76</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 37</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.11</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.09</td>
 </tr>
 </tbody>
 </table>
@@ -683,7 +752,7 @@ Absolute Number of Individuals
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-117">Table 2.14: </span>Catch vs Calanus CV and adult Fall
+<span id="tab:unnamed-chunk-117">Table 2.15: </span>Catch vs Calanus CV and adult Spring
 </caption>
 <tbody>
 <tr>
@@ -701,17 +770,17 @@ Absolute Number of Individuals
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">3639.33</td>
-<td align="right">763.45</td>
-<td align="right">4.77</td>
+<td align="right">6956.92</td>
+<td align="right">1212.96</td>
+<td align="right">5.74</td>
 <td align="right">0.00</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">0.54</td>
-<td align="right">0.26</td>
-<td align="right">2.05</td>
-<td align="right">0.05</td>
+<td align="right">-0.35</td>
+<td align="right">0.16</td>
+<td align="right">-2.25</td>
+<td align="right">0.03</td>
 </tr>
 </tbody>
 </table>
@@ -727,7 +796,7 @@ Absolute Number of Individuals
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">4.21</td>
+<td align="left">5.06</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -735,11 +804,11 @@ Absolute Number of Individuals
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.1</td>
+<td align="left">0.12</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.08</td>
+<td align="left">0.09</td>
 </tr>
 </tbody>
 </table>
@@ -751,7 +820,7 @@ Absolute Number of Individuals
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-117">Table 2.14: </span>Fmort vs Calanus CV and adult Summer
+<span id="tab:unnamed-chunk-117">Table 2.15: </span>Abundance vs Calanus CV and adult Summer
 </caption>
 <tbody>
 <tr>
@@ -769,17 +838,17 @@ Absolute Number of Individuals
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">0.25</td>
-<td align="right">0.07</td>
-<td align="right">3.45</td>
-<td align="right">0</td>
+<td align="right">6281.30</td>
+<td align="right">3071.87</td>
+<td align="right">2.04</td>
+<td align="right">0.05</td>
 </tr>
 <tr class="even">
 <td align="left">Val</td>
-<td align="right">0.00</td>
-<td align="right">0.00</td>
-<td align="right">3.22</td>
-<td align="right">0</td>
+<td align="right">0.28</td>
+<td align="right">0.13</td>
+<td align="right">2.16</td>
+<td align="right">0.04</td>
 </tr>
 </tbody>
 </table>
@@ -795,7 +864,7 @@ Absolute Number of Individuals
 <tbody>
 <tr class="odd">
 <td align="left">F-statistic</td>
-<td align="left">10.34</td>
+<td align="left">4.67</td>
 </tr>
 <tr class="even">
 <td align="left">df</td>
@@ -803,79 +872,11 @@ Absolute Number of Individuals
 </tr>
 <tr class="odd">
 <td align="left">R2</td>
-<td align="left">0.23</td>
+<td align="left">0.12</td>
 </tr>
 <tr class="even">
 <td align="left">R2-adj</td>
-<td align="left">0.21</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<!-- -->
-<!-- -->
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-117">Table 2.14: </span>Recruitment vs Calanus CV and adult Fall
-</caption>
-<tbody>
-<tr>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">Estimate</th>
-<th align="right">Std. Error</th>
-<th align="right">t value</th>
-<th align="right">Pr(&gt;|t|)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">(Intercept)</td>
-<td align="right">15526.82</td>
-<td align="right">2754.81</td>
-<td align="right">5.64</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">Val</td>
-<td align="right">5.33</td>
-<td align="right">1.57</td>
-<td align="right">3.39</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Name</th>
-<th align="left">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">F-statistic</td>
-<td align="left">11.52</td>
-</tr>
-<tr class="even">
-<td align="left">df</td>
-<td align="left">1, 36</td>
-</tr>
-<tr class="odd">
-<td align="left">R2</td>
-<td align="left">0.24</td>
-</tr>
-<tr class="even">
-<td align="left">R2-adj</td>
-<td align="left">0.22</td>
+<td align="left">0.09</td>
 </tr>
 </tbody>
 </table>
@@ -894,7 +895,7 @@ Absolute Number of Individuals
 </div>
 <div id="regression-statistics-19" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<p>[1] “No statistically significant data”</p>
 </div>
 </div>
 <div id="zooplankton-diversity-index" class="section level3">
@@ -905,7 +906,7 @@ Absolute Number of Individuals
 </div>
 <div id="regression-statistics-20" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<p>[1] “No statistically significant data”</p>
 </div>
 </div>
 <div id="smalllarge-copepod-anomaly" class="section level3">
@@ -916,7 +917,7 @@ Absolute Number of Individuals
 </div>
 <div id="regression-statistics-21" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<p>[1] “No statistically significant data”</p>
 </div>
 </div>
 <div id="spring-ichthyoplankton-diversity" class="section level3">
@@ -927,7 +928,75 @@ Absolute Number of Individuals
 </div>
 <div id="regression-statistics-22" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-141">Table 2.16: </span>Catch vs Number_Of_Species_Caught
+Unitless
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">-1366.69</td>
+<td align="right">1004.71</td>
+<td align="right">-1.36</td>
+<td align="right">0.21</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">194.94</td>
+<td align="right">65.88</td>
+<td align="right">2.96</td>
+<td align="right">0.02</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">8.76</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 8</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.52</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.46</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
 </div>
 </div>
 <div id="fall-ichthyoplankton-diversity" class="section level3">
@@ -938,7 +1007,75 @@ Absolute Number of Individuals
 </div>
 <div id="regression-statistics-23" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-147">Table 2.17: </span>Catch vs Number_Of_Species_Caught
+Unitless
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">-2829.84</td>
+<td align="right">1416.80</td>
+<td align="right">-2.00</td>
+<td align="right">0.06</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">259.46</td>
+<td align="right">77.66</td>
+<td align="right">3.34</td>
+<td align="right">0.00</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">11.16</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 15</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.43</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.39</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
 </div>
 </div>
 <div id="forage-fish-abundance" class="section level3">
@@ -949,7 +1086,346 @@ Absolute Number of Individuals
 </div>
 <div id="regression-statistics-24" class="section level4 unnumbered">
 <h4>Regression statistics</h4>
-<p>[1] “No statistically significant results”</p>
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-153">Table 2.18: </span>Recruitment vs Forage_Lower
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">14555.65</td>
+<td align="right">2269.00</td>
+<td align="right">6.42</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-8906.37</td>
+<td align="right">3606.87</td>
+<td align="right">-2.47</td>
+<td align="right">0.03</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">6.1</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 16</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.28</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.23</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-153">Table 2.18: </span>Recruitment vs Forage_Mean
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">16643.37</td>
+<td align="right">2048.95</td>
+<td align="right">8.12</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">-8344.00</td>
+<td align="right">3669.40</td>
+<td align="right">-2.27</td>
+<td align="right">0.04</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">5.17</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 16</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.24</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.2</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-153">Table 2.18: </span>Abundance vs Forage_Lower
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">12394.08</td>
+<td align="right">1096.84</td>
+<td align="right">11.30</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">5092.53</td>
+<td align="right">1743.57</td>
+<td align="right">2.92</td>
+<td align="right">0.01</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">8.53</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 16</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.35</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.31</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-153">Table 2.18: </span>Abundance vs Forage_Mean
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">11238.47</td>
+<td align="right">946.37</td>
+<td align="right">11.88</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">5290.30</td>
+<td align="right">1694.82</td>
+<td align="right">3.12</td>
+<td align="right">0.01</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">9.74</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 16</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.38</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.34</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
+<!-- -->
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-153">Table 2.18: </span>Abundance vs Forage_Upper
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Std. Error</th>
+<th align="right">t value</th>
+<th align="right">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">10004.55</td>
+<td align="right">953.49</td>
+<td align="right">10.49</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Val</td>
+<td align="right">5407.68</td>
+<td align="right">1640.40</td>
+<td align="right">3.30</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">F-statistic</td>
+<td align="left">10.87</td>
+</tr>
+<tr class="even">
+<td align="left">df</td>
+<td align="left">1, 16</td>
+</tr>
+<tr class="odd">
+<td align="left">R2</td>
+<td align="left">0.4</td>
+</tr>
+<tr class="even">
+<td align="left">R2-adj</td>
+<td align="left">0.37</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- -->
 </div>
 </div>
 <div id="species-distribution" class="section level3">
@@ -963,7 +1439,7 @@ Absolute Number of Individuals
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Catch vs along-shelf distance
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Catch vs along-shelf distance
 km
 </caption>
 <tbody>
@@ -1032,7 +1508,7 @@ km
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Catch vs depth
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Catch vs depth
 m
 </caption>
 <tbody>
@@ -1101,7 +1577,7 @@ m
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Catch vs distance to coast
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Catch vs distance to coast
 km
 </caption>
 <tbody>
@@ -1170,7 +1646,7 @@ km
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Catch vs Latitude
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Catch vs Latitude
 degreesN
 </caption>
 <tbody>
@@ -1239,7 +1715,7 @@ degreesN
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Catch vs Longitude
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Catch vs Longitude
 degreesW
 </caption>
 <tbody>
@@ -1308,7 +1784,7 @@ degreesW
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Fmort vs along-shelf distance
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Fmort vs along-shelf distance
 km
 </caption>
 <tbody>
@@ -1377,7 +1853,7 @@ km
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Fmort vs depth
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Fmort vs depth
 m
 </caption>
 <tbody>
@@ -1446,7 +1922,7 @@ m
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Fmort vs Latitude
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Fmort vs Latitude
 degreesN
 </caption>
 <tbody>
@@ -1515,7 +1991,7 @@ degreesN
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Fmort vs Longitude
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Fmort vs Longitude
 degreesW
 </caption>
 <tbody>
@@ -1584,7 +2060,7 @@ degreesW
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Recruitment vs along-shelf distance
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Recruitment vs along-shelf distance
 km
 </caption>
 <tbody>
@@ -1653,7 +2129,7 @@ km
 <!-- -->
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-159">Table 2.15: </span>Recruitment vs Latitude
+<span id="tab:unnamed-chunk-159">Table 2.19: </span>Recruitment vs Latitude
 degreesN
 </caption>
 <tbody>

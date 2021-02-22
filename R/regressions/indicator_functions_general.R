@@ -120,7 +120,8 @@ correlation_data <- function(stock, eco, lag){
 
   data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
-                    lag_data = lag)
+                    lag_data = lag) %>%
+    dplyr::filter(sig == TRUE) # only statistically significant data
   
   # test correlations
   
@@ -130,16 +131,9 @@ correlation_data <- function(stock, eco, lag){
         dat <- data %>%
           dplyr::filter(Metric == i, Var == j)
         
-        if(nrow(dat) < 3){
-          print("Not enough data to determine correlation")
-        }
-        if(min(dat$pval) >= 0.05 & nrow(dat) >= 3){
-          print("No statistically significant results")
-        } 
-        if(min(dat$pval) < 0.05 & nrow(dat) >= 3){
-          
+        if(nrow(dat) > 0){
           results <- lm(Value ~ Val, 
-                          data = dat) %>%
+                        data = dat) %>%
             summary
           
           cat('\n\n<!-- -->\n\n')
@@ -150,26 +144,25 @@ correlation_data <- function(stock, eco, lag){
                 round(digits = 2),
               data.frame(Name = c("F-statistic", "df", "R2", "R2-adj"),
                          Value = c(results$fstatistic[1] %>%
-                                         round(digits = 2), 
-                                       paste(results$fstatistic[2:3], 
-                                             collapse = ", "),
-                                       results$r.squared %>%
-                                         round(digits = 2), 
-                                       results$adj.r.squared %>%
-                                         round(digits = 2)
-                             ))
-                ),
-                caption = paste(i, j, sep = " vs "), 
-                booktabs = TRUE
-              ) %>% print()
-              
-              cat('\n\n<!-- -->\n\n')
-              
-            } 
-            
-          }
+                                     round(digits = 2), 
+                                   paste(results$fstatistic[2:3], 
+                                         collapse = ", "),
+                                   results$r.squared %>%
+                                     round(digits = 2), 
+                                   results$adj.r.squared %>%
+                                     round(digits = 2)
+                         ))
+            ),
+            caption = paste(i, j, sep = " vs "), 
+            booktabs = TRUE
+          ) %>% print()
+          
+          cat('\n\n<!-- -->\n\n')
+          
         }
-      } else print("No data under conditions selected")
+        }
+        }
+      } else print("No statistically significant data")
 }
 
 correlation_summary <- function(stock, eco, lag){
@@ -191,21 +184,23 @@ correlation_summary <- function(stock, eco, lag){
         dat <- data %>%
             dplyr::filter(Metric == i, Var == j)
         
-        results <- lm(Value ~ Val, 
-                          data = dat) %>%
-          summary
-        
-        output <- rbind(output, c(i, 
-                                  j,
-                                  length(dat$Metric), # number of points
-                                  results$coefficients[2, 1] %>%
-                                          signif(digits = 2), # slope
-                                  results$coefficients[2, 4] %>%
-                                          signif(digits = 2), # p-value
-                                  results$adj.r.squared %>%
-                                          round(digits = 2))) # adjusted r2
-          }
-          }
+        if(nrow(dat) > 0){
+          results <- lm(Value ~ Val, 
+                        data = dat) %>%
+            summary
+          
+          output <- rbind(output, c(i, 
+                                    j,
+                                    length(dat$Metric), # number of points
+                                    results$coefficients[2, 1] %>%
+                                      signif(digits = 2), # slope
+                                    results$coefficients[2, 4] %>%
+                                      signif(digits = 2), # p-value
+                                    results$adj.r.squared %>%
+                                      round(digits = 2))) # adjusted r2
+        }
+      }
+      }
 
     return(output)
     }
