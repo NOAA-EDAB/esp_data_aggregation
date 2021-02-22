@@ -8,7 +8,7 @@ data_prep <- function(stock_data, eco_data, lag_data){
   
   eco_data$Time <- as.numeric(eco_data$Time)
   
-  data <- dplyr::left_join(stock2, eco_data,
+  data <- dplyr::full_join(stock2, eco_data,
                            by = "Time") %>%
     dplyr::filter(Var %>% stringr::str_detect(Metric) == FALSE, # remove self-correlations
                   is.na(Var) == FALSE,
@@ -19,8 +19,7 @@ data_prep <- function(stock_data, eco_data, lag_data){
   
   data2 <- data %>%
     dplyr::group_by(Metric, Var) %>%
-    dplyr::mutate(n_data_points = length(Time)) %>%
-    dplyr::distinct() # problem with repeats??
+    dplyr::mutate(n_data_points = length(Time))
   
   data_model <- data2 %>%
     dplyr::filter(n_data_points >= 3) %>%
