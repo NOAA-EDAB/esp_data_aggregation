@@ -91,6 +91,6 @@ test <- ecodata::chl_pp %>%
   dplyr::mutate(Var = Var %>%
                   stringr::str_replace_all("_", "\n") %>%
                   stringr::str_replace_all(" ", "\n")) %>%
-  dplyr::filter(stringr::str_detect("ANNUAL")) # only annual indices
+  dplyr::filter(stringr::str_detect(Var, "ANNUAL")) # only annual indices
 render_indicator(test)
 ```
