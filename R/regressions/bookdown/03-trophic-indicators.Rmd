@@ -54,16 +54,16 @@ test <- ecodata::zoo_sli_anom
 render_indicator(test)
 ```
 
-### Spring ichthyoplankton diversity
-```{r, forage_spring}
-test <- ecodata::ichthyo_diversity  %>%
-  dplyr::filter(Season == "Spring") 
+### Ichthyoplankton diversity
+```{r, ich}
+test <- ecodata::ichthyo_diversity 
 render_indicator(test)
 ```
 
+```{r, ich_fall, eval = FALSE}
 ### Fall ichthyoplankton diversity
-```{r, forage_fall}
-test <- ecodata::ichthyo_diversity  %>%
+# seasonal data no longer in ecodata
+test <- ecodata::ichthyo_diversity %>%
   dplyr::filter(Season == "Fall") 
 render_indicator(test)
 ```
