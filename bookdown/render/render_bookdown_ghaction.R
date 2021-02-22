@@ -1,4 +1,5 @@
 `%>%` <- dplyr::`%>%`
+install.packages("papeR")
 
 # get NE stock names
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
