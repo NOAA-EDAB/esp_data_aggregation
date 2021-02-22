@@ -10,10 +10,11 @@ data_prep <- function(stock_data, eco_data, lag_data){
   
   data <- dplyr::left_join(stock2, eco_data,
                            by = "Time") %>%
-    dplyr::filter(is.na(Var) == FALSE) %>%
-    dplyr::filter(Var %>% stringr::str_detect(Metric) == FALSE,
+    dplyr::filter(Var %>% stringr::str_detect(Metric) == FALSE, # remove self-correlations
                   is.na(Var) == FALSE,
-                  is.na(Metric) == FALSE) %>% # remove self-correlations
+                  is.na(Metric) == FALSE,
+                  is.na(Value) == FALSE
+                  is.na(Val) == FALSE) %>% 
     dplyr::ungroup() 
   
   data2 <- data %>%
@@ -117,11 +118,10 @@ correlation_data <- function(stock, eco, lag){
           ) %>% print()
           
           cat('\n\n<!-- -->\n\n')
-          
         }
-        }
-        }
-      } else print("No statistically significant data")
+      }
+    }
+  } else print("No statistically significant data")
 }
 
 correlation_summary <- function(stock, eco, lag){

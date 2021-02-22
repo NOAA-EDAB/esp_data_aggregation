@@ -63,9 +63,16 @@ output <- c()
 
 All regressions are simple linear correlations assessed at the p < 0.5 level. Please note, due to the large number of indicators tested, a certain amount of statistically significant results are expected even if there are no underlying mechanistic connections. These correlations do not necessarily imply causation.
 
-```{r, data}
-test <- ecodata::ne_wind %>%
-  dplyr::filter(Var %>% stringr::str_detect("summer"))
+### Chlorophyll
+```{r, chl}
+test <- ecodata::chl_pp %>%
+  dplyr::mutate(Var = Var %>%
+                  stringr::str_replace_all("_", "\n") %>%
+                  stringr::str_replace_all(" ", "\n"))
+```
+
+```{r, render}
+#render_indicator(test)
 ```
 
 
@@ -116,14 +123,14 @@ stock %>% knitr::kable()
 test %>% knitr::kable()
 ```
 
-```{r, correlation_summary2, eval = FALSE}
+```{r, correlation_summary2, eval = eval_epu}
 # correlation summary
 print(correlation_summary(stock = stock, 
                                             eco = test, 
                                             lag = params$lag))
 ```
 
-```{r, correlation_summary, eval = FALSE}
+```{r, correlation_summary, eval = eval_epu}
 # correlation summary
 output <- rbind(output, correlation_summary(stock = stock, 
                                             eco = test, 
