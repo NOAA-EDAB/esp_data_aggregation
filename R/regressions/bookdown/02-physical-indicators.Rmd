@@ -93,4 +93,6 @@ test <- ecodata::chl_pp %>%
                   stringr::str_replace_all(" ", "\n")) %>%
   dplyr::filter(stringr::str_detect(Var, "ANNUAL")) # only annual indices
 render_indicator(test)
+
+#data_prep(stock, test, lag = params$lag) %>% knitr::kable()
 ```
