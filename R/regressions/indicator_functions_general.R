@@ -19,7 +19,8 @@ data_prep <- function(stock_data, eco_data, lag_data){
   
   data2 <- data %>%
     dplyr::group_by(Metric, Var) %>%
-    dplyr::mutate(n_data_points = dplyr::n(Time))
+    dplyr::mutate(n_data_points = length(Time)) %>%
+    dplyr::distinct() # problem with repeats??
   
   data_model <- data2 %>%
     dplyr::filter(n_data_points >= 3) %>%
