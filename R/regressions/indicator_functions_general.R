@@ -16,31 +16,6 @@ data_prep <- function(stock_data, eco_data, lag_data){
                   is.na(Metric) == FALSE) %>% # remove self-correlations
     dplyr::ungroup() 
   
-#  results <- c()
-#  for(i in unique(data$Metric)){
-#    for(j in unique(data$Var)){
-#      this_data <- data %>%
-#        dplyr::filter(Metric == i,
-#                      Var == j)
-      
-#      if(nrow(this_data) >= 3){
-#        model <- lm(Value ~ Value, data = this_data)
-#        pval <- summary(model)$coefficients[,4]
-#        sig <- pval < 0.05
-#      } else {
-#        pval <- NA
-#        sig <- NA}
-#      these_results <- c(i, j, pval, sig)
-#      results <- rbind(results, these_results)
-#    }
-#  }
-#  colnames(results) <- c("Metric", "Var", "pval", "sig")
-  
-#  data2 <- dplyr::left_join(data, 
-#                    results,
-#                    by = c("Metric", "Var"),
-#                    copy = TRUE)
-  
   data2 <- data %>%
     dplyr::group_by(Metric, Var) %>%
     dplyr::mutate(n_data_points = length(Time))
@@ -49,8 +24,7 @@ data_prep <- function(stock_data, eco_data, lag_data){
     dplyr::filter(n_data_points >= 3) %>%
     dplyr::ungroup() %>% 
     dplyr::group_by(Metric, Var) %>%
-    dplyr::mutate(pval = coef(summary(lm(Value ~ Val,
-                                         singular.ok = TRUE)))[2,4]) %>% 
+    dplyr::mutate(pval = summary(lm(Value ~ Val))$coefficients[2,4]) %>% 
     dplyr::mutate(sig = pval < 0.05)
   
   data_no_model <- data2 %>%
@@ -62,16 +36,6 @@ data_prep <- function(stock_data, eco_data, lag_data){
   
   return(data)
 }
-
-#for(i in unique(data$Var)){
-#  data2 <- data %>%
-#    dplyr::filter(Var == i)
-  
-#  model <- lm(Value ~ Val, data = data2)
-  
-#  print(data2)
-#  print(summary(model))
-#}
 
 plot_correlation <- function(stock, eco, lag){
   # both data sets must have a column called "Time"
@@ -110,11 +74,6 @@ plot_correlation <- function(stock, eco, lag){
   } else print("No data under conditions selected")
   
 }
-
-#plot_correlation(bluefish = bluefish, 
-#                 eco = ecodata::forage_anomaly %>%
-#                   dplyr::rename(Val = Value), 
-#                 lag = 0)
 
 correlation_data <- function(stock, eco, lag){
 
