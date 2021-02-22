@@ -13,7 +13,7 @@ data_prep <- function(stock_data, eco_data, lag_data){
     dplyr::filter(Var %>% stringr::str_detect(Metric) == FALSE, # remove self-correlations
                   is.na(Var) == FALSE,
                   is.na(Metric) == FALSE,
-                  is.na(Value) == FALSE
+                  is.na(Value) == FALSE,
                   is.na(Val) == FALSE) %>% 
     dplyr::ungroup() 
   
