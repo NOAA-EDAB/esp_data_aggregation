@@ -7,7 +7,7 @@ test <- stock %>%
   dplyr::rename(Var = Metric,
                 Val = Value)
 
-if(nrow(test) > 0){
+if(nrow(test) > params$lag){
   render_indicator(test)
 } else print("No data")
 ```
