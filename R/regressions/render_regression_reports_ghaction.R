@@ -80,7 +80,7 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
               sep = ": "))
 }
 
-for(i in 23:28
+for(i in 23:nrow(info)
     #1:nrow(info)
     ){
   # make 0 lag reports
