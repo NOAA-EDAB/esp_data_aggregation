@@ -18,7 +18,7 @@ colnames(output) <- c("Response_variable", "Indicator",
 ```
 
 ## Abundance
-```{r}
+```{r, eval = TRUE}
 output %>% 
   tibble::as_tibble() %>%
   dplyr::filter(Response_variable == "Abundance",
@@ -30,7 +30,7 @@ output %>%
 ```
 
 ## Recruitment
-```{r}
+```{r, eval = TRUE}
 output %>% 
   tibble::as_tibble() %>%
   dplyr::filter(Response_variable == "Recruitment",
@@ -41,7 +41,7 @@ output %>%
 ```
 
 ## Catch
-```{r}
+```{r, eval = TRUE}
 output %>% 
   tibble::as_tibble() %>%
   dplyr::filter(Response_variable == "Catch",
@@ -52,7 +52,7 @@ output %>%
 ```
 
 ## Fmort
-```{r}
+```{r, eval = TRUE}
 output %>% 
   tibble::as_tibble() %>%
   dplyr::filter(Response_variable == "Fmort",
