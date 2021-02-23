@@ -14,7 +14,7 @@
 info <- read.csv(here::here("R/regressions", "regression_species_regions.csv"))
 
 render_reg_report <- function(stock_var, epus_var, region_var, remove_var, 
-                              lag_var, parent_folder){
+                              lag_var, parent_folder, trouble){
   
   new_dir <- here::here("Regressions", parent_folder, 
                         paste(stock_var, region_var 
@@ -31,20 +31,39 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
             overwrite = TRUE)
   
   setwd(here::here(new_dir))
-  bookdown::render_book(input = ".",
-                        params = list(lag = lag_var,
-                                      stock = stock_var,
-                                      region = region_var,
-                                      epu = c(epus_var, c("All", "all", "NE")),
-                                      path = here::here(new_dir, "figures//"),
-                                      remove_recent = remove_var),
-                        output_dir = new_dir,
-                        intermediates_dir = new_dir,
-                        knit_root_dir = new_dir,
-                        clean = TRUE,
-                        quiet = TRUE) %>% 
-    suppressMessages() %>%
-    suppressWarnings()
+  
+  if(trouble == FALSE){
+    bookdown::render_book(input = ".",
+                          params = list(lag = lag_var,
+                                        stock = stock_var,
+                                        region = region_var,
+                                        epu = c(epus_var, c("All", "all", "NE")),
+                                        path = here::here(new_dir, "figures//"),
+                                        remove_recent = remove_var),
+                          output_dir = new_dir,
+                          intermediates_dir = new_dir,
+                          knit_root_dir = new_dir,
+                          clean = TRUE,
+                          quiet = TRUE) %>% 
+      suppressMessages() %>%
+      suppressWarnings()
+  }
+  
+  if(trouble == TRUE){
+    bookdown::render_book(input = ".",
+                          params = list(lag = lag_var,
+                                        stock = stock_var,
+                                        region = region_var,
+                                        epu = c(epus_var, c("All", "all", "NE")),
+                                        path = here::here(new_dir, "figures//"),
+                                        remove_recent = remove_var),
+                          output_dir = new_dir,
+                          intermediates_dir = new_dir,
+                          knit_root_dir = new_dir,
+                          clean = TRUE,
+                          quiet = FALSE)
+  }
+
   
   # clean up files
   list.files(here::here(new_dir),
@@ -61,8 +80,8 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
               sep = ": "))
 }
 
-for(i in #1
-    1:nrow(info)
+for(i in 23
+    #1:nrow(info)
     ){
   # make 0 lag reports
   render_reg_report(stock_var = info[i, 1], 
@@ -70,7 +89,8 @@ for(i in #1
                     region_var = info[i, 2],
                     lag_var = 0,
                     remove_var = FALSE,
-                    parent_folder = "zero_lag")
+                    parent_folder = "zero_lag",
+                    trouble = FALSE)
   
   # make 1 year lag reports
   render_reg_report(stock_var = info[i, 1], 
@@ -78,7 +98,8 @@ for(i in #1
                     region_var = info[i, 2],
                     lag_var = 1,
                     remove_var = FALSE,
-                    parent_folder = "one_year_lag")
+                    parent_folder = "one_year_lag",
+                    trouble = FALSE)
   
   # make 1 year lag, minus 10 recent years reports
   render_reg_report(stock_var = info[i, 1], 
@@ -86,6 +107,7 @@ for(i in #1
                     region_var = info[i, 2],
                     lag_var = 1,
                     remove_var = TRUE,
-                    parent_folder = "one_year_lag_remove_recent")
+                    parent_folder = "one_year_lag_remove_recent",
+                    trouble = FALSE)
 }
 
