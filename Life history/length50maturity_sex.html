@@ -421,15 +421,490 @@ summary {
 <h2>Size at first maturity</h2>
 <p>L50 or length at which 50% maturity can be calculated using differing methods. Using Data sourced from <code>survdat</code> that consist of visual sexual maturity determination and length measurements. Here, L50 is estimated by fitting a logistic generalized linear model to gonadal maturity and body length measurements and estimating the inflection point of the logistic model. This point represents the size where the individual has 50% odds of being mature. Decade variations of this parameter are investigated utilizing decade as a additive and interaction term in the model specification.</p>
 <p>The relationship between sexual maturity by body size is a well established life history parameter. L50 is a useful metric in fisheries to identify sizes that are able to reproduce. This information can be used to inform regulation as to minimum catch size that should allow for a significant portion of the population to spawn and contribute genetic information to sustain the stock. Changes in this parameter can signal population/evolutionary pressures on the stock with reduction in this size potentially indicating excessive fishing pressure.</p>
-<pre><code>## [1] &quot;Not enough data to fit model&quot;</code></pre>
 </div>
 <div id="model-results" class="section level2">
 <h2>Model results</h2>
+<p>If the overall model is significant, there is support for the relationship between sexual maturity and body size. This model can predict the size where there are 50% odds of the indevidual is sexually mature. The results table below displays the L50 for different decades.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Estimate</th>
+<th align="right">Odds Ratio</th>
+<th align="right">CI (lower)</th>
+<th align="right">CI (upper)</th>
+<th align="right">Std. Error</th>
+<th align="right">z value</th>
+<th align="left">Pr(&gt;|z|)</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">-7.497</td>
+<td align="right">0.001</td>
+<td align="right">0.000</td>
+<td align="right">0.001</td>
+<td align="right">0.246</td>
+<td align="right">-30.526</td>
+<td align="left">&lt;0.001</td>
+<td align="left">***</td>
+</tr>
+<tr class="even">
+<td align="left">LENGTH</td>
+<td align="right">0.448</td>
+<td align="right">1.565</td>
+<td align="right">1.522</td>
+<td align="right">1.612</td>
+<td align="right">0.015</td>
+<td align="right">30.399</td>
+<td align="left">&lt;0.001</td>
+<td align="left">***</td>
+</tr>
+<tr class="odd">
+<td align="left">SEX: male</td>
+<td align="right">-1.055</td>
+<td align="right">0.348</td>
+<td align="right">0.160</td>
+<td align="right">0.749</td>
+<td align="right">0.393</td>
+<td align="right">-2.683</td>
+<td align="left">0.007</td>
+<td align="left">**</td>
+</tr>
+<tr class="even">
+<td align="left">LENGTH:SEXmale</td>
+<td align="right">0.081</td>
+<td align="right">1.084</td>
+<td align="right">1.035</td>
+<td align="right">1.136</td>
+<td align="right">0.024</td>
+<td align="right">3.364</td>
+<td align="left">0.001</td>
+<td align="left">***</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="l50-across-time" class="section level2">
 <h2>L50 across time</h2>
-<pre><code>## [1] &quot;Non-significant&quot;</code></pre>
-<pre><code>## [1] &quot;Non-significant&quot;</code></pre>
+<p>The significance of differences among decades can be determined by referencing the model summary table above</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">L50.f</th>
+<th align="right">L50.m</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Length at 50% maturity</td>
+<td align="right">16.728</td>
+<td align="right">16.175</td>
+</tr>
+</tbody>
+</table>
+<pre><code>## List of 93
+##  $ line                      :List of 6
+##   ..$ colour       : chr &quot;black&quot;
+##   ..$ size         : num 0.5
+##   ..$ linetype     : num 1
+##   ..$ lineend      : chr &quot;butt&quot;
+##   ..$ arrow        : logi FALSE
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_line&quot; &quot;element&quot;
+##  $ rect                      :List of 5
+##   ..$ fill         : chr &quot;white&quot;
+##   ..$ colour       : chr &quot;black&quot;
+##   ..$ size         : num 0.5
+##   ..$ linetype     : num 1
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_rect&quot; &quot;element&quot;
+##  $ text                      :List of 11
+##   ..$ family       : chr &quot;&quot;
+##   ..$ face         : chr &quot;plain&quot;
+##   ..$ colour       : chr &quot;black&quot;
+##   ..$ size         : num 11
+##   ..$ hjust        : num 0.5
+##   ..$ vjust        : num 0.5
+##   ..$ angle        : num 0
+##   ..$ lineheight   : num 0.9
+##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 0points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : logi FALSE
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ title                     : NULL
+##  $ aspect.ratio              : NULL
+##  $ axis.title                : NULL
+##  $ axis.title.x              :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : NULL
+##   ..$ vjust        : num 1
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 2.75points 0points 0points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ axis.title.x.top          :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : NULL
+##   ..$ vjust        : num 0
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 2.75points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ axis.title.x.bottom       : NULL
+##  $ axis.title.y              :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : NULL
+##   ..$ vjust        : num 1
+##   ..$ angle        : num 90
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 2.75points 0points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ axis.title.y.left         : NULL
+##  $ axis.title.y.right        :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : NULL
+##   ..$ vjust        : num 0
+##   ..$ angle        : num -90
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 0points 2.75points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ axis.text                 :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : chr &quot;grey30&quot;
+##   ..$ size         : &#39;rel&#39; num 0.8
+##   ..$ hjust        : NULL
+##   ..$ vjust        : NULL
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : NULL
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ axis.text.x               :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : NULL
+##   ..$ vjust        : num 1
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 2.2points 0points 0points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ axis.text.x.top           :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : NULL
+##   ..$ vjust        : num 0
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 2.2points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ axis.text.x.bottom        : NULL
+##  $ axis.text.y               :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : num 1
+##   ..$ vjust        : NULL
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 2.2points 0points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ axis.text.y.left          : NULL
+##  $ axis.text.y.right         :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : num 0
+##   ..$ vjust        : NULL
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 0points 2.2points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ axis.ticks                : list()
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
+##  $ axis.ticks.x              : NULL
+##  $ axis.ticks.x.top          : NULL
+##  $ axis.ticks.x.bottom       : NULL
+##  $ axis.ticks.y              : NULL
+##  $ axis.ticks.y.left         : NULL
+##  $ axis.ticks.y.right        : NULL
+##  $ axis.ticks.length         : &#39;simpleUnit&#39; num 2.75points
+##   ..- attr(*, &quot;unit&quot;)= int 8
+##  $ axis.ticks.length.x       : NULL
+##  $ axis.ticks.length.x.top   : NULL
+##  $ axis.ticks.length.x.bottom: NULL
+##  $ axis.ticks.length.y       : NULL
+##  $ axis.ticks.length.y.left  : NULL
+##  $ axis.ticks.length.y.right : NULL
+##  $ axis.line                 : list()
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
+##  $ axis.line.x               : NULL
+##  $ axis.line.x.top           : NULL
+##  $ axis.line.x.bottom        : NULL
+##  $ axis.line.y               : NULL
+##  $ axis.line.y.left          : NULL
+##  $ axis.line.y.right         : NULL
+##  $ legend.background         : list()
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
+##  $ legend.margin             : &#39;margin&#39; num [1:4] 5.5points 5.5points 5.5points 5.5points
+##   ..- attr(*, &quot;unit&quot;)= int 8
+##  $ legend.spacing            : &#39;simpleUnit&#39; num 11points
+##   ..- attr(*, &quot;unit&quot;)= int 8
+##  $ legend.spacing.x          : NULL
+##  $ legend.spacing.y          : NULL
+##  $ legend.key                : list()
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
+##  $ legend.key.size           : &#39;simpleUnit&#39; num 1.2lines
+##   ..- attr(*, &quot;unit&quot;)= int 3
+##  $ legend.key.height         : NULL
+##  $ legend.key.width          : NULL
+##  $ legend.text               :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : &#39;rel&#39; num 0.8
+##   ..$ hjust        : NULL
+##   ..$ vjust        : NULL
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : NULL
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ legend.text.align         : NULL
+##  $ legend.title              :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : num 0
+##   ..$ vjust        : NULL
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : NULL
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ legend.title.align        : NULL
+##  $ legend.position           : chr &quot;right&quot;
+##  $ legend.direction          : NULL
+##  $ legend.justification      : chr &quot;center&quot;
+##  $ legend.box                : NULL
+##  $ legend.box.just           : NULL
+##  $ legend.box.margin         : &#39;margin&#39; num [1:4] 0cm 0cm 0cm 0cm
+##   ..- attr(*, &quot;unit&quot;)= int 1
+##  $ legend.box.background     : list()
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
+##  $ legend.box.spacing        : &#39;simpleUnit&#39; num 11points
+##   ..- attr(*, &quot;unit&quot;)= int 8
+##  $ panel.background          : list()
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
+##  $ panel.border              : list()
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
+##  $ panel.spacing             : &#39;simpleUnit&#39; num 5.5points
+##   ..- attr(*, &quot;unit&quot;)= int 8
+##  $ panel.spacing.x           : NULL
+##  $ panel.spacing.y           : NULL
+##  $ panel.grid                :List of 6
+##   ..$ colour       : chr &quot;grey92&quot;
+##   ..$ size         : NULL
+##   ..$ linetype     : NULL
+##   ..$ lineend      : NULL
+##   ..$ arrow        : logi FALSE
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_line&quot; &quot;element&quot;
+##  $ panel.grid.major          : NULL
+##  $ panel.grid.minor          :List of 6
+##   ..$ colour       : NULL
+##   ..$ size         : &#39;rel&#39; num 0.5
+##   ..$ linetype     : NULL
+##   ..$ lineend      : NULL
+##   ..$ arrow        : logi FALSE
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_line&quot; &quot;element&quot;
+##  $ panel.grid.major.x        : NULL
+##  $ panel.grid.major.y        : NULL
+##  $ panel.grid.minor.x        : NULL
+##  $ panel.grid.minor.y        : NULL
+##  $ panel.ontop               : logi FALSE
+##  $ plot.background           : list()
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
+##  $ plot.title                :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : &#39;rel&#39; num 1.2
+##   ..$ hjust        : num 0
+##   ..$ vjust        : num 1
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 5.5points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ plot.title.position       : chr &quot;panel&quot;
+##  $ plot.subtitle             :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : num 0
+##   ..$ vjust        : num 1
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 0points 0points 5.5points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ plot.caption              :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : &#39;rel&#39; num 0.8
+##   ..$ hjust        : num 1
+##   ..$ vjust        : num 1
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 5.5points 0points 0points 0points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ plot.caption.position     : chr &quot;panel&quot;
+##  $ plot.tag                  :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : &#39;rel&#39; num 1.2
+##   ..$ hjust        : num 0.5
+##   ..$ vjust        : num 0.5
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : NULL
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ plot.tag.position         : chr &quot;topleft&quot;
+##  $ plot.margin               : &#39;margin&#39; num [1:4] 5.5points 5.5points 5.5points 5.5points
+##   ..- attr(*, &quot;unit&quot;)= int 8
+##  $ strip.background          : list()
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_blank&quot; &quot;element&quot;
+##  $ strip.background.x        : NULL
+##  $ strip.background.y        : NULL
+##  $ strip.placement           : chr &quot;inside&quot;
+##  $ strip.text                :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : chr &quot;grey10&quot;
+##   ..$ size         : &#39;rel&#39; num 0.8
+##   ..$ hjust        : NULL
+##   ..$ vjust        : NULL
+##   ..$ angle        : NULL
+##   ..$ lineheight   : NULL
+##   ..$ margin       : &#39;margin&#39; num [1:4] 4.4points 4.4points 4.4points 4.4points
+##   .. ..- attr(*, &quot;unit&quot;)= int 8
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ strip.text.x              : NULL
+##  $ strip.text.y              :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : NULL
+##   ..$ vjust        : NULL
+##   ..$ angle        : num -90
+##   ..$ lineheight   : NULL
+##   ..$ margin       : NULL
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  $ strip.switch.pad.grid     : &#39;simpleUnit&#39; num 2.75points
+##   ..- attr(*, &quot;unit&quot;)= int 8
+##  $ strip.switch.pad.wrap     : &#39;simpleUnit&#39; num 2.75points
+##   ..- attr(*, &quot;unit&quot;)= int 8
+##  $ strip.text.y.left         :List of 11
+##   ..$ family       : NULL
+##   ..$ face         : NULL
+##   ..$ colour       : NULL
+##   ..$ size         : NULL
+##   ..$ hjust        : NULL
+##   ..$ vjust        : NULL
+##   ..$ angle        : num 90
+##   ..$ lineheight   : NULL
+##   ..$ margin       : NULL
+##   ..$ debug        : NULL
+##   ..$ inherit.blank: logi TRUE
+##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;element_text&quot; &quot;element&quot;
+##  - attr(*, &quot;class&quot;)= chr [1:2] &quot;theme&quot; &quot;gg&quot;
+##  - attr(*, &quot;complete&quot;)= logi TRUE
+##  - attr(*, &quot;validate&quot;)= logi TRUE</code></pre>
+<pre class="r"><code>decade1980&lt;-(predict(maturity.mod, data.frame(LENGTH=seq(sel.min,sel.max), decade=rep(&quot;1980&quot;,sel.length), SEX=rep(&quot;female&quot;,sel.length)), type=&quot;response&quot;))
+
+decade1980.m&lt;-(predict(maturity.mod, data.frame(LENGTH=seq(sel.min,sel.max), decade=rep(&quot;1980&quot;,sel.length), SEX=rep(&quot;male&quot;,sel.length)), type=&quot;response&quot;))
+
+decade1990&lt;-(predict(maturity.mod, data.frame(LENGTH=seq(sel.min,sel.max), decade=rep(&quot;1990&quot;,sel.length), SEX=rep(&quot;female&quot;,sel.length)), type=&quot;response&quot;))
+
+decade1990.m&lt;-(predict(maturity.mod, data.frame(LENGTH=seq(sel.min,sel.max), decade=rep(&quot;1990&quot;,sel.length), SEX=rep(&quot;female&quot;,sel.length)), type=&quot;response&quot;))
+
+decade2000&lt;-(predict(maturity.mod, data.frame(LENGTH=seq(sel.min,sel.max), decade=rep(&quot;2000&quot;,sel.length), SEX=rep(&quot;female&quot;,sel.length)), type=&quot;response&quot;))
+
+decade2000.m&lt;-(predict(maturity.mod, data.frame(LENGTH=seq(sel.min,sel.max), decade=rep(&quot;2000&quot;,sel.length), SEX=rep(&quot;male&quot;,sel.length)), type=&quot;response&quot;))
+
+decade2010&lt;-(predict(maturity.mod, data.frame(LENGTH=seq(sel.min,sel.max), decade=rep(&quot;2010&quot;,sel.length), SEX=rep(&quot;female&quot;,sel.length)), type=&quot;response&quot;))
+
+decade2010.m&lt;-(predict(maturity.mod, data.frame(LENGTH=seq(sel.min,sel.max), decade=rep(&quot;2010&quot;,sel.length), SEX=rep(&quot;male&quot;,sel.length)), type=&quot;response&quot;))</code></pre>
 </div>
 
 
