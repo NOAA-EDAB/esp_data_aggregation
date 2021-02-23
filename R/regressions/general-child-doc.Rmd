@@ -18,7 +18,7 @@ if("Units" %in% colnames(test)){
 
 if("Value" %in% colnames(test)){
   test <- test %>%
-    dplyr::mutate(Val = Value)
+    dplyr::rename(Val = Value)
 }
 
 # mean data by year

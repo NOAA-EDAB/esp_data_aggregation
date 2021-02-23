@@ -1,16 +1,39 @@
+#safe_model <- purrr::safely(coef(summary(lm)))
+
 data_prep <- function(stock_data, eco_data, lag_data){
   stock2 <- stock_data %>%
     dplyr::mutate(Time = as.numeric(Time) - lag_data,
-                  facet = paste(Metric, Description, Units, sep = "\n"))
+                  facet = paste(Metric, Description, Units, sep = "\n")) %>% 
+    dplyr::ungroup()
   
   eco_data$Time <- as.numeric(eco_data$Time)
   
-  data <- dplyr::left_join(stock2, eco_data,
+  data <- dplyr::full_join(stock2, eco_data,
                            by = "Time") %>%
-    dplyr::filter(is.na(Var) == FALSE) %>%
+    dplyr::filter(Var %>% stringr::str_detect(Metric) == FALSE, # remove self-correlations
+                  is.na(Var) == FALSE,
+                  is.na(Metric) == FALSE,
+                  is.na(Value) == FALSE,
+                  is.na(Val) == FALSE) %>% 
+    dplyr::ungroup() 
+  
+  data2 <- data %>%
     dplyr::group_by(Metric, Var) %>%
-    dplyr::mutate(pval = coef(summary(lm(Value ~ Val)))[2,4]) %>%
+    dplyr::mutate(n_data_points = length(Time))
+  
+  data_model <- data2 %>%
+    dplyr::filter(n_data_points >= 3) %>%
+    dplyr::ungroup() %>% 
+    dplyr::group_by(Metric, Var) %>%
+    dplyr::mutate(pval = summary(lm(Value ~ Val))$coefficients[2,4]) %>% 
     dplyr::mutate(sig = pval < 0.05)
+  
+  data_no_model <- data2 %>%
+    dplyr::filter(n_data_points < 3) %>%
+    dplyr::mutate(pval = NA,
+                  sig = NA)
+  
+  data <- rbind(data_model, data_no_model)
   
   return(data)
 }
@@ -24,11 +47,11 @@ plot_correlation <- function(stock, eco, lag){
   data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag)
-  
+
   if(nrow(data) > 0){
     
-    my_colors <- c("black", "#B2292E")
-    names(my_colors) <- c("FALSE", "TRUE")
+    my_colors <- c("black", "#B2292E", "gray")
+    names(my_colors) <- c("FALSE", "TRUE", "NA")
     
     fig <- ggplot(data,
                   aes(x = Val,
@@ -53,63 +76,52 @@ plot_correlation <- function(stock, eco, lag){
   
 }
 
-#plot_correlation(bluefish = bluefish, 
-#                 eco = ecodata::forage_anomaly %>%
-#                   dplyr::rename(Val = Value), 
-#                 lag = 0)
-
 correlation_data <- function(stock, eco, lag){
 
   data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag) %>%
-    dplyr::filter(sig == TRUE) # if there are <3 data points, the correlation won't work
+    dplyr::filter(sig == TRUE) # only statistically significant data
   
   # test correlations
   
   if(nrow(data) > 0){
-    if(min(data$pval) >= 0.05){
-      print("No statistically significant results")
-    } else {
-      for(i in unique(data$Metric)){
-        for(j in unique(data$Var)){
-          dat <- data %>%
-            dplyr::filter(Metric == i, Var == j)
-          
+    for(i in unique(data$Metric)){
+      for(j in unique(data$Var)){
+        dat <- data %>%
+          dplyr::filter(Metric == i, Var == j)
+        
+        if(nrow(dat) > 0){
           results <- lm(Value ~ Val, 
                         data = dat) %>%
             summary
           
-          if(results[[4]][2,4] < 0.05){
-            
-            cat('\n\n<!-- -->\n\n')
-            
-            knitr::kable(
-              list(
-                results$coefficients %>%
-                  round(digits = 2),
-                data.frame(Name = c("F-statistic", "df", "R2", "R2-adj"),
-                           Value = c(results$fstatistic[1] %>%
-                                       round(digits = 2), 
-                                     paste(results$fstatistic[2:3], 
-                                           collapse = ", "),
-                                     results$r.squared %>%
-                                       round(digits = 2), 
-                                     results$adj.r.squared %>%
-                                       round(digits = 2)
-                           ))
-              ),
-              caption = paste(i, j, sep = " vs "), 
-              booktabs = TRUE
-            ) %>% print()
-            
-            cat('\n\n<!-- -->\n\n')
-            
-          }
+          cat('\n\n<!-- -->\n\n')
+          
+          knitr::kable(
+            list(
+              results$coefficients %>%
+                round(digits = 2),
+              data.frame(Name = c("F-statistic", "df", "R2", "R2-adj"),
+                         Value = c(results$fstatistic[1] %>%
+                                     round(digits = 2), 
+                                   paste(results$fstatistic[2:3], 
+                                         collapse = ", "),
+                                   results$r.squared %>%
+                                     round(digits = 2), 
+                                   results$adj.r.squared %>%
+                                     round(digits = 2)
+                         ))
+            ),
+            caption = paste(i, j, sep = " vs "), 
+            booktabs = TRUE
+          ) %>% print()
+          
+          cat('\n\n<!-- -->\n\n')
         }
       }
     }
-  } else print("No data under conditions selected")
+  } else print("No statistically significant data")
 }
 
 correlation_summary <- function(stock, eco, lag){
@@ -117,43 +129,42 @@ correlation_summary <- function(stock, eco, lag){
   data <- data_prep(stock_data = stock, 
                     eco_data = eco, 
                     lag_data = lag) %>%
-    dplyr::filter(sig == TRUE) # if there are <3 data points, the correlation won't work
+    dplyr::filter(sig == TRUE) # only statistically significant data
   
   # test correlations
   
   if(nrow(data) > 0){
-    if(min(data$pval) < 0.05){
-      
-      output <- c()
-      
-      for(i in unique(data$Metric)){
-        
-        for(j in unique(data$Var)){
-          dat <- data %>%
-            dplyr::filter(Metric == i, Var == j)
+    
+    output <- c()
+
+    for(i in unique(data$Metric)){
+      for(j in unique(data$Var)){
           
+        dat <- data %>%
+            dplyr::filter(Metric == i, Var == j)
+        
+        if(nrow(dat) > 0){
           results <- lm(Value ~ Val, 
                         data = dat) %>%
             summary
           
-          if(results[[4]][2,4] < 0.05){
-            output <- rbind(output, c(i, 
-                                      j, 
-                                      length(dat$Metric), # number of points
-                                      results$coefficients[2, 1] %>%
-                                        signif(digits = 2), # slope
-                                      results$coefficients[2, 4] %>%
-                                        signif(digits = 2), # p-value
-                                      results$adj.r.squared %>%
-                                        round(digits = 2))) # adjusted r2
-          }
+          output <- rbind(output, c(i, 
+                                    j,
+                                    length(dat$Metric), # number of points
+                                    results$coefficients[2, 1] %>%
+                                      signif(digits = 2), # slope
+                                    results$coefficients[2, 4] %>%
+                                      signif(digits = 2), # p-value
+                                    results$adj.r.squared %>%
+                                      round(digits = 2))) # adjusted r2
         }
       }
-      
-      return(output)
+      }
+
+    return(output)
     }
   }
-}
+
 
 render_indicator <- function(test){
   res <- knitr::knit_child(here::here("R/regressions", "general-child-doc.Rmd"), 
