@@ -1,0 +1,14 @@
+## Larvae and YOY indicators
+
+### Recruitment
+```{r, recruit}
+test <- stock %>%
+  dplyr::filter(Metric == "Recruitment") %>%
+  dplyr::rename(Var = Metric,
+                Val = Value)
+if(nrow(test) > 0){
+  render_indicator(test)
+}
+```
+
+### Larval growth
