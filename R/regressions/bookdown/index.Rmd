@@ -42,13 +42,23 @@ library(ggplot2)
 
 source(here::here("R/regressions", "indicator_functions_general.R"))
 
-stock <- assessmentdata::stockAssessmentData %>% 
+if(params$stock == "Monkfish"){
+  stock <- assessmentdata::stockAssessmentData %>% 
+  dplyr::filter(Species == "Goosefish",
+                Region == params$region) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(max_year = max(AssessmentYear)) %>%
+  dplyr::filter(AssessmentYear == max_year) %>%
+  dplyr::rename(Time = Year)
+} else {
+  stock <- assessmentdata::stockAssessmentData %>% 
   dplyr::filter(Species == params$stock,
                 Region == params$region) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(max_year = max(AssessmentYear)) %>%
   dplyr::filter(AssessmentYear == max_year) %>%
   dplyr::rename(Time = Year)
+}
 
 if(params$remove_recent){
   max_year <- max(stock$Time)
