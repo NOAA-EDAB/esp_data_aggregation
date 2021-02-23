@@ -6,7 +6,7 @@ output: html_document
 params:
   stock:
     label: "Stock:"
-    value: scup
+    value: acadian redfish
     input: select
     choices: [atlantic hagfish, smooth dogfish, spiny dogfish, barndoor skate, winter skate, clearnose skate, rosette skate, little skate, smooth skate, thorny skate, Atlantic herring, alewife, blueback herring, offshore hake, silver hake, Atlantic cod, haddock, pollock, white hake, red hake, cusk, atlantic halibut, american plaice, summer flounder, yellowtail flounder, winter flounder, witch flounder, atlantic mackerel, butterfish, bluefish, scup, acadian redfish , atlantic wolffish, ocean pout, monkfish, atlantic menhaden, windowpane flounder, black sea bass ]
 ---
