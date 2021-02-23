@@ -17,7 +17,7 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
                               lag_var, parent_folder, trouble){
   
   new_dir <- here::here("Regressions", parent_folder, 
-                        paste(stock_var, region_var 
+                        paste(stock_var, region_var, epus_var, 
                               %>% stringr::str_replace_all("/", "-"))) %>%
     stringr::str_replace_all(" ", "_")
   dir.create(new_dir, 
@@ -76,11 +76,11 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
     stringr::str_subset(".yml") %>% 
     file.remove()
   
-  print(paste(i, "Done with", parent_folder, epus_var, region_var, stock_var, "!",
+  print(paste(i, "Done with", parent_folder, region_var, epus_var, stock_var, "!",
               sep = ": "))
 }
 
-for(i in 23:nrow(info)
+for(i in 1:nrow(info)
     #1:nrow(info)
     ){
   # make 0 lag reports
