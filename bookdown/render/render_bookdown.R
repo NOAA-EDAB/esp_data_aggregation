@@ -25,10 +25,10 @@ setwd(here::here("bookdown/"))
 
 start <- Sys.time()
 
-purrr::map("Acadian redfish", 
+purrr::map("Monkfish", 
            ~bookdown::render_book(input = c("test/index.Rmd"),
-                                  preview = TRUE,
-                                  #preview = FALSE,
+                                  #preview = TRUE,
+                                  preview = FALSE,
                                  params = list(species_ID = .x,
                                                
                                                latlong_data = latlong,
@@ -60,8 +60,8 @@ purrr::map("Acadian redfish",
                                                
                                                swept_data = swept
                                                ), 
-                                 knit_root_dir = here::here(paste("docs/bookdown/", .x, sep = "")),
-                                 output_dir = here::here(paste("docs/bookdown/", .x, sep = ""))
+                                 knit_root_dir = here::here(paste("Reports/", .x, sep = "")),
+                                 output_dir = here::here(paste("Reports/", .x, sep = ""))
                                  ))
 end <- Sys.time()
 end - start
@@ -96,13 +96,13 @@ all_species <- all_species[!is.na(all_species)]
 # try copying bookdown .rmd files to new directories
 #list.files(here::here("bookdown"), full.names = TRUE)
 
-dir.create(here::here("docs/bookdown/"))
+dir.create(here::here("Reports"))
 render_par <- function(x){
 
   tf <- tempfile()
   dir.create(tf)
   
-  new_dir <- here::here(paste("docs/bookdown/", x, sep = ""))
+  new_dir <- here::here(paste("Reports/", x, sep = ""))
   dir.create(new_dir)
 
   file.copy(from = list.files(here::here("bookdown"), full.names = TRUE),
@@ -165,7 +165,7 @@ render_par <- function(x){
 source(here::here("R/full_report_functions", "read_data.R"))
 
 # make cluster
-cl <- snow::makeCluster(13) # not the same as cores - can have more than 8??
+cl <- snow::makeCluster(8) # not the same as cores - can have more than 8??
 
 # export data to cluster
 snow::clusterExport(cl, list("survey_big", "asmt", "asmt_sum", "risk",
@@ -204,4 +204,16 @@ end - start
 Sys.time()
 
 #####
-              
+
+# clean up files (when locally rendered with parallelization)
+rmds <- list.files(here::here("Reports"), recursive = TRUE, full.names = TRUE) %>%
+  stringr::str_subset(".Rmd")
+file.remove(rmds)
+
+folders <- list.dirs(here::here("Reports"), recursive = TRUE, full.names = TRUE) %>%
+  stringr::str_subset("_bookdown_files")
+unlink(folders, recursive = TRUE)
+
+locks <- list.files(here::here("Reports"), recursive = TRUE, full.names = TRUE) %>%
+  stringr::str_subset("renv.lock")
+file.remove(locks)

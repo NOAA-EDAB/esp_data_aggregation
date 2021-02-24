@@ -1,0 +1,37 @@
+````{r}
+# mean data by year
+test <- test %>%
+  dplyr::ungroup() %>%
+  dplyr::group_by(Var, Time) %>%
+  dplyr::summarise(new_val = mean(Val)) %>%
+  dplyr::rename(Val = new_val) %>%
+  dplyr::ungroup()
+
+n_years <- length(unique(test$Time))
+n_var <- length(unique(test$Var))
+n_measurements <- length(test$Time)
+
+if(n_measurements > n_years * n_var &
+   n_measurements > 0){
+  test <- test %>%
+    dplyr::mutate(Var = paste(Var, "(annual mean)", sep = "\n"))
+}
+
+# correlation summary
+output <- rbind(output, correlation_summary(bluefish = bluefish, 
+                                            eco = test, 
+                                            lag = params$lag))
+```
+#### Figures {-}
+```{r, fig.height = 10}
+plot_correlation(bluefish = bluefish, 
+                 eco = test, 
+                 lag = params$lag)
+```
+
+#### Regression statistics {-}
+```{r, results = "asis"}
+correlation_data(bluefish = bluefish, 
+                 eco = test, 
+                 lag = params$lag)
+```

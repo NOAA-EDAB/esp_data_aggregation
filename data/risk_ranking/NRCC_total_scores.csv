@@ -1,0 +1,45 @@
+Species,Region,Indicator,Year,Value,rank,norm_rank
+Rosette skate,Southern New England / Mid-Atlantic,NRCC_ranking,NRCC_risk_assessment,18,1,0.022727273
+Acadian redfish,Gulf of Maine / Georges Bank,NRCC_ranking,NRCC_risk_assessment,19,2,0.045454545
+Clearnose skate,Southern New England / Mid-Atlantic,NRCC_ranking,NRCC_risk_assessment,22.5,3,0.068181818
+Barndoor skate,Georges Bank / Southern New England,NRCC_ranking,NRCC_risk_assessment,23.5,4,0.090909091
+Winter skate,Georges Bank / Southern New England,NRCC_ranking,NRCC_risk_assessment,24.5,5,0.113636364
+Atlantic wolffish,Gulf of Maine / Georges Bank,NRCC_ranking,NRCC_risk_assessment,25.5,6.5,0.147727273
+White hake,Gulf of Maine / Georges Bank,NRCC_ranking,NRCC_risk_assessment,25.5,6.5,0.147727273
+Silver hake,Gulf of Maine / Northern Georges Bank,NRCC_ranking,NRCC_risk_assessment,26,8.5,0.193181818
+Windowpane,Southern New England / Mid-Atlantic,NRCC_ranking,NRCC_risk_assessment,26,8.5,0.193181818
+Little skate,Georges Bank / Southern New England,NRCC_ranking,NRCC_risk_assessment,26.5,10.5,0.238636364
+Smooth skate,Gulf of Maine,NRCC_ranking,NRCC_risk_assessment,26.5,10.5,0.238636364
+Jonah crab,,NRCC_ranking,NRCC_risk_assessment,27,12,0.272727273
+American lobster,Gulf of Maine / Georges Bank,NRCC_ranking,NRCC_risk_assessment,28,13,0.295454545
+Silver hake,Southern Georges Bank / Mid-Atlantic,NRCC_ranking,NRCC_risk_assessment,29,14,0.318181818
+American lobster,Southern New England,NRCC_ranking,NRCC_risk_assessment,30,16,0.363636364
+Butterfish,Gulf of Maine / Cape Hatteras,NRCC_ranking,NRCC_risk_assessment,30,16,0.363636364
+Thorny skate,Gulf of Maine,NRCC_ranking,NRCC_risk_assessment,30,16,0.363636364
+Ocean pout,Northwestern Atlantic Coast,NRCC_ranking,NRCC_risk_assessment,30.5,18,0.409090909
+Haddock,Georges Bank,NRCC_ranking,NRCC_risk_assessment,31,19,0.431818182
+Spiny dogfish,Atlantic Coast,NRCC_ranking,NRCC_risk_assessment,31.33333333,20,0.454545455
+Windowpane,Gulf of Maine / Georges Bank,NRCC_ranking,NRCC_risk_assessment,32,21,0.477272727
+Haddock,Gulf of Maine,NRCC_ranking,NRCC_risk_assessment,32.5,22,0.5
+Pollock,Gulf of Maine / Georges Bank,NRCC_ranking,NRCC_risk_assessment,33,23,0.522727273
+Scup,Atlantic Coast,NRCC_ranking,NRCC_risk_assessment,33.33333333,24,0.545454545
+Witch flounder,Northwestern Atlantic Coast,NRCC_ranking,NRCC_risk_assessment,33.5,25,0.568181818
+Red hake,Gulf of Maine / Northern Georges Bank,NRCC_ranking,NRCC_risk_assessment,34,26,0.590909091
+Monkfish,Gulf of Maine / Northern Georges Bank,NRCC_ranking,NRCC_risk_assessment,34.5,27,0.613636364
+Atlantic halibut,Northwestern Atlantic Coast,NRCC_ranking,NRCC_risk_assessment,35,28,0.636363636
+Monkfish,Southern Georges Bank / Mid-Atlantic,NRCC_ranking,NRCC_risk_assessment,35.5,29,0.659090909
+Yellowtail flounder,Georges Bank,NRCC_ranking,NRCC_risk_assessment,36,30,0.681818182
+American plaice,Gulf of Maine / Georges Bank,NRCC_ranking,NRCC_risk_assessment,36.5,31,0.704545455
+Yellowtail flounder,Cape Cod / Gulf of Maine,NRCC_ranking,NRCC_risk_assessment,37,32,0.727272727
+Black sea bass,Mid-Atlantic Coast,NRCC_ranking,NRCC_risk_assessment,37,33,0.75
+Red hake,Southern Georges Bank / Mid-Atlantic,NRCC_ranking,NRCC_risk_assessment,39,34,0.772727273
+Yellowtail flounder,Southern New England / Mid-Atlantic,NRCC_ranking,NRCC_risk_assessment,40,35,0.795454545
+Atlantic herring,Northwestern Atlantic Coast,NRCC_ranking,NRCC_risk_assessment,41,36.5,0.829545455
+Atlantic mackerel,Gulf of Maine / Cape Hatteras,NRCC_ranking,NRCC_risk_assessment,41,36.5,0.829545455
+Winter flounder,Southern New England / Mid-Atlantic,NRCC_ranking,NRCC_risk_assessment,41.66666667,38,0.863636364
+Winter flounder,Gulf of Maine,NRCC_ranking,NRCC_risk_assessment,42,39,0.886363636
+Bluefish,Atlantic Coast,NRCC_ranking,NRCC_risk_assessment,42,40,0.909090909
+Atlantic cod,Gulf of Maine,NRCC_ranking,NRCC_risk_assessment,48,41,0.931818182
+Winter flounder,Georges Bank,NRCC_ranking,NRCC_risk_assessment,48.83333333,42,0.954545455
+Summer flounder,Mid-Atlantic Coast,NRCC_ranking,NRCC_risk_assessment,49.66666667,43,0.977272727
+Atlantic cod,Georges Bank,NRCC_ranking,NRCC_risk_assessment,50.5,44,1

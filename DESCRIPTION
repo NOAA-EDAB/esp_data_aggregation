@@ -8,8 +8,10 @@ Imports:
     bookdown,
     devtools,
     DT,
+    FSA,
     ggpubr,
     ggrepel,
+    ggridges,
     ggsci,
     ggsignif,
     ggthemes,
@@ -24,6 +26,7 @@ Imports:
     rfishbase,
     rgdal,
     rgeos,
+    rJava,
     rnaturalearth,
     rnaturalearthdata,
     roxygen2,
@@ -31,13 +34,24 @@ Imports:
     shape,
     spatial,
     splines,
+    tabulizer,
+    tabulizerjars,
     tidyverse,
     units,
     usethis,
     utils,
     viridis,
     ymlthis,
-    zoo
+    zoo,
+    dbutils,
+    assessmentdata,
+    survdat,
+    rnaturalearthhires,
+    nmfspalette,
+    TMBhelper,
+    utilities,
+    FishLife,
+    ecodata
 Remotes:
     andybeet/dbutils,
     NOAA-EDAB/assessmentdata,
@@ -47,7 +61,7 @@ Remotes:
     kaskr/TMB_contrib_R/TMBhelper,
     James-Thorson/utilities,
     James-Thorson-NOAA/FishLife,
-    NOAA-EDAB/ecodata,
+    NOAA-EDAB/ecodata
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

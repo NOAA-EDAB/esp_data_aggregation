@@ -1,0 +1,107 @@
+## Trophic indicators
+
+### Spring zooplankton abundance by species
+```{r, zoo_oi_spring}
+test <- ecodata::zoo_oi %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::filter(EPU == "MAB",
+                Var %>% stringr::str_detect("SD") == FALSE,
+                Var %>% stringr::str_detect("spring")) %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```
+
+### Fall zooplankton abundance by species
+```{r, zoo_oi_fall}
+test <- ecodata::zoo_oi %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::filter(EPU == "MAB",
+                Var %>% stringr::str_detect("SD") == FALSE,
+                Var %>% stringr::str_detect("fall")) %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```
+
+### Zooplankton abundance by group
+```{r, zoo_strat_abun}
+test <- ecodata::zoo_strat_abun %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::filter(EPU == "MAB") %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```
+
+### Abundance of Calanus CV and adults
+```{r, calanus}
+test <- ecodata::CalanusStage %>%
+  dplyr::rename(Time = Year) %>%
+  dplyr::filter(Var == "Adt" | Var == "CV",
+                EPU == "MAB",
+                Units == "No. per 100m^-3") %>%
+  dplyr::group_by(Time) %>%
+  dplyr::mutate(Val = sum(Value)) %>%
+  dplyr::select(Time, Val) %>% # numbers are the same for all seasons in a year
+  dplyr::distinct() %>%
+  dplyr::mutate(Var = "Calanus CV and adult")
+render_indicator(test)
+```
+
+### Zooplankton abundance anomaly
+```{r, zoo_abund}
+test <- ecodata::zoo_abund %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::filter(EPU == "MAB") %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```
+
+### Zooplankton diversity index
+```{r, zoo_diversity}
+test <- ecodata::zoo_diversity %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::filter(EPU == "MAB") %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```
+
+### Small/large copepod anomaly
+```{r, zoo_sli_anom}
+test <- ecodata::zoo_sli_anom %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::filter(EPU == "MAB") %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```
+
+### Spring ichthyoplankton diversity
+```{r, forage_spring}
+test <- ecodata::ichthyo_diversity  %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::filter(Season == "Spring") %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```
+
+### Fall ichthyoplankton diversity
+```{r, forage_fall}
+test <- ecodata::ichthyo_diversity  %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::filter(Season == "Fall") %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```
+
+### Forage fish abundance
+```{r, forage}
+test <- ecodata::forage_anomaly %>%
+  dplyr::rename(Val = Value)
+render_indicator(test)
+```
+
+### Species distribution
+```{r, species_dist}
+test <- ecodata::species_dist %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```

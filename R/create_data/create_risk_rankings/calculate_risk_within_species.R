@@ -13,7 +13,7 @@ survey <- survey %>%
 
 # risk within each stock ----
 
-# avg & max lengths of past 5 years compared to mean of all years previous (fall and spring)
+# avg & max lengths of past 5 years compared to mean of all years previous (fall and spring) ----
 source(here::here("R/full_report_functions/", "get_length.R"))
 length <- survey %>% get_len_data_risk
 length$YEAR <- as.numeric(length$YEAR)
@@ -45,7 +45,7 @@ max_len_s <- get_species_risk(data = length %>%
                               high = "low_risk",
                               indicator_name = "max_length_spring")
 
-# survey abundance (fall and spring)
+# survey abundance (fall and spring) -----
 abun_survey <- survey %>% 
   get_var_data2(variable = "ABUNDANCE")
 abun_survey$YEAR <- as.numeric(abun_survey$YEAR)
@@ -63,7 +63,7 @@ abun_s <- get_species_risk(data = abun_survey %>%
                            high = "low_risk",
                            indicator_name = "abundance_spring")
 
-# survey biomass (fall and spring)
+# survey biomass (fall and spring) ----
 biomass_surv <- survey %>% 
   get_var_data2(variable = "BIOMASS")
 biomass_surv
@@ -83,7 +83,7 @@ biomass_s <- get_species_risk(data = biomass_surv %>%
                               indicator_name = "biomass_spring")
 
 
-# asmt recruitment 
+# asmt recruitment ----
 dat <- asmt %>% dplyr::filter(Metric == "Recruitment")
 recruit <- get_species_risk(data = dat, 
                             year_source = "Year", 
@@ -91,7 +91,7 @@ recruit <- get_species_risk(data = dat,
                             high = "low_risk",
                             indicator_name = "recruitment")
 
-# asmt abundance 
+# asmt abundance ----
 dat <- asmt %>% dplyr::filter(Metric == "Abundance")
 abun <- get_species_risk(data = dat, 
                          year_source = "Year", 
@@ -99,7 +99,7 @@ abun <- get_species_risk(data = dat,
                          high = "low_risk",
                          indicator_name = "asmt_abundance")
 
-# asmt biomass  
+# asmt biomass  ----
 dat <- asmt %>% dplyr::filter(Metric == "Biomass")
 biomass <- get_species_risk(data = dat, 
                             year_source = "Year", 
@@ -107,7 +107,7 @@ biomass <- get_species_risk(data = dat,
                             high = "low_risk",
                             indicator_name = "asmt_biomass")
 
-# asmt catch 
+# asmt catch ----
 dat <- asmt %>% dplyr::filter(Metric == "Catch",
                               Units == "Metric Tons")
 catch <- get_species_risk(data = dat, 
@@ -116,7 +116,7 @@ catch <- get_species_risk(data = dat,
                           high = "high_risk",
                           indicator_name = "asmt_catch") 
 
-# com catch & revenue 
+# com catch & revenue ----
 com$Region <- NA
 com_sum <- com %>%
   dplyr::group_by(Species, Region, Year) %>%
@@ -135,7 +135,7 @@ rev_run <- get_species_risk(data = com_sum,
                             high = "high_risk",
                             indicator_name = "revenue")
 
-# rec catch 
+# rec catch ----
 rec$Region <- NA
 rec_sum <- rec %>%
   dplyr::group_by(Species, Region, year) %>%
@@ -147,14 +147,14 @@ rec <- get_species_risk(data = rec_sum,
                         high = "high_risk",
                         indicator_name = "rec_catch")
 
-# bbmsy 
+# bbmsy ----
 b <- get_species_risk(data = asmt_sum, 
                       year_source = "Assessment Year", 
                       value_source = "B/Bmsy", 
                       high = "low_risk",
                       indicator_name = "bbmsy")
 
-# ffmsy 
+# ffmsy ----
 f <- get_species_risk(data = asmt_sum, 
                       year_source = "Assessment Year", 
                       value_source = "F/Fmsy", 

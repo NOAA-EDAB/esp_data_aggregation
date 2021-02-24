@@ -6,7 +6,6 @@ devtools::install_deps(dependencies = TRUE)
 
 # install github packages
 # packages that have to come from github:
-# installed but not used in reports (ignore for now): ‘dbutils’, ‘survdat’, 
 remotes::install_github("NOAA-EDAB/assessmentdata")
 remotes::install_github("NOAA-EDAB/ecodata")
 remotes::install_github("NOAA-EDAB/survdat")

@@ -1,4 +1,8 @@
 ```{r}
+# region data
+asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
+asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
+
 # set colors and linetypes to be constant for all regions
 reg <- c(asmt_sum_data$Region, asmt_data$Region) %>% unique()
 

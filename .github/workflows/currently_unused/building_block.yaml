@@ -8,8 +8,18 @@
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+      
+      - name: Install Pandoc
+        run: brew install pandoc
+        shell: bash
+
+      - name: Install command line packages
+        run: |        
+          sudo R CMD javareconf
+          sudo apt-get install libcurl4-openssl-dev libgdal-dev libgit2-dev libudunits2-dev
+        shell: bash
         
-      - name: Setup R
+      - name: Set up R
         uses: r-lib/actions/setup-r@master
       
       - name: Cache R packages
@@ -26,7 +36,7 @@
           devtools::install_deps(dependencies = TRUE)'
         
       - name: Create reports
-        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@v1.5-beta
+        uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@abby
         with: 
           species: 'REPLACE'
           
@@ -35,6 +45,6 @@
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs/action_reports # The folder the action should deploy.
+          FOLDER: action_reports # The folder the action should deploy.
           TARGET_FOLDER: Reports
           CLEAN: false # Automatically remove deleted files from the deploy branch

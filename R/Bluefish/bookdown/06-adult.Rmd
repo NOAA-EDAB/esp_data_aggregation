@@ -1,0 +1,38 @@
+## Adult indicators
+
+### Size of spawning stock
+```{r, ssb}
+test <- bluefish %>%
+  dplyr::filter(Metric == "Abundance") %>%
+  dplyr::rename(Var = Metric,
+                Val = Value)
+render_indicator(test)
+```
+
+### Mean age of spawning stock
+
+### Age distribution
+
+### Length-age curves
+
+### Condition
+```{r, condition}
+test <- read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/data/AnnualRelCond2018_MAB.csv") %>%
+  dplyr::filter(Species == "Bluefish") %>%
+  dplyr::rename(Val = MeanCond,
+                Time = YEAR) %>%
+  dplyr::mutate(Var = paste(sex, "condition"))
+render_indicator(test)
+```
+
+### Stomach fullness
+```{r, stomach}
+test <- ecodata::stom_fullness %>% 
+  dplyr::filter(Var == "Bluefish",
+                EPU == "MAB") %>%
+  dplyr::rename(Val = Value) %>%
+  dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+render_indicator(test)
+```
+
+### Center of gravity and area occupied

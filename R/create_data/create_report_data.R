@@ -2,6 +2,11 @@
 
 `%>%` <- dplyr::`%>%`
 
+## assessmentdata::stockAssessmentSummary ----
+# problems reading this on github runner - save as .csv
+assessmentdata::stockAssessmentSummary %>% 
+  write.csv(here::here("data", "assessmentdata_stockAssessmentSummary.csv"))
+
 ## bf data ----
 bf <- assessmentdata::stockAssessmentSummary %>% 
   dplyr::filter(Jurisdiction == "NEFMC")
