@@ -17,7 +17,7 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
                               lag_var, parent_folder, trouble){
   
   new_dir <- here::here("Regressions", parent_folder, 
-                        paste(stock_var, region_var, 
+                        paste(stock_var, region_var 
                               %>% stringr::str_replace_all("/", "-"),
                              epus_var,)) %>%
     stringr::str_replace_all(" ", "_")
