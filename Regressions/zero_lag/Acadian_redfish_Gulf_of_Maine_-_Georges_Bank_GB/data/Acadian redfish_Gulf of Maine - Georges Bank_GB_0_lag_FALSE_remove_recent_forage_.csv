@@ -1,0 +1,817 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","n_data_points","pval","sig"
+"1","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",0.533827896,17,0.425289743360094,FALSE
+"2","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.704857091,17,0.357578598871253,FALSE
+"3","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.171029195,17,0.263381766865578,FALSE
+"4","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.875886286,17,0.302364482128401,FALSE
+"5","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.096192994,17,0.425289743360094,FALSE
+"6","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.201783253,17,0.357578598871253,FALSE
+"7","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.297976247,17,0.263381766865578,FALSE
+"8","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.4997595,17,0.302364482128401,FALSE
+"9","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.186198408,17,0.425289743360094,FALSE
+"10","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.111673431,17,0.357578598871253,FALSE
+"11","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.297871839,17,0.263381766865578,FALSE
+"12","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.40954527,17,0.302364482128401,FALSE
+"13","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.094194852,17,0.425289743360094,FALSE
+"14","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.149004022,17,0.357578598871253,FALSE
+"15","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.243198874,17,0.263381766865578,FALSE
+"16","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.392202896,17,0.302364482128401,FALSE
+"17","Acadian redfish","Gulf of Maine / Georges Bank",2004,520,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.748142411,17,0.425289743360094,FALSE
+"18","Acadian redfish","Gulf of Maine / Georges Bank",2004,520,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",-0.445494918,17,0.357578598871253,FALSE
+"19","Acadian redfish","Gulf of Maine / Georges Bank",2004,520,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.302647493,17,0.263381766865578,FALSE
+"20","Acadian redfish","Gulf of Maine / Georges Bank",2004,520,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",-0.142847425,17,0.302364482128401,FALSE
+"21","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.741310143,17,0.425289743360094,FALSE
+"22","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",-0.495859448,17,0.357578598871253,FALSE
+"23","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.245450695,17,0.263381766865578,FALSE
+"24","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",-0.250408753,17,0.302364482128401,FALSE
+"25","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",0.233623534,17,0.425289743360094,FALSE
+"26","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.40216264,17,0.357578598871253,FALSE
+"27","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.168539106,17,0.263381766865578,FALSE
+"28","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.570701746,17,0.302364482128401,FALSE
+"29","Acadian redfish","Gulf of Maine / Georges Bank",2007,1161,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.881587554,17,0.425289743360094,FALSE
+"30","Acadian redfish","Gulf of Maine / Georges Bank",2007,1161,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",-0.665890266,17,0.357578598871253,FALSE
+"31","Acadian redfish","Gulf of Maine / Georges Bank",2007,1161,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.215697288,17,0.263381766865578,FALSE
+"32","Acadian redfish","Gulf of Maine / Georges Bank",2007,1161,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",-0.450192978,17,0.302364482128401,FALSE
+"33","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.496438172,17,0.425289743360094,FALSE
+"34","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",-0.267350662,17,0.357578598871253,FALSE
+"35","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.22908751,17,0.263381766865578,FALSE
+"36","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",-0.038263152,17,0.302364482128401,FALSE
+"37","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.929428021,17,0.425289743360094,FALSE
+"38","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",-0.716422424,17,0.357578598871253,FALSE
+"39","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.213005597,17,0.263381766865578,FALSE
+"40","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",-0.503416827,17,0.302364482128401,FALSE
+"41","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.771826871,17,0.425289743360094,FALSE
+"42","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",-0.594838751,17,0.357578598871253,FALSE
+"43","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.17698812,17,0.263381766865578,FALSE
+"44","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",-0.417850631,17,0.302364482128401,FALSE
+"45","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-1.078522876,17,0.425289743360094,FALSE
+"46","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",-0.848000538,17,0.357578598871253,FALSE
+"47","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.230522338,17,0.263381766865578,FALSE
+"48","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",-0.6174782,17,0.302364482128401,FALSE
+"49","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.00967193900000002,17,0.425289743360094,FALSE
+"50","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.250805573,17,0.357578598871253,FALSE
+"51","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.260477512,17,0.263381766865578,FALSE
+"52","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.511283085,17,0.302364482128401,FALSE
+"53","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",0.033662538,17,0.425289743360094,FALSE
+"54","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.26228546,17,0.357578598871253,FALSE
+"55","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.228622922,17,0.263381766865578,FALSE
+"56","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.490908382,17,0.302364482128401,FALSE
+"57","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",0.194707229,17,0.425289743360094,FALSE
+"58","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.440066508,17,0.357578598871253,FALSE
+"59","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.245359279,17,0.263381766865578,FALSE
+"60","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.685425787,17,0.302364482128401,FALSE
+"61","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.194490286,17,0.425289743360094,FALSE
+"62","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.169357599,17,0.357578598871253,FALSE
+"63","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.363847885,17,0.263381766865578,FALSE
+"64","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.533205484,17,0.302364482128401,FALSE
+"65","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Lower",-0.173040096,17,0.425289743360094,FALSE
+"66","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Mean",0.071114831,17,0.357578598871253,FALSE
+"67","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_SE",0.244154927,17,0.263381766865578,FALSE
+"68","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Forage_Upper",0.315269758,17,0.302364482128401,FALSE
+"69","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",0.533827896,17,0.265880516486634,FALSE
+"70","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.704857091,17,0.220717677125181,FALSE
+"71","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.171029195,17,0.323566322408497,FALSE
+"72","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.875886286,17,0.18630652187551,FALSE
+"73","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.096192994,17,0.265880516486634,FALSE
+"74","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.201783253,17,0.220717677125181,FALSE
+"75","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.297976247,17,0.323566322408497,FALSE
+"76","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.4997595,17,0.18630652187551,FALSE
+"77","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.186198408,17,0.265880516486634,FALSE
+"78","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.111673431,17,0.220717677125181,FALSE
+"79","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.297871839,17,0.323566322408497,FALSE
+"80","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.40954527,17,0.18630652187551,FALSE
+"81","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.094194852,17,0.265880516486634,FALSE
+"82","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.149004022,17,0.220717677125181,FALSE
+"83","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.243198874,17,0.323566322408497,FALSE
+"84","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.392202896,17,0.18630652187551,FALSE
+"85","Acadian redfish","Gulf of Maine / Georges Bank",2004,0.00380999990738928,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.748142411,17,0.265880516486634,FALSE
+"86","Acadian redfish","Gulf of Maine / Georges Bank",2004,0.00380999990738928,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",-0.445494918,17,0.220717677125181,FALSE
+"87","Acadian redfish","Gulf of Maine / Georges Bank",2004,0.00380999990738928,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.302647493,17,0.323566322408497,FALSE
+"88","Acadian redfish","Gulf of Maine / Georges Bank",2004,0.00380999990738928,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",-0.142847425,17,0.18630652187551,FALSE
+"89","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.741310143,17,0.265880516486634,FALSE
+"90","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",-0.495859448,17,0.220717677125181,FALSE
+"91","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.245450695,17,0.323566322408497,FALSE
+"92","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",-0.250408753,17,0.18630652187551,FALSE
+"93","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",0.233623534,17,0.265880516486634,FALSE
+"94","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.40216264,17,0.220717677125181,FALSE
+"95","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.168539106,17,0.323566322408497,FALSE
+"96","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.570701746,17,0.18630652187551,FALSE
+"97","Acadian redfish","Gulf of Maine / Georges Bank",2007,0.00615999987348914,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.881587554,17,0.265880516486634,FALSE
+"98","Acadian redfish","Gulf of Maine / Georges Bank",2007,0.00615999987348914,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",-0.665890266,17,0.220717677125181,FALSE
+"99","Acadian redfish","Gulf of Maine / Georges Bank",2007,0.00615999987348914,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.215697288,17,0.323566322408497,FALSE
+"100","Acadian redfish","Gulf of Maine / Georges Bank",2007,0.00615999987348914,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",-0.450192978,17,0.18630652187551,FALSE
+"101","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.496438172,17,0.265880516486634,FALSE
+"102","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",-0.267350662,17,0.220717677125181,FALSE
+"103","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.22908751,17,0.323566322408497,FALSE
+"104","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",-0.038263152,17,0.18630652187551,FALSE
+"105","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.929428021,17,0.265880516486634,FALSE
+"106","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",-0.716422424,17,0.220717677125181,FALSE
+"107","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.213005597,17,0.323566322408497,FALSE
+"108","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",-0.503416827,17,0.18630652187551,FALSE
+"109","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.771826871,17,0.265880516486634,FALSE
+"110","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",-0.594838751,17,0.220717677125181,FALSE
+"111","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.17698812,17,0.323566322408497,FALSE
+"112","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",-0.417850631,17,0.18630652187551,FALSE
+"113","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-1.078522876,17,0.265880516486634,FALSE
+"114","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",-0.848000538,17,0.220717677125181,FALSE
+"115","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.230522338,17,0.323566322408497,FALSE
+"116","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",-0.6174782,17,0.18630652187551,FALSE
+"117","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.00967193900000002,17,0.265880516486634,FALSE
+"118","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.250805573,17,0.220717677125181,FALSE
+"119","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.260477512,17,0.323566322408497,FALSE
+"120","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.511283085,17,0.18630652187551,FALSE
+"121","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",0.033662538,17,0.265880516486634,FALSE
+"122","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.26228546,17,0.220717677125181,FALSE
+"123","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.228622922,17,0.323566322408497,FALSE
+"124","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.490908382,17,0.18630652187551,FALSE
+"125","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",0.194707229,17,0.265880516486634,FALSE
+"126","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.440066508,17,0.220717677125181,FALSE
+"127","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.245359279,17,0.323566322408497,FALSE
+"128","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.685425787,17,0.18630652187551,FALSE
+"129","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.194490286,17,0.265880516486634,FALSE
+"130","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.169357599,17,0.220717677125181,FALSE
+"131","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.363847885,17,0.323566322408497,FALSE
+"132","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.533205484,17,0.18630652187551,FALSE
+"133","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Lower",-0.173040096,17,0.265880516486634,FALSE
+"134","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Mean",0.071114831,17,0.220717677125181,FALSE
+"135","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_SE",0.244154927,17,0.323566322408497,FALSE
+"136","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Forage_Upper",0.315269758,17,0.18630652187551,FALSE
+"137","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",0.533827896,17,0.830490644700284,FALSE
+"138","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.704857091,17,0.801318731250379,FALSE
+"139","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.171029195,17,0.728094112759486,FALSE
+"140","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.875886286,17,0.77501915047862,FALSE
+"141","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.096192994,17,0.830490644700284,FALSE
+"142","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.201783253,17,0.801318731250379,FALSE
+"143","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.297976247,17,0.728094112759486,FALSE
+"144","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.4997595,17,0.77501915047862,FALSE
+"145","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.186198408,17,0.830490644700284,FALSE
+"146","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.111673431,17,0.801318731250379,FALSE
+"147","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.297871839,17,0.728094112759486,FALSE
+"148","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.40954527,17,0.77501915047862,FALSE
+"149","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.094194852,17,0.830490644700284,FALSE
+"150","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.149004022,17,0.801318731250379,FALSE
+"151","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.243198874,17,0.728094112759486,FALSE
+"152","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.392202896,17,0.77501915047862,FALSE
+"153","Acadian redfish","Gulf of Maine / Georges Bank",2004,44763,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.748142411,17,0.830490644700284,FALSE
+"154","Acadian redfish","Gulf of Maine / Georges Bank",2004,44763,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",-0.445494918,17,0.801318731250379,FALSE
+"155","Acadian redfish","Gulf of Maine / Georges Bank",2004,44763,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.302647493,17,0.728094112759486,FALSE
+"156","Acadian redfish","Gulf of Maine / Georges Bank",2004,44763,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",-0.142847425,17,0.77501915047862,FALSE
+"157","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.741310143,17,0.830490644700284,FALSE
+"158","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",-0.495859448,17,0.801318731250379,FALSE
+"159","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.245450695,17,0.728094112759486,FALSE
+"160","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",-0.250408753,17,0.77501915047862,FALSE
+"161","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",0.233623534,17,0.830490644700284,FALSE
+"162","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.40216264,17,0.801318731250379,FALSE
+"163","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.168539106,17,0.728094112759486,FALSE
+"164","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.570701746,17,0.77501915047862,FALSE
+"165","Acadian redfish","Gulf of Maine / Georges Bank",2007,48705,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.881587554,17,0.830490644700284,FALSE
+"166","Acadian redfish","Gulf of Maine / Georges Bank",2007,48705,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",-0.665890266,17,0.801318731250379,FALSE
+"167","Acadian redfish","Gulf of Maine / Georges Bank",2007,48705,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.215697288,17,0.728094112759486,FALSE
+"168","Acadian redfish","Gulf of Maine / Georges Bank",2007,48705,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",-0.450192978,17,0.77501915047862,FALSE
+"169","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.496438172,17,0.830490644700284,FALSE
+"170","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",-0.267350662,17,0.801318731250379,FALSE
+"171","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.22908751,17,0.728094112759486,FALSE
+"172","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",-0.038263152,17,0.77501915047862,FALSE
+"173","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.929428021,17,0.830490644700284,FALSE
+"174","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",-0.716422424,17,0.801318731250379,FALSE
+"175","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.213005597,17,0.728094112759486,FALSE
+"176","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",-0.503416827,17,0.77501915047862,FALSE
+"177","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.771826871,17,0.830490644700284,FALSE
+"178","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",-0.594838751,17,0.801318731250379,FALSE
+"179","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.17698812,17,0.728094112759486,FALSE
+"180","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",-0.417850631,17,0.77501915047862,FALSE
+"181","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-1.078522876,17,0.830490644700284,FALSE
+"182","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",-0.848000538,17,0.801318731250379,FALSE
+"183","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.230522338,17,0.728094112759486,FALSE
+"184","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",-0.6174782,17,0.77501915047862,FALSE
+"185","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.00967193900000002,17,0.830490644700284,FALSE
+"186","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.250805573,17,0.801318731250379,FALSE
+"187","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.260477512,17,0.728094112759486,FALSE
+"188","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.511283085,17,0.77501915047862,FALSE
+"189","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",0.033662538,17,0.830490644700284,FALSE
+"190","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.26228546,17,0.801318731250379,FALSE
+"191","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.228622922,17,0.728094112759486,FALSE
+"192","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.490908382,17,0.77501915047862,FALSE
+"193","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",0.194707229,17,0.830490644700284,FALSE
+"194","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.440066508,17,0.801318731250379,FALSE
+"195","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.245359279,17,0.728094112759486,FALSE
+"196","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.685425787,17,0.77501915047862,FALSE
+"197","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.194490286,17,0.830490644700284,FALSE
+"198","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.169357599,17,0.801318731250379,FALSE
+"199","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.363847885,17,0.728094112759486,FALSE
+"200","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.533205484,17,0.77501915047862,FALSE
+"201","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Lower",-0.173040096,17,0.830490644700284,FALSE
+"202","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Mean",0.071114831,17,0.801318731250379,FALSE
+"203","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_SE",0.244154927,17,0.728094112759486,FALSE
+"204","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Forage_Upper",0.315269758,17,0.77501915047862,FALSE
+"205","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",0.533827896,17,0.955314785031228,FALSE
+"206","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.704857091,17,0.984968314498871,FALSE
+"207","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.171029195,17,0.487284986172729,FALSE
+"208","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.875886286,17,0.926307300557827,FALSE
+"209","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.096192994,17,0.955314785031228,FALSE
+"210","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.201783253,17,0.984968314498871,FALSE
+"211","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.297976247,17,0.487284986172729,FALSE
+"212","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.4997595,17,0.926307300557827,FALSE
+"213","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.186198408,17,0.955314785031228,FALSE
+"214","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.111673431,17,0.984968314498871,FALSE
+"215","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.297871839,17,0.487284986172729,FALSE
+"216","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.40954527,17,0.926307300557827,FALSE
+"217","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.094194852,17,0.955314785031228,FALSE
+"218","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.149004022,17,0.984968314498871,FALSE
+"219","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.243198874,17,0.487284986172729,FALSE
+"220","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.392202896,17,0.926307300557827,FALSE
+"221","Acadian redfish","Gulf of Maine / Georges Bank",2004,141485,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.748142411,17,0.955314785031228,FALSE
+"222","Acadian redfish","Gulf of Maine / Georges Bank",2004,141485,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",-0.445494918,17,0.984968314498871,FALSE
+"223","Acadian redfish","Gulf of Maine / Georges Bank",2004,141485,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.302647493,17,0.487284986172729,FALSE
+"224","Acadian redfish","Gulf of Maine / Georges Bank",2004,141485,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",-0.142847425,17,0.926307300557827,FALSE
+"225","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.741310143,17,0.955314785031228,FALSE
+"226","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",-0.495859448,17,0.984968314498871,FALSE
+"227","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.245450695,17,0.487284986172729,FALSE
+"228","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",-0.250408753,17,0.926307300557827,FALSE
+"229","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",0.233623534,17,0.955314785031228,FALSE
+"230","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.40216264,17,0.984968314498871,FALSE
+"231","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.168539106,17,0.487284986172729,FALSE
+"232","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.570701746,17,0.926307300557827,FALSE
+"233","Acadian redfish","Gulf of Maine / Georges Bank",2007,195269,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.881587554,17,0.955314785031228,FALSE
+"234","Acadian redfish","Gulf of Maine / Georges Bank",2007,195269,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",-0.665890266,17,0.984968314498871,FALSE
+"235","Acadian redfish","Gulf of Maine / Georges Bank",2007,195269,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.215697288,17,0.487284986172729,FALSE
+"236","Acadian redfish","Gulf of Maine / Georges Bank",2007,195269,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",-0.450192978,17,0.926307300557827,FALSE
+"237","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.496438172,17,0.955314785031228,FALSE
+"238","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",-0.267350662,17,0.984968314498871,FALSE
+"239","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.22908751,17,0.487284986172729,FALSE
+"240","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",-0.038263152,17,0.926307300557827,FALSE
+"241","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.929428021,17,0.955314785031228,FALSE
+"242","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",-0.716422424,17,0.984968314498871,FALSE
+"243","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.213005597,17,0.487284986172729,FALSE
+"244","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",-0.503416827,17,0.926307300557827,FALSE
+"245","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.771826871,17,0.955314785031228,FALSE
+"246","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",-0.594838751,17,0.984968314498871,FALSE
+"247","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.17698812,17,0.487284986172729,FALSE
+"248","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",-0.417850631,17,0.926307300557827,FALSE
+"249","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-1.078522876,17,0.955314785031228,FALSE
+"250","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",-0.848000538,17,0.984968314498871,FALSE
+"251","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.230522338,17,0.487284986172729,FALSE
+"252","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",-0.6174782,17,0.926307300557827,FALSE
+"253","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.00967193900000002,17,0.955314785031228,FALSE
+"254","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.250805573,17,0.984968314498871,FALSE
+"255","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.260477512,17,0.487284986172729,FALSE
+"256","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.511283085,17,0.926307300557827,FALSE
+"257","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",0.033662538,17,0.955314785031228,FALSE
+"258","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.26228546,17,0.984968314498871,FALSE
+"259","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.228622922,17,0.487284986172729,FALSE
+"260","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.490908382,17,0.926307300557827,FALSE
+"261","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",0.194707229,17,0.955314785031228,FALSE
+"262","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.440066508,17,0.984968314498871,FALSE
+"263","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.245359279,17,0.487284986172729,FALSE
+"264","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.685425787,17,0.926307300557827,FALSE
+"265","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.194490286,17,0.955314785031228,FALSE
+"266","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.169357599,17,0.984968314498871,FALSE
+"267","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.363847885,17,0.487284986172729,FALSE
+"268","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.533205484,17,0.926307300557827,FALSE
+"269","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Lower",-0.173040096,17,0.955314785031228,FALSE
+"270","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Mean",0.071114831,17,0.984968314498871,FALSE
+"271","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_SE",0.244154927,17,0.487284986172729,FALSE
+"272","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Forage_Upper",0.315269758,17,0.926307300557827,FALSE

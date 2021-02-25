@@ -1,0 +1,289 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","n_data_points","pval","sig"
+"1","Acadian redfish","Gulf of Maine / Georges Bank",1999,381,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.953180798659644,18,0.308835906292118,FALSE
+"2","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.71863848483189,18,0.308835906292118,FALSE
+"3","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.009948965157,18,0.308835906292118,FALSE
+"4","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.86712329301817,18,0.308835906292118,FALSE
+"5","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.21907131819378,18,0.308835906292118,FALSE
+"6","Acadian redfish","Gulf of Maine / Georges Bank",2004,520,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.58523211889477,18,0.308835906292118,FALSE
+"7","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.83781990475627,18,0.308835906292118,FALSE
+"8","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.27366077349293,18,0.308835906292118,FALSE
+"9","Acadian redfish","Gulf of Maine / Georges Bank",2007,1161,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.801855719503973,18,0.308835906292118,FALSE
+"10","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.781633876982596,18,0.308835906292118,FALSE
+"11","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.03189819099219,18,0.308835906292118,FALSE
+"12","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.09488328906268,18,0.308835906292118,FALSE
+"13","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.75879953013591,18,0.308835906292118,FALSE
+"14","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.29527884711721,18,0.308835906292118,FALSE
+"15","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.99741036996856,18,0.308835906292118,FALSE
+"16","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.5535218818855,18,0.308835906292118,FALSE
+"17","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.05756664411827,18,0.308835906292118,FALSE
+"18","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.07657227799915,18,0.308835906292118,FALSE
+"19","Acadian redfish","Gulf of Maine / Georges Bank",1999,0.00632000016048551,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.953180798659644,18,0.382286642014095,FALSE
+"20","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.71863848483189,18,0.382286642014095,FALSE
+"21","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.009948965157,18,0.382286642014095,FALSE
+"22","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.86712329301817,18,0.382286642014095,FALSE
+"23","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.21907131819378,18,0.382286642014095,FALSE
+"24","Acadian redfish","Gulf of Maine / Georges Bank",2004,0.00380999990738928,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.58523211889477,18,0.382286642014095,FALSE
+"25","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.83781990475627,18,0.382286642014095,FALSE
+"26","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.27366077349293,18,0.382286642014095,FALSE
+"27","Acadian redfish","Gulf of Maine / Georges Bank",2007,0.00615999987348914,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.801855719503973,18,0.382286642014095,FALSE
+"28","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.781633876982596,18,0.382286642014095,FALSE
+"29","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.03189819099219,18,0.382286642014095,FALSE
+"30","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.09488328906268,18,0.382286642014095,FALSE
+"31","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.75879953013591,18,0.382286642014095,FALSE
+"32","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.29527884711721,18,0.382286642014095,FALSE
+"33","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.99741036996856,18,0.382286642014095,FALSE
+"34","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.5535218818855,18,0.382286642014095,FALSE
+"35","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.05756664411827,18,0.382286642014095,FALSE
+"36","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.07657227799915,18,0.382286642014095,FALSE
+"37","Acadian redfish","Gulf of Maine / Georges Bank",1999,48525,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.953180798659644,18,0.100229067780772,FALSE
+"38","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.71863848483189,18,0.100229067780772,FALSE
+"39","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.009948965157,18,0.100229067780772,FALSE
+"40","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.86712329301817,18,0.100229067780772,FALSE
+"41","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.21907131819378,18,0.100229067780772,FALSE
+"42","Acadian redfish","Gulf of Maine / Georges Bank",2004,44763,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.58523211889477,18,0.100229067780772,FALSE
+"43","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.83781990475627,18,0.100229067780772,FALSE
+"44","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.27366077349293,18,0.100229067780772,FALSE
+"45","Acadian redfish","Gulf of Maine / Georges Bank",2007,48705,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.801855719503973,18,0.100229067780772,FALSE
+"46","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.781633876982596,18,0.100229067780772,FALSE
+"47","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.03189819099219,18,0.100229067780772,FALSE
+"48","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.09488328906268,18,0.100229067780772,FALSE
+"49","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.75879953013591,18,0.100229067780772,FALSE
+"50","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.29527884711721,18,0.100229067780772,FALSE
+"51","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.99741036996856,18,0.100229067780772,FALSE
+"52","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.5535218818855,18,0.100229067780772,FALSE
+"53","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.05756664411827,18,0.100229067780772,FALSE
+"54","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.07657227799915,18,0.100229067780772,FALSE
+"55","Acadian redfish","Gulf of Maine / Georges Bank",1999,66552,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.953180798659644,18,0.314870993498826,FALSE
+"56","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.71863848483189,18,0.314870993498826,FALSE
+"57","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.009948965157,18,0.314870993498826,FALSE
+"58","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.86712329301817,18,0.314870993498826,FALSE
+"59","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.21907131819378,18,0.314870993498826,FALSE
+"60","Acadian redfish","Gulf of Maine / Georges Bank",2004,141485,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.58523211889477,18,0.314870993498826,FALSE
+"61","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.83781990475627,18,0.314870993498826,FALSE
+"62","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.27366077349293,18,0.314870993498826,FALSE
+"63","Acadian redfish","Gulf of Maine / Georges Bank",2007,195269,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.801855719503973,18,0.314870993498826,FALSE
+"64","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",0.781633876982596,18,0.314870993498826,FALSE
+"65","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.03189819099219,18,0.314870993498826,FALSE
+"66","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.09488328906268,18,0.314870993498826,FALSE
+"67","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.75879953013591,18,0.314870993498826,FALSE
+"68","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.29527884711721,18,0.314870993498826,FALSE
+"69","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.99741036996856,18,0.314870993498826,FALSE
+"70","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.5535218818855,18,0.314870993498826,FALSE
+"71","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.05756664411827,18,0.314870993498826,FALSE
+"72","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.07657227799915,18,0.314870993498826,FALSE

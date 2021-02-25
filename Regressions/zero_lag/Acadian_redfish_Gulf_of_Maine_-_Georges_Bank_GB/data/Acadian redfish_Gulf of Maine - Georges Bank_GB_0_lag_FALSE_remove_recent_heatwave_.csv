@@ -1,0 +1,801 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","n_data_points","pval","sig"
+"1","Acadian redfish","Gulf of Maine / Georges Bank",1982,6907,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",20.9661,25,0.105809651064213,FALSE
+"2","Acadian redfish","Gulf of Maine / Georges Bank",1982,6907,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",1.78255,25,0.327448276432816,FALSE
+"3","Acadian redfish","Gulf of Maine / Georges Bank",1983,5330,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",127.3947,25,0.105809651064213,FALSE
+"4","Acadian redfish","Gulf of Maine / Georges Bank",1983,5330,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",1.99868,25,0.327448276432816,FALSE
+"5","Acadian redfish","Gulf of Maine / Georges Bank",1984,4793,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",35.172,25,0.105809651064213,FALSE
+"6","Acadian redfish","Gulf of Maine / Georges Bank",1984,4793,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.07756666666667,25,0.327448276432816,FALSE
+"7","Acadian redfish","Gulf of Maine / Georges Bank",1986,3053,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",15.7494,25,0.105809651064213,FALSE
+"8","Acadian redfish","Gulf of Maine / Georges Bank",1986,3053,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.1445,25,0.327448276432816,FALSE
+"9","Acadian redfish","Gulf of Maine / Georges Bank",1988,1157,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",12.3242,25,0.105809651064213,FALSE
+"10","Acadian redfish","Gulf of Maine / Georges Bank",1988,1157,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.0313,25,0.327448276432816,FALSE
+"11","Acadian redfish","Gulf of Maine / Georges Bank",1990,640,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",132.235,25,0.105809651064213,FALSE
+"12","Acadian redfish","Gulf of Maine / Georges Bank",1990,640,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",3.0464,25,0.327448276432816,FALSE
+"13","Acadian redfish","Gulf of Maine / Georges Bank",1991,2029,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",21.8238,25,0.105809651064213,FALSE
+"14","Acadian redfish","Gulf of Maine / Georges Bank",1991,2029,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",1.95535,25,0.327448276432816,FALSE
+"15","Acadian redfish","Gulf of Maine / Georges Bank",1994,536,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",98.4357,25,0.105809651064213,FALSE
+"16","Acadian redfish","Gulf of Maine / Georges Bank",1994,536,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",3.4025,25,0.327448276432816,FALSE
+"17","Acadian redfish","Gulf of Maine / Georges Bank",1995,643,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",26.466,25,0.105809651064213,FALSE
+"18","Acadian redfish","Gulf of Maine / Georges Bank",1995,643,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.00555,25,0.327448276432816,FALSE
+"19","Acadian redfish","Gulf of Maine / Georges Bank",1999,381,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",166.237,25,0.105809651064213,FALSE
+"20","Acadian redfish","Gulf of Maine / Georges Bank",1999,381,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.21288333333333,25,0.327448276432816,FALSE
+"21","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",39.2719,25,0.105809651064213,FALSE
+"22","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",1.91765,25,0.327448276432816,FALSE
+"23","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",71.2032,25,0.105809651064213,FALSE
+"24","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.281425,25,0.327448276432816,FALSE
+"25","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",131.6083,25,0.105809651064213,FALSE
+"26","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",1.95994,25,0.327448276432816,FALSE
+"27","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",21.9146,25,0.105809651064213,FALSE
+"28","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",1.7622,25,0.327448276432816,FALSE
+"29","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",71.3651,25,0.105809651064213,FALSE
+"30","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.83555,25,0.327448276432816,FALSE
+"31","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",105.9147,25,0.105809651064213,FALSE
+"32","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.33813333333333,25,0.327448276432816,FALSE
+"33","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",18.5302,25,0.105809651064213,FALSE
+"34","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.0844,25,0.327448276432816,FALSE
+"35","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",104.0666,25,0.105809651064213,FALSE
+"36","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",3.2186,25,0.327448276432816,FALSE
+"37","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",76.535,25,0.105809651064213,FALSE
+"38","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.0492,25,0.327448276432816,FALSE
+"39","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",131.7931,25,0.105809651064213,FALSE
+"40","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.2676,25,0.327448276432816,FALSE
+"41","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",564.295,25,0.105809651064213,FALSE
+"42","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.66318333333333,25,0.327448276432816,FALSE
+"43","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",185.8695,25,0.105809651064213,FALSE
+"44","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.35898,25,0.327448276432816,FALSE
+"45","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",129.855,25,0.105809651064213,FALSE
+"46","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.14242,25,0.327448276432816,FALSE
+"47","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",334.2595,25,0.105809651064213,FALSE
+"48","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.55612857142857,25,0.327448276432816,FALSE
+"49","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","cumulative intensity
+degrees C",297.3019,25,0.105809651064213,FALSE
+"50","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","maximum intensity
+degrees C",2.15737142857143,25,0.327448276432816,FALSE
+"51","Acadian redfish","Gulf of Maine / Georges Bank",1982,0.231720000505447,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",20.9661,25,0.158549132655114,FALSE
+"52","Acadian redfish","Gulf of Maine / Georges Bank",1982,0.231720000505447,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",1.78255,25,0.14153701306032,FALSE
+"53","Acadian redfish","Gulf of Maine / Georges Bank",1983,0.215130001306534,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",127.3947,25,0.158549132655114,FALSE
+"54","Acadian redfish","Gulf of Maine / Georges Bank",1983,0.215130001306534,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",1.99868,25,0.14153701306032,FALSE
+"55","Acadian redfish","Gulf of Maine / Georges Bank",1984,0.222350001335144,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",35.172,25,0.158549132655114,FALSE
+"56","Acadian redfish","Gulf of Maine / Georges Bank",1984,0.222350001335144,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.07756666666667,25,0.14153701306032,FALSE
+"57","Acadian redfish","Gulf of Maine / Georges Bank",1986,0.187769994139671,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",15.7494,25,0.158549132655114,FALSE
+"58","Acadian redfish","Gulf of Maine / Georges Bank",1986,0.187769994139671,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.1445,25,0.14153701306032,FALSE
+"59","Acadian redfish","Gulf of Maine / Georges Bank",1988,0.0699400007724762,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",12.3242,25,0.158549132655114,FALSE
+"60","Acadian redfish","Gulf of Maine / Georges Bank",1988,0.0699400007724762,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.0313,25,0.14153701306032,FALSE
+"61","Acadian redfish","Gulf of Maine / Georges Bank",1990,0.033950001001358,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",132.235,25,0.158549132655114,FALSE
+"62","Acadian redfish","Gulf of Maine / Georges Bank",1990,0.033950001001358,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",3.0464,25,0.14153701306032,FALSE
+"63","Acadian redfish","Gulf of Maine / Georges Bank",1991,0.567820012569427,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",21.8238,25,0.158549132655114,FALSE
+"64","Acadian redfish","Gulf of Maine / Georges Bank",1991,0.567820012569427,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",1.95535,25,0.14153701306032,FALSE
+"65","Acadian redfish","Gulf of Maine / Georges Bank",1994,0.0306000001728535,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",98.4357,25,0.158549132655114,FALSE
+"66","Acadian redfish","Gulf of Maine / Georges Bank",1994,0.0306000001728535,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",3.4025,25,0.14153701306032,FALSE
+"67","Acadian redfish","Gulf of Maine / Georges Bank",1995,0.028379999101162,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",26.466,25,0.158549132655114,FALSE
+"68","Acadian redfish","Gulf of Maine / Georges Bank",1995,0.028379999101162,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.00555,25,0.14153701306032,FALSE
+"69","Acadian redfish","Gulf of Maine / Georges Bank",1999,0.00632000016048551,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",166.237,25,0.158549132655114,FALSE
+"70","Acadian redfish","Gulf of Maine / Georges Bank",1999,0.00632000016048551,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.21288333333333,25,0.14153701306032,FALSE
+"71","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",39.2719,25,0.158549132655114,FALSE
+"72","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",1.91765,25,0.14153701306032,FALSE
+"73","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",71.2032,25,0.158549132655114,FALSE
+"74","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.281425,25,0.14153701306032,FALSE
+"75","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",131.6083,25,0.158549132655114,FALSE
+"76","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",1.95994,25,0.14153701306032,FALSE
+"77","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",21.9146,25,0.158549132655114,FALSE
+"78","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",1.7622,25,0.14153701306032,FALSE
+"79","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",71.3651,25,0.158549132655114,FALSE
+"80","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.83555,25,0.14153701306032,FALSE
+"81","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",105.9147,25,0.158549132655114,FALSE
+"82","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.33813333333333,25,0.14153701306032,FALSE
+"83","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",18.5302,25,0.158549132655114,FALSE
+"84","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.0844,25,0.14153701306032,FALSE
+"85","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",104.0666,25,0.158549132655114,FALSE
+"86","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",3.2186,25,0.14153701306032,FALSE
+"87","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",76.535,25,0.158549132655114,FALSE
+"88","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.0492,25,0.14153701306032,FALSE
+"89","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",131.7931,25,0.158549132655114,FALSE
+"90","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.2676,25,0.14153701306032,FALSE
+"91","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",564.295,25,0.158549132655114,FALSE
+"92","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.66318333333333,25,0.14153701306032,FALSE
+"93","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",185.8695,25,0.158549132655114,FALSE
+"94","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.35898,25,0.14153701306032,FALSE
+"95","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",129.855,25,0.158549132655114,FALSE
+"96","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.14242,25,0.14153701306032,FALSE
+"97","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",334.2595,25,0.158549132655114,FALSE
+"98","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.55612857142857,25,0.14153701306032,FALSE
+"99","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","cumulative intensity
+degrees C",297.3019,25,0.158549132655114,FALSE
+"100","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","maximum intensity
+degrees C",2.15737142857143,25,0.14153701306032,FALSE
+"101","Acadian redfish","Gulf of Maine / Georges Bank",1982,9254,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",20.9661,25,0.942652773807073,FALSE
+"102","Acadian redfish","Gulf of Maine / Georges Bank",1982,9254,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",1.78255,25,0.498087545646319,FALSE
+"103","Acadian redfish","Gulf of Maine / Georges Bank",1983,12056,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",127.3947,25,0.942652773807073,FALSE
+"104","Acadian redfish","Gulf of Maine / Georges Bank",1983,12056,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",1.99868,25,0.498087545646319,FALSE
+"105","Acadian redfish","Gulf of Maine / Georges Bank",1984,3699,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",35.172,25,0.942652773807073,FALSE
+"106","Acadian redfish","Gulf of Maine / Georges Bank",1984,3699,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.07756666666667,25,0.498087545646319,FALSE
+"107","Acadian redfish","Gulf of Maine / Georges Bank",1986,17332,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",15.7494,25,0.942652773807073,FALSE
+"108","Acadian redfish","Gulf of Maine / Georges Bank",1986,17332,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.1445,25,0.498087545646319,FALSE
+"109","Acadian redfish","Gulf of Maine / Georges Bank",1988,10926,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",12.3242,25,0.942652773807073,FALSE
+"110","Acadian redfish","Gulf of Maine / Georges Bank",1988,10926,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.0313,25,0.498087545646319,FALSE
+"111","Acadian redfish","Gulf of Maine / Georges Bank",1990,12789,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",132.235,25,0.942652773807073,FALSE
+"112","Acadian redfish","Gulf of Maine / Georges Bank",1990,12789,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",3.0464,25,0.498087545646319,FALSE
+"113","Acadian redfish","Gulf of Maine / Georges Bank",1991,15716,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",21.8238,25,0.942652773807073,FALSE
+"114","Acadian redfish","Gulf of Maine / Georges Bank",1991,15716,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",1.95535,25,0.498087545646319,FALSE
+"115","Acadian redfish","Gulf of Maine / Georges Bank",1994,38445,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",98.4357,25,0.942652773807073,FALSE
+"116","Acadian redfish","Gulf of Maine / Georges Bank",1994,38445,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",3.4025,25,0.498087545646319,FALSE
+"117","Acadian redfish","Gulf of Maine / Georges Bank",1995,42597,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",26.466,25,0.942652773807073,FALSE
+"118","Acadian redfish","Gulf of Maine / Georges Bank",1995,42597,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.00555,25,0.498087545646319,FALSE
+"119","Acadian redfish","Gulf of Maine / Georges Bank",1999,48525,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",166.237,25,0.942652773807073,FALSE
+"120","Acadian redfish","Gulf of Maine / Georges Bank",1999,48525,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.21288333333333,25,0.498087545646319,FALSE
+"121","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",39.2719,25,0.942652773807073,FALSE
+"122","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",1.91765,25,0.498087545646319,FALSE
+"123","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",71.2032,25,0.942652773807073,FALSE
+"124","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.281425,25,0.498087545646319,FALSE
+"125","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",131.6083,25,0.942652773807073,FALSE
+"126","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",1.95994,25,0.498087545646319,FALSE
+"127","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",21.9146,25,0.942652773807073,FALSE
+"128","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",1.7622,25,0.498087545646319,FALSE
+"129","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",71.3651,25,0.942652773807073,FALSE
+"130","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.83555,25,0.498087545646319,FALSE
+"131","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",105.9147,25,0.942652773807073,FALSE
+"132","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.33813333333333,25,0.498087545646319,FALSE
+"133","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",18.5302,25,0.942652773807073,FALSE
+"134","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.0844,25,0.498087545646319,FALSE
+"135","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",104.0666,25,0.942652773807073,FALSE
+"136","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",3.2186,25,0.498087545646319,FALSE
+"137","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",76.535,25,0.942652773807073,FALSE
+"138","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.0492,25,0.498087545646319,FALSE
+"139","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",131.7931,25,0.942652773807073,FALSE
+"140","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.2676,25,0.498087545646319,FALSE
+"141","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",564.295,25,0.942652773807073,FALSE
+"142","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.66318333333333,25,0.498087545646319,FALSE
+"143","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",185.8695,25,0.942652773807073,FALSE
+"144","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.35898,25,0.498087545646319,FALSE
+"145","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",129.855,25,0.942652773807073,FALSE
+"146","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.14242,25,0.498087545646319,FALSE
+"147","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",334.2595,25,0.942652773807073,FALSE
+"148","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.55612857142857,25,0.498087545646319,FALSE
+"149","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","cumulative intensity
+degrees C",297.3019,25,0.942652773807073,FALSE
+"150","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","maximum intensity
+degrees C",2.15737142857143,25,0.498087545646319,FALSE
+"151","Acadian redfish","Gulf of Maine / Georges Bank",1982,30563,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",20.9661,25,0.00090542250510633,TRUE
+"152","Acadian redfish","Gulf of Maine / Georges Bank",1982,30563,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",1.78255,25,0.497316867721776,FALSE
+"153","Acadian redfish","Gulf of Maine / Georges Bank",1983,25991,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",127.3947,25,0.00090542250510633,TRUE
+"154","Acadian redfish","Gulf of Maine / Georges Bank",1983,25991,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",1.99868,25,0.497316867721776,FALSE
+"155","Acadian redfish","Gulf of Maine / Georges Bank",1984,22553,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",35.172,25,0.00090542250510633,TRUE
+"156","Acadian redfish","Gulf of Maine / Georges Bank",1984,22553,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.07756666666667,25,0.497316867721776,FALSE
+"157","Acadian redfish","Gulf of Maine / Georges Bank",1986,17701,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",15.7494,25,0.00090542250510633,TRUE
+"158","Acadian redfish","Gulf of Maine / Georges Bank",1986,17701,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.1445,25,0.497316867721776,FALSE
+"159","Acadian redfish","Gulf of Maine / Georges Bank",1988,17299,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",12.3242,25,0.00090542250510633,TRUE
+"160","Acadian redfish","Gulf of Maine / Georges Bank",1988,17299,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.0313,25,0.497316867721776,FALSE
+"161","Acadian redfish","Gulf of Maine / Georges Bank",1990,20337,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",132.235,25,0.00090542250510633,TRUE
+"162","Acadian redfish","Gulf of Maine / Georges Bank",1990,20337,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",3.0464,25,0.497316867721776,FALSE
+"163","Acadian redfish","Gulf of Maine / Georges Bank",1991,18744,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",21.8238,25,0.00090542250510633,TRUE
+"164","Acadian redfish","Gulf of Maine / Georges Bank",1991,18744,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",1.95535,25,0.497316867721776,FALSE
+"165","Acadian redfish","Gulf of Maine / Georges Bank",1994,22086,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",98.4357,25,0.00090542250510633,TRUE
+"166","Acadian redfish","Gulf of Maine / Georges Bank",1994,22086,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",3.4025,25,0.497316867721776,FALSE
+"167","Acadian redfish","Gulf of Maine / Georges Bank",1995,27050,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",26.466,25,0.00090542250510633,TRUE
+"168","Acadian redfish","Gulf of Maine / Georges Bank",1995,27050,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.00555,25,0.497316867721776,FALSE
+"169","Acadian redfish","Gulf of Maine / Georges Bank",1999,66552,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",166.237,25,0.00090542250510633,TRUE
+"170","Acadian redfish","Gulf of Maine / Georges Bank",1999,66552,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.21288333333333,25,0.497316867721776,FALSE
+"171","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",39.2719,25,0.00090542250510633,TRUE
+"172","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",1.91765,25,0.497316867721776,FALSE
+"173","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",71.2032,25,0.00090542250510633,TRUE
+"174","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.281425,25,0.497316867721776,FALSE
+"175","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",131.6083,25,0.00090542250510633,TRUE
+"176","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",1.95994,25,0.497316867721776,FALSE
+"177","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",21.9146,25,0.00090542250510633,TRUE
+"178","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",1.7622,25,0.497316867721776,FALSE
+"179","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",71.3651,25,0.00090542250510633,TRUE
+"180","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.83555,25,0.497316867721776,FALSE
+"181","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",105.9147,25,0.00090542250510633,TRUE
+"182","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.33813333333333,25,0.497316867721776,FALSE
+"183","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",18.5302,25,0.00090542250510633,TRUE
+"184","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.0844,25,0.497316867721776,FALSE
+"185","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",104.0666,25,0.00090542250510633,TRUE
+"186","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",3.2186,25,0.497316867721776,FALSE
+"187","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",76.535,25,0.00090542250510633,TRUE
+"188","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.0492,25,0.497316867721776,FALSE
+"189","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",131.7931,25,0.00090542250510633,TRUE
+"190","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.2676,25,0.497316867721776,FALSE
+"191","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",564.295,25,0.00090542250510633,TRUE
+"192","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.66318333333333,25,0.497316867721776,FALSE
+"193","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",185.8695,25,0.00090542250510633,TRUE
+"194","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.35898,25,0.497316867721776,FALSE
+"195","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",129.855,25,0.00090542250510633,TRUE
+"196","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.14242,25,0.497316867721776,FALSE
+"197","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",334.2595,25,0.00090542250510633,TRUE
+"198","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.55612857142857,25,0.497316867721776,FALSE
+"199","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","cumulative intensity
+degrees C",297.3019,25,0.00090542250510633,TRUE
+"200","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","maximum intensity
+degrees C",2.15737142857143,25,0.497316867721776,FALSE

@@ -61,7 +61,9 @@ if(nrow(data) > 0){
   write.csv(data, paste("data/", file_name, sep = ""))
             #file = paste("data/", file_name, sep = ""))
 }
+```
 
+```{r}
 names <- names[-1]
 ```
 #### Figures {-}
