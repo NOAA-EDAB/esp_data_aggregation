@@ -86,8 +86,7 @@ render_reg_report <- function(stock_var, epus_var, region_var, remove_var,
               sep = ": "))
 }
 
-for(i in 1 #:nrow(info)
-    #1:nrow(info)
+for(i in 1:nrow(info)
     ){
   # make 0 lag reports
   render_reg_report(stock_var = info[i, 1], 
@@ -95,7 +94,7 @@ for(i in 1 #:nrow(info)
                     region_var = info[i, 2],
                     lag_var = 0,
                     remove_var = FALSE,
-                    save_var = FALSE,
+                    save_var = TRUE,
                     parent_folder = "zero_lag",
                     trouble = TRUE)
   
