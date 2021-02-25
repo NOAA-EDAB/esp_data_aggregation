@@ -34,7 +34,7 @@ data_prep <- function(stock_data, eco_data, lag_data){
                   sig = NA)
   
   data <- rbind(data_model, data_no_model)
-  
+
   return(data)
 }
 
@@ -73,7 +73,7 @@ plot_correlation <- function(stock, eco, lag){
     
     return(fig)
   } else print("No data under conditions selected")
-  
+
 }
 
 correlation_data <- function(stock, eco, lag){

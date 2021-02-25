@@ -1,7 +1,7 @@
 ## Adult indicators
 
 ### Abundance
-```{r, ssb}
+```{r, abundance}
 test <- stock %>%
   dplyr::filter(Metric == "Abundance") %>%
   dplyr::rename(Var = Metric,

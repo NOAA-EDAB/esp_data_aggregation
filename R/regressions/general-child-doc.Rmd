@@ -45,6 +45,25 @@ output <- rbind(output, correlation_summary(stock = stock,
                                             lag = params$lag))
 ```
 
+```{r, eval = params$save & eval_epu}
+data <- data_prep(stock = stock, 
+                  eco = test, 
+                  lag = params$lag)
+
+if(nrow(data) > 0){
+  file_name <- paste(params$stock, params$region, params$epu[1], 
+          params$lag, "lag", 
+          params$remove_recent, "remove_recent", names[1],
+          ".csv", 
+          sep = "_") %>%
+    stringr::str_replace_all("/", "-")
+ # print(file_name)
+  write.csv(data, paste("data/", file_name, sep = ""))
+            #file = paste("data/", file_name, sep = ""))
+}
+
+names <- names[-1]
+```
 #### Figures {-}
 ```{r, fig.height = 10, eval = eval_epu}
 plot_correlation(stock = stock, 

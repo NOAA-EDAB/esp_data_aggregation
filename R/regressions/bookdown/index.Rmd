@@ -16,6 +16,7 @@ params:
   epu: MAB # epu options: GB, GOM, MAB, SS, All, OTHER, MA, NE, all 
   region: "" # the stock region
   path: "" # figure path
+  save: FALSE
 ---
 
 ```{r setup, include = FALSE}
@@ -71,6 +72,11 @@ EPU: `r params$epu`
 
 ```{r, fail_message, eval = nrow(stock) == 0}
 print("Warning! There are no data on this stock under the conditions selected.")
+```
+
+```{r, chunks}
+names <- knitr::all_labels()
+names <- names[-c(1:4)]
 ```
 
 # Introduction

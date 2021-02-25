@@ -1,0 +1,2129 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","n_data_points","pval","sig"
+"1","Acadian redfish","Gulf of Maine / Georges Bank",1998,512,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7845918,19,0.00218313545965242,TRUE
+"2","Acadian redfish","Gulf of Maine / Georges Bank",1998,512,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.8939658,19,0.00103562620005182,TRUE
+"3","Acadian redfish","Gulf of Maine / Georges Bank",1998,512,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.493206,19,0.00265602806903727,TRUE
+"4","Acadian redfish","Gulf of Maine / Georges Bank",1998,512,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.854261,19,0.000460976238839582,TRUE
+"5","Acadian redfish","Gulf of Maine / Georges Bank",1999,381,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9437211,19,0.00218313545965242,TRUE
+"6","Acadian redfish","Gulf of Maine / Georges Bank",1999,381,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9519943,19,0.00103562620005182,TRUE
+"7","Acadian redfish","Gulf of Maine / Georges Bank",1999,381,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6019174,19,0.00265602806903727,TRUE
+"8","Acadian redfish","Gulf of Maine / Georges Bank",1999,381,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9831684,19,0.000460976238839582,TRUE
+"9","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8976262,19,0.00218313545965242,TRUE
+"10","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.017091,19,0.00103562620005182,TRUE
+"11","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5789552,19,0.00265602806903727,TRUE
+"12","Acadian redfish","Gulf of Maine / Georges Bank",2000,480,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9936851,19,0.000460976238839582,TRUE
+"13","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8774717,19,0.00218313545965242,TRUE
+"14","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9477208,19,0.00103562620005182,TRUE
+"15","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5574921,19,0.00265602806903727,TRUE
+"16","Acadian redfish","Gulf of Maine / Georges Bank",2001,718,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9447936,19,0.000460976238839582,TRUE
+"17","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9491921,19,0.00218313545965242,TRUE
+"18","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.012982,19,0.00103562620005182,TRUE
+"19","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6211522,19,0.00265602806903727,TRUE
+"20","Acadian redfish","Gulf of Maine / Georges Bank",2002,499,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.040084,19,0.000460976238839582,TRUE
+"21","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8486903,19,0.00218313545965242,TRUE
+"22","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9485765,19,0.00103562620005182,TRUE
+"23","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5502286,19,0.00265602806903727,TRUE
+"24","Acadian redfish","Gulf of Maine / Georges Bank",2003,568,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9492807,19,0.000460976238839582,TRUE
+"25","Acadian redfish","Gulf of Maine / Georges Bank",2004,520,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9188196,19,0.00218313545965242,TRUE
+"26","Acadian redfish","Gulf of Maine / Georges Bank",2004,520,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9715839,19,0.00103562620005182,TRUE
+"27","Acadian redfish","Gulf of Maine / Georges Bank",2004,520,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5570679,19,0.00265602806903727,TRUE
+"28","Acadian redfish","Gulf of Maine / Georges Bank",2004,520,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9438635,19,0.000460976238839582,TRUE
+"29","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.82784,19,0.00218313545965242,TRUE
+"30","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9380816,19,0.00103562620005182,TRUE
+"31","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5267776,19,0.00265602806903727,TRUE
+"32","Acadian redfish","Gulf of Maine / Georges Bank",2005,662,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9281185,19,0.000460976238839582,TRUE
+"33","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9455219,19,0.00218313545965242,TRUE
+"34","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.061374,19,0.00103562620005182,TRUE
+"35","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6131746,19,0.00265602806903727,TRUE
+"36","Acadian redfish","Gulf of Maine / Georges Bank",2006,657,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.069632,19,0.000460976238839582,TRUE
+"37","Acadian redfish","Gulf of Maine / Georges Bank",2007,1161,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9776354,19,0.00218313545965242,TRUE
+"38","Acadian redfish","Gulf of Maine / Georges Bank",2007,1161,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.071815,19,0.00103562620005182,TRUE
+"39","Acadian redfish","Gulf of Maine / Georges Bank",2007,1161,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5972726,19,0.00265602806903727,TRUE
+"40","Acadian redfish","Gulf of Maine / Georges Bank",2007,1161,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.015984,19,0.000460976238839582,TRUE
+"41","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8929299,19,0.00218313545965242,TRUE
+"42","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.009114,19,0.00103562620005182,TRUE
+"43","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5540928,19,0.00265602806903727,TRUE
+"44","Acadian redfish","Gulf of Maine / Georges Bank",2008,1373,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9590678,19,0.000460976238839582,TRUE
+"45","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.987779,19,0.00218313545965242,TRUE
+"46","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.041496,19,0.00103562620005182,TRUE
+"47","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5798724,19,0.00265602806903727,TRUE
+"48","Acadian redfish","Gulf of Maine / Georges Bank",2009,1663,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9891066,19,0.000460976238839582,TRUE
+"49","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9422892,19,0.00218313545965242,TRUE
+"50","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.032939,19,0.00103562620005182,TRUE
+"51","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5928849,19,0.00265602806903727,TRUE
+"52","Acadian redfish","Gulf of Maine / Georges Bank",2010,1850,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.022972,19,0.000460976238839582,TRUE
+"53","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9954773,19,0.00218313545965242,TRUE
+"54","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.098063,19,0.00103562620005182,TRUE
+"55","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6112934,19,0.00265602806903727,TRUE
+"56","Acadian redfish","Gulf of Maine / Georges Bank",2011,2227,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.056592,19,0.000460976238839582,TRUE
+"57","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.005456,19,0.00218313545965242,TRUE
+"58","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.08015,19,0.00103562620005182,TRUE
+"59","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6698123,19,0.00265602806903727,TRUE
+"60","Acadian redfish","Gulf of Maine / Georges Bank",2012,4189,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.145726,19,0.000460976238839582,TRUE
+"61","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9197567,19,0.00218313545965242,TRUE
+"62","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.029101,19,0.00103562620005182,TRUE
+"63","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6017117,19,0.00265602806903727,TRUE
+"64","Acadian redfish","Gulf of Maine / Georges Bank",2013,3966,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.045096,19,0.000460976238839582,TRUE
+"65","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.049644,19,0.00218313545965242,TRUE
+"66","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.179043,19,0.00103562620005182,TRUE
+"67","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6144999,19,0.00265602806903727,TRUE
+"68","Acadian redfish","Gulf of Maine / Georges Bank",2014,5083,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.076502,19,0.000460976238839582,TRUE
+"69","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.003051,19,0.00218313545965242,TRUE
+"70","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.047857,19,0.00103562620005182,TRUE
+"71","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.63836,19,0.00265602806903727,TRUE
+"72","Acadian redfish","Gulf of Maine / Georges Bank",2015,5040,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.083248,19,0.000460976238839582,TRUE
+"73","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9762583,19,0.00218313545965242,TRUE
+"74","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.067489,19,0.00103562620005182,TRUE
+"75","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6432641,19,0.00265602806903727,TRUE
+"76","Acadian redfish","Gulf of Maine / Georges Bank",2016,3925,"Catch","Reported Catch - Total (Mean)","Metric Tons",2017,2017,"Catch
+Reported Catch - Total (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.099678,19,0.000460976238839582,TRUE
+"77","Acadian redfish","Gulf of Maine / Georges Bank",1998,0.0111999996006489,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7845918,19,0.0815526116515042,FALSE
+"78","Acadian redfish","Gulf of Maine / Georges Bank",1998,0.0111999996006489,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.8939658,19,0.0551639129519536,FALSE
+"79","Acadian redfish","Gulf of Maine / Georges Bank",1998,0.0111999996006489,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.493206,19,0.0671323385912438,FALSE
+"80","Acadian redfish","Gulf of Maine / Georges Bank",1998,0.0111999996006489,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.854261,19,0.0377972042155922,TRUE
+"81","Acadian redfish","Gulf of Maine / Georges Bank",1999,0.00632000016048551,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9437211,19,0.0815526116515042,FALSE
+"82","Acadian redfish","Gulf of Maine / Georges Bank",1999,0.00632000016048551,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9519943,19,0.0551639129519536,FALSE
+"83","Acadian redfish","Gulf of Maine / Georges Bank",1999,0.00632000016048551,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6019174,19,0.0671323385912438,FALSE
+"84","Acadian redfish","Gulf of Maine / Georges Bank",1999,0.00632000016048551,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9831684,19,0.0377972042155922,TRUE
+"85","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8976262,19,0.0815526116515042,FALSE
+"86","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.017091,19,0.0551639129519536,FALSE
+"87","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5789552,19,0.0671323385912438,FALSE
+"88","Acadian redfish","Gulf of Maine / Georges Bank",2000,0.00637000007554889,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9936851,19,0.0377972042155922,TRUE
+"89","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8774717,19,0.0815526116515042,FALSE
+"90","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9477208,19,0.0551639129519536,FALSE
+"91","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5574921,19,0.0671323385912438,FALSE
+"92","Acadian redfish","Gulf of Maine / Georges Bank",2001,0.00784000009298325,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9447936,19,0.0377972042155922,TRUE
+"93","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9491921,19,0.0815526116515042,FALSE
+"94","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.012982,19,0.0551639129519536,FALSE
+"95","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6211522,19,0.0671323385912438,FALSE
+"96","Acadian redfish","Gulf of Maine / Georges Bank",2002,0.0046700001694262,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.040084,19,0.0377972042155922,TRUE
+"97","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8486903,19,0.0815526116515042,FALSE
+"98","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9485765,19,0.0551639129519536,FALSE
+"99","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5502286,19,0.0671323385912438,FALSE
+"100","Acadian redfish","Gulf of Maine / Georges Bank",2003,0.00467999977990985,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9492807,19,0.0377972042155922,TRUE
+"101","Acadian redfish","Gulf of Maine / Georges Bank",2004,0.00380999990738928,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9188196,19,0.0815526116515042,FALSE
+"102","Acadian redfish","Gulf of Maine / Georges Bank",2004,0.00380999990738928,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9715839,19,0.0551639129519536,FALSE
+"103","Acadian redfish","Gulf of Maine / Georges Bank",2004,0.00380999990738928,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5570679,19,0.0671323385912438,FALSE
+"104","Acadian redfish","Gulf of Maine / Georges Bank",2004,0.00380999990738928,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9438635,19,0.0377972042155922,TRUE
+"105","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.82784,19,0.0815526116515042,FALSE
+"106","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9380816,19,0.0551639129519536,FALSE
+"107","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5267776,19,0.0671323385912438,FALSE
+"108","Acadian redfish","Gulf of Maine / Georges Bank",2005,0.00431000022217631,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9281185,19,0.0377972042155922,TRUE
+"109","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9455219,19,0.0815526116515042,FALSE
+"110","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.061374,19,0.0551639129519536,FALSE
+"111","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6131746,19,0.0671323385912438,FALSE
+"112","Acadian redfish","Gulf of Maine / Georges Bank",2006,0.00384999997913837,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.069632,19,0.0377972042155922,TRUE
+"113","Acadian redfish","Gulf of Maine / Georges Bank",2007,0.00615999987348914,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9776354,19,0.0815526116515042,FALSE
+"114","Acadian redfish","Gulf of Maine / Georges Bank",2007,0.00615999987348914,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.071815,19,0.0551639129519536,FALSE
+"115","Acadian redfish","Gulf of Maine / Georges Bank",2007,0.00615999987348914,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5972726,19,0.0671323385912438,FALSE
+"116","Acadian redfish","Gulf of Maine / Georges Bank",2007,0.00615999987348914,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.015984,19,0.0377972042155922,TRUE
+"117","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8929299,19,0.0815526116515042,FALSE
+"118","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.009114,19,0.0551639129519536,FALSE
+"119","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5540928,19,0.0671323385912438,FALSE
+"120","Acadian redfish","Gulf of Maine / Georges Bank",2008,0.00656000012531877,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9590678,19,0.0377972042155922,TRUE
+"121","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.987779,19,0.0815526116515042,FALSE
+"122","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.041496,19,0.0551639129519536,FALSE
+"123","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5798724,19,0.0671323385912438,FALSE
+"124","Acadian redfish","Gulf of Maine / Georges Bank",2009,0.00732999993488193,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9891066,19,0.0377972042155922,TRUE
+"125","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9422892,19,0.0815526116515042,FALSE
+"126","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.032939,19,0.0551639129519536,FALSE
+"127","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5928849,19,0.0671323385912438,FALSE
+"128","Acadian redfish","Gulf of Maine / Georges Bank",2010,0.00747000006958842,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.022972,19,0.0377972042155922,TRUE
+"129","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9954773,19,0.0815526116515042,FALSE
+"130","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.098063,19,0.0551639129519536,FALSE
+"131","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6112934,19,0.0671323385912438,FALSE
+"132","Acadian redfish","Gulf of Maine / Georges Bank",2011,0.0083600003272295,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.056592,19,0.0377972042155922,TRUE
+"133","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.005456,19,0.0815526116515042,FALSE
+"134","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.08015,19,0.0551639129519536,FALSE
+"135","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6698123,19,0.0671323385912438,FALSE
+"136","Acadian redfish","Gulf of Maine / Georges Bank",2012,0.0145100001245737,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.145726,19,0.0377972042155922,TRUE
+"137","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9197567,19,0.0815526116515042,FALSE
+"138","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.029101,19,0.0551639129519536,FALSE
+"139","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6017117,19,0.0671323385912438,FALSE
+"140","Acadian redfish","Gulf of Maine / Georges Bank",2013,0.0122100003063679,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.045096,19,0.0377972042155922,TRUE
+"141","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.049644,19,0.0815526116515042,FALSE
+"142","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.179043,19,0.0551639129519536,FALSE
+"143","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6144999,19,0.0671323385912438,FALSE
+"144","Acadian redfish","Gulf of Maine / Georges Bank",2014,0.0140699995681643,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.076502,19,0.0377972042155922,TRUE
+"145","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.003051,19,0.0815526116515042,FALSE
+"146","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.047857,19,0.0551639129519536,FALSE
+"147","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.63836,19,0.0671323385912438,FALSE
+"148","Acadian redfish","Gulf of Maine / Georges Bank",2015,0.0128499995917082,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.083248,19,0.0377972042155922,TRUE
+"149","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9762583,19,0.0815526116515042,FALSE
+"150","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.067489,19,0.0551639129519536,FALSE
+"151","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6432641,19,0.0671323385912438,FALSE
+"152","Acadian redfish","Gulf of Maine / Georges Bank",2016,0.0109999999403954,"Fmort","Max F Rate at Age (Retro Adjusted 2016)","Apical F",2017,2017,"Fmort
+Max F Rate at Age (Retro Adjusted 2016)
+Apical F","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.099678,19,0.0377972042155922,TRUE
+"153","Acadian redfish","Gulf of Maine / Georges Bank",1998,34879,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7845918,19,0.63551390801368,FALSE
+"154","Acadian redfish","Gulf of Maine / Georges Bank",1998,34879,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.8939658,19,0.393621474133497,FALSE
+"155","Acadian redfish","Gulf of Maine / Georges Bank",1998,34879,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.493206,19,0.758438282546291,FALSE
+"156","Acadian redfish","Gulf of Maine / Georges Bank",1998,34879,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.854261,19,0.906801304865448,FALSE
+"157","Acadian redfish","Gulf of Maine / Georges Bank",1999,48525,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9437211,19,0.63551390801368,FALSE
+"158","Acadian redfish","Gulf of Maine / Georges Bank",1999,48525,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9519943,19,0.393621474133497,FALSE
+"159","Acadian redfish","Gulf of Maine / Georges Bank",1999,48525,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6019174,19,0.758438282546291,FALSE
+"160","Acadian redfish","Gulf of Maine / Georges Bank",1999,48525,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9831684,19,0.906801304865448,FALSE
+"161","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8976262,19,0.63551390801368,FALSE
+"162","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.017091,19,0.393621474133497,FALSE
+"163","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5789552,19,0.758438282546291,FALSE
+"164","Acadian redfish","Gulf of Maine / Georges Bank",2000,92116,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9936851,19,0.906801304865448,FALSE
+"165","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8774717,19,0.63551390801368,FALSE
+"166","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9477208,19,0.393621474133497,FALSE
+"167","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5574921,19,0.758438282546291,FALSE
+"168","Acadian redfish","Gulf of Maine / Georges Bank",2001,43536,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9447936,19,0.906801304865448,FALSE
+"169","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9491921,19,0.63551390801368,FALSE
+"170","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.012982,19,0.393621474133497,FALSE
+"171","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6211522,19,0.758438282546291,FALSE
+"172","Acadian redfish","Gulf of Maine / Georges Bank",2002,79573,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.040084,19,0.906801304865448,FALSE
+"173","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8486903,19,0.63551390801368,FALSE
+"174","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9485765,19,0.393621474133497,FALSE
+"175","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5502286,19,0.758438282546291,FALSE
+"176","Acadian redfish","Gulf of Maine / Georges Bank",2003,30841,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9492807,19,0.906801304865448,FALSE
+"177","Acadian redfish","Gulf of Maine / Georges Bank",2004,44763,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9188196,19,0.63551390801368,FALSE
+"178","Acadian redfish","Gulf of Maine / Georges Bank",2004,44763,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9715839,19,0.393621474133497,FALSE
+"179","Acadian redfish","Gulf of Maine / Georges Bank",2004,44763,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5570679,19,0.758438282546291,FALSE
+"180","Acadian redfish","Gulf of Maine / Georges Bank",2004,44763,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9438635,19,0.906801304865448,FALSE
+"181","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.82784,19,0.63551390801368,FALSE
+"182","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9380816,19,0.393621474133497,FALSE
+"183","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5267776,19,0.758438282546291,FALSE
+"184","Acadian redfish","Gulf of Maine / Georges Bank",2005,92857,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9281185,19,0.906801304865448,FALSE
+"185","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9455219,19,0.63551390801368,FALSE
+"186","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.061374,19,0.393621474133497,FALSE
+"187","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6131746,19,0.758438282546291,FALSE
+"188","Acadian redfish","Gulf of Maine / Georges Bank",2006,73429,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.069632,19,0.906801304865448,FALSE
+"189","Acadian redfish","Gulf of Maine / Georges Bank",2007,48705,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9776354,19,0.63551390801368,FALSE
+"190","Acadian redfish","Gulf of Maine / Georges Bank",2007,48705,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.071815,19,0.393621474133497,FALSE
+"191","Acadian redfish","Gulf of Maine / Georges Bank",2007,48705,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5972726,19,0.758438282546291,FALSE
+"192","Acadian redfish","Gulf of Maine / Georges Bank",2007,48705,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.015984,19,0.906801304865448,FALSE
+"193","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8929299,19,0.63551390801368,FALSE
+"194","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.009114,19,0.393621474133497,FALSE
+"195","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5540928,19,0.758438282546291,FALSE
+"196","Acadian redfish","Gulf of Maine / Georges Bank",2008,325333,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9590678,19,0.906801304865448,FALSE
+"197","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.987779,19,0.63551390801368,FALSE
+"198","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.041496,19,0.393621474133497,FALSE
+"199","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5798724,19,0.758438282546291,FALSE
+"200","Acadian redfish","Gulf of Maine / Georges Bank",2009,184196,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9891066,19,0.906801304865448,FALSE
+"201","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9422892,19,0.63551390801368,FALSE
+"202","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.032939,19,0.393621474133497,FALSE
+"203","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5928849,19,0.758438282546291,FALSE
+"204","Acadian redfish","Gulf of Maine / Georges Bank",2010,40650,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.022972,19,0.906801304865448,FALSE
+"205","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9954773,19,0.63551390801368,FALSE
+"206","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.098063,19,0.393621474133497,FALSE
+"207","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6112934,19,0.758438282546291,FALSE
+"208","Acadian redfish","Gulf of Maine / Georges Bank",2011,45719,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.056592,19,0.906801304865448,FALSE
+"209","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.005456,19,0.63551390801368,FALSE
+"210","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.08015,19,0.393621474133497,FALSE
+"211","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6698123,19,0.758438282546291,FALSE
+"212","Acadian redfish","Gulf of Maine / Georges Bank",2012,49695,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.145726,19,0.906801304865448,FALSE
+"213","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9197567,19,0.63551390801368,FALSE
+"214","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.029101,19,0.393621474133497,FALSE
+"215","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6017117,19,0.758438282546291,FALSE
+"216","Acadian redfish","Gulf of Maine / Georges Bank",2013,56379,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.045096,19,0.906801304865448,FALSE
+"217","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.049644,19,0.63551390801368,FALSE
+"218","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.179043,19,0.393621474133497,FALSE
+"219","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6144999,19,0.758438282546291,FALSE
+"220","Acadian redfish","Gulf of Maine / Georges Bank",2014,145953,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.076502,19,0.906801304865448,FALSE
+"221","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.003051,19,0.63551390801368,FALSE
+"222","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.047857,19,0.393621474133497,FALSE
+"223","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.63836,19,0.758438282546291,FALSE
+"224","Acadian redfish","Gulf of Maine / Georges Bank",2015,94951,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.083248,19,0.906801304865448,FALSE
+"225","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9762583,19,0.63551390801368,FALSE
+"226","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.067489,19,0.393621474133497,FALSE
+"227","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6432641,19,0.758438282546291,FALSE
+"228","Acadian redfish","Gulf of Maine / Georges Bank",2016,79711,"Recruitment","Abundance - Age 1 (Mean)","Thousand Recruits",2017,2017,"Recruitment
+Abundance - Age 1 (Mean)
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.099678,19,0.906801304865448,FALSE
+"229","Acadian redfish","Gulf of Maine / Georges Bank",1998,53847,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7845918,19,0.000894094669318693,TRUE
+"230","Acadian redfish","Gulf of Maine / Georges Bank",1998,53847,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.8939658,19,0.00019585127705734,TRUE
+"231","Acadian redfish","Gulf of Maine / Georges Bank",1998,53847,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.493206,19,0.00271061922616286,TRUE
+"232","Acadian redfish","Gulf of Maine / Georges Bank",1998,53847,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.854261,19,0.000251297574183122,TRUE
+"233","Acadian redfish","Gulf of Maine / Georges Bank",1999,66552,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9437211,19,0.000894094669318693,TRUE
+"234","Acadian redfish","Gulf of Maine / Georges Bank",1999,66552,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9519943,19,0.00019585127705734,TRUE
+"235","Acadian redfish","Gulf of Maine / Georges Bank",1999,66552,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6019174,19,0.00271061922616286,TRUE
+"236","Acadian redfish","Gulf of Maine / Georges Bank",1999,66552,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9831684,19,0.000251297574183122,TRUE
+"237","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8976262,19,0.000894094669318693,TRUE
+"238","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.017091,19,0.00019585127705734,TRUE
+"239","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5789552,19,0.00271061922616286,TRUE
+"240","Acadian redfish","Gulf of Maine / Georges Bank",2000,80354,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9936851,19,0.000251297574183122,TRUE
+"241","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8774717,19,0.000894094669318693,TRUE
+"242","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9477208,19,0.00019585127705734,TRUE
+"243","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5574921,19,0.00271061922616286,TRUE
+"244","Acadian redfish","Gulf of Maine / Georges Bank",2001,94675,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9447936,19,0.000251297574183122,TRUE
+"245","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9491921,19,0.000894094669318693,TRUE
+"246","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.012982,19,0.00019585127705734,TRUE
+"247","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6211522,19,0.00271061922616286,TRUE
+"248","Acadian redfish","Gulf of Maine / Georges Bank",2002,109475,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.040084,19,0.000251297574183122,TRUE
+"249","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8486903,19,0.000894094669318693,TRUE
+"250","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9485765,19,0.00019585127705734,TRUE
+"251","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5502286,19,0.00271061922616286,TRUE
+"252","Acadian redfish","Gulf of Maine / Georges Bank",2003,125063,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9492807,19,0.000251297574183122,TRUE
+"253","Acadian redfish","Gulf of Maine / Georges Bank",2004,141485,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9188196,19,0.000894094669318693,TRUE
+"254","Acadian redfish","Gulf of Maine / Georges Bank",2004,141485,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9715839,19,0.00019585127705734,TRUE
+"255","Acadian redfish","Gulf of Maine / Georges Bank",2004,141485,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5570679,19,0.00271061922616286,TRUE
+"256","Acadian redfish","Gulf of Maine / Georges Bank",2004,141485,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9438635,19,0.000251297574183122,TRUE
+"257","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.82784,19,0.000894094669318693,TRUE
+"258","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9380816,19,0.00019585127705734,TRUE
+"259","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5267776,19,0.00271061922616286,TRUE
+"260","Acadian redfish","Gulf of Maine / Georges Bank",2005,158775,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9281185,19,0.000251297574183122,TRUE
+"261","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9455219,19,0.000894094669318693,TRUE
+"262","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.061374,19,0.00019585127705734,TRUE
+"263","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6131746,19,0.00271061922616286,TRUE
+"264","Acadian redfish","Gulf of Maine / Georges Bank",2006,176793,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.069632,19,0.000251297574183122,TRUE
+"265","Acadian redfish","Gulf of Maine / Georges Bank",2007,195269,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9776354,19,0.000894094669318693,TRUE
+"266","Acadian redfish","Gulf of Maine / Georges Bank",2007,195269,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.071815,19,0.00019585127705734,TRUE
+"267","Acadian redfish","Gulf of Maine / Georges Bank",2007,195269,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5972726,19,0.00271061922616286,TRUE
+"268","Acadian redfish","Gulf of Maine / Georges Bank",2007,195269,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.015984,19,0.000251297574183122,TRUE
+"269","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8929299,19,0.000894094669318693,TRUE
+"270","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.009114,19,0.00019585127705734,TRUE
+"271","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5540928,19,0.00271061922616286,TRUE
+"272","Acadian redfish","Gulf of Maine / Georges Bank",2008,214003,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9590678,19,0.000251297574183122,TRUE
+"273","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.987779,19,0.000894094669318693,TRUE
+"274","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.041496,19,0.00019585127705734,TRUE
+"275","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5798724,19,0.00271061922616286,TRUE
+"276","Acadian redfish","Gulf of Maine / Georges Bank",2009,233719,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9891066,19,0.000251297574183122,TRUE
+"277","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9422892,19,0.000894094669318693,TRUE
+"278","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.032939,19,0.00019585127705734,TRUE
+"279","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5928849,19,0.00271061922616286,TRUE
+"280","Acadian redfish","Gulf of Maine / Georges Bank",2010,255536,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.022972,19,0.000251297574183122,TRUE
+"281","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9954773,19,0.000894094669318693,TRUE
+"282","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.098063,19,0.00019585127705734,TRUE
+"283","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6112934,19,0.00271061922616286,TRUE
+"284","Acadian redfish","Gulf of Maine / Georges Bank",2011,280625,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.056592,19,0.000251297574183122,TRUE
+"285","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.005456,19,0.000894094669318693,TRUE
+"286","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.08015,19,0.00019585127705734,TRUE
+"287","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6698123,19,0.00271061922616286,TRUE
+"288","Acadian redfish","Gulf of Maine / Georges Bank",2012,308901,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.145726,19,0.000251297574183122,TRUE
+"289","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9197567,19,0.000894094669318693,TRUE
+"290","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.029101,19,0.00019585127705734,TRUE
+"291","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6017117,19,0.00271061922616286,TRUE
+"292","Acadian redfish","Gulf of Maine / Georges Bank",2013,339804,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.045096,19,0.000251297574183122,TRUE
+"293","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.049644,19,0.000894094669318693,TRUE
+"294","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.179043,19,0.00019585127705734,TRUE
+"295","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6144999,19,0.00271061922616286,TRUE
+"296","Acadian redfish","Gulf of Maine / Georges Bank",2014,372523,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.076502,19,0.000251297574183122,TRUE
+"297","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",1.003051,19,0.000894094669318693,TRUE
+"298","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.047857,19,0.00019585127705734,TRUE
+"299","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.63836,19,0.00271061922616286,TRUE
+"300","Acadian redfish","Gulf of Maine / Georges Bank",2015,404690,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.083248,19,0.000251297574183122,TRUE
+"301","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9762583,19,0.000894094669318693,TRUE
+"302","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.067489,19,0.00019585127705734,TRUE
+"303","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6432641,19,0.00271061922616286,TRUE
+"304","Acadian redfish","Gulf of Maine / Georges Bank",2016,359970,"Abundance","Mature Biomass Retro Adjusted 2016 (Mean)","Metric Tons",2017,2017,"Abundance
+Mature Biomass Retro Adjusted 2016 (Mean)
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.099678,19,0.000251297574183122,TRUE
