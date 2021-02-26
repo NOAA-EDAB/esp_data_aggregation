@@ -1,8 +1,10 @@
-Package: esp_data_aggregation
+Package: NEesp
 Title: Generate Preliminary ESP Reports for the Northeast
 Version: 0.0.0.9000
 Description: Generates preliminary Ecosystem and Socioeconomic Profiles for Northeast and Mid-Atlantic USA fishery stocks.
 License: file LICENSE
+Authors@R: person("Abigail", "Tyrell", email = "abigail.tyrell@noaa.gov",
+  role = c("aut", "cre"))
 Imports:
     AICcmodavg,
     bookdown,
@@ -18,6 +20,7 @@ Imports:
     grDevices,
     here,
     nlstools,
+    papeR,
     parallel,
     quantmod,
     raster,
@@ -26,7 +29,6 @@ Imports:
     rfishbase,
     rgdal,
     rgeos,
-    rJava,
     rnaturalearth,
     rnaturalearthdata,
     roxygen2,
@@ -34,8 +36,6 @@ Imports:
     shape,
     spatial,
     splines,
-    tabulizer,
-    tabulizerjars,
     tidyverse,
     units,
     usethis,
@@ -52,6 +52,10 @@ Imports:
     utilities,
     FishLife,
     ecodata
+Suggests:
+    rJava,
+    tabulizer,
+    tabulizerjars
 Remotes:
     andybeet/dbutils,
     NOAA-EDAB/assessmentdata,
@@ -66,3 +70,5 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
