@@ -10,7 +10,7 @@ library(dbutils)
 library(survdat)
 ```
 
-## Size at first maturity 
+### Size at first maturity 
 
 L50 or length at which 50%  maturity can be calculated using differing methods. Using Data sourced from `survdat` that consist of visual sexual maturity determination and length measurements. Here, L50 is estimated by fitting a logistic generalized linear model to gonadal maturity and body length measurements and estimating the inflection point of the logistic model. This point represents the size where the individual has 50% odds of being mature. Decade variations of this parameter are investigated utilizing decade as a additive and interaction term in the model specification.
 
@@ -44,7 +44,11 @@ selected.surv<-survdata.w.codes %>%
 
 
 #only take records with a maturity status associated
-selected.surv.clean<-selected.surv %>% drop_na(MATURITY)
+selected.surv.clean<-selected.surv %>% 
+  drop_na(MATURITY) %>%
+  dplyr::mutate(MATURITY = MATURITY %>%
+                  stringr::str_to_upper()) %>%
+  dplyr::filter(MATURITY %in% c("D", "I", "R", "S", "T", "U", "E"))
 
 #recode the maturity col into factor
 
@@ -93,7 +97,7 @@ pretty_mod<-papeR::prettify(summary(maturity.mod))
 
 ```
 
-## Model results
+### Model results
 
 `r if(nrow(selected.surv.f)>3){"If the overall model is significant, there is support for the relationship between sexual maturity and body size. This model can predict the size where there are 50% odds of the indevidual is sexually mature. The results table below displays the L50 for Male and female indeviduals. "}` 
 
@@ -106,7 +110,7 @@ knitr::kable(pretty_mod, digits = 3)
 }
 ```
 
-## L50 by sex
+### L50 by sex
 
 `r if(nrow(selected.surv.f)>3){"The significance of differences between sex can be determined by referencing the model summary table above   "}`
 
