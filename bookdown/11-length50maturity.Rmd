@@ -77,9 +77,9 @@ maturity.mod<-glm(MATURITY~LENGTH+decade+LENGTH*decade, data=selected.surv.f, fa
 
 
 
-pretty_mod<-papeR::prettify(summary(maturity.mod))
+#pretty_mod<-papeR::prettify(summary(maturity.mod))
 
-#summary(maturity.mod)  
+summary(maturity.mod)  
 }else("Not enough data to fit model")
   
 
@@ -96,7 +96,9 @@ pretty_mod<-papeR::prettify(summary(maturity.mod))
 
 if(nrow(selected.surv.f)>3){
  
-knitr::kable(pretty_mod, digits = 3)
+#knitr::kable(pretty_mod, digits = 3)
+  
+knitr::kable(summary(maturity.mod)$coefficients)
 }
 ```
 
