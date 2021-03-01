@@ -2,7 +2,7 @@
 Ricky Tabandera
 
 ```{r L50 setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_chunk$set(echo = TRUE)
 
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(nlstools))
