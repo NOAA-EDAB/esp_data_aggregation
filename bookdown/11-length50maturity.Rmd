@@ -62,7 +62,7 @@ selected.surv.clean$SEX<-recode(selected.surv.clean$SEX, "1"="male" , "2"="femal
 selected.surv.clean<-selected.surv.clean %>% mutate(SEX=as.factor(selected.surv.clean$SEX))
 selected.surv.clean<-selected.surv.clean %>% mutate(MATURITY=as.factor(MATURITY))
 
-selected.surv.f<- selected.surv.clean %>% filter(SEX==c("female", "male") & MATURITY !="X")
+selected.surv.f<- selected.surv.clean %>% filter(SEX %in% c("female", "male") & MATURITY !="X")
 
 
 
