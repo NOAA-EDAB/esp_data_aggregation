@@ -16,9 +16,6 @@ L50 or length at which 50%  maturity can be calculated using differing methods. 
 
 The relationship between sexual maturity by body size is a well established life history parameter. L50 is a useful metric in fisheries to identify sizes that are able to reproduce. This information can be used to inform regulation as to minimum catch size that should allow for a significant portion of the population to spawn and contribute genetic information to sustain the stock. Changes in this parameter can signal population/evolutionary pressures on the stock with reduction in this size potentially indicating excessive fishing pressure.
 
-
-
-
 ```{r data wrangling}
 
 survdata<-readRDS(here::here("data", "survdat_pull_bio.rds"))
@@ -30,7 +27,6 @@ stock_list<-stock_list_all_strata %>% dplyr::distinct(SVSPP,.keep_all =T)
 
 survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
 
-
 selected.surv<-survdata.w.codes %>%
   dplyr::mutate(common_name = common_name %>%
                   stringr::str_to_sentence()) %>%
@@ -41,8 +37,6 @@ selected.surv<-survdata.w.codes %>%
 #surv_maturity<-surv.maturity$data
 #write.csv(surv.maturity, file = "surv_maturity_codes.csv")
 
-
-
 #only take records with a maturity status associated
 selected.surv.clean<-selected.surv %>% 
   drop_na(MATURITY) %>%
@@ -51,8 +45,6 @@ selected.surv.clean<-selected.surv %>%
   dplyr::filter(MATURITY %in% c("D", "I", "R", "S", "T", "U", "E"))
 
 #recode the maturity col into factor
-
-
 
 #recode sexed fish to readable names
 #sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown   
@@ -63,38 +55,42 @@ selected.surv.clean<-selected.surv.clean %>% mutate(SEX=as.factor(selected.surv.
 selected.surv.clean<-selected.surv.clean %>% mutate(MATURITY=as.factor(MATURITY))
 
 selected.surv.f<- selected.surv.clean %>% filter(SEX %in% c("female", "male") & MATURITY !="X")
+```
 
-
-
+```{r, mature_model}
 # conditionally run models based on having more than 3 rows 
-if(nrow(selected.surv.f)>3){
+eval_model <- nrow(selected.surv.f)>3 &
+     selected.surv.f$MATURITY %>% 
+       unique() %>% 
+       length() > 1 # more than 1 maturity category
 
-
+if(eval_model){ 
 
 # X= unknown , I = immature, D= developing, R S T U convert to developed
-
 
 # #bin the years of fish into decades to compare if model parameters are chaging 
 # selected.surv.f<-selected.surv.f %>% mutate(decade=ggplot2::cut_width(YEAR, width = 10, boundary = 1980))
 # levels(selected.surv.f$decade)<-c( "1980","1990", "2000","2010")
 
-
 #model with sex as additive and multiplicative term
-maturity.mod<-glm(MATURITY~LENGTH+SEX+LENGTH*SEX, data=selected.surv.f, family = "binomial")
-
-
+  if(selected.surv.f$SEX %>%
+       unique() %>%
+       length() == 2) {
+    maturity.mod<-glm(MATURITY~LENGTH+SEX+LENGTH*SEX, data=selected.surv.f, family = "binomial")
+  }
+  
+  # handle cases with only 1 sex
+  if(selected.surv.f$SEX %>%
+     unique() %>%
+     length() == 1) {
+    maturity.mod<-glm(MATURITY~LENGTH, data=selected.surv.f, family = "binomial")
+     }
 
 pretty_mod<-papeR::prettify(summary(maturity.mod))
 
 #summary(maturity.mod)  
 }else("Not enough data to fit model")
   
-
-
-
-
-
-
 ```
 
 ### Model results
@@ -104,7 +100,7 @@ pretty_mod<-papeR::prettify(summary(maturity.mod))
 
 ```{r, model table}
 
-if(nrow(selected.surv.f)>3){
+if(eval_model){
  
 knitr::kable(pretty_mod, digits = 3)
 }
@@ -116,7 +112,7 @@ knitr::kable(pretty_mod, digits = 3)
 
 
 ```{r model results and L50}
-if(nrow(selected.surv.f)>3){
+if(eval_model){
    if(summary(maturity.mod)$coefficients[,4][1]<0.05){
 
 #intercept devided by beta
@@ -138,7 +134,7 @@ knitr::kable(L50.p, digits = 3)
 ```{r, probability plot }
 
 
-if(nrow(selected.surv.f)>3){
+if(eval_model){
    if(summary(maturity.mod)$coefficients[,4][1]<0.05){
      
      selected.surv.LENGTH<-seq(1:max(selected.surv.f$LENGTH))

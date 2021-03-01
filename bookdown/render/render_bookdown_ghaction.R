@@ -146,7 +146,7 @@ render_bks <- function(x, trouble){
 source(here::here("R/full_report_functions", "read_data.R"))
 
 # generate reports
-#nums <- 36
+#nums <- 29
 lapply(all_species[nums],
        render_bks,
        trouble = FALSE)
