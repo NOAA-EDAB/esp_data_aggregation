@@ -302,7 +302,7 @@ area <- survdat::get_area(shape, "STRATA")
 #area <- survdat::getarea(stratum = shape, 
 #                          strat.col = "STRATA") # doesn't work
 
-survey_big$STRATUM <- as.numeric(survey_big$STRATUM) 
+#survey_big$STRATUM <- as.numeric(survey_big$STRATUM) 
 # survey_big doesn't work in stratprep - why??
 
 og_pull$survdat$STRATUM <- as.numeric(og_pull$survdat$STRATUM)
