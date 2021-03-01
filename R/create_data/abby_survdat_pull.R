@@ -8,7 +8,7 @@ pull <- survdat::get_survdat_data(channel,
                           all.season = TRUE,
                           bio = TRUE)
 
-saveRDS(pull, here::here("data", "survdat_02012021.RDS"))
+saveRDS(pull, here::here("data", "survdat_03012021.RDS"))
 # still too short :(
 
 pull <- readRDS(here::here("data", "survdat_122920.RDS"))
