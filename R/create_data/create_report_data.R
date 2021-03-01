@@ -34,6 +34,7 @@ recruit <- assessmentdata::stockAssessmentData %>%
 write.csv(recruit, file = here::here("data", "recruitment_data.csv"))
 
 ## survey data ----
+#data <- readRDS(here::here("data", "survdat_03012021.RDS"))
 data <- readRDS(here::here("data", "survdat.RDS"))
 data <- tibble::as_tibble(data$survdat)
 
@@ -94,8 +95,6 @@ data3$fish_id <- paste(data3$CRUISE6, data3$STRATUM,
 
 #write.csv(data3, file = here::here("data", "survey_data.csv"))
 saveRDS(data3, file = here::here("data", "survey_data.RDS"))
-
-
 
 ## assessmentdata ratings - same as bf data ----
 ad <- assessmentdata::stockAssessmentSummary %>% 
@@ -294,7 +293,8 @@ data3 %>%
 `%>%` <- dplyr::`%>%`
 
 # need original pull (formatted data not working)
-og_pull <- readRDS(here::here("data", "survdat.RDS"))
+#og_pull <- readRDS(here::here("data", "survdat.RDS"))
+og_pull <- readRDS(here::here("data", "survdat_03012021.RDS"))
 shape <- sf::read_sf(here::here("data/strata_shapefiles", "BTS_Strata.shp"))
 
 area <- survdat::get_area(shape, "STRATA")
@@ -308,8 +308,8 @@ survey_big$STRATUM <- as.numeric(survey_big$STRATUM)
 og_pull$survdat$STRATUM <- as.numeric(og_pull$survdat$STRATUM)
 
 mod_data <- survdat::stratprep(survdat = og_pull$survdat %>%
-                                 #dplyr::filter(SEASON == "FALL"),
-                                 dplyr::filter(SEASON == "SPRING"),
+                                 dplyr::filter(SEASON == "FALL"),
+                                 #dplyr::filter(SEASON == "SPRING"),
                                areas = area,
                                strat.col = "STRATUM")
 
@@ -342,7 +342,7 @@ for(i in 1:length(data$SVSPP)){
 
 data$Species <- species_name
 
-write.csv(data, here::here("data", "swept_area_info_spring.csv"))
+write.csv(data, here::here("data", "swept_area_info_fall.csv"))
 
 spring <- read.csv(here::here("data", "swept_area_info_spring.csv"))
 fall <- read.csv(here::here("data", "swept_area_info_fall.csv"))
