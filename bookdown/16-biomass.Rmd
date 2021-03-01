@@ -43,7 +43,7 @@ indicators <- c("biomass_spring",
 
 #### Survey biomass (swept area estimates)
 
-Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
+Please note, these estimates are not parsed by region. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
 ```{r, bio_survey_swept}
 plot_swept(swept_data, var = "biomass")
 ```

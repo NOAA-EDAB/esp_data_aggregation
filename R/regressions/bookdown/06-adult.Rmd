@@ -1,7 +1,7 @@
 ## Adult indicators
 
 ### Abundance
-```{r, ssb}
+```{r, abundance}
 test <- stock %>%
   dplyr::filter(Metric == "Abundance") %>%
   dplyr::rename(Var = Metric,
@@ -9,7 +9,10 @@ test <- stock %>%
 
 if(nrow(test) > params$lag){
   render_indicator(test)
-} else print("No data")
+} else {
+  names <- names[-1]
+  print("No data")
+}
 ```
 
 ### Mean age of spawning stock
@@ -30,7 +33,10 @@ test <- read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/da
 
 if(nrow(test) > 0){
   render_indicator(test)
-} else print("No data")
+} else {
+  names <- names[-1]
+  print("No data")
+}
 ```
 
 ### Stomach fullness
@@ -42,7 +48,10 @@ test <- ecodata::stom_fullness %>%
 
 if(nrow(test) > 0){
   render_indicator(test)
-} else print("No data")
+} else {
+  names <- names[-1]
+  print("No data")
+}
 ```
 
 ### Center of gravity and area occupied

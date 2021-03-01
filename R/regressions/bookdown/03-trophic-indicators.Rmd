@@ -60,14 +60,6 @@ test <- ecodata::ichthyo_diversity
 render_indicator(test)
 ```
 
-```{r, ich_fall, eval = FALSE}
-### Fall ichthyoplankton diversity
-# seasonal data no longer in ecodata
-test <- ecodata::ichthyo_diversity %>%
-  dplyr::filter(Season == "Fall") 
-render_indicator(test)
-```
-
 ### Forage fish abundance
 ```{r, forage}
 test <- ecodata::forage_anomaly
