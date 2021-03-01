@@ -2,9 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-#Data types to ignore to avoid Conf information
-*.rdata
-*.rds
 
 **/survey_data.csv # too big for git
 *survey_data.csv
