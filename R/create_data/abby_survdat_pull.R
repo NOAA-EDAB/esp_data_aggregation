@@ -4,14 +4,16 @@ channel <- dbutils::connect_to_database(server = "sole",
 
 odbc::odbcListDrivers()
 
+#`%like%` <- DescTools::`%like%`
+`%like%` <- data.table::`%like%`
 pull <- survdat::get_survdat_data(channel,
                           all.season = TRUE,
-                          bio = TRUE)
+                          getBio = TRUE)
 
-saveRDS(pull, here::here("data", "survdat_03012021.RDS"))
+saveRDS(pull, here::here("data", "survdat_03022021_B.RDS"))
 # still too short :(
 
-pull <- readRDS(here::here("data", "survdat_03012021.RDS"))
+pull <- readRDS(here::here("data", "survdat_03022021.RDS"))
 
 # apply conversion factors
 pull2 <- survdat::apply_conversion_factors(channel, pull) # not actually a function...
