@@ -11,7 +11,7 @@ pull <- survdat::get_survdat_data(channel,
 saveRDS(pull, here::here("data", "survdat_03012021.RDS"))
 # still too short :(
 
-pull <- readRDS(here::here("data", "survdat_122920.RDS"))
+pull <- readRDS(here::here("data", "survdat_03012021.RDS"))
 
 # apply conversion factors
 pull2 <- survdat::apply_conversion_factors(channel, pull) # not actually a function...

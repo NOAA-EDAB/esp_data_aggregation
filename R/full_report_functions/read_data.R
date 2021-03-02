@@ -5,7 +5,7 @@ source(here::here("R", "update_species_names.R"))
 # survey ----
 survey <- readRDS(here::here("data", "survey_data.RDS")) %>%
   update_species_names(species_col = "Species")
-survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9), ] # remove error jonah crab
+#survey <- survey[-which(survey$Species == "Jonah crab" & survey$LENGTH >= 99.9), ] # remove error jonah crab
 # sum(numlen) and abundance may not be equal 
 # abundnace has been corrected with conversion factor, but numlen has not
 
@@ -19,11 +19,12 @@ survey <- survey %>%
                 CATCHSEX = CATCHSEX %>% as.numeric(), 
                 YEAR = YEAR %>% as.numeric())
 
-survey_ws <- readRDS(here::here("data", "survey_data_02012021_wintersummer.RDS")) %>%
-  dplyr::select(colnames(survey))  %>%
-  update_species_names(species_col = "Species")
+#survey_ws <- readRDS(here::here("data", "survey_data_02012021_wintersummer.RDS")) %>%
+#  dplyr::select(colnames(survey))  %>%
+#  update_species_names(species_col = "Species")
 
-survey_big <- dplyr::union(survey, survey_ws)
+#survey_big <- dplyr::union(survey, survey_ws)
+survey_big <- survey
 
 ricky_survey <- readRDS(here::here("data", "survdat_pull_bio.rds"))
 
