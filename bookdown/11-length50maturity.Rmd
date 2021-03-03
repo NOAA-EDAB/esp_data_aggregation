@@ -114,24 +114,37 @@ The gonadal development stage can vary between immature and mature. Once mature,
 
 
 ```{r, maturity_classification_ plot}
+
 if (nrow(selected_surv_mat_clean > 5)) {
   mat_sum_season <- selected.surv.clean %>%
     group_by(LENGTH, MATURITY, SEASON) %>%
-    summarise(mat.code.count = n())
+    summarise(mat.code.count = length(MATURITY)) # problems with dplyr::n()
 
-  mat_sum_season %>%
+  dat <- mat_sum_season %>%
     group_by(LENGTH, SEASON) %>%
     mutate(mat.sum = sum(mat.code.count), prop = (mat.code.count / mat.sum)) %>%
-    group_by(LENGTH) %>%
+    group_by(LENGTH)
+  
+  if(nrow(dat) > 0){
+      fig <- dat %>%
     ggplot(aes(x = LENGTH, y = prop * 100, fill = MATURITY)) +
     geom_bar(position = "stack", stat = "identity") +
     nmfspalette::scale_fill_nmfs(palette = "regional web", discrete = TRUE, reverse = FALSE) +
-    facet_wrap(vars(SEASON)) +
     xlab("Length (cm)") +
     ylab("Percent (%)") +
     ggtitle("Maturity classification across body length of", subtitle = species)
+  
+  if(dat$SEASON %>% unique() %>% length() > 1){
+    fig <- fig+
+      facet_wrap(vars(SEASON))
+  }
+  
+  return(fig)
+  
 } else {
   ("Not enough data")
+  }
+  
 }
 ```
 
