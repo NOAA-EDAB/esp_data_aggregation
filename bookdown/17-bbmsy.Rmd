@@ -9,15 +9,21 @@ asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
 ```
 
 ```{r, b_status}
-if(length(asmt_sum_data$Species) > 1){
-  list_regions <- split(unique(asmt_sum_data$Region), 
-                        f = list(unique(asmt_sum_data$Region)))
-  bbmsy2 <- purrr::map(list_regions, 
-                       ~status(data = asmt_sum_data, 
-                               regions = .x, 
-                               metric = "bbmsy"))
-} else bbmsy2 <- "UNKNOWN"
-
+if (length(asmt_sum_data$Species) > 1) {
+  list_regions <- split(unique(asmt_sum_data$Region),
+    f = list(unique(asmt_sum_data$Region))
+  )
+  bbmsy2 <- purrr::map(
+    list_regions,
+    ~ status(
+      data = asmt_sum_data,
+      regions = .x,
+      metric = "bbmsy"
+    )
+  )
+} else {
+  bbmsy2 <- "UNKNOWN"
+}
 ```
 
 ```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
@@ -29,13 +35,16 @@ The most recent status of B/Bmsy is: `r bbmsy2`
 
 ### Figure
 ```{r, bbmsy_fig} 
-if("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2){
-  plot_msy(asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ], 
-           type = "b",
-             ytitle = "B / Bmsy",
-             lin = lines,
-             col = colors)
-} else print("NO DATA")
+if ("GOOD" %in% bbmsy2 | "DANGER" %in% bbmsy2) {
+  plot_msy(asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ],
+    type = "b",
+    ytitle = "B / Bmsy",
+    lin = lines,
+    col = colors
+  )
+} else {
+  print("NO DATA")
+}
 ```
 
 ##### Risk {-}
@@ -50,9 +59,9 @@ indicators <- c("bbmsy")
 
 ### Data
 ```{r, bbmsy_data}
-data <- asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ] %>% 
-                dplyr::select(Region, `Assessment Year`, `B/Bmsy`) %>%
-                dplyr::mutate(`B/Bmsy` = `B/Bmsy` %>% round(digits = 2)) %>%
+data <- asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ] %>%
+  dplyr::select(Region, `Assessment Year`, `B/Bmsy`) %>%
+  dplyr::mutate(`B/Bmsy` = `B/Bmsy` %>% round(digits = 2)) %>%
   character_to_factor()
 
 make_html_table(data, col_names = c("Region", "Year", "B/Bmsy"))

@@ -23,24 +23,28 @@ get_diet_table(data = diet_data)
 ### Data
 ```{r, diet_data}
 diet_data2 <- diet_data %>%
-    dplyr::filter(pyamtw > 0) %>%
-    
-    # only look at season/year combinations with >20 predator samples
-    dplyr::group_by(year, season, Region) %>%
-    dplyr::mutate(n_predators = fish_id %>% unique() %>% length()) %>%
-    dplyr::filter(n_predators > 20) %>%
-    dplyr::group_by(year, season, Region, n_predators, gensci) %>%
-    dplyr::summarise(total_weight = sum(pyamtw)) %>%
-    dplyr::mutate(proportion = total_weight/sum(total_weight),
-                  proportion = proportion %>%
-                    round(digits = 3),
-                  total_weight = total_weight %>%
-                    round(digits = 2),
-                  gensci = gensci %>% 
-                    stringr::str_replace("_", " ") %>%
-                    stringr::str_to_sentence())  %>%
+  dplyr::filter(pyamtw > 0) %>%
+
+  # only look at season/year combinations with >20 predator samples
+  dplyr::group_by(year, season, Region) %>%
+  dplyr::mutate(n_predators = fish_id %>% unique() %>% length()) %>%
+  dplyr::filter(n_predators > 20) %>%
+  dplyr::group_by(year, season, Region, n_predators, gensci) %>%
+  dplyr::summarise(total_weight = sum(pyamtw)) %>%
+  dplyr::mutate(
+    proportion = total_weight / sum(total_weight),
+    proportion = proportion %>%
+      round(digits = 3),
+    total_weight = total_weight %>%
+      round(digits = 2),
+    gensci = gensci %>%
+      stringr::str_replace("_", " ") %>%
+      stringr::str_to_sentence()
+  ) %>%
   character_to_factor()
 
-make_html_table(diet_data2, col_names = c("Year", "Season", "Region", "Number of fish", 
-                       "Prey category", "Prey weight", "Prey proportion"))
+make_html_table(diet_data2, col_names = c(
+  "Year", "Season", "Region", "Number of fish",
+  "Prey category", "Prey weight", "Prey proportion"
+))
 ```

@@ -28,13 +28,16 @@ generate_len_plot(survey_data)
 
 See Methods for risk calculation details.
 ```{r}
-indicators <- c("max_length_spring",
-               "max_length_fall",
-               "avg_length_spring",
-               "avg_length_fall")
+indicators <- c(
+  "max_length_spring",
+  "max_length_fall",
+  "avg_length_spring",
+  "avg_length_fall"
+)
 ```
 
 ```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
+
 ```
 
 ### Summary
@@ -47,6 +50,8 @@ generate_len_table(survey_data)
 data <- get_len_data2(survey_data) %>%
   character_to_factor()
 
-make_html_table(data, col_names = c("Year", "Season", "Region", "Number of fish",
-                       "Mean length", "Minimum length", "Maximum length"))
+make_html_table(data, col_names = c(
+  "Year", "Season", "Region", "Number of fish",
+  "Mean length", "Minimum length", "Maximum length"
+))
 ```

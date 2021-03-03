@@ -3,31 +3,30 @@
 Ricky Tabandera
 
 ```{r setup_age_diversity,  cache = params$cache}
-#knitr::opts_chunk$set(echo = TRUE)
+# knitr::opts_chunk$set(echo = TRUE)
 
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(here))
 suppressPackageStartupMessages(library(survdat))
 suppressPackageStartupMessages(library(dbutils))
-
 ```
 
 
 ```{r data_wrangling_age, cache = params$cache, cache.lazy = FALSE}
-#load survdat 
-survdata<-readRDS(here::here("data", "survdat_pull_bio.rds"))
-#change from char to numeric
-survdata<-survdata %>% mutate(SVSPP=as.numeric(SVSPP))
-#load ECSA data with common names 
+# load survdat
+survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
+# change from char to numeric
+survdata <- survdata %>% mutate(SVSPP = as.numeric(SVSPP))
+# load ECSA data with common names
 stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
-stock_list_all_strata<-stock_list_all_strata %>% rename(SVSPP=svspp)
-stock_list<-stock_list_all_strata %>% dplyr::distinct(SVSPP,.keep_all =T)
-#link common names to  this dataset 
-survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
-#filter down to a single stock 
-selected.spp<- survdata.w.codes %>% filter(common_name %>% 
-                                             stringr::str_to_sentence() %>% 
-                                             stringr::str_replace("Goosefish", "Monkfish") == params$species)
+stock_list_all_strata <- stock_list_all_strata %>% rename(SVSPP = svspp)
+stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
+# link common names to  this dataset
+survdata.w.codes <- inner_join(survdata, stock_list, by = "SVSPP")
+# filter down to a single stock
+selected.spp <- survdata.w.codes %>% filter(common_name %>%
+  stringr::str_to_sentence() %>%
+  stringr::str_replace("Goosefish", "Monkfish") == params$species)
 ```
 
 Diversity in age measurements of a stock is a useful indicator of several factors relating to fishing pressure and recruitment. A decrease in diversity can be due to either truncation, the lack of older or younger ages. Diversity changes as a function of an increase of a single/few ages relative to the usual stock age structure or as more ages become less represented. Diagnostic plots of age are constructed below using fisheries independent data from `survdat`.
@@ -40,38 +39,40 @@ Diversity in age measurements of a stock is a useful indicator of several factor
 
 ```{r, age diversity calculations}
 
-if(selected.spp$AGE %>% unique() %>% length() >= 3){
-  
- selected.age<- selected.spp %>% filter(!is.na(AGE))
+if (selected.spp$AGE %>% unique() %>% length() >= 3) {
+  selected.age <- selected.spp %>% filter(!is.na(AGE))
 
-age.freq<-selected.age %>% 
-      group_by(YEAR, AGE)%>%
-      summarise(age.n=n())
-age.freq<-age.freq %>% group_by(YEAR) %>% mutate(prop=(age.n/sum(age.n))) %>% mutate(prop.ln=(prop*log(prop)))  
+  age.freq <- selected.age %>%
+    group_by(YEAR, AGE) %>%
+    summarise(age.n = n())
+  age.freq <- age.freq %>%
+    group_by(YEAR) %>%
+    mutate(prop = (age.n / sum(age.n))) %>%
+    mutate(prop.ln = (prop * log(prop)))
 
 
-age.freq<-age.freq %>% group_by(YEAR) %>% summarise(shanon.h=(-1*(sum(prop.ln))))          
-
+  age.freq <- age.freq %>%
+    group_by(YEAR) %>%
+    summarise(shanon.h = (-1 * (sum(prop.ln))))
 } else {
-  print ("NOT ENOUGH DATA TO GENERATE METRIC")
+  print("NOT ENOUGH DATA TO GENERATE METRIC")
   age.freq <- tibble::tibble() # make empty tibble for next logical test
 }
 
-if(nrow(age.freq) > 0){
-  
-fig<-age.freq %>%
-  ggplot(aes(x=YEAR,y=shanon.h))+
-  geom_path(group = 1, size=1.2, color="blue")+
-  geom_point(size=3, shape=23, fill="Black")+
-  xlab("Year")+
-  ylab("Shannon diversity index (H)")+
-  theme(axis.text.x = element_text(angle = 90))+
-  ggtitle("Age diversity of", subtitle =params$species )
+if (nrow(age.freq) > 0) {
+  fig <- age.freq %>%
+    ggplot(aes(x = YEAR, y = shanon.h)) +
+    geom_path(group = 1, size = 1.2, color = "blue") +
+    geom_point(size = 3, shape = 23, fill = "Black") +
+    xlab("Year") +
+    ylab("Shannon diversity index (H)") +
+    theme(axis.text.x = element_text(angle = 90)) +
+    ggtitle("Age diversity of", subtitle = params$species)
 
- return(fig)
-  
-} else print("NO DATA")       
-                               
+  return(fig)
+} else {
+  print("NO DATA")
+}
 ```
 
 #### Density plots of age {-}
@@ -80,20 +81,23 @@ Age distribution across years of survey data of `r params$species`. These plots 
 
 ```{r age density, fig.height = 12}
 
-if(selected.spp$AGE %>% unique() %>% length() >= 3){
-  
-fig<-selected.spp %>% 
-  drop_na(AGE)%>% 
-  group_by(YEAR)%>%
-  ggplot(aes(x=AGE, y=YEAR, fill= YEAR %>% as.numeric()))+
-  scale_fill_gradientn(colors = nmfspalette::nmfs_palette("regional web")(4),
-                         name = "Year")+
-  ggridges::geom_density_ridges2()+
-  scale_x_continuous(limits = c(0,(max(selected.spp$AGE, na.rm = TRUE))), 
-                     breaks = seq(0,max(selected.spp$AGE, na.rm = TRUE), by = 5))
+if (selected.spp$AGE %>% unique() %>% length() >= 3) {
+  fig <- selected.spp %>%
+    drop_na(AGE) %>%
+    group_by(YEAR) %>%
+    ggplot(aes(x = AGE, y = YEAR, fill = YEAR %>% as.numeric())) +
+    scale_fill_gradientn(
+      colors = nmfspalette::nmfs_palette("regional web")(4),
+      name = "Year"
+    ) +
+    ggridges::geom_density_ridges2() +
+    scale_x_continuous(
+      limits = c(0, (max(selected.spp$AGE, na.rm = TRUE))),
+      breaks = seq(0, max(selected.spp$AGE, na.rm = TRUE), by = 5)
+    )
 
- return(fig)
-  
-} else print("NO DATA")       
-
+  return(fig)
+} else {
+  print("NO DATA")
+}
 ```

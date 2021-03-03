@@ -12,8 +12,10 @@ latlong_data <- params$latlong_data[params$latlong_data$Species == species, ]
 ### Map of distribution
 Strata maps were pulled and compiled using code from [NOAA/EDAB ECSA](https://github.com/NOAA-EDAB/ECSA). Please note, only fall and spring strata are shown on the map.
 ```{r, ecsa_map}
-map_strata_ecsa(data = latlong_data,
-                species_name = species)
+map_strata_ecsa(
+  data = latlong_data,
+  species_name = species
+)
 ```
 
 ### Latitude and longitude ranges

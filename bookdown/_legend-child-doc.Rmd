@@ -11,5 +11,4 @@ names(lines) <- reg
 
 colors <- nmfspalette::nmfs_palette("regional web")(length(reg))
 names(colors) <- reg
-
 ```

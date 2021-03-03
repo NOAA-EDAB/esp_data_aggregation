@@ -28,16 +28,19 @@ Separate geom_gls() functions were fit for fall and spring measurements; trend l
 #### Survey abundance (raw measurements)
 ```{r, abun_survey}
 generate_plot(survey_data,
-              variable = "ABUNDANCE", 
-              ytitle = "Abundance")
+  variable = "ABUNDANCE",
+  ytitle = "Abundance"
+)
 ```
 
 ##### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}
-indicators <- c("abundance_spring", 
-                "abundance_fall")
+indicators <- c(
+  "abundance_spring",
+  "abundance_fall"
+)
 ```
 
 ```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
@@ -52,22 +55,25 @@ plot_swept(swept_data, var = "abundance")
 
 #### Assessment abundance
 ```{r}
-if(nrow(asmt_data %>% dplyr::filter(Metric == "Abundance")) > 0){
-ndesc <- asmt_data %>% 
-  dplyr::filter(Metric == "Abundance") %>% 
-  #dplyr::mutate(options = paste(Description, Units)) %>%
-  dplyr::select(Age) %>% 
-  unique() %>% 
-  nrow()
-} else ndesc <- 1
+if (nrow(asmt_data %>% dplyr::filter(Metric == "Abundance")) > 0) {
+  ndesc <- asmt_data %>%
+    dplyr::filter(Metric == "Abundance") %>%
+    # dplyr::mutate(options = paste(Description, Units)) %>%
+    dplyr::select(Age) %>%
+    unique() %>%
+    nrow()
+} else {
+  ndesc <- 1
+}
 ```
 
 ```{r, abun_asmt, fig.height = ndesc * 4}
-plot_asmt(asmt_data, 
-          metric = "Abundance", 
-          ytitle = "Abundance",
-          lin = lines, 
-          col = colors)
+plot_asmt(asmt_data,
+  metric = "Abundance",
+  ytitle = "Abundance",
+  lin = lines,
+  col = colors
+)
 ```
 
 ##### Risk {-}
@@ -83,8 +89,9 @@ indicators <- c("asmt_abundance")
 ### Survey summary
 ```{r, abun_summary}
 generate_table(survey_data,
-              variable = "ABUNDANCE", 
-              cap = "Measured abundance")
+  variable = "ABUNDANCE",
+  cap = "Measured abundance"
+)
 ```
 
 ### Data
@@ -94,7 +101,7 @@ generate_table(survey_data,
 data <- survey_data %>%
   get_var_data(variable = "ABUNDANCE") %>%
   dplyr::mutate(variable = variable %>%
-                  format(big.mark = ","))  %>%
+    format(big.mark = ",")) %>%
   character_to_factor()
 
 make_html_table(data, col_names = c("Year", "Season", "Region", "Abundance"))
@@ -104,25 +111,27 @@ make_html_table(data, col_names = c("Year", "Season", "Region", "Abundance"))
 ```{r, swept_abun_data}
 data <- swept_data %>%
   dplyr::select(YEAR, tot.abundance, tot.abund.SE) %>%
-  dplyr::mutate(YEAR = as.numeric(YEAR),
-                tot.abundance = tot.abundance %>%
-                  format(big.mark = ","),
-                tot.abund.SE = tot.abund.SE %>%
-                  round(digits = 1) %>%
-                  format(big.mark = ","))
+  dplyr::mutate(
+    YEAR = as.numeric(YEAR),
+    tot.abundance = tot.abundance %>%
+      format(big.mark = ","),
+    tot.abund.SE = tot.abund.SE %>%
+      round(digits = 1) %>%
+      format(big.mark = ",")
+  )
 
 make_html_table(data, col_names = c("Year", "Abundance", "Standard error"))
 ```
 
 #### Assessment data
 ```{r, asmt_abun_data}
-data <- asmt_data %>% 
-                dplyr::filter(Metric == "Abundance") %>%
-                dplyr::select(-Species, -Metric) %>%
-                dplyr::mutate(Value = Value %>%
-                                round(digits = 0)) %>%
-                dplyr::mutate(Value = Value %>%
-                              format(big.mark = ",")) %>%
+data <- asmt_data %>%
+  dplyr::filter(Metric == "Abundance") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+    round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+    format(big.mark = ",")) %>%
   character_to_factor()
 
 make_html_table(data, col_names = colnames(data))

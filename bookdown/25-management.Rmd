@@ -7,16 +7,20 @@
 ```{r, management_data, cache = params$cache}
 asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
 
-ad_rating_data <- params$asmt_sum_data %>% 
-  dplyr::select(Species, Region, `Assessment Year`, `Last Data Year`,
-                `Biological Input Data`, `Life History Data`, 
-                `Composition Input Data`, `Ecosystem Linkage`, `FSSI Stock?`,
-                `Review Result`) %>%
-  dplyr::rename(`Biological Data Rating (2019)` = `Biological Input Data`,
-                `Biological Data Rating (before 2019)` = `Life History Data`,
-                `Size Data Rating` = `Composition Input Data`,
-                `Ecosystem Linkage Data Rating` = `Ecosystem Linkage`,
-                `FSSI status` = `FSSI Stock?`)
+ad_rating_data <- params$asmt_sum_data %>%
+  dplyr::select(
+    Species, Region, `Assessment Year`, `Last Data Year`,
+    `Biological Input Data`, `Life History Data`,
+    `Composition Input Data`, `Ecosystem Linkage`, `FSSI Stock?`,
+    `Review Result`
+  ) %>%
+  dplyr::rename(
+    `Biological Data Rating (2019)` = `Biological Input Data`,
+    `Biological Data Rating (before 2019)` = `Life History Data`,
+    `Size Data Rating` = `Composition Input Data`,
+    `Ecosystem Linkage Data Rating` = `Ecosystem Linkage`,
+    `FSSI status` = `FSSI Stock?`
+  )
 ```
 
 ## Stock assessment and data quality information

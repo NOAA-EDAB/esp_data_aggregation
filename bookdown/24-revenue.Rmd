@@ -27,17 +27,21 @@ indicators <- c("revenue")
 
 ### Data
 ```{r, revenue_data}
-data <- com_data %>% 
-                dplyr::select(Year, State, Dollars_adj, Pounds) %>%
-                dplyr::mutate(Dollars_adj = Dollars_adj %>% 
-                                round(digits = 0) %>%
-                                format(big.mark = ","),
-                              State = State %>% 
-                                stringr::str_to_title(),
-                              Pounds = Pounds %>%
-                                format(big.mark = ",")) %>%
-                dplyr::rename("Revenue (2019 dollars)" = "Dollars_adj",
-                              "Commercial catch (lb)" = "Pounds") %>%
+data <- com_data %>%
+  dplyr::select(Year, State, Dollars_adj, Pounds) %>%
+  dplyr::mutate(
+    Dollars_adj = Dollars_adj %>%
+      round(digits = 0) %>%
+      format(big.mark = ","),
+    State = State %>%
+      stringr::str_to_title(),
+    Pounds = Pounds %>%
+      format(big.mark = ",")
+  ) %>%
+  dplyr::rename(
+    "Revenue (2019 dollars)" = "Dollars_adj",
+    "Commercial catch (lb)" = "Pounds"
+  ) %>%
   character_to_factor()
 
 make_html_table(data, col_names = colnames(data))
