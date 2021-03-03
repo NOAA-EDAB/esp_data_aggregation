@@ -36,9 +36,12 @@ plot_swept <- function(x, var){
                          labels = scales::comma)
     
     y <- x %>%
-      dplyr::filter(is.na(value) == FALSE)
+      dplyr::filter(is.na(value) == FALSE) %>%
+      dplyr::group_by(Season) %>%
+      dplyr::summarise(n_points = length(value)) %>%
+      dplyr::filter(n_points >= 30)
     
-    if (nrow(y) > 30) { 
+    if (nrow(y) > 0) { 
       fig <- fig + 
         ecodata::geom_gls(aes(x = YEAR,
                               y = value,

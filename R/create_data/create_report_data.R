@@ -34,8 +34,8 @@ recruit <- assessmentdata::stockAssessmentData %>%
 write.csv(recruit, file = here::here("data", "recruitment_data.csv"))
 
 ## survey data ----
-#data <- readRDS(here::here("data", "survdat_03012021.RDS"))
-data <- readRDS(here::here("data", "survdat.RDS"))
+data <- readRDS(here::here("data", "survdat_03022021.RDS"))
+#data <- readRDS(here::here("data", "survdat.RDS"))
 data <- tibble::as_tibble(data$survdat)
 
 key <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
