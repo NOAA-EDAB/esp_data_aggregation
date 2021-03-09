@@ -71,16 +71,17 @@ knitr::knit_hooks$set(time_it = local({
   }
 }))
 
-knitr::opts_chunk$set(echo = FALSE,
-                      message = FALSE, 
-                      warning = FALSE, 
-                      #time_it = TRUE,
-                      fig.width = 8, 
-                      fig.align = 'center',
-                      fig.cap = params$species,
-                      fig.path = params$path
-                     # cache.path = here::here("bookdown/cache/", "")
-                      )
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  # time_it = TRUE,
+  fig.width = 8,
+  fig.align = "center",
+  fig.cap = params$species,
+  fig.path = params$path
+  # cache.path = here::here("bookdown/cache/", "")
+)
 ```
 
 ```{r, setup2, cache = params$cache}
@@ -96,23 +97,22 @@ source(here::here("R/full_report_functions", "make_html_table.R"))
 source(here::here("R/full_report_functions/risk_functions", "plot_risk_by_year.R"))
 source(here::here("R/full_report_functions/risk_functions", "plot_risk_within_species.R"))
 source(here::here("R/full_report_functions/risk_functions", "add_missing_na.R"))
-
 ```
 
 ```{r, species_data}
 # data used in multiple chapters
 species <- params$species_ID
 
-risk_data <- params$risk_data[params$risk_data$Species == species, ] 
+risk_data <- params$risk_data[params$risk_data$Species == species, ]
 risk_data <- risk_data %>% missing_na()
 
 risk_year_hist_data <- params$risk_year_hist_data[params$risk_year_hist_data$Species == species, ]
 risk_year_hist_data <- risk_year_hist_data %>% missing_na()
 
-risk_year_value_data <- params$risk_year_value_data[params$risk_year_value_data$Species == species, ] 
+risk_year_value_data <- params$risk_year_value_data[params$risk_year_value_data$Species == species, ]
 risk_year_value_data <- risk_year_value_data %>% missing_na()
 
-risk_species_data <- params$risk_species_data[params$risk_species_data$Species == species, ] 
+risk_species_data <- params$risk_species_data[params$risk_species_data$Species == species, ]
 risk_species_data <- risk_species_data %>% missing_na()
 ```
 

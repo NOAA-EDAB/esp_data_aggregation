@@ -1,5 +1,5 @@
 # these packages have to be installed for other packages to get installed
-#install.packages(c("remotes", "ggplot2", "nlstools", "rgeos", "viridis", "ggthemes", "here"))
+# install.packages(c("remotes", "ggplot2", "nlstools", "rgeos", "viridis", "ggthemes", "here"))
 
 install.packages("devtools")
 devtools::install_deps(dependencies = TRUE)
@@ -16,16 +16,16 @@ remotes::install_github("kaskr/TMB_contrib_R/TMBhelper")
 remotes::install_github("James-Thorson/utilities")
 remotes::install_github("James-Thorson-NOAA/FishLife")
 
-#remotes::install_github("ropensci/rnaturalearth")
+# remotes::install_github("ropensci/rnaturalearth")
 
 # load all packages
-#renv::restore(lockfile = here::here("bookdown", "renv.lock"))
+# renv::restore(lockfile = here::here("bookdown", "renv.lock"))
 
-#install.packages("parallel")
+# install.packages("parallel")
 
-#my_packages <- library()$results[,1]
+# my_packages <- library()$results[,1]
 
-#write.csv(my_packages, here::here("packages_to_install.csv"))
-#my_packages <- paste(my_packages, cat = ", ")
-#usethis::use_description(fields = list(Suggests = my_packages),
+# write.csv(my_packages, here::here("packages_to_install.csv"))
+# my_packages <- paste(my_packages, cat = ", ")
+# usethis::use_description(fields = list(Suggests = my_packages),
 #                         check_name = FALSE)

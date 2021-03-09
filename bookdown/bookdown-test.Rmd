@@ -97,8 +97,10 @@ latlong_data <- params$latlong_data[params$latlong_data$Species == species, ]
 ### Map of distribution
 Strata maps were pulled and compiled using code from [NOAA/EDAB ECSA](https://github.com/NOAA-EDAB/ECSA). Please note, only fall and spring strata are shown on the map.
 ```{r, ecsa_map}
-map_strata_ecsa(data = latlong_data,
-                species_name = species)
+map_strata_ecsa(
+  data = latlong_data,
+  species_name = species
+)
 ```
 
 ### Latitude and longitude ranges
@@ -152,16 +154,18 @@ data <- ecodata::habitat_vulnerability %>%
   dplyr::filter(Species == species) %>%
   dplyr::select(-Species)
 
-data <- data[,c(8, 1:7)]
+data <- data[, c(8, 1:7)]
 
 make_html_table(data,
-                col_names = c("EPU", "Habitat name", "Habitat vulnerability", 
-                             "Importance of habitat to eggs/larvae",
-                             "Importance of habitat to juveniles/YOY",
-                             "Importance of habitat to adults",
-                             "Importance of habitat to spawning adults",
-                             "Overall species vulnerability"))
-
+  col_names = c(
+    "EPU", "Habitat name", "Habitat vulnerability",
+    "Importance of habitat to eggs/larvae",
+    "Importance of habitat to juveniles/YOY",
+    "Importance of habitat to adults",
+    "Importance of habitat to spawning adults",
+    "Overall species vulnerability"
+  )
+)
 ```
 
 <!--chapter:end:07-habitat-vulnerability.Rmd-->
@@ -202,7 +206,6 @@ suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(nlstools))
 library(dbutils)
 library(survdat)
-
 ```
 
 ## Size at first maturity 
@@ -215,68 +218,65 @@ The relationship between sexual maturity by body size is a well established life
 
 ```{r data wrangling, cache = params$cache, cache.lazy = FALSE}
 
-survdata<-readRDS(here::here("data", "survdat_pull_bio.rds"))
+survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
 
-survdata<-survdata %>% mutate(SVSPP=as.numeric(SVSPP))
+survdata <- survdata %>% mutate(SVSPP = as.numeric(SVSPP))
 stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
-stock_list_all_strata<-stock_list_all_strata %>% rename(SVSPP=svspp)
-stock_list<-stock_list_all_strata %>% dplyr::distinct(SVSPP,.keep_all =T)
+stock_list_all_strata <- stock_list_all_strata %>% rename(SVSPP = svspp)
+stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
 
-survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
+survdata.w.codes <- inner_join(survdata, stock_list, by = "SVSPP")
 
 
 
-selected.surv<-survdata.w.codes %>%
+selected.surv <- survdata.w.codes %>%
   dplyr::mutate(common_name = common_name %>%
-                  stringr::str_to_sentence()) %>%
-  dplyr::filter(common_name == species & YEAR>1980)
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(common_name == species & YEAR > 1980)
 
-#con <- connect_to_database(server="sole",uid="RTABANDERA")
-#surv.maturity<-get_maturity(con)
-#surv_maturity<-surv.maturity$data
-#write.csv(surv.maturity, file = "surv_maturity_codes.csv")
-
-
-
-#only take records with a maturity status associated
-
-selected.surv.clean<-selected.surv %>% drop_na(MATURITY) 
+# con <- connect_to_database(server="sole",uid="RTABANDERA")
+# surv.maturity<-get_maturity(con)
+# surv_maturity<-surv.maturity$data
+# write.csv(surv.maturity, file = "surv_maturity_codes.csv")
 
 
 
-#recode sexed fish to readable names
-#sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown   
-selected.surv.clean$MATURITY <-recode(selected.surv.clean$MATURITY, "D"="Mature" , "I"="Immature", "R"="Mature", "S"= "Mature", "T"= "Mature", "U"="Mature")
-selected.surv.f<- selected.surv.clean %>% filter(SEX=="female" | MATURITY !="X")
+# only take records with a maturity status associated
 
-# conditionally run models based on having more than 3 rows 
-if(nrow(selected.surv.f)>3){
+selected.surv.clean <- selected.surv %>% drop_na(MATURITY)
 
 
 
-# X= unknown , I = immature, D= developing, R S T U convert to developed
+# recode sexed fish to readable names
+# sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
+selected.surv.clean$MATURITY <- recode(selected.surv.clean$MATURITY, "D" = "Mature", "I" = "Immature", "R" = "Mature", "S" = "Mature", "T" = "Mature", "U" = "Mature")
+selected.surv.f <- selected.surv.clean %>% filter(SEX == "female" | MATURITY != "X")
 
-
-#bin the years of fish into decades to compare if model parameters are chaging 
-selected.surv.f<-selected.surv.f %>% mutate(decade=ggplot2::cut_width(YEAR, width = 10, boundary = 1980))
-levels(selected.surv.f$decade)<-c( "1980","1990", "2000","2010")
-#recode the maturity col into factor
-selected.surv.f<-selected.surv.f %>% mutate(MATURITY=as.factor(MATURITY))
-
-
-maturity.mod<-glm(MATURITY~LENGTH+decade+LENGTH*decade, data=selected.surv.f, family=binomial)
+# conditionally run models based on having more than 3 rows
+if (nrow(selected.surv.f) > 3) {
 
 
 
-pretty_mod<-papeR::prettify(summary(maturity.mod))
-
-#summary(maturity.mod)  
-}else("Not enough data to fit model")
-  
+  # X= unknown , I = immature, D= developing, R S T U convert to developed
 
 
+  # bin the years of fish into decades to compare if model parameters are chaging
+  selected.surv.f <- selected.surv.f %>% mutate(decade = ggplot2::cut_width(YEAR, width = 10, boundary = 1980))
+  levels(selected.surv.f$decade) <- c("1980", "1990", "2000", "2010")
+  # recode the maturity col into factor
+  selected.surv.f <- selected.surv.f %>% mutate(MATURITY = as.factor(MATURITY))
 
 
+  maturity.mod <- glm(MATURITY ~ LENGTH + decade + LENGTH * decade, data = selected.surv.f, family = binomial)
+
+
+
+  pretty_mod <- papeR::prettify(summary(maturity.mod))
+
+  # summary(maturity.mod)
+} else {
+  ("Not enough data to fit model")
+}
 ```
 
 ## Model results
@@ -285,9 +285,8 @@ pretty_mod<-papeR::prettify(summary(maturity.mod))
 
 ```{r, model table, echo=FALSE, message=FALSE, warning=FALSE}
 
-if(nrow(selected.surv.f)>3){
- 
-knitr::kable(pretty_mod, digits = 3)
+if (nrow(selected.surv.f) > 3) {
+  knitr::kable(pretty_mod, digits = 3)
 }
 ```
 
@@ -296,23 +295,22 @@ knitr::kable(pretty_mod, digits = 3)
 `r if(nrow(selected.surv.f)>3){"The significance of differences among decades can be determined by referencing the model summary table above   "}`
 
 ```{r model results and L50}
-if(nrow(selected.surv.f)>3){
-   if(summary(maturity.mod)$coefficients[,4][1]<0.05){
+if (nrow(selected.surv.f) > 3) {
+  if (summary(maturity.mod)$coefficients[, 4][1] < 0.05) {
+    L50.1980 <- (-coef(maturity.mod)[1]) / coef(maturity.mod)[2] # 1980
+    L50.1990 <- (-(coef(maturity.mod)[1] + coef(maturity.mod)[3])) / (coef(maturity.mod)[2] + coef(maturity.mod)[6]) # 1990
+    L50.2000 <- (-(coef(maturity.mod)[1] + coef(maturity.mod)[4])) / (coef(maturity.mod)[2] + coef(maturity.mod)[7]) # 2000
+    L50.2010 <- (-(coef(maturity.mod)[1] + coef(maturity.mod)[5])) / (coef(maturity.mod)[2] + coef(maturity.mod)[8]) # 2010
 
-
-L50.1980<-(-coef(maturity.mod)[1])/coef(maturity.mod)[2] # 1980
-L50.1990<-(-(coef(maturity.mod)[1]+coef(maturity.mod)[3]))/(coef(maturity.mod)[2]+coef(maturity.mod)[6]) # 1990
-L50.2000<-(-(coef(maturity.mod)[1]+coef(maturity.mod)[4]))/(coef(maturity.mod)[2]+coef(maturity.mod)[7]) # 2000
-L50.2010<-(-(coef(maturity.mod)[1]+coef(maturity.mod)[5]))/(coef(maturity.mod)[2]+coef(maturity.mod)[8]) # 2010
-
-L50<-data.frame(L50.1980,L50.1990,L50.2000,L50.2010)
-row.names(L50)<-c("Length at 50% maturity")
-colnames(L50)<-c("1980","1990","2000","2010")
-L50.p<-papeR::prettify(L50)
-knitr::kable(L50.p, digits = 3)
-}}else("Non-significant")
-
-
+    L50 <- data.frame(L50.1980, L50.1990, L50.2000, L50.2010)
+    row.names(L50) <- c("Length at 50% maturity")
+    colnames(L50) <- c("1980", "1990", "2000", "2010")
+    L50.p <- papeR::prettify(L50)
+    knitr::kable(L50.p, digits = 3)
+  }
+} else {
+  ("Non-significant")
+}
 ```
 
 
@@ -320,31 +318,32 @@ knitr::kable(L50.p, digits = 3)
 
 ```{r, probability plot}
 
-if(nrow(selected.surv.f)>3){
-   if(summary(maturity.mod)$coefficients[,4][1]<0.05){
-decade1980<-boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("1980",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
-decade1990<-boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("1990",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
-decade2000<-boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("2000",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
-decade2010<-boot::inv.logit(predict(maturity.mod, data.frame(LENGTH=seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)), decade=rep("2010",length(seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH)))), type="response")))
-selected.surv.LENGTH<-seq(min(selected.surv.f$LENGTH),max(selected.surv.f$LENGTH))
+if (nrow(selected.surv.f) > 3) {
+  if (summary(maturity.mod)$coefficients[, 4][1] < 0.05) {
+    decade1980 <- boot::inv.logit(predict(maturity.mod, data.frame(LENGTH = seq(min(selected.surv.f$LENGTH), max(selected.surv.f$LENGTH)), decade = rep("1980", length(seq(min(selected.surv.f$LENGTH), max(selected.surv.f$LENGTH)))), type = "response")))
+    decade1990 <- boot::inv.logit(predict(maturity.mod, data.frame(LENGTH = seq(min(selected.surv.f$LENGTH), max(selected.surv.f$LENGTH)), decade = rep("1990", length(seq(min(selected.surv.f$LENGTH), max(selected.surv.f$LENGTH)))), type = "response")))
+    decade2000 <- boot::inv.logit(predict(maturity.mod, data.frame(LENGTH = seq(min(selected.surv.f$LENGTH), max(selected.surv.f$LENGTH)), decade = rep("2000", length(seq(min(selected.surv.f$LENGTH), max(selected.surv.f$LENGTH)))), type = "response")))
+    decade2010 <- boot::inv.logit(predict(maturity.mod, data.frame(LENGTH = seq(min(selected.surv.f$LENGTH), max(selected.surv.f$LENGTH)), decade = rep("2010", length(seq(min(selected.surv.f$LENGTH), max(selected.surv.f$LENGTH)))), type = "response")))
+    selected.surv.LENGTH <- seq(min(selected.surv.f$LENGTH), max(selected.surv.f$LENGTH))
 
-selected.surv.simlulation<-data.frame(decade1980, decade1990, decade2000,decade2010,selected.surv.LENGTH)
-selected.surv.simlulation<-selected.surv.simlulation %>% pivot_longer(!selected.surv.LENGTH, names_to="decade", values_to="pred")
-
-
-selected.surv.simlulation %>%
-  ggplot(aes(x=selected.surv.LENGTH,y=pred, color=decade))+
-  geom_line(size=3)+
-  xlab("Length (cm)")+
-  ylab("Probability")+
-  ggtitle("Length at 50% maturity of" , subtitle = params$species)
-  annotate("text", label=c("Mature","Immature"), x=30,y= c(1.05,-.05))+
-  geom_hline(yintercept=c(1,0,0.5))+
-  scale_color_manual(labels=c("<1980"," 1981-1990","1991-2000",">2010"), values =c( "blue","firebrick","darkviolet","deepskyblue"), name="Decade")+
-  theme_minimal()
-}}else("Non-significant")
+    selected.surv.simlulation <- data.frame(decade1980, decade1990, decade2000, decade2010, selected.surv.LENGTH)
+    selected.surv.simlulation <- selected.surv.simlulation %>% pivot_longer(!selected.surv.LENGTH, names_to = "decade", values_to = "pred")
 
 
+    selected.surv.simlulation %>%
+      ggplot(aes(x = selected.surv.LENGTH, y = pred, color = decade)) +
+      geom_line(size = 3) +
+      xlab("Length (cm)") +
+      ylab("Probability") +
+      ggtitle("Length at 50% maturity of", subtitle = params$species)
+    annotate("text", label = c("Mature", "Immature"), x = 30, y = c(1.05, -.05)) +
+      geom_hline(yintercept = c(1, 0, 0.5)) +
+      scale_color_manual(labels = c("<1980", " 1981-1990", "1991-2000", ">2010"), values = c("blue", "firebrick", "darkviolet", "deepskyblue"), name = "Decade") +
+      theme_minimal()
+  }
+} else {
+  ("Non-significant")
+}
 ```
 
 

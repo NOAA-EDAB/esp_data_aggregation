@@ -9,7 +9,7 @@ survey_data <- params$survey_data[params$survey_data$Species == species, ]
 
 asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
 
-swept_data <-  params$swept_data[ params$swept_data$Species == species, ]
+swept_data <- params$swept_data[params$swept_data$Species == species, ]
 ```
 
 ```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
@@ -26,16 +26,19 @@ Separate geom_gls() functions were fit for fall and spring measurements; trend l
 #### Survey biomass (raw measurements)
 ```{r, biomass}
 generate_plot(survey_data,
-              variable = "BIOMASS", 
-              ytitle = "Biomass")
+  variable = "BIOMASS",
+  ytitle = "Biomass"
+)
 ```
 
 ##### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}
-indicators <- c("biomass_spring", 
-                "biomass_fall")
+indicators <- c(
+  "biomass_spring",
+  "biomass_fall"
+)
 ```
 
 ```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
@@ -50,22 +53,25 @@ plot_swept(swept_data, var = "biomass")
 
 #### Assessment biomass
 ```{r}
-if(nrow(asmt_data %>% dplyr::filter(Metric == "Biomass")) > 0){
-ndesc <- asmt_data %>% 
-  dplyr::filter(Metric == "Biomass") %>% 
-  #dplyr::mutate(options = paste(Description, Units)) %>%
-  dplyr::select(Age) %>% 
-  unique() %>% 
-  nrow()
-} else ndesc <- 1
+if (nrow(asmt_data %>% dplyr::filter(Metric == "Biomass")) > 0) {
+  ndesc <- asmt_data %>%
+    dplyr::filter(Metric == "Biomass") %>%
+    # dplyr::mutate(options = paste(Description, Units)) %>%
+    dplyr::select(Age) %>%
+    unique() %>%
+    nrow()
+} else {
+  ndesc <- 1
+}
 ```
 
 ```{r, biomass_asmt,  fig.height = ndesc * 4 + 1}
-plot_asmt(asmt_data, 
-          metric = "Biomass", 
-          ytitle = "Biomass",
-          lin = lines, 
-          col = colors)
+plot_asmt(asmt_data,
+  metric = "Biomass",
+  ytitle = "Biomass",
+  lin = lines,
+  col = colors
+)
 ```
 
 ##### Risk {-}
@@ -81,18 +87,19 @@ indicators <- c("asmt_biomass")
 ### Survey summary
 ```{r, biomass_summary}
 generate_table(survey_data,
-              variable = "BIOMASS", 
-              cap = "Measured biomass")
+  variable = "BIOMASS",
+  cap = "Measured biomass"
+)
 ```
 
 ### Data
 
 #### Survey data (raw measurements)
 ```{r, biomass_data}
-data <- survey_data %>% 
+data <- survey_data %>%
   get_var_data(variable = "BIOMASS") %>%
   dplyr::mutate(variable = variable %>%
-                     format(big.mark = ",")) %>%
+    format(big.mark = ",")) %>%
   character_to_factor()
 
 make_html_table(data, col_names = c("Year", "Season", "Region", "Biomass"))
@@ -102,12 +109,14 @@ make_html_table(data, col_names = c("Year", "Season", "Region", "Biomass"))
 ```{r, swept_biomass_data}
 data <- swept_data %>%
   dplyr::select(YEAR, tot.biomass, tot.bio.SE) %>%
-  dplyr::mutate(YEAR = as.numeric(YEAR),
-                tot.biomass = tot.biomass %>%
-                  format(big.mark = ","),
-                tot.bio.SE = tot.bio.SE %>%
-                  round(digits = 1) %>%
-                  format(big.mark = ","))
+  dplyr::mutate(
+    YEAR = as.numeric(YEAR),
+    tot.biomass = tot.biomass %>%
+      format(big.mark = ","),
+    tot.bio.SE = tot.bio.SE %>%
+      round(digits = 1) %>%
+      format(big.mark = ",")
+  )
 
 make_html_table(data, col_names = c("Year", "Biomass (kg)", "Standard error"))
 ```
@@ -118,9 +127,9 @@ data <- asmt_data %>%
   dplyr::filter(Metric == "Biomass") %>%
   dplyr::select(-Species, -Metric) %>%
   dplyr::mutate(Value = Value %>%
-                  round(digits = 0)) %>%
+    round(digits = 0)) %>%
   dplyr::mutate(Value = Value %>%
-                  format(big.mark = ",")) %>%
+    format(big.mark = ",")) %>%
   character_to_factor()
 
 make_html_table(data, col_names = colnames(data))

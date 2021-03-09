@@ -1,22 +1,25 @@
 ##### Rank of change compared to historical, ranked among stocks {-}
 ```{r, fig.height = length(indicators) + 2}
 plot_risk_by_year(risk_year_hist_data,
-                  indicator = indicators,
-                  title = "Change compared to historical",
-                  include_legend = "yes")
+  indicator = indicators,
+  title = "Change compared to historical",
+  include_legend = "yes"
+)
 ```
 
 ##### Rank of value (magnitude) compared to other stocks {-}
 ```{r, fig.height = length(indicators) + 1}
 plot_risk_by_year(risk_year_value_data,
-                  indicator = indicators,
-                  title = "Value compared to other stocks",
-                  include_legend = "no")
+  indicator = indicators,
+  title = "Value compared to other stocks",
+  include_legend = "no"
+)
 ```
 
 ##### Rank of value (magnitude) within a single stock, compared to all years {-}
 ```{r, fig.height = length(indicators) + 1}
 plot_risk_by_stock(risk_species_data,
-                  indicator = indicators,
-                  include_legend = "no")
+  indicator = indicators,
+  include_legend = "no"
+)
 ```

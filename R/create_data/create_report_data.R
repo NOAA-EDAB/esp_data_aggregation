@@ -34,7 +34,7 @@ recruit <- assessmentdata::stockAssessmentData %>%
 write.csv(recruit, file = here::here("data", "recruitment_data.csv"))
 
 ## survey data ----
-data <- readRDS(here::here("data", "survdat_03022021.RDS"))
+data <- readRDS(here::here("data", "survdat_03032021.RDS")) # does NOT have bio data
 #data <- readRDS(here::here("data", "survdat.RDS"))
 data <- tibble::as_tibble(data$survdat)
 

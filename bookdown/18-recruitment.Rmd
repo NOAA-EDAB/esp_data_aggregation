@@ -15,22 +15,25 @@ Recruitment data were pulled from ``r params$asmt_source``. Separate geom_gls() 
 
 ### Figure
 ```{r}
-if(nrow(asmt_data %>% dplyr::filter(Metric == "Recruitment")) > 0){
-ndesc <- asmt_data %>% 
-  dplyr::filter(Metric == "Recruitment") %>% 
-  #dplyr::mutate(options = paste(Description, Units)) %>%
-  dplyr::select(Age) %>% 
-  unique() %>% 
-  nrow()
-} else ndesc <- 1
+if (nrow(asmt_data %>% dplyr::filter(Metric == "Recruitment")) > 0) {
+  ndesc <- asmt_data %>%
+    dplyr::filter(Metric == "Recruitment") %>%
+    # dplyr::mutate(options = paste(Description, Units)) %>%
+    dplyr::select(Age) %>%
+    unique() %>%
+    nrow()
+} else {
+  ndesc <- 1
+}
 ```
 
 ```{r, recruitment, fig.height = ndesc * 4 + 1}
-plot_asmt(asmt_data, 
-          metric = "Recruitment", 
-          ytitle = "Recruitment",
-          lin = lines, 
-          col = colors)
+plot_asmt(asmt_data,
+  metric = "Recruitment",
+  ytitle = "Recruitment",
+  lin = lines,
+  col = colors
+)
 ```
 
 ##### Risk {-}
@@ -46,14 +49,16 @@ indicators <- c("recruitment")
 ### Data
 
 ```{r, recruit_data}
-data <- asmt_data %>% 
+data <- asmt_data %>%
   dplyr::filter(Metric == "Recruitment") %>%
   dplyr::select(-Species, -Metric) %>%
   dplyr::mutate(Value = Value %>%
-                  round(digits = 0)) %>%
+    round(digits = 0)) %>%
   dplyr::mutate(Value = Value %>%
-                  format(big.mark = ",",
-                         scientific = FALSE)) %>%
+    format(
+      big.mark = ",",
+      scientific = FALSE
+    )) %>%
   character_to_factor()
 
 make_html_table(data, col_names = colnames(data))

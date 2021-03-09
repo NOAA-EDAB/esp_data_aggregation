@@ -11,20 +11,20 @@ suppressPackageStartupMessages(library(dbutils))
 The range of depths that a species occupies is linked to many other habitat characteristics such as benthic structure, food availability, or temperature. Thus, observed depth can signal changes in habitat suitability. Changes in this metric can indicate the required resources are changing their distribution on the landscape. Seasonal differences in occurrence can also help identify essential habitat and the timing of migration to acquire seasonal resources 
 
 ```{r, depth_data_cache, cache = params$cache}
-#survdata<-readRDS(here::here("survdat_pull_bio.rds"))
-#survdata <- ricky_survey 
+# survdata<-readRDS(here::here("survdat_pull_bio.rds"))
+# survdata <- ricky_survey
 
 survdata <- params$ricky_survey_data
 
 stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
-stock_list_all_strata<-stock_list_all_strata %>% dplyr::rename(SVSPP=svspp)
-stock_list<-stock_list_all_strata %>% dplyr::distinct(SVSPP,.keep_all =T)
+stock_list_all_strata <- stock_list_all_strata %>% dplyr::rename(SVSPP = svspp)
+stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
 ```
 
 ```{r, depth_data}
-survdata<-survdata %>% dplyr::mutate(SVSPP=as.numeric(SVSPP))
+survdata <- survdata %>% dplyr::mutate(SVSPP = as.numeric(SVSPP))
 
-survdata.w.codes <- dplyr::inner_join(survdata, stock_list, by= "SVSPP" ) %>%
+survdata.w.codes <- dplyr::inner_join(survdata, stock_list, by = "SVSPP") %>%
   dplyr::mutate(common_name = stringr::str_to_sentence(common_name))
 
 # # abundance is adjusted but not length for bigalo data
@@ -32,25 +32,26 @@ survdata.w.codes <- dplyr::inner_join(survdata, stock_list, by= "SVSPP" ) %>%
 # # filter by group giv list of svspp codes
 # get_fish_info()
 # surv.species<-survdat::get_species(channel)
-# 
+#
 # surv.species.1<-surv.species$data
 # surv.code<-surv.species.1 %>% dplyr::distinct(SVSPP,.keep_all =T)
 
 # black sea bass is svspp= 	141 bluefish =135
 
-test.sp.code<-c(141,135)
+test.sp.code <- c(141, 135)
 
-selected.spp<-survdata.w.codes %>% dplyr::filter(common_name == species)
+selected.spp <- survdata.w.codes %>% dplyr::filter(common_name == species)
 
-selected.spp.sum<- selected.spp %>% 
-  dplyr::group_by(YEAR, SEASON) %>% 
-  dplyr::summarise(ave.d=mean(DEPTH), 
-            sd.d= sd(DEPTH,na.rm = TRUE),
-            ave.t=mean(BOTTEMP), 
-            sd.t=sd(BOTTEMP,na.rm = TRUE))
+selected.spp.sum <- selected.spp %>%
+  dplyr::group_by(YEAR, SEASON) %>%
+  dplyr::summarise(
+    ave.d = mean(DEPTH),
+    sd.d = sd(DEPTH, na.rm = TRUE),
+    ave.t = mean(BOTTEMP),
+    sd.t = sd(BOTTEMP, na.rm = TRUE)
+  )
 
 has_data <- nrow(selected.spp.sum) > 0
-
 ```
 
 ### Figures
@@ -58,39 +59,47 @@ has_data <- nrow(selected.spp.sum) > 0
 ```{r, depth_fig, eval = has_data}
 
 selected.spp.sum %>%
-  ggplot(aes(x=YEAR %>% as.numeric(), 
-             y=-ave.d, 
-             color=SEASON, 
-             group=SEASON))+
-  geom_line()+
-  geom_point()+
-  geom_pointrange(aes(ymin=-ave.d-sd.d, 
-                      ymax=-ave.d+sd.d))+
-  xlab("Year")+
-  ylab("depth of trawl (ft)")+
-  ggtitle("Seasonal depth profile of", 
-          subtitle=species)+
+  ggplot(aes(
+    x = YEAR %>% as.numeric(),
+    y = -ave.d,
+    color = SEASON,
+    group = SEASON
+  )) +
+  geom_line() +
+  geom_point() +
+  geom_pointrange(aes(
+    ymin = -ave.d - sd.d,
+    ymax = -ave.d + sd.d
+  )) +
+  xlab("Year") +
+  ylab("depth of trawl (ft)") +
+  ggtitle("Seasonal depth profile of",
+    subtitle = species
+  ) +
   theme(axis.text.x = element_text(angle = 90))
-
 ```
 
 ```{r, depth_fig2, eval = has_data}
 
 selected.spp.sum %>%
-  ggplot(aes(x=YEAR %>% as.numeric(), 
-             y=ave.t, 
-             color=SEASON, 
-             group=SEASON))+
-  geom_line()+
-  geom_point()+
-  geom_pointrange(aes(ymin=ave.t-sd.t, 
-                      ymax=ave.t+sd.t))+
-  xlab("Year")+
-  ylab("Bottom temperature (°C)")+
-  ggtitle("Seasonal bottom temperature of tows that contain", 
-          subtitle=species)+
+  ggplot(aes(
+    x = YEAR %>% as.numeric(),
+    y = ave.t,
+    color = SEASON,
+    group = SEASON
+  )) +
+  geom_line() +
+  geom_point() +
+  geom_pointrange(aes(
+    ymin = ave.t - sd.t,
+    ymax = ave.t + sd.t
+  )) +
+  xlab("Year") +
+  ylab("Bottom temperature (°C)") +
+  ggtitle("Seasonal bottom temperature of tows that contain",
+    subtitle = species
+  ) +
   theme(axis.text.x = element_text(angle = 90))
-
 ```
 
 ```{r, no_data, eval = has_data == FALSE}

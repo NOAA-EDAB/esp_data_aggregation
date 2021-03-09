@@ -8,9 +8,9 @@ odbc::odbcListDrivers()
 `%like%` <- data.table::`%like%`
 pull <- survdat::get_survdat_data(channel,
                           all.season = TRUE,
-                          getBio = TRUE)
+                          getBio = FALSE)
 
-saveRDS(pull, here::here("data", "survdat_03022021_B.RDS"))
+saveRDS(pull, here::here("data", "survdat_03032021.RDS"))
 # still too short :(
 
 pull <- readRDS(here::here("data", "survdat_03022021.RDS"))
