@@ -117,7 +117,7 @@ The gonadal development stage can vary between immature and mature. Once mature,
 ```{r, maturity_classification_ plot}
 
 if (nrow(selected_surv_mat_clean > 5)) {
-  mat_sum_season <- selected.surv.clean %>%
+  mat_sum_season <- selected_surv_mat_clean %>%
     group_by(LENGTH, MATURITY, SEASON) %>%
     summarise(mat.code.count = length(MATURITY)) # problems with dplyr::n()
 
