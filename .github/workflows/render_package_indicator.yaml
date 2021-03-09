@@ -1,0 +1,60 @@
+  
+on:
+  workflow_dispatch:
+
+name: render_package_indicator_reports
+
+jobs: 
+  build1:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+              
+      - name: Install Pandoc
+        run: brew install pandoc
+        shell: bash
+
+      - name: Install command line packages
+        run: |        
+          sudo apt-get install  libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
+        shell: bash
+# openjdk-8-jre           sudo R CMD javareconf
+        
+      - name: Set up R
+        uses: r-lib/actions/setup-r@master
+        with: 
+          r-version: '4.0.3' # problem with using 4.0.4        
+      
+      - name: Cache R packages
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: big-cache-DESCRIPTION-02172021-2
+
+      - name: Load R packages (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          sudo R CMD javareconf
+          Rscript -e 'install.packages("devtools")
+          devtools::install_deps(dependencies = TRUE)'
+                 
+      - name: Render reports
+        run: |
+          Rscript -e 'devtools::install_github("NOAA-EDAB/esp_data_aggregation@package)"
+          lapply(NEesp::species_key$Species, 
+                 NEesp::render_ind_report)'
+          
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: action_reports # The folder the action should deploy.
+          TARGET_FOLDER: Indicator_Reports
+          CLEAN: false # Automatically remove deleted files from the deploy branch

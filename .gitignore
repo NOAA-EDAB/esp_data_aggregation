@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.Renviron
 
 **/survey_data.csv # too big for git
 *survey_data.csv
