@@ -1,13 +1,10 @@
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - gh-pages
 
-name: update_toc
+name: render_package_regression_reports
 
 jobs: 
-  build:
+  build1:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GH_PAT }}
@@ -23,14 +20,14 @@ jobs:
 
       - name: Install command line packages
         run: |        
-          sudo R CMD javareconf
-          sudo apt-get install libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
+          sudo apt-get install  libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
         shell: bash
+# openjdk-8-jre           sudo R CMD javareconf
         
       - name: Set up R
         uses: r-lib/actions/setup-r@master
         with: 
-          r-version: '4.0.3' # problem with using 4.0.4
+          r-version: '4.0.3' # problem with using 4.0.4        
       
       - name: Cache R packages
         uses: actions/cache@v2
@@ -46,16 +43,16 @@ jobs:
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
                  
-      - name: Update table of contents
+      - name: Render reports
         run: |
-          Rscript -e 'setwd(here::here("table_of_contents_Rmds")
-          bookdown::render_book(input = ".")'
+          Rscript -e 'devtools::install_github("NOAA-EDAB/esp_data_aggregation@package)"
+          NEesp::render_all_reg())'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: table_of_contents_Rmds/_book # The folder the action should deploy.
-          TARGET_FOLDER: 
+          FOLDER: Regressions # The folder the action should deploy.
+          TARGET_FOLDER: Regression_Reports
           CLEAN: false # Automatically remove deleted files from the deploy branch

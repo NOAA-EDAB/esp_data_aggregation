@@ -1,7 +1,8 @@
+  
 on:
   workflow_dispatch:
 
-name: roxygenise_package
+name: render_package_indicator_reports
 
 jobs: 
   build1:
@@ -14,20 +15,20 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
               
-#      - name: Install Pandoc
-#        run: brew install pandoc
-#        shell: bash
+      - name: Install Pandoc
+        run: brew install pandoc
+        shell: bash
 
       - name: Install command line packages
         run: |        
-          sudo R CMD javareconf
-          sudo apt-get install libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
+          sudo apt-get install  libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
         shell: bash
+# openjdk-8-jre           sudo R CMD javareconf
         
       - name: Set up R
         uses: r-lib/actions/setup-r@master
         with: 
-          r-version: '4.0.3' # problem with using 4.0.4
+          r-version: '4.0.3' # problem with using 4.0.4        
       
       - name: Cache R packages
         uses: actions/cache@v2
@@ -43,15 +44,17 @@ jobs:
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
                  
-      - name: Roxygenise
+      - name: Render reports
         run: |
-          Rscript -e 'roxygen2::roxygenise()'
+          Rscript -e 'devtools::install_github("NOAA-EDAB/esp_data_aggregation@package)"
+          lapply(NEesp::species_key$Species, 
+                 NEesp::render_ind_report)'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: package # The branch the action should deploy to.
-          FOLDER: man # The folder the action should deploy.
-          TARGET_FOLDER: man
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: action_reports # The folder the action should deploy.
+          TARGET_FOLDER: Indicator_Reports
           CLEAN: false # Automatically remove deleted files from the deploy branch
