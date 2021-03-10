@@ -14,9 +14,7 @@ suppressPackageStartupMessages(library(dbutils))
 
 ```{r data_wrangling_age, cache = params$cache, cache.lazy = FALSE}
 # load survdat
-#survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
-survdata <- bio_survey
-
+survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
 # change from char to numeric
 survdata <- survdata %>% mutate(SVSPP = as.numeric(SVSPP))
 # load ECSA data with common names

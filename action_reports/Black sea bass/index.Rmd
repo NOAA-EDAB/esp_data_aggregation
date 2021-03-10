@@ -15,15 +15,39 @@ language:
 
 params: 
   species_ID: "Acadian redfish" # common name of species
-
+  
+  latlong_data: data # strata
+  shape: shape # shapefile
+  
+  asmt_sum_data: data # bbmsy, ffmsy, assessment ratings
   asmt_sum_source: "assessmentdata::stockAssessmentSummary"
-  asmt_source: "assessmentdata::stockAssessmentData"
+
+  diet_data: data # allfh diet data
+  
+  survey_data: data # survey data
   survey_source: "survdat"
   
-  ricky_survey_data: NEesp::bio_survey # ricky survey data
-  
-  save: TRUE
+  ricky_survey_data: data # ricky survey data
 
+  rec_data: data # recreational catch (MRIP)
+  
+  asmt_data: data # assessmentdata:stockAssessmentData, for recruitment and catch
+  asmt_source: "assessmentdata::stockAssessmentData"
+  
+  cond_data: data # Laurel's condition data
+  
+  risk_data: data # relative risk rankings
+  
+  com_data: data # commercial catch
+  
+  swept_data: data # swept area estimates
+  
+  risk_year_hist_data: data # historical risk by year
+  
+  risk_year_value_data: data # value risk by year
+  
+  risk_species_data: data # species risk
+  
   cache: FALSE
   
   path: "" # figure path
@@ -32,110 +56,64 @@ params:
 # `r params$species` {-}
 
 ```{r, setup, include = FALSE}
+knitr::knit_hooks$set(time_it = local({
+  now <- NULL
+  function(before, options) {
+    if (before) {
+      # record the current time before each chunk
+      now <<- Sys.time()
+    } else {
+      # calculate the time difference after a chunk
+      res <- difftime(Sys.time(), now) %>% round(digits = 2)
+      # return a character string to show the time
+      paste("Time for this code chunk to run:", res)
+    }
+  }
+}))
+
 knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
   warning = FALSE,
+  # time_it = TRUE,
   fig.width = 8,
   fig.align = "center",
   fig.cap = params$species,
   fig.path = params$path
+  # cache.path = here::here("bookdown/cache/", "")
 )
 ```
 
-```{r, species_data}
-species <- params$species_ID
+```{r, setup2, cache = params$cache}
+library(ggplot2)
 
-# risk data
-risk_data <- NEesp::risk %>%
-  dplyr::filter(Species == species) %>%
-  NEesp::missing_na()
-
-risk_year_hist_data <- NEesp::risk_year_hist %>%
-  dplyr::filter(Species == species) %>%
-  NEesp::missing_na()
-
-risk_year_value_data <- NEesp::risk_year_value %>%
-  dplyr::filter(Species == species) %>%
-  NEesp::missing_na()
-
-risk_species_data <- NEesp::risk_species %>%
-  dplyr::filter(Species == species) %>%
-  NEesp::missing_na()
-
-# data
-latlong_data <- NEesp::latlong %>%
-  dplyr::filter(Species == species)
-
-survey_data <- NEesp::survey %>%
-  dplyr::filter(Species == species)
-cond_data <- NEesp::cond %>%
-  dplyr::filter(Species == species)
-diet_data <- NEesp::allfh %>%
-  dplyr::filter(Species == species)
-
-asmt_data <- NEesp::asmt %>%
-  dplyr::filter(Species == species)
-asmt_sum_data <- NEesp::asmt_sum %>%
-  dplyr::filter(Species == species)
-swept_data <- NEesp::swept %>%
-  dplyr::filter(Species == species)
-
-rec_data <- NEesp::rec_catch %>%
-  dplyr::filter(Species == species)
-com_data <- NEesp::com_catch %>%
-  dplyr::filter(Species == species)
-
-# habitat vulnerability
-hab_data <- ecodata::habitat_vulnerability %>%
-  dplyr::filter(Species == species) %>%
-  dplyr::select(-Species)
-hab_data <- hab_data[, c(8, 1:7)]
-
-# climate vulnerability
-climate_data <- NEesp::climate_vulnerability %>%
-  dplyr::mutate(Species = Species %>%
-    stringr::str_to_sentence()) %>%
-  dplyr::filter(Species == species) %>%
-  dplyr::select(-Species)
-
-# ricky
-bio_survey <- NEesp::bio_survey
+`%>%` <- dplyr::`%>%`
 ```
 
-```{r, save_data, eval = params$save}
+```{r, universal_functions, cache = params$cache}
+source(here::here("R", "character_to_factor.R"))
+source(here::here("R/full_report_functions", "make_html_table.R"))
 
-dir.create("data")
+source(here::here("R/full_report_functions/risk_functions", "plot_risk_by_year.R"))
+source(here::here("R/full_report_functions/risk_functions", "plot_risk_within_species.R"))
+source(here::here("R/full_report_functions/risk_functions", "add_missing_na.R"))
+```
 
-NEesp::save_data(latlong_data)
+```{r, species_data}
+# data used in multiple chapters
+species <- params$species_ID
 
-NEesp::save_data(survey_data)
+risk_data <- params$risk_data[params$risk_data$Species == species, ]
+risk_data <- risk_data %>% missing_na()
 
-NEesp::save_data(cond_data)
+risk_year_hist_data <- params$risk_year_hist_data[params$risk_year_hist_data$Species == species, ]
+risk_year_hist_data <- risk_year_hist_data %>% missing_na()
 
-NEesp::save_data(diet_data)
+risk_year_value_data <- params$risk_year_value_data[params$risk_year_value_data$Species == species, ]
+risk_year_value_data <- risk_year_value_data %>% missing_na()
 
-NEesp::save_data(asmt_data)
-
-NEesp::save_data(asmt_sum_data)
-
-NEesp::save_data(swept_data)
-
-NEesp::save_data(rec_data)
-
-NEesp::save_data(com_data)
-
-NEesp::save_data(hab_data)
-
-NEesp::save_data(climate_data)
-
-NEesp::save_data(risk_data)
-
-NEesp::save_data(risk_year_hist_data)
-
-NEesp::save_data(risk_year_value_data)
-
-NEesp::save_data(risk_species_data)
+risk_species_data <- params$risk_species_data[params$risk_species_data$Species == species, ]
+risk_species_data <- risk_species_data %>% missing_na()
 ```
 
 This is a preliminary report of previously collected data. This report is pulling information on all Northeast `r species` stocks.

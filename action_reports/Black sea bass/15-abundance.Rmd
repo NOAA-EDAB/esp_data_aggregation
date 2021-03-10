@@ -1,6 +1,22 @@
 ## Abundance
 
-```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```{r, abun_functions, cache = params$cache}
+source(here::here("R/full_report_functions", "get_assessment.R"))
+source(here::here("R/full_report_functions", "get_survdat_info.R"))
+source(here::here("R/full_report_functions", "get_swept.R"))
+```
+
+```{r, abun_data_species}
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
+
+asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
+
+asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
+
+swept_data <- params$swept_data[params$swept_data$Species == species, ]
+```
+
+```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
 ```
 
 Abundance data were pulled from ``r params$survey_source`` and ``r params$asmt_source``. 
@@ -11,7 +27,7 @@ Separate geom_gls() functions were fit for fall and spring measurements; trend l
 
 #### Survey abundance (raw measurements)
 ```{r, abun_survey}
-NEesp::generate_plot(survey_data,
+generate_plot(survey_data,
   variable = "ABUNDANCE",
   ytitle = "Abundance"
 )
@@ -27,14 +43,14 @@ indicators <- c(
 )
 ```
 
-```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 #### Survey abundance (swept area estimates)
 
-Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
+Please note, these estimates are not parsed by region. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
 ```{r, abun_survey_swept}
-NEesp::plot_swept(swept_data, var = "abundance")
+plot_swept(swept_data, var = "abundance")
 ```
 
 #### Assessment abundance
@@ -52,7 +68,7 @@ if (nrow(asmt_data %>% dplyr::filter(Metric == "Abundance")) > 0) {
 ```
 
 ```{r, abun_asmt, fig.height = ndesc * 4}
-NEesp::plot_asmt(asmt_data,
+plot_asmt(asmt_data,
   metric = "Abundance",
   ytitle = "Abundance",
   lin = lines,
@@ -67,12 +83,12 @@ See Methods for risk calculation details.
 indicators <- c("asmt_abundance")
 ```
 
-```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 ### Survey summary
 ```{r, abun_summary}
-NEesp::generate_table(survey_data,
+generate_table(survey_data,
   variable = "ABUNDANCE",
   cap = "Measured abundance"
 )
@@ -83,12 +99,12 @@ NEesp::generate_table(survey_data,
 #### Survey data (raw measurements)
 ```{r, surv_abun_data}
 data <- survey_data %>%
-  NEesp::get_var_data(variable = "ABUNDANCE") %>%
+  get_var_data(variable = "ABUNDANCE") %>%
   dplyr::mutate(variable = variable %>%
     format(big.mark = ",")) %>%
-  NEesp::character_to_factor()
+  character_to_factor()
 
-NEesp::make_html_table(data, col_names = c("Year", "Season", "Region", "Abundance"))
+make_html_table(data, col_names = c("Year", "Season", "Region", "Abundance"))
 ```
 
 #### Survey data (swept area estimates)
@@ -104,7 +120,7 @@ data <- swept_data %>%
       format(big.mark = ",")
   )
 
-NEesp::make_html_table(data, col_names = c("Year", "Abundance", "Standard error"))
+make_html_table(data, col_names = c("Year", "Abundance", "Standard error"))
 ```
 
 #### Assessment data
@@ -116,7 +132,7 @@ data <- asmt_data %>%
     round(digits = 0)) %>%
   dplyr::mutate(Value = Value %>%
     format(big.mark = ",")) %>%
-  NEesp::character_to_factor()
+  character_to_factor()
 
-NEesp::make_html_table(data, col_names = colnames(data))
+make_html_table(data, col_names = colnames(data))
 ```

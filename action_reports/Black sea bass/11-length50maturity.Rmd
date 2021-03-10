@@ -2,10 +2,8 @@
 ## Length at first maturity
 Ricky Tabandera
 
-```{r L50 setup, include=FALSE, eval = FALSE}
+```{r L50 setup, include=FALSE}
 # knitr::opts_chunk$set(echo = TRUE)
-
-# these packages do not have to be attached for code to run
 
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(nlstools))
@@ -19,14 +17,11 @@ L50 or length at which 50%  maturity can be calculated using differing methods. 
 
 The relationship between sexual maturity by body size is a well established life history parameter. L50 is a useful metric in fisheries to identify sizes that are able to reproduce. This information can be used to inform regulation as to minimum catch size that should allow for a significant portion of the population to spawn and contribute genetic information to sustain the stock. Changes in this parameter can signal population/evolutionary pressures on the stock with reduction in this size potentially indicating excessive fishing pressure.
 
-```{r, L50 data wrangling}
+```{r ,L50 data wrangling}
 
-# survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
-survdata <- NEesp::bio_survey
+survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
 
-survdata <- survdata %>% 
-  mutate(SVSPP = as.numeric(SVSPP))
-
+survdata <- survdata %>% mutate(SVSPP = as.numeric(SVSPP))
 stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
 stock_list_all_strata <- stock_list_all_strata %>% rename(SVSPP = svspp)
 stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
@@ -57,10 +52,8 @@ selected.surv.clean <- selected.surv %>%
 selected.surv.clean$MATURITY <- recode(selected.surv.clean$MATURITY, "D" = "Mature", "I" = "Immature", "R" = "Mature", "S" = "Mature", "T" = "Mature", "U" = "Mature", "E" = "Mature")
 # recode sex to male or female
 selected.surv.clean$SEX <- recode(selected.surv.clean$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" = "transitional")
-selected.surv.clean <- selected.surv.clean %>% 
-  mutate(SEX = as.factor(selected.surv.clean$SEX))
-selected.surv.clean <- selected.surv.clean %>% 
-  mutate(MATURITY = as.factor(MATURITY))
+selected.surv.clean <- selected.surv.clean %>% mutate(SEX = as.factor(selected.surv.clean$SEX))
+selected.surv.clean <- selected.surv.clean %>% mutate(MATURITY = as.factor(MATURITY))
 
 selected.surv.f <- selected.surv.clean %>% filter(SEX %in% c("female", "male") & MATURITY != "X")
 ```
@@ -101,11 +94,14 @@ if (eval_model) {
   ("Not enough data to fit model")
 }
 
+
 #########################
 # filter for maturity codes
 selected_surv_mat <- survdata.w.codes %>%
   dplyr::mutate(common_name = common_name %>% stringr::str_to_sentence()) %>%
   dplyr::filter(common_name == species)
+
+
 
 # only take records with a maturity status associated
 selected_surv_mat_clean <- selected_surv_mat %>% drop_na(MATURITY)
@@ -117,10 +113,11 @@ selected_surv_mat_clean$MATURITY <- recode(selected_surv_mat_clean$MATURITY, "D"
 ### Maturity classification 
 The gonadal development stage can vary between immature and mature. Once mature, there are several stages that represent phases in the spawning sequence. These stages and phases can vary across body length and the proportion of the population in each of these categories can help identify spawning size and what seasonal effects there are on development. 
 
+
 ```{r, maturity_classification_ plot}
 
 if (nrow(selected_surv_mat_clean > 5)) {
-  mat_sum_season <- selected_surv_mat_clean %>%
+  mat_sum_season <- selected.surv.clean %>%
     group_by(LENGTH, MATURITY, SEASON) %>%
     summarise(mat.code.count = length(MATURITY)) # problems with dplyr::n()
 
@@ -128,31 +125,37 @@ if (nrow(selected_surv_mat_clean > 5)) {
     group_by(LENGTH, SEASON) %>%
     mutate(mat.sum = sum(mat.code.count), prop = (mat.code.count / mat.sum)) %>%
     group_by(LENGTH)
-
-  if (nrow(dat) > 0) {
-    fig <- dat %>%
-      ggplot(aes(x = LENGTH, y = prop * 100, fill = MATURITY)) +
-      geom_bar(position = "stack", stat = "identity") +
-      nmfspalette::scale_fill_nmfs(palette = "regional web", discrete = TRUE, reverse = FALSE) +
-      xlab("Length (cm)") +
-      ylab("Percent (%)") +
-      ggtitle("Maturity classification across body length of", subtitle = species)
-
-    if (dat$SEASON %>% unique() %>% length() > 1) {
-      fig <- fig +
-        facet_wrap(vars(SEASON))
-    }
-
-    return(fig)
-  } else {
-    ("Not enough data")
+  
+  if(nrow(dat) > 0){
+      fig <- dat %>%
+    ggplot(aes(x = LENGTH, y = prop * 100, fill = MATURITY)) +
+    geom_bar(position = "stack", stat = "identity") +
+    nmfspalette::scale_fill_nmfs(palette = "regional web", discrete = TRUE, reverse = FALSE) +
+    xlab("Length (cm)") +
+    ylab("Percent (%)") +
+    ggtitle("Maturity classification across body length of", subtitle = species)
+  
+  if(dat$SEASON %>% unique() %>% length() > 1){
+    fig <- fig+
+      facet_wrap(vars(SEASON))
   }
+  
+  return(fig)
+  
+} else {
+  ("Not enough data")
+  }
+  
 }
 ```
 
+
+
 ### Model results
 
+
 `r if(nrow(selected.surv.f)>3){"If the overall model is significant, there is support for the relationship between sexual maturity and body size. This model can predict the size where there are 50% odds of the indevidual is sexually mature. The results table below displays the L50 for Male and female indeviduals. "}` 
+
 
 ```{r, model table}
 
@@ -164,6 +167,7 @@ if (eval_model) {
 ### L50 differences between sexes
 
 `r if(nrow(selected.surv.f)>3){"The significance of differences between sex can be determined by referencing the model summary table above differences in intercept indicate differences in mean size between groups. Differences in betta coefficents indicate increases or decreases to the degree to which probability of maturity increases across body lengths   "}`
+
 
 ```{r model results and L50}
 if (eval_model) {
@@ -184,6 +188,9 @@ if (eval_model) {
 }
 ```
 
+
+
+
 ```{r, probability plot }
 
 
@@ -195,20 +202,13 @@ if (eval_model) {
     sel.min <- min(selected.surv.f$LENGTH)
     sel.max <- max(selected.surv.f$LENGTH)
 
-    L50.sim.f <- boot::inv.logit(predict.glm(maturity.mod, 
-                                             newdata = data.frame(LENGTH = seq(1:sel.max), 
-                                                                  SEX = rep("female", length(seq(1:sel.max))), 
-                                                                  type = "response")))
+    L50.sim.f <- boot::inv.logit(predict.glm(maturity.mod, newdata = data.frame(LENGTH = seq(1:sel.max), SEX = rep("female", length(seq(1:sel.max))), type = "response")))
 
-    L50.sim.m <- boot::inv.logit(predict.glm(maturity.mod, 
-                                             newdata = data.frame(LENGTH = seq(1:sel.max), 
-                                                                  SEX = rep("male", length(seq(1:sel.max))), 
-                                                                  type = "response")))
+    L50.sim.m <- boot::inv.logit(predict.glm(maturity.mod, newdata = data.frame(LENGTH = seq(1:sel.max), SEX = rep("male", length(seq(1:sel.max))), type = "response")))
 
 
     selected.surv.simlulation <- data.frame(L50.sim.f, L50.sim.m, selected.surv.LENGTH)
-    selected.surv.simlulation <- selected.surv.simlulation %>% 
-      pivot_longer(!selected.surv.LENGTH, names_to = "sex", values_to = "pred")
+    selected.surv.simlulation <- selected.surv.simlulation %>% pivot_longer(!selected.surv.LENGTH, names_to = "sex", values_to = "pred")
 
 
     selected.surv.simlulation %>%
@@ -225,3 +225,4 @@ if (eval_model) {
   ("Non-significant")
 }
 ```
+

@@ -1,17 +1,25 @@
 ## Salinity
 
+```{r, sal_functions}
+source(here::here("R/full_report_functions", "get_survdat_info.R"))
+```
+
+```{r,sal_data}
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
+```
+
 Surface and bottom salinity data were pulled from ``r params$survey_source``. 
 
 ### Figures
 
 Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, surfsalin}
-NEesp::generate_plot(survey_data,
+generate_plot(survey_data,
   variable = "SURFSALIN",
   ytitle = "Surface salinity"
 )
 
-NEesp::generate_plot(survey_data,
+generate_plot(survey_data,
   variable = "BOTSALIN",
   ytitle = "Bottom salinity"
 )
@@ -19,12 +27,12 @@ NEesp::generate_plot(survey_data,
 
 ### Summary
 ```{r, salin_summary}
-NEesp::generate_table(survey_data,
+generate_table(survey_data,
   variable = "SURFSALIN",
   cap = "Surface salinity"
 )
 
-NEesp::generate_table(survey_data,
+generate_table(survey_data,
   variable = "BOTSALIN",
   cap = "Bottom salinity"
 )
@@ -52,9 +60,9 @@ data <- survey_data %>%
     Mean_bottom_salinity = mean(day_mean_bot) %>%
       round(digits = 2)
   ) %>%
-  NEesp::character_to_factor() # mean by season-year
+  character_to_factor() # mean by season-year
 
-NEesp::make_html_table(data, col_names = c(
+make_html_table(data, col_names = c(
   "Year", "Season", "Region",
   "Mean surface salinity", "Mean bottom salinity"
 ))

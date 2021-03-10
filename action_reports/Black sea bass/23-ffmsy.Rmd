@@ -1,5 +1,13 @@
 ## F/Fmsy 
 
+```{r, f_functions, cache = params$cache}
+source(here::here("R/full_report_functions", "get_bf.R"))
+```
+
+```{r, f_data}
+asmt_sum_data <- params$asmt_sum_data[params$asmt_sum_data$Species == species, ]
+```
+
 ```{r, f_status}
 if (length(asmt_sum_data$Species) > 1) {
   list_regions <- split(unique(asmt_sum_data$Region),
@@ -7,7 +15,7 @@ if (length(asmt_sum_data$Species) > 1) {
   )
   ffmsy2 <- purrr::map(
     list_regions,
-    ~ NEesp::status(
+    ~ status(
       data = asmt_sum_data,
       regions = .x,
       metric = "ffmsy"
@@ -18,7 +26,7 @@ if (length(asmt_sum_data$Species) > 1) {
 }
 ```
 
-```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
 ```
 
 F/Fmsy data were pulled from ``r params$asmt_sum_source``.
@@ -28,7 +36,7 @@ The most recent status of F/Fmsy is: `r ffmsy2`
 ### Figure
 ```{r, ffmsy}
 if ("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2) {
-  NEesp::plot_msy(asmt_sum_data[which(is.na(asmt_sum_data$`F/Fmsy`) == FALSE), ],
+  plot_msy(asmt_sum_data[which(is.na(asmt_sum_data$`F/Fmsy`) == FALSE), ],
     ytitle = "F / Fmsy",
     type = "f",
     lin = lines,
@@ -46,7 +54,7 @@ See Methods for risk calculation details.
 indicators <- c("ffmsy")
 ```
 
-```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 ### Data
@@ -54,7 +62,7 @@ indicators <- c("ffmsy")
 data <- asmt_sum_data[which(is.na(asmt_sum_data$`F/Fmsy`) == FALSE), ] %>%
   dplyr::select(Region, `Assessment Year`, `F/Fmsy`) %>%
   dplyr::mutate(`F/Fmsy` = `F/Fmsy` %>% round(digits = 2)) %>%
-  NEesp::character_to_factor()
+  character_to_factor()
 
-NEesp::make_html_table(data, col_names = c("Region", "Year", "F/Fmsy"))
+make_html_table(data, col_names = c("Region", "Year", "F/Fmsy"))
 ```

@@ -1,5 +1,16 @@
 ## Condition
 
+```{r, cond_functions, cache = params$cache}
+source(here::here("R/full_report_functions", "get_lw.R"))
+source(here::here("R/full_report_functions", "get_relative_weight.R"))
+```
+
+```{r, cond_data_species}
+cond_data <- params$cond_data[params$cond_data$Species == species, ]
+
+diet_data <- params$diet_data[params$diet_data$Species == species, ]
+```
+
 Condition information comes from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData); only regions and seasons with more than 10 fish observations were considered. We calculated a rough condition factor as: Weight / Length^3, and relative weight was [previously calculated](https://github.com/Laurels1/Condition/tree/master/data).
 
 ### Figures
@@ -8,21 +19,21 @@ Condition information comes from [diet data](https://github.com/Laurels1/Conditi
 
 Please note, no trend lines were fit, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, lw}
-NEesp::plot_lw(diet_data)
+plot_lw(diet_data)
 ```
 
 #### Condition factor: Weight-volume
 
 If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 ```{r, condition}
-NEesp::plot_cond(diet_data)
+plot_cond(diet_data)
 ```
 
 #### Condition factor: Relative weight
 
 Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
 ```{r, laurel_cond}
-NEesp::plot_relw(cond_data)
+plot_relw(cond_data)
 ```
 
 ### Data
@@ -43,9 +54,9 @@ data <- diet_data %>%
   dplyr::mutate(condition = condition %>%
     round(digits = 4)) %>%
   dplyr::select(Region, year, season, pdlen, pdwgt, condition) %>%
-  NEesp::character_to_factor()
+  character_to_factor()
 
-NEesp::make_html_table(data, col_names = c(
+make_html_table(data, col_names = c(
   "Region", "Year", "Season", "Fish length (cm)",
   "Fish weight (g)", "Condition (g/cm^3)"
 ))
@@ -58,9 +69,9 @@ data <- cond_data %>%
   dplyr::select(-Species, -n) %>%
   dplyr::mutate(MeanCond = MeanCond %>%
     round(digits = 1)) %>%
-  NEesp::character_to_factor()
+  character_to_factor()
 
-NEesp::make_html_table(data, col_names = c(
+make_html_table(data, col_names = c(
   "EPU", "Fish sex", "Year", "Mean condition",
   "Number of fish"
 ))

@@ -17,8 +17,7 @@ library(FSA)
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
 
-#survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
-survdata <- bio_survey
+survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
 
 survdata <- survdata %>% mutate(SVSPP = as.numeric(SVSPP))
 stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")

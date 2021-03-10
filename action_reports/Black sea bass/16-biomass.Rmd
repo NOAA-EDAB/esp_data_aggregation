@@ -1,7 +1,21 @@
-## Biomass
-
-```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```{r, biomass_functions, cache = params$cache}
+source(here::here("R/full_report_functions", "get_assessment.R"))
+source(here::here("R/full_report_functions", "get_survdat_info.R"))
+source(here::here("R/full_report_functions", "get_swept.R"))
 ```
+
+```{r, biomass_raw_data}
+survey_data <- params$survey_data[params$survey_data$Species == species, ]
+
+asmt_data <- params$asmt_data[params$asmt_data$Species == species, ]
+
+swept_data <- params$swept_data[params$swept_data$Species == species, ]
+```
+
+```{r, child = here::here("bookdown", "_legend-child-doc.Rmd")}
+```
+
+## Biomass
 
 Biomass data were pulled from ``r params$survey_source``. 
 
@@ -11,7 +25,7 @@ Separate geom_gls() functions were fit for fall and spring measurements; trend l
 
 #### Survey biomass (raw measurements)
 ```{r, biomass}
-NEesp::generate_plot(survey_data,
+generate_plot(survey_data,
   variable = "BIOMASS",
   ytitle = "Biomass"
 )
@@ -27,14 +41,14 @@ indicators <- c(
 )
 ```
 
-```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 #### Survey biomass (swept area estimates)
 
-Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
+Please note, these estimates are not parsed by region. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
 ```{r, bio_survey_swept}
-NEesp::plot_swept(swept_data, var = "biomass")
+plot_swept(swept_data, var = "biomass")
 ```
 
 #### Assessment biomass
@@ -52,7 +66,7 @@ if (nrow(asmt_data %>% dplyr::filter(Metric == "Biomass")) > 0) {
 ```
 
 ```{r, biomass_asmt,  fig.height = ndesc * 4 + 1}
-NEesp::plot_asmt(asmt_data,
+plot_asmt(asmt_data,
   metric = "Biomass",
   ytitle = "Biomass",
   lin = lines,
@@ -67,12 +81,12 @@ See Methods for risk calculation details.
 indicators <- c("asmt_biomass")
 ```
 
-```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```{r, child = here::here("bookdown", "_risk-child-doc.Rmd")}
 ```
 
 ### Survey summary
 ```{r, biomass_summary}
-NEesp::generate_table(survey_data,
+generate_table(survey_data,
   variable = "BIOMASS",
   cap = "Measured biomass"
 )
@@ -83,12 +97,12 @@ NEesp::generate_table(survey_data,
 #### Survey data (raw measurements)
 ```{r, biomass_data}
 data <- survey_data %>%
-  NEesp::get_var_data(variable = "BIOMASS") %>%
+  get_var_data(variable = "BIOMASS") %>%
   dplyr::mutate(variable = variable %>%
     format(big.mark = ",")) %>%
-  NEesp::character_to_factor()
+  character_to_factor()
 
-NEesp::make_html_table(data, col_names = c("Year", "Season", "Region", "Biomass"))
+make_html_table(data, col_names = c("Year", "Season", "Region", "Biomass"))
 ```
 
 #### Survey data (swept area estimates)
@@ -104,7 +118,7 @@ data <- swept_data %>%
       format(big.mark = ",")
   )
 
-NEesp::make_html_table(data, col_names = c("Year", "Biomass (kg)", "Standard error"))
+make_html_table(data, col_names = c("Year", "Biomass (kg)", "Standard error"))
 ```
 
 #### Assessment data
@@ -116,7 +130,7 @@ data <- asmt_data %>%
     round(digits = 0)) %>%
   dplyr::mutate(Value = Value %>%
     format(big.mark = ",")) %>%
-  NEesp::character_to_factor()
+  character_to_factor()
 
-NEesp::make_html_table(data, col_names = colnames(data))
+make_html_table(data, col_names = colnames(data))
 ```
