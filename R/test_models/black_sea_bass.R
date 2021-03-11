@@ -14,7 +14,7 @@ NEesp::render_reg_report(stock_var = "Black sea bass",
                          parent_folder = "lag1")
 
 #
-NEesp::render_ind_report("Black sea bass", trouble = TRUE, input = "bookdown",
+NEesp::render_ind_report("Black sea bass", input = "bookdown",
                          params_to_use = list(
                            species_ID = "Black sea bass",
                            
