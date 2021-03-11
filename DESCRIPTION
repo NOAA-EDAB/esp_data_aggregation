@@ -12,24 +12,12 @@ Imports:
     ggpubr,
     ggrepel,
     ggridges,
-    ggsci,
-    ggsignif,
-    ggthemes,
-    grDevices,
     papeR,
-    quantmod,
-    rfishbase,
     rnaturalearth,
-    shape,
-    spatial,
-    splines,
-    units,
     viridis,
     assessmentdata,
     rnaturalearthhires,
     nmfspalette,
-    utilities,
-    FishLife,
     ecodata
 Suggests:
     rJava,
@@ -39,8 +27,6 @@ Remotes:
     NOAA-EDAB/assessmentdata,
     ropensci/rnaturalearthhires,
     nmfs-general-modeling-tools/nmfspalette,
-    James-Thorson/utilities,
-    James-Thorson-NOAA/FishLife,
     NOAA-EDAB/ecodata
 Encoding: UTF-8
 LazyData: true
