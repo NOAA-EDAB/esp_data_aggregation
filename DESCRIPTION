@@ -19,10 +19,6 @@ Imports:
     rnaturalearthhires,
     nmfspalette,
     ecodata
-Suggests:
-    rJava,
-    tabulizer,
-    tabulizerjars
 Remotes:
     NOAA-EDAB/assessmentdata,
     ropensci/rnaturalearthhires,
