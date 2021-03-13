@@ -1,0 +1,142 @@
+---
+title: "Geographic concentration"
+author: "Ricky Tabandera"
+date: "3/3/2021"
+output: html_document
+params:
+  species:
+    label: "species:"
+    value: Bluefish
+    input: select
+    choices: [atlantic hagfish, smooth dogfish, spiny dogfish, barndoor skate, winter skate, clearnose skate, rosette skate, little skate, smooth skate, thorny skate, Atlantic herring, alewife, blueback herring, offshore hake, silver hake, Atlantic cod, haddock, pollock, white hake, red hake, cusk, atlantic halibut, american plaice, summer flounder, yellowtail flounder, winter flounder, witch flounder, atlantic mackerel, butterfish, bluefish, scup, acadian redfish , atlantic wolffish, ocean pout, monkfish, atlantic menhaden, windowpane flounder, black sea bass ]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(tidyverse))
+library(dbutils)
+library(survdat)
+library(sf)
+library("rnaturalearth")
+library("rnaturalearthdata")
+library(gganimate)
+```
+
+## Geographic range centroid
+
+Using fisheries independant data from bottom trawls in `survdat`. The unweighted  centroid is one metric that describes the geometric center of the observed range of `r params$species` in a given year. changes in this center point can indicate changes in the geograpic range of a species due to a variety of reasons.
+
+```{r geo_conc data wrangling }
+source(here::here("R","common_names_survdat.r"))
+survdata.w.codes<-Common_names_survdat(here::here("data", "survdat_03032021.RDS"))
+
+
+selected.surv<-survdata.w.codes %>% 
+   dplyr::filter(common_name == params$species)
+
+
+
+
+# testing other centroid functions
+# surv.sub<-selected.surv %>% dplyr::select(LON,LAT,YEAR)
+# surv.sub.year <-surv.sub %>% dplyr::group_split(YEAR)
+# 
+# ####works
+# centroid.list<-purrr::map(surv.sub.year,~geosphere::centroid(.x[,1:2]))
+# 
+# selected.surv.centroid<-data.table::rbindlist(purrr::map( centroid.list, data.table::as.data.table))
+# 
+# selected.surv.centroid<-cbind(selected.surv.centroid,unique(selected.surv$YEAR))
+# 
+# colnames(selected.surv.centroid)<-c("lon","lat","year")
+# 
+# selected.surv.centroid.sf<-st_as_sf(selected.surv.centroid, coords = c("lon", "lat"), crs = 4326)
+
+
+if(nrow(selected.surv>3)){
+  
+selected.surv.centroid<-selected.surv %>% dplyr::group_by(YEAR) %>% dplyr::summarise(lon=mean(LON),lat=mean(LAT))
+
+}else("Not enough data")
+
+
+```
+
+
+
+
+```{r}
+if(nrow(selected.surv>3)){
+
+# surv.range<-selected.surv%>%
+#   dplyr::group_by(YEAR, SEASON) %>%
+#   dplyr::summarise(xmin=min(LON),xmax=max(LON), ymin=min(LAT), ymax=max(LAT))
+# 
+# selected.surv %>%
+#   dplyr::group_by(YEAR, SEASON) %>%
+#   ggplot(aes(x=YEAR,y=LAT, fill=SEASON))+
+#   geom_boxplot()+
+#   xlab("Longitude")+
+#   ylab("Latitude")
+
+
+}else("Not enough data")
+
+```
+
+## Centroid of observations 
+The centroid of fisheries independat 
+arithmetic mean position of all the points
+
+```{r, centroid plot}
+if(nrow(selected.surv.centroid<4)){
+  world <- ne_countries(scale = "medium", returnclass = "sf")
+latmin<-(min(selected.surv.centroid$lat)-1)
+latmax<-(max(selected.surv.centroid$lat)+1)
+lonmin<-(min(selected.surv.centroid$lon)-1)
+lonmax<-(max(selected.surv.centroid$lon)+1)
+
+ggrepel::geom_label_repel()
+
+ggplot(data = world) +
+  geom_sf() +
+  geom_point(data = selected.surv.centroid, aes(x=lon,y=lat,color=as.numeric(YEAR)))+
+  ggrepel::geom_label_repel(data = selected.surv.centroid,aes(x=lon,y=lat,label=YEAR),max.overlaps =20 )+
+  #geom_path(data = selected.surv.centroid, aes(x=lon,y=lat,color=as.numeric(year)))+
+  coord_sf(xlim=c(lonmin,lonmax), ylim=c(latmin,latmax))+
+  scale_color_gradient(low = "blue", high = "red", name="Year")+
+  xlab("Longitude")+
+  ylab("Latitude")
+}else("Not enough data")
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r, centroid animation}
+ # create animations in ggplot!
+
+
+# cent.move<-ggplot(data = world) +
+#   geom_sf() +
+#   geom_point(data = selected.surv.centroid, aes(x=lon,y=lat,color=as.numeric(YEAR)),size=4,inherit.aes = FALSE)+
+#   transition_time(YEAR)+
+#   coord_sf(xlim=c(lonmin,lonmax), ylim=c(latmin,latmax))+
+#   scale_color_gradient(low = "blue", high = "red", name="Year")+
+#   xlab("Longitude")+
+#   ylab("Latitude")+
+#   shadow_wake(0.1, wrap = F)
+# 
+# cent.move
+
+# 
+# 
+# move_cent <- animate(cent.move, 300) # takes the above and renders it into an animation
+# 
+# # Save animation as a .gif
+# library(magick) # allows for advanced image processing in R
+# image_write(move_cent, 'cent_animation.gif') 
+
+```
+
