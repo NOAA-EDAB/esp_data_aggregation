@@ -13,12 +13,15 @@ Surface and bottom temperature data were pulled from ``r params$survey_source``.
 ### Figures
 
 Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
-```{r, temp}
+
+```{r, stemp, fig.cap = paste(species, "surface temperature")}
 generate_plot(survey_data,
   variable = "SURFTEMP",
   ytitle = "Surface temperature"
 )
+```
 
+```{r, btemp, fig.cap = paste(species, "bottom temperature")}
 generate_plot(survey_data,
   variable = "BOTTEMP",
   ytitle = "Bottom temperature"

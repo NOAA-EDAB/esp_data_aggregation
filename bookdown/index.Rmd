@@ -6,8 +6,11 @@ site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
     split_by: section
+    fig_caption: yes
 documentclass: book
 github-repo: NOAA-EDAB/esp_data_aggregation
+
+always_allow_html: true
 
 language:
   ui:
@@ -53,7 +56,7 @@ params:
   path: "" # figure path
 ---
 
-# `r params$species` {-}
+# `r params$species_ID` {-}
 
 ```{r, setup, include = FALSE}
 knitr::knit_hooks$set(time_it = local({
@@ -78,7 +81,7 @@ knitr::opts_chunk$set(
   # time_it = TRUE,
   fig.width = 8,
   fig.align = "center",
-  fig.cap = params$species,
+  #fig.cap = params$species_ID,
   fig.path = params$path
   # cache.path = here::here("bookdown/cache/", "")
 )
