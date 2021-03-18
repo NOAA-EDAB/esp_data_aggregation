@@ -1,0 +1,22 @@
+## Distribution
+
+### Map of distribution
+Strata maps were pulled and compiled using code from [NOAA/EDAB ECSA](https://github.com/NOAA-EDAB/ECSA).
+
+
+```{r, ecsa-map, fig.cap = paste(species, "distribution")}
+NEesp::map_strata(
+  strata = latlong_data,
+  common_name = species
+)
+```
+
+
+### Latitude and longitude ranges
+Latitude and longitude ranges were calculated from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
+```{r, latlong}
+data <- NEesp::get_latlong(species, latlong_data, shapefile = NEesp::shape) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```

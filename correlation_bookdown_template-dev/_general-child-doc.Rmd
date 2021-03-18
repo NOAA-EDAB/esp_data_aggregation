@@ -1,0 +1,98 @@
+```{r}
+if ("EPU" %in% colnames(test)) {
+  eval_epu <- sum(test$EPU %in% params$epu) > 0 # only evaluate if the selected epu is in the indicator data set
+} else {
+  eval_epu <- TRUE
+} # always evaluate if there is no epu for the indicator
+```
+
+````{r, eval = eval_epu}
+# make sure test data has the right structure
+if ("EPU" %in% colnames(test)) {
+  test <- test %>%
+    dplyr::filter(EPU %in% params$epu)
+}
+
+if ("Units" %in% colnames(test)) {
+  test <- test %>%
+    dplyr::mutate(Var = paste(Var, Units, sep = "\n"))
+}
+
+if ("Value" %in% colnames(test)) {
+  test <- test %>%
+    dplyr::rename(Val = Value)
+}
+
+# mean data by year
+test <- test %>%
+  dplyr::ungroup() %>%
+  dplyr::group_by(Var, Time) %>%
+  dplyr::summarise(new_val = mean(Val)) %>%
+  dplyr::rename(Val = new_val) %>%
+  dplyr::ungroup()
+
+n_years <- length(unique(test$Time))
+n_var <- length(unique(test$Var))
+n_measurements <- length(test$Time)
+
+if (n_measurements > n_years * n_var &
+  n_measurements > 0) {
+  test <- test %>%
+    dplyr::mutate(Var = paste(Var, "(annual mean)", sep = "\n"))
+}
+
+# correlation summary
+output <- rbind(output, correlation_summary(
+  stock = stock,
+  eco = test,
+  lag = params$lag
+))
+```
+
+```{r, eval = params$save & eval_epu}
+data <- data_prep(
+  stock = stock,
+  eco = test,
+  lag = params$lag
+)
+
+if (nrow(data) > 0) {
+  file_name <- paste(params$stock, params$region, params$epu[1],
+    params$lag, "lag",
+    params$remove_recent, "remove_recent", names[1],
+    ".csv",
+    sep = "_"
+  ) %>%
+    stringr::str_replace_all("/", "-")
+  write.csv(data, paste("data/", file_name, sep = ""))
+}
+```
+
+```{r}
+names <- names[-1]
+```
+#### Figures {-}
+```{r, eval = eval_epu, fig.height = 10}
+plot_correlation(
+  stock = stock,
+  eco = test,
+  lag = params$lag
+)
+```
+
+```{r, eval = (eval_epu == FALSE)}
+print("No data for the EPU selected")
+```
+
+#### Regression statistics {-}
+```{r, results = "asis", eval = eval_epu}
+correlation_data(
+  stock = stock,
+  eco = test,
+  lag = params$lag
+)
+```
+
+```{r, eval = (eval_epu == FALSE)}
+print("No data for the EPU selected")
+```

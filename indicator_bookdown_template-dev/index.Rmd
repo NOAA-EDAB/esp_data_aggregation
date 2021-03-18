@@ -1,0 +1,142 @@
+---
+title: "`r params$species_ID`"
+author: "Abigail Tyrell & Ricky Tabandera"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    split_by: section
+    fig_caption: yes
+documentclass: book
+always_allow_html: true
+github-repo: NOAA-EDAB/esp_data_aggregation
+
+language:
+  ui:
+    chapter_name: "Section "
+
+params: 
+  species_ID: "Acadian redfish" # common name of species
+
+  asmt_sum_source: "assessmentdata::stockAssessmentSummary"
+  asmt_source: "assessmentdata::stockAssessmentData"
+  survey_source: "survdat"
+  
+  ricky_survey_data: NEesp::bio_survey # ricky survey data
+  
+  save: TRUE
+
+  cache: FALSE
+  
+  path: "" # figure path
+---
+
+# `r params$species_ID` {-}
+
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 8,
+  fig.align = "center",
+  fig.path = params$path
+)
+```
+
+```{r, species_data}
+species <- params$species_ID
+
+# risk data
+risk_data <- NEesp::risk %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::missing_na()
+
+risk_year_hist_data <- NEesp::risk_year_hist %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::missing_na()
+
+risk_year_value_data <- NEesp::risk_year_value %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::missing_na()
+
+risk_species_data <- NEesp::risk_species %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::missing_na()
+
+# data
+latlong_data <- NEesp::latlong %>%
+  dplyr::filter(Species == species)
+
+survey_data <- NEesp::survey %>%
+  dplyr::filter(Species == species)
+cond_data <- NEesp::cond %>%
+  dplyr::filter(Species == species)
+diet_data <- NEesp::allfh %>%
+  dplyr::filter(Species == species)
+
+asmt_data <- NEesp::asmt %>%
+  dplyr::filter(Species == species)
+asmt_sum_data <- NEesp::asmt_sum %>%
+  dplyr::filter(Species == species)
+swept_data <- NEesp::swept %>%
+  dplyr::filter(Species == species)
+
+rec_data <- NEesp::rec_catch %>%
+  dplyr::filter(Species == species)
+com_data <- NEesp::com_catch %>%
+  dplyr::filter(Species == species)
+
+# habitat vulnerability
+hab_data <- ecodata::habitat_vulnerability %>%
+  dplyr::filter(Species == species) %>%
+  dplyr::select(-Species)
+hab_data <- hab_data[, c(8, 1:7)]
+
+# climate vulnerability
+climate_data <- NEesp::climate_vulnerability %>%
+  dplyr::mutate(Species = Species %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(Species == species) %>%
+  dplyr::select(-Species)
+
+# ricky
+bio_survey <- NEesp::bio_survey
+```
+
+```{r, save_data, eval = params$save}
+
+dir.create("data")
+
+NEesp::save_data(latlong_data)
+
+NEesp::save_data(survey_data)
+
+NEesp::save_data(cond_data)
+
+NEesp::save_data(diet_data)
+
+NEesp::save_data(asmt_data)
+
+NEesp::save_data(asmt_sum_data)
+
+NEesp::save_data(swept_data)
+
+NEesp::save_data(rec_data)
+
+NEesp::save_data(com_data)
+
+NEesp::save_data(hab_data)
+
+NEesp::save_data(climate_data)
+
+NEesp::save_data(risk_data)
+
+NEesp::save_data(risk_year_hist_data)
+
+NEesp::save_data(risk_year_value_data)
+
+NEesp::save_data(risk_species_data)
+```
+
+This is a preliminary report of previously collected data. This report is pulling information on all Northeast `r species` stocks.

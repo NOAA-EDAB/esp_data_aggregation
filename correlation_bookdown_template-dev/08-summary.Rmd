@@ -1,0 +1,72 @@
+# Summary of statistically significant indicators
+
+```{r, output_summary}
+summary_table <- function(x) {
+  DT::datatable(x,
+    rownames = FALSE,
+    filter = list(
+      position = "top",
+      clear = FALSE
+    ),
+    options = list(
+      search = list(regex = TRUE),
+      paging = FALSE
+    )
+  )
+}
+
+colnames(output) <- c(
+  "Response_variable", "Indicator",
+  "Number of data points", "Slope",
+  "P-value", "R2_adj"
+)
+```
+
+## Abundance
+```{r}
+output %>%
+  tibble::as_tibble() %>%
+  dplyr::filter(
+    Response_variable == "Abundance",
+    R2_adj < 1
+  ) %>%
+  dplyr::select(-Response_variable) %>%
+  summary_table()
+```
+
+## Recruitment
+```{r}
+output %>%
+  tibble::as_tibble() %>%
+  dplyr::filter(
+    Response_variable == "Recruitment",
+    R2_adj != 1
+  ) %>%
+  dplyr::select(-Response_variable) %>%
+  summary_table()
+```
+
+## Catch
+```{r}
+output %>%
+  tibble::as_tibble() %>%
+  dplyr::filter(
+    Response_variable == "Catch",
+    R2_adj != 1
+  ) %>%
+  dplyr::select(-Response_variable) %>%
+  summary_table()
+```
+
+## Fmort
+```{r}
+output %>%
+  tibble::as_tibble() %>%
+  dplyr::filter(
+    Response_variable == "Fmort",
+    R2_adj != 1
+  ) %>%
+  dplyr::select(-Response_variable) %>%
+  summary_table()
+```
+
