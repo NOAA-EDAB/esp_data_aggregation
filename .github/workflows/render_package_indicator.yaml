@@ -44,11 +44,17 @@ jobs:
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
                  
+      - name: Install more packages
+        run: |
+          Rscript -e 'install.packages("devtools")
+          install.packages("stringi")
+          install.packages("car")
+          devtools::install_github("NOAA-EDAB/esp_data_aggregation@package", dependencies = TRUE)'
+          
       - name: Render reports
         run: |
-          Rscript -e 'devtools::install_github("NOAA-EDAB/esp_data_aggregation@package)"
-          lapply(NEesp::species_key$Species, 
-                 NEesp::render_ind_report)'
+          Rscript -e 'lapply(NEesp::species_key$Species, 
+                             NEesp::render_ind_report)'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -56,5 +62,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: action_reports # The folder the action should deploy.
-          TARGET_FOLDER: Indicator_Reports
+          TARGET_FOLDER: Indicator_Reports_pkg
           CLEAN: false # Automatically remove deleted files from the deploy branch
