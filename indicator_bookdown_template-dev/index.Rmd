@@ -40,7 +40,8 @@ knitr::opts_chunk$set(
   warning = FALSE,
   fig.width = 8,
   fig.align = "center",
-  fig.path = params$path
+  fig.path = params$path,
+  dev = "png"
 )
 ```
 

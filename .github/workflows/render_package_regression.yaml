@@ -22,7 +22,6 @@ jobs:
         run: |        
           sudo apt-get install  libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
         shell: bash
-# openjdk-8-jre           sudo R CMD javareconf
         
       - name: Set up R
         uses: r-lib/actions/setup-r@master
@@ -42,13 +41,16 @@ jobs:
           sudo R CMD javareconf
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
-                 
-      - name: Render reports
+
+      - name: Install more packages
         run: |
           Rscript -e 'install.packages("stringi")
           install.packages("papeR")
-          devtools::install_github("NOAA-EDAB/esp_data_aggregation@package", dependencies = TRUE)
-          NEesp::render_all_reg()'
+          devtools::install_github("NOAA-EDAB/esp_data_aggregation@package", dependencies = TRUE)'
+                 
+      - name: Render reports
+        run: |
+          Rscript -e 'NEesp::render_all_reg()'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
