@@ -48,8 +48,6 @@ params:
   
   risk_species_data: data # species risk
   
-  cache: FALSE
-  
   path: "" # figure path
 ---
 
