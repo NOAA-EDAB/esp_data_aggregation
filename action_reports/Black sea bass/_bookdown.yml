@@ -1,8 +1,0 @@
-book_filename: indicator-bookdown
-delete_merged_file: yes
-rmd_files: ["index.Rmd", "methods.Rmd", 
-	    "habitat-title-page.Rmd", "latlong.Rmd", "temperature.Rmd", "salinity.Rmd", "depth.Rmd", "habitat-vulnerability.Rmd", "geographic-distribution.Rmd", 
-	    "biological-title-page.Rmd", "length.Rmd", "von_b.Rmd", "length50maturity.Rmd", "condition.Rmd", "diet.Rmd", "abundance.Rmd", 
-	    "population-title-page.Rmd", "biomass.Rmd", "bbmsy.Rmd", "recruitment.Rmd", "age-diversity.Rmd", "climate_vulnerability.Rmd", 
-	    "socio-economic-title-page.Rmd", "catch.Rmd", "ffmsy.Rmd", "revenue.Rmd", "management.Rmd", 
-	    "risk-assessment.Rmd"]
