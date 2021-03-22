@@ -7,6 +7,7 @@ output:
   bookdown::gitbook:
     split_by: section
 documentclass: book
+always_allow_html: true
 github-repo: NOAA-EDAB/esp_data_aggregation
 params:
   lag: 0 # lag for correlations
