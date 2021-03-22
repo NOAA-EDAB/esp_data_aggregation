@@ -1,0 +1,225 @@
+## Catch
+
+```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```
+
+Stock assessment catch data are from ``r params$asmt_source``. Recreational catch data were downloaded from [NOAA MRIP](https://www.st.nmfs.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/). Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+
+### Figures
+```{r}
+if (nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0) {
+  ndesc <- asmt_data %>%
+    dplyr::filter(Metric == "Catch") %>%
+    dplyr::mutate(options = paste(Description, Units)) %>%
+    dplyr::select(options) %>%
+    unique() %>%
+    nrow()
+} else {
+  ndesc <- 1
+}
+```
+
+#### Stock assessment catch
+
+
+```{r, catch, fig.cap = paste(species, "assessment catch")}
+#  fig.height = ndesc * 10
+NEesp::plot_asmt(asmt_data,
+  metric = "Catch",
+  ytitle = "Catch",
+  lin = lines,
+  col = colors
+)
+```
+
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("asmt_catch")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+#### Recreational catch
+
+
+```{r, rec, fig.cap = paste(species, "recreational catch")}
+NEesp::plot_rec_catch(rec_data)
+```
+
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("rec_catch")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+#### Commercial catch
+
+
+```{r, com, fig.cap = paste(species, "commercial catch")}
+NEesp::plot_com(com_data)
+```
+
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("com_catch")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+#### Commercial vs recreational catch
+
+
+```{r, comvrec, fig.cap = paste(species, "proportional commercial and recreational catch")}
+NEesp::plot_prop_catch(com = com_data, rec = rec_data)
+```
+
+
+### Data
+
+#### Stock assessment catch
+```{r, catch_data}
+data <- asmt_data %>%
+  dplyr::filter(Metric == "Catch") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+    round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+    format(big.mark = ",")) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+#### Recreational catch
+```{r, rec_data}
+data <- rec_data %>%
+  dplyr::select(year, st_f, mode_fx_f, lbs_ab1) %>%
+  dplyr::mutate(
+    State = st_f %>%
+      stringr::str_to_title(),
+    Method = mode_fx_f %>%
+      stringr::str_to_sentence(),
+    Catch_pounds = lbs_ab1 %>%
+      format(big.mark = ",")
+  ) %>%
+  dplyr::select(year, State, Method, Catch_pounds) %>%
+  NEesp::character_to_factor()
+
+make_html_table(data, col_names = c("Year", "State", "Method", "Catch (lb)"))
+```
+
+#### Commercial catch
+```{r, com_data}
+data <- com_data %>%
+  dplyr::select(Year, State, Dollars_adj, Pounds) %>%
+  dplyr::mutate(
+    Dollars_adj = Dollars_adj %>%
+      round(digits = 0) %>%
+      format(big.mark = ","),
+    State = State %>%
+      stringr::str_to_title(),
+    Pounds = Pounds %>%
+      format(big.mark = ",")
+  ) %>%
+  dplyr::rename(
+    "Revenue (2019 dollars)" = "Dollars_adj",
+    "Commercial catch (lb)" = "Pounds"
+  ) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+#### Commercial vs recreational catch
+```{r, comvrec_data}
+data <- NEesp::prop_catch_data(rec = rec_data, com = com_data) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c(
+  "Year", "Recreational catch",
+  "Commercial catch", "Total catch",
+  "Proportion recreational",
+  "Proportion commercial"
+))
+```
+
+#### Commercial, recreational, and stock assessment catch
+```{r, all_catch}
+stock <- asmt_data %>%
+  dplyr::filter(
+    Metric == "Catch",
+    Region != "Eastern Georges Bank"
+  ) %>% # double counted
+  dplyr::mutate(options = paste(Description, Units, AssessmentYear, sep = " - ")) %>%
+  dplyr::group_by(Year, options) %>%
+  dplyr::summarise(Value = sum(Value)) %>%
+  dplyr::ungroup() %>%
+  tidyr::pivot_wider(
+    names_from = options,
+    values_from = Value
+  )
+
+recr <- rec_data %>%
+  dplyr::mutate(catch = lbs_ab1 %>%
+    stringr::str_replace_all(",", "") %>%
+    as.numeric()) %>%
+  dplyr::group_by(year) %>%
+  dplyr::rename(Year = year) %>%
+  dplyr::summarise(`Recreational catch (mt)` = sum(catch) / 2204.6)
+
+comm <- com_data %>%
+  dplyr::group_by(Year) %>%
+  dplyr::summarise(`Commercial catch (mt)` = sum(Pounds) / 2204.6)
+
+all_catch <- c()
+if (nrow(stock) > 0) {
+  all_catch <- stock
+}
+if (nrow(recr) > 0) {
+  if (is.null(all_catch) == FALSE) {
+    all_catch <- dplyr::full_join(all_catch, recr, by = "Year")
+  } else {
+    all_catch <- recr
+  }
+}
+if (nrow(comm) > 0) {
+  if (is.null(all_catch) == FALSE) {
+    all_catch <- dplyr::full_join(all_catch, comm, by = "Year")
+  } else {
+    all_catch <- comm
+  }
+}
+
+if (is.null(all_catch) == FALSE &
+  ncol(all_catch > 2)) {
+  all_catch <- all_catch %>%
+    dplyr::arrange(Year) %>%
+    round(digits = 0) %>%
+    # format(big.mark = ",") %>% # messing up formatting
+    as.data.frame()
+}
+
+# make sure there is data on at least 2 types of catch
+test <- c(nrow(stock), nrow(recr), nrow(comm))
+sum_test <- sum(test == 0)
+
+if (sum_test >= 2) {
+  print("NO DATA")
+} else {
+  NEesp::make_html_table(all_catch, col_names = colnames(all_catch))
+}
+```
+

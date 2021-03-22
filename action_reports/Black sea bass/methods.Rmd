@@ -1,0 +1,33 @@
+# Methods
+
+## Stock identification
+Northeast stocks were identified from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv).
+
+## Data collection and presentation
+
+Data sources for each analysis are identified in the Results.
+
+All continuous temporal data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit.
+
+### `assessmentdata` methods
+Stock assessment and data quality information were compiled into a summary table.
+
+B/Bmsy was classified as "DANGER" if it was below 1 and "GOOD" if it was above 1.
+
+F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1.
+
+### `survdat` methods
+`survdat` data with zero abundance were not included in this analysis. Abundance and biomass were summed for each year and season. All other metrics were averaged for each year and season. The tables show summary statistics for the entire time series and for the most recent 5 years in the time series. 
+
+## Risk assessment
+
+### Risk across stocks
+
+#### Suite of indicators
+All stocks were ranked in order of increasing risk. The stock with the highest ranking is the stock determined to be at the highest risk. In this case, high risk has two meanings: (1) high importance (e.g., a stock with a high catch would have a high risk ranking for the catch indicator) or high vulnerability (e.g., a stock with low B/Bmsy would have a high risk ranking for the B/Bmsy indicator). The normalized rank was determined by dividing each stock's rank by the total number of stocks considered for that indicator. Stocks that were missing indicator measurements were assigned a normalized rank of 0.5.
+
+#### Individual indicators
+Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value was calculated as the normalized rank of this species compared to all other species in that year.
+
+### Risk within stocks
+The normalized risk value was calculated as the normalized rank of each yearly measurement compared to all other years.

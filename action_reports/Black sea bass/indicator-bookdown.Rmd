@@ -1,0 +1,2449 @@
+---
+title: "`r params$species_ID`"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    split_by: section
+documentclass: book
+github-repo: NOAA-EDAB/esp_data_aggregation
+
+language:
+  ui:
+    chapter_name: "Section "
+
+params: 
+  species_ID: "Acadian redfish" # common name of species
+
+  asmt_sum_source: "assessmentdata::stockAssessmentSummary"
+  asmt_source: "assessmentdata::stockAssessmentData"
+  survey_source: "survdat"
+  
+  ricky_survey_data: NEesp::bio_survey # ricky survey data
+  
+  save: TRUE
+
+  cache: FALSE
+  
+  path: "" # figure path
+---
+
+# `r params$species` {-}
+
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 8,
+  fig.align = "center",
+  fig.cap = params$species,
+  fig.path = params$path
+)
+```
+
+```{r, species_data}
+species <- params$species_ID
+
+# risk data
+risk_data <- NEesp::risk %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::missing_na()
+
+risk_year_hist_data <- NEesp::risk_year_hist %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::missing_na()
+
+risk_year_value_data <- NEesp::risk_year_value %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::missing_na()
+
+risk_species_data <- NEesp::risk_species %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::missing_na()
+
+# data
+latlong_data <- NEesp::latlong %>%
+  dplyr::filter(Species == species)
+
+survey_data <- NEesp::survey %>%
+  dplyr::filter(Species == species)
+cond_data <- NEesp::cond %>%
+  dplyr::filter(Species == species)
+diet_data <- NEesp::allfh %>%
+  dplyr::filter(Species == species)
+
+asmt_data <- NEesp::asmt %>%
+  dplyr::filter(Species == species)
+asmt_sum_data <- NEesp::asmt_sum %>%
+  dplyr::filter(Species == species)
+swept_data <- NEesp::swept %>%
+  dplyr::filter(Species == species)
+
+rec_data <- NEesp::rec_catch %>%
+  dplyr::filter(Species == species)
+com_data <- NEesp::com_catch %>%
+  dplyr::filter(Species == species)
+
+# habitat vulnerability
+hab_data <- ecodata::habitat_vulnerability %>%
+  dplyr::filter(Species == species) %>%
+  dplyr::select(-Species)
+hab_data <- hab_data[, c(8, 1:7)]
+
+# climate vulnerability
+climate_data <- NEesp::climate_vulnerability %>%
+  dplyr::mutate(Species = Species %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(Species == species) %>%
+  dplyr::select(-Species)
+
+# ricky
+bio_survey <- NEesp::bio_survey
+```
+
+```{r, save_data, eval = params$save}
+
+dir.create("data")
+
+NEesp::save_data(latlong_data)
+
+NEesp::save_data(survey_data)
+
+NEesp::save_data(cond_data)
+
+NEesp::save_data(diet_data)
+
+NEesp::save_data(asmt_data)
+
+NEesp::save_data(asmt_sum_data)
+
+NEesp::save_data(swept_data)
+
+NEesp::save_data(rec_data)
+
+NEesp::save_data(com_data)
+
+NEesp::save_data(hab_data)
+
+NEesp::save_data(climate_data)
+
+NEesp::save_data(risk_data)
+
+NEesp::save_data(risk_year_hist_data)
+
+NEesp::save_data(risk_year_value_data)
+
+NEesp::save_data(risk_species_data)
+```
+
+This is a preliminary report of previously collected data. This report is pulling information on all Northeast `r species` stocks.
+
+<!--chapter:end:index.Rmd-->
+
+# Methods
+
+## Stock identification
+Northeast stocks were identified from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv).
+
+## Data collection and presentation
+
+Data sources for each analysis are identified in the Results.
+
+All continuous temporal data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit.
+
+### `assessmentdata` methods
+Stock assessment and data quality information were compiled into a summary table.
+
+B/Bmsy was classified as "DANGER" if it was below 1 and "GOOD" if it was above 1.
+
+F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1.
+
+### `survdat` methods
+`survdat` data with zero abundance were not included in this analysis. Abundance and biomass were summed for each year and season. All other metrics were averaged for each year and season. The tables show summary statistics for the entire time series and for the most recent 5 years in the time series. 
+
+## Risk assessment
+
+### Risk across stocks
+
+#### Suite of indicators
+All stocks were ranked in order of increasing risk. The stock with the highest ranking is the stock determined to be at the highest risk. In this case, high risk has two meanings: (1) high importance (e.g., a stock with a high catch would have a high risk ranking for the catch indicator) or high vulnerability (e.g., a stock with low B/Bmsy would have a high risk ranking for the B/Bmsy indicator). The normalized rank was determined by dividing each stock's rank by the total number of stocks considered for that indicator. Stocks that were missing indicator measurements were assigned a normalized rank of 0.5.
+
+#### Individual indicators
+Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value was calculated as the normalized rank of this species compared to all other species in that year.
+
+### Risk within stocks
+The normalized risk value was calculated as the normalized rank of each yearly measurement compared to all other years.
+
+<!--chapter:end:01-methods.Rmd-->
+
+# Habitat information
+
+<!--chapter:end:02-habitat-title-page.Rmd-->
+
+## Distribution
+
+### Map of distribution
+Strata maps were pulled and compiled using code from [NOAA/EDAB ECSA](https://github.com/NOAA-EDAB/ECSA). Please note, only fall and spring strata are shown on the map.
+```{r, ecsa_map}
+NEesp::map_strata_ecsa(
+  data = latlong_data,
+  species_name = species
+)
+```
+
+### Latitude and longitude ranges
+Latitude and longitude ranges were calculated from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
+```{r, latlong}
+data <- NEesp::get_latlong(species, latlong_data, shapefile = NEesp::shape) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+<!--chapter:end:03-latlong.Rmd-->
+
+## Temperature
+
+Surface and bottom temperature data were pulled from ``r params$survey_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+```{r, temp}
+NEesp::generate_plot(survey_data,
+  variable = "SURFTEMP",
+  ytitle = "Surface temperature"
+)
+
+NEesp::generate_plot(survey_data,
+  variable = "BOTTEMP",
+  ytitle = "Bottom temperature"
+)
+```
+
+### Summary
+```{r, temp_summary}
+NEesp::generate_table(survey_data,
+  variable = "SURFTEMP",
+  cap = "Surface temperature"
+)
+
+NEesp::generate_table(survey_data,
+  variable = "BOTTEMP",
+  cap = "Bottom temperature"
+)
+```
+
+### Data
+```{r, temp_data}
+data <- survey_data %>%
+  dplyr::select(
+    YEAR, SEASON, Region, date,
+    fish_id, SURFTEMP, BOTTEMP
+  ) %>%
+  dplyr::filter(SURFTEMP > 0 | BOTTEMP > 0) %>%
+  dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+  dplyr::distinct() %>% # remove repeated row info
+  dplyr::summarise(
+    day_mean_surf = mean(SURFTEMP),
+    day_mean_bot = mean(BOTTEMP)
+  ) %>% # mean by day
+  dplyr::ungroup() %>%
+  dplyr::group_by(YEAR, SEASON, Region) %>%
+  dplyr::summarise(
+    Mean_surface_temperature = mean(day_mean_surf) %>%
+      round(digits = 2),
+    Mean_bottom_temperature = mean(day_mean_bot) %>%
+      round(digits = 2)
+  ) %>%
+  NEesp::character_to_factor() # mean by season-year
+
+NEesp::make_html_table(data, col_names = c(
+  "Year", "Season", "Region",
+  "Mean surface temperature", "Mean bottom temperature"
+))
+```
+
+<!--chapter:end:04-temperature.Rmd-->
+
+## Salinity
+
+Surface and bottom salinity data were pulled from ``r params$survey_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+```{r, surfsalin}
+NEesp::generate_plot(survey_data,
+  variable = "SURFSALIN",
+  ytitle = "Surface salinity"
+)
+
+NEesp::generate_plot(survey_data,
+  variable = "BOTSALIN",
+  ytitle = "Bottom salinity"
+)
+```
+
+### Summary
+```{r, salin_summary}
+NEesp::generate_table(survey_data,
+  variable = "SURFSALIN",
+  cap = "Surface salinity"
+)
+
+NEesp::generate_table(survey_data,
+  variable = "BOTSALIN",
+  cap = "Bottom salinity"
+)
+```
+
+### Data
+```{r, salin_data}
+data <- survey_data %>%
+  dplyr::select(
+    YEAR, SEASON, Region, date,
+    fish_id, SURFSALIN, BOTSALIN
+  ) %>%
+  dplyr::filter(SURFSALIN > 0 | BOTSALIN > 0) %>%
+  dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+  dplyr::distinct() %>% # remove repeated row info
+  dplyr::summarise(
+    day_mean_surf = mean(SURFSALIN),
+    day_mean_bot = mean(BOTSALIN)
+  ) %>% # mean by day
+  dplyr::ungroup() %>%
+  dplyr::group_by(YEAR, SEASON, Region) %>%
+  dplyr::summarise(
+    Mean_surface_salinity = mean(day_mean_surf) %>%
+      round(digits = 2),
+    Mean_bottom_salinity = mean(day_mean_bot) %>%
+      round(digits = 2)
+  ) %>%
+  NEesp::character_to_factor() # mean by season-year
+
+NEesp::make_html_table(data, col_names = c(
+  "Year", "Season", "Region",
+  "Mean surface salinity", "Mean bottom salinity"
+))
+```
+
+<!--chapter:end:05-salinity.Rmd-->
+
+## Depth
+Ricky Tabandera
+
+```{r, cache = params$cache}
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(here))
+suppressPackageStartupMessages(library(survdat))
+suppressPackageStartupMessages(library(dbutils))
+```
+
+The range of depths that a species occupies is linked to many other habitat characteristics such as benthic structure, food availability, or temperature. Thus, observed depth can signal changes in habitat suitability. Changes in this metric can indicate the required resources are changing their distribution on the landscape. Seasonal differences in occurrence can also help identify essential habitat and the timing of migration to acquire seasonal resources 
+
+```{r, depth_data_cache, cache = params$cache}
+# survdata<-readRDS(here::here("survdat_pull_bio.rds"))
+# survdata <- ricky_survey
+
+survdata <- params$ricky_survey_data
+
+stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+stock_list_all_strata <- stock_list_all_strata %>% dplyr::rename(SVSPP = svspp)
+stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
+```
+
+```{r, depth_data}
+survdata <- survdata %>% dplyr::mutate(SVSPP = as.numeric(SVSPP))
+
+survdata.w.codes <- dplyr::inner_join(survdata, stock_list, by = "SVSPP") %>%
+  dplyr::mutate(common_name = stringr::str_to_sentence(common_name))
+
+# # abundance is adjusted but not length for bigalo data
+# #groupdiscription =svspp
+# # filter by group giv list of svspp codes
+# get_fish_info()
+# surv.species<-survdat::get_species(channel)
+#
+# surv.species.1<-surv.species$data
+# surv.code<-surv.species.1 %>% dplyr::distinct(SVSPP,.keep_all =T)
+
+# black sea bass is svspp= 	141 bluefish =135
+
+test.sp.code <- c(141, 135)
+
+selected.spp <- survdata.w.codes %>% dplyr::filter(common_name == species)
+
+selected.spp.sum <- selected.spp %>%
+  dplyr::group_by(YEAR, SEASON) %>%
+  dplyr::summarise(
+    ave.d = mean(DEPTH),
+    sd.d = sd(DEPTH, na.rm = TRUE),
+    ave.t = mean(BOTTEMP),
+    sd.t = sd(BOTTEMP, na.rm = TRUE)
+  )
+
+has_data <- nrow(selected.spp.sum) > 0
+```
+
+### Figures
+
+```{r, depth_fig, eval = has_data}
+
+selected.spp.sum %>%
+  ggplot(aes(
+    x = YEAR %>% as.numeric(),
+    y = -ave.d,
+    color = SEASON,
+    group = SEASON
+  )) +
+  geom_line() +
+  geom_point() +
+  geom_pointrange(aes(
+    ymin = -ave.d - sd.d,
+    ymax = -ave.d + sd.d
+  )) +
+  xlab("Year") +
+  ylab("depth of trawl (ft)") +
+  ggtitle("Seasonal depth profile of",
+    subtitle = species
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+```{r, depth_fig2, eval = has_data}
+
+selected.spp.sum %>%
+  ggplot(aes(
+    x = YEAR %>% as.numeric(),
+    y = ave.t,
+    color = SEASON,
+    group = SEASON
+  )) +
+  geom_line() +
+  geom_point() +
+  geom_pointrange(aes(
+    ymin = ave.t - sd.t,
+    ymax = ave.t + sd.t
+  )) +
+  xlab("Year") +
+  ylab("Bottom temperature (°C)") +
+  ggtitle("Seasonal bottom temperature of tows that contain",
+    subtitle = species
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+```{r, no_data, eval = has_data == FALSE}
+print("NO DATA")
+```
+
+
+<!--chapter:end:06-depth.Rmd-->
+
+## Habitat vulnerability
+
+Habitat vulnerability information is sourced from the `ecodata` package. 
+
+```{r, hab_vul}
+NEesp::make_html_table(hab_data,
+  col_names = c(
+    "EPU", "Habitat name", "Habitat vulnerability",
+    "Importance of habitat to eggs/larvae",
+    "Importance of habitat to juveniles/YOY",
+    "Importance of habitat to adults",
+    "Importance of habitat to spawning adults",
+    "Overall species vulnerability"
+  )
+)
+```
+
+<!--chapter:end:07-habitat-vulnerability.Rmd-->
+
+# Biological information
+
+<!--chapter:end:08-biological-title-page.Rmd-->
+
+## Geographic distribution
+
+Using fisheries independent data from bottom trawls in `survdat`. Several metrics of distribution in observed catches are calculated. Changes in distribution can indicate changes in the geographic range of a species due to a variety of constraints such as food availability or physiologic limitations.The unweighted centroid is one metric that describes the geometric center of the observed range of `r params$species` in a given year. Calculated as the mean of latitude and longitude of all tows that captured the species of interest.The density of observations for `r params$species` was visualized using two-dimensional kernel density estimation on a grid as documented in `MASS::kde2d`. This density estimation is then visualized to indicate areas of greater or lesser probability of occurrence 
+
+
+```{r geo_conc data wrangling }
+source(here::here("R","common_names_survdat.r"))
+
+survdata.w.codes<-Common_names_survdat(here::here("data","survdat_03022021_B.RDS"))
+
+
+selected.surv<-survdata.w.codes %>% 
+   dplyr::filter(common_name == params$species)
+
+
+
+
+# testing other centroid functions
+# surv.sub<-selected.surv %>% dplyr::select(LON,LAT,YEAR)
+# surv.sub.year <-surv.sub %>% dplyr::group_split(YEAR)
+# 
+# ####works
+# centroid.list<-purrr::map(surv.sub.year,~geosphere::centroid(.x[,1:2]))
+# 
+# selected.surv.centroid<-data.table::rbindlist(purrr::map( centroid.list, data.table::as.data.table))
+# 
+# selected.surv.centroid<-cbind(selected.surv.centroid,unique(selected.surv$YEAR))
+# 
+# colnames(selected.surv.centroid)<-c("lon","lat","year")
+# 
+# selected.surv.centroid.sf<-st_as_sf(selected.surv.centroid, coords = c("lon", "lat"), crs = 4326)
+
+
+if(nrow(selected.surv>3)){
+  
+selected.surv.centroid<-selected.surv %>% dplyr::group_by(YEAR) %>% dplyr::summarise(lon=mean(LON),lat=mean(LAT))
+
+}else("Not enough data")
+
+
+```
+### Figures
+
+
+#### Density and distribution estimation
+```{r}
+if(nrow(selected.surv>3)){
+  #remove low capture years from this vis to make
+  
+selected.surv<-selected.surv %>%
+  dplyr::filter(YEAR >1970)%>%
+  dplyr::mutate(decade=ggplot2::cut_width(YEAR, width = 10, center =  1980 ))
+
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+latmin<-(min(selected.surv.centroid$lat)-1)
+latmax<-(max(selected.surv.centroid$lat)+1)
+lonmin<-(min(selected.surv.centroid$lon)-1)
+lonmax<-(max(selected.surv.centroid$lon)+1)
+
+
+
+ggplot2::ggplot(data = world) +
+  ggplot2::geom_sf() +
+  ggplot2::stat_density2d(aes(x=LON,y=LAT,fill = ..level..), alpha = .5,geom = "polygon", data = selected.surv) +
+  nmfspalette::scale_fill_nmfs(palette="crustacean",discrete=FALSE, reverse=TRUE)+
+  ggplot2::coord_sf(xlim=c(lonmin,lonmax), ylim=c(latmin,latmax))+
+  scale_color_gradient(low = "blue", high = "red", name="Year")+
+  xlab("Longitude")+
+  ylab("Latitude")+
+  theme(legend.position = 'none')+
+  facet_wrap(~decade)
+  
+
+
+  
+
+}else("Not enough data")
+
+```
+
+#### Centroid of observations 
+
+The average position of observations across all years of surveys 
+
+```{r, centroid plot}
+if(nrow(selected.surv.centroid<4)){
+  world <- ne_countries(scale = "medium", returnclass = "sf")
+latmin<-(min(selected.surv.centroid$lat)-1)
+latmax<-(max(selected.surv.centroid$lat)+1)
+lonmin<-(min(selected.surv.centroid$lon)-1)
+lonmax<-(max(selected.surv.centroid$lon)+1)
+
+
+ggplot2::ggplot(data = world) +
+  geom_sf() +
+  geom_point(data = selected.surv.centroid, aes(x=lon,y=lat,color=as.numeric(YEAR)))+
+  ggrepel::geom_label_repel(data = selected.surv.centroid,aes(x=lon,y=lat,label=YEAR),max.overlaps =20 )+
+  ggplot2::coord_sf(xlim=c(lonmin,lonmax), ylim=c(latmin,latmax))+
+  scale_color_gradient(low = "blue", high = "red", name="Year")+
+  xlab("Longitude")+
+  ylab("Latitude")
+}else("Not enough data")
+
+```
+
+
+
+
+
+<!--chapter:end:08-geographic-distribution.Rmd-->
+
+## Length
+
+Length data were pulled from ``r params$survey_source``. Only years with more than 10 fish lengths were considered for analysis. 
+
+### Figures
+
+#### Overview {-}
+```{r, length_freq}
+NEesp::plot_len_hist(survey_data)
+```
+
+#### Summary statistics {-}
+Separate `geom_gls()` functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+```{r, length}
+NEesp::generate_len_plot(survey_data)
+```
+
+#### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c(
+  "max_length_spring",
+  "max_length_fall",
+  "avg_length_spring",
+  "avg_length_fall"
+)
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Summary
+```{r, length_summary}
+NEesp::generate_len_table(survey_data)
+```
+
+### Data
+```{r, length_data}
+data <- NEesp::get_len_data2(survey_data) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c(
+  "Year", "Season", "Region", "Number of fish",
+  "Mean length", "Minimum length", "Maximum length"
+))
+```
+
+<!--chapter:end:09-length.Rmd-->
+
+## von Bertalanffy growth curve
+
+Ricky Tabandera
+
+```{r setup_vonb, cache = params$cache}
+# install.packages("ggrepel")
+# install.packages("ggpubr")
+# devtools::install_github("james-thorson/FishLife")
+
+suppressPackageStartupMessages(library(FishLife))
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(nlstools))
+library(rfishbase)
+library(ggpubr)
+library(FSA)
+```
+
+```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
+
+#survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
+survdata <- bio_survey
+
+survdata <- survdata %>% mutate(SVSPP = as.numeric(SVSPP))
+stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+stock_list_all_strata <- stock_list_all_strata %>% rename(SVSPP = svspp)
+stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
+
+survdata.w.codes <- inner_join(survdata, stock_list, by = "SVSPP")
+
+selected.surv <- survdata.w.codes %>%
+  dplyr::mutate(common_name = common_name %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(common_name == species)
+
+# only take records with age associated
+selected.surv.clean <- selected.surv %>% drop_na(AGE)
+```
+
+```{r, vonb_model}
+if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
+  # define the type of von b model
+  vb <- vbFuns(param = "Typical")
+  # define starting parameters based on the avalible data
+  f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "Walford")
+
+  # fit a non-linear least squares model based on the data and starting values
+  f.fit <- nls(LENGTH ~ vb(AGE, Linf, K, t0), data = selected.surv.clean, start = f.starts)
+  # store the fit parameters for later investigation
+  f.fit.summary <- summary(f.fit, correlation = TRUE)
+
+  # define the range of age values that will be used to generate points from the fitted model
+  # roughly by 0.2 year steps
+  newages <- data.frame(AGE = seq(0, 50, length = 250))
+  # predict(f.fit,newdata=newages) this funtion uses the model from f.fit to generate new lengths
+  # make a dataset with the values from the model
+  selected.surv.vonb <- data.frame(AGE = seq(1, 50, length = 250), LENGTH = predict(f.fit, newdata = newages))
+} else {
+  print("NOT ENOUGH DATA TO FIT A CURVE")
+}
+```
+
+### Length at age growth curve
+
+The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth parameters of `Linf` (Length infinty), `K` (growth coefficient), and `t0` (size at time 0) were estimated using non-linear least square model. The starting point for model building is accomplished using `FSA::vbStarts`. Age and length data sourced from `survdat` and spans all years and survey areas. 
+
+`r if(params$species == "Monkfish"){"The age determination method for monkfish has not been validated, and the anatomic structure used has changed through time. In addition these stocks display a high degree of sexual dimorphisms making fitting of single growth curves unreliable.  This results a high degree of uncertainty in assessing the age structure of the stock and the effects of fishing pressure."}`
+
+```{r single_growth_curve}
+# palette
+if (nrow(selected.surv.clean) > 0) {
+  fig <- ggplot(
+    data = selected.surv.clean,
+    aes(
+      x = AGE,
+      y = LENGTH,
+      color = YEAR %>% as.numeric()
+    )
+  ) +
+    geom_jitter(alpha = 0.5) +
+    scale_color_gradientn(
+      colors = nmfspalette::nmfs_palette("regional web")(4),
+      name = "Year"
+    ) +
+    xlim(0, (1.5 * max(selected.surv.clean$AGE))) +
+    ylim(0, (1.5 * max(selected.surv.clean$LENGTH, na.rm = TRUE))) +
+    xlab("Age (jittered)") +
+    ylab(" Total length (cm) (jittered)") +
+    ggtitle(species, subtitle = "Length at age") +
+    theme_minimal()
+
+  if (nrow(selected.surv.vonb) > 0) {
+    fig <- fig +
+      geom_line(
+        data = selected.surv.vonb,
+        inherit.aes = FALSE,
+        mapping = aes(
+          x = AGE,
+          y = LENGTH
+        ),
+        color = "blue",
+        size = 1.4
+      )
+  }
+
+  return(fig)
+} else {
+  print("NO DATA")
+}
+```
+
+<!--chapter:end:10-von_b.Rmd-->
+
+
+## Length at first maturity
+Ricky Tabandera
+
+```{r L50 setup, include=FALSE, eval = FALSE}
+# knitr::opts_chunk$set(echo = TRUE)
+
+# these packages do not have to be attached for code to run
+
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(nlstools))
+library(dbutils)
+library(survdat)
+```
+
+### Size at first maturity 
+
+L50 or length at which 50%  maturity can be calculated using differing methods. Using Data sourced from `survdat` that consist of visual sexual maturity determination and length measurements. Here, L50 is estimated by fitting a logistic generalized linear model to gonadal maturity and body length measurements and estimating the inflection point of the logistic model. This point represents the size where the individual has 50% odds of being mature. Decade variations of this parameter are investigated utilizing decade as a additive and interaction term in the model specification.
+
+The relationship between sexual maturity by body size is a well established life history parameter. L50 is a useful metric in fisheries to identify sizes that are able to reproduce. This information can be used to inform regulation as to minimum catch size that should allow for a significant portion of the population to spawn and contribute genetic information to sustain the stock. Changes in this parameter can signal population/evolutionary pressures on the stock with reduction in this size potentially indicating excessive fishing pressure.
+
+```{r, L50 data wrangling}
+
+# survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
+survdata <- NEesp::bio_survey
+
+survdata <- survdata %>% 
+  mutate(SVSPP = as.numeric(SVSPP))
+
+stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+stock_list_all_strata <- stock_list_all_strata %>% rename(SVSPP = svspp)
+stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
+
+survdata.w.codes <- inner_join(survdata, stock_list, by = "SVSPP")
+
+selected.surv <- survdata.w.codes %>%
+  dplyr::mutate(common_name = common_name %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(common_name == species)
+
+# con <- connect_to_database(server="sole",uid="RTABANDERA")
+# surv.maturity<-get_maturity(con)
+# surv_maturity<-surv.maturity$data
+# write.csv(surv.maturity, file = "surv_maturity_codes.csv")
+
+# only take records with a maturity status associated
+selected.surv.clean <- selected.surv %>%
+  drop_na(MATURITY) %>%
+  dplyr::mutate(MATURITY = MATURITY %>%
+    stringr::str_to_upper()) %>%
+  dplyr::filter(MATURITY %in% c("D", "I", "R", "S", "T", "U", "E"))
+
+# recode the maturity col into factor
+
+# recode sexed fish to readable names
+# sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
+selected.surv.clean$MATURITY <- recode(selected.surv.clean$MATURITY, "D" = "Mature", "I" = "Immature", "R" = "Mature", "S" = "Mature", "T" = "Mature", "U" = "Mature", "E" = "Mature")
+# recode sex to male or female
+selected.surv.clean$SEX <- recode(selected.surv.clean$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" = "transitional")
+selected.surv.clean <- selected.surv.clean %>% 
+  mutate(SEX = as.factor(selected.surv.clean$SEX))
+selected.surv.clean <- selected.surv.clean %>% 
+  mutate(MATURITY = as.factor(MATURITY))
+
+selected.surv.f <- selected.surv.clean %>% filter(SEX %in% c("female", "male") & MATURITY != "X")
+```
+
+```{r, mature_model}
+# conditionally run models based on having more than 3 rows
+eval_model <- nrow(selected.surv.f) > 3 &
+  selected.surv.f$MATURITY %>%
+    unique() %>%
+    length() > 1 # more than 1 maturity category
+
+if (eval_model) {
+
+  # X= unknown , I = immature, D= developing, R S T U convert to developed
+
+  # #bin the years of fish into decades to compare if model parameters are chaging
+  # selected.surv.f<-selected.surv.f %>% mutate(decade=ggplot2::cut_width(YEAR, width = 10, boundary = 1980))
+  # levels(selected.surv.f$decade)<-c( "1980","1990", "2000","2010")
+
+  # model with sex as additive and multiplicative term
+  if (selected.surv.f$SEX %>%
+    unique() %>%
+    length() == 2) {
+    maturity.mod <- glm(MATURITY ~ LENGTH + SEX + LENGTH * SEX, data = selected.surv.f, family = "binomial")
+  }
+
+  # handle cases with only 1 sex
+  if (selected.surv.f$SEX %>%
+    unique() %>%
+    length() == 1) {
+    maturity.mod <- glm(MATURITY ~ LENGTH, data = selected.surv.f, family = "binomial")
+  }
+
+  pretty_mod <- papeR::prettify(summary(maturity.mod))
+
+  # summary(maturity.mod)
+} else {
+  ("Not enough data to fit model")
+}
+
+#########################
+# filter for maturity codes
+selected_surv_mat <- survdata.w.codes %>%
+  dplyr::mutate(common_name = common_name %>% stringr::str_to_sentence()) %>%
+  dplyr::filter(common_name == species)
+
+# only take records with a maturity status associated
+selected_surv_mat_clean <- selected_surv_mat %>% drop_na(MATURITY)
+
+# recode maturity codes to readable names
+selected_surv_mat_clean$MATURITY <- recode(selected_surv_mat_clean$MATURITY, "D" = "DEVELOPING", "I" = "IMMATURE", "R" = "RIPE", "S" = "SPENT", "T" = "RESTING", "U" = "RIPE AND RUNNING", "E" = "EYED", "X" = "UNKNOWN", "i" = "IMMATURE", "r" = "RIPE", "d" = "DEVELOPING", "t" = "RESTING", "1" = "UNKNOWN")
+```
+
+### Maturity classification 
+The gonadal development stage can vary between immature and mature. Once mature, there are several stages that represent phases in the spawning sequence. These stages and phases can vary across body length and the proportion of the population in each of these categories can help identify spawning size and what seasonal effects there are on development. 
+
+```{r, maturity_classification_ plot}
+
+if (nrow(selected_surv_mat_clean > 5)) {
+  mat_sum_season <- selected_surv_mat_clean %>%
+    group_by(LENGTH, MATURITY, SEASON) %>%
+    summarise(mat.code.count = length(MATURITY)) # problems with dplyr::n()
+
+  dat <- mat_sum_season %>%
+    group_by(LENGTH, SEASON) %>%
+    mutate(mat.sum = sum(mat.code.count), prop = (mat.code.count / mat.sum)) %>%
+    group_by(LENGTH)
+
+  if (nrow(dat) > 0) {
+    fig <- dat %>%
+      ggplot(aes(x = LENGTH, y = prop * 100, fill = MATURITY)) +
+      geom_bar(position = "stack", stat = "identity") +
+      nmfspalette::scale_fill_nmfs(palette = "regional web", discrete = TRUE, reverse = FALSE) +
+      xlab("Length (cm)") +
+      ylab("Percent (%)") +
+      ggtitle("Maturity classification across body length of", subtitle = species)
+
+    if (dat$SEASON %>% unique() %>% length() > 1) {
+      fig <- fig +
+        facet_wrap(vars(SEASON))
+    }
+
+    return(fig)
+  } else {
+    ("Not enough data")
+  }
+}
+```
+
+### Model results
+
+`r if(nrow(selected.surv.f)>3){"If the overall model is significant, there is support for the relationship between sexual maturity and body size. This model can predict the size where there are 50% odds of the indevidual is sexually mature. The results table below displays the L50 for Male and female indeviduals. "}` 
+
+```{r, model table}
+
+if (eval_model) {
+  knitr::kable(pretty_mod, digits = 3)
+}
+```
+
+### L50 differences between sexes
+
+`r if(nrow(selected.surv.f)>3){"The significance of differences between sex can be determined by referencing the model summary table above differences in intercept indicate differences in mean size between groups. Differences in betta coefficents indicate increases or decreases to the degree to which probability of maturity increases across body lengths   "}`
+
+```{r model results and L50}
+if (eval_model) {
+  if (summary(maturity.mod)$coefficients[, 4][1] < 0.05) {
+
+    # intercept devided by beta
+    L50.f <- (-coef(maturity.mod)[1]) / (coef(maturity.mod)[2]) # female
+    L50.m <- (-(coef(maturity.mod)[1] + coef(maturity.mod)[3])) / (coef(maturity.mod)[2] + coef(maturity.mod)[4]) # male
+
+    L50 <- data.frame(L50.f, L50.m)
+    row.names(L50) <- c("Length (cm) at 50% maturity")
+    colnames(L50) <- c("Female", "Male")
+    L50.p <- papeR::prettify(L50)
+    knitr::kable(L50.p, digits = 3)
+  }
+} else {
+  ("Non-significant")
+}
+```
+
+```{r, probability plot }
+
+
+if (eval_model) {
+  if (summary(maturity.mod)$coefficients[, 4][1] < 0.05) {
+    selected.surv.LENGTH <- seq(1:max(selected.surv.f$LENGTH))
+
+    sel.length <- length(selected.surv.LENGTH)
+    sel.min <- min(selected.surv.f$LENGTH)
+    sel.max <- max(selected.surv.f$LENGTH)
+
+    L50.sim.f <- boot::inv.logit(predict.glm(maturity.mod, 
+                                             newdata = data.frame(LENGTH = seq(1:sel.max), 
+                                                                  SEX = rep("female", length(seq(1:sel.max))), 
+                                                                  type = "response")))
+
+    L50.sim.m <- boot::inv.logit(predict.glm(maturity.mod, 
+                                             newdata = data.frame(LENGTH = seq(1:sel.max), 
+                                                                  SEX = rep("male", length(seq(1:sel.max))), 
+                                                                  type = "response")))
+
+
+    selected.surv.simlulation <- data.frame(L50.sim.f, L50.sim.m, selected.surv.LENGTH)
+    selected.surv.simlulation <- selected.surv.simlulation %>% 
+      pivot_longer(!selected.surv.LENGTH, names_to = "sex", values_to = "pred")
+
+
+    selected.surv.simlulation %>%
+      ggplot(aes(x = selected.surv.LENGTH, y = pred, color = sex)) +
+      geom_line(size = 3) +
+      xlab("Length (cm)") +
+      ylab("Probability") +
+      annotate("text", label = c("Mature", "Immature"), x = 30, y = c(1.05, -.05)) +
+      geom_hline(yintercept = c(1, 0)) +
+      geom_vline(xintercept = c(L50.f, L50.m), colour = c("#0093D0", "#FF4438"), size = 1.4, show.legend = TRUE) +
+      scale_color_manual(labels = c("Female", "Male"), name = "Sex", values = c("#0093D0", "#FF4438"))
+  }
+} else {
+  ("Non-significant")
+}
+```
+
+<!--chapter:end:11-length50maturity.Rmd-->
+
+## Condition
+
+Condition information comes from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData); only regions and seasons with more than 10 fish observations were considered. We calculated a rough condition factor as: Weight / Length^3, and relative weight was [previously calculated](https://github.com/Laurels1/Condition/tree/master/data).
+
+### Figures
+
+#### Length vs weight
+
+Please note, no trend lines were fit, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
+```{r, lw}
+NEesp::plot_lw(diet_data)
+```
+
+#### Condition factor: Weight-volume
+
+If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
+```{r, condition}
+NEesp::plot_cond(diet_data)
+```
+
+#### Condition factor: Relative weight
+
+Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
+```{r, laurel_cond}
+NEesp::plot_relw(cond_data)
+```
+
+### Data
+
+#### Length vs weight with weight-volume condition factor
+```{r, lw_data}
+data <- diet_data %>%
+  dplyr::filter(
+    is.na(pdlen) == FALSE,
+    is.na(pdwgt) == FALSE
+  ) %>%
+  dplyr::select(pdlen, pdwgt, season, Region, fish_id, year) %>%
+  dplyr::distinct() %>% # remove duplicates
+  dplyr::group_by(Region, season) %>%
+  dplyr::mutate(n_fish = length(pdlen)) %>%
+  dplyr::filter(n_fish > 10) %>% # only region-season with >10 fish)
+  dplyr::mutate(condition = pdwgt / (pdlen^3)) %>%
+  dplyr::mutate(condition = condition %>%
+    round(digits = 4)) %>%
+  dplyr::select(Region, year, season, pdlen, pdwgt, condition) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c(
+  "Region", "Year", "Season", "Fish length (cm)",
+  "Fish weight (g)", "Condition (g/cm^3)"
+))
+```
+
+#### Relative weight condition factor
+Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
+```{r, laurel_cond_data}
+data <- cond_data %>%
+  dplyr::select(-Species, -n) %>%
+  dplyr::mutate(MeanCond = MeanCond %>%
+    round(digits = 1)) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c(
+  "EPU", "Fish sex", "Year", "Mean condition",
+  "Number of fish"
+))
+```
+
+<!--chapter:end:12-condition.Rmd-->
+
+## Diet
+
+Diet data were compiled from [existing data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). For analysis, all geographic samples were grouped by season, year, and region, and only year-season-region combinations with more than 20 predators sampled were considered. Prey items that made up more than 5% of the predator's diet in at least one year-season-region were identified to the broad category level; all other prey are grouped into the "other" category.
+
+### Figure
+```{r, diet}
+NEesp::get_diet_plot(data = diet_data)
+```
+
+### Summary
+```{r, diet_summary}
+NEesp::get_diet_table(data = diet_data)
+```
+
+### Data
+```{r, diet_data}
+diet_data2 <- diet_data %>%
+  dplyr::filter(pyamtw > 0) %>%
+
+  # only look at season/year combinations with >20 predator samples
+  dplyr::group_by(year, season, Region) %>%
+  dplyr::mutate(n_predators = fish_id %>% unique() %>% length()) %>%
+  dplyr::filter(n_predators > 20) %>%
+  dplyr::group_by(year, season, Region, n_predators, gensci) %>%
+  dplyr::summarise(total_weight = sum(pyamtw)) %>%
+  dplyr::mutate(
+    proportion = total_weight / sum(total_weight),
+    proportion = proportion %>%
+      round(digits = 3),
+    total_weight = total_weight %>%
+      round(digits = 2),
+    gensci = gensci %>%
+      stringr::str_replace("_", " ") %>%
+      stringr::str_to_sentence()
+  ) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(diet_data2, col_names = c(
+  "Year", "Season", "Region", "Number of fish",
+  "Prey category", "Prey weight", "Prey proportion"
+))
+```
+
+<!--chapter:end:13-diet.Rmd-->
+
+# Population information
+
+<!--chapter:end:14-population-title-page.Rmd-->
+
+## Abundance
+
+```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```
+
+Abundance data were pulled from ``r params$survey_source`` and ``r params$asmt_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+
+#### Survey abundance (raw measurements)
+```{r, abun_survey}
+NEesp::generate_plot(survey_data,
+  variable = "ABUNDANCE",
+  ytitle = "Abundance"
+)
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c(
+  "abundance_spring",
+  "abundance_fall"
+)
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+#### Survey abundance (swept area estimates)
+
+Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
+```{r, abun_survey_swept}
+NEesp::plot_swept(swept_data, var = "abundance")
+```
+
+#### Assessment abundance
+```{r}
+if (nrow(asmt_data %>% dplyr::filter(Metric == "Abundance")) > 0) {
+  ndesc <- asmt_data %>%
+    dplyr::filter(Metric == "Abundance") %>%
+    # dplyr::mutate(options = paste(Description, Units)) %>%
+    dplyr::select(Age) %>%
+    unique() %>%
+    nrow()
+} else {
+  ndesc <- 1
+}
+```
+
+```{r, abun_asmt, fig.height = ndesc * 4}
+NEesp::plot_asmt(asmt_data,
+  metric = "Abundance",
+  ytitle = "Abundance",
+  lin = lines,
+  col = colors
+)
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("asmt_abundance")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Survey summary
+```{r, abun_summary}
+NEesp::generate_table(survey_data,
+  variable = "ABUNDANCE",
+  cap = "Measured abundance"
+)
+```
+
+### Data
+
+#### Survey data (raw measurements)
+```{r, surv_abun_data}
+data <- survey_data %>%
+  NEesp::get_var_data(variable = "ABUNDANCE") %>%
+  dplyr::mutate(variable = variable %>%
+    format(big.mark = ",")) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c("Year", "Season", "Region", "Abundance"))
+```
+
+#### Survey data (swept area estimates)
+```{r, swept_abun_data}
+data <- swept_data %>%
+  dplyr::select(YEAR, tot.abundance, tot.abund.SE) %>%
+  dplyr::mutate(
+    YEAR = as.numeric(YEAR),
+    tot.abundance = tot.abundance %>%
+      format(big.mark = ","),
+    tot.abund.SE = tot.abund.SE %>%
+      round(digits = 1) %>%
+      format(big.mark = ",")
+  )
+
+NEesp::make_html_table(data, col_names = c("Year", "Abundance", "Standard error"))
+```
+
+#### Assessment data
+```{r, asmt_abun_data}
+data <- asmt_data %>%
+  dplyr::filter(Metric == "Abundance") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+    round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+    format(big.mark = ",")) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+<!--chapter:end:15-abundance.Rmd-->
+
+## Biomass
+
+```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```
+
+Biomass data were pulled from ``r params$survey_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+
+#### Survey biomass (raw measurements)
+```{r, biomass}
+NEesp::generate_plot(survey_data,
+  variable = "BIOMASS",
+  ytitle = "Biomass"
+)
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c(
+  "biomass_spring",
+  "biomass_fall"
+)
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+#### Survey biomass (swept area estimates)
+
+Please note, these estimates are not parsed by region or season. Swept area estimates are based on spring and fall surveys only. The shaded gray region indicates +/- two standard errors.
+```{r, bio_survey_swept}
+NEesp::plot_swept(swept_data, var = "biomass")
+```
+
+#### Assessment biomass
+```{r}
+if (nrow(asmt_data %>% dplyr::filter(Metric == "Biomass")) > 0) {
+  ndesc <- asmt_data %>%
+    dplyr::filter(Metric == "Biomass") %>%
+    # dplyr::mutate(options = paste(Description, Units)) %>%
+    dplyr::select(Age) %>%
+    unique() %>%
+    nrow()
+} else {
+  ndesc <- 1
+}
+```
+
+```{r, biomass_asmt,  fig.height = ndesc * 4 + 1}
+NEesp::plot_asmt(asmt_data,
+  metric = "Biomass",
+  ytitle = "Biomass",
+  lin = lines,
+  col = colors
+)
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("asmt_biomass")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Survey summary
+```{r, biomass_summary}
+NEesp::generate_table(survey_data,
+  variable = "BIOMASS",
+  cap = "Measured biomass"
+)
+```
+
+### Data
+
+#### Survey data (raw measurements)
+```{r, biomass_data}
+data <- survey_data %>%
+  NEesp::get_var_data(variable = "BIOMASS") %>%
+  dplyr::mutate(variable = variable %>%
+    format(big.mark = ",")) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c("Year", "Season", "Region", "Biomass"))
+```
+
+#### Survey data (swept area estimates)
+```{r, swept_biomass_data}
+data <- swept_data %>%
+  dplyr::select(YEAR, tot.biomass, tot.bio.SE) %>%
+  dplyr::mutate(
+    YEAR = as.numeric(YEAR),
+    tot.biomass = tot.biomass %>%
+      format(big.mark = ","),
+    tot.bio.SE = tot.bio.SE %>%
+      round(digits = 1) %>%
+      format(big.mark = ",")
+  )
+
+NEesp::make_html_table(data, col_names = c("Year", "Biomass (kg)", "Standard error"))
+```
+
+#### Assessment data
+```{r, asmt_biomass_data}
+data <- asmt_data %>%
+  dplyr::filter(Metric == "Biomass") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+    round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+    format(big.mark = ",")) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+<!--chapter:end:16-biomass.Rmd-->
+
+## B/Bmsy 
+
+```{r, b_status}
+if (length(asmt_sum_data$Species) > 1) {
+  list_regions <- split(unique(asmt_sum_data$Region),
+    f = list(unique(asmt_sum_data$Region))
+  )
+  bbmsy2 <- purrr::map(
+    list_regions,
+    ~ NEesp::status(
+      data = asmt_sum_data,
+      regions = .x,
+      metric = "bbmsy"
+    )
+  )
+} else {
+  bbmsy2 <- "UNKNOWN"
+}
+```
+
+```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```
+
+B/Bmsy data were pulled from ``r params$asmt_sum_source``.
+
+The most recent status of B/Bmsy is: `r bbmsy2`
+
+### Figure
+```{r, bbmsy_fig} 
+if ("GOOD" %in% bbmsy2 | "CAUTION" %in% bbmsy2 | "DANGER" %in% bbmsy2) {
+  NEesp::plot_msy(asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ],
+    type = "b",
+    ytitle = "B / Bmsy",
+    lin = lines,
+    col = colors
+  )
+} else {
+  print("NO DATA")
+}
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("bbmsy")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Data
+```{r, bbmsy_data}
+data <- asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ] %>%
+  dplyr::select(Region, `Assessment Year`, `B/Bmsy`) %>%
+  dplyr::mutate(`B/Bmsy` = `B/Bmsy` %>% round(digits = 2)) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c("Region", "Year", "B/Bmsy"))
+```
+
+<!--chapter:end:17-bbmsy.Rmd-->
+
+## Recruitment
+
+```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```
+
+Recruitment data were pulled from ``r params$asmt_source``. Separate geom_gls() functions were fit for each region; trend lines are only shown when the trend was statistically significant, so some plots may have fewer trend lines than regions.
+
+### Figure
+```{r}
+if (nrow(asmt_data %>% dplyr::filter(Metric == "Recruitment")) > 0) {
+  ndesc <- asmt_data %>%
+    dplyr::filter(Metric == "Recruitment") %>%
+    # dplyr::mutate(options = paste(Description, Units)) %>%
+    dplyr::select(Age) %>%
+    unique() %>%
+    nrow()
+} else {
+  ndesc <- 1
+}
+```
+
+```{r, recruitment, fig.height = ndesc * 4 + 1}
+NEesp::plot_asmt(asmt_data,
+  metric = "Recruitment",
+  ytitle = "Recruitment",
+  lin = lines,
+  col = colors
+)
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("recruitment")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Data
+
+```{r, recruit_data}
+data <- asmt_data %>%
+  dplyr::filter(Metric == "Recruitment") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+    round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+    format(
+      big.mark = ",",
+      scientific = FALSE
+    )) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+<!--chapter:end:18-recruitment.Rmd-->
+
+## Age diversity
+
+Ricky Tabandera
+
+```{r setup_age_diversity,  cache = params$cache}
+# knitr::opts_chunk$set(echo = TRUE)
+
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(here))
+suppressPackageStartupMessages(library(survdat))
+suppressPackageStartupMessages(library(dbutils))
+```
+
+
+```{r data_wrangling_age, cache = params$cache, cache.lazy = FALSE}
+# load survdat
+#survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
+survdata <- bio_survey
+
+# change from char to numeric
+survdata <- survdata %>% mutate(SVSPP = as.numeric(SVSPP))
+# load ECSA data with common names
+stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+stock_list_all_strata <- stock_list_all_strata %>% rename(SVSPP = svspp)
+stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
+# link common names to  this dataset
+survdata.w.codes <- inner_join(survdata, stock_list, by = "SVSPP")
+# filter down to a single stock
+selected.spp <- survdata.w.codes %>% filter(common_name %>%
+  stringr::str_to_sentence() %>%
+  stringr::str_replace("Goosefish", "Monkfish") == params$species)
+```
+
+Diversity in age measurements of a stock is a useful indicator of several factors relating to fishing pressure and recruitment. A decrease in diversity can be due to either truncation, the lack of older or younger ages. Diversity changes as a function of an increase of a single/few ages relative to the usual stock age structure or as more ages become less represented. Diagnostic plots of age are constructed below using fisheries independent data from `survdat`.
+
+### Figures
+
+#### Age diversity {-}
+
+`r if(params$species == "Monkfish"){"The age determination method for monkfish has not been validated, and the anatomic structure used has changed through time. In addition these stocks display a high degree of sexual dimorphisms making fitting of single growth curves unreliable.  This results a high degree of uncertainty in assessing the age structure of the stock and the effects of fishing pressure."}`
+
+```{r, age diversity calculations}
+
+if (selected.spp$AGE %>% unique() %>% length() >= 3) {
+  selected.age <- selected.spp %>% filter(!is.na(AGE))
+
+  age.freq <- selected.age %>%
+    group_by(YEAR, AGE) %>%
+    summarise(age.n = n())
+  age.freq <- age.freq %>%
+    group_by(YEAR) %>%
+    mutate(prop = (age.n / sum(age.n))) %>%
+    mutate(prop.ln = (prop * log(prop)))
+
+
+  age.freq <- age.freq %>%
+    group_by(YEAR) %>%
+    summarise(shanon.h = (-1 * (sum(prop.ln))))
+} else {
+  print("NOT ENOUGH DATA TO GENERATE METRIC")
+  age.freq <- tibble::tibble() # make empty tibble for next logical test
+}
+
+if (nrow(age.freq) > 0) {
+  fig <- age.freq %>%
+    ggplot(aes(x = YEAR, y = shanon.h)) +
+    geom_path(group = 1, size = 1.2, color = "blue") +
+    geom_point(size = 3, shape = 23, fill = "Black") +
+    xlab("Year") +
+    ylab("Shannon diversity index (H)") +
+    theme(axis.text.x = element_text(angle = 90)) +
+    ggtitle("Age diversity of", subtitle = params$species)
+
+  return(fig)
+} else {
+  print("NO DATA")
+}
+```
+
+#### Density plots of age {-}
+
+Age distribution across years of survey data of `r params$species`. These plots can help identify strong year classes of recruits and how these classes persist in the fishery.  
+
+```{r age density, fig.height = 12}
+
+if (selected.spp$AGE %>% unique() %>% length() >= 3) {
+  fig <- selected.spp %>%
+    drop_na(AGE) %>%
+    group_by(YEAR) %>%
+    ggplot(aes(x = AGE, y = YEAR, fill = YEAR %>% as.numeric())) +
+    scale_fill_gradientn(
+      colors = nmfspalette::nmfs_palette("regional web")(4),
+      name = "Year"
+    ) +
+    ggridges::geom_density_ridges2() +
+    scale_x_continuous(
+      limits = c(0, (max(selected.spp$AGE, na.rm = TRUE))),
+      breaks = seq(0, max(selected.spp$AGE, na.rm = TRUE), by = 5)
+    )
+
+  return(fig)
+} else {
+  print("NO DATA")
+}
+```
+
+<!--chapter:end:19-age-diversity.Rmd-->
+
+## Climate vulnerability
+
+Climate vulnerability is sourced from Hare et al. (2016). The overall climate score for `r species` was `r data[data$Species == species, 2] %>% stringr::str_to_lower()` with `r data[data$Species == species, 3] %>% stringr::str_to_lower()` certainty.
+
+### Figures
+```{r, fig.height = 10}
+NEesp::plot_climate_vulnerability(climate_data)
+```
+
+### Data
+```{r}
+NEesp::make_html_table(climate_data,
+  col_names = c(
+    "Functional group", "Attribute", "Attribute category",
+    "Expert score: low",
+    "Expert score: moderate",
+    "Expert score: high",
+    "Expert score: very high"
+  )
+)
+```
+
+<!--chapter:end:20-climate-vulnerability.Rmd-->
+
+# Socio-economic information
+
+<!--chapter:end:21-socio-economic-title-page.Rmd-->
+
+## Catch
+
+```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```
+
+Stock assessment catch data are from ``r params$asmt_source``. Recreational catch data were downloaded from [NOAA MRIP](https://www.st.nmfs.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/). Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+
+### Figures
+```{r}
+if (nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0) {
+  ndesc <- asmt_data %>%
+    dplyr::filter(Metric == "Catch") %>%
+    dplyr::mutate(options = paste(Description, Units)) %>%
+    dplyr::select(options) %>%
+    unique() %>%
+    nrow()
+} else {
+  ndesc <- 1
+}
+```
+
+#### Stock assessment catch
+```{r, catch}
+#  fig.height = ndesc * 10
+NEesp::plot_asmt(asmt_data,
+  metric = "Catch",
+  ytitle = "Catch",
+  lin = lines,
+  col = colors
+)
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("asmt_catch")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+#### Recreational catch
+```{r, rec}
+NEesp::plot_rec_catch(rec_data)
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("rec_catch")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+#### Commercial catch
+```{r, com}
+NEesp::plot_com(com_data)
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("com_catch")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+#### Commercial vs recreational catch
+```{r, comvrec}
+NEesp::plot_prop_catch(com = com_data, rec = rec_data)
+```
+
+### Data
+
+#### Stock assessment catch
+```{r, catch_data}
+data <- asmt_data %>%
+  dplyr::filter(Metric == "Catch") %>%
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(Value = Value %>%
+    round(digits = 0)) %>%
+  dplyr::mutate(Value = Value %>%
+    format(big.mark = ",")) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+#### Recreational catch
+```{r, rec_data}
+data <- rec_data %>%
+  dplyr::select(year, st_f, mode_fx_f, lbs_ab1) %>%
+  dplyr::mutate(
+    State = st_f %>%
+      stringr::str_to_title(),
+    Method = mode_fx_f %>%
+      stringr::str_to_sentence(),
+    Catch_pounds = lbs_ab1 %>%
+      format(big.mark = ",")
+  ) %>%
+  dplyr::select(year, State, Method, Catch_pounds) %>%
+  NEesp::character_to_factor()
+
+make_html_table(data, col_names = c("Year", "State", "Method", "Catch (lb)"))
+```
+
+#### Commercial catch
+```{r, com_data}
+data <- com_data %>%
+  dplyr::select(Year, State, Dollars_adj, Pounds) %>%
+  dplyr::mutate(
+    Dollars_adj = Dollars_adj %>%
+      round(digits = 0) %>%
+      format(big.mark = ","),
+    State = State %>%
+      stringr::str_to_title(),
+    Pounds = Pounds %>%
+      format(big.mark = ",")
+  ) %>%
+  dplyr::rename(
+    "Revenue (2019 dollars)" = "Dollars_adj",
+    "Commercial catch (lb)" = "Pounds"
+  ) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+#### Commercial vs recreational catch
+```{r, comvrec_data}
+data <- NEesp::prop_catch_data(rec = rec_data, com = com_data) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c(
+  "Year", "Recreational catch",
+  "Commercial catch", "Total catch",
+  "Proportion recreational",
+  "Proportion commercial"
+))
+```
+
+#### Commercial, recreational, and stock assessment catch
+```{r, all_catch}
+stock <- asmt_data %>%
+  dplyr::filter(
+    Metric == "Catch",
+    Region != "Eastern Georges Bank"
+  ) %>% # double counted
+  dplyr::mutate(options = paste(Description, Units, AssessmentYear, sep = " - ")) %>%
+  dplyr::group_by(Year, options) %>%
+  dplyr::summarise(Value = sum(Value)) %>%
+  dplyr::ungroup() %>%
+  tidyr::pivot_wider(
+    names_from = options,
+    values_from = Value
+  )
+
+recr <- rec_data %>%
+  dplyr::mutate(catch = lbs_ab1 %>%
+    stringr::str_replace_all(",", "") %>%
+    as.numeric()) %>%
+  dplyr::group_by(year) %>%
+  dplyr::rename(Year = year) %>%
+  dplyr::summarise(`Recreational catch (mt)` = sum(catch) / 2204.6)
+
+comm <- com_data %>%
+  dplyr::group_by(Year) %>%
+  dplyr::summarise(`Commercial catch (mt)` = sum(Pounds) / 2204.6)
+
+all_catch <- c()
+if (nrow(stock) > 0) {
+  all_catch <- stock
+}
+if (nrow(recr) > 0) {
+  if (is.null(all_catch) == FALSE) {
+    all_catch <- dplyr::full_join(all_catch, recr, by = "Year")
+  } else {
+    all_catch <- recr
+  }
+}
+if (nrow(comm) > 0) {
+  if (is.null(all_catch) == FALSE) {
+    all_catch <- dplyr::full_join(all_catch, comm, by = "Year")
+  } else {
+    all_catch <- comm
+  }
+}
+
+if (is.null(all_catch) == FALSE &
+  ncol(all_catch > 2)) {
+  all_catch <- all_catch %>%
+    dplyr::arrange(Year) %>%
+    round(digits = 0) %>%
+    # format(big.mark = ",") %>% # messing up formatting
+    as.data.frame()
+}
+
+# make sure there is data on at least 2 types of catch
+test <- c(nrow(stock), nrow(recr), nrow(comm))
+sum_test <- sum(test == 0)
+
+if (sum_test >= 2) {
+  print("NO DATA")
+} else {
+  NEesp::make_html_table(all_catch, col_names = colnames(all_catch))
+}
+```
+
+
+<!--chapter:end:22-catch.Rmd-->
+
+## F/Fmsy 
+
+```{r, f_status}
+if (length(asmt_sum_data$Species) > 1) {
+  list_regions <- split(unique(asmt_sum_data$Region),
+    f = list(unique(asmt_sum_data$Region))
+  )
+  ffmsy2 <- purrr::map(
+    list_regions,
+    ~ NEesp::status(
+      data = asmt_sum_data,
+      regions = .x,
+      metric = "ffmsy"
+    )
+  )
+} else {
+  ffmsy2 <- "UNKNOWN"
+}
+```
+
+```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```
+
+F/Fmsy data were pulled from ``r params$asmt_sum_source``.
+
+The most recent status of F/Fmsy is: `r ffmsy2`
+
+### Figure
+```{r, ffmsy}
+if ("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2) {
+  NEesp::plot_msy(asmt_sum_data[which(is.na(asmt_sum_data$`F/Fmsy`) == FALSE), ],
+    ytitle = "F / Fmsy",
+    type = "f",
+    lin = lines,
+    col = colors
+  )
+} else {
+  print("NO DATA")
+}
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("ffmsy")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Data
+```{r, ffmsy_data}
+data <- asmt_sum_data[which(is.na(asmt_sum_data$`F/Fmsy`) == FALSE), ] %>%
+  dplyr::select(Region, `Assessment Year`, `F/Fmsy`) %>%
+  dplyr::mutate(`F/Fmsy` = `F/Fmsy` %>% round(digits = 2)) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c("Region", "Year", "F/Fmsy"))
+```
+
+<!--chapter:end:23-ffmsy.Rmd-->
+
+## Revenue 
+
+Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+
+### Figure
+```{r, revenue}
+NEesp::plot_com_money(com_data)
+```
+
+##### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("revenue")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Data
+```{r, revenue_data}
+data <- com_data %>%
+  dplyr::select(Year, State, Dollars_adj, Pounds) %>%
+  dplyr::mutate(
+    Dollars_adj = Dollars_adj %>%
+      round(digits = 0) %>%
+      format(big.mark = ","),
+    State = State %>%
+      stringr::str_to_title(),
+    Pounds = Pounds %>%
+      format(big.mark = ",")
+  ) %>%
+  dplyr::rename(
+    "Revenue (2019 dollars)" = "Dollars_adj",
+    "Commercial catch (lb)" = "Pounds"
+  ) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+<!--chapter:end:24-revenue.Rmd-->
+
+# Management information
+
+```{r, management_data, cache = params$cache}
+ad_rating_data <- asmt_sum_data %>%
+  dplyr::select(
+    Species, Region, `Assessment Year`, `Last Data Year`,
+    `Biological Input Data`, `Life History Data`,
+    `Composition Input Data`, `Ecosystem Linkage`, `FSSI Stock?`,
+    `Review Result`
+  ) %>%
+  dplyr::rename(
+    `Biological Data Rating (2019)` = `Biological Input Data`,
+    `Biological Data Rating (before 2019)` = `Life History Data`,
+    `Size Data Rating` = `Composition Input Data`,
+    `Ecosystem Linkage Data Rating` = `Ecosystem Linkage`,
+    `FSSI status` = `FSSI Stock?`
+  )
+```
+
+## Stock assessment and data quality information
+Stock assessment and data quality information were pulled from ``r params$asmt_sum_source``.
+```{r, quality}
+data <- ad_rating_data %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+<!--chapter:end:25-management.Rmd-->
+
+# Risk assessment
+
+A preliminary risk analysis was conducted by ranking all species according to their indicator values. A high rank number and a normalized rank near 1 indicates that the species is at risk or of importance based on the measured indicator values. When a species was missing an indicator, it was assigned a normalized rank of 0.5.
+
+## Figures
+
+### Relative to all other stocks
+
+Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value plotted here reflects the normalized rank of this stock compared to all other stocks in that year.
+
+#### Comprehensive risk assessment {-}
+```{r, comp_risk_plot}
+ggplot2::ggplot(
+  risk_data,
+  ggplot2::aes(
+    x = reorder(Region, -total_risk),
+    y = Indicator %>%
+      stringr::str_replace_all("_", " "),
+    fill = norm_rank
+  )
+) +
+  ggplot2::geom_raster(stat = "identity") +
+  ggplot2::facet_grid(
+    rows = ggplot2::vars(category),
+    scales = "free",
+    space = "free"
+  ) +
+  ggplot2::theme_bw() +
+  viridis::scale_fill_viridis(
+    limits = c(0, 1),
+    breaks = c(0, 0.5, 1),
+    direction = -1,
+    na.value = "gray90",
+    name = "Normalized rank"
+  ) +
+  ggplot2::theme(
+    legend.position = "top",
+    strip.text.y = element_text(angle = 0)
+  ) +
+  ggplot2::xlab("Stock region") +
+  ggplot2::ylab("Indicator")
+```
+
+#### Normalized rank of magnitude of change compared to historical value by year {-}
+```{r, year_risk_hist}
+NEesp::plot_risk_by_year(risk_year_hist_data,
+  indicator = "all",
+  title = "Change compared to historical",
+  include_legend = "yes"
+)
+```
+
+#### Normalized rank of value in each year {-}
+```{r,year_risk_value}
+NEesp::plot_risk_by_year(risk_year_value_data,
+  indicator = "all",
+  title = "Value compared to other stocks",
+  include_legend = "yes"
+)
+```
+
+### Within a single stock
+
+For each stock, a five-year running mean was calculated for each indicator. Indicator values were then ranked for all years where a value was present. The normalized risk values plotted here reflects the normalized rank of each year compared to all other years.
+
+```{r, stock_risk}
+NEesp::plot_risk_by_year(risk_species_data,
+  indicator = "all",
+    title = "Within-stock risk over time",
+  include_legend = "yes"
+)
+```
+
+## Data
+
+### Relative to all other stocks
+
+#### Comprehensive risk assessment {-}
+```{r, risk_comp}
+data <- risk_data %>%
+  dplyr::select(
+    Species, Region, Indicator, category, Year, Value, rank,
+    n_stocks_per_indicator, norm_rank, total_risk, overall_rank,
+    overall_stocks
+  ) %>%
+  dplyr::mutate(
+    Value = Value %>%
+      format(big.mark = ",", scientific = FALSE, digits = 2),
+    norm_rank = norm_rank %>%
+      format(scientific = FALSE, digits = 3),
+    total_risk = total_risk %>%
+      round(digits = 2)
+  )
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+#### Normalized rank of magnitude of change compared to historical value by year {-}
+```{r, risk_hist}
+data <- risk_year_hist_data %>%
+  dplyr::mutate(
+    Rank = paste(rank, "out of", n_stocks_per_indicator),
+    Value2 = Value %>%
+      format(big.mark = ",", scientific = FALSE, digits = 2),
+    Normalized_rank = norm_rank %>% round(digits = 2)
+  ) %>%
+  dplyr::select(Region, category, Indicator, Year, Value2, Rank, Normalized_rank) %>%
+  dplyr::rename("Value" = "Value2") %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c(
+  "Region", "Category", "Indicator", "Year", "Value (% of historical)",
+  "Rank", "Normalized rank"
+))
+```
+
+#### Normalized rank of value in each year {-}
+```{r, risk_year}
+data <- risk_year_value_data %>%
+  dplyr::mutate(
+    Rank = paste(rank, "out of", n_stocks_per_indicator),
+    Value2 = Value %>%
+      format(big.mark = ",", scientific = FALSE, digits = 2),
+    Normalized_rank = norm_rank %>% round(digits = 2)
+  ) %>%
+  dplyr::select(Region, category, Indicator, Year, Value2, Rank, Normalized_rank) %>%
+  dplyr::rename("Value" = "Value2") %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c(
+  "Region", "Category", "Indicator", "Year", "Value (magnitude)",
+  "Rank", "Normalized rank"
+))
+```
+
+### Value within each stock, ranked by year 
+```{r, risk_within}
+data <- risk_species_data %>%
+  dplyr::mutate(
+    Rank = paste(rank, "out of", n_years_per_indicator),
+    Value2 = Value %>%
+      format(big.mark = ",", scientific = FALSE, digits = 2),
+    Normalized_rank = norm_rank %>% round(digits = 2)
+  ) %>%
+  dplyr::select(Region, category, Indicator, Year, Value2, Rank, Normalized_rank) %>%
+  dplyr::rename("Value" = "Value2") %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = c(
+  "Region", "Category", "Indicator", "Year", "Value",
+  "Rank", "Normalized rank"
+))
+```
+
+<!--chapter:end:26-risk-assessment.Rmd-->
+
+# Biological information
+
+<!--chapter:end:biological-title-page.Rmd-->
+
+## Depth
+
+```{r, cache = params$cache}
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(here))
+suppressPackageStartupMessages(library(survdat))
+suppressPackageStartupMessages(library(dbutils))
+```
+
+The range of depths that a species occupies is linked to many other habitat characteristics such as benthic structure, food availability, or temperature. Thus, observed depth can signal changes in habitat suitability. Changes in this metric can indicate the required resources are changing their distribution on the landscape. Seasonal differences in occurrence can also help identify essential habitat and the timing of migration to acquire seasonal resources 
+
+```{r, depth_data_cache, cache = params$cache}
+# survdata<-readRDS(here::here("survdat_pull_bio.rds"))
+# survdata <- ricky_survey
+
+survdata <- params$ricky_survey_data
+
+stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
+stock_list_all_strata <- stock_list_all_strata %>% dplyr::rename(SVSPP = svspp)
+stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
+```
+
+```{r, depth_data}
+survdata <- survdata %>% dplyr::mutate(SVSPP = as.numeric(SVSPP))
+
+survdata.w.codes <- dplyr::inner_join(survdata, stock_list, by = "SVSPP") %>%
+  dplyr::mutate(common_name = stringr::str_to_sentence(common_name))
+
+# # abundance is adjusted but not length for bigalo data
+# #groupdiscription =svspp
+# # filter by group giv list of svspp codes
+# get_fish_info()
+# surv.species<-survdat::get_species(channel)
+#
+# surv.species.1<-surv.species$data
+# surv.code<-surv.species.1 %>% dplyr::distinct(SVSPP,.keep_all =T)
+
+# black sea bass is svspp= 	141 bluefish =135
+
+test.sp.code <- c(141, 135)
+
+selected.spp <- survdata.w.codes %>% dplyr::filter(common_name == species)
+
+selected.spp.sum <- selected.spp %>%
+  dplyr::group_by(YEAR, SEASON) %>%
+  dplyr::summarise(
+    ave.d = mean(DEPTH),
+    sd.d = sd(DEPTH, na.rm = TRUE),
+    ave.t = mean(BOTTEMP),
+    sd.t = sd(BOTTEMP, na.rm = TRUE)
+  )
+
+has_data <- nrow(selected.spp.sum) > 0
+```
+
+### Figures
+
+
+```{r, depth-fig, eval = has_data, fig.cap = paste(species, "depth")}
+
+selected.spp.sum %>%
+  ggplot(aes(
+    x = YEAR %>% as.numeric(),
+    y = -ave.d,
+    color = SEASON,
+    group = SEASON
+  )) +
+  geom_line() +
+  geom_point() +
+  geom_pointrange(aes(
+    ymin = -ave.d - sd.d,
+    ymax = -ave.d + sd.d
+  )) +
+  xlab("Year") +
+  ylab("depth of trawl (ft)") +
+  ggtitle("Seasonal depth profile of",
+    subtitle = species
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+```{r, depth-fig2, eval = has_data, fig.cap = paste(species, "temperature at depth")}
+
+selected.spp.sum %>%
+  ggplot(aes(
+    x = YEAR %>% as.numeric(),
+    y = ave.t,
+    color = SEASON,
+    group = SEASON
+  )) +
+  geom_line() +
+  geom_point() +
+  geom_pointrange(aes(
+    ymin = ave.t - sd.t,
+    ymax = ave.t + sd.t
+  )) +
+  xlab("Year") +
+  ylab("Bottom temperature (°C)") +
+  ggtitle("Seasonal bottom temperature of tows that contain",
+    subtitle = species
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+```{r, no_data, eval = has_data == FALSE}
+print("NO DATA")
+```
+
+<!--chapter:end:depth.Rmd-->
+
+# Habitat information
+
+<!--chapter:end:habitat-title-page.Rmd-->
+
+## Habitat vulnerability
+
+Habitat vulnerability information is sourced from the `ecodata` package. 
+
+```{r, hab_vul}
+NEesp::make_html_table(hab_data,
+  col_names = c(
+    "EPU", "Habitat name", "Habitat vulnerability",
+    "Importance of habitat to eggs/larvae",
+    "Importance of habitat to juveniles/YOY",
+    "Importance of habitat to adults",
+    "Importance of habitat to spawning adults",
+    "Overall species vulnerability"
+  )
+)
+```
+
+<!--chapter:end:habitat-vulnerability.Rmd-->
+
+## Distribution
+
+### Map of distribution
+Strata maps were pulled and compiled using code from [NOAA/EDAB ECSA](https://github.com/NOAA-EDAB/ECSA).
+
+
+```{r, ecsa-map, fig.cap = paste(species, "distribution")}
+NEesp::map_strata(
+  strata = latlong_data,
+  common_name = species
+)
+```
+
+
+### Latitude and longitude ranges
+Latitude and longitude ranges were calculated from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
+```{r, latlong}
+data <- NEesp::get_latlong(species, latlong_data, shapefile = NEesp::shape) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
+<!--chapter:end:latlong.Rmd-->
+
+# Methods
+
+## Stock identification
+Northeast stocks were identified from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv).
+
+## Data collection and presentation
+
+Data sources for each analysis are identified in the Results.
+
+All continuous temporal data were plotted against time. If there were 30 or more years of data, a geom_gls regression line was fit (yellow = significant increase; purple = significant decrease; no line = no significant trend). If there were fewer than 30 years of data, no regression was fit.
+
+### `assessmentdata` methods
+Stock assessment and data quality information were compiled into a summary table.
+
+B/Bmsy was classified as "DANGER" if it was below 1 and "GOOD" if it was above 1.
+
+F/Fmsy was classified as "DANGER" if it was above 1 and "GOOD" if it was below 1.
+
+### `survdat` methods
+`survdat` data with zero abundance were not included in this analysis. Abundance and biomass were summed for each year and season. All other metrics were averaged for each year and season. The tables show summary statistics for the entire time series and for the most recent 5 years in the time series. 
+
+## Risk assessment
+
+### Risk across stocks
+
+#### Suite of indicators
+All stocks were ranked in order of increasing risk. The stock with the highest ranking is the stock determined to be at the highest risk. In this case, high risk has two meanings: (1) high importance (e.g., a stock with a high catch would have a high risk ranking for the catch indicator) or high vulnerability (e.g., a stock with low B/Bmsy would have a high risk ranking for the B/Bmsy indicator). The normalized rank was determined by dividing each stock's rank by the total number of stocks considered for that indicator. Stocks that were missing indicator measurements were assigned a normalized rank of 0.5.
+
+#### Individual indicators
+Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value was calculated as the normalized rank of this species compared to all other species in that year.
+
+### Risk within stocks
+The normalized risk value was calculated as the normalized rank of each yearly measurement compared to all other years.
+
+<!--chapter:end:methods.Rmd-->
+
+## Salinity
+
+Surface and bottom salinity data were pulled from ``r params$survey_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+
+
+```{r, s-salin, fig.cap = paste(species, "surface salinity")}
+NEesp::generate_plot(survey_data,
+  variable = "SURFSALIN",
+  ytitle = "Surface salinity"
+)
+```
+
+
+```{r, b-salin, fig.cap = paste(species, "bottom salinity")}
+NEesp::generate_plot(survey_data,
+  variable = "BOTSALIN",
+  ytitle = "Bottom salinity"
+)
+```
+
+
+### Summary
+```{r, salin_summary}
+NEesp::generate_table(survey_data,
+  variable = "SURFSALIN",
+  cap = "Surface salinity"
+)
+
+NEesp::generate_table(survey_data,
+  variable = "BOTSALIN",
+  cap = "Bottom salinity"
+)
+```
+
+### Data
+```{r, salin_data}
+data <- survey_data %>%
+  dplyr::select(
+    YEAR, SEASON, Region, date,
+    fish_id, SURFSALIN, BOTSALIN
+  ) %>%
+  dplyr::filter(SURFSALIN > 0 | BOTSALIN > 0) %>%
+  dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+  dplyr::distinct() %>% # remove repeated row info
+  dplyr::summarise(
+    day_mean_surf = mean(SURFSALIN),
+    day_mean_bot = mean(BOTSALIN)
+  ) %>% # mean by day
+  dplyr::ungroup() %>%
+  dplyr::group_by(YEAR, SEASON, Region) %>%
+  dplyr::summarise(
+    Mean_surface_salinity = mean(day_mean_surf) %>%
+      round(digits = 2),
+    Mean_bottom_salinity = mean(day_mean_bot) %>%
+      round(digits = 2)
+  ) %>%
+  NEesp::character_to_factor() # mean by season-year
+
+NEesp::make_html_table(data, col_names = c(
+  "Year", "Season", "Region",
+  "Mean surface salinity", "Mean bottom salinity"
+))
+```
+
+<!--chapter:end:salinity.Rmd-->
+
+## Temperature
+
+Surface and bottom temperature data were pulled from ``r params$survey_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+
+
+```{r, s-temp, fig.cap = paste(species, "surface temperature")}
+NEesp::generate_plot(survey_data,
+  variable = "SURFTEMP",
+  ytitle = "Surface temperature"
+)
+```
+
+
+```{r, b-temp, fig.cap = paste(species, "bottom temperature")}
+NEesp::generate_plot(survey_data,
+  variable = "BOTTEMP",
+  ytitle = "Bottom temperature"
+)
+```
+
+
+### Summary
+```{r, temp_summary}
+NEesp::generate_table(survey_data,
+  variable = "SURFTEMP",
+  cap = "Surface temperature"
+)
+
+NEesp::generate_table(survey_data,
+  variable = "BOTTEMP",
+  cap = "Bottom temperature"
+)
+```
+
+### Data
+```{r, temp_data}
+data <- survey_data %>%
+  dplyr::select(
+    YEAR, SEASON, Region, date,
+    fish_id, SURFTEMP, BOTTEMP
+  ) %>%
+  dplyr::filter(SURFTEMP > 0 | BOTTEMP > 0) %>%
+  dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+  dplyr::distinct() %>% # remove repeated row info
+  dplyr::summarise(
+    day_mean_surf = mean(SURFTEMP),
+    day_mean_bot = mean(BOTTEMP)
+  ) %>% # mean by day
+  dplyr::ungroup() %>%
+  dplyr::group_by(YEAR, SEASON, Region) %>%
+  dplyr::summarise(
+    Mean_surface_temperature = mean(day_mean_surf) %>%
+      round(digits = 2),
+    Mean_bottom_temperature = mean(day_mean_bot) %>%
+      round(digits = 2)
+  ) %>%
+  NEesp::character_to_factor() # mean by season-year
+
+NEesp::make_html_table(data, col_names = c(
+  "Year", "Season", "Region",
+  "Mean surface temperature", "Mean bottom temperature"
+))
+```
+
+<!--chapter:end:temperature.Rmd-->
+

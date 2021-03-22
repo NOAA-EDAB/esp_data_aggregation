@@ -1,0 +1,67 @@
+## Salinity
+
+Surface and bottom salinity data were pulled from ``r params$survey_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+
+
+```{r, s-salin, fig.cap = paste(species, "surface salinity")}
+NEesp::generate_plot(survey_data,
+  variable = "SURFSALIN",
+  ytitle = "Surface salinity"
+)
+```
+
+
+```{r, b-salin, fig.cap = paste(species, "bottom salinity")}
+NEesp::generate_plot(survey_data,
+  variable = "BOTSALIN",
+  ytitle = "Bottom salinity"
+)
+```
+
+
+### Summary
+```{r, salin_summary}
+NEesp::generate_table(survey_data,
+  variable = "SURFSALIN",
+  cap = "Surface salinity"
+)
+
+NEesp::generate_table(survey_data,
+  variable = "BOTSALIN",
+  cap = "Bottom salinity"
+)
+```
+
+### Data
+```{r, salin_data}
+data <- survey_data %>%
+  dplyr::select(
+    YEAR, SEASON, Region, date,
+    fish_id, SURFSALIN, BOTSALIN
+  ) %>%
+  dplyr::filter(SURFSALIN > 0 | BOTSALIN > 0) %>%
+  dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+  dplyr::distinct() %>% # remove repeated row info
+  dplyr::summarise(
+    day_mean_surf = mean(SURFSALIN),
+    day_mean_bot = mean(BOTSALIN)
+  ) %>% # mean by day
+  dplyr::ungroup() %>%
+  dplyr::group_by(YEAR, SEASON, Region) %>%
+  dplyr::summarise(
+    Mean_surface_salinity = mean(day_mean_surf) %>%
+      round(digits = 2),
+    Mean_bottom_salinity = mean(day_mean_bot) %>%
+      round(digits = 2)
+  ) %>%
+  NEesp::character_to_factor() # mean by season-year
+
+NEesp::make_html_table(data, col_names = c(
+  "Year", "Season", "Region",
+  "Mean surface salinity", "Mean bottom salinity"
+))
+```

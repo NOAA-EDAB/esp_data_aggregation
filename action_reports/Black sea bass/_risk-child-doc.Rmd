@@ -1,0 +1,34 @@
+##### Rank of change compared to historical, ranked among stocks {-}
+
+
+```{r, fig.height = length(indicators) + 2, fig.cap = paste(species, "rank of change in indicator compared to historical, ranked among stocks")}
+NEesp::plot_risk_by_year(risk_year_hist_data,
+  indicator = indicators,
+  title = "Change compared to historical",
+  include_legend = "yes"
+)
+```
+
+
+##### Rank of value (magnitude) in each year, compared to other stocks {-}
+
+
+```{r, fig.height = length(indicators) + 1, fig.cap = paste(species, "rank of value (magnitude) in each year, compared to other stocks")}
+NEesp::plot_risk_by_year(risk_year_value_data,
+  indicator = indicators,
+  title = "Value compared to other stocks",
+  include_legend = "no"
+)
+```
+
+
+##### Rank of value (magnitude) within a single stock, compared to all years {-}
+
+
+```{r, fig.height = length(indicators) + 1, fig.cap = paste(species, "rank of value (magnitude) within a single stock, compared to all years")}
+NEesp::plot_risk_by_year(risk_species_data,
+  indicator = indicators,
+  title = "Within-stock risk over time",
+  include_legend = "no"
+)
+```
