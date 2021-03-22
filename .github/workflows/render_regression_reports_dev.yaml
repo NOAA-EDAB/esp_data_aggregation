@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
 
-name: run_all_regression_reports
+name: Render Regression Reports (development versions)
 
 jobs: 
   build1:
@@ -20,14 +20,13 @@ jobs:
 
       - name: Install command line packages
         run: |        
-          sudo R CMD javareconf
-          sudo apt-get install libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
+          sudo apt-get install  libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
         shell: bash
         
       - name: Set up R
         uses: r-lib/actions/setup-r@master
         with: 
-          r-version: '4.0.3' # problem with using 4.0.4
+          r-version: '4.0.3' # problem with using 4.0.4        
       
       - name: Cache R packages
         uses: actions/cache@v2
@@ -42,10 +41,16 @@ jobs:
           sudo R CMD javareconf
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
-                 
-      - name: Create reports
+
+      - name: Install more packages
         run: |
-          Rscript -e 'source(here::here("R/regressions", "render_regression_reports_ghaction.R"))'
+          Rscript -e 'install.packages("stringi")
+          install.packages("papeR")
+          devtools::install_github("NOAA-EDAB/esp_data_aggregation@package", dependencies = TRUE)'
+                 
+      - name: Render reports
+        run: |
+          Rscript -e 'NEesp::render_all_reg(input = "correlation_bookdown_template-dev")'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -53,5 +58,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: Regressions # The folder the action should deploy.
-          TARGET_FOLDER: Regression_reports
+          TARGET_FOLDER: Regression_Reports_pkg
           CLEAN: false # Automatically remove deleted files from the deploy branch

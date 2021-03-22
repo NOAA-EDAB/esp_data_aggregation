@@ -1,8 +1,7 @@
-  
 on:
   workflow_dispatch:
 
-name: render_package_indicator_reports
+name: Render Regression Reports (package versions)
 
 jobs: 
   build1:
@@ -42,24 +41,22 @@ jobs:
           sudo R CMD javareconf
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
-                 
+
       - name: Install more packages
         run: |
-          Rscript -e 'install.packages("devtools")
-          install.packages("stringi")
-          install.packages("car")
+          Rscript -e 'install.packages("stringi")
+          install.packages("papeR")
           devtools::install_github("NOAA-EDAB/esp_data_aggregation@package", dependencies = TRUE)'
-          
+                 
       - name: Render reports
         run: |
-          Rscript -e 'lapply(NEesp::species_key$Species, 
-                             NEesp::render_ind_report)'
+          Rscript -e 'NEesp::render_all_reg()'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: action_reports # The folder the action should deploy.
-          TARGET_FOLDER: Indicator_Reports_pkg
+          FOLDER: Regressions # The folder the action should deploy.
+          TARGET_FOLDER: Regression_Reports_pkg
           CLEAN: false # Automatically remove deleted files from the deploy branch
