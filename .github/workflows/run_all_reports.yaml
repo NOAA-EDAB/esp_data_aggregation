@@ -46,8 +46,10 @@ jobs:
           Rscript -e 'install.packages("devtools")
           devtools::install_deps(dependencies = TRUE)'
                  
-      - name: Install stringi and car
-        run: Rscript -e 'install.packages(c("stringi", "car"))'
+      - name: Re-install stringi, car, sf
+        run: |
+          Rscript -e 'remove.packages(c("stringi", "car", "sf"))
+          install.packages(c("stringi", "car", "sf"))'
           
       - name: Create reports
         uses: NOAA-EDAB/esp_data_aggregation/bookdown/render@main
