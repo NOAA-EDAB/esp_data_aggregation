@@ -2,7 +2,7 @@
 on:
   workflow_dispatch:
 
-name: Render Indicator Reports (development versions)
+name: Indicator Reports (development)
 
 jobs: 
   build1:

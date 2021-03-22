@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
 
-name: Render Regression Reports (package versions)
+name: Regression Reports (package)
 
 jobs: 
   build1:
