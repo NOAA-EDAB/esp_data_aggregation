@@ -17,7 +17,7 @@ Using fisheries independant data from bottom trawls in `survdat`. Several metric
 
 
 ```{r geo_conc data wrangling }
-source(here::here("R","common_names_survdat.r"))
+source(here::here("R","common_names_survdat.R"))
 
 survdata.w.codes<-Common_names_survdat(here::here("data","survdat_03022021_B.RDS"))
 
