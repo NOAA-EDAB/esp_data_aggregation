@@ -4,6 +4,10 @@ if (!"papeR" %in% installed.packages()) {
   install.packages("papeR")
 }
 
+if (!"NEesp" %in% installed.packages()) {
+  devtools::install_github("NOAA-EDAB/esp_data_aggregation@package")
+}
+
 # get NE stock names
 names <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 # tilefish has is NA in COMNAME column? omit for now
