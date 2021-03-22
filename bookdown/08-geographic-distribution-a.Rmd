@@ -36,10 +36,10 @@ if (nrow(selected.surv) > 3) {
 
 
   world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
-  latmin <- (min(selected.surv$lat) - 1)
-  latmax <- (max(selected.surv$lat) + 1)
-  lonmin <- (min(selected.surv$lon) - 1)
-  lonmax <- (max(selected.surv$lon) + 1)
+  latmin <- (min(selected.surv$LAT) - 1)
+  latmax <- (max(selected.surv$LAT) + 1)
+  lonmin <- (min(selected.surv$LON) - 1)
+  lonmax <- (max(selected.surv$LON) + 1)
  
   
   ggplot2::ggplot(data = world) +
