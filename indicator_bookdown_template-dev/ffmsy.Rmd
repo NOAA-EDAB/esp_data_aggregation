@@ -42,7 +42,7 @@ if ("GOOD" %in% ffmsy2 | "DANGER" %in% ffmsy2) {
 ```
 
 
-##### Risk {-}
+#### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}

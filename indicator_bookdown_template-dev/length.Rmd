@@ -2,9 +2,7 @@
 
 Length data were pulled from ``r params$survey_source``. Only years with more than 10 fish lengths were considered for analysis. 
 
-### Figures
-
-#### Overview {-}
+### Overview 
 
 
 ```{r, length-freq, fig.cap = paste(species, "length frequency distribution")}
@@ -12,7 +10,7 @@ NEesp::plot_len_hist(survey_data)
 ```
 
 
-#### Summary statistics {-}
+### Summary statistics 
 Separate `geom_gls()` functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 
 
@@ -21,7 +19,7 @@ NEesp::generate_len_plot(survey_data)
 ```
 
 
-#### Risk {-}
+### Risk 
 
 See Methods for risk calculation details.
 ```{r}

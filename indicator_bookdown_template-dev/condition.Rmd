@@ -2,9 +2,7 @@
 
 Condition information comes from [diet data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData); only regions and seasons with more than 10 fish observations were considered. We calculated a rough condition factor as: Weight / Length^3, and relative weight was [previously calculated](https://github.com/Laurels1/Condition/tree/master/data).
 
-### Figures
-
-#### Length vs weight
+### Length vs weight 
 
 Please note, no trend lines were fit, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 
@@ -14,7 +12,7 @@ NEesp::plot_lw(diet_data)
 ```
 
 
-#### Condition factor: Weight-volume
+### Condition factor: Weight-volume 
 
 If there were more than 30 years of data, a geom_gls() regression was fit. In order to fit the geom_gls() regression, we calculated the mean condition factor for each year and plotted the geom_gls() through those points. Please note, points are jittered to reduce overlap, and sometimes the survey observed a small number of fish outside of the defined stock area.
 
@@ -24,7 +22,7 @@ NEesp::plot_cond(diet_data)
 ```
 
 
-#### Condition factor: Relative weight
+#### Condition factor: Relative weight 
 
 Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
 
@@ -36,7 +34,7 @@ NEesp::plot_relw(cond_data)
 
 ### Data
 
-#### Length vs weight with weight-volume condition factor
+#### Length vs weight with weight-volume condition factor {-}
 ```{r, lw_data}
 data <- diet_data %>%
   dplyr::filter(
@@ -60,7 +58,8 @@ NEesp::make_html_table(data, col_names = c(
 ))
 ```
 
-#### Relative weight condition factor
+#### Relative weight condition factor {-}
+
 Please note, this data is aggregated by Ecological Protection Unit (EPU), which may differ slightly from the stock assessment regions.
 ```{r, laurel_cond_data}
 data <- cond_data %>%

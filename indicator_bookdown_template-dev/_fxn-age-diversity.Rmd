@@ -9,9 +9,8 @@ selected.spp <- NEesp::bio_survey %>%
 
 Diversity in age measurements of a stock is a useful indicator of several factors relating to fishing pressure and recruitment. A decrease in diversity can be due to either truncation, the lack of older or younger ages. Diversity changes as a function of an increase of a single/few ages relative to the usual stock age structure or as more ages become less represented. Diagnostic plots of age are constructed below using fisheries independent data from `survdat`.
 
-### Figures
 
-#### Age diversity {-}
+### Age diversity 
 
 `r if(params$species == "Monkfish"){"The age determination method for monkfish has not been validated, and the anatomic structure used has changed through time. In addition these stocks display a high degree of sexual dimorphisms making fitting of single growth curves unreliable.  This results a high degree of uncertainty in assessing the age structure of the stock and the effects of fishing pressure."}`
 
@@ -21,7 +20,7 @@ plot_age_diversity(selected.spp)
 ```
 
 
-#### Density plots of age {-}
+### Density plots of age 
 
 Age distribution across years of survey data of `r params$species`. These plots can help identify strong year classes of recruits and how these classes persist in the fishery. 
 

@@ -5,7 +5,7 @@
 
 Stock assessment catch data are from ``r params$asmt_source``. Recreational catch data were downloaded from [NOAA MRIP](https://www.st.nmfs.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/). Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
 
-### Figures
+
 ```{r}
 if (nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0) {
   ndesc <- asmt_data %>%
@@ -19,7 +19,7 @@ if (nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0) {
 }
 ```
 
-#### Stock assessment catch
+### Stock assessment catch
 
 
 ```{r, catch, fig.cap = paste(species, "assessment catch")}
@@ -33,7 +33,7 @@ NEesp::plot_asmt(asmt_data,
 ```
 
 
-##### Risk {-}
+#### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}
@@ -43,7 +43,7 @@ indicators <- c("asmt_catch")
 ```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
 ```
 
-#### Recreational catch
+### Recreational catch
 
 
 ```{r, rec, fig.cap = paste(species, "recreational catch")}
@@ -51,7 +51,7 @@ NEesp::plot_rec_catch(rec_data)
 ```
 
 
-##### Risk {-}
+#### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}
@@ -61,7 +61,7 @@ indicators <- c("rec_catch")
 ```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
 ```
 
-#### Commercial catch
+### Commercial catch
 
 
 ```{r, com, fig.cap = paste(species, "commercial catch")}
@@ -69,7 +69,7 @@ NEesp::plot_com(com_data)
 ```
 
 
-##### Risk {-}
+#### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}
@@ -79,7 +79,7 @@ indicators <- c("com_catch")
 ```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
 ```
 
-#### Commercial vs recreational catch
+### Commercial vs recreational catch
 
 
 ```{r, comvrec, fig.cap = paste(species, "proportional commercial and recreational catch")}

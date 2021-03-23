@@ -10,7 +10,7 @@ NEesp::plot_com_money(com_data)
 ```
 
 
-##### Risk {-}
+#### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}

@@ -42,7 +42,7 @@ if ("GOOD" %in% bbmsy2 | "CAUTION" %in% bbmsy2 | "DANGER" %in% bbmsy2) {
 ```
 
 
-##### Risk {-}
+#### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}
