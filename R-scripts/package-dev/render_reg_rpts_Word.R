@@ -1,6 +1,6 @@
 render_reg_report_word <- function(stock_var, epus_var, region_var, remove_var = FALSE,
                               lag_var = 0, parent_folder, input = "package",
-                              trouble = FALSE, save_var = TRUE) {
+                              trouble = FALSE, save_var = TRUE, out = "html") {
   starting_dir <- getwd()
   
   new_dir <- here::here(
@@ -16,9 +16,7 @@ render_reg_report_word <- function(stock_var, epus_var, region_var, remove_var =
   dir.create(new_dir,
              recursive = TRUE
   )
-  
-  file.create(here::here(new_dir, ".nojekyll"))
-  
+
   if(input == "package"){
     file.copy(
       from = list.files(system.file("correlation_bookdown_template", package = "NEesp"),
@@ -41,13 +39,15 @@ render_reg_report_word <- function(stock_var, epus_var, region_var, remove_var =
   
   
   setwd(here::here(new_dir))
-  
+
   if(save_var){
     dir.create("data",
                recursive = TRUE
     )
   }
   
+  
+  # render bookdown
   if (trouble == FALSE) {
     bookdown::render_book(
       input = ".",
@@ -58,7 +58,8 @@ render_reg_report_word <- function(stock_var, epus_var, region_var, remove_var =
         epu = c(epus_var, c("All", "all", "NE")),
         path = here::here(new_dir, "figures//"),
         save = save_var,
-        remove_recent = remove_var
+        remove_recent = remove_var,
+        out = out
       ),
       output_dir = new_dir,
       intermediates_dir = new_dir,
@@ -81,7 +82,8 @@ render_reg_report_word <- function(stock_var, epus_var, region_var, remove_var =
         epu = c(epus_var, c("All", "all", "NE")),
         path = here::here(new_dir, "figures//"),
         save = save_var,
-        remove_recent = remove_var
+        remove_recent = remove_var,
+        out = out
       ),
       output_dir = new_dir,
       intermediates_dir = new_dir,

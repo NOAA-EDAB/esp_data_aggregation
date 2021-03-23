@@ -10,7 +10,7 @@ test <- stock %>%
   )
 
 if (nrow(test) > params$lag) {
-  render_indicator(test)
+  NEesp::render_indicator(test)
 } else {
   names <- names[-1]
   print("No data")
@@ -36,7 +36,7 @@ test <- read.csv("https://raw.githubusercontent.com/Laurels1/Condition/master/da
   dplyr::mutate(Var = paste(sex, "condition"))
 
 if (nrow(test) > 0) {
-  render_indicator(test)
+  NEesp::render_indicator(test)
 } else {
   names <- names[-1]
   print("No data")
@@ -51,7 +51,7 @@ test <- ecodata::stom_fullness %>%
   dplyr::filter(Var == params$stock)
 
 if (nrow(test) > 0) {
-  render_indicator(test)
+  NEesp::render_indicator(test)
 } else {
   names <- names[-1]
   print("No data")

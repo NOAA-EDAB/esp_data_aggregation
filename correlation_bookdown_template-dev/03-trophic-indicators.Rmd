@@ -7,7 +7,7 @@ test <- ecodata::zoo_oi %>%
     Var %>% stringr::str_detect("SD") == FALSE,
     Var %>% stringr::str_detect("spring")
   )
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Fall zooplankton abundance by species
@@ -17,13 +17,13 @@ test <- ecodata::zoo_oi %>%
     Var %>% stringr::str_detect("SD") == FALSE,
     Var %>% stringr::str_detect("fall")
   )
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Zooplankton abundance by group
 ```{r, zoo_strat_abun}
 test <- ecodata::zoo_strat_abun
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Abundance of Calanus CV and adults
@@ -39,41 +39,41 @@ test <- ecodata::calanus_stage %>%
   dplyr::select(Time, Val, EPU, season) %>%
   dplyr::distinct() %>%
   dplyr::mutate(Var = paste("Calanus CV and adult", season))
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Zooplankton abundance anomaly
 ```{r, zoo_abund}
 test <- ecodata::zoo_abund
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Zooplankton diversity index
 ```{r, zoo_diversity}
 test <- ecodata::zoo_diversity
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Small/large copepod anomaly
 ```{r, zoo_sli_anom}
 test <- ecodata::zoo_sli_anom
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Ichthyoplankton diversity
 ```{r, ich}
 test <- ecodata::ichthyo_diversity
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Forage fish abundance
 ```{r, forage}
 test <- ecodata::forage_anomaly
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Species distribution
 ```{r, species_dist}
 test <- ecodata::species_dist
-render_indicator(test)
+NEesp::render_indicator(test)
 ```

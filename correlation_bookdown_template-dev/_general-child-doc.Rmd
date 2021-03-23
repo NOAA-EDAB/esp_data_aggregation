@@ -50,7 +50,7 @@ output <- rbind(output, correlation_summary(
 ```
 
 ```{r, eval = params$save & eval_epu}
-data <- data_prep(
+data <- NEesp::data_prep(
   stock = stock,
   eco = test,
   lag = params$lag
@@ -73,7 +73,7 @@ names <- names[-1]
 ```
 #### Figures {-}
 ```{r, eval = eval_epu, fig.height = 10}
-plot_correlation(
+NEesp::plot_correlation(
   stock = stock,
   eco = test,
   lag = params$lag
@@ -86,7 +86,7 @@ print("No data for the EPU selected")
 
 #### Regression statistics {-}
 ```{r, results = "asis", eval = eval_epu}
-correlation_data(
+NEesp::correlation_data(
   stock = stock,
   eco = test,
   lag = params$lag

@@ -17,5 +17,5 @@ test <- dplyr::left_join(numbers, days, by = c("Time", "EPU")) %>%
     Val = Number / Days,
     Var = paste("recreational CPUE", "number of fish caught per day fished (all species)", sep = "\n")
   )
-render_indicator(test)
+NEesp::render_indicator(test)
 ```

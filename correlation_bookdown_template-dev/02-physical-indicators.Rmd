@@ -3,71 +3,71 @@
 ### Cold pool index
 ```{r, cold_pool}
 test <- ecodata::cold_pool
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Warm core rings
 ```{r, warm}
 test <- ecodata::wcr
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Marine heatwave index
 ```{r, heatwave}
 test <- ecodata::heatwave
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### GLORYS bottom temperature
 ```{r, glorys}
 test <- ecodata::bottom_temp_glorys
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Long-term sea surface temperature
 ```{r, sst}
 test <- ecodata::long_term_sst
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Sea surface temperature anomaly
 ```{r, sst_anom}
 test <- ecodata::seasonal_oisst_anom
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Stratification
 ```{r, strat}
 test <- ecodata::stratification
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Winter wind speed
 ```{r, winter_wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("winter"))
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Spring wind speed
 ```{r, spring_wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("spring"))
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Summer wind speed
 ```{r, summer_wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("summer"))
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Fall wind speed
 ```{r, fall_wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("fall"))
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Gulf Stream Index
@@ -76,13 +76,13 @@ test <- ecodata::gsi %>%
   dplyr::mutate(Time = Time %>%
     stringr::str_trunc(width = 4, ellipsis = "") %>%
     as.numeric())
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### North Atlantic Oscillation
 ```{r, nao}
 test <- ecodata::nao
-render_indicator(test)
+NEesp::render_indicator(test)
 ```
 
 ### Chlorophyll
@@ -95,7 +95,7 @@ test <- ecodata::chl_pp %>%
   dplyr::mutate(Time = Time %>%
     stringr::str_replace("A_", "") %>%
     as.numeric())
-render_indicator(test)
+NEesp::render_indicator(test)
 
 # data_prep(stock, test, lag = params$lag) %>% knitr::kable()
 ```
