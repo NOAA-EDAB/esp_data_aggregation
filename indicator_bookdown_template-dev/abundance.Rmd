@@ -78,7 +78,7 @@ indicators <- c("asmt_abundance")
 ```
 
 
-## Survey summary
+### Survey summary
 ```{r, abun_summary}
 NEesp::generate_table(survey_data,
   variable = "ABUNDANCE",

@@ -4,9 +4,10 @@
 #'
 #' @param data A `survdat` data frame or tibble, containing data on one species.
 #' @return A ggplot
+#' @importFrom magrittr %>%
 #' @export
 
-plot_depth <- function(data){
+plot_depth <- function(data, species){
   
   selected.spp.sum <- data %>%
     dplyr::group_by(YEAR, SEASON) %>%
@@ -49,9 +50,10 @@ plot_depth <- function(data){
 #'
 #' @param data A `survdat` data frame or tibble, containing data on one species.
 #' @return A ggplot
+#' @importFrom magrittr %>%
 #' @export
 
-plot_temp_depth <- function(data){
+plot_temp_depth <- function(data, species){
   
   selected.spp.sum <- data %>%
     dplyr::group_by(YEAR, SEASON) %>%
@@ -129,9 +131,10 @@ vonb_model <- function(data){
 #' @param data A `survdat` data frame or tibble, containing data on one species.
 #' @param vonb A data frame of von Bertalanffy predicted age/length data
 #' @return A ggplot
+#' @importFrom magrittr %>%
 #' @export
 
-plot_la <- function(data, vonb){
+plot_la <- function(data, vonb, species){
   if (nrow(data) > 0) {
     fig <- ggplot2::ggplot(
       data = data,
@@ -146,8 +149,8 @@ plot_la <- function(data, vonb){
         colors = nmfspalette::nmfs_palette("regional web")(4),
         name = "Year"
       ) +
-      ggplot2::xlim(0, (1.5 * max(selected.surv.clean$AGE))) +
-      ggplot2::ylim(0, (1.5 * max(selected.surv.clean$LENGTH, na.rm = TRUE))) +
+      ggplot2::xlim(0, (1.5 * max(data$AGE))) +
+      ggplot2::ylim(0, (1.5 * max(data$LENGTH, na.rm = TRUE))) +
       ggplot2::xlab("Age (jittered)") +
       ggplot2::ylab(" Total length (cm) (jittered)") +
       ggplot2::ggtitle(species, subtitle = "Length at age") +
@@ -179,24 +182,27 @@ plot_la <- function(data, vonb){
 #'
 #' @param data A `survdat` data frame or tibble, containing data on one species.
 #' @return A ggplot
+#' @importFrom magrittr %>%
 #' @export
 
-plot_age_diversity <- function(data){
+plot_age_diversity <- function(data, species){
   if (data$AGE %>% unique() %>% length() >= 3) {
-    selected.age <- data %>% filter(!is.na(AGE))
+    
+    selected.age <- data %>% 
+      dplyr::filter(!is.na(AGE))
     
     age.freq <- selected.age %>%
-      group_by(YEAR, AGE) %>%
-      summarise(age.n = n())
+      dplyr::group_by(YEAR, AGE) %>%
+      dplyr::summarise(age.n = length(AGE))
     age.freq <- age.freq %>%
-      group_by(YEAR) %>%
-      mutate(prop = (age.n / sum(age.n))) %>%
-      mutate(prop.ln = (prop * log(prop)))
+      dplyr::group_by(YEAR) %>%
+      dplyr::mutate(prop = (age.n / sum(age.n))) %>%
+      dplyr::mutate(prop.ln = (prop * log(prop)))
     
     
     age.freq <- age.freq %>%
-      group_by(YEAR) %>%
-      summarise(shanon.h = (-1 * (sum(prop.ln))))
+      dplyr::group_by(YEAR) %>%
+      dplyr::summarise(shanon.h = (-1 * (sum(prop.ln))))
   } else {
     print("NOT ENOUGH DATA TO GENERATE METRIC")
     age.freq <- tibble::tibble() # make empty tibble for next logical test
@@ -204,15 +210,21 @@ plot_age_diversity <- function(data){
   
   if (nrow(age.freq) > 0) {
     fig <- age.freq %>%
-      ggplot2::ggplot(ggplot2::aes(x = YEAR, y = shanon.h)) +
-      ggplot2::geom_path(group = 1, size = 1.2, color = "blue") +
-      ggplot2::geom_point(size = 3, shape = 23, fill = "Black") +
+      ggplot2::ggplot(ggplot2::aes(x = YEAR, 
+                                   y = shanon.h)) +
+      ggplot2::geom_path(group = 1, 
+                         size = 1.2, 
+                         color = "blue") +
+      ggplot2::geom_point(size = 3, 
+                          shape = 23, 
+                          fill = "Black") +
       ggplot2::xlab("Year") +
       ggplot2::ylab("Shannon diversity index (H)") +
       ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90)) +
-      ggplot2::ggtitle("Age diversity of", subtitle = params$species)
+      ggplot2::ggtitle("Age diversity of", subtitle = species)
     
     return(fig)
+    
   } else {
     print("NO DATA")
   }
@@ -224,6 +236,7 @@ plot_age_diversity <- function(data){
 #'
 #' @param data A `survdat` data frame or tibble, containing data on one species.
 #' @return A ggplot
+#' @importFrom magrittr %>%
 #' @export
 
 plot_age_density <- function(data){
@@ -231,7 +244,9 @@ plot_age_density <- function(data){
     fig <- data %>%
       tidyr::drop_na(AGE) %>%
       dplyr::group_by(YEAR) %>%
-      ggplot2::ggplot(ggplot2::aes(x = AGE, y = YEAR, fill = YEAR %>% as.numeric())) +
+      ggplot2::ggplot(ggplot2::aes(x = AGE, 
+                                   y = YEAR, 
+                                   fill = YEAR %>% as.numeric())) +
       ggplot2::scale_fill_gradientn(
         colors = nmfspalette::nmfs_palette("regional web")(4),
         name = "Year"
