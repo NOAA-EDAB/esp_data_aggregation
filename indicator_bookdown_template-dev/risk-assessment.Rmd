@@ -103,7 +103,7 @@ data <- risk_data %>%
       round(digits = 2)
   )
 
-NEesp::make_html_table(data, col_names = colnames(data))
+NEesp::make_html_table(data, type = params$file)
 ```
 
 #### Normalized rank of magnitude of change compared to historical value by year {-}
@@ -119,7 +119,9 @@ data <- risk_year_hist_data %>%
   dplyr::rename("Value" = "Value2") %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = c(
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
   "Region", "Category", "Indicator", "Year", "Value (% of historical)",
   "Rank", "Normalized rank"
 ))
@@ -138,7 +140,9 @@ data <- risk_year_value_data %>%
   dplyr::rename("Value" = "Value2") %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = c(
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
   "Region", "Category", "Indicator", "Year", "Value (magnitude)",
   "Rank", "Normalized rank"
 ))
@@ -157,7 +161,9 @@ data <- risk_species_data %>%
   dplyr::rename("Value" = "Value2") %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = c(
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
   "Region", "Category", "Indicator", "Year", "Value",
   "Rank", "Normalized rank"
 ))

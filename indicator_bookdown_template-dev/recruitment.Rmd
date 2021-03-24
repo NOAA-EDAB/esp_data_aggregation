@@ -55,5 +55,5 @@ data <- asmt_data %>%
     )) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = colnames(data))
+NEesp::make_html_table(data, type = params$file)
 ```

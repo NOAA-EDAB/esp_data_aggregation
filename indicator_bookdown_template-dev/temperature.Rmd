@@ -26,11 +26,13 @@ NEesp::generate_plot(survey_data,
 ### Summary
 ```{r, temp_summary}
 NEesp::generate_table(survey_data,
+                      type = params$file,
   variable = "SURFTEMP",
   cap = "Surface temperature"
 )
 
 NEesp::generate_table(survey_data,
+                      type = params$file,
   variable = "BOTTEMP",
   cap = "Bottom temperature"
 )
@@ -60,7 +62,9 @@ data <- survey_data %>%
   ) %>%
   NEesp::character_to_factor() # mean by season-year
 
-NEesp::make_html_table(data, col_names = c(
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
   "Year", "Season", "Region",
   "Mean surface temperature", "Mean bottom temperature"
 ))
