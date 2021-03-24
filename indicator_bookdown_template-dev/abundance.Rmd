@@ -82,7 +82,8 @@ indicators <- c("asmt_abundance")
 ```{r, abun_summary}
 NEesp::generate_table(survey_data,
   variable = "ABUNDANCE",
-  cap = "Measured abundance"
+  cap = "Measured abundance",
+  type = params$file
 )
 ```
 
@@ -97,14 +98,14 @@ data <- survey_data %>%
   NEesp::character_to_factor()
 
 cnames <- c("Year", "Season", "Region", "Abundance")
-```
 
-```{r, eval = (file == "html")}
-NEesp::make_html_table(data, col_names = cnames)
-```
+if(params$file == "html") {
+  NEesp::make_html_table(data, col_names = cnames)
+}
 
-```{r, eval = (file == "word")}
-"Please see `data` folder"
+if(params$file == "word"){
+  "Please see `data` folder"
+}
 ```
 
 #### Survey data (swept area estimates) {-}
@@ -121,14 +122,14 @@ data <- swept_data %>%
   )
 
 cnames <- c("Year", "Abundance", "Standard error")
-```
 
-```{r, eval = (file == "html")}
-NEesp::make_html_table(data, col_names = cnames)
-```
+if(params$file == "html") {
+  NEesp::make_html_table(data, col_names = cnames)
+}
 
-```{r, eval = (file == "word")}
-"Please see `data` folder"
+if(params$file == "word"){
+  "Please see `data` folder"
+}
 ```
 
 #### Assessment data {-}
@@ -143,12 +144,13 @@ data <- asmt_data %>%
   NEesp::character_to_factor()
 
 cnames <- colnames(data)
+
+if(params$file == "html") {
+  NEesp::make_html_table(data, col_names = cnames)
+}
+
+if(params$file == "word"){
+  "Please see `data` folder"
+}
 ```
 
-```{r, eval = (file == "html")}
-NEesp::make_html_table(data, col_names = cnames)
-```
-
-```{r, eval = (file == "word")}
-"Please see `data` folder"
-```

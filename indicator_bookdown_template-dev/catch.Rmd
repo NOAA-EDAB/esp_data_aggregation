@@ -100,7 +100,15 @@ data <- asmt_data %>%
     format(big.mark = ",")) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = colnames(data))
+cnames <- colnames(data)
+
+if(params$file == "html") {
+  NEesp::make_html_table(data, col_names = cnames)
+}
+
+if(params$file == "word"){
+  "Please see `data` folder"
+}
 ```
 
 #### Recreational catch
@@ -118,7 +126,15 @@ data <- rec_data %>%
   dplyr::select(year, State, Method, Catch_pounds) %>%
   NEesp::character_to_factor()
 
-make_html_table(data, col_names = c("Year", "State", "Method", "Catch (lb)"))
+cnames <- c("Year", "State", "Method", "Catch (lb)")
+
+if(params$file == "html") {
+  NEesp::make_html_table(data, col_names = cnames)
+}
+
+if(params$file == "word"){
+  "Please see `data` folder"
+}
 ```
 
 #### Commercial catch
@@ -140,7 +156,15 @@ data <- com_data %>%
   ) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = colnames(data))
+cnames <- colnames(data)
+
+if(params$file == "html") {
+  NEesp::make_html_table(data, col_names = cnames)
+}
+
+if(params$file == "word"){
+  "Please see `data` folder"
+}
 ```
 
 #### Commercial vs recreational catch
@@ -148,12 +172,20 @@ NEesp::make_html_table(data, col_names = colnames(data))
 data <- NEesp::prop_catch_data(rec = rec_data, com = com_data) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = c(
+cnames <- c(
   "Year", "Recreational catch",
   "Commercial catch", "Total catch",
   "Proportion recreational",
   "Proportion commercial"
-))
+)
+
+if(params$file == "html") {
+  NEesp::make_html_table(data, col_names = cnames)
+}
+
+if(params$file == "word"){
+  "Please see `data` folder"
+}
 ```
 
 #### Commercial, recreational, and stock assessment catch
@@ -219,7 +251,15 @@ sum_test <- sum(test == 0)
 if (sum_test >= 2) {
   print("NO DATA")
 } else {
-  NEesp::make_html_table(all_catch, col_names = colnames(all_catch))
+  cnames <- colnames(all_catch)
+  
+  if(params$file == "html") {
+    NEesp::make_html_table(all_catch, col_names = cnames)
+  }
+  
+  if(params$file == "word"){
+    "Please see `data` folder"
+  }
 }
 ```
 

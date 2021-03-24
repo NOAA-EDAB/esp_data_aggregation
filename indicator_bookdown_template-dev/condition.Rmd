@@ -52,10 +52,18 @@ data <- diet_data %>%
   dplyr::select(Region, year, season, pdlen, pdwgt, condition) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = c(
+cnames <- c(
   "Region", "Year", "Season", "Fish length (cm)",
   "Fish weight (g)", "Condition (g/cm^3)"
-))
+)
+
+if(params$file == "html") {
+  NEesp::make_html_table(data, col_names = cnames)
+}
+
+if(params$file == "word"){
+  "Please see `data` folder"
+}
 ```
 
 #### Relative weight condition factor {-}
@@ -68,8 +76,16 @@ data <- cond_data %>%
     round(digits = 1)) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = c(
+cnames <- c(
   "EPU", "Fish sex", "Year", "Mean condition",
   "Number of fish"
-))
+)
+
+if(params$file == "html") {
+  NEesp::make_html_table(data, col_names = cnames)
+}
+
+if(params$file == "word"){
+  "Please see `data` folder"
+}
 ```
