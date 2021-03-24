@@ -95,15 +95,9 @@ data <- survey_data %>%
     format(big.mark = ",")) %>%
   NEesp::character_to_factor()
 
-cnames <- c("Year", "Season", "Region", "Biomass")
-
-if(params$file == "html") {
-  NEesp::make_html_table(data, col_names = cnames)
-}
-
-if(params$file == "word"){
-  "Please see `data` folder"
-}
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c("Year", "Season", "Region", "Biomass"))
 ```
 
 #### Survey data (swept area estimates) {-}
@@ -119,15 +113,9 @@ data <- swept_data %>%
       format(big.mark = ",")
   )
 
-cnames <-  c("Year", "Biomass (kg)", "Standard error")
-
-if(params$file == "html") {
-  NEesp::make_html_table(data, col_names = cnames)
-}
-
-if(params$file == "word"){
-  "Please see `data` folder"
-}
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c("Year", "Biomass (kg)", "Standard error"))
 ```
 
 #### Assessment data {-}
@@ -141,13 +129,6 @@ data <- asmt_data %>%
     format(big.mark = ",")) %>%
   NEesp::character_to_factor()
 
-cnames <- colnames(data)
-
-if(params$file == "html") {
-  NEesp::make_html_table(data, col_names = cnames)
-}
-
-if(params$file == "word"){
-  "Please see `data` folder"
-}
+NEesp::make_html_table(data, 
+                       type = params$file)
 ```

@@ -100,15 +100,8 @@ data <- asmt_data %>%
     format(big.mark = ",")) %>%
   NEesp::character_to_factor()
 
-cnames <- colnames(data)
-
-if(params$file == "html") {
-  NEesp::make_html_table(data, col_names = cnames)
-}
-
-if(params$file == "word"){
-  "Please see `data` folder"
-}
+NEesp::make_html_table(data, 
+                       type = params$file)
 ```
 
 #### Recreational catch
@@ -126,15 +119,9 @@ data <- rec_data %>%
   dplyr::select(year, State, Method, Catch_pounds) %>%
   NEesp::character_to_factor()
 
-cnames <- c("Year", "State", "Method", "Catch (lb)")
-
-if(params$file == "html") {
-  NEesp::make_html_table(data, col_names = cnames)
-}
-
-if(params$file == "word"){
-  "Please see `data` folder"
-}
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c("Year", "State", "Method", "Catch (lb)"))
 ```
 
 #### Commercial catch
@@ -156,15 +143,9 @@ data <- com_data %>%
   ) %>%
   NEesp::character_to_factor()
 
-cnames <- colnames(data)
 
-if(params$file == "html") {
-  NEesp::make_html_table(data, col_names = cnames)
-}
-
-if(params$file == "word"){
-  "Please see `data` folder"
-}
+NEesp::make_html_table(data, 
+                       type = params$file)
 ```
 
 #### Commercial vs recreational catch
@@ -172,20 +153,14 @@ if(params$file == "word"){
 data <- NEesp::prop_catch_data(rec = rec_data, com = com_data) %>%
   NEesp::character_to_factor()
 
-cnames <- c(
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
   "Year", "Recreational catch",
   "Commercial catch", "Total catch",
   "Proportion recreational",
   "Proportion commercial"
-)
-
-if(params$file == "html") {
-  NEesp::make_html_table(data, col_names = cnames)
-}
-
-if(params$file == "word"){
-  "Please see `data` folder"
-}
+))
 ```
 
 #### Commercial, recreational, and stock assessment catch
@@ -251,15 +226,8 @@ sum_test <- sum(test == 0)
 if (sum_test >= 2) {
   print("NO DATA")
 } else {
-  cnames <- colnames(all_catch)
-  
-  if(params$file == "html") {
-    NEesp::make_html_table(all_catch, col_names = cnames)
-  }
-  
-  if(params$file == "word"){
-    "Please see `data` folder"
-  }
+  NEesp::make_html_table(data, 
+                       type = params$file)
 }
 ```
 
