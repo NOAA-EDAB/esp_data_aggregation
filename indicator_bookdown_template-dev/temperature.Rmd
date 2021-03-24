@@ -23,6 +23,10 @@ NEesp::generate_plot(survey_data,
 ```
 
 
+```{r, eval = (species == "Black sea bass"), fig.cap = paste(species, "temperature anomalies"), child = here::here("indicator_bookdown_template-dev/_ecodata-child-doc.Rmd")}
+```
+
+
 ### Summary
 ```{r, temp_summary}
 NEesp::generate_table(survey_data,
