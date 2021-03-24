@@ -29,6 +29,8 @@ params:
   cache: FALSE
   
   path: "" # figure path
+  
+  file: "html"
 ---
 
 # `r params$species_ID` {-}

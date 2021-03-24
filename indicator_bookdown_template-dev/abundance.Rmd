@@ -96,7 +96,15 @@ data <- survey_data %>%
     format(big.mark = ",")) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = c("Year", "Season", "Region", "Abundance"))
+cnames <- c("Year", "Season", "Region", "Abundance")
+```
+
+```{r, eval = (file == "html")}
+NEesp::make_html_table(data, col_names = cnames)
+```
+
+```{r, eval = (file == "word")}
+"Please see `data` folder"
 ```
 
 #### Survey data (swept area estimates) {-}
@@ -112,7 +120,15 @@ data <- swept_data %>%
       format(big.mark = ",")
   )
 
-NEesp::make_html_table(data, col_names = c("Year", "Abundance", "Standard error"))
+cnames <- c("Year", "Abundance", "Standard error")
+```
+
+```{r, eval = (file == "html")}
+NEesp::make_html_table(data, col_names = cnames)
+```
+
+```{r, eval = (file == "word")}
+"Please see `data` folder"
 ```
 
 #### Assessment data {-}
@@ -126,5 +142,13 @@ data <- asmt_data %>%
     format(big.mark = ",")) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, col_names = colnames(data))
+cnames <- colnames(data)
+```
+
+```{r, eval = (file == "html")}
+NEesp::make_html_table(data, col_names = cnames)
+```
+
+```{r, eval = (file == "word")}
+"Please see `data` folder"
 ```
