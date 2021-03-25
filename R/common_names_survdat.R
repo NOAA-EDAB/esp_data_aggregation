@@ -1,20 +1,29 @@
 
-Common_names_survdat<-function(survdatpull){
-
-  '%>%' <- magrittr::'%>%'
-  survdata<-readRDS(survdatpull)
-  survdata<-survdata$survdat
-  survdata<-survdata %>% mutate(SVSPP=as.numeric(SVSPP))
-  stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
-  stock_list_all_strata<-stock_list_all_strata %>%
-                            rename(SVSPP=svspp)
-  stock_list<-stock_list_all_strata %>%
-                    dplyr::distinct(SVSPP,.keep_all =T) %>%
-                      mutate(common_name=stringr::str_to_sentence(common_name))
+Common_names_survdat<-function(survdat_pull_type="all"){
+  #returns all survdata by defult, if survdat_pull_type= bio returns bio pulls
+  if(survdat_pull_type=="bio"){
+    
+    '%>%' <- magrittr::'%>%'
+    survdata<-NEesp::bio_survey
+    sp_key<-NEesp::species_key
+    survdata.bio.w.codes<-dplyr::inner_join(survdata, sp_key, by= "SVSPP" )
+    
+    return(survdata.bio.w.codes)
+    
+    
+  }else{
+    
+    '%>%' <- magrittr::'%>%'
+    survdata<-NEesp::survey
+    sp_key<-NEesp::species_key
+    survdata.bio.codes<-dplyr::inner_join(survdata, sp_key, by= "SVSPP" )
+    
+    return(survdata.bio.codes)
+  }
   
-  survdata.w.codes<-inner_join(survdata, stock_list, by= "SVSPP" )
   
-  return(survdata.w.codes)
+  
 }
+
 
 
