@@ -96,3 +96,25 @@ NEesp::correlation_data(
 ```{r, eval = (eval_epu == FALSE)}
 print("No data for the EPU selected")
 ```
+
+#### Regression data
+```{r, eval = eval_epu}
+this_recruit <- data %>%
+  dplyr::filter(stringr::str_detect(facet, "Recruit"),
+                sig == TRUE) %>%
+  dplyr::select(Species, Region, Time, Value, Metric, Var, Val, pval)
+
+if(nrow(this_recruit) > 0){
+  recruit_data <- rbind(recruit_data, this_recruit)
+}
+
+this_abun <- data %>%
+  dplyr::filter(stringr::str_detect(facet, "Abundance"),
+                sig == TRUE) %>%
+  dplyr::select(Species, Region, Time, Value, Metric, Var, Val, pval)
+
+if(nrow(this_abun) > 0){
+  abun_data <- rbind(abun_data, this_abun)
+}
+
+```

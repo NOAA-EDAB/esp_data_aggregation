@@ -50,6 +50,9 @@ if (params$remove_recent) {
 }
 
 output <- c()
+
+recruit_data <- c()
+abun_data <- c()
 ```
 
 ```{r, setup2, include = FALSE}
