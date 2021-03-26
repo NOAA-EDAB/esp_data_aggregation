@@ -7,8 +7,9 @@ Common_names_survdat<-function(survdat_pull_type="all"){
     survdata<-NEesp::bio_survey
     sp_key<-NEesp::species_key
     survdata.bio.w.codes<-dplyr::inner_join(survdata, sp_key, by= "SVSPP" )
-    
+    #print("bio survdata")
     return(survdata.bio.w.codes)
+    
     
     
   }else{
@@ -16,9 +17,10 @@ Common_names_survdat<-function(survdat_pull_type="all"){
     '%>%' <- magrittr::'%>%'
     survdata<-NEesp::survey
     sp_key<-NEesp::species_key
-    survdata.bio.codes<-dplyr::inner_join(survdata, sp_key, by= "SVSPP" )
+    survdata.w.codes<-dplyr::inner_join(survdata, sp_key, by= "SVSPP" )
+    #print("all survdata")
+    return(survdata.w.codes)
     
-    return(survdata.bio.codes)
   }
   
   
