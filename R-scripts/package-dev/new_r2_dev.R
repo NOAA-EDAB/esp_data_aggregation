@@ -1,7 +1,7 @@
 dat <- data.frame(x = rpois(10, 5),
                   y = rpois(10, 5) * 2 + rpois(1, 1))
 
-model <- glm(y ~ x, data = dat, family = poisson())
+model <- glm(y ~ x, data = dat, family = gaussian())
 results <- summary(model)
 
 results$coefficients[2, 1] # slope
