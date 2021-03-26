@@ -18,20 +18,20 @@ Using fisheries independant data from bottom trawls in `survdat`. Several metric
 ```{r geo_conc data wrangling }
 source(here::here("R","common_names_survdat.r"))
 
-survdata.w.codes<-Common_names_survdat(here::here("data","survdat_03022021_B.RDS"))
+survdata.w.codes<-Common_names_survdat()
 
 
 selected.surv<-survdata.w.codes %>%
    dplyr::filter(common_name == params$species)
 
-# selected.surv<-survdata.w.codes %>% 
-#    dplyr::filter(common_name == "Pollock")
+selected.surv<-survdata.w.codes %>%
+   dplyr::filter(common_name == "Pollock")
 
 
 
 if(nrow(selected.surv>3)){
   
-selected.surv.centroid<-selected.surv %>% dplyr::group_by(YEAR) %>% dplyr::summarise(lon=mean(LON),lat=mean(LAT))
+selected.surv.centroid<-selected.surv %>% dplyr::group_by(YEAR) %>% dplyr::summarise(LON=mean(LON),LAT=mean(LAT))
 
 }else("Not enough data")
 
@@ -217,12 +217,13 @@ lonmax<-(max(selected.surv.centroid$LON)+1)
 
 ggplot2::ggplot(data = ecodata::coast ) +
   geom_sf() +
-  geom_point(data = selected.surv.centroid, aes(x=lon,y=lat,color=as.numeric(YEAR)))+
-  ggrepel::geom_label_repel(data = selected.surv.centroid,aes(x=lon,y=lat,label=YEAR),max.overlaps =20 )+
+  geom_point(data = selected.surv.centroid, aes(x=LON,y=LAT,color=as.numeric(YEAR)))+
+  ggrepel::geom_label_repel(data = selected.surv.centroid,aes(x=LON,y=LAT,label=YEAR),max.overlaps =20 )+
   ggplot2::coord_sf(xlim=c(lonmin,lonmax), ylim=c(latmin,latmax))+
   scale_color_gradient(low = "blue", high = "red", name="Year")+
   xlab("Longitude")+
   ylab("Latitude")
+
 }else("Not enough data")
 
 ```
