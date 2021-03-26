@@ -1,0 +1,79 @@
+## Trophic indicators
+
+### Spring zooplankton abundance by species
+```{r, zoo_oi_spring}
+test <- ecodata::zoo_oi %>%
+  dplyr::filter(
+    Var %>% stringr::str_detect("SD") == FALSE,
+    Var %>% stringr::str_detect("spring")
+  )
+NEesp::render_indicator(test)
+```
+
+### Fall zooplankton abundance by species
+```{r, zoo_oi_fall}
+test <- ecodata::zoo_oi %>%
+  dplyr::filter(
+    Var %>% stringr::str_detect("SD") == FALSE,
+    Var %>% stringr::str_detect("fall")
+  )
+NEesp::render_indicator(test)
+```
+
+### Zooplankton abundance by group
+```{r, zoo_strat_abun}
+test <- ecodata::zoo_strat_abun
+NEesp::render_indicator(test)
+```
+
+### Abundance of Calanus CV and adults
+```{r, calanus}
+test <- ecodata::calanus_stage %>%
+  dplyr::rename(Time = Year) %>%
+  dplyr::filter(
+    Var == "adt" | Var == "c5",
+    Units == "No. per 100m^-3"
+  ) %>%
+  dplyr::group_by(Time, EPU, season) %>%
+  dplyr::mutate(Val = sum(Value)) %>%
+  dplyr::select(Time, Val, EPU, season) %>%
+  dplyr::distinct() %>%
+  dplyr::mutate(Var = paste("Calanus CV and adult", season))
+NEesp::render_indicator(test)
+```
+
+### Zooplankton abundance anomaly
+```{r, zoo_abund}
+test <- ecodata::zoo_abund
+NEesp::render_indicator(test)
+```
+
+### Zooplankton diversity index
+```{r, zoo_diversity}
+test <- ecodata::zoo_diversity
+NEesp::render_indicator(test)
+```
+
+### Small/large copepod anomaly
+```{r, zoo_sli_anom}
+test <- ecodata::zoo_sli_anom
+NEesp::render_indicator(test)
+```
+
+### Ichthyoplankton diversity
+```{r, ich}
+test <- ecodata::ichthyo_diversity
+NEesp::render_indicator(test)
+```
+
+### Forage fish abundance
+```{r, forage}
+test <- ecodata::forage_anomaly
+NEesp::render_indicator(test)
+```
+
+### Species distribution
+```{r, species_dist}
+test <- ecodata::species_dist
+NEesp::render_indicator(test)
+```

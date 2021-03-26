@@ -1,0 +1,21 @@
+## Socioeconomic indicators
+
+### CPUE by catch strategy
+
+### Recreational CPUE
+```{r, rec_cpue}
+numbers <- ecodata::recdat %>%
+  dplyr::filter(Var == "Recreational Seafood") %>%
+  dplyr::rename(Number = Value)
+
+days <- ecodata::recdat %>%
+  dplyr::filter(Var == "Recreational Effort") %>%
+  dplyr::rename(Days = Value)
+
+test <- dplyr::left_join(numbers, days, by = c("Time", "EPU")) %>%
+  dplyr::mutate(
+    Val = Number / Days,
+    Var = paste("recreational CPUE", "number of fish caught per day fished (all species)", sep = "\n")
+  )
+NEesp::render_indicator(test)
+```

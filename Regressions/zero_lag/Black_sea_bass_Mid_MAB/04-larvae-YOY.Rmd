@@ -1,0 +1,19 @@
+## Larvae and YOY indicators
+
+### Recruitment
+```{r, recruit}
+test <- stock %>%
+  dplyr::filter(Metric == "Recruitment") %>%
+  dplyr::rename(
+    Var = Metric,
+    Val = Value
+  )
+if (nrow(test) > params$lag) {
+  NEesp::render_indicator(test)
+} else {
+  names <- names[-1]
+  print("No data")
+}
+```
+
+### Larval growth
