@@ -1,9 +1,0 @@
----
-title: "Child doc"
-author: "Abigail Tyrell"
-date: "`r format(Sys.time(), '%d %b %Y')`"
-output: html_document
----
-
-```{r, child = here::here("microbenchmark_testing", "child_doc.Rmd")}
-```

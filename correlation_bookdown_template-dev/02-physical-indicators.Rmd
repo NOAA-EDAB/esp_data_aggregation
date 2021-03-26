@@ -1,0 +1,101 @@
+## Physical indicators
+
+### Cold pool index
+```{r, cold_pool}
+test <- ecodata::cold_pool
+NEesp::render_indicator(test)
+```
+
+### Warm core rings
+```{r, warm}
+test <- ecodata::wcr
+NEesp::render_indicator(test)
+```
+
+### Marine heatwave index
+```{r, heatwave}
+test <- ecodata::heatwave
+NEesp::render_indicator(test)
+```
+
+### GLORYS bottom temperature
+```{r, glorys}
+test <- ecodata::bottom_temp_glorys
+NEesp::render_indicator(test)
+```
+
+### Long-term sea surface temperature
+```{r, sst}
+test <- ecodata::long_term_sst
+NEesp::render_indicator(test)
+```
+
+### Sea surface temperature anomaly
+```{r, sst_anom}
+test <- ecodata::seasonal_oisst_anom
+NEesp::render_indicator(test)
+```
+
+### Stratification
+```{r, strat}
+test <- ecodata::stratification
+NEesp::render_indicator(test)
+```
+
+### Winter wind speed
+```{r, winter_wind}
+test <- ecodata::ne_wind %>%
+  dplyr::filter(Var %>% stringr::str_detect("winter"))
+NEesp::render_indicator(test)
+```
+
+### Spring wind speed
+```{r, spring_wind}
+test <- ecodata::ne_wind %>%
+  dplyr::filter(Var %>% stringr::str_detect("spring"))
+NEesp::render_indicator(test)
+```
+
+### Summer wind speed
+```{r, summer_wind}
+test <- ecodata::ne_wind %>%
+  dplyr::filter(Var %>% stringr::str_detect("summer"))
+NEesp::render_indicator(test)
+```
+
+### Fall wind speed
+```{r, fall_wind}
+test <- ecodata::ne_wind %>%
+  dplyr::filter(Var %>% stringr::str_detect("fall"))
+NEesp::render_indicator(test)
+```
+
+### Gulf Stream Index
+```{r, gsi}
+test <- ecodata::gsi %>%
+  dplyr::mutate(Time = Time %>%
+    stringr::str_trunc(width = 4, ellipsis = "") %>%
+    as.numeric())
+NEesp::render_indicator(test)
+```
+
+### North Atlantic Oscillation
+```{r, nao}
+test <- ecodata::nao
+NEesp::render_indicator(test)
+```
+
+### Chlorophyll
+```{r, chl}
+test <- ecodata::chl_pp %>%
+  dplyr::mutate(Var = Var %>%
+    stringr::str_replace_all("_", "\n") %>%
+    stringr::str_replace_all(" ", "\n")) %>%
+  dplyr::filter(stringr::str_detect(Var, "ANNUAL")) %>% # only annual indices
+  dplyr::mutate(Time = Time %>%
+    stringr::str_replace("A_", "") %>%
+    as.numeric())
+NEesp::render_indicator(test)
+
+# data_prep(stock, test, lag = params$lag) %>% knitr::kable()
+```
