@@ -19,7 +19,7 @@ NEesp::render_ind_report("Black sea bass",
                            ricky_survey_data = NEesp::bio_survey,
                            path = here::here("action_reports/Black sea bass", "figures//"),
                            save = TRUE
-                         ))
+                         ), trouble = TRUE)
 
 # regression reports ----
 

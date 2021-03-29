@@ -6,6 +6,8 @@ Surface and bottom temperature data were pulled from ``r params$survey_source``.
 
 Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
 
+#### Survey data {-}
+
 
 ```{r, s-temp, fig.cap = paste(species, "surface temperature")}
 NEesp::generate_plot(survey_data,
@@ -23,7 +25,9 @@ NEesp::generate_plot(survey_data,
 ```
 
 
-```{r, eval = (species == "Black sea bass"), fig.cap = paste(species, "temperature anomalies"), child = here::here("indicator_bookdown_template-dev/_ecodata-child-doc.Rmd")}
+#### Average temperature anomaly over time in stock region {-}
+```{r, stock-temp, fig.cap = paste(species, "temperature anomalies")}
+plot_temp_anom(ecodat_tanom)
 ```
 
 
@@ -43,6 +47,8 @@ NEesp::generate_table(survey_data,
 ```
 
 ### Data
+
+#### Survey data {-}
 ```{r, temp_data}
 data <- survey_data %>%
   dplyr::select(
@@ -72,4 +78,13 @@ NEesp::make_html_table(data,
   "Year", "Season", "Region",
   "Mean surface temperature", "Mean bottom temperature"
 ))
+```
+
+#### `ecodata` data {-}
+```{r, eco_data}
+ecodat_tanom %>%
+  dplyr::select(-Pattern_check) %>%
+  dplyr::mutate(Value = Value %>%
+                  round(digits = 2)) %>%
+  NEesp::make_html_table(type = params$file)
 ```
