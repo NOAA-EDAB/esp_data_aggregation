@@ -9,6 +9,7 @@ NEesp::render_ind_report("Black sea bass")
 # run a report using package data and local template (from "indicator_bookdown_template-dev" folder)
 
 ## source new functions if needed
+`%>%` <- magrittr::`%>%`
 source(here::here("R-scripts/package-dev", "life_history_functions.R"))
 
 NEesp::render_ind_report("Black sea bass", 

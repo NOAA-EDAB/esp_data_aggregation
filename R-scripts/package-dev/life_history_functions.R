@@ -240,12 +240,13 @@ plot_age_diversity <- function(data, species){
 #' @export
 
 plot_age_density <- function(data){
-  if (data$AGE %>% unique() %>% length() >= 3) {
+  if (data$AGE %>% unique() %>% length() > 3) {
     fig <- data %>%
       tidyr::drop_na(AGE) %>%
       dplyr::group_by(YEAR) %>%
       ggplot2::ggplot(ggplot2::aes(x = AGE, 
-                                   y = YEAR, 
+                                   y = YEAR %>% as.factor(), 
+                                   group = YEAR %>% as.factor(),
                                    fill = YEAR %>% as.numeric())) +
       ggplot2::scale_fill_gradientn(
         colors = nmfspalette::nmfs_palette("regional web")(4),
@@ -255,10 +256,44 @@ plot_age_density <- function(data){
       ggplot2::scale_x_continuous(
         limits = c(0, (max(data$AGE, na.rm = TRUE))),
         breaks = seq(0, max(data$AGE, na.rm = TRUE), by = 5)
-      )
+      )+
+      xlab("Age")+
+      ylab("Year")
     
     return(fig)
   } else {
     print("NO DATA")
   }
 }
+
+#' Attach species' common names to `survdat` data
+#'
+#' This function attaches species' common names to `survdat` data
+#'
+#' @param survdat_pull_type Returns all survdata by default; if `survdat_pull_type = "bio"`, returns bio pull. 
+#' @return A tibble of `survdat` data, with common names attached
+#' @importFrom magrittr %>%
+#' @export
+
+Common_names_survdat <- function(survdat_pull_type="all"){
+
+  if(survdat_pull_type=="bio"){
+    
+    survdata<-NEesp::bio_survey
+    sp_key<-NEesp::species_key
+    survdata.bio.w.codes<-dplyr::inner_join(survdata, sp_key, by= "SVSPP" )%>%
+      dplyr::mutate(common_name = Species)
+    #print("bio survdata")
+    return(survdata.bio.w.codes)
+    
+  }else{
+    
+    survdata<-NEesp::survey %>%
+      dplyr::mutate(common_name = Species)
+    #print("all survdata")
+    return(survdata)
+    
+  }
+  
+}
+

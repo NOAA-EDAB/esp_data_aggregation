@@ -1,10 +1,13 @@
 ## Age diversity
 
 ```{r data_wrangling_age, cache = params$cache, cache.lazy = FALSE}
-selected.spp <- NEesp::bio_survey %>%
-  dplyr::mutate(SVSPP = as.numeric(SVSPP)) %>%
-  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
-  dplyr::filter(Species == species)
+#selected.spp <- NEesp::bio_survey %>%
+#  dplyr::mutate(SVSPP = as.numeric(SVSPP)) %>%
+#  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
+#  dplyr::filter(Species == species)
+
+selected.spp <- Common_names_survdat("bio") %>%
+  dplyr::filter(common_name == params$species)
 ```
 
 Diversity in age measurements of a stock is a useful indicator of several factors relating to fishing pressure and recruitment. A decrease in diversity can be due to either truncation, the lack of older or younger ages. Diversity changes as a function of an increase of a single/few ages relative to the usual stock age structure or as more ages become less represented. Diagnostic plots of age are constructed below using fisheries independent data from `survdat`.
