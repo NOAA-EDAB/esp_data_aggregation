@@ -36,6 +36,8 @@ output %>%
 
 ### Generalized linear model
 
+This is an exploratory fit of a poisson GLM. Covariates were included based on statistical significance at a Bonferroni-corrected alpha in the linear correlations shown in this report.
+
 ```{r, bonf}
 # bonferroni correction to weed out excess covariates
 bonf_p <- 0.05/length(unique(abun_data$Var))
@@ -76,7 +78,9 @@ new_mod <- MASS::stepAIC(start_model,
               scope = list(lower = ~1,
                            upper = full_mod))
 
-summary(new_mod)$coefficients %>% knitr::kable()
+summary(new_mod)$coefficients %>% 
+  signif(digits = 3) %>%
+  knitr::kable()
 ```
 
 
@@ -116,6 +120,9 @@ output %>%
 ```
 
 ### Generalized linear model
+
+This is an exploratory fit of a poisson GLM. Covariates were included based on statistical significance at a Bonferroni-corrected alpha in the linear correlations shown in this report.
+
 ```{r, bonf-recruit}
 # bonferroni correction to weed out excess covariates
 bonf_p <- 0.05/length(unique(recruit_data$Var))
@@ -156,7 +163,9 @@ new_mod <- MASS::stepAIC(start_model,
               scope = list(lower = ~1,
                            upper = full_mod))
 
-summary(new_mod)$coefficients %>% knitr::kable()
+summary(new_mod)$coefficients %>% 
+  signif(digits = 3) %>%
+  knitr::kable()
 ```
 
 
