@@ -63,7 +63,16 @@ if (nrow(data) > 0) {
     ".csv",
     sep = "_"
   ) %>%
-    stringr::str_replace_all("/", "-")
+    stringr::str_replace_all("/", "-") %>%
+    stringr::str_replace_all("Georges Bank", "GB") %>%
+    stringr::str_replace_all("Gulf of Maine", "GOM") %>%
+    stringr::str_replace_all("Northern", "N") %>%
+    stringr::str_replace_all("Southern", "S") %>%
+    stringr::str_replace_all("Northwestern", "NW") %>%
+    stringr::str_replace_all(" - ", "-") %>%
+    stringr::str_replace_all("_.csv", ".csv") %>%
+    stringr::str_replace_all(" ", "_")
+  
   write.csv(data, paste("data/", file_name, sep = ""))
 }
 ```

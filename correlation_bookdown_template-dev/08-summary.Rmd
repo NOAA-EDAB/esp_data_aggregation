@@ -1,6 +1,6 @@
 # Summary of statistically significant indicators
 
-```{r, output_summary}
+```{r, output_summary_html, eval = (params$out == "html")}
 summary_table <- function(x) {
   DT::datatable(x,
     rownames = FALSE,
@@ -14,7 +14,15 @@ summary_table <- function(x) {
     )
   )
 }
+```
 
+```{r, output_summary_word, eval = (params$out == "word")}
+summary_table <- function(x) {
+  knitr::kable(x)
+}
+```
+
+```{r}
 colnames(output) <- c(
   "Response_variable", "Indicator",
   "Number of data points", "Slope",
