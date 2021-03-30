@@ -69,6 +69,25 @@ abun_data <- abun_data %>%
                      values_from = Val) %>%
   tidyr::drop_na()
 
+file_name <- paste(params$stock, params$region, params$epu[1],
+    params$lag, "lag",
+    params$remove_recent, "remove_recent", "abun_model_data",
+    ".csv",
+    sep = "_"
+  ) %>%
+    stringr::str_replace_all("/", "-") %>%
+    stringr::str_replace_all("Georges Bank", "GB") %>%
+    stringr::str_replace_all("Gulf of Maine", "GOM") %>%
+    stringr::str_replace_all("Northern", "N") %>%
+    stringr::str_replace_all("Southern", "S") %>%
+    stringr::str_replace_all("Northwestern", "NW") %>%
+    stringr::str_replace_all(" - ", "-") %>%
+    stringr::str_replace_all("_.csv", ".csv") %>%
+    stringr::str_replace_all(" ", "_")
+
+write.csv(abun_data, paste("data/", file_name, sep = ""))
+
+
 start_model <- glm(Value ~ 1,
                    data = abun_data,
                    family = poisson())
@@ -77,7 +96,7 @@ full_mod <- paste(colnames(abun_data)[6:ncol(abun_data)],
                   collapse = " + ")
 full_mod <- paste("~", full_mod)
 
-#write.csv(abun_data, file = "abun_data.csv")
+
 
 ```
 
@@ -177,6 +196,24 @@ recruit_data <- recruit_data %>%
   tidyr::pivot_wider(names_from = Var,
                      values_from = Val) %>%
   tidyr::drop_na() 
+
+file_name <- paste(params$stock, params$region, params$epu[1],
+    params$lag, "lag",
+    params$remove_recent, "remove_recent", "recruit_model_data",
+    ".csv",
+    sep = "_"
+  ) %>%
+    stringr::str_replace_all("/", "-") %>%
+    stringr::str_replace_all("Georges Bank", "GB") %>%
+    stringr::str_replace_all("Gulf of Maine", "GOM") %>%
+    stringr::str_replace_all("Northern", "N") %>%
+    stringr::str_replace_all("Southern", "S") %>%
+    stringr::str_replace_all("Northwestern", "NW") %>%
+    stringr::str_replace_all(" - ", "-") %>%
+    stringr::str_replace_all("_.csv", ".csv") %>%
+    stringr::str_replace_all(" ", "_")
+
+write.csv(recruit_data, paste("data/", file_name, sep = ""))
 
 start_model <- glm(Value ~ 1,
                    data = recruit_data,
