@@ -58,7 +58,9 @@ abun_data <- abun_data %>%
   stringr::str_replace_all("-", "_") %>%
   stringr::str_replace_all("/", "_") %>%
   stringr::str_replace_all("[:^:]", "_") %>%
-  stringr::str_replace_all("\n", "_")
+  stringr::str_replace_all("\n", "_") %>%
+    stringr::str_replace_all("\\(", "") %>%
+    stringr::str_replace_all("\\)", "") 
   ) %>%
   dplyr::filter(pval < bonf_p,
                 Var != "Time") %>%
@@ -109,10 +111,16 @@ new_mod <- MASS::stepAIC(start_model,
 ```
 
 ```{r, summary-mod}
-summary(new_mod)$coefficients %>% 
-  signif(digits = 3) %>%
-  knitr::kable(format.args = list(scientific = FALSE,
-                                  drop0trailing = TRUE))
+dat <- summary(new_mod)$coefficients %>% 
+  signif(digits = 3)
+
+rnames <- rownames(dat) %>% stringr::str_trunc(width = 30)
+dat <- cbind(rnames, dat)
+
+knitr::kable(dat,
+             row.names = FALSE,
+             format.args = list(scientific = FALSE,
+                                  drop0trailing = TRUE)) 
 ```
 
 ```{r}
@@ -186,7 +194,9 @@ recruit_data <- recruit_data %>%
   stringr::str_replace_all("-", "_") %>%
   stringr::str_replace_all("/", "_") %>%
   stringr::str_replace_all("[:^:]", "_") %>%
-  stringr::str_replace("\n", "_")
+  stringr::str_replace("\n", "_") %>%
+    stringr::str_replace_all("\\(", "") %>%
+    stringr::str_replace_all("\\)", "") 
   ) %>%
   dplyr::filter(pval < bonf_p,
                 Var != "Time") %>%
@@ -232,10 +242,16 @@ new_mod <- MASS::stepAIC(start_model,
               scope = list(lower = ~1,
                            upper = full_mod))
 
-summary(new_mod)$coefficients %>% 
-  signif(digits = 3) %>%
-  knitr::kable(format.args = list(scientific = FALSE,
-                                  drop0trailing = TRUE))
+dat <- summary(new_mod)$coefficients %>% 
+  signif(digits = 3)
+
+rnames <- rownames(dat) %>% stringr::str_trunc(width = 30)
+dat <- cbind(rnames, dat)
+
+knitr::kable(dat,
+             row.names = FALSE,
+             format.args = list(scientific = FALSE,
+                                  drop0trailing = TRUE)) 
 ```
 
 ```{r}
