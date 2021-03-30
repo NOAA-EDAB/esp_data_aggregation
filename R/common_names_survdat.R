@@ -6,7 +6,12 @@ Common_names_survdat<-function(survdat_pull_type="all"){
     '%>%' <- magrittr::'%>%'
     survdata<-NEesp::bio_survey
     sp_key<-NEesp::species_key
+<<<<<<< HEAD
     survdata.bio.w.codes<-dplyr::inner_join(survdata, sp_key, by= "SVSPP" )
+=======
+    survdata.bio.w.codes<-dplyr::inner_join(survdata, sp_key, by= "SVSPP" )%>%
+      dplyr::rename("common_name"="Species")
+>>>>>>> main
     #print("bio survdata")
     return(survdata.bio.w.codes)
     
@@ -21,6 +26,7 @@ Common_names_survdat<-function(survdat_pull_type="all"){
     return(survdata)
     
   }
+<<<<<<< HEAD
   
   
   
@@ -28,3 +34,7 @@ Common_names_survdat<-function(survdat_pull_type="all"){
 
 
 
+=======
+
+}
+>>>>>>> main

@@ -1,0 +1,28 @@
+# Management information
+
+```{r, management_data, cache = params$cache}
+ad_rating_data <- asmt_sum_data %>%
+  dplyr::select(
+    Species, Region, `Assessment Year`, `Last Data Year`,
+    `Biological Input Data`, `Life History Data`,
+    `Composition Input Data`, `Ecosystem Linkage`, `FSSI Stock?`,
+    `Review Result`
+  ) %>%
+  dplyr::rename(
+    `Biological Data Rating (2019)` = `Biological Input Data`,
+    `Biological Data Rating (before 2019)` = `Life History Data`,
+    `Size Data Rating` = `Composition Input Data`,
+    `Ecosystem Linkage Data Rating` = `Ecosystem Linkage`,
+    `FSSI status` = `FSSI Stock?`
+  )
+```
+
+## Stock assessment and data quality information
+Stock assessment and data quality information were pulled from ``r params$asmt_sum_source``.
+```{r, quality}
+data <- ad_rating_data %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, type = params$file)
+```

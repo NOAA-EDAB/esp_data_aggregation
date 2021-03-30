@@ -1,0 +1,48 @@
+## Diet
+
+Diet data were compiled from [existing data](https://github.com/Laurels1/Condition/blob/master/data/allfh.RData). For analysis, all geographic samples were grouped by season, year, and region, and only year-season-region combinations with more than 20 predators sampled were considered. Prey items that made up more than 5% of the predator's diet in at least one year-season-region were identified to the broad category level; all other prey are grouped into the "other" category.
+
+### Figure
+
+
+```{r, diet, fig.cap = paste(species, "diet composition")}
+NEesp::get_diet_plot(data = diet_data)
+```
+
+
+### Summary
+```{r, diet_summary}
+NEesp::get_diet_table(data = diet_data,
+                      type = params$file)
+```
+
+### Data
+```{r, diet_data}
+diet_data2 <- diet_data %>%
+  dplyr::filter(pyamtw > 0) %>%
+
+  # only look at season/year combinations with >20 predator samples
+  dplyr::group_by(year, season, Region) %>%
+  dplyr::mutate(n_predators = fish_id %>% unique() %>% length()) %>%
+  dplyr::filter(n_predators > 20) %>%
+  dplyr::group_by(year, season, Region, n_predators, gensci) %>%
+  dplyr::summarise(total_weight = sum(pyamtw)) %>%
+  dplyr::mutate(
+    proportion = total_weight / sum(total_weight),
+    proportion = proportion %>%
+      round(digits = 3),
+    total_weight = total_weight %>%
+      round(digits = 2),
+    gensci = gensci %>%
+      stringr::str_replace("_", " ") %>%
+      stringr::str_to_sentence()
+  ) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(diet_data2,
+                       type = params$file,
+                       col_names = c(
+  "Year", "Season", "Region", "Number of fish",
+  "Prey category", "Prey weight", "Prey proportion"
+))
+```

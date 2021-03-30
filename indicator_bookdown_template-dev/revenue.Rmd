@@ -1,0 +1,43 @@
+## Revenue 
+
+Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+
+### Figure
+
+
+```{r, revenue, fig.cap = paste(species, "revenue")}
+NEesp::plot_com_money(com_data)
+```
+
+
+#### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("revenue")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Data
+```{r, revenue_data}
+data <- com_data %>%
+  dplyr::select(Year, State, Dollars_adj, Pounds) %>%
+  dplyr::mutate(
+    Dollars_adj = Dollars_adj %>%
+      round(digits = 0) %>%
+      format(big.mark = ","),
+    State = State %>%
+      stringr::str_to_title(),
+    Pounds = Pounds %>%
+      format(big.mark = ",")
+  ) %>%
+  dplyr::rename(
+    "Revenue (2019 dollars)" = "Dollars_adj",
+    "Commercial catch (lb)" = "Pounds"
+  ) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, type = params$file)
+```

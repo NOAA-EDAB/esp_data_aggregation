@@ -1,0 +1,66 @@
+## B/Bmsy 
+
+```{r, b_status}
+if (length(asmt_sum_data$Species) > 1) {
+  list_regions <- split(unique(asmt_sum_data$Region),
+    f = list(unique(asmt_sum_data$Region))
+  )
+  bbmsy2 <- purrr::map(
+    list_regions,
+    ~ NEesp::status(
+      data = asmt_sum_data,
+      regions = .x,
+      metric = "bbmsy"
+    )
+  )
+} else {
+  bbmsy2 <- "UNKNOWN"
+}
+```
+
+```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```
+
+B/Bmsy data were pulled from ``r params$asmt_sum_source``.
+
+The most recent status of B/Bmsy is: `r bbmsy2`
+
+### Figure
+
+
+```{r, bbmsy-fig, fig.cap = paste(species, "B/Bmsy")} 
+if ("GOOD" %in% bbmsy2 | "CAUTION" %in% bbmsy2 | "DANGER" %in% bbmsy2) {
+  NEesp::plot_msy(asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ],
+    type = "b",
+    ytitle = "B / Bmsy",
+    lin = lines,
+    col = colors
+  )
+} else {
+  print("NO DATA")
+}
+```
+
+
+#### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("bbmsy")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Data
+```{r, bbmsy_data}
+data <- asmt_sum_data[which(is.na(asmt_sum_data$`B/Bmsy`) == FALSE), ] %>%
+  dplyr::select(Region, `Assessment Year`, `B/Bmsy`) %>%
+  dplyr::mutate(`B/Bmsy` = `B/Bmsy` %>% round(digits = 2)) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c("Region", "Year", "B/Bmsy"))
+```
+
