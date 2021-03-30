@@ -52,7 +52,11 @@ bonf_p <- 0.05/bonf_n
 ```
 
 ```{r, wrangle-abun}
-abun_data <- abun_data %>%
+eval_dat <- (class(recruit_data) != "NULL")
+
+if(eval_dat){
+  
+  abun_data <- abun_data %>%
   dplyr::mutate(Var = Var %>%
   stringr::str_replace_all(" ", "_") %>%
   stringr::str_replace_all("-", "_") %>%
@@ -65,10 +69,11 @@ abun_data <- abun_data %>%
   dplyr::filter(pval < bonf_p,
                 Var != "Time") %>%
   dplyr::select(-pval)
+   } else "No statistically significant covariates"
+
 ```
 
-
-```{r}
+```{r, eval = eval_dat}
 data <- abun_data
 type = "abundance"
 
@@ -98,7 +103,11 @@ output %>%
 This is an exploratory fit of a poisson GLM. Initial covariates were included based on statistical significance at a Bonferroni-corrected alpha in the linear correlations shown in this report. Final covariates were chosen by forward stepwise AIC selection of additive GLMs.
 
 ```{r, wrangle-recruit}
-recruit_data <- recruit_data %>%
+eval_dat <- (class(recruit_data) != "NULL")
+
+if(eval_dat){
+  
+  recruit_data <- recruit_data %>%
   dplyr::mutate(Var = Var %>%
   stringr::str_replace_all(" ", "_") %>%
   stringr::str_replace_all("-", "_") %>%
@@ -111,9 +120,11 @@ recruit_data <- recruit_data %>%
   dplyr::filter(pval < bonf_p,
                 Var != "Time") %>%
   dplyr::select(-pval)
+   } else "No statistically significant covariates"
+
 ```
 
-```{r}
+```{r, eval = eval_dat}
 data <- recruit_data
 type = "recruit"
 
