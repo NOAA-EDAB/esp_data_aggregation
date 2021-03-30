@@ -47,6 +47,9 @@ output <- rbind(output, correlation_summary(
   eco = test,
   lag = params$lag
 ))
+
+# count number of regressions for bonferroni correction
+bonf_n <- bonf_n + 1
 ```
 
 ```{r, eval = params$save & eval_epu}

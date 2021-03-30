@@ -54,6 +54,8 @@ output <- c()
 
 recruit_data <- c()
 abun_data <- c()
+
+bonf_n <- 0
 ```
 
 ```{r, setup2, include = FALSE}
