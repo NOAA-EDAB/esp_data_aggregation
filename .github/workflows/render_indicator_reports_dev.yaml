@@ -50,9 +50,16 @@ jobs:
                  
       - name: Render reports
         run: |
-          Rscript -e 'lapply(NEesp::species_key$Species, 
-                             NEesp::render_ind_report,
-                             input = "bookdown")'
+          Rscript -e 'fun <- function(x) {
+          NEesp::render_ind_report(x, 
+                           input = "bookdown",
+                           params_to_use = list(species_ID = x,
+                                                ricky_survey_data = NEesp::bio_survey, 
+                                                path = here::here(paste("action_reports/", x, sep = ""), "figures//"),
+                                                save = TRUE))
+                                                }
+
+          lapply(NEesp::species_key$Species, fun))'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1

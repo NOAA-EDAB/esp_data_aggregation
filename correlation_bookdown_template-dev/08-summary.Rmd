@@ -48,94 +48,42 @@ This is an exploratory fit of a poisson GLM. Initial covariates were included ba
 
 ```{r, bonf}
 # bonferroni correction to weed out excess covariates
-bonf_p <- 0.05/length(unique(abun_data$Var))
+bonf_p <- 0.05/bonf_n
 ```
 
 ```{r, wrangle-abun}
-abun_data <- abun_data %>%
+eval_dat <- (class(recruit_data) != "NULL")
+
+if(eval_dat){
+  
+  abun_data <- abun_data %>%
   dplyr::mutate(Var = Var %>%
   stringr::str_replace_all(" ", "_") %>%
   stringr::str_replace_all("-", "_") %>%
   stringr::str_replace_all("/", "_") %>%
   stringr::str_replace_all("[:^:]", "_") %>%
-  stringr::str_replace_all("\n", "_")
+  stringr::str_replace_all("\n", "_") %>%
+    stringr::str_remove_all("\\(") %>%
+    stringr::str_remove_all("\\)") %>%
+    stringr::str_remove_all(",")
   ) %>%
   dplyr::filter(pval < bonf_p,
                 Var != "Time") %>%
   dplyr::select(-pval)
-
-abun_data <- abun_data %>%
-  tidyr::pivot_wider(names_from = Var,
-                     values_from = Val) %>%
-  tidyr::drop_na()
-
-start_model <- glm(Value ~ 1,
-                   data = abun_data,
-                   family = poisson())
-
-full_mod <- paste(colnames(abun_data)[6:ncol(abun_data)],
-                  collapse = " + ")
-full_mod <- paste("~", full_mod)
-
-#write.csv(abun_data, file = "abun_data.csv")
+   } else "No statistically significant covariates"
 
 ```
 
-```{r, new-model-abun}
-new_mod <- MASS::stepAIC(start_model,
-              k = log(nrow(abun_data)),
-              trace = FALSE,
-              scope = list(lower = ~1,
-                           upper = full_mod))
-```
+```{r, eval = eval_dat}
+data <- abun_data
+type = "abundance"
 
-```{r, summary-mod}
-summary(new_mod)$coefficients %>% 
-  signif(digits = 3) %>%
-  knitr::kable(format.args = list(scientific = FALSE,
-                                  drop0trailing = TRUE))
-```
-
-```{r}
-all_coefs <- colnames(abun_data)[6:ncol(abun_data)] 
-mod_coefs <- rownames(summary(new_mod)$coefficients)[-1]
-
-if(length(all_coefs) == length(mod_coefs)){
-  dropped_coefs <- "none"
-} else {
-
-  dropped_coefs <- all_coefs[(all_coefs %in% mod_coefs) == FALSE]
-  
-  if(length(dropped_coefs) > 1) {
-    dropped_coefs <- paste(collapse = ",")
-    print(dropped_coefs)
-  }
-}
-
-```
-Dropped coefficients: `r dropped_coefs`
-
-
-```{r, predict-abun}
-abun_data$Predicted <- predict(new_mod, newdata = abun_data) %>% exp()
-
-fig <- ggplot2::ggplot(abun_data,
-       ggplot2::aes(x = Time,
-           y = Value))+
-  ggplot2::geom_line()+
-  ggplot2::geom_point()+
-  ggplot2::geom_line(ggplot2::aes(y = Predicted),
-            lty = 2,
-            color = "red")+
-  ggplot2::geom_point(ggplot2::aes(y = Predicted),
-               color = "red")+
-  ggplot2::ylab("Abundance")+
-  ggplot2::xlab("Year")+
-  ggplot2::theme_bw()+
-  ggplot2::scale_y_continuous(labels = scales::comma,
-                     limits = c(0, NA))
-
-print(fig)
+if(nrow(data) > 0) {
+  res <- knitr::knit_child(system.file("correlation_bookdown_template/_summary-child-doc.Rmd", package = "NEesp"),
+                           quiet = TRUE
+  )
+  cat(res, sep = "\n")
+} else "No statistically significant covariates after Bonferroni correction"
 ```
 
 
@@ -155,95 +103,40 @@ output %>%
 
 This is an exploratory fit of a poisson GLM. Initial covariates were included based on statistical significance at a Bonferroni-corrected alpha in the linear correlations shown in this report. Final covariates were chosen by forward stepwise AIC selection of additive GLMs.
 
-```{r, bonf-recruit}
-# bonferroni correction to weed out excess covariates
-bonf_p <- 0.05/length(unique(recruit_data$Var))
-```
-
 ```{r, wrangle-recruit}
-recruit_data <- recruit_data %>%
+eval_dat <- (class(recruit_data) != "NULL")
+
+if(eval_dat){
+  
+  recruit_data <- recruit_data %>%
   dplyr::mutate(Var = Var %>%
   stringr::str_replace_all(" ", "_") %>%
   stringr::str_replace_all("-", "_") %>%
   stringr::str_replace_all("/", "_") %>%
   stringr::str_replace_all("[:^:]", "_") %>%
-  stringr::str_replace("\n", "_")
+  stringr::str_replace_all("\n", "_") %>%
+    stringr::str_remove_all("\\(") %>%
+    stringr::str_remove_all("\\)") %>%
+    stringr::str_remove_all(",")
   ) %>%
   dplyr::filter(pval < bonf_p,
                 Var != "Time") %>%
   dplyr::select(-pval)
-
-recruit_data <- recruit_data %>%
-  tidyr::pivot_wider(names_from = Var,
-                     values_from = Val) %>%
-  tidyr::drop_na() 
-
-start_model <- glm(Value ~ 1,
-                   data = recruit_data,
-                   family = poisson())
-
-full_mod <- paste(colnames(recruit_data)[6:ncol(recruit_data)],
-                  collapse = " + ")
-full_mod <- paste("~", full_mod)
+   } else "No statistically significant covariates"
 
 ```
 
-```{r, new-model-recruit}
-new_mod <- MASS::stepAIC(start_model,
-              k = log(nrow(recruit_data)),
-              trace = FALSE,
-              scope = list(lower = ~1,
-                           upper = full_mod))
+```{r, eval = eval_dat}
+data <- recruit_data
+type = "recruit"
 
-summary(new_mod)$coefficients %>% 
-  signif(digits = 3) %>%
-  knitr::kable(format.args = list(scientific = FALSE,
-                                  drop0trailing = TRUE))
+if(nrow(data) > 0) {
+  res <- knitr::knit_child(system.file("correlation_bookdown_template/_summary-child-doc.Rmd", package = "NEesp"),
+                           quiet = TRUE
+  )
+  cat(res, sep = "\n")
+} else "No statistically significant covariates after Bonferroni correction"
 ```
-
-```{r}
-all_coefs <- colnames(recruit_data)[6:ncol(recruit_data)] 
-mod_coefs <- rownames(summary(new_mod)$coefficients)[-1]
-
-if(length(all_coefs) == length(mod_coefs)){
-  dropped_coefs <- "none"
-} else {
-
-  dropped_coefs <- all_coefs[(all_coefs %in% mod_coefs) == FALSE]
-  
-  if(length(dropped_coefs) > 1) {
-    dropped_coefs <- paste(collapse = ",")
-    print(dropped_coefs)
-  }
-}
-
-```
-
-Dropped coefficients: `r dropped_coefs`
-
-
-```{r, predict-recruit}
-recruit_data$Predicted <- predict(new_mod, newdata = recruit_data) %>% exp()
-
-fig <- ggplot2::ggplot(recruit_data,
-       ggplot2::aes(x = Time,
-           y = Value))+
-  ggplot2::geom_line()+
-  ggplot2::geom_point()+
-  ggplot2::geom_line(ggplot2::aes(y = Predicted),
-            lty = 2,
-            color = "red")+
-  ggplot2::geom_point(ggplot2::aes(y = Predicted),
-               color = "red")+
-  ggplot2::ylab("Abundance")+
-  ggplot2::xlab("Year")+
-  ggplot2::theme_bw()+
-  ggplot2::scale_y_continuous(labels = scales::comma,
-                     limits = c(0, NA))
-
-print(fig)
-```
-
 
 ## Catch
 ```{r}

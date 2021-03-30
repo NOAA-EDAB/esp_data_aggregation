@@ -47,6 +47,9 @@ output <- rbind(output, correlation_summary(
   eco = test,
   lag = params$lag
 ))
+
+# count number of regressions for bonferroni correction
+bonf_n <- bonf_n + 1
 ```
 
 ```{r, eval = params$save & eval_epu}
@@ -106,10 +109,10 @@ NEesp::correlation_data(
 print("No data for the EPU selected")
 ```
 
-#### Regression data
 ```{r, eval = eval_epu}
+#### Regression data
 this_recruit <- data %>%
-  dplyr::filter(stringr::str_detect(facet, "Recruit"),
+  dplyr::filter(Metric == "Recruitment",
                 sig == TRUE) %>%
   dplyr::select(Species, Region, Time, Value, Metric, Var, Val, pval)
 
@@ -118,7 +121,7 @@ if(nrow(this_recruit) > 0){
 }
 
 this_abun <- data %>%
-  dplyr::filter(stringr::str_detect(facet, "Abundance"),
+  dplyr::filter(Metric == "Abundance",
                 sig == TRUE) %>%
   dplyr::select(Species, Region, Time, Value, Metric, Var, Val, pval)
 
