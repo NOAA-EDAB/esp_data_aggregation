@@ -63,8 +63,9 @@ if(eval_dat){
   stringr::str_replace_all("/", "_") %>%
   stringr::str_replace_all("[:^:]", "_") %>%
   stringr::str_replace_all("\n", "_") %>%
-    stringr::str_replace_all("\\(", "") %>%
-    stringr::str_replace_all("\\)", "") 
+    stringr::str_remove_all("\\(") %>%
+    stringr::str_remove_all("\\)") %>%
+    stringr::str_remove_all(",")
   ) %>%
   dplyr::filter(pval < bonf_p,
                 Var != "Time") %>%
@@ -114,8 +115,9 @@ if(eval_dat){
   stringr::str_replace_all("/", "_") %>%
   stringr::str_replace_all("[:^:]", "_") %>%
   stringr::str_replace_all("\n", "_") %>%
-    stringr::str_replace_all("\\(", "") %>%
-    stringr::str_replace_all("\\)", "") 
+    stringr::str_remove_all("\\(") %>%
+    stringr::str_remove_all("\\)") %>%
+    stringr::str_remove_all(",")
   ) %>%
   dplyr::filter(pval < bonf_p,
                 Var != "Time") %>%
