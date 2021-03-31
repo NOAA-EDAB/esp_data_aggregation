@@ -43,7 +43,8 @@ knitr::opts_chunk$set(
   fig.width = 8,
   fig.align = "center",
   fig.path = params$path,
-  dev = "png"
+  dev = "png",
+  knitr.duplicate.label = "allow"
 )
 ```
 
