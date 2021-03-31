@@ -7,19 +7,19 @@ rmd_files: [
 "geography.Rmd",
 "temperature.Rmd",
 "salinity.Rmd",
-"depth.Rmd",
+"fxn-depth.Rmd",
 "habitat-vulnerability.Rmd", 
 "biological-title-page.Rmd", #Title page 
 "length.Rmd",
-"von_b.Rmd",
-"length50maturity.Rmd",
+"fxn-von_b.Rmd",
+"fxn-length50maturity.Rmd",
 "condition.Rmd", "diet.Rmd", 
 "population-title-page.Rmd", #Title page 
 "abundance.Rmd",
 "biomass.Rmd", 
 "bbmsy.Rmd",
 "recruitment.Rmd",
-"age-diversity.Rmd",
+"fxn-age-diversity.Rmd",
 "climate-vulnerability.Rmd", 
 "socio-economic-title-page.Rmd", #Title page 
 "catch.Rmd",
