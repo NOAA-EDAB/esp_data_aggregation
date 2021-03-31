@@ -6,7 +6,7 @@
 # run a report using package data and package template
 NEesp::render_ind_report("Black sea bass")
 
-# run a report using package data and local template (from "indicator_bookdown_template-dev" folder)
+# run a report using package data and local template (from "bookdown" folder)
 
 ## source new functions if needed
 
@@ -17,6 +17,10 @@ source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
 
 NEesp::render_ind_report("Black sea bass", 
                          input = here::here("bookdown"),
+                        # config = "_bookdown-abby.yml", # render with abby files
+                         config = "_bookdown-ricky.yml", # render with ricky files
+                        # if there is a file called `_bookdown.yml`, it will be used as the config file!
+                        # no matter what you set for `config = ` !!!
                          params_to_use = list(
                            species_ID = "Black sea bass",
                            ricky_survey_data = NEesp::bio_survey,

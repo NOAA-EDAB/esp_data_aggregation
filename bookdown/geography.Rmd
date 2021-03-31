@@ -20,7 +20,7 @@ NEesp::map_strata(
 The density of observations for `r params$species` was visualized using two-dimensional kernel density estimation on a grid as documented in `MASS::kde2d`. This density estimation is then visualized to indicate areas of greater or lesser probability of occurrence.
 
 
-```{r geo-conc-data-wrangling}
+```{r geo-conc-data-wrangling-a}
 survdata.w.codes <- NEesp::bio_survey %>%
   dplyr::mutate(SVSPP = SVSPP %>% as.numeric()) %>%
   dplyr::left_join(NEesp::species_key, by = "SVSPP")
@@ -77,7 +77,7 @@ if (nrow(selected.surv) > 3) {
 The unweighted centroid is one metric that describes the geometric center of the observed range of `r params$species` in a given year. Calculated as the mean of latitude and longitude of all survey tows that captured the species of interest.
 
 
-```{r, centroid-plot, fig.cap = paste(species, "centroid over time")}
+```{r, centroid-plot-a, fig.cap = paste(species, "centroid over time")}
 if(nrow(selected.surv) > 3) {
   selected.surv.centroid <- selected.surv %>%
     dplyr::group_by(YEAR) %>%
