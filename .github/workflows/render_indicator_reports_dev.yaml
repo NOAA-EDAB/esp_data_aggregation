@@ -2,7 +2,7 @@
 on:
   workflow_dispatch:
 
-name: Indicator Reports (development - abby branch)
+name: Indicator Reports (development)
 
 jobs: 
   build1:
