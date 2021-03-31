@@ -54,6 +54,7 @@ output <- c()
 
 recruit_data <- c()
 abun_data <- c()
+eval_dat <- FALSE # will be overwritten if data exists
 
 bonf_n <- 0
 ```
@@ -94,9 +95,13 @@ These are preliminary regressions that compare `r params$region` `r params$stock
 ```{r, fail_message, eval = nrow(stock) == 0}
 ```
 
+
+```{r, stop-knit, eval = nrow(stock) == 0}
+print("Report generation aborted!")
+knitr::knit_exit()
+```
+
 # Regression analysis
 
 All regressions are simple linear correlations assessed at the p < 0.5 level. Please note, due to the large number of indicators tested, a certain amount of statistically significant results are expected even if there are no underlying mechanistic connections. These correlations do not necessarily imply causation.
 
-```{r, fail_message, eval = nrow(stock) == 0}
-```

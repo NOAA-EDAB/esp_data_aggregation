@@ -52,7 +52,7 @@ bonf_p <- 0.05/bonf_n
 ```
 
 ```{r, wrangle-abun}
-eval_dat <- (class(recruit_data) != "NULL")
+eval_dat <- (class(abun_data) != "NULL")
 
 if(eval_dat){
   
@@ -76,7 +76,7 @@ if(eval_dat){
 
 ```{r, eval = eval_dat}
 data <- abun_data
-type = "abundance"
+type <- "abundance"
 
 if(nrow(data) > 0) {
   res <- knitr::knit_child(system.file("correlation_bookdown_template/_summary-child-doc.Rmd", package = "NEesp"),
@@ -128,7 +128,7 @@ if(eval_dat){
 
 ```{r, eval = eval_dat}
 data <- recruit_data
-type = "recruit"
+type <- "recruit"
 
 if(nrow(data) > 0) {
   res <- knitr::knit_child(system.file("correlation_bookdown_template/_summary-child-doc.Rmd", package = "NEesp"),
