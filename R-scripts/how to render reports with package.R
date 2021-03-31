@@ -11,11 +11,12 @@ NEesp::render_ind_report("Black sea bass")
 ## source new functions if needed
 
 `%>%` <- magrittr::`%>%`
+`.pt` <- ggplot2::`.pt`
 source(here::here("R-scripts/package-dev", "life_history_functions.R"))
 source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
 
 NEesp::render_ind_report("Black sea bass", 
-                         input = here::here("indicator_bookdown_template-dev"),
+                         input = here::here("bookdown"),
                          params_to_use = list(
                            species_ID = "Black sea bass",
                            ricky_survey_data = NEesp::bio_survey,

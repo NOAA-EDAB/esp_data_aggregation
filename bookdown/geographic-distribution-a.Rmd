@@ -2,7 +2,8 @@
 
 Ricky Tabandera
 
-```{r geography_setup, include=FALSE}
+```{r geography_setup, include=FALSE, eval = FALSE}
+# avoid using `library()` in a package
 knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(tidyverse))
 library(dbutils)
@@ -18,7 +19,7 @@ Using fisheries independant data from bottom trawls in `survdat`. Several metric
 ```{r geo_conc data wrangling }
 source(here::here("R","common_names_survdat.r"))
 
-survdata.w.codes<-Common_names_survdat(here::here("data","survdat_03022021_B.RDS"))
+survdata.w.codes<-Common_names_survdat(NEesp::bio_survey)
 
 
 selected.surv<-survdata.w.codes %>%
@@ -41,7 +42,8 @@ selected.surv.centroid<-selected.surv %>% dplyr::group_by(YEAR) %>% dplyr::summa
 
 
 #### Density and distribution estimation by season
-```{r, density_plot_setup_spring}
+```{r, density-plot-setup-spring}
+# underscores in chunk name mess up figure numbers (bookdown bug)
 
 selected.surv.temp<-selected.surv %>%  dplyr::filter(YEAR <1970, SEASON=="SPRING") 
 
@@ -123,7 +125,8 @@ ggplot2::ggplot(data = ecodata::coast) +
 
 
 
-```{r, density_plot_setup_fall}
+```{r, density-plot-setup-fall}
+# underscores in chunk name mess up figure numbers (bookdown bug)
 
 selected.surv.temp.f<-selected.surv %>%  dplyr::filter(YEAR <1970, SEASON=="FALL") 
 
@@ -206,13 +209,15 @@ ggplot2::ggplot(data = ecodata::coast) +
 
 The average position of observations across all years of surveys 
 
-```{r, centroid plot}
-if(nrow(selected.surv.centroid<4)){
+```{r, centroid-plot}
+# spaces in chunk name mess up figure numbers (bookdown bug)
+
+if(nrow(selected.surv.centroid)<4){
   
-latmin<-(min(selected.surv.centroid$LAT)-1)
-latmax<-(max(selected.surv.centroid$LAT)+1)
-lonmin<-(min(selected.surv.centroid$LON)-1)
-lonmax<-(max(selected.surv.centroid$LON)+1)
+latmin<-(min(selected.surv.centroid$lat)-1)
+latmax<-(max(selected.surv.centroid$lat)+1)
+lonmin<-(min(selected.surv.centroid$lon)-1)
+lonmax<-(max(selected.surv.centroid$lon)+1)
 
 
 ggplot2::ggplot(data = ecodata::coast ) +
