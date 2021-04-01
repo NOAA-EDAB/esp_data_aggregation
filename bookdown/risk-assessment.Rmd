@@ -37,7 +37,7 @@ ggplot2::ggplot(
   ) +
   ggplot2::theme(
     legend.position = "top",
-    strip.text.y = element_text(angle = 0)
+    strip.text.y = ggplot2::element_text(angle = 0)
   ) +
   ggplot2::xlab("Stock region") +
   ggplot2::ylab("Indicator")
