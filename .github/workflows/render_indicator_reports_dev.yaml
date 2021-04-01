@@ -52,16 +52,27 @@ jobs:
                  
       - name: Render reports
         run: |
-          Rscript -e 'fun <- function(x) {
-          NEesp::render_ind_report(x, 
-                           input = "bookdown",
-                           params_to_use = list(species_ID = x,
-                                                ricky_survey_data = NEesp::bio_survey, 
-                                                path = here::here(paste("action_reports/", x, sep = ""), "figures//"),
-                                                save = TRUE))
-                                                }
+          Rscript -e '
+          # source scripts
+          `%>%` <- magrittr::`%>%`
+          `.pt` <- ggplot2::`.pt`
+          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
+          source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
 
-          lapply(NEesp::species_key$Species, fun)'
+          # function to make reports
+          fun <- function(x) {
+            NEesp::render_ind_report(x, 
+                                     input = "bookdown",
+                                     config = "_bookdown-ricky.yml",
+                                     params_to_use = list(species_ID = x,
+                                                          ricky_survey_data = NEesp::bio_survey, 
+                                                          path = here::here(paste("action_reports/", x, sep = ""), "figures//"),
+                                                          save = TRUE),
+                                     trouble = TRUE)
+          }
+
+          # run
+          lapply(NEesp::species_key$Species[1], fun)'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@3.7.1
