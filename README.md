@@ -13,11 +13,22 @@ Here we adapt the ESP process for use in the management of Northeast stocks. Our
 2. Conduct a risk analysis of Northeast stocks to determine which stocks are most vulnerable.
 3. Create detailed reports for the most vulnerable stocks, incorporating data from the originial risk assessment as well as detailed species-specific information.
 
+## Data and analysis
+The current preliminary report pulls data from many existing sources and creates several data visualizations. Reports for all northeast stocks have been compiled and can be viewed [here](https://NOAA-EDAB.github.io/esp_data_aggregation). We have recently aggregated our data, functions, and report templates into a preliminary R package that can be viewed on the [package branch](https://github.com/NOAA-EDAB/esp_data_aggregation/tree/package). The package can be downloaded locally in R with the command `devtools::install_github("NOAA-EDAB/esp_data_aggregation@package")`. 
+
 ## Running a report
-The current preliminary report pulls data from many existing sources and creates several data visualizations. Reports for all northeast stocks have been compiled and can be viewed [here](https://NOAA-EDAB.github.io/esp_data_aggregation). We have recently aggregated our data, functions, and report templates into a preliminary R package that can be viewed on the [package branch](https://github.com/NOAA-EDAB/esp_data_aggregation/tree/package). The package can be downloaded locally in R with the command `devtools::install_github("NOAA-EDAB/esp_data_aggregation@package")`. A report can then be generated locally with the command `NEesp::render_ind_report("Acadian redfish")` (replace "Acadian redfish" with the name of species of interest). Please note, report generation will take some time (2+ minutes per species). These reports are a work in progress and should not be viewed as a final or complete product at this time. We do not guarantee that these reports are free from errors; please contact us if you notice any issues.
+
+### Running a report with code
+After downloading the `NEesp` R package, a report can be generated locally with the command `NEesp::render_ind_report("Acadian redfish")` (replace "Acadian redfish" with the name of species of interest). Please note, report generation will take some time (2+ minutes per species). 
+
+### Running a report with `R shiny`
+We have recently developed an `R shiny` app to visualize Northeast ESP data, which is bundled into the `NEespShiny` R package (on the [shiny branch](https://github.com/NOAA-EDAB/esp_data_aggregation/tree/package)). The app can be installed in R with: `remotes::install_github("NOAA-EDAB/esp_data_aggregation@shiny")`. If installation throws an error, you may have to override package installation errors from warnings with: `sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")`. Once you have installed the package, you can use the Shiny app by running: `NEespShiny::run_NEesp()`.
 
 ## Next steps
 We continue to synthesize existing data on Northeast stocks, environment, and socioeconomics. We are currently refining our data analyses and beginning the preliminary risk assessment process. 
+
+## Disclaimer
+These reports are a work in progress and should not be viewed as a final or complete product at this time. We do not guarantee that these reports are free from errors; please contact us if you notice any issues.
 
 [1]: https://meetings.npfmc.org/CommentReview/DownloadFile?p=8f5233fb-3b62-4571-9b49-8bb7ce675916.pdf&fileName=ESP_Shotwell.pdf
 
