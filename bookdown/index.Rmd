@@ -36,8 +36,6 @@ params:
 # `r params$species_ID` {-}
 
 ```{r, setup, include = FALSE}
-options(knitr.duplicate.label = "allow")
-
 knitr::opts_chunk$set(
   echo = FALSE,
   message = FALSE,
