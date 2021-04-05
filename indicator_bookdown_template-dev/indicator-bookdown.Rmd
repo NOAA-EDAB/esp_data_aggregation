@@ -1,0 +1,377 @@
+---
+title: "`r params$species_ID`"
+author: "Abigail Tyrell & Ricky Tabandera"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook:
+    split_by: section
+    fig_caption: yes
+documentclass: book
+always_allow_html: true
+github-repo: NOAA-EDAB/esp_data_aggregation
+
+language:
+  ui:
+    chapter_name: "Section "
+
+params: 
+  species_ID: "Acadian redfish" # common name of species
+
+  asmt_sum_source: "assessmentdata::stockAssessmentSummary"
+  asmt_source: "assessmentdata::stockAssessmentData"
+  survey_source: "survdat"
+  
+  ricky_survey_data: NEesp::bio_survey # ricky survey data
+  
+  save: TRUE
+
+  cache: FALSE
+  
+  path: "" # figure path
+  
+  file: "html"
+---
+
+# `r params$species_ID` {-}
+
+Placeholder
+
+
+
+<!--chapter:end:index.Rmd-->
+
+
+# Methods
+
+Placeholder
+
+
+## Stock identification
+## Data collection and presentation
+### `assessmentdata` methods
+### `survdat` methods
+## Risk assessment
+### Risk across stocks
+#### Suite of indicators
+#### Individual indicators
+### Risk within stocks
+
+<!--chapter:end:methods.Rmd-->
+
+# Habitat information
+
+<!--chapter:end:habitat-title-page.Rmd-->
+
+
+
+## Distribution
+### Map of seasonal ranges
+### Density and distribution estimation
+### Centroid of observations 
+### Latitude and longitude ranges
+
+<!--chapter:end:geography.Rmd-->
+
+
+
+## Temperature
+### Figures
+### Summary
+### Data
+
+<!--chapter:end:temperature.Rmd-->
+
+
+
+## Salinity
+### Figures
+### Summary
+### Data
+
+<!--chapter:end:salinity.Rmd-->
+
+## Depth
+
+The range of depths that a species occupies is linked to many other habitat characteristics such as benthic structure, food availability, or temperature. Thus, observed depth can signal changes in habitat suitability. Changes in this metric can indicate the required resources are changing their distribution on the landscape. Seasonal differences in occurrence can also help identify essential habitat and the timing of migration to acquire seasonal resources. 
+
+```{r, depth_data, cache = params$cache}
+data <- NEesp::bio_survey %>%
+  dplyr::mutate(SVSPP = as.numeric(SVSPP)) %>%
+  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
+  dplyr::filter(Species == species)
+```
+
+### Figures
+
+
+```{r, depth-fig, fig.cap = paste(species, "depth")}
+plot_depth(data, species = species)
+```
+
+
+```{r, depth-fig2, fig.cap = paste(species, "temperature at depth")}
+plot_temp_depth(data, species = species)
+```
+
+
+<!--chapter:end:fxn-depth.Rmd-->
+
+## Habitat vulnerability
+
+Habitat vulnerability information is sourced from the `ecodata` package. 
+
+```{r, hab_vul}
+NEesp::make_html_table(hab_data,
+                       type = params$file,
+  col_names = c(
+    "EPU", "Habitat name", "Habitat vulnerability",
+    "Importance of habitat to eggs/larvae",
+    "Importance of habitat to juveniles/YOY",
+    "Importance of habitat to adults",
+    "Importance of habitat to spawning adults",
+    "Overall species vulnerability"
+  )
+)
+```
+
+<!--chapter:end:habitat-vulnerability.Rmd-->
+
+# Biological information
+
+<!--chapter:end:biological-title-page.Rmd-->
+
+
+
+## Length
+### Overview 
+### Summary statistics 
+### Risk 
+### Summary
+### Data
+
+<!--chapter:end:length.Rmd-->
+
+## von Bertalanffy growth curve
+
+```{r data_wrangling}
+selected.surv.clean <- NEesp::bio_survey %>%
+  dplyr::mutate(SVSPP = as.numeric(SVSPP)) %>%
+  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
+  dplyr::filter(Species == species) %>% 
+  tidyr::drop_na(AGE)
+```
+
+```{r, vonb_model}
+selected.surv.vonb <- vonb_model(selected.surv.clean)
+```
+
+### Length at age growth curve
+
+The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth parameters of `Linf` (Length infinty), `K` (growth coefficient), and `t0` (size at time 0) were estimated using non-linear least square model. The starting point for model building is accomplished using `FSA::vbStarts`. Age and length data sourced from `survdat` and spans all years and survey areas. 
+
+`r if(species == "Monkfish"){"The age determination method for monkfish has not been validated, and the anatomic structure used has changed through time. In addition these stocks display a high degree of sexual dimorphisms making fitting of single growth curves unreliable.  This results a high degree of uncertainty in assessing the age structure of the stock and the effects of fishing pressure."}`
+
+
+```{r single-growth-curve, fig.cap = paste(species, "length at age growth curve")}
+plot_la(data = selected.surv.clean,
+        vonb = selected.surv.vonb,
+        species = species)
+```
+
+<!--chapter:end:fxn-von_b.Rmd-->
+
+
+
+## Length at first maturity
+### Size at first maturity 
+### Maturity classification 
+### Model results
+### L50 differences between sexes
+
+<!--chapter:end:fxn-length50maturity.Rmd-->
+
+
+
+## Condition
+### Length vs weight 
+### Condition factor: Weight-volume 
+#### Condition factor: Relative weight 
+### Data
+#### Length vs weight with weight-volume condition factor {-}
+#### Relative weight condition factor {-}
+
+<!--chapter:end:condition.Rmd-->
+
+
+
+## Diet
+### Figure
+### Summary
+### Data
+
+<!--chapter:end:diet.Rmd-->
+
+# Population information
+
+<!--chapter:end:population-title-page.Rmd-->
+
+
+
+## Abundance
+### Survey abundance (raw measurements)
+#### Risk {-}
+### Survey abundance (swept area estimates)
+### Assessment abundance
+#### Risk {-}
+### Survey summary
+### Data
+#### Survey data (raw measurements) {-}
+#### Survey data (swept area estimates) {-}
+#### Assessment data {-}
+
+<!--chapter:end:abundance.Rmd-->
+
+
+
+## Biomass
+### Survey biomass (raw measurements)
+#### Risk {-}
+### Survey biomass (swept area estimates)
+### Assessment biomass
+#### Risk {-}
+### Survey summary
+### Data
+#### Survey data (raw measurements) {-}
+#### Survey data (swept area estimates) {-}
+#### Assessment data {-}
+
+<!--chapter:end:biomass.Rmd-->
+
+
+
+## B/Bmsy 
+### Figure
+#### Risk {-}
+### Data
+
+<!--chapter:end:bbmsy.Rmd-->
+
+
+
+## Recruitment
+### Figure
+#### Risk {-}
+### Data
+
+<!--chapter:end:recruitment.Rmd-->
+
+
+
+## Age diversity
+### Age diversity 
+### Density plots of age 
+
+<!--chapter:end:fxn-age-diversity.Rmd-->
+
+
+
+## Climate vulnerability
+### Figures
+### Data
+
+<!--chapter:end:climate-vulnerability.Rmd-->
+
+# Socio-economic information
+
+<!--chapter:end:socio-economic-title-page.Rmd-->
+
+
+
+## Catch
+### Stock assessment catch
+#### Risk {-}
+### Recreational catch
+#### Risk {-}
+### Commercial catch
+#### Risk {-}
+### Commercial vs recreational catch
+### Data
+#### Stock assessment catch
+#### Recreational catch
+#### Commercial catch
+#### Commercial vs recreational catch
+#### Commercial, recreational, and stock assessment catch
+
+<!--chapter:end:catch.Rmd-->
+
+
+
+## F/Fmsy 
+### Figure
+#### Risk {-}
+### Data
+
+<!--chapter:end:ffmsy.Rmd-->
+
+
+
+## Revenue 
+### Figure
+#### Risk {-}
+### Data
+
+<!--chapter:end:revenue.Rmd-->
+
+# Management information
+
+```{r, management_data, cache = params$cache}
+ad_rating_data <- asmt_sum_data %>%
+  dplyr::select(
+    Species, Region, `Assessment Year`, `Last Data Year`,
+    `Biological Input Data`, `Life History Data`,
+    `Composition Input Data`, `Ecosystem Linkage`, `FSSI Stock?`,
+    `Review Result`
+  ) %>%
+  dplyr::rename(
+    `Biological Data Rating (2019)` = `Biological Input Data`,
+    `Biological Data Rating (before 2019)` = `Life History Data`,
+    `Size Data Rating` = `Composition Input Data`,
+    `Ecosystem Linkage Data Rating` = `Ecosystem Linkage`,
+    `FSSI status` = `FSSI Stock?`
+  )
+```
+
+## Stock assessment and data quality information
+Stock assessment and data quality information were pulled from ``r params$asmt_sum_source``.
+```{r, quality}
+data <- ad_rating_data %>%
+  dplyr::filter(Species == species) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, type = params$file)
+```
+
+<!--chapter:end:management.Rmd-->
+
+
+# Risk assessment
+
+Placeholder
+
+
+## Figures
+### Relative to all other stocks
+#### Comprehensive risk assessment {-}
+#### Normalized rank of magnitude of change compared to historical value by year {-}
+#### Normalized rank of value in each year {-}
+### Within a single stock
+## Data
+### Relative to all other stocks
+#### Comprehensive risk assessment {-}
+#### Normalized rank of magnitude of change compared to historical value by year {-}
+#### Normalized rank of value in each year {-}
+### Value within each stock, ranked by year 
+
+<!--chapter:end:risk-assessment.Rmd-->
+

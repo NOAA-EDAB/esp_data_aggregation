@@ -16,19 +16,18 @@ library(FSA)
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
 
 #survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
-survdata <- bio_survey
+source(here::here("R", "common_names_survdat.r"))
 
-survdata <- survdata %>% mutate(SVSPP = as.numeric(SVSPP))
-stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
-stock_list_all_strata <- stock_list_all_strata %>% rename(SVSPP = svspp)
-stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
+survdata.w.codes <- common_names_survdat("bio")
 
-survdata.w.codes <- inner_join(survdata, stock_list, by = "SVSPP")
+# selected.surv <- survdata.w.codes %>%
+#   stringr::str_to_sentence()) %>%
+#   dplyr::filter(common_name == species)
+
 
 selected.surv <- survdata.w.codes %>%
-  dplyr::mutate(common_name = common_name %>%
-    stringr::str_to_sentence()) %>%
-  dplyr::filter(common_name == species)
+  dplyr::filter(common_name == "Scup")
+
 
 # only take records with age associated
 selected.surv.clean <- selected.surv %>% drop_na(AGE)
@@ -80,11 +79,11 @@ if (nrow(selected.surv.clean) > 0) {
       colors = nmfspalette::nmfs_palette("regional web")(4),
       name = "Year"
     ) +
-    xlim(0, (1.5 * max(selected.surv.clean$AGE))) +
-    ylim(0, (1.5 * max(selected.surv.clean$LENGTH, na.rm = TRUE))) +
+    xlim(0, (1.2 * max(selected.surv.clean$AGE))) +
+    ylim(0, (1.2 * max(selected.surv.clean$LENGTH, na.rm = TRUE))) +
     xlab("Age (jittered)") +
     ylab(" Total length (cm) (jittered)") +
-    ggtitle(species, subtitle = "Length at age") +
+    #ggtitle(species, subtitle = "Length at age") +
     theme_minimal()
 
   if (nrow(selected.surv.vonb) > 0) {
@@ -101,8 +100,75 @@ if (nrow(selected.surv.clean) > 0) {
       )
   }
 
-  return(fig)
+  print(fig)
 } else {
   print("NO DATA")
 }
 ```
+
+
+
+
+```{r, growth_diff_testing}
+# testing a Common L∞ and t0 Model.
+selected.surv.vonb
+
+if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
+  # define the type of von b model
+  vb <- vbFuns(param = "Typical")
+  # define starting parameters based on the avalible data
+  f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "Walford")
+
+  # fit a non-linear least squares model based on the data and starting values
+  f.fit <- nls(LENGTH ~ vb(AGE, Linf, K, t0), data = selected.surv.clean, start = f.starts)
+  # store the fit parameters for later investigation
+  f.fit.summary <- summary(f.fit, correlation = TRUE)
+
+  # define the range of age values that will be used to generate points from the fitted model
+  # roughly by 0.2 year steps
+  newages.int <- data.frame(AGE = seq(0, 50))
+  # predict(f.fit,newdata=newages) this funtion uses the model from f.fit to generate new lengths
+  # make a dataset with the values from the model
+  selected.surv.vonb.int <- data.frame(AGE = seq(0, 50), LENGTH = predict(f.fit, newdata = newages))
+  #name the predicted length col to avoid conflicts later
+  selected.surv.vonb.int<-selected.surv.vonb.int %>% rename("LENGTH_predicted"="LENGTH")
+  #join with original data set
+  selected.surv.w.predicted <-left_join(selected.surv.clean,selected.surv.vonb.int, by="AGE" )
+  #calculate residuals of predicted length and actual length
+  selected.surv.w.predicted<-selected.surv.w.predicted %>% mutate("vonB.residual"=(LENGTH-LENGTH_predicted))
+  #standardize growth
+  selected.surv.w.predicted<-selected.surv.w.predicted %>% mutate("residual.standardized"=(vonB.residual/LENGTH_predicted))
+  
+} else {
+  print("NOT ENOUGH DATA TO test differences")
+}
+
+
+
+```
+
+```{r}
+selected.surv.w.predicted %>% ggplot(aes(x=LENGTH_predicted ,y=residual.standardized, color= SEX))+geom_point()
+
+ svvbgf3.1 <- svlenage %>%   
+    dplyr::group_by(species, era) %>%
+    group_map(~try(nls(length~vb1(avgage, Linf, K, t0), data = .,
+                  start = vbStarts(length~avgage,data = .,methLinf="oldAge"))))
+
+
+
+
+```
+
+```{r}
+
+x<-40
+
+try(x==19)
+
+
+
+
+
+```
+
