@@ -14,9 +14,9 @@ plot_temp_anom <- function(data){
                                         y = Value))+
       ggplot2::geom_point(cex = 2) +
       ggplot2::geom_line() +
-      ecodata::geom_gls()+
       ggplot2::facet_grid(rows = ggplot2::vars(ESP),
                           cols = ggplot2::vars(Var)) +
+      ecodata::geom_gls()+
       ggplot2::theme_bw() +
       ggplot2::xlab("Year") +
       ggplot2::ylab("Temperature Anomaly (degrees C)")
