@@ -111,7 +111,8 @@ ecodat_tanom <- ecodata::ESP_seasonal_oisst_anom %>%
   dplyr::mutate(Pattern_check = ESP %>%
                   stringr::str_replace_all("_", " ") %>%
                   stringr::str_to_sentence()) %>%
-  dplyr::filter(stringr::str_detect(Pattern_check, species))
+  dplyr::filter(stringr::str_detect(Pattern_check, species))  %>%
+  dplyr::distinct()
 ```
 
 ```{r, save_data, eval = params$save}
