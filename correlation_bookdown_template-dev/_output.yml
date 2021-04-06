@@ -1,0 +1,12 @@
+bookdown::gitbook:
+  css: style.css
+  split_by: section
+  fig_caption: yes
+  config:
+    toc:
+      before: |
+        <li><a href="https://noaa-edab.github.io/esp_data_aggregation/docs/">Back to main table of contents</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+   
+
