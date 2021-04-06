@@ -1,9 +1,0 @@
-bookdown::gitbook:
-   css: style.css
-   config:
-      toc:
-         collapse: section
-         before: <li><a href='https://noaa-edab.github.io/esp_data_aggregation/docs/'>Back to main TOC</a></li>
-         after:
-   split_by: section
-   fig_caption: no
