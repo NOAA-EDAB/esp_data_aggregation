@@ -20,7 +20,8 @@ jobs:
         shell: bash
 
       - name: Install command line packages
-        run: |        
+        run: |       
+	  sudo apt update 
           sudo apt-get install  libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
         shell: bash
         
