@@ -1,0 +1,53 @@
+## Length
+
+Length data were pulled from ``r params$survey_source``. Only years with more than 10 fish lengths were considered for analysis. 
+
+### Overview 
+
+
+```{r, length-freq, fig.cap = paste(species, "length frequency distribution")}
+NEesp::plot_len_hist(survey_data)
+```
+
+
+### Summary statistics 
+Separate `geom_gls()` functions were fit for the minimum, mean, and maximum lengths; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than three trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+
+
+```{r, length, fig.cap = paste(species, "length")}
+NEesp::generate_len_plot(survey_data)
+```
+
+
+### Risk 
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c(
+  "max_length_spring",
+  "max_length_fall",
+  "avg_length_spring",
+  "avg_length_fall"
+)
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Summary
+```{r, length_summary}
+NEesp::generate_len_table(survey_data)
+```
+
+### Data
+```{r, length_data}
+data <- NEesp::get_len_data2(survey_data) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
+  "Year", "Season", "Region", "Number of fish",
+  "Mean length", "Minimum length", "Maximum length"
+))
+```

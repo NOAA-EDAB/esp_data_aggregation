@@ -1,0 +1,90 @@
+## Temperature
+
+Surface and bottom temperature data were pulled from ``r params$survey_source``. 
+
+### Figures
+
+Separate geom_gls() functions were fit for fall and spring measurements; trend lines are only shown when the trend was statistically significant, so some plots may have fewer than two trend lines. Fall has solid trend lines, and spring has dashed trend lines. Please note, sometimes the survey observed a small number of fish outside of the defined stock area.
+
+#### Survey data {-}
+
+
+```{r, s-temp, fig.cap = paste(species, "surface temperature")}
+NEesp::generate_plot(survey_data,
+  variable = "SURFTEMP",
+  ytitle = "Surface temperature"
+)
+```
+
+
+```{r, b-temp, fig.cap = paste(species, "bottom temperature")}
+NEesp::generate_plot(survey_data,
+  variable = "BOTTEMP",
+  ytitle = "Bottom temperature"
+)
+```
+
+
+#### Average temperature anomaly over time in stock region {-}
+```{r, stock-temp, fig.cap = paste(species, "temperature anomalies")}
+plot_temp_anom(ecodat_tanom)
+```
+
+
+### Summary
+```{r, temp_summary}
+NEesp::generate_table(survey_data,
+                      type = params$file,
+  variable = "SURFTEMP",
+  cap = "Surface temperature"
+)
+
+NEesp::generate_table(survey_data,
+                      type = params$file,
+  variable = "BOTTEMP",
+  cap = "Bottom temperature"
+)
+```
+
+### Data
+
+#### Survey data {-}
+```{r, temp_data}
+data <- survey_data %>%
+  dplyr::select(
+    YEAR, SEASON, Region, date,
+    fish_id, SURFTEMP, BOTTEMP
+  ) %>%
+  dplyr::filter(SURFTEMP > 0 | BOTTEMP > 0) %>%
+  dplyr::group_by(YEAR, SEASON, Region, date, fish_id) %>%
+  dplyr::distinct() %>% # remove repeated row info
+  dplyr::summarise(
+    day_mean_surf = mean(SURFTEMP),
+    day_mean_bot = mean(BOTTEMP)
+  ) %>% # mean by day
+  dplyr::ungroup() %>%
+  dplyr::group_by(YEAR, SEASON, Region) %>%
+  dplyr::summarise(
+    Mean_surface_temperature = mean(day_mean_surf) %>%
+      round(digits = 2),
+    Mean_bottom_temperature = mean(day_mean_bot) %>%
+      round(digits = 2)
+  ) %>%
+  NEesp::character_to_factor() # mean by season-year
+
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
+  "Year", "Season", "Region",
+  "Mean surface temperature", "Mean bottom temperature"
+))
+```
+
+#### `ecodata` data {-}
+```{r, eco_data}
+ecodat_tanom %>%
+  dplyr::select(-Pattern_check) %>%
+  dplyr::mutate(Value = Value %>%
+                  round(digits = 2)) %>%
+  NEesp::make_html_table(type = params$file)
+```

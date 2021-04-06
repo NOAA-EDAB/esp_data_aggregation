@@ -1,0 +1,23 @@
+## Depth
+
+The range of depths that a species occupies is linked to many other habitat characteristics such as benthic structure, food availability, or temperature. Thus, observed depth can signal changes in habitat suitability. Changes in this metric can indicate the required resources are changing their distribution on the landscape. Seasonal differences in occurrence can also help identify essential habitat and the timing of migration to acquire seasonal resources. 
+
+```{r, depth_data, cache = params$cache}
+data <- NEesp::bio_survey %>%
+  dplyr::mutate(SVSPP = as.numeric(SVSPP)) %>%
+  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
+  dplyr::filter(Species == species)
+```
+
+### Figures
+
+
+```{r, depth-fig, fig.cap = paste(species, "depth")}
+plot_depth(data, species = species)
+```
+
+
+```{r, depth-fig2, fig.cap = paste(species, "temperature at depth")}
+plot_temp_depth(data, species = species)
+```
+
