@@ -1,7 +1,7 @@
 ## Physical indicators
 
 ### Cold pool index
-```{r, cold_pool}
+```{r, cold-pool}
 test <- ecodata::cold_pool
 NEesp::render_indicator(test, lab = names[1])
 ```
@@ -31,7 +31,7 @@ NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Sea surface temperature anomaly
-```{r, sst_anom}
+```{r, sst-anom}
 test <- ecodata::seasonal_oisst_anom
 NEesp::render_indicator(test, lab = names[1])
 ```
@@ -43,14 +43,14 @@ NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Winter wind speed
-```{r, winter_wind}
+```{r, winter-wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("winter"))
 NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Spring wind speed
-```{r, spring_wind}
+```{r, spring-wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("spring"))
 NEesp::render_indicator(test, lab = names[1])
