@@ -80,7 +80,7 @@ if(length(all_coefs) == length(mod_coefs)){
 Dropped coefficients: `r dropped_coefs`
 
 
-```{r}
+```{r, {{label}}-fig}
 data$Predicted <- predict(new_mod, newdata = data) %>% exp()
 
 fig <- ggplot2::ggplot(data,

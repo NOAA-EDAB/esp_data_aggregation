@@ -1,29 +1,29 @@
 ## Trophic indicators
 
 ### Spring zooplankton abundance by species
-```{r, zoo_oi_spring}
+```{r, zoo-oi-spring}
 test <- ecodata::zoo_oi %>%
   dplyr::filter(
     Var %>% stringr::str_detect("SD") == FALSE,
     Var %>% stringr::str_detect("spring")
   )
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Fall zooplankton abundance by species
-```{r, zoo_oi_fall}
+```{r, zoo-oi-fall}
 test <- ecodata::zoo_oi %>%
   dplyr::filter(
     Var %>% stringr::str_detect("SD") == FALSE,
     Var %>% stringr::str_detect("fall")
   )
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Zooplankton abundance by group
-```{r, zoo_strat_abun}
+```{r, zoo-strat-abun}
 test <- ecodata::zoo_strat_abun
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Abundance of Calanus CV and adults
@@ -39,41 +39,41 @@ test <- ecodata::calanus_stage %>%
   dplyr::select(Time, Val, EPU, season) %>%
   dplyr::distinct() %>%
   dplyr::mutate(Var = paste("Calanus CV and adult", season))
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Zooplankton abundance anomaly
-```{r, zoo_abund}
+```{r, zoo-abund}
 test <- ecodata::zoo_abund
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Zooplankton diversity index
-```{r, zoo_diversity}
+```{r, zoo-diversity}
 test <- ecodata::zoo_diversity
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Small/large copepod anomaly
-```{r, zoo_sli_anom}
+```{r, zoo-sli-anom}
 test <- ecodata::zoo_sli_anom
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Ichthyoplankton diversity
 ```{r, ich}
 test <- ecodata::ichthyo_diversity
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Forage fish abundance
 ```{r, forage}
 test <- ecodata::forage_anomaly
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
 
 ### Species distribution
-```{r, species_dist}
+```{r, species-dist}
 test <- ecodata::species_dist
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```

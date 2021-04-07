@@ -48,4 +48,5 @@ NEesp::render_reg_report(stock_var = "Black sea bass",
                          remove_var = FALSE,
                          lag_var = 0,
                          parent_folder = "zero_lag",
-                         input = here::here("correlation_bookdown_template-dev"))
+                         input = here::here("correlation_bookdown_template-dev"),
+                         trouble = TRUE)

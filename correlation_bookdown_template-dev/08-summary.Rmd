@@ -79,8 +79,12 @@ data <- abun_data
 type <- "abundance"
 
 if(nrow(data) > 0) {
-  res <- knitr::knit_child(system.file("correlation_bookdown_template/_summary-child-doc.Rmd", package = "NEesp"),
-                           quiet = TRUE
+  res <- knitr::knit_child(
+    text = knitr::knit_expand(
+      system.file("correlation_bookdown_template/_general-child-doc.Rmd", package = "NEesp"),
+      label = "abundance-model"
+      ),
+  quiet = TRUE
   )
   cat(res, sep = "\n")
 } else "No statistically significant covariates after Bonferroni correction"
@@ -131,8 +135,12 @@ data <- recruit_data
 type <- "recruit"
 
 if(nrow(data) > 0) {
-  res <- knitr::knit_child(system.file("correlation_bookdown_template/_summary-child-doc.Rmd", package = "NEesp"),
-                           quiet = TRUE
+  res <- knitr::knit_child(
+    text = knitr::knit_expand(
+      system.file("correlation_bookdown_template/_general-child-doc.Rmd", package = "NEesp"),
+      label = "recruitment-model"
+      ),
+  quiet = TRUE
   )
   cat(res, sep = "\n")
 } else "No statistically significant covariates after Bonferroni correction"

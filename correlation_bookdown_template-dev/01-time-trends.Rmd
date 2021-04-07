@@ -7,5 +7,6 @@ test <- stock %>%
   ) %>%
   dplyr::select(Time, Val, Var) %>%
   dplyr::distinct()
-NEesp::render_indicator(test)
+NEesp::render_indicator(test, lab = names[1])
 ```
+

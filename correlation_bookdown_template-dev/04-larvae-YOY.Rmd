@@ -9,7 +9,7 @@ test <- stock %>%
     Val = Value
   )
 if (nrow(test) > params$lag) {
-  NEesp::render_indicator(test)
+  NEesp::render_indicator(test, lab = names[1])
 } else {
   names <- names[-1]
   print("No data")
