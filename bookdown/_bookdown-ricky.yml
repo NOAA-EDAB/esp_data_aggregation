@@ -4,22 +4,23 @@ rmd_files: [
 "index.Rmd",
 "methods.Rmd", 
 "habitat-title-page.Rmd", #Title page
-"geography.Rmd",
+"latlong.Rmd",
+"geographic-distribution-a.Rmd",
 "temperature.Rmd",
 "salinity.Rmd",
-"fxn-depth.Rmd",
+"depth.Rmd",
 "habitat-vulnerability.Rmd", 
 "biological-title-page.Rmd", #Title page 
 "length.Rmd",
-"fxn-von_b.Rmd",
-"fxn-length50maturity.Rmd",
+"von_b.Rmd",
+"length50maturity.Rmd",
 "condition.Rmd", "diet.Rmd", 
 "population-title-page.Rmd", #Title page 
 "abundance.Rmd",
 "biomass.Rmd", 
 "bbmsy.Rmd",
 "recruitment.Rmd",
-"fxn-age-diversity.Rmd",
+"age-diversity.Rmd",
 "climate-vulnerability.Rmd", 
 "socio-economic-title-page.Rmd", #Title page 
 "catch.Rmd",

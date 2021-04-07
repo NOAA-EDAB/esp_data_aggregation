@@ -47,6 +47,9 @@ output <- rbind(output, correlation_summary(
   eco = test,
   lag = params$lag
 ))
+
+# count number of regressions for bonferroni correction
+bonf_n <- bonf_n + 1
 ```
 
 ```{r, eval = params$save & eval_epu}
@@ -63,7 +66,16 @@ if (nrow(data) > 0) {
     ".csv",
     sep = "_"
   ) %>%
-    stringr::str_replace_all("/", "-")
+    stringr::str_replace_all("/", "-") %>%
+    stringr::str_replace_all("Georges Bank", "GB") %>%
+    stringr::str_replace_all("Gulf of Maine", "GOM") %>%
+    stringr::str_replace_all("Northern", "N") %>%
+    stringr::str_replace_all("Southern", "S") %>%
+    stringr::str_replace_all("Northwestern", "NW") %>%
+    stringr::str_replace_all(" - ", "-") %>%
+    stringr::str_replace_all("_.csv", ".csv") %>%
+    stringr::str_replace_all(" ", "_")
+  
   write.csv(data, paste("data/", file_name, sep = ""))
 }
 ```
@@ -97,10 +109,10 @@ NEesp::correlation_data(
 print("No data for the EPU selected")
 ```
 
-#### Regression data
 ```{r, eval = eval_epu}
+#### Regression data
 this_recruit <- data %>%
-  dplyr::filter(stringr::str_detect(facet, "Recruit"),
+  dplyr::filter(Metric == "Recruitment",
                 sig == TRUE) %>%
   dplyr::select(Species, Region, Time, Value, Metric, Var, Val, pval)
 
@@ -109,7 +121,7 @@ if(nrow(this_recruit) > 0){
 }
 
 this_abun <- data %>%
-  dplyr::filter(stringr::str_detect(facet, "Abundance"),
+  dplyr::filter(Metric == "Abundance",
                 sig == TRUE) %>%
   dplyr::select(Species, Region, Time, Value, Metric, Var, Val, pval)
 
