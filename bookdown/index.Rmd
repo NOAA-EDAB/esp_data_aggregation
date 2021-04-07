@@ -3,10 +3,6 @@ title: "`r params$species_ID`"
 author: "Abigail Tyrell & Ricky Tabandera"
 date: "`r format(Sys.time(), '%d %b %Y')`"
 site: bookdown::bookdown_site
-output: 
-  bookdown::gitbook:
-    split_by: section
-    fig_caption: yes
 documentclass: book
 always_allow_html: true
 github-repo: NOAA-EDAB/esp_data_aggregation
@@ -111,7 +107,8 @@ ecodat_tanom <- ecodata::ESP_seasonal_oisst_anom %>%
   dplyr::mutate(Pattern_check = ESP %>%
                   stringr::str_replace_all("_", " ") %>%
                   stringr::str_to_sentence()) %>%
-  dplyr::filter(stringr::str_detect(Pattern_check, species))
+  dplyr::filter(stringr::str_detect(Pattern_check, species))  %>%
+  dplyr::distinct()
 ```
 
 ```{r, save_data, eval = params$save}

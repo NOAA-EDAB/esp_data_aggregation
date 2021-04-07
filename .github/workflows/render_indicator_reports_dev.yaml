@@ -68,8 +68,9 @@ jobs:
                                      params_to_use = list(species_ID = x,
                                                           ricky_survey_data = NEesp::bio_survey, 
                                                           path = here::here(paste("action_reports/", x, sep = ""), "figures//"),
-                                                          save = TRUE),
-                                     trouble = TRUE)
+                                                          save = TRUE)#,
+                                     #trouble = TRUE
+                                     )
           }
 
           # run

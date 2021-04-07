@@ -79,20 +79,20 @@ Stock region: `r params$region`
 
 EPU: `r params$epu`
 
-```{r, fail_message, eval = nrow(stock) == 0}
+```{r, fail-message, eval = nrow(stock) == 0}
 print("Warning! There are no data on this stock under the conditions selected.")
 ```
 
 ```{r, chunks}
 names <- knitr::all_labels()
-names <- names[-c(1:4)]
+names <- names[-c(1:5)]
 ```
 
 # Introduction
 
 These are preliminary regressions that compare `r params$region` `r params$stock` catch, abundance, recruitment, and F to various indicators in the `r paste(params$epu, collapse = ", ")` Environmental Protection Units (EPUs) taken from the `ecodata` package. The indicators are lagged by `r params$lag` years.
 
-```{r, fail_message, eval = nrow(stock) == 0}
+```{r, fail-message, eval = nrow(stock) == 0}
 ```
 
 
