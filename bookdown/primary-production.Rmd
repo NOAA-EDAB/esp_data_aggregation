@@ -1,0 +1,7 @@
+## Primary production
+
+Chlorophyll-a and primary production were sourced from the `ecodata` package.
+
+### Figures
+
+### Data
