@@ -24,10 +24,18 @@ plot_ecodata(data = pp_data,
 
 #### Chlorophyll {-}
 ```{r}
+chl_data <- chl_data %>%
+  dplyr::mutate(Value = round(Value, digits = 2)) %>%
+  dplyr::select(-Pattern_check)
+
 NEesp::make_html_table(chl_data)
 ```
 
 #### Primary production {-}
 ```{r}
+pp_data <- pp_data %>%
+  dplyr::mutate(Value = round(Value, digits = 2)) %>%
+  dplyr::select(-Pattern_check)
+
 NEesp::make_html_table(pp_data)
 ```

@@ -25,9 +25,9 @@ NEesp::generate_plot(survey_data,
 ```
 
 
-#### Average temperature anomaly over time in stock region {-}
+#### Temperature anomaly in stock region {-}
 ```{r, stock-temp, fig.cap = paste(species, "temperature anomalies")}
-plot_temp_anom(ecodat_tanom)
+plot_ecodata(ecodat_tanom)
 ```
 
 

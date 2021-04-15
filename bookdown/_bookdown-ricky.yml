@@ -14,7 +14,10 @@ rmd_files: [
 "length.Rmd",
 "von_b.Rmd",
 "length50maturity.Rmd",
-"condition.Rmd", "diet.Rmd", 
+"condition.Rmd", 
+"trophic-title-page.Rmd", # Title page
+"primary-production.Rmd",
+"diet.Rmd", 
 "population-title-page.Rmd", #Title page 
 "abundance.Rmd",
 "biomass.Rmd", 

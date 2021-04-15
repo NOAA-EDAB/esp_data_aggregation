@@ -257,8 +257,8 @@ plot_age_density <- function(data){
         limits = c(0, (max(data$AGE, na.rm = TRUE))),
         breaks = seq(0, max(data$AGE, na.rm = TRUE), by = 5)
       )+
-      xlab("Age")+
-      ylab("Year")
+      ggplot2::xlab("Age")+
+      ggplot2::ylab("Year")
     
     return(fig)
   } else {
