@@ -4,7 +4,7 @@ Chlorophyll-a and primary production were sourced from the `ecodata` package.
 
 ### Figures
 
-#### Chlorophyll {-}
+#### Chlorophyll in the stock region {-}
 
 
 ```{r}
@@ -13,7 +13,7 @@ plot_ecodata(data = chl_data,
 ```
 
 
-#### Primary production {-}
+#### Primary production in the stock region {-}
 ```{r}
 plot_ecodata(data = pp_data,
              ylabel = "Primary production (gC m-2 d-1)")
@@ -22,7 +22,7 @@ plot_ecodata(data = pp_data,
 
 ### Data
 
-#### Chlorophyll {-}
+#### Chlorophyll in the stock region {-}
 ```{r}
 chl_data <- chl_data %>%
   dplyr::mutate(Value = round(Value, digits = 2)) %>%
@@ -31,7 +31,7 @@ chl_data <- chl_data %>%
 NEesp::make_html_table(chl_data)
 ```
 
-#### Primary production {-}
+#### Primary production in the stock region {-}
 ```{r}
 pp_data <- pp_data %>%
   dplyr::mutate(Value = round(Value, digits = 2)) %>%
