@@ -38,27 +38,21 @@ data <- data.frame(
 str(data)
 
 # contours/fill
-fig <- ggplot2::ggplot(data = world) +
-  ggplot2::geom_sf() +
-  ggplot2::geom_density_2d_filled(ggplot2::aes(
-    x = lon,
-    y = lat),
-    alpha = 0.5,
-    data = data) +
-  ggplot2::geom_density_2d(ggplot2::aes(
-    x = lon,
-    y = lat),
+fig <- ggplot2::ggplot(data = data,
+                       ggplot2::aes(
+                         x = lon,
+                         y = lat)) +
+  ggplot2::geom_density_2d_filled(
+    alpha = 0.5) +
+  ggplot2::geom_density_2d(
     size = 0.25, 
-    colour = "black",
-    data = data) +
-  ggplot2::geom_point(data = data,
-                      ggplot2::aes(x = lon,
-                                   y = lat),
-                      cex = 0.5) +
+    colour = "black") +
+  ggplot2::geom_point(cex = 0.5) +
   # nmfspalette::scale_fill_nmfs(palette = "crustacean",
   #                             discrete = FALSE,
   #                             reverse = TRUE) +
-  ggplot2::geom_sf(data = world) +
+  ggplot2::geom_sf(data = world,
+                   inherit.aes = FALSE) +
   ggplot2::coord_sf(
     xlim = c(lonmin - 1, lonmax + 1),
     ylim = c(latmin - 1, latmax + 1)
@@ -78,22 +72,19 @@ fig <- ggplot2::ggplot(data = world) +
 
 # kernel density
 # obviously there are problems...
-fig2 <- ggplot2::ggplot(data = world) +
-  ggplot2::geom_sf() +
-  ggplot2::stat_density2d(ggplot2::aes(
-    x = lon,
-    y = lat,
-    fill = ..level.. # not sure what variable this is going off of??
-  ),
-  alpha = .5,
-  geom = "polygon",
-  data = data
+fig2 <- ggplot2::ggplot(data = data,
+                        ggplot2::aes(
+                          x = lon,
+                          y = lat)) +
+  ggplot2::stat_density2d(ggplot2::aes(color = ggplot2::after_stat(..level..)),
+  alpha = .75,
+  geom = "path",
+  cex = 1.5
   ) +
-  ggplot2::geom_point(data = data,
-                      ggplot2::aes(x = lon,
-                                   y = lat),
-                      cex = 0.5) +
-  ggplot2::geom_sf(data = world) +
+  #ggplot2::stat_density2d(color = ..density..) +
+  ggplot2::geom_point(cex = 0.5) +
+  ggplot2::geom_sf(data = world,
+                   inherit.aes = FALSE) +
   # nmfspalette::scale_fill_nmfs(palette = "crustacean",
   #                             discrete = FALSE,
   #                             reverse = TRUE) +
@@ -104,6 +95,9 @@ fig2 <- ggplot2::ggplot(data = world) +
   # ggplot2::scale_color_gradient(low = "blue",
   #                     high = "red",
   #                     name = "Year") +
+  ggplot2::scale_color_gradientn(
+    colors = nmfspalette::nmfs_palette("regional web")(4)
+  ) +
   ggplot2::xlab("Longitude") +
   ggplot2::ylab("Latitude") +
   ggplot2::facet_grid(rows = ggplot2::vars(paste0(decade, "s")),
@@ -111,12 +105,16 @@ fig2 <- ggplot2::ggplot(data = world) +
   ggplot2::theme_bw() +
   ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90)) + 
   ggplot2::labs(title = "Black sea bass larvae observations in MARMAP and ECOMON",
-       subtitle = "Only sites with highest larval abundance considered (points); kernal density estimates (clearly something is wrong).")
+       subtitle = "Only sites with highest larval abundance considered (points); kernel density estimates.")
+#fig2
 
-pdf(file = here::here("R-scripts", "black-sea-bass", "geography.pdf"),
-    onefile = TRUE,
+tiff(file = here::here("R-scripts", "black-sea-bass", "geography.tiff"),
+    # onefile = TRUE,
     width = 11.5,
-    height = 8)
-fig
-fig2
+    height = 16,
+    units = "in",
+    res = 200,
+    compression = "lzw")
+ggpubr::ggarrange(fig, fig2,
+                  nrow = 2)
 dev.off()
