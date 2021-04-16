@@ -81,7 +81,7 @@ fig2 <- ggplot2::ggplot(data = data,
   geom = "path",
   cex = 1.5
   ) +
-  #ggplot2::stat_density2d(color = ..density..) +
+  
   ggplot2::geom_point(cex = 0.5) +
   ggplot2::geom_sf(data = world,
                    inherit.aes = FALSE) +
@@ -118,3 +118,9 @@ tiff(file = here::here("R-scripts", "black-sea-bass", "geography.tiff"),
 ggpubr::ggarrange(fig, fig2,
                   nrow = 2)
 dev.off()
+
+# trying to find cnidaria data
+URL <- "ftp://ftp.nefsc.noaa.gov/pub/hydro/zooplankton_data/EcoMon_Plankton_Data_v3_0.xlsx"
+ZPD <- openxlsx::read.xlsx(URL, sheet = "Data")
+head(ZPD)
+colnames(ZPD)

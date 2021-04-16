@@ -30,9 +30,25 @@ test <- ecodata::long_term_sst
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Sea surface temperature anomaly
+### Sea surface temperature anomaly in EPU
 ```{r, sst-anom}
 test <- ecodata::seasonal_oisst_anom
+NEesp::render_indicator(test, lab = names[1])
+```
+
+### Sea surface temperature anomaly in stock region
+```{r, sst-anom-stock}
+test <- ecodata::ESP_seasonal_oisst_anom %>%
+  dplyr::mutate(Pattern_check = ESP %>%
+                  stringr::str_replace_all("_", " ") %>%
+                  stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
+  # how to generalize region filtering? 
+  # below is just for black sea bass
+  dplyr::filter(stringr::str_detect(Pattern_check, "north", negate = TRUE)) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, "south", negate = TRUE)) %>%
+  dplyr::distinct() %>%
+  dplyr::mutate(Var = paste0(Var, "_stock"))
 NEesp::render_indicator(test, lab = names[1])
 ```
 

@@ -45,7 +45,9 @@ dat <- summary(new_mod)$coefficients %>%
 ```
 
 ```{r}
-rnames <- rownames(dat) %>% stringr::str_trunc(width = 30)
+rnames <- rownames(dat) %>% 
+  stringr::str_wrap(width = 20) %>%
+  stringr::str_replace_all("\n", "<br>")
 ```
 
 ```{r}
