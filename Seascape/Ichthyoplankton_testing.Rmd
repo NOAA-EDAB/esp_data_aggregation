@@ -157,4 +157,45 @@ ggplot()+ ggplot2::stat_density2d(aes( x = lon, y = lat,fill =stat(level)),geom 
 
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+selected_spp.1<-filter_all(selected_spp, ~!is.na(.))
+
+selected_spp.1 %>% ggplot(aes(x=lon,y=lat, color=log(mean.abund)))+geom_point()+facet_wrap(~(year))
+
+ich.data <-ich.data %>% filter(!is.na(.))
+
+t1<-st_as_sf(selected_spp.1, coords = c('lon','lat'), crs = 4326) 
+
+t1<-st_transform(t1, crs = 3857)
+
+t1.sp<-as(t1, "Spatial")
+
+
+
+t3<-sp.kde(x = t1.sp, y = t1.sp$mean.abund, bw = 1000,  nr = 104, nc = 78,
+                      standardize = TRUE, 
+                      scale.factor = 10000  )
+plot(t3)
+points(meuse, pch=19)
+?st_transform
+t4<-st_transform(t1, crs = 3857)
+t6<-as(t4, "Spatial")
+
+e<-C(-8426030, -7337481, 4283862, 5505938)
+
+t5<-sp.kde(x = t1.sp, y = t1.sp$mean.abund+1, bw = 1000,  
+                      nr = 104, nc = 78, newdata = e, 
+                      standardize = TRUE, 
+                      scale.factor = 10000  )
+
+plot(t5)
+
+
+
+install.packages("fields")
+library(fields)
+
+?smooth.2d()
+
+```
+
