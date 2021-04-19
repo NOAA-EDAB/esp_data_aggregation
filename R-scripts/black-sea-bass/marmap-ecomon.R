@@ -124,3 +124,80 @@ URL <- "ftp://ftp.nefsc.noaa.gov/pub/hydro/zooplankton_data/EcoMon_Plankton_Data
 ZPD <- openxlsx::read.xlsx(URL, sheet = "Data")
 head(ZPD)
 colnames(ZPD)
+
+big_data <- ncdf4::nc_open("~/ecomon-marmap-phyto/plankton10m2_v3_1_sort.netcdf") # huge file, can't add to github
+big_data
+
+taxon <- ncdf4::ncvar_get(big_data, "taxon")
+taxon %>% unique() %>% sort() %>% View() # ctenophores is a group, cnidaria not listed
+
+lon <- ncdf4::ncvar_get(big_data, "lon")
+lat <- ncdf4::ncvar_get(big_data, "lat", verbose = F)
+abun <- ncdf4::ncvar_get(big_data, "count")
+year <- ncdf4::ncvar_get(big_data, "year")
+month <- ncdf4::ncvar_get(big_data, "month")
+
+latmin <- (min(lat) - 1)
+latmax <- (max(lat) + 1)
+lonmin <- (min(lon) - 1)
+lonmax <- (max(lon) + 1)
+
+data <- data.frame(
+  lat = lat,
+  lon = lon,
+  taxon = taxon,
+  abun = as.numeric(abun),
+  month = month,
+  year = year,
+  decade = stringr::str_trunc(as.character(year), width = 3, ellipsis = "") %>%
+    as.numeric() * 10
+) %>%
+  dplyr::filter(abun > 0,
+                taxon == "ctenophores") # only ctenophores
+str(data)
+
+# plot
+world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
+latmin <- (min(lat) - 1)
+latmax <- (max(lat) + 1)
+lonmin <- (min(lon) - 1)
+lonmax <- (max(lon) + 1)
+
+fig <- ggplot2::ggplot(data = data,
+                       ggplot2::aes(
+                         x = lon,
+                         y = lat)) +
+  ggplot2::geom_point(ggplot2::aes(color = log(abun)),
+                      alpha = 0.5) +
+  ggplot2::scale_color_gradientn(
+    colors = nmfspalette::nmfs_palette("regional web")(4),
+    name = "ln(Abundance)"
+  ) +
+  ggplot2::geom_sf(data = world,
+                   inherit.aes = FALSE) +
+  ggplot2::coord_sf(
+    xlim = c(lonmin - 1, lonmax + 1),
+    ylim = c(latmin - 1, latmax + 1)
+  ) +
+  # ggplot2::scale_color_gradient(low = "blue",
+  #                     high = "red",
+  #                     name = "Year") +
+  ggplot2::xlab("Longitude") +
+  ggplot2::ylab("Latitude") +
+  ggplot2::facet_grid(rows = ggplot2::vars(paste0(decade, "s")),
+                      cols = ggplot2::vars(month)) +
+  ggplot2::theme_bw() +
+  ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90)) + 
+  ggplot2::labs(title = "Ctenophore observations in MARMAP and ECOMON",
+                subtitle = "Only sites with abundance > 0 considered (points).")
+
+tiff(file = here::here("R-scripts", "black-sea-bass", "ctenophores.tiff"),
+     # onefile = TRUE,
+     width = 11.5,
+     height = 16,
+     units = "in",
+     res = 200,
+     compression = "lzw")
+fig
+dev.off()
+                  

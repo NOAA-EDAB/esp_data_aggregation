@@ -45,18 +45,24 @@ test <- ecodata::ESP_seasonal_oisst_anom %>%
   dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
   dplyr::distinct() 
 
+if(nrow(test) > 0){
+  
 if(length(unique(test$Pattern_check)) > 1){
   # add stock region into var for faceting
   test <- test %>%
     dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
                     stringr::str_replace_all("_", "") %>%
                     stringr::str_wrap(width = 8))
-  NEesp::render_indicator(test, lab = names[1])
+  if(nrow(test) > 0){
+    NEesp::render_indicator(test, lab = names[1])
+  }
 } else {
   test <- test %>%
     dplyr::mutate(Var = paste0(Var, "_stock"))
   
   NEesp::render_indicator(test, lab = names[1])
+}
+  
 }
 ```
 
@@ -133,6 +139,8 @@ test <- ecodata::ESP_seasonal_chl %>%
   dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
   dplyr::distinct() 
 
+if(nrow(test) > 0){
+  
 if(length(unique(test$Pattern_check)) > 1){
   # add stock region into var for faceting
   test <- test %>%
@@ -146,6 +154,7 @@ if(length(unique(test$Pattern_check)) > 1){
   
   NEesp::render_indicator(test, lab = names[1])
 }
+}
 ```
 
 ### Primary production in stock region
@@ -157,6 +166,8 @@ test <- ecodata::ESP_seasonal_pp %>%
   dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
   dplyr::distinct() 
 
+if(nrow(test) > 0){
+  
 if(length(unique(test$Pattern_check)) > 1){
   # add stock region into var for faceting
   test <- test %>%
@@ -169,5 +180,6 @@ if(length(unique(test$Pattern_check)) > 1){
     dplyr::mutate(Var = paste0(Var, "_stock"))
   
   NEesp::render_indicator(test, lab = names[1])
+}
 }
 ```
