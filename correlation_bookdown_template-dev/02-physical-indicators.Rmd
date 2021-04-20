@@ -40,29 +40,29 @@ NEesp::render_indicator(test, lab = names[1])
 ```{r, sst-anom-stock}
 test <- ecodata::ESP_seasonal_oisst_anom %>%
   dplyr::mutate(Pattern_check = ESP %>%
-                  stringr::str_replace_all("_", " ") %>%
-                  stringr::str_to_sentence()) %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
   dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
-  dplyr::distinct() 
+  dplyr::distinct()
 
-if(nrow(test) > 0){
-  
-if(length(unique(test$Pattern_check)) > 1){
-  # add stock region into var for faceting
-  test <- test %>%
-    dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
-                    stringr::str_replace_all("_", "") %>%
-                    stringr::str_wrap(width = 8))
-  if(nrow(test) > 0){
+if (nrow(test) > 0) {
+  if (length(unique(test$Pattern_check)) > 1) {
+    # add stock region into var for faceting
+    test <- test %>%
+      dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
+        stringr::str_replace_all("_", "") %>%
+        stringr::str_wrap(width = 8))
+    if (nrow(test) > 0) {
+      NEesp::render_indicator(test, lab = names[1])
+    }
+  } else {
+    test <- test %>%
+      dplyr::mutate(Var = paste0(Var, "_stock"))
+
     NEesp::render_indicator(test, lab = names[1])
   }
 } else {
-  test <- test %>%
-    dplyr::mutate(Var = paste0(Var, "_stock"))
-  
-  NEesp::render_indicator(test, lab = names[1])
-}
-  
+  "Indicator data has not been parsed over this stock's region"
 }
 ```
 
@@ -134,26 +134,27 @@ NEesp::render_indicator(test, lab = names[1])
 ```{r, chl-stock}
 test <- ecodata::ESP_seasonal_chl %>%
   dplyr::mutate(Pattern_check = ESP %>%
-                  stringr::str_replace_all("_", " ") %>%
-                  stringr::str_to_sentence()) %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
   dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
-  dplyr::distinct() 
+  dplyr::distinct()
 
-if(nrow(test) > 0){
-  
-if(length(unique(test$Pattern_check)) > 1){
-  # add stock region into var for faceting
-  test <- test %>%
-    dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
-                    stringr::str_replace_all("_", "") %>%
-                    stringr::str_wrap(width = 8))
-  NEesp::render_indicator(test, lab = names[1])
+if (nrow(test) > 0) {
+  if (length(unique(test$Pattern_check)) > 1) {
+    # add stock region into var for faceting
+    test <- test %>%
+      dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
+        stringr::str_replace_all("_", "") %>%
+        stringr::str_wrap(width = 8))
+    NEesp::render_indicator(test, lab = names[1])
+  } else {
+    test <- test %>%
+      dplyr::mutate(Var = paste0(Var, "_stock"))
+
+    NEesp::render_indicator(test, lab = names[1])
+  }
 } else {
-  test <- test %>%
-    dplyr::mutate(Var = paste0(Var, "_stock"))
-  
-  NEesp::render_indicator(test, lab = names[1])
-}
+  "Indicator data has not been parsed over this stock's region"
 }
 ```
 
@@ -161,25 +162,26 @@ if(length(unique(test$Pattern_check)) > 1){
 ```{r, pp-stock}
 test <- ecodata::ESP_seasonal_pp %>%
   dplyr::mutate(Pattern_check = ESP %>%
-                  stringr::str_replace_all("_", " ") %>%
-                  stringr::str_to_sentence()) %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
   dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
-  dplyr::distinct() 
+  dplyr::distinct()
 
-if(nrow(test) > 0){
-  
-if(length(unique(test$Pattern_check)) > 1){
-  # add stock region into var for faceting
-  test <- test %>%
-    dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
-                    stringr::str_replace_all("_", "") %>%
-                    stringr::str_wrap(width = 8))
-  NEesp::render_indicator(test, lab = names[1])
+if (nrow(test) > 0) {
+  if (length(unique(test$Pattern_check)) > 1) {
+    # add stock region into var for faceting
+    test <- test %>%
+      dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
+        stringr::str_replace_all("_", "") %>%
+        stringr::str_wrap(width = 8))
+    NEesp::render_indicator(test, lab = names[1])
+  } else {
+    test <- test %>%
+      dplyr::mutate(Var = paste0(Var, "_stock"))
+
+    NEesp::render_indicator(test, lab = names[1])
+  }
 } else {
-  test <- test %>%
-    dplyr::mutate(Var = paste0(Var, "_stock"))
-  
-  NEesp::render_indicator(test, lab = names[1])
-}
+  "Indicator data has not been parsed over this stock's region"
 }
 ```
