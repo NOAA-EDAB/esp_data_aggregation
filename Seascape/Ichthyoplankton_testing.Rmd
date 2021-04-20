@@ -13,11 +13,7 @@ suppressPackageStartupMessages(library(tidyverse))
 library(sf)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r cars}
 # used to convert the .mat file into well behaved data frame
@@ -57,65 +53,20 @@ ggplot(data= ecodata::coast )+
                                contour=FALSE,
                                alpha = 0.9, data = selected_spp)+
    geom_sf()+
-  ggplot2::coord_sf(xlim = c(geo_lim$lonmin - 1, geo_lim$lonmax + 1), 
-                      ylim = c(geo_lim$latmin - 1, geo_lim$latmax + 1)) +
+  ggplot2::coord_sf(xlim = c(geo_lim$lonmin+1.2 , geo_lim$lonmax-1.2), 
+                      ylim = c(geo_lim$latmin+1.2 , geo_lim$latmax-1.2 )) +
   scale_color_gradient(low = "blue", 
                          high = "red", 
                          name = "Year") +
  
   xlab("Longitude") +
-  ylab("Latitude")+
-  theme(legend.position = "none")
-  
-  
-  
-  
-    nmfspalette::scale_fill_nmfs(palette = "crustacean", 
-                                 discrete = FALSE, 
-                                 reverse = TRUE) +
+  ylab("Latitude")
 
   
   
-t1 <- filter_all(selected_spp, ~!is.na(.))
-
-h <- c(MASS::bandwidth.nrd(selected_spp$lat), MASS::bandwidth.nrd(selected_spp$lon))
-dens <- MASS::kde2d(
-  selected_spp$lat, selected_spp$lon, h = h, n = 1000,
-  lims = c(range(selected_spp$lat), range(selected_spp$lon))
-)
-df <- expand.grid(x = dens$x, y = dens$y)
-df$z <- as.vector(dens$z)
-
-ggplot(data= df, aes(x, y, z = z, fill = after_stat(level))) +
-  geom_contour_filled() +
-  scale_fill_viridis_d()
 
 
 
-
-selected_spp.1<-filter_all(selected_spp, ~!is.na(.))
-
-selected_spp.1 <- selected_spp.1 %>%
-    dplyr::mutate(decade = ggplot2::cut_width(year, width = 10, center = 1980))
-
-ggplot()+
-    stat_density2d(data = selected_spp.1,
-    aes(x= lon,y=lat,fill = ..density..), geom = "raster", contour = FALSE,h = c(2, 2))+
-  geom_sf(data = ecodata::coast)+
-  ggplot2::coord_sf(xlim = c(geo_lim$lonmin - 1, geo_lim$lonmax + 1), 
-                      ylim = c(geo_lim$latmin - 1, geo_lim$latmax + 1))
-
-   
-
-
-
-
-
-ggplot(selected_spp.1, aes(x=lon,y=lat, color=mean.abund))+
-  geom_point()
-    # stat_density2d_filled(data = selected_spp.1, aes(fill = ..density..), geom = "tile",contour = FALSE)+
-  facet_wrap(~decade)
-   
 
 ```
 
@@ -125,77 +76,29 @@ You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
 
-ggplot(data= ecodata::coast )+
-  
-  # geom_point(data = selected_spp, aes(x = lon,y = lat, color = as.numeric(year)))+ 
-   ggplot2::stat_density2d(aes( x = lon, 
-                                y = lat, 
-                               fill = ..density..),
-                               geom = "raster",
-                               contour=FALSE,
-                               alpha = 0.9, data = selected_spp)+
-  coord_fixed(expand=FALSE,xlim=c(-6600,-3800),ylim=c(400,2500))
-  
-   geom_sf()+
-  ggplot2::coord_sf(xlim = c(geo_lim$lonmin - 1, geo_lim$lonmax + 1), 
-                      ylim = c(geo_lim$latmin - 1, geo_lim$latmax + 1)) +
-  scale_color_gradient(low = "blue", 
-                         high = "red", 
-                         name = "Year") +
- 
-  xlab("Longitude") +
-  ylab("Latitude")+
-  theme(legend.position = "none")
-   
-   
-ggplot()+ ggplot2::stat_density2d(aes( x = lon, y = lat,fill =stat(level)),geom = "polygon",contour_type = "bands", alpha = 0.7, data = selected_spp)+
-  coord_fixed(expand=FALSE,xlim=c(geo_lim$lonmin,geo_lim$lonmax),ylim=c(geo_lim$latmin,geo_lim$latmax))
-   
-
-
-
-
-```
 
 ```{r}
+
+geo_lim<-selected_spp.1 %>% summarise(latmin= min(lat, na.rm = TRUE )-1,
+                                   latmax= max(lat, na.rm = TRUE)+1,
+                                   lonmin= min(lon, na.rm = TRUE)-1,
+                                   lonmax= max(lon, na.rm = TRUE)+1)
+
+
 selected_spp.1<-filter_all(selected_spp, ~!is.na(.))
 
-selected_spp.1 %>% ggplot(aes(x=lon,y=lat, color=log(mean.abund)))+geom_point()+facet_wrap(~(year))
-
-ich.data <-ich.data %>% filter(!is.na(.))
-
-t1<-st_as_sf(selected_spp.1, coords = c('lon','lat'), crs = 4326) 
-
-t1<-st_transform(t1, crs = 3857)
-
-t1.sp<-as(t1, "Spatial")
+ ggplot(data = ecodata::coast)+
+   geom_sf()+
+   ggplot2::coord_sf(xlim = c(geo_lim$lonmin - 1, geo_lim$lonmax + 1), 
+                      ylim = c(geo_lim$latmin - 1, geo_lim$latmax + 1)) +
+   geom_point(data =  selected_spp.1 ,aes(x=lon,y=lat,  size=(rel.proportion)))+
+   facet_wrap(~(decade))+
+   labs(xlab= "Longitude",ylab="Latitude", size="Relative proportion")
 
 
+   
+   
 
-t3<-sp.kde(x = t1.sp, y = t1.sp$mean.abund, bw = 1000,  nr = 104, nc = 78,
-                      standardize = TRUE, 
-                      scale.factor = 10000  )
-plot(t3)
-points(meuse, pch=19)
-?st_transform
-t4<-st_transform(t1, crs = 3857)
-t6<-as(t4, "Spatial")
-
-e<-C(-8426030, -7337481, 4283862, 5505938)
-
-t5<-sp.kde(x = t1.sp, y = t1.sp$mean.abund+1, bw = 1000,  
-                      nr = 104, nc = 78, newdata = e, 
-                      standardize = TRUE, 
-                      scale.factor = 10000  )
-
-plot(t5)
-
-
-
-install.packages("fields")
-library(fields)
-
-?smooth.2d()
 
 ```
 
