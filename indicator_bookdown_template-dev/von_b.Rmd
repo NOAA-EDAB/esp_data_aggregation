@@ -16,9 +16,9 @@ library(FSA)
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
 
 #survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
-source(here::here("R", "common_names_survdat.r"))
 
-survdata.w.codes <- common_names_survdat("bio")
+#load bio survdat information from the package
+survdata.w.codes <- NEesp::common_names_survdat("bio")
 
 # selected.surv <- survdata.w.codes %>%
 #   stringr::str_to_sentence()) %>%
@@ -26,7 +26,7 @@ survdata.w.codes <- common_names_survdat("bio")
 
 
 selected.surv <- survdata.w.codes %>%
-  dplyr::filter(common_name == "Scup")
+  dplyr::filter(common_name == "Black sea bass")
 
 
 # only take records with age associated
@@ -38,7 +38,7 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # define the type of von b model
   vb <- vbFuns(param = "Typical")
   # define starting parameters based on the avalible data
-  f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "Walford")
+  f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "oldAge")
 
   # fit a non-linear least squares model based on the data and starting values
   f.fit <- nls(LENGTH ~ vb(AGE, Linf, K, t0), data = selected.surv.clean, start = f.starts)
@@ -117,7 +117,7 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # define the type of von b model
   vb <- vbFuns(param = "Typical")
   # define starting parameters based on the avalible data
-  f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "Walford")
+  f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "oldAge")
 
   # fit a non-linear least squares model based on the data and starting values
   f.fit <- nls(LENGTH ~ vb(AGE, Linf, K, t0), data = selected.surv.clean, start = f.starts)
@@ -125,11 +125,11 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   f.fit.summary <- summary(f.fit, correlation = TRUE)
 
   # define the range of age values that will be used to generate points from the fitted model
-  # roughly by 0.2 year steps
+   
   newages.int <- data.frame(AGE = seq(0, 50))
   # predict(f.fit,newdata=newages) this funtion uses the model from f.fit to generate new lengths
   # make a dataset with the values from the model
-  selected.surv.vonb.int <- data.frame(AGE = seq(0, 50), LENGTH = predict(f.fit, newdata = newages))
+  selected.surv.vonb.int <- data.frame(AGE = seq(0, 50), LENGTH = predict(f.fit, newdata = newages.int))
   #name the predicted length col to avoid conflicts later
   selected.surv.vonb.int<-selected.surv.vonb.int %>% rename("LENGTH_predicted"="LENGTH")
   #join with original data set
@@ -148,27 +148,33 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
 ```
 
 ```{r}
-selected.surv.w.predicted %>% ggplot(aes(x=LENGTH_predicted ,y=residual.standardized, color= SEX))+geom_point()
 
- svvbgf3.1 <- svlenage %>%   
-    dplyr::group_by(species, era) %>%
-    group_map(~try(nls(length~vb1(avgage, Linf, K, t0), data = .,
-                  start = vbStarts(length~avgage,data = .,methLinf="oldAge"))))
+if(nrow(selected.surv.w.predicted)>5){
+  selected.surv.w.predicted <- selected.surv.w.predicted %>%
+    dplyr::mutate(Decade = ggplot2::cut_width(YEAR, width = 10, center = 1980))
+
+    # sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
+    selected.surv.w.predicted$SEX <- recode(selected.surv.w.predicted$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" =     "transitional")
+  
+
+pred.von.b.ancova<-lm(residual.standardized~SEX+Decade+SEX*Decade ,data = selected.surv.w.predicted)
+
+ancova.table<-summary(pred.von.b.ancova)
+colnames(ancova.table$coefficients)<-c("Estimate" ,  "Std. Error" ,"t value",   "P-value"  )
+knitr::kable(ancova.table$coefficients)
 
 
-
+}else("Not enough data to perform analysis")
 
 ```
-
 ```{r}
-
-x<-40
-
-try(x==19)
-
-
-
-
-
+if(){
+  
+selected.surv.w.predicted %>% 
+  ggplot(aes(x=SEX, y=residual.standardized, fill=Decade))+
+  geom_boxplot()+
+  nmfspalette::scale_fill_nmfs()+
+  labs(xlab="Sex", ylab="standarized residuals")
+}
 ```
 

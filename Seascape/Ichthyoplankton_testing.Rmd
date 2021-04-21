@@ -25,7 +25,8 @@ library(sf)
 # colnames(ich.data)<-ich.names
 # ich.data <- ich.data %>%   mutate_at(vars(-taxa) ,as.numeric)
 # Save the data to a useful format
-saveRDS(ich.data, file="ichthyoplankton_MARMAP_ECOMON.rds")
+
+# saveRDS(ich.data, file="ichthyoplankton_MARMAP_ECOMON.rds")
 
 
 
