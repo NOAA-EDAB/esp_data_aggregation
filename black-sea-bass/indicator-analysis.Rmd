@@ -1,0 +1,66 @@
+---
+title: "Black sea bass indicator analysis"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE)
+```
+
+## Recruitment 
+
+### Winter SST anomaly
+```{r}
+data <- here::here("black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+           "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst-anom-stock.csv")
+```
+
+### Fall SST anomaly (prior year)
+```{r}
+data <- here::here("black-sea-bass", "Black sea bass_regression_report_1lag", "data",
+           "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst-anom-stock.csv")
+```
+
+### Winter primary production
+```{r}
+data <- here::here("black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+           "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_pp-stock.csv")
+```
+
+### Fall primary production (prior year)
+```{r}
+data <- here::here("black-sea-bass", "Black sea bass_regression_report_1lag", "data",
+           "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_pp-stock.csv")
+```
+
+### Cold pool index (prior year)
+```{r}
+data <- here::here("black-sea-bass", "Black sea bass_regression_report_1lag", "data",
+           "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_cold-pool.csv")
+```
+
+### Predator abundance
+
+
+## Ecosystem
+
+### Sea surface temperature
+
+### Marine heatwaves
+
+
+## Management
+
+### Northern and southern bounds
+
+### Center of gravity
+
+### Total catch
+
+### CPUE
+
+### Catch vs TAC
+

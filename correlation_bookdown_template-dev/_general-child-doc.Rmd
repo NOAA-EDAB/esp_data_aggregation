@@ -42,7 +42,7 @@ if (n_measurements > n_years * n_var &
 }
 
 # correlation summary
-output <- rbind(output, correlation_summary(
+output <- rbind(output, NEesp::correlation_summary(
   stock = stock,
   eco = test,
   lag = params$lag
