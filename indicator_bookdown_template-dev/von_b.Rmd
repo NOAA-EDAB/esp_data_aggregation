@@ -209,7 +209,6 @@ selected.surv.w.predicted %>%
 
   # unbalenced design of ancova needs to be tested later
   # remove unknown and transitional fish to simplify interpretation 
-}
-else("No data")
+}else("No data")
 ```
 
