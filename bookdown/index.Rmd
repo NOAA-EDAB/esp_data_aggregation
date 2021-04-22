@@ -69,20 +69,25 @@ latlong_data <- NEesp::latlong %>%
 
 survey_data <- NEesp::survey %>%
   dplyr::filter(Species == species)
+
 cond_data <- NEesp::cond %>%
   dplyr::filter(Species == species)
+
 diet_data <- NEesp::allfh %>%
   dplyr::filter(Species == species)
 
 asmt_data <- NEesp::asmt %>%
   dplyr::filter(Species == species)
+
 asmt_sum_data <- NEesp::asmt_sum %>%
   dplyr::filter(Species == species)
+
 swept_data <- NEesp::swept %>%
   dplyr::filter(Species == species)
 
 rec_data <- NEesp::rec_catch %>%
   dplyr::filter(Species == species)
+
 com_data <- NEesp::com_catch %>%
   dplyr::filter(Species == species)
 
