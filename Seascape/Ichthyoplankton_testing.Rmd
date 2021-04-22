@@ -14,6 +14,9 @@ library(sf)
 ```
 
 
+#### Density plot of survey stations
+Ichyoplankton survey locations that captured black sea bass larva. Data sourced from `ECOMON` and `MARMAP` surveys. add metadata here
+
 
 ```{r cars}
 # used to convert the .mat file into well behaved data frame
@@ -75,27 +78,39 @@ ggplot(data= ecodata::coast )+
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+```{r Relative_proportion plot, fig.cap = paste("Black sea bass", "larva relative proportion")}
+
+if(nrow(selected_spp)>5){
+selected_spp.1<-filter_all(selected_spp, ~!is.na(.))
+
+selected_spp.1 <- selected_spp.1 %>%
+    dplyr::mutate(rel.prop.bin = ggplot2::cut_interval(rel.proportion, length = 25))
 
 
-```{r}
-
-geo_lim<-selected_spp.1 %>% summarise(latmin= min(lat, na.rm = TRUE )-1,
+geo_lim.1<-selected_spp.1 %>% summarise(latmin= min(lat, na.rm = TRUE )-1,
                                    latmax= max(lat, na.rm = TRUE)+1,
                                    lonmin= min(lon, na.rm = TRUE)-1,
                                    lonmax= max(lon, na.rm = TRUE)+1)
 
 
-selected_spp.1<-filter_all(selected_spp, ~!is.na(.))
 
- ggplot(data = ecodata::coast)+
+
+
+
+ ggplot()+
    geom_sf()+
    ggplot2::coord_sf(xlim = c(geo_lim$lonmin - 1, geo_lim$lonmax + 1), 
                       ylim = c(geo_lim$latmin - 1, geo_lim$latmax + 1)) +
-   geom_point(data =  selected_spp.1 ,aes(x=lon,y=lat,  size=(rel.proportion)))+
+   geom_point(data =  selected_spp.1 ,aes(x=lon,y=lat,  size=(mean.abund),color=rel.prop.bin))+
    facet_wrap(~(decade))+
-   labs(xlab= "Longitude",ylab="Latitude", size="Relative proportion")
-
+   nmfspalette::scale_color_nmfs("seagrass")+
+      geom_sf(data = ecodata::coast)+
+   ggplot2::coord_sf(xlim = c(geo_lim.1$lonmin + 1, geo_lim.1$lonmax - 1), 
+                      ylim = c(geo_lim.1$latmin + 1, geo_lim.1$latmax - 1))+
+   labs( size="Mean abundance", color="Relative proportion (%)")+
+   xlab("Longitude")+
+   ylab("Latitude")
+}else("No data")
 
    
    
