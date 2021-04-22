@@ -2,7 +2,7 @@
 title: "Black sea bass indicator analysis"
 author: "Abigail Tyrell"
 date: "`r format(Sys.time(), '%d %b %Y')`"
-output: word_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -48,6 +48,11 @@ plot_corr_only <- function(data, title = "") {
       ggplot2::ylab(unique(data$Metric)) +
       ggplot2::xlab(unique(data$Var))
     
+    # test if bsb is sig over time - overwrite sig
+    model <- lm(Value ~ Time, data = data)
+    pval <- summary(model)$coefficients[2, 4]
+    data$sig <- (pval < 0.05)
+    
     bsb_fig <- ggplot2::ggplot(data, ggplot2::aes(
       x = Time,
       y = Value
@@ -75,6 +80,11 @@ plot_corr_only <- function(data, title = "") {
       ggplot2::labs(title = "Black sea bass over time") +
       ggplot2::xlab("Year") +
       ggplot2::ylab(unique(data$Metric))
+    
+    # test if indicator is sig over time - overwrite sig
+    model <- lm(Val ~ Time, data = data)
+    pval <- summary(model)$coefficients[2, 4]
+    data$sig <- (pval < 0.05)
     
     ind_fig <- ggplot2::ggplot(data, ggplot2::aes(
       x = Time,
@@ -111,7 +121,9 @@ plot_corr_only <- function(data, title = "") {
                                  common.legend = TRUE,
                                  legend = "top",
                                  nrow = 2,
-                                 labels = c(NA, "C"))
+                                 labels = c(NA, "C")) +
+       ggplot2::theme(plot.background = ggplot2::element_rect(color = "black", size = 1),
+                      plot.margin = ggplot2::unit(c(0.1,0.1,0.1,0.1), "cm"))
     
     ggpubr::annotate_figure(big_fig, top = title)
     

@@ -67,16 +67,16 @@ pkg_bio <- NEesp::plot_swept(NEesp::swept %>% dplyr::filter(Species == "Black se
 
 plots <- c(rbind(
   ggpubr::ggpar(list(
-    pkg_abun + ggplot2::labs(title = "Package abundance"),
-    big_abun + ggplot2::labs(title = "All BSB sizes abundance"),
-    small_abun + ggplot2::labs(title = "Small BSB sizes abundance")
+    pkg_abun + ggplot2::labs(title = "Abundance - calculated then filtered"),
+    big_abun + ggplot2::labs(title = "Abundance - filtered then calculated \n(all BSB)"),
+    small_abun + ggplot2::labs(title = "Abundance - filtered then calculated \n(small BSB)")
   ),
   ylim = c(-10^7, 2 * 10^8)
   ),
   ggpubr::ggpar(list(
-    pkg_bio + ggplot2::labs(title = "Package biomass"),
-    big_bio + ggplot2::labs(title = "All BSB sizes biomass"),
-    small_bio + ggplot2::labs(title = "Small BSB sizes biomass")
+    pkg_bio + ggplot2::labs(title = "Biomass - calculated then filtered"),
+    big_bio + ggplot2::labs(title = "Biomass - filtered then calculated \n(all BSB)"),
+    small_bio + ggplot2::labs(title = "Biomass - filtered then calculated \n(small BSB)")
   ),
   ylim = c(-2*10^6, 2 * 10^7)
   )
@@ -84,7 +84,7 @@ plots <- c(rbind(
 )
 
 tiff(
-  file = here::here("black-sea-bass", "small_v_all.tiff"),
+  file = here::here("black-sea-bass", "swept_comparison.tiff"),
   # onefile = TRUE,
   width = 8,
   height = 8,
@@ -92,11 +92,14 @@ tiff(
   res = 200,
   compression = "lzw"
 )
+
 ggpubr::ggarrange(
   plotlist = plots,
+  align = "hv",
   nrow = 3,
   ncol = 2,
   common.legend = TRUE,
   legend = "top"
 )
+
 dev.off()
