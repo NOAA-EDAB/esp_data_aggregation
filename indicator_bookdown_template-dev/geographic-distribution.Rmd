@@ -4,13 +4,17 @@ Using fisheries independent data from bottom trawls in `survdat`. Several metric
 
 
 ```{r geo_conc data wrangling}
-source(here::here("R", "common_names_survdat.r"))
 
-survdata.w.codes <- Common_names_survdat(here::here("data", "survdat_03022021_B.RDS"))
 
+
+survdata.w.codes <- NEesp::common_names_survdat()
+
+
+# selected.surv <- survdata.w.codes %>%
+#   dplyr::filter(common_name == params$species)
 
 selected.surv <- survdata.w.codes %>%
-  dplyr::filter(common_name == params$species)
+  dplyr::filter(common_name == "Black sea bass")
 
 
 if (nrow(selected.surv > 3)) {
@@ -35,14 +39,13 @@ if (nrow(selected.surv > 3)) {
     dplyr::mutate(decade = ggplot2::cut_width(YEAR, width = 10, center = 1980))
 
 
-  world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
   latmin <- (min(selected.surv.centroid$lat) - 1)
   latmax <- (max(selected.surv.centroid$lat) + 1)
   lonmin <- (min(selected.surv.centroid$lon) - 1)
   lonmax <- (max(selected.surv.centroid$lon) + 1)
  
   
-  ggplot2::ggplot(data = world) +
+  ggplot2::ggplot(data = ecodata::coast) +
     ggplot2::geom_sf() +
     ggplot2::stat_density2d(aes(x = LON, 
                                 y = LAT, 
@@ -76,14 +79,11 @@ The average position of observations across all years of surveys
 
 ```{r, centroid-plot, fig.cap = paste(species, "centroid over time")}
 if(nrow(selected.surv.centroid) > 4) {
-  world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf")
-  latmin <- (min(selected.surv.centroid$lat) - 1)
-  latmax <- (max(selected.surv.centroid$lat) + 1)
-  lonmin <- (min(selected.surv.centroid$lon) - 1)
-  lonmax <- (max(selected.surv.centroid$lon) + 1)
+ 
 
+  
 
-  ggplot2::ggplot(data = world) +
+  ggplot2::ggplot(data = ecodata::coast) +
     geom_sf() +
     geom_point(data = selected.surv.centroid, 
                aes(x = lon,

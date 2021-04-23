@@ -17,19 +17,23 @@ Using fisheries independant data from bottom trawls in `survdat`. Several metric
 
 
 ```{r geo-conc-data-wrangling }
+
 # source(here::here("R","common_names_survdat.R")) # loaded in `life_history_functions.R`
-```
-
-```{r}
-survdata.w.codes<-Common_names_survdat("bio")
 
 ```
 
 ```{r}
+#load all survdat data
+survdata.w.codes<- NEesp::common_names_survdat("all")
+
+```
+
+```{r}
+
 selected.surv<-survdata.w.codes %>%
    dplyr::filter(common_name == params$species)
 
-# selected.surv<-survdata.w.codes %>% 
+# selected.surv<-survdata.w.codes %>%
 #    dplyr::filter(common_name == "Pollock")
 
 ```
@@ -180,19 +184,6 @@ lonmax<-(max(selected.surv.centroid$lon)+3)
 ggplot2::ggplot(data = ecodata::coast) +
   ggplot2::geom_sf() +
   ggplot2::stat_density2d(ggplot2::aes(x=LON,y=LAT,fill = ..level..), alpha = .5,geom = "polygon", data = selected.surv.1970.plus) +
-  nmfspalette::scale_fill_nmfs(palette="crustacean",discrete=FALSE, reverse=TRUE)+
-  ggplot2::coord_sf(xlim=c(lonmin,lonmax), ylim=c(latmin,latmax))+
-  ggplot2::scale_color_gradient(low = "blue", high = "red", name="Year")+
-  ggplot2::xlab("Longitude")+
-  ggplot2::ylab("Latitude")+
-  ggplot2::theme(legend.position = 'none')+
-  ggplot2::facet_wrap(~decade)+
-  ggplot2::ggtitle("Fall")
-
-ggplot2::ggplot(data = ecodata::coast) +
-  ggplot2::geom_sf() +
-  ggplot2::stat_density2d(ggplot2::aes(x=LON,y=LAT,fill = ..level..), alpha = .5,geom = "polygon", data = selected.surv.1970.plus) +
-  ggplot2::geom_sf(data = ecodata::coast) +
   nmfspalette::scale_fill_nmfs(palette="crustacean",discrete=FALSE, reverse=TRUE)+
   ggplot2::coord_sf(xlim=c(lonmin,lonmax), ylim=c(latmin,latmax))+
   ggplot2::scale_color_gradient(low = "blue", high = "red", name="Year")+

@@ -17,19 +17,23 @@ Using fisheries independant data from bottom trawls in `survdat`. Several metric
 
 
 ```{r geo-conc-data-wrangling }
+
 # source(here::here("R","common_names_survdat.R")) # loaded in `life_history_functions.R`
-```
-
-```{r}
-survdata.w.codes<-Common_names_survdat("bio")
 
 ```
 
 ```{r}
+#load all survdat data
+survdata.w.codes<- NEesp::common_names_survdat("all")
+
+```
+
+```{r}
+
 selected.surv<-survdata.w.codes %>%
    dplyr::filter(common_name == params$species)
 
-# selected.surv<-survdata.w.codes %>% 
+# selected.surv<-survdata.w.codes %>%
 #    dplyr::filter(common_name == "Pollock")
 
 ```

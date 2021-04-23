@@ -5,7 +5,7 @@ rmd_files: [
 "methods.Rmd", 
 "habitat-title-page.Rmd", #Title page
 "latlong.Rmd",
-"geographic-distribution-a.Rmd",
+"geographic-distribution.Rmd",
 "temperature.Rmd",
 "salinity.Rmd",
 "depth.Rmd",
