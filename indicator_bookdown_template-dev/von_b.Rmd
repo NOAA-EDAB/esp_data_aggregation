@@ -1,6 +1,6 @@
 ## von Bertalanffy growth curve
 
-```{r setup_vonb, cache = params$cache}
+```{r setup-vonb, cache = params$cache}
 # install.packages("ggrepel")
 # install.packages("ggpubr")
 # devtools::install_github("james-thorson/FishLife")
@@ -23,7 +23,6 @@ library(NEesp)
 survdata.w.codes <- NEesp::common_names_survdat("bio")
 
 selected.surv <- survdata.w.codes %>%
-  stringr::str_to_sentence()) %>%
   dplyr::filter(common_name == species)
 
 
@@ -36,7 +35,7 @@ selected.surv.clean <- selected.surv %>% drop_na(AGE)
 ```
 
 
-```{r, vonb_model}
+```{r, vonb-model}
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # define the type of von b model
   vb <- vbFuns(param = "Typical")
@@ -112,7 +111,7 @@ if (nrow(selected.surv.clean) > 0) {
 
 
 ### Growth differences among groups
-The growth may vary through time and between sexes. To assess the potential differences in growth among these groups, the global von Bertalanffy growth model was constructed and the residuals of each observation and the predicted size was tested for significant differences among groups and through time. 
+The rate of growth may vary through time and between sexes. To assess for potential differences in growth among these groups, the global von Bertalanffy growth model was constructed and the residuals of each observation and the predicted size was tested for significant differences among groups and through time. 
 
 ```{r, growth_diff_testing}
 # testing a Common L∞ and t0 Model.
@@ -145,12 +144,13 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   selected.surv.w.predicted<-selected.surv.w.predicted %>% mutate("residual.standardized"=(vonB.residual/LENGTH_predicted))
   
 } else {
-  print("NOT ENOUGH DATA TO test differences")
+  print("Not enough data to test differences")
 }
 
 
 
 ```
+
 
 ```{r, ancova model}
 
@@ -170,8 +170,8 @@ if(nrow(selected.surv.w.predicted)>5){
 pred.von.b.ancova<-lm(residual.standardized~SEX+Decade+SEX*Decade ,data = selected.surv.w.predicted)
 
 ancova.table<-summary(pred.von.b.ancova)
-ancova.table<-NULL
-rm(ancova.table)
+
+
 colnames(ancova.table$coefficients)<-c("Estimate" ,  "Std. Error" ,"t value",   "P-value"  )
 
 
@@ -191,7 +191,8 @@ if(nrow(selected.surv.w.predicted)>5){
 
 ```
 ### Residuals by sex and decade
-The fit of each of these grouping to the global model is visualized as the distribution of standardized residuals for each observation. Groups with good fit to the model should have smaller overall residuals that have equal variance above and below zero. If 
+
+The fit of each of these grouping to the global model is visualized as the distribution of standardized residuals for each observation. Groups with good fit to the model should have smaller overall residuals that have equal variance above and below zero idicating the model predicting growth accuratly. If residuals are unballenced or the average of the residiuals devates from zero, this could indicate that this grouping differs from the expected growth from the global model. This deviation from the global model may indicate slower or faster growth than predicted, and this may be due to either changing energetic conditions,  sexual dimorphism, or other variation in the population. 
 
 
 ```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade")}
