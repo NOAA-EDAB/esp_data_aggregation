@@ -3,6 +3,16 @@ title: "Untitled"
 author: "Abigail Tyrell"
 date: "4/23/2021"
 output: html_document
+params:
+  lag: 0 # lag for correlations
+  remove_recent: FALSE
+  cache: FALSE
+  stock: 
+  epu: MAB # epu options: GB, GOM, MAB, SS, All, OTHER, MA, NE, all 
+  region: "" # the stock region
+  path: "" # figure path
+  save: TRUE
+  out: "html"
 ---
 
 ```{r setup, include=FALSE}
