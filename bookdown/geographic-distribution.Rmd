@@ -103,7 +103,7 @@ ggplot2::ggplot(data = ecodata::coast) +
 }else{
   
 #if there are  more than 200 observation pre 1970 then this visualization will capture that data  
-selected.surv.1970<-selected.surv %>% filter(SEASON=="SPRING") %>%
+selected.surv.1970<-selected.surv %>% dplyr::filter(SEASON=="SPRING") %>%
   dplyr::mutate(decade=ggplot2::cut_width(YEAR, width = 10, center =  1980 ))
 
 
@@ -196,7 +196,7 @@ ggplot2::ggplot(data = ecodata::coast) +
 }else{
   
 #if there are  more than 200 observation pre 1970 then this visualization will capture that data  
-selected.surv.1970<-selected.surv %>% filter(SEASON=="FALL") %>%
+selected.surv.1970<-selected.surv %>% dplyr::filter(SEASON=="FALL") %>%
   dplyr::mutate(decade=ggplot2::cut_width(YEAR, width = 10, center =  1980 ))
 
 

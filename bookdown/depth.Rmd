@@ -12,11 +12,7 @@ The range of depths that a species occupies is linked to many other habitat char
 
 ```{r, depth_data_}
 #pull in function to get common names attached to the survey data
-<<<<<<< HEAD:bookdown/06-depth.Rmd
-source(here::here("R","common_names_survdat.r"))
-=======
 source(here::here("R","Common_names_survdat.R"))
->>>>>>> abby:bookdown/depth.Rmd
 #All survey data 
 
 survdata <-Common_names_survdat()
