@@ -1,9 +1,7 @@
----
-title: "Icthyoplankton"
-author: "Ricky Tabandera"
-date: "4/15/2021"
-output: html_document
----
+
+## "Icthyoplankton"
+
+Ricky Tabandera
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -58,6 +56,7 @@ selected_spp<-ich.data.common %>% filter(common_name ==params$species)
 
 
 ### Relative proportion and mean abundance of `r params$species`
+
 
 
 ```{r Relative_proportion plot, fig.cap = paste("Black sea bass", "larva relative proportion")}
