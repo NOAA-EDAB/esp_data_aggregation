@@ -430,7 +430,7 @@ for (i in unique(data$Var)) {
   cat("\n\n")
   
   rpt_card_time <- dplyr::full_join(rpt_card_time,
-                                  time_rpt(data, out_name = i),
+                                  time_rpt(this_data, out_name = i),
                                   by = "Time")
 }
 ```
