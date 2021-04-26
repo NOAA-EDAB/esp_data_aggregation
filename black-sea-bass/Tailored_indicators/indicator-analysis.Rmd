@@ -21,12 +21,13 @@ knitr::opts_chunk$set(
 `%>%` <- magrittr::`%>%`
 dir.create("figures")
 
-# report card to fill
-rpt_card <- c()
+# report cards to fill
+rpt_card_ind <- c() # all indicators
+rpt_card_time <- c() # only statistically sig indicators
 
 # functions
 plot_corr_only <- function(data, title = "",
-                           tab_data) {
+                           tab_data = NULL) {
   if (nrow(data) > 0) {
     my_colors <- c("black", "#B2292E")
     names(my_colors) <- c("FALSE", "TRUE")
@@ -61,7 +62,7 @@ plot_corr_only <- function(data, title = "",
       ggplot2::scale_x_continuous(labels = scales::comma) +
       ggplot2::theme_bw() +
       ggplot2::labs(title = "Correlation between black sea bass and indicator") +
-      ggplot2::ylab(unique(data$Metric)) +
+      ggplot2::ylab(unique(data$Metric[!is.na(data$Metric)])) +
       ggplot2::xlab(unique(data$Var))
 
     # test if bsb is sig over time - overwrite sig
@@ -148,27 +149,43 @@ plot_corr_only <- function(data, title = "",
       ggplot2::xlab("Year") +
       ggplot2::ylab(unique(data$Var))
     
-    tbl <- ggpubr::ggtexttable(tab_data, theme = ggpubr::ttheme("blank"), rows = NULL)  %>%
-      ggpubr::tbody_add_border() %>%
-      ggpubr::thead_add_border()
+    # version with summary table
+    #tbl <- ggpubr::ggtexttable(tab_data, theme = ggpubr::ttheme("blank"), rows = NULL)  %>%
+    #  ggpubr::tbody_add_border() %>%
+    #  ggpubr::thead_add_border()
 
-    big_fig <- ggpubr::ggarrange(
-      ggpubr::ggarrange(bsb_fig, ind_fig, tbl,
-        ncol = 3,
+    #big_fig <- ggpubr::ggarrange(
+    #  ggpubr::ggarrange(bsb_fig, ind_fig, tbl,
+    #    ncol = 3,
+    #    legend = "none",
+    #    labels = c("A", "B", "C")
+    #  ),
+    #  fig, 
+    #  labels = c(NA, "D"),
+    #  common.legend = TRUE,
+    #  legend = "top",
+    #  nrow = 2
+    #) 
+    
+   big_fig <- ggpubr::ggarrange(
+      ggpubr::ggarrange(bsb_fig, ind_fig,
+        ncol = 2,
         legend = "none",
-        labels = c("A", "B", "C")
+        labels = c("A", "B")
       ),
       fig, 
-      labels = c(NA, "D"),
+      labels = c(NA, "C"),
       common.legend = TRUE,
       legend = "top",
       nrow = 2
-    ) +
+    ) 
+    
+    big_fig <- big_fig +
       ggplot2::theme(
         plot.background = ggplot2::element_rect(color = "black", size = 1),
         plot.margin = ggplot2::unit(c(0.1, 0.1, 0.1, 0.1), "cm")
       )
-
+    
     ggpubr::annotate_figure(big_fig, top = title)
 
     # save
@@ -197,13 +214,14 @@ prep_data <- function(data, metric = "Recruitment") {
   data <- data %>%
     read.csv() %>%
     dplyr::filter(
-      Metric == metric,
+      Metric == metric | is.na(Metric),
       stringr::str_detect(Var, "north", negate = TRUE),
       stringr::str_detect(Var, "south", negate = TRUE)
     ) %>%
     dplyr::mutate(Var = Var %>%
       stringr::str_replace_all("\n", " ") %>%
-      stringr::str_wrap(40))
+      stringr::str_wrap(40)) %>%
+    dplyr::arrange(Time)
 
   return(data)
 }
@@ -213,13 +231,64 @@ prep_data2 <- function(data, metric = "Recruitment") {
   data <- data %>%
     read.csv() %>%
     dplyr::filter(
-      Metric == metric
+      Metric == metric | is.na(Metric),
     ) %>%
     dplyr::mutate(Var = Var %>%
       stringr::str_replace_all("\n", " ") %>%
-      stringr::str_wrap(40))
+      stringr::str_wrap(40)) %>%
+    dplyr::arrange(Time)
 
   return(data)
+}
+
+time_rpt <- function(data, col_name = "Val", out_name = "unnamed"){
+  data <- data %>%
+    dplyr::rename(Test = col_name) %>%
+    dplyr::select(Time, Test) %>%
+    dplyr::distinct() 
+  
+  data <- data %>%
+    dplyr::group_by(Time) %>%
+    dplyr::mutate(avg_value = mean(Test, na.rm = TRUE)) %>% # average by year
+    dplyr::select(-Test) %>%
+    dplyr::distinct()
+
+  analysis <- data %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(long_avg = mean(avg_value) %>%
+                    round(digits = 2),
+                  long_sd = sd(avg_value) %>%
+                    round(digits = 2)) %>%
+    dplyr::filter(Time >= 2016) %>%
+    dplyr::mutate(yr5_avg = mean(avg_value) %>%
+                    round(digits = 2),
+                  yr5_sd = sd(avg_value) %>%
+                    round(digits = 2),
+                  avg_value = round(avg_value, digits = 2))
+  
+  status <- c()
+  for(i in 1:nrow(analysis)){
+    if(analysis$avg_value[i] > (analysis$long_avg[1] + analysis$long_sd[1])) { 
+      status[i] <- "high" 
+    } else if(analysis$avg_value[i] < (analysis$long_avg[1] - analysis$long_sd[1])) { 
+      status[i] <- "low" 
+    } else status[i] <- "neutral"
+  }
+  
+  analysis$avg_value <- paste(analysis$avg_value,
+                              status, sep = ", ")
+  
+  output <- rbind(cbind(analysis$Time, analysis$avg_value),
+                  c("5-year mean", paste(analysis$yr5_avg, "±", analysis$yr5_sd)),
+                  c("long-term mean", paste(analysis$long_avg, "±", analysis$long_sd))) %>%
+    tibble::as_tibble()
+  
+
+  
+  colnames(output) <- c("Time", out_name)
+  
+  return(output)
+    
 }
 ```
 
@@ -227,98 +296,68 @@ prep_data2 <- function(data, metric = "Recruitment") {
 
 ### Winter SST anomaly
 ```{r, winter-sst}
-# last 5 years indicator measurements
-recent <- ecodata::ESP_seasonal_oisst_anom %>%
-  dplyr::filter(
-    Time >= 2016,
-    stringr::str_detect(Var, "winter"),
-    stringr::str_detect(ESP, "black_sea_bass"),
-    stringr::str_detect(ESP, "north", negate = TRUE),
-    stringr::str_detect(ESP, "south", negate = TRUE)
-  ) %>%
-  dplyr::select(Time, Value) %>%
-  dplyr::mutate(Value = Value %>%
-                  round(digits = 2))
-
-here::here(
+data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst-anom-stock.csv"
 ) %>%
   prep_data() %>%
-  dplyr::filter(stringr::str_detect(Var, "winter")) %>%
-  plot_corr_only(tab_data = recent)
+  dplyr::filter(stringr::str_detect(Var, "winter")) 
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- time_rpt(data, out_name = "SST_winter")
 ```
 
 ### Fall SST anomaly (prior year)
 ```{r, fall-sst}
-# last 5 years indicator measurements
-recent <- ecodata::ESP_seasonal_oisst_anom %>%
-  dplyr::filter(
-    Time >= 2016,
-    stringr::str_detect(Var, "fall"),
-    stringr::str_detect(ESP, "black_sea_bass"),
-    stringr::str_detect(ESP, "north", negate = TRUE),
-    stringr::str_detect(ESP, "south", negate = TRUE)
-  ) %>%
-  dplyr::select(Time, Value) %>%
-  dplyr::mutate(Value = Value %>%
-                  round(digits = 2))
-
-here::here(
+data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
   "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_sst-anom-stock.csv"
 ) %>%
-  prep_data() %>%
-  dplyr::filter(stringr::str_detect(Var, "fall")) %>%
-  plot_corr_only(tab_data = recent)
+prep_data() %>%
+  dplyr::filter(stringr::str_detect(Var, "fall")) 
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+                                  time_rpt(data, out_name = "SST_fall"),
+                                  by = "Time")
 ```
 
 ### Winter primary production
 ```{r, winter-pp}
-# last 5 years indicator measurements
-recent <- ecodata::ESP_seasonal_pp %>%
-  dplyr::filter(
-    Time >= 2016,
-    stringr::str_detect(Var, "winter"),
-    stringr::str_detect(ESP, "black_sea_bass"),
-    stringr::str_detect(ESP, "north", negate = TRUE),
-    stringr::str_detect(ESP, "south", negate = TRUE)
-  ) %>% 
-  dplyr::select(Time, Value) %>%
-  dplyr::mutate(Value = Value %>%
-                  round(digits = 2))
-
-here::here(
+data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_pp-stock.csv"
 ) %>%
   prep_data() %>%
-  dplyr::filter(stringr::str_detect(Var, "winter")) %>%
-  plot_corr_only(tab_data = recent)
+  dplyr::filter(stringr::str_detect(Var, "winter")) 
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+                                  time_rpt(data, out_name = "PP_winter"),
+                                  by = "Time")
 ```
 
 ### Fall primary production (prior year)
 ```{r, fall-pp}
-# last 5 years indicator measurements
-recent <- ecodata::ESP_seasonal_pp %>%
-  dplyr::filter(
-    Time >= 2016,
-    stringr::str_detect(Var, "fall"),
-    stringr::str_detect(ESP, "black_sea_bass"),
-    stringr::str_detect(ESP, "north", negate = TRUE),
-    stringr::str_detect(ESP, "south", negate = TRUE)
-  ) %>%
-  dplyr::select(Time, Value) %>%
-  dplyr::mutate(Value = Value %>%
-                  round(digits = 2))
-
-here::here(
+data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
   "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_pp-stock.csv"
 ) %>%
   prep_data() %>%
-  dplyr::filter(stringr::str_detect(Var, "fall")) %>%
-  plot_corr_only(tab_data = recent)
+  dplyr::filter(stringr::str_detect(Var, "fall")) 
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+                                  time_rpt(data, out_name = "PP_fall"),
+                                  by = "Time")
 ```
 
 ### Cold pool index (prior year)
@@ -332,20 +371,14 @@ data <- here::here(
 for (i in unique(data$Var)) {
   this_data <- data %>%
     dplyr::filter(Var == i)
-  
-  # last 5 years indicator measurements
-recent <- ecodata::cold_pool %>%
-  dplyr::filter(Time >= 2016,
-                Var == i) %>%
-  dplyr::select(Time, Val, Uncertainty) %>%
-  dplyr::mutate(Val = Val %>%
-                  round(digits = 2),
-                Uncertainty = Uncertainty %>%
-                  round(digits = 2))
 
-  plt <- plot_corr_only(this_data, title = i, tab_data = recent)
+  plt <- plot_corr_only(this_data, title = i)
   print(plt)
   cat("\n\n")
+  
+  rpt_card_time <- dplyr::full_join(rpt_card_time,
+                                  time_rpt(this_data, out_name = i),
+                                  by = "Time")
 }
 ```
 
@@ -356,23 +389,20 @@ recent <- ecodata::cold_pool %>%
 
 ### Sea surface temperature
 
-```{r, sst-table}
-# last 5 years indicator measurements
-recent <- ecodata::long_term_sst %>%
-  dplyr::filter(Time >= 2016) %>%
-  dplyr::select(Time, Value)  %>%
-  dplyr::mutate(Value = Value %>%
-                  round(digits = 2))
-```
-
 #### Recruitment
 ```{r, sst-rec}
-here::here(
+data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst.csv"
 ) %>%
-  prep_data() %>%
-  plot_corr_only(tab_data = recent)
+  prep_data() 
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+                                  time_rpt(data, out_name = "SST_annual"),
+                                  by = "Time")
 ```
 
 #### Abundance
@@ -382,28 +412,10 @@ here::here(
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst.csv"
 ) %>%
   prep_data(metric = "Abundance") %>%
-  plot_corr_only(tab_data = recent)
+  plot_corr_only()
 ```
 
 ### Marine heatwaves
-
-
-```{r, heat-table}
-# print last 5 years indicator measurements
-recent <- ecodata::heatwave %>%
-  dplyr::filter(
-    Time >= 2016,
-    EPU == "MAB"
-  ) %>%
-  dplyr::select(Var, Time, Value) %>%
-  dplyr::group_by(Var, Time) %>%
-  dplyr::mutate(Value2 = mean(Value)) %>% # max intensity is reported for each heatwave
-  dplyr::select(-Value) %>%
-  dplyr::distinct() %>%
-  dplyr::rename(Value = Value2)  %>%
-  dplyr::mutate(Value = Value %>%
-                  round(digits = 2))
-```
 
 #### Recruitment
 ```{r, heat-rec}
@@ -417,14 +429,13 @@ for (i in unique(data$Var)) {
   this_data <- data %>%
     dplyr::filter(Var == i)
   
-  recent2 <- recent %>%
-    dplyr::filter(stringr::str_detect(i, Var)) %>%
-    dplyr::ungroup() %>%
-    dplyr::select(-Var)
-  
-  plt <- plot_corr_only(this_data, title = i, tab_data = recent2)
+  plt <- plot_corr_only(this_data, title = i)
   print(plt)
   cat("\n\n")
+  
+  rpt_card_time <- dplyr::full_join(rpt_card_time,
+                                  time_rpt(data, out_name = i),
+                                  by = "Time")
 }
 ```
 
@@ -439,13 +450,8 @@ data <- here::here(
 for (i in unique(data$Var)) {
   this_data <- data %>%
     dplyr::filter(Var == i)
-    
-  recent2 <- recent %>%
-    dplyr::filter(stringr::str_detect(i, Var)) %>%
-    dplyr::ungroup() %>%
-    dplyr::select(-Var)
   
-  plt <- plot_corr_only(this_data, title = i, tab_data = recent2)
+  plt <- plot_corr_only(this_data, title = i)
   print(plt)
   cat("\n\n")
 }
@@ -526,40 +532,24 @@ return(fig)
 
 ### Stock range
 
-```{r, range-table}
-test <- NEesp::survey %>%
-  dplyr::filter(
-    Species == "Black sea bass",
-    ABUNDANCE > 0
-  ) %>% # why are there entries with 0 abundance but >0 biomass??
-  dplyr::select(YEAR, LAT) %>%
-  dplyr::group_by(YEAR) %>%
-  dplyr::mutate(
-    northern_latitude = max(LAT, na.rm = TRUE),
-    southern_latitude = min(LAT, na.rm = TRUE)
-  ) %>%
-  dplyr::select(-LAT) %>%
-  dplyr::rename(Time = YEAR) %>%
-  dplyr::distinct() %>%
-  dplyr::filter(Time >= 2016)  %>%
-  dplyr::mutate(northern_latitude = northern_latitude %>%
-                  round(digits = 2),
-                southern_latitude = southern_latitude %>%
-                  round(digits = 2))
-```
-
 #### Northern range
 
 Northernmost survey observation in each year.
 
 
 ```{r, north}
-here::here(
+data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_northern-bound.csv"
 ) %>%
-  prep_data2(metric = "Catch") %>%
-  plot_corr_only(tab_data = test %>% dplyr::select(-southern_latitude))
+  prep_data2(metric = "Catch") 
+
+data %>%
+  plot_corr_only()
+
+pt_card_time <- dplyr::full_join(rpt_card_time,
+                                  time_rpt(data, out_name = "northern_range"),
+                                  by = "Time")
 ```
 
 #### Southern range
@@ -568,12 +558,23 @@ Southernmost survey observation in each year.
 
 
 ```{r, south}
-here::here(
+data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_southern-bound.csv"
 ) %>%
-  prep_data2(metric = "Catch") %>%
-  plot_corr_only(tab_data = test %>% dplyr::select(-northern_latitude))
+  prep_data2(metric = "Catch") 
+
+data %>%
+  plot_corr_only()
+
+pt_card_time <- dplyr::full_join(rpt_card_time,
+                                  time_rpt(data, out_name = "southern_range"),
+                                  by = "Time")
 ```
 
 ### Center of mass
+
+## Report card
+```{r, rpt-card}
+knitr::kable(rpt_card_time)
+```
