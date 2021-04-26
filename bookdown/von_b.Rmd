@@ -154,7 +154,7 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
 
 ```{r, ancova model}
 
-if(nrow(selected.surv.w.predicted)>5){
+if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
   
   #cut the yearly data into decades centered on 1980,
   selected.surv.w.predicted <- selected.surv.w.predicted %>%
@@ -196,7 +196,7 @@ The fit of each of these grouping to the global model is visualized as the distr
 
 
 ```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade")}
-if(length(ancova.table)>1){
+if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
   
 selected.surv.w.predicted %>% 
   ggplot(aes(x=SEX, y=residual.standardized, fill=Decade))+
