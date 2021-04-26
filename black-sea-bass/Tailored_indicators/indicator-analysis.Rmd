@@ -542,7 +542,7 @@ data <- here::here(
 data %>%
   plot_corr_only()
 
-pt_card_time <- dplyr::full_join(rpt_card_time,
+rpt_card_time <- dplyr::full_join(rpt_card_time,
                                   time_rpt(data, out_name = "northern_range"),
                                   by = "Time")
 ```
@@ -562,7 +562,7 @@ data <- here::here(
 data %>%
   plot_corr_only()
 
-pt_card_time <- dplyr::full_join(rpt_card_time,
+rpt_card_time <- dplyr::full_join(rpt_card_time,
                                   time_rpt(data, out_name = "southern_range"),
                                   by = "Time")
 ```
