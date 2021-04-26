@@ -42,9 +42,8 @@ plot_corr_only <- function(data, title = "",
       ggplot2::geom_point(ggplot2::aes(color = Time)) +
       ggplot2::scale_color_gradient(
         low = "#7F7FFF",
-        high = "#575195", breaks = seq(1950, 2020,
-          by = 10
-        ),
+        high = "#575195", 
+        breaks = scales::breaks_extended(n = 4),
         name = "Year",
         guide = ggplot2::guide_colorbar(order = 2)
       ) +
@@ -85,9 +84,7 @@ plot_corr_only <- function(data, title = "",
       ggplot2::scale_color_gradient(
         low = "#7F7FFF",
         high = "#575195",
-        breaks = seq(1950, 2020,
-          by = 10
-        ),
+        breaks = scales::breaks_extended(n = 4),
         name = "Year"
       ) +
       ggnewscale::new_scale_color() +
@@ -103,7 +100,7 @@ plot_corr_only <- function(data, title = "",
       ggplot2::theme_bw() +
       ggplot2::labs(title = "Black sea bass") +
       ggplot2::xlab("Year") +
-      ggplot2::ylab(unique(data$Metric))
+      ggplot2::ylab(unique(data$Metric[!is.na(data$Metric)])) 
 
     # test if indicator is sig over time - overwrite sig
     dat <- data %>%
@@ -129,9 +126,8 @@ plot_corr_only <- function(data, title = "",
       ggplot2::geom_point(ggplot2::aes(color = Time)) +
       ggplot2::scale_color_gradient(
         low = "#7F7FFF",
-        high = "#575195", breaks = seq(1950, 2020,
-          by = 10
-        ),
+        high = "#575195", 
+        breaks = scales::breaks_extended(n = 4),
         name = "Year"
       ) +
       ggnewscale::new_scale_color() +
@@ -481,9 +477,8 @@ fig <- ggplot2::ggplot(data, ggplot2::aes(
   ggplot2::geom_point(ggplot2::aes(color = Time)) +
   ggplot2::scale_color_gradient(
     low = "#7F7FFF",
-    high = "#575195", breaks = seq(1950, 2020,
-      by = 10
-    ),
+    high = "#575195",
+    breaks = scales::breaks_extended(n = 4),
     name = "Year",
     guide = ggplot2::guide_colorbar(order = 2)
   ) +
