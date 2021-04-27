@@ -62,6 +62,8 @@ selected_spp<-ich.data.common %>% filter(common_name ==params$species)
 ```{r Relative_proportion plot, fig.cap = paste("Black sea bass", "larva relative proportion")}
 
 if(nrow(selected_spp)>5){
+   selected_spp <- selected_spp %>%
+     dplyr::mutate(decade = ggplot2::cut_width(year, width = 10, center = 1980))
 selected_spp.1<-filter_all(selected_spp, ~!is.na(.))
 
 selected_spp.1 <- selected_spp.1 %>%
