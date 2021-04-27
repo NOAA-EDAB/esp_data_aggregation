@@ -42,7 +42,7 @@ plot_corr_only <- function(data, title = "",
       ggplot2::geom_point(ggplot2::aes(color = Time)) +
       ggplot2::scale_color_gradient(
         low = "#7F7FFF",
-        high = "#575195", 
+        high = "#575195",
         breaks = scales::breaks_extended(n = 4),
         name = "Year",
         guide = ggplot2::guide_colorbar(order = 2)
@@ -101,7 +101,7 @@ plot_corr_only <- function(data, title = "",
       ggplot2::theme_bw() +
       ggplot2::labs(title = "Black sea bass") +
       ggplot2::xlab("Year") +
-      ggplot2::ylab(unique(data$Metric[!is.na(data$Metric)])) 
+      ggplot2::ylab(unique(data$Metric[!is.na(data$Metric)]))
 
     # test if indicator is sig over time - overwrite sig
     dat <- data %>%
@@ -127,7 +127,7 @@ plot_corr_only <- function(data, title = "",
       ggplot2::geom_point(ggplot2::aes(color = Time)) +
       ggplot2::scale_color_gradient(
         low = "#7F7FFF",
-        high = "#575195", 
+        high = "#575195",
         breaks = scales::breaks_extended(n = 4),
         name = "Year"
       ) +
@@ -145,57 +145,57 @@ plot_corr_only <- function(data, title = "",
       ggplot2::labs(title = "Indicator") +
       ggplot2::xlab("Year") +
       ggplot2::ylab(unique(data$Var))
-    
+
     # version with summary table
-    #tbl <- ggpubr::ggtexttable(tab_data, theme = ggpubr::ttheme("blank"), rows = NULL)  %>%
+    # tbl <- ggpubr::ggtexttable(tab_data, theme = ggpubr::ttheme("blank"), rows = NULL)  %>%
     #  ggpubr::tbody_add_border() %>%
     #  ggpubr::thead_add_border()
 
-    #big_fig <- ggpubr::ggarrange(
+    # big_fig <- ggpubr::ggarrange(
     #  ggpubr::ggarrange(bsb_fig, ind_fig, tbl,
     #    ncol = 3,
     #    legend = "none",
     #    labels = c("A", "B", "C")
     #  ),
-    #  fig, 
+    #  fig,
     #  labels = c(NA, "D"),
     #  common.legend = TRUE,
     #  legend = "top",
     #  nrow = 2
-    #) 
-    
-   big_fig <- ggpubr::ggarrange(
+    # )
+
+    big_fig <- ggpubr::ggarrange(
       ggpubr::ggarrange(bsb_fig, ind_fig,
         ncol = 2,
         legend = "none",
         labels = c("A", "B")
       ),
-      fig, 
+      fig,
       labels = c(NA, "C"),
       common.legend = TRUE,
       legend = "top",
       nrow = 2
-    ) 
-    
+    )
+
     big_fig <- big_fig +
       ggplot2::theme(
         plot.background = ggplot2::element_rect(color = "black", size = 1),
         plot.margin = ggplot2::unit(c(0.1, 0.1, 0.1, 0.1), "cm")
       )
-    
+
     ggpubr::annotate_figure(big_fig, top = title)
 
     # save
     file <- paste("figures/",
-        unique(data$Metric)[!is.na(unique(data$Metric))],
-        "_",
-        unique(data$Var),
-        ".png",
-        sep = ""
-      ) %>%
-          stringr::str_replace_all(" ", "_") %>%
-          stringr::str_replace_all("\n", "_")
-    
+      unique(data$Metric)[!is.na(unique(data$Metric))],
+      "_",
+      unique(data$Var),
+      ".png",
+      sep = ""
+    ) %>%
+      stringr::str_replace_all(" ", "_") %>%
+      stringr::str_replace_all("\n", "_")
+
     ggplot2::ggsave(
       filename = file,
       width = 6.5,
@@ -242,12 +242,12 @@ prep_data2 <- function(data, metric = "Recruitment") {
   return(data)
 }
 
-time_rpt <- function(data, col_name = "Val", out_name = "unnamed"){
+time_rpt <- function(data, col_name = "Val", out_name = "unnamed") {
   data <- data %>%
     dplyr::rename(Test = col_name) %>%
     dplyr::select(Time, Test) %>%
-    dplyr::distinct() 
-  
+    dplyr::distinct()
+
   data <- data %>%
     dplyr::group_by(Time) %>%
     dplyr::mutate(avg_value = mean(Test, na.rm = TRUE)) %>% # average by year
@@ -256,40 +256,47 @@ time_rpt <- function(data, col_name = "Val", out_name = "unnamed"){
 
   analysis <- data %>%
     dplyr::ungroup() %>%
-    dplyr::mutate(long_avg = mean(avg_value) %>%
-                    round(digits = 2),
-                  long_sd = sd(avg_value) %>%
-                    round(digits = 2)) %>%
+    dplyr::mutate(
+      long_avg = mean(avg_value) %>%
+        round(digits = 2),
+      long_sd = sd(avg_value) %>%
+        round(digits = 2)
+    ) %>%
     dplyr::filter(Time >= 2016) %>%
-    dplyr::mutate(yr5_avg = mean(avg_value) %>%
-                    round(digits = 2),
-                  yr5_sd = sd(avg_value) %>%
-                    round(digits = 2),
-                  avg_value = round(avg_value, digits = 2))
-  
-  status <- c()
-  for(i in 1:nrow(analysis)){
-    if(analysis$avg_value[i] > (analysis$long_avg[1] + analysis$long_sd[1])) { 
-      status[i] <- "high" 
-    } else if(analysis$avg_value[i] < (analysis$long_avg[1] - analysis$long_sd[1])) { 
-      status[i] <- "low" 
-    } else status[i] <- "neutral"
-  }
-  
-  analysis$avg_value <- paste(analysis$avg_value,
-                              status, sep = ", ")
-  
-  output <- rbind(cbind(analysis$Time, analysis$avg_value),
-                  c("5-year mean", paste(analysis$yr5_avg, "±", analysis$yr5_sd)),
-                  c("long-term mean", paste(analysis$long_avg, "±", analysis$long_sd))) %>%
-    tibble::as_tibble()
-  
+    dplyr::mutate(
+      yr5_avg = mean(avg_value) %>%
+        round(digits = 2),
+      yr5_sd = sd(avg_value) %>%
+        round(digits = 2),
+      avg_value = round(avg_value, digits = 2)
+    )
 
-  
+  status <- c()
+  for (i in 1:nrow(analysis)) {
+    if (analysis$avg_value[i] > (analysis$long_avg[1] + analysis$long_sd[1])) {
+      status[i] <- "high"
+    } else if (analysis$avg_value[i] < (analysis$long_avg[1] - analysis$long_sd[1])) {
+      status[i] <- "low"
+    } else {
+      status[i] <- "neutral"
+    }
+  }
+
+  analysis$avg_value <- paste(analysis$avg_value,
+    status,
+    sep = ", "
+  )
+
+  output <- rbind(
+    cbind(analysis$Time, analysis$avg_value),
+    c("5-year mean", paste(analysis$yr5_avg, "±", analysis$yr5_sd)),
+    c("long-term mean", paste(analysis$long_avg, "±", analysis$long_sd))
+  ) %>%
+    tibble::as_tibble()
+
   colnames(output) <- c("Time", out_name)
-  
+
   return(output)
-    
 }
 ```
 
@@ -302,7 +309,7 @@ data <- here::here(
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst-anom-stock.csv"
 ) %>%
   prep_data() %>%
-  dplyr::filter(stringr::str_detect(Var, "winter")) 
+  dplyr::filter(stringr::str_detect(Var, "winter"))
 
 data %>%
   plot_corr_only()
@@ -316,15 +323,16 @@ data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
   "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_sst-anom-stock.csv"
 ) %>%
-prep_data() %>%
-  dplyr::filter(stringr::str_detect(Var, "fall")) 
+  prep_data() %>%
+  dplyr::filter(stringr::str_detect(Var, "fall"))
 
 data %>%
   plot_corr_only(lag = 1)
 
 rpt_card_time <- dplyr::full_join(rpt_card_time,
-                                  time_rpt(data, out_name = "SST_fall"),
-                                  by = "Time")
+  time_rpt(data, out_name = "SST_fall"),
+  by = "Time"
+)
 ```
 
 ### Winter primary production
@@ -334,14 +342,15 @@ data <- here::here(
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_pp-stock.csv"
 ) %>%
   prep_data() %>%
-  dplyr::filter(stringr::str_detect(Var, "winter")) 
+  dplyr::filter(stringr::str_detect(Var, "winter"))
 
 data %>%
   plot_corr_only()
 
 rpt_card_time <- dplyr::full_join(rpt_card_time,
-                                  time_rpt(data, out_name = "PP_winter"),
-                                  by = "Time")
+  time_rpt(data, out_name = "PP_winter"),
+  by = "Time"
+)
 ```
 
 ### Fall primary production (prior year)
@@ -351,14 +360,15 @@ data <- here::here(
   "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_pp-stock.csv"
 ) %>%
   prep_data() %>%
-  dplyr::filter(stringr::str_detect(Var, "fall")) 
+  dplyr::filter(stringr::str_detect(Var, "fall"))
 
 data %>%
   plot_corr_only(lag = 1)
 
 rpt_card_time <- dplyr::full_join(rpt_card_time,
-                                  time_rpt(data, out_name = "PP_fall"),
-                                  by = "Time")
+  time_rpt(data, out_name = "PP_fall"),
+  by = "Time"
+)
 ```
 
 ### Cold pool index (prior year)
@@ -376,10 +386,11 @@ for (i in unique(data$Var)) {
   plt <- plot_corr_only(this_data, title = i, lag = 1)
   print(plt)
   cat("\n\n")
-  
+
   rpt_card_time <- dplyr::full_join(rpt_card_time,
-                                  time_rpt(this_data, out_name = i),
-                                  by = "Time")
+    time_rpt(this_data, out_name = i),
+    by = "Time"
+  )
 }
 ```
 
@@ -396,14 +407,15 @@ data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst.csv"
 ) %>%
-  prep_data() 
+  prep_data()
 
 data %>%
   plot_corr_only()
 
 rpt_card_time <- dplyr::full_join(rpt_card_time,
-                                  time_rpt(data, out_name = "SST_annual"),
-                                  by = "Time")
+  time_rpt(data, out_name = "SST_annual"),
+  by = "Time"
+)
 ```
 
 #### Abundance
@@ -429,14 +441,15 @@ data <- here::here(
 for (i in unique(data$Var)) {
   this_data <- data %>%
     dplyr::filter(Var == i)
-  
+
   plt <- plot_corr_only(this_data, title = i)
   print(plt)
   cat("\n\n")
-  
+
   rpt_card_time <- dplyr::full_join(rpt_card_time,
-                                  time_rpt(this_data, out_name = i),
-                                  by = "Time")
+    time_rpt(this_data, out_name = i),
+    by = "Time"
+  )
 }
 ```
 
@@ -451,7 +464,7 @@ data <- here::here(
 for (i in unique(data$Var)) {
   this_data <- data %>%
     dplyr::filter(Var == i)
-  
+
   plt <- plot_corr_only(this_data, title = i)
   print(plt)
   cat("\n\n")
@@ -542,14 +555,15 @@ data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_northern-bound.csv"
 ) %>%
-  prep_data2(metric = "Catch") 
+  prep_data2(metric = "Catch")
 
 data %>%
   plot_corr_only()
 
 rpt_card_time <- dplyr::full_join(rpt_card_time,
-                                  time_rpt(data, out_name = "northern_range"),
-                                  by = "Time")
+  time_rpt(data, out_name = "northern_range"),
+  by = "Time"
+)
 ```
 
 #### Southern range
@@ -562,14 +576,15 @@ data <- here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_southern-bound.csv"
 ) %>%
-  prep_data2(metric = "Catch") 
+  prep_data2(metric = "Catch")
 
 data %>%
   plot_corr_only()
 
 rpt_card_time <- dplyr::full_join(rpt_card_time,
-                                  time_rpt(data, out_name = "southern_range"),
-                                  by = "Time")
+  time_rpt(data, out_name = "southern_range"),
+  by = "Time"
+)
 ```
 
 ### Center of mass

@@ -12,11 +12,11 @@ og_pull$survdat$STRATUM <- as.numeric(og_pull$survdat$STRATUM)
 mod_data <- survdat::strat_prep(
   surveyData = og_pull$survdat %>%
     dplyr::filter(
-      SVSPP == 141 # , # bsb only
-      # LENGTH < 19 # small fish only
+      # SVSPP == 141 # , # bsb only
+       LENGTH < 19 # small fish only
     ) %>%
-    dplyr::filter(SEASON == "FALL"),
-  #  dplyr::filter(SEASON == "SPRING"),
+  #  dplyr::filter(SEASON == "FALL"),
+    dplyr::filter(SEASON == "SPRING"),
   areaPolygon = shape,
   areaDescription = "STRATA"
 )
@@ -32,17 +32,19 @@ test <- survdat::swept_area(mod_data,
   areaDescription = "STRATA"
 )
 # test
+head(test)
 
 # add common name
 data <- test %>%
+  dplyr::filter(SVSPP == 141) %>% # filter after calculating
   dplyr::mutate(Species = "Black sea bass")
 # data
 
-# write.csv(data, here::here("black-sea-bass", "swept_area_info_spring.csv"))
-write.csv(data, here::here("black-sea-bass", "swept_area_info_fall.csv"))
+write.csv(data, here::here("black-sea-bass", "swept_area_info_small_spring.csv"))
+# write.csv(data, here::here("black-sea-bass", "swept_area_info_small_fall.csv"))
 
-spring <- read.csv(here::here("black-sea-bass", "swept_area_info_spring.csv"))
-fall <- read.csv(here::here("black-sea-bass", "swept_area_info_fall.csv"))
+spring <- read.csv(here::here("black-sea-bass", "swept_area_info_small_spring.csv"))
+fall <- read.csv(here::here("black-sea-bass", "swept_area_info_small_fall.csv"))
 
 spring <- spring %>%
   dplyr::mutate(Season = "Spring")
@@ -50,9 +52,12 @@ fall <- fall %>%
   dplyr::mutate(Season = "Fall")
 
 all <- rbind(spring, fall)
-write.csv(all, here::here("black-sea-bass", "swept_area_info_all_bsb.csv"))
+write.csv(all, here::here("black-sea-bass", "swept_area_info_small_bsb.csv"))
+# somehow data is almost the same when looking at small lengths???
 
-big <- read.csv(here::here("black-sea-bass", "swept_area_info_all_bsb.csv"))
+# plots ----
+big <- NEesp::swept %>%
+  dplyr::filter(Species == "Black sea bass")
 
 big_abun <- NEesp::plot_swept(big, var = "abundance")
 big_bio <- NEesp::plot_swept(big, var = "biomass")
@@ -103,3 +108,16 @@ ggpubr::ggarrange(
 )
 
 dev.off()
+
+# trying with calc_swept_area ----
+
+# `:=` <- data.table::`:=` # error - operator not being used correctly
+# `:=` <- `<-` # error - STRATUM not defined
+# `:=` <- `=` # error - STRATUM not defined
+survdat::calc_swept_area(surveyData = og_pull, 
+                filterBySeason = "FALL")
+# problem with L56 of `strat_prep` being wrapped by `calc_swept_area` 
+# https://github.com/NOAA-EDAB/survdat/blob/master/R/strat_prep.R
+# `if(areaPolygon == 'NEFSC strata'){...}` assigns `poststratFlag <- F`
+# which triggers `surveyData <- surveyData[, areaDescription := STRATUM]`
+# but `STRATUM` does not exist / cannot be interpreted by the operator

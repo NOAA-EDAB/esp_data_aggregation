@@ -1,0 +1,249 @@
+---
+title: "`r stringr::str_to_sentence(params$species)` indicator analysis"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: word_document
+params: 
+  species: "black sea bass" # species name (for titles, etc.)
+  fig_size: 6.5 # figure size (inches. square shape)
+---
+
+```{r, setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.height = params$fig_size,
+  fig.width = params$fig_size,
+  dpi = 200 # not sure why default 72 dpi looks worse in word output compared to saved figs
+)
+
+`%>%` <- magrittr::`%>%`
+
+source(here::here("R-scripts", "package-dev", "tailored_rpt_functions.R"))
+```
+
+## Recruitment 
+
+### Winter SST anomaly
+```{r, winter-sst}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst-anom-stock.csv"
+  ),
+  pattern = c("north", "south", "winter"),
+  remove = c(TRUE, TRUE, FALSE),
+  species = params$species
+)
+```
+
+### Fall SST anomaly (prior year)
+```{r, fall-sst}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
+  "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_sst-anom-stock.csv"
+  ),
+  pattern = c("north", "south", "fall"),
+  remove = c(TRUE, TRUE, FALSE),
+  lag = 1,
+  species = params$species
+)
+```
+
+### Winter primary production
+```{r, winter-pp}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_pp-stock.csv"
+  ),
+  pattern = c("north", "south", "winter"),
+  remove = c(TRUE, TRUE, FALSE),
+  species = params$species
+)
+```
+
+### Fall primary production (prior year)
+```{r, fall-pp}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
+  "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_pp-stock.csv"
+  ),
+  pattern = c("north", "south", "fall"),
+  remove = c(TRUE, TRUE, FALSE),
+  lag = 1,
+  species = params$species
+)
+```
+
+### Cold pool index (prior year)
+```{r, cold-pool}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
+  "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_cold-pool.csv"
+  ),
+  lag = 1,
+  species = params$species
+)
+```
+
+### Predator abundance
+
+
+## Ecosystem
+
+### Sea surface temperature
+
+#### Recruitment
+```{r, sst-rec}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst.csv"
+  ),
+  species = params$species
+)
+```
+
+#### Abundance
+```{r, sst-abun}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst.csv"
+  ),
+  metric = "Abundance",
+  species = params$species
+)
+```
+
+### Marine heatwaves
+
+#### Recruitment
+```{r, heat-rec}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_heatwave.csv"
+  ),
+  species = params$species
+)
+```
+
+#### Abundance
+```{r, heat-abun}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_heatwave.csv"
+  ),
+  metric = "Abundance",
+  species = params$species
+)
+```
+
+## Management
+
+### Total catch
+```{r, catch, fig.height = 4.25, fig.width = 3.75}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_time.csv"
+) %>%
+  read.csv() %>%
+  dplyr::filter(Metric == "Catch") # pull catch only
+
+my_colors <- c("black", "#B2292E")
+names(my_colors) <- c("FALSE", "TRUE")
+
+data$sig <- factor(data$sig, levels = c("TRUE", "FALSE"))
+
+fig <- ggplot2::ggplot(data, ggplot2::aes(
+  x = Val,
+  y = Value
+)) +
+  ggplot2::geom_path(ggplot2::aes(color = Time)) +
+  ggplot2::geom_point(ggplot2::aes(color = Time)) +
+  ggplot2::scale_color_gradient(
+    low = "#7F7FFF",
+    high = "#575195",
+    breaks = scales::breaks_extended(n = 4),
+    name = "Year",
+    guide = ggplot2::guide_colorbar(order = 2)
+  ) +
+  ggnewscale::new_scale_color() +
+  ggplot2::stat_smooth(ggplot2::aes(color = sig),
+    method = "lm"
+  ) +
+  ggplot2::scale_color_manual(
+    values = my_colors,
+    name = "Statistically significant\n(p < 0.05)",
+    drop = FALSE,
+    guide = ggplot2::guide_legend(order = 1)
+  ) +
+  ggplot2::scale_y_continuous(labels = scales::comma) +
+  ggplot2::theme_bw() +
+  ggplot2::labs(title = "Catch over time") +
+  ggplot2::ylab(paste(unique(data$Description), unique(data$Units), sep = ", ")) +
+  ggplot2::xlab("Year") +
+  ggplot2::theme(
+    legend.position = "top",
+    legend.box = "vertical",
+    legend.spacing = ggplot2::unit(0.1, units = "cm"),
+    legend.box.spacing = ggplot2::unit(0.1, units = "cm")
+  )
+
+ggplot2::ggsave(
+  filename = paste("figures/",
+    unique(data$Var) %>%
+      stringr::str_replace_all(" ", "_") %>%
+      stringr::str_replace_all("\n", "_"),
+    ".png",
+    sep = ""
+  ),
+  width = 3.75,
+  height = 4.25,
+  units = "in",
+  device = "png"
+)
+
+return(fig)
+```
+
+### CPUE
+
+### Catch vs TAC
+
+### Stock range
+
+#### Northern range
+
+Northernmost survey observation in each year.
+
+
+```{r, north}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_northern-bound.csv"
+  ),
+  metric = "Catch",
+  species = params$species
+)
+```
+
+#### Southern range
+
+Southernmost survey observation in each year.
+
+
+```{r, south}
+wrap_analysis(file_path = here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_southern-bound.csv"
+  ),
+  metric = "Catch",
+  species = params$species
+)
+```
+
+### Center of mass
+
+## Report card
+```{r, rpt-card}
+knitr::kable(rpt_card_time)
+```
