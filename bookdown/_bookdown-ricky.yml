@@ -19,7 +19,7 @@ rmd_files: [
 "abundance.Rmd",
 "biomass.Rmd", 
 "bbmsy.Rmd",
-"Ichthyoplankton.Rmd"
+"Ichthyoplankton.Rmd",
 "recruitment.Rmd",
 "age-diversity.Rmd",
 "climate-vulnerability.Rmd", 
