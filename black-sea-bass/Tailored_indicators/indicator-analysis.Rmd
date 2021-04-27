@@ -22,12 +22,12 @@ knitr::opts_chunk$set(
 dir.create("figures")
 
 # report cards to fill
-rpt_card_ind <- c() # all indicators
+rpt_card_ind <- c() # all indicators (not used yet/ever)
 rpt_card_time <- c() # only statistically sig indicators
 
 # functions
 plot_corr_only <- function(data, title = "",
-                           tab_data = NULL) {
+                           tab_data = NULL, lag = 0) { # option to correct for lagged data
   if (nrow(data) > 0) {
     my_colors <- c("black", "#B2292E")
     names(my_colors) <- c("FALSE", "TRUE")
@@ -67,7 +67,8 @@ plot_corr_only <- function(data, title = "",
     # test if bsb is sig over time - overwrite sig
     dat <- data %>%
       dplyr::select(Value, Time) %>%
-      dplyr::distinct()
+      dplyr::distinct() %>%
+      dplyr::mutate(Time = Time + lag)
     model <- lm(Value ~ Time, data = dat)
     pval <- summary(model)$coefficients[2, 4]
     data$sig <- (pval < 0.05)
@@ -75,7 +76,7 @@ plot_corr_only <- function(data, title = "",
     bsb_fig <- ggplot2::ggplot(
       data,
       ggplot2::aes(
-        x = Time,
+        x = Time + lag,
         y = Value
       )
     ) +
@@ -185,14 +186,18 @@ plot_corr_only <- function(data, title = "",
     ggpubr::annotate_figure(big_fig, top = title)
 
     # save
-    ggplot2::ggsave(
-      filename = paste("figures/",
-        unique(data$Var) %>%
-          stringr::str_replace_all(" ", "_") %>%
-          stringr::str_replace_all("\n", "_"),
+    file <- paste("figures/",
+        unique(data$Metric)[!is.na(unique(data$Metric))],
+        "_",
+        unique(data$Var),
         ".png",
         sep = ""
-      ),
+      ) %>%
+          stringr::str_replace_all(" ", "_") %>%
+          stringr::str_replace_all("\n", "_")
+    
+    ggplot2::ggsave(
+      filename = file,
       width = 6.5,
       height = 6.5,
       units = "in",
@@ -315,7 +320,7 @@ prep_data() %>%
   dplyr::filter(stringr::str_detect(Var, "fall")) 
 
 data %>%
-  plot_corr_only()
+  plot_corr_only(lag = 1)
 
 rpt_card_time <- dplyr::full_join(rpt_card_time,
                                   time_rpt(data, out_name = "SST_fall"),
@@ -349,7 +354,7 @@ data <- here::here(
   dplyr::filter(stringr::str_detect(Var, "fall")) 
 
 data %>%
-  plot_corr_only()
+  plot_corr_only(lag = 1)
 
 rpt_card_time <- dplyr::full_join(rpt_card_time,
                                   time_rpt(data, out_name = "PP_fall"),
@@ -368,7 +373,7 @@ for (i in unique(data$Var)) {
   this_data <- data %>%
     dplyr::filter(Var == i)
 
-  plt <- plot_corr_only(this_data, title = i)
+  plt <- plot_corr_only(this_data, title = i, lag = 1)
   print(plt)
   cat("\n\n")
   
