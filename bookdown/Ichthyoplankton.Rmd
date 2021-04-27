@@ -3,7 +3,7 @@
 
 Ricky Tabandera
 
-```{r setup, include=FALSE}
+```{r ich-setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 # install.packages("R.matlab")
 # library(R.matlab)
@@ -16,7 +16,7 @@ library(sf)
 Ichthyoplankton surveyed during the Marine Resources Monitoring, Assessment, and Prediction (MARMAP; 1977-1987) and Ecosystem Monitoring (EcoMon; 1999-2008) programs.  Stations were stratified from Cape Hatteras, North Carolina to Cape Sable, Nova Scotia and captured multiple taxa of planktonic organisms and enumerated their mean abundance and relative proportion of catch. Surveys were conducted year round, however catches are averaged to two month intervals(i.e. season 1 represents January-February, Season 6; November-December). 
 
 
-```{r cars}
+```{r, ich-wrangle}
 # used to convert the .mat file into well behaved data frame
 
 # 
