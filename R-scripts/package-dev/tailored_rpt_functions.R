@@ -26,9 +26,7 @@ plot_corr_only <- function(data, title = "", lag = 0, species = "species") {
     )) +
       ggplot2::geom_path(ggplot2::aes(color = Time)) +
       ggplot2::geom_point(ggplot2::aes(color = Time)) +
-      ggplot2::scale_color_gradient(
-        low = "#7F7FFF",
-        high = "#575195",
+      viridis::scale_color_viridis(
         breaks = scales::breaks_extended(n = 4),
         name = "Year",
         guide = ggplot2::guide_colorbar(order = 2)
@@ -68,9 +66,7 @@ plot_corr_only <- function(data, title = "", lag = 0, species = "species") {
     ) +
       ggplot2::geom_path(ggplot2::aes(color = Time)) +
       ggplot2::geom_point(ggplot2::aes(color = Time)) +
-      ggplot2::scale_color_gradient(
-        low = "#7F7FFF",
-        high = "#575195",
+      viridis::scale_color_viridis(
         breaks = scales::breaks_extended(n = 4),
         name = "Year"
       ) +
@@ -111,9 +107,7 @@ plot_corr_only <- function(data, title = "", lag = 0, species = "species") {
     ) +
       ggplot2::geom_path(ggplot2::aes(color = Time)) +
       ggplot2::geom_point(ggplot2::aes(color = Time)) +
-      ggplot2::scale_color_gradient(
-        low = "#7F7FFF",
-        high = "#575195",
+      viridis::scale_color_viridis(
         breaks = scales::breaks_extended(n = 4),
         name = "Year"
       ) +
