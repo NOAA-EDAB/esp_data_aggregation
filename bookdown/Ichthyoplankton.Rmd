@@ -3,7 +3,7 @@
 
 Ricky Tabandera
 
-```{r ich-setup, include=FALSE}
+```{r ich-setup}
 knitr::opts_chunk$set(echo = TRUE)
 # install.packages("R.matlab")
 # library(R.matlab)
