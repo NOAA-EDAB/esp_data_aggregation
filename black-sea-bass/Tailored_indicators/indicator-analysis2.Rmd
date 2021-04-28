@@ -245,5 +245,41 @@ wrap_analysis(file_path = here::here(
 
 ## Report card
 ```{r, rpt-card}
+# create textural table
+# color based on ecosystem favorability
+
+# kable for comparison
 knitr::kable(rpt_card_time)
+cat("\n\n")
+
+tab <- ggpubr::ggtexttable(rpt_card_time, rows = NULL,
+                  theme = ggpubr::ttheme("classic"))
+
+#index <- matrix(nrow = nrow(rpt_card_time),
+#                ncol = ncol(rpt_card_time))
+
+print(nrow(rpt_card_time))
+print(ncol(rpt_card_time))
+#for(i in 1:nrow(rpt_card_time)){
+#  for(j in 1:ncol(rpt_card_time)){
+#    print(i)
+#    print(j)
+   # print(rpt_card_time[i,])
+  #  print(rpt_card_time[,j])
+  #  print("high" %in% rpt_card_time[i,j])
+  #  print(stringr::str_detect(rpt_card_time[i,j], "high"))
+#    if(TRUE){
+#      index[i,j] <- 1
+#    } else {
+#      index[i,j] <- 0
+#    }
+#  }
+}
+
+index2 <- which(index == 1, arr.ind = TRUE)
+
+tab <- ggpubr::table_cell_bg(tab, row = index2[,1], column = index2[,2], linewidth = 5,
+                    fill="darkolivegreen1", color = "darkolivegreen4")
+
+tab
 ```
