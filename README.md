@@ -3,7 +3,7 @@
 ![gitleaks](https://github.com/NOAA-EDAB/esp_data_aggregation/workflows/gitleaks/badge.svg)
 
 ## View current data products
-https://NOAA-EDAB.github.io/esp_data_aggregation/docs
+https://noaa-edab.github.io/ESP_docs/docs
 
 ## Introduction
 Ecosystem and Socioeconomic Profiles (ESPs) are a scientific product to support [Integrated Ecosystem Assessment](https://www.integratedecosystemassessment.noaa.gov/) (IEA). IEA seeks to improve understanding and management of fisheries through incorporating natural, social, and economic data into fisheries analyses and management plans. ESPs are a structured framework developed by the Alaska Science Center to integrate ecosystem and socioeconomic information into the stock assessment process.<sup>[1]</sup>
@@ -14,7 +14,7 @@ Here we adapt the ESP process for use in the management of Northeast stocks. Our
 3. Create detailed reports for the most vulnerable stocks, incorporating data from the originial risk assessment as well as detailed species-specific information.
 
 ## Running a report
-The current preliminary report pulls data from many existing sources and creates several data visualizations. Reports for all northeast stocks have been compiled and can be viewed [here](https://NOAA-EDAB.github.io/esp_data_aggregation). We have recently aggregated our data, functions, and report templates into a preliminary R package that can be viewed on the [package branch](https://github.com/NOAA-EDAB/esp_data_aggregation/tree/package). The package can be downloaded locally in R with the command `devtools::install_github("NOAA-EDAB/esp_data_aggregation@package")`. A report can then be generated locally with the command `NEesp::render_ind_report("Acadian redfish")` (replace "Acadian redfish" with the name of species of interest). Please note, report generation will take some time (2+ minutes per species). These reports are a work in progress and should not be viewed as a final or complete product at this time. We do not guarantee that these reports are free from errors; please contact us if you notice any issues.
+The current preliminary report pulls data from many existing sources and creates several data visualizations. Reports for all northeast stocks have been compiled and can be viewed [here](https://noaa-edab.github.io/ESP_docs/docs). We have recently aggregated our data, functions, and report templates into a preliminary R package that can be viewed on the [package branch](https://github.com/NOAA-EDAB/esp_data_aggregation/tree/package). The package can be downloaded locally in R with the command `devtools::install_github("NOAA-EDAB/esp_data_aggregation@package")`. A report can then be generated locally with the command `NEesp::render_ind_report("Acadian redfish")` (replace "Acadian redfish" with the name of species of interest). Please note, report generation will take some time (2+ minutes per species). These reports are a work in progress and should not be viewed as a final or complete product at this time. We do not guarantee that these reports are free from errors; please contact us if you notice any issues.
 
 ## Next steps
 We continue to synthesize existing data on Northeast stocks, environment, and socioeconomics. We are currently refining our data analyses and beginning the preliminary risk assessment process. 
