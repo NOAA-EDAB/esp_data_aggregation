@@ -23,6 +23,7 @@ rmd_files: [
 "age-diversity.Rmd",
 "climate-vulnerability.Rmd", 
 "socio-economic-title-page.Rmd", #Title page 
+"Commercial-landings.Rmd",
 "recreational-landings-effort.Rmd",
 "catch.Rmd",
 "ffmsy.Rmd", 
