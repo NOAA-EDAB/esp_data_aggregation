@@ -242,7 +242,7 @@ The average position of observations across all years of surveys
 ```{r, centroid-plot}
 # spaces in chunk name mess up figure numbers (bookdown bug)
 
-if(nrow(selected.surv.centroid)<4){
+if(nrow(selected.surv.centroid)>4){
   
 latmin<-(min(selected.surv.centroid$lat)-1)
 latmax<-(max(selected.surv.centroid$lat)+1)
