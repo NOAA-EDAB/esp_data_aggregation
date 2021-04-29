@@ -1,0 +1,170 @@
+# Risk assessment
+
+A preliminary risk analysis was conducted by ranking all species according to their indicator values. A high rank number and a normalized rank near 1 indicates that the species is at risk or of importance based on the measured indicator values. When a species was missing an indicator, it was assigned a normalized rank of 0.5.
+
+## Figures
+
+### Relative to all other stocks
+
+Risk was calculated over time for all indicators that were documented for five or more species in a given year. Risk was calculated as the average of the past 5 years, as a percent of the historical average. The normalized risk value plotted here reflects the normalized rank of this stock compared to all other stocks in that year.
+
+#### Comprehensive risk assessment {-}
+
+
+```{r, comp-risk-plot, fig.height = 10, fig.cap = paste(species, "comprehensive risk assessment")}
+ggplot2::ggplot(
+  risk_data,
+  ggplot2::aes(
+    x = reorder(Region, -total_risk),
+    y = Indicator %>%
+      stringr::str_replace_all("_", " "),
+    fill = norm_rank
+  )
+) +
+  ggplot2::geom_raster(stat = "identity") +
+  ggplot2::facet_grid(
+    rows = ggplot2::vars(category),
+    scales = "free",
+    space = "free"
+  ) +
+  ggplot2::theme_bw() +
+  viridis::scale_fill_viridis(
+    limits = c(0, 1),
+    breaks = c(0, 0.5, 1),
+    direction = -1,
+    na.value = "gray90",
+    name = "Normalized rank"
+  ) +
+  ggplot2::theme(
+    legend.position = "top",
+    strip.text.y = ggplot2::element_text(angle = 0)
+  ) +
+  ggplot2::xlab("Stock region") +
+  ggplot2::ylab("Indicator")
+```
+
+
+#### Normalized rank of magnitude of change compared to historical value by year {-}
+
+
+```{r, year-risk-hist, fig.height = 10, fig.cap = paste(species, "normalized rank of magnitude of change compared to historical value by year")}
+NEesp::plot_risk_by_year(risk_year_hist_data,
+  indicator = "all",
+  title = "Change compared to historical",
+  include_legend = "yes"
+)
+```
+
+
+#### Normalized rank of value in each year {-}
+
+
+```{r, year-risk-value, fig.height = 10, fig.cap = paste(species, "normalized rank of value in each year")}
+NEesp::plot_risk_by_year(risk_year_value_data,
+  indicator = "all",
+  title = "Value compared to other stocks",
+  include_legend = "yes"
+)
+```
+
+
+### Within a single stock
+
+For each stock, a five-year running mean was calculated for each indicator. Indicator values were then ranked for all years where a value was present. The normalized risk values plotted here reflects the normalized rank of each year compared to all other years.
+
+
+```{r, stock-risk, fig.height = 10, fig.cap = paste(species, "within-stock risk over time")}
+NEesp::plot_risk_by_year(risk_species_data,
+  indicator = "all",
+    title = "Within-stock risk over time",
+  include_legend = "yes"
+)
+```
+
+
+## Data
+
+### Relative to all other stocks
+
+#### Comprehensive risk assessment {-}
+```{r, risk_comp}
+data <- risk_data %>%
+  dplyr::select(
+    Species, Region, Indicator, category, Year, Value, rank,
+    n_stocks_per_indicator, norm_rank, total_risk, overall_rank,
+    overall_stocks
+  ) %>%
+  dplyr::mutate(
+    Value = Value %>%
+      format(big.mark = ",", scientific = FALSE, digits = 2),
+    norm_rank = norm_rank %>%
+      format(scientific = FALSE, digits = 3),
+    total_risk = total_risk %>%
+      round(digits = 2)
+  )
+
+NEesp::make_html_table(data, type = params$file)
+```
+
+#### Normalized rank of magnitude of change compared to historical value by year {-}
+```{r, risk_hist}
+data <- risk_year_hist_data %>%
+  dplyr::mutate(
+    Rank = paste(rank, "out of", n_stocks_per_indicator),
+    Value2 = Value %>%
+      format(big.mark = ",", scientific = FALSE, digits = 2),
+    Normalized_rank = norm_rank %>% round(digits = 2)
+  ) %>%
+  dplyr::select(Region, category, Indicator, Year, Value2, Rank, Normalized_rank) %>%
+  dplyr::rename("Value" = "Value2") %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
+  "Region", "Category", "Indicator", "Year", "Value (% of historical)",
+  "Rank", "Normalized rank"
+))
+```
+
+#### Normalized rank of value in each year {-}
+```{r, risk_year}
+data <- risk_year_value_data %>%
+  dplyr::mutate(
+    Rank = paste(rank, "out of", n_stocks_per_indicator),
+    Value2 = Value %>%
+      format(big.mark = ",", scientific = FALSE, digits = 2),
+    Normalized_rank = norm_rank %>% round(digits = 2)
+  ) %>%
+  dplyr::select(Region, category, Indicator, Year, Value2, Rank, Normalized_rank) %>%
+  dplyr::rename("Value" = "Value2") %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
+  "Region", "Category", "Indicator", "Year", "Value (magnitude)",
+  "Rank", "Normalized rank"
+))
+```
+
+### Value within each stock, ranked by year 
+```{r, risk_within}
+data <- risk_species_data %>%
+  dplyr::mutate(
+    Rank = paste(rank, "out of", n_years_per_indicator),
+    Value2 = Value %>%
+      format(big.mark = ",", scientific = FALSE, digits = 2),
+    Normalized_rank = norm_rank %>% round(digits = 2)
+  ) %>%
+  dplyr::select(Region, category, Indicator, Year, Value2, Rank, Normalized_rank) %>%
+  dplyr::rename("Value" = "Value2") %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, 
+                       type = params$file,
+                       col_names = c(
+  "Region", "Category", "Indicator", "Year", "Value",
+  "Rank", "Normalized rank"
+))
+```

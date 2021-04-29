@@ -23,10 +23,6 @@ library(NEesp)
 survdata.w.codes <- NEesp::common_names_survdat("bio")
 
 selected.surv <- survdata.w.codes %>%
-<<<<<<< HEAD
-=======
-  stringr::str_to_sentence()) %>%
->>>>>>> main
   dplyr::filter(common_name == species)
 
 
@@ -39,11 +35,7 @@ selected.surv.clean <- selected.surv %>% drop_na(AGE)
 ```
 
 
-<<<<<<< HEAD
 ```{r, vonb-model}
-=======
-```{r, vonb_model}
->>>>>>> main
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # define the type of von b model
   vb <- vbFuns(param = "Typical")
@@ -119,11 +111,7 @@ if (nrow(selected.surv.clean) > 0) {
 
 
 ### Growth differences among groups
-<<<<<<< HEAD
 The rate of growth may vary through time and between sexes. To assess for potential differences in growth among these groups, the global von Bertalanffy growth model was constructed and the residuals of each observation and the predicted size was tested for significant differences among groups and through time. 
-=======
-The growth may vary through time and between sexes. To assess the potential differences in growth among these groups, the global von Bertalanffy growth model was constructed and the residuals of each observation and the predicted size was tested for significant differences among groups and through time. 
->>>>>>> main
 
 ```{r, growth_diff_testing}
 # testing a Common L∞ and t0 Model.
@@ -156,27 +144,17 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   selected.surv.w.predicted<-selected.surv.w.predicted %>% mutate("residual.standardized"=(vonB.residual/LENGTH_predicted))
   
 } else {
-<<<<<<< HEAD
   print("Not enough data to test differences")
-=======
-  print("NOT ENOUGH DATA TO test differences")
->>>>>>> main
 }
 
 
 
 ```
 
-<<<<<<< HEAD
 
-```{r, ancova model}
-
-if(nrow(selected.surv.w.predicted)>5){
-=======
 ```{r, ancova model}
 
 if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
->>>>>>> main
   
   #cut the yearly data into decades centered on 1980,
   selected.surv.w.predicted <- selected.surv.w.predicted %>%
@@ -192,13 +170,8 @@ if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
 pred.von.b.ancova<-lm(residual.standardized~SEX+Decade+SEX*Decade ,data = selected.surv.w.predicted)
 
 ancova.table<-summary(pred.von.b.ancova)
-<<<<<<< HEAD
 
 
-=======
-ancova.table<-NULL
-rm(ancova.table)
->>>>>>> main
 colnames(ancova.table$coefficients)<-c("Estimate" ,  "Std. Error" ,"t value",   "P-value"  )
 
 
@@ -212,30 +185,18 @@ colnames(ancova.table$coefficients)<-c("Estimate" ,  "Std. Error" ,"t value",   
 
 ```{r, vonb ancova table}
 
-<<<<<<< HEAD
 if(nrow(selected.surv.w.predicted)>5){
-=======
-if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
->>>>>>> main
   knitr::kable(ancova.table$coefficients, digits = 3)
 }else("No model output")
 
 ```
 ### Residuals by sex and decade
-<<<<<<< HEAD
 
 The fit of each of these grouping to the global model is visualized as the distribution of standardized residuals for each observation. Groups with good fit to the model should have smaller overall residuals that have equal variance above and below zero idicating the model predicting growth accuratly. If residuals are unballenced or the average of the residiuals devates from zero, this could indicate that this grouping differs from the expected growth from the global model. This deviation from the global model may indicate slower or faster growth than predicted, and this may be due to either changing energetic conditions,  sexual dimorphism, or other variation in the population. 
 
 
 ```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade")}
-if(length(ancova.table)>1){
-=======
-The fit of each of these grouping to the global model is visualized as the distribution of standardized residuals for each observation. Groups with good fit to the model should have smaller overall residuals that have equal variance above and below zero. If 
-
-
-```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade")}
 if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
->>>>>>> main
   
 selected.surv.w.predicted %>% 
   ggplot(aes(x=SEX, y=residual.standardized, fill=Decade))+
