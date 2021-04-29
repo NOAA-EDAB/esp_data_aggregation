@@ -3,7 +3,7 @@
 ![gitleaks](https://github.com/NOAA-EDAB/esp_data_aggregation/workflows/gitleaks/badge.svg)
 
 ## View current data products
-https://NOAA-EDAB.github.io/esp_data_aggregation/docs
+https://noaa-edab.github.io/ESP_docs
 
 ## Introduction
 Ecosystem and Socioeconomic Profiles (ESPs) are a scientific product to support [Integrated Ecosystem Assessment](https://www.integratedecosystemassessment.noaa.gov/) (IEA). IEA seeks to improve understanding and management of fisheries through incorporating natural, social, and economic data into fisheries analyses and management plans. ESPs are a structured framework developed by the Alaska Science Center to integrate ecosystem and socioeconomic information into the stock assessment process.<sup>[1]</sup>
