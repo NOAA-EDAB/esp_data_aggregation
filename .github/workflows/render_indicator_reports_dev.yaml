@@ -12,10 +12,6 @@ jobs:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
     
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-        with:
-          ref: abby
           
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
