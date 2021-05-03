@@ -26,8 +26,9 @@ jobs:
           ls
           mkdir ~/test-folder
           echo "Some line" > ~/test-folder/test.txt
+          ls
         shell: bash
-#        working-directory: ./esp_data_aggregation
+        working-directory: ./esp_data_aggregation
 
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
