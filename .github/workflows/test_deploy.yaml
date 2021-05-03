@@ -25,7 +25,6 @@ jobs:
         run: |
           mkdir test-folder
           echo "Some line" > test-folder/test.txt
-        shell: bash
         working-directory: ./esp_data_aggregation
 
       - name: Deploy to Github
