@@ -25,7 +25,7 @@ jobs:
         run: |
           ls
           mkdir ~/test-folder
-          echo "Some line" > test-folder/test.txt
+          echo "Some line" > ~/test-folder/test.txt
         shell: bash
 #        working-directory: ./esp_data_aggregation
 
