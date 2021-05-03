@@ -28,9 +28,9 @@ jobs:
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          REPOSITORY_NAME: ESP_docs
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: test-folder # The folder the action should deploy.
-          TARGET_FOLDER: Reports
-          CLEAN: false # Automatically remove deleted files from the deploy branch
+          repository-name: ESP_docs
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: test-folder # The folder the action should deploy.
+          target-folder: Reports
+          clean: false # Automatically remove deleted files from the deploy branch
