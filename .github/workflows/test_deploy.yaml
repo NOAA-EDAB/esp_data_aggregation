@@ -24,6 +24,7 @@ jobs:
       - name: Make a folder
         run: mkdir "test-folder"
         shell: bash
+        working-directory: ./esp_data_aggregation
 
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
