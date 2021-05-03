@@ -23,7 +23,8 @@ jobs:
               
       - name: Make a folder with a file
         run: |
-          mkdir test-folder
+          ls
+          mkdir ~/test-folder
           echo "Some line" > test-folder/test.txt
         working-directory: ./esp_data_aggregation
 
