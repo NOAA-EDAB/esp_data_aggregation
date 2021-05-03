@@ -12,10 +12,10 @@ The range of depths that a species occupies is linked to many other habitat char
 
 ```{r, depth_data_}
 #pull in function to get common names attached to the survey data
-source(here::here("R","Common_names_survdat.R"))
+#source(here::here("R","Common_names_survdat.R"))
 #All survey data 
 
-survdata <-Common_names_survdat()
+survdata <-NEesp::common_names_survdat()
 
 
 # # abundance is adjusted but not length for bigalo data

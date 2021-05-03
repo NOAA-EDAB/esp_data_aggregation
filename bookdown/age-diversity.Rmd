@@ -14,9 +14,9 @@ suppressPackageStartupMessages(library(dbutils))
 
 ```{r data_wrangling_age, cache = params$cache, cache.lazy = FALSE}
 # load survdat
-source(here::here("R","Common_names_survdat.R"))
+#source(here::here("R","Common_names_survdat.R"))
 
-survdata.w.codes<-Common_names_survdat("bio")
+survdata.w.codes<- NEesp::common_names_survdat("bio")
 
 selected.spp <- survdata.w.codes %>% filter(common_name == params$species)
 
