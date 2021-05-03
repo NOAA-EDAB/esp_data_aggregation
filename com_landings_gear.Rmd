@@ -1,0 +1,49 @@
+---
+title: "Commercial landings"
+author: "Ricky Tabandera"
+date: "5/3/2021"
+output: html_document
+prarams:
+  species: "Black sea bass"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(comlandr)
+library(dbutils)
+library(remotes)
+library(tidyverse)
+
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+load(file="com_landings_test.rdata")
+com_gear<-`50B45718`
+com_key<-unique(com_gear$NESPP3)
+sp_key<-NEesp::species_key
+sp_key<- sp_key %>% dplyr::rename("NESPP3"="SVSPP")
+key_join<-dplyr::left_join(com_gear,sp_key,by="NESPP3" )
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+key_join <-key_join %>% drop_na()
+key_join %>% mutate(Species = forcats::fct_reorder(Species, as.numeric(GEAR), fun = mean))
+
+key_join%>%
+  ggplot2::ggplot(aes(x=Species,fill=GEAR))+ggplot2::geom_bar(position = "fill")+theme(axis.text.x = element_text(angle = 90))
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
