@@ -16,6 +16,17 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: abby
+          
+      - name: Checkout esp_data_aggregation
+        uses: actions/checkout@v2
+        with:
+          path: abby
+
+      - name: Checkout ESP_docs
+        uses: actions/checkout@v2
+        with:
+          repository: NOAA-EDAB/ESP_docs
+          path: main
               
       - name: Install Pandoc
         run: brew install pandoc
