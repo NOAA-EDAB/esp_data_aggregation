@@ -20,14 +20,13 @@ knitr::opts_chunk$set(
 
 `%>%` <- magrittr::`%>%`
 
-source(here::here("R-scripts", "package-dev", "tailored_rpt_functions.R"))
 ```
 
 ## Recruitment 
 
 ### Winter SST anomaly
 ```{r, winter-sst}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst-anom-stock.csv"
   ),
@@ -39,7 +38,7 @@ wrap_analysis(file_path = here::here(
 
 ### Fall SST anomaly (prior year)
 ```{r, fall-sst}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
   "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_sst-anom-stock.csv"
   ),
@@ -52,7 +51,7 @@ wrap_analysis(file_path = here::here(
 
 ### Winter primary production
 ```{r, winter-pp}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_pp-stock.csv"
   ),
@@ -64,7 +63,7 @@ wrap_analysis(file_path = here::here(
 
 ### Fall primary production (prior year)
 ```{r, fall-pp}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
   "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_pp-stock.csv"
   ),
@@ -77,7 +76,7 @@ wrap_analysis(file_path = here::here(
 
 ### Cold pool index (prior year)
 ```{r, cold-pool}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
   "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_cold-pool.csv"
   ),
@@ -95,7 +94,7 @@ wrap_analysis(file_path = here::here(
 
 #### Recruitment
 ```{r, sst-rec}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst.csv"
   ),
@@ -105,7 +104,7 @@ wrap_analysis(file_path = here::here(
 
 #### Abundance
 ```{r, sst-abun}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst.csv"
   ),
@@ -118,7 +117,7 @@ wrap_analysis(file_path = here::here(
 
 #### Recruitment
 ```{r, heat-rec}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_heatwave.csv"
   ),
@@ -128,7 +127,7 @@ wrap_analysis(file_path = here::here(
 
 #### Abundance
 ```{r, heat-abun}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_heatwave.csv"
   ),
@@ -217,7 +216,7 @@ Northernmost survey observation in each year.
 
 
 ```{r, north}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_northern-bound.csv"
   ),
@@ -232,7 +231,7 @@ Southernmost survey observation in each year.
 
 
 ```{r, south}
-wrap_analysis(file_path = here::here(
+NEesp::wrap_analysis(file_path = here::here(
   "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
   "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_southern-bound.csv"
   ),
