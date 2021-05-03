@@ -86,8 +86,7 @@ jobs:
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          repository-name: ESP_docs
-          token: ${{ secrets.GH_PAT }}
+          REPOSITORY_NAME: ESP_docs
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH: main # The branch the action should deploy to.
           FOLDER: action_reports # The folder the action should deploy.
