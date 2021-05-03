@@ -274,12 +274,9 @@ index2 <- which(index == 1, arr.ind = TRUE)
 
 for(i in 1:nrow(index2)
     ){
-  print(index2[i,])
-  r <- as.numeric(index2[i,1])
-  print(r)
+  r <- as.numeric(index2[i,1]) + 1 # rows are off by 1
   
    c <- as.numeric(index2[i,2])
-  print(c)
   
   # CANNOT have row = 1
   if(r != 1){
