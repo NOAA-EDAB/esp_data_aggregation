@@ -30,4 +30,5 @@ rmd_files: [
 "ffmsy.Rmd", 
 "revenue.Rmd", 
 "management.Rmd", 
-"risk-assessment.Rmd"]
+"risk-assessment.Rmd",
+"appendix.Rmd"]
