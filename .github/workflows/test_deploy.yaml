@@ -21,8 +21,10 @@ jobs:
           repository: NOAA-EDAB/ESP_docs
           path: main
               
-      - name: Make a folder
-        run: mkdir "test-folder"
+      - name: Make a folder with a file
+        run: |
+          mkdir test-folder
+          echo "Some line" > test-folder/test.txt
         shell: bash
         working-directory: ./esp_data_aggregation
 
