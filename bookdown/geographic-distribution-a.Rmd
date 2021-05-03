@@ -21,7 +21,7 @@ Using fisheries independant data from bottom trawls in `survdat`. Several metric
 ```
 
 ```{r}
-survdata.w.codes<-Common_names_survdat("bio")
+survdata.w.codes<-NEesp::common_names_survdat("bio")
 
 ```
 

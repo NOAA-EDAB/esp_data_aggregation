@@ -17,8 +17,8 @@ source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
 
 NEesp::render_ind_report("Black sea bass", 
                          input = here::here("bookdown"),
-                         config = "_bookdown-abby.yml", # render with abby files
-                        # config = "_bookdown-ricky.yml", # render with ricky files
+                        # config = "_bookdown-abby.yml", # render with abby files
+                         config = "_bookdown-ricky.yml", # render with ricky files
                         # if there is a file called `_bookdown.yml`, it will be used as the config file!
                         # no matter what you set for `config = ` !!!
                          params_to_use = list(
