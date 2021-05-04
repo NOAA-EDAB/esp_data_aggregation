@@ -67,9 +67,7 @@ jobs:
           `%>%` <- magrittr::`%>%`
           `.pt` <- ggplot2::`.pt`
           # function to make reports
-          fun <- function(x) {
-            NEesp::render_ind_report(x, 
-                                     input = "bookdown",
+          fun <- function(x) {NEesp::render_ind_report(x, input = "bookdown",
                                      config = "_bookdown-ricky.yml",
                                      params_to_use = list(species_ID = x,
                                                           ricky_survey_data = NEesp::bio_survey, 
