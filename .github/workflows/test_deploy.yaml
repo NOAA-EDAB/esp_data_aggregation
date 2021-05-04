@@ -29,7 +29,9 @@ jobs:
           file.create("test-folder/test-file.txt")
           list.files()
           setwd("test-folder")
-          list.files(full.names = TRUE)'
+          list.files(full.names = TRUE)
+          setwd("..")
+          list.files()'
 #        shell: bash
 #        working-directory: ~/esp_data_aggregation
 
