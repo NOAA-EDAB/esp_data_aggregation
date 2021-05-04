@@ -14,31 +14,36 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: abby
+          
+      - name: Set up R
+        uses: r-lib/actions/setup-r@master
+        with: 
+          r-version: '4.0.3' # problem with using 4.0.4   
             
-#      - name: Make a folder with a file
-#        run: |
-#          ls
-#          mkdir ~/esp_data_aggregation/test-folder
-#          echo "Some line" > ~/esp_data_aggregation/test-folder/test.txt
-#          ls
+      - name: Make a folder with a file
+        run: |
+          Rscript -e 'list.files()
+          dir.create("test-folder")
+          file.create("test-folder/test-file.txt")
+          list.files()'
 #        shell: bash
 #        working-directory: ~/esp_data_aggregation
 
-      - name: What's here
-        run: ls
-        shell: bash
+#      - name: What's here
+#        run: ls
+#        shell: bash
         
-      - name: Make a folder
-        run: mkdir ~/test-folder
-        shell: bash
+#      - name: Make a folder
+#        run: mkdir ~/test-folder
+#        shell: bash
 
-      - name: Make a file
-        run: echo "Some line" > ~/test-folder/test.txt
-        shell: bash
+#      - name: Make a file
+#        run: echo "Some line" > ~/test-folder/test.txt
+#        shell: bash
         
-      - name: What's here (again)
-        run: ls
-        shell: bash
+#      - name: What's here (again)
+#        run: ls
+#        shell: bash
         
 #      - name: What's here (in abby branch?)
 #        run: |
