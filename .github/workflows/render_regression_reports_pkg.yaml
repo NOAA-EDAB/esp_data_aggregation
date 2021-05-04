@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
               
       - name: Install Pandoc
         run: brew install pandoc
@@ -53,11 +55,11 @@ jobs:
           Rscript -e 'NEesp::render_all_reg()'
           
       - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          REPOSITORY_NAME: ESP_docs
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: main # The branch the action should deploy to.
-          FOLDER: Regressions # The folder the action should deploy.
-          TARGET_FOLDER: Regression_reports
-          CLEAN: false # Automatically remove deleted files from the deploy branch
+          repository-name: ESP_docs
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: Regressions # The folder the action should deploy.
+          target-folder: Regression_reports
+          clean: false # Automatically remove deleted files from the deploy branch
