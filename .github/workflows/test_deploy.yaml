@@ -45,7 +45,7 @@ jobs:
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          workspace: abby
+          workspace: ~/abby
           repository-name: NOAA-EDAB/ESP_docs
           token: ${{ secrets.GH_PAT }}
           branch: main # The branch the action should deploy to.
