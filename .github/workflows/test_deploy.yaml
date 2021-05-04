@@ -13,7 +13,7 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-          path: abby
+          ref: abby
           
       - name: Set up R
         uses: r-lib/actions/setup-r@master
@@ -48,7 +48,7 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-          path: abby
+          ref: abby
 #          persist-credentials: false
           
       - name: Set up R
@@ -84,7 +84,7 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-          path: abby
+          ref: abby
           
       - name: Set up R
         uses: r-lib/actions/setup-r@master
@@ -120,7 +120,7 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-          path: abby
+          ref: abby
           persist-credentials: false
           
       - name: Set up R
@@ -157,7 +157,7 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-          path: shiny
+          ref: shiny
         
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
@@ -178,7 +178,7 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-          path: shiny
+          ref: shiny
           persist-credentials: false
         
       - name: Deploy to Github
@@ -200,7 +200,7 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-          path: shiny
+          ref: shiny
         
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
@@ -222,7 +222,7 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-          path: shiny
+          ref: shiny
           persist-credentials: false
         
       - name: Deploy to Github
