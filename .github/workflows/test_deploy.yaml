@@ -24,14 +24,10 @@ jobs:
         run: |
           Rscript -e 'list.files()
           setwd("abby")
-          list.files()
+          list.files(all.files = TRUE)
           dir.create("test-folder")
           file.create("test-folder/test-file.txt")
-          list.files()
-          setwd("test-folder")
-          list.files(full.names = TRUE)
-          setwd("..")
-          list.files()'
+          list.files(all.files = TRUE)'
 #        shell: bash
 #        working-directory: ~/esp_data_aggregation
 
