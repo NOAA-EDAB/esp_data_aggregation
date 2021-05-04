@@ -60,9 +60,7 @@ jobs:
                  
       - name: Render reports
         run: |
-          Rscript -e '
-          list.files()
-          
+          Rscript -e '         
           # source scripts
           `%>%` <- magrittr::`%>%`
           `.pt` <- ggplot2::`.pt`
