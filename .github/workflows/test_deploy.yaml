@@ -28,36 +28,17 @@ jobs:
           dir.create("test-folder")
           file.create("test-folder/test-file.txt")
           list.files(all.files = TRUE)'
-#        shell: bash
-#        working-directory: ~/esp_data_aggregation
-
-#      - name: What's here
-#        run: ls
-#        shell: bash
         
-#      - name: Make a folder
-#        run: mkdir ~/test-folder
-#        shell: bash
-
-#      - name: Make a file
-#        run: echo "Some line" > ~/test-folder/test.txt
-#        shell: bash
+      - name: Checkout ESP_docs
+        uses: actions/checkout@v2
+        with:
+          repository: NOAA-EDAB/ESP_docs
+          path: main
         
-#      - name: What's here (again)
-#        run: ls
-#        shell: bash
-        
-#      - name: What's here (in abby branch?)
-#        run: |
-#          cd abby
-#          ls
-#        shell: bash
-        
-#      - name: Checkout ESP_docs
-#        uses: actions/checkout@v2
-#        with:
-#          repository: NOAA-EDAB/ESP_docs
-#          path: main
+      - name: What's going on
+        run: |
+          Rscript -e 'list.files()
+          list.files("main", all.files = TRUE)'
         
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
