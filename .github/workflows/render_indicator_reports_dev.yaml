@@ -66,8 +66,8 @@ jobs:
           # source scripts
           `%>%` <- magrittr::`%>%`
           `.pt` <- ggplot2::`.pt`
-          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
-          source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
+#          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
+#          source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
 
           # function to make reports
           fun <- function(x) {
