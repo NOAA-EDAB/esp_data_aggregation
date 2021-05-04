@@ -21,15 +21,37 @@ jobs:
           repository: NOAA-EDAB/ESP_docs
           path: main
               
-      - name: Make a folder with a file
-        run: |
-          ls
-          mkdir ~/esp_data_aggregation/test-folder
-          echo "Some line" > ~/esp_data_aggregation/test-folder/test.txt
-          ls
-        shell: bash
+#      - name: Make a folder with a file
+#        run: |
+#          ls
+#          mkdir ~/esp_data_aggregation/test-folder
+#          echo "Some line" > ~/esp_data_aggregation/test-folder/test.txt
+#          ls
+#        shell: bash
 #        working-directory: ~/esp_data_aggregation
 
+      - name: What's here
+        run: ls
+        shell: bash
+        
+      - name: Make a folder
+        run: mkdir ~/abby/test-folder
+        shell: bash
+
+      - name: Make a file
+        run: echo "Some line" > ~/abby/test-folder/test.txt
+        shell: bash
+        
+      - name: What's here (again)
+        run: ls
+        shell: bash
+        
+      - name: What's here (in abby branch?)
+        run: |
+          cd abby
+          ls
+        shell: bash
+        
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
