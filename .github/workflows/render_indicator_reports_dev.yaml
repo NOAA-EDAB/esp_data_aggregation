@@ -84,5 +84,3 @@ jobs:
           folder: action_reports # The folder the action should deploy.
           target-folder: Reports
           clean: false # Automatically remove deleted files from the deploy branch
-
-          
