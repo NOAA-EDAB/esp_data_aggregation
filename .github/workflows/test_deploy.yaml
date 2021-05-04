@@ -38,7 +38,8 @@ jobs:
       - name: What's going on
         run: |
           Rscript -e 'list.files()
-          list.files("main", all.files = TRUE)'
+          list.files("main", all.files = TRUE)
+          setwd("abby")'
         
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
