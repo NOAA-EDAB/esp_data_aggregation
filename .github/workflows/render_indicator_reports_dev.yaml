@@ -66,9 +66,6 @@ jobs:
           # source scripts
           `%>%` <- magrittr::`%>%`
           `.pt` <- ggplot2::`.pt`
-#          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
-#          source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
-
           # function to make reports
           fun <- function(x) {
             NEesp::render_ind_report(x, 
@@ -85,7 +82,9 @@ jobs:
           # run
           lapply(NEesp::species_key$Species[1], fun)
           list.files()'
-          
+#          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
+#          source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
+
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
