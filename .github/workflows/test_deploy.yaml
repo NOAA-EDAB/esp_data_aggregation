@@ -23,6 +23,8 @@ jobs:
       - name: Make a folder with a file
         run: |
           Rscript -e 'list.files()
+          setwd("abby")
+          list.files()
           dir.create("test-folder")
           file.create("test-folder/test-file.txt")
           list.files()'
