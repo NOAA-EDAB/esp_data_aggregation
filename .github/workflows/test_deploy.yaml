@@ -53,11 +53,11 @@ jobs:
 #          ls
 #        shell: bash
         
-      - name: Checkout ESP_docs
-        uses: actions/checkout@v2
-        with:
-          repository: NOAA-EDAB/ESP_docs
-          path: main
+#      - name: Checkout ESP_docs
+#        uses: actions/checkout@v2
+#        with:
+#          repository: NOAA-EDAB/ESP_docs
+#          path: main
         
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
