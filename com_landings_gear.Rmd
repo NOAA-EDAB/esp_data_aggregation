@@ -17,16 +17,14 @@ library(tidyverse)
 
 ```
 
-## R Markdown
+### Commercial fishing gear 
+Fishing gear can range widely in their catchability, selectivity, and effective areas of opperations. Using `comlandr` to extract reported gear used in the many commercial fisheries in the north east and any trends and/or shifts that may have occured as one potentual explanitory factor on changes in fisheries landings/revenue.  
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
+```{r gear-wrangling}
 load(file="com_landings_test.rdata")
 com_gear<-`50B45718`
 com_key<-unique(com_gear$NESPP3)
+#unsure if NESPP3 and SVSPP are the same, going to asume so and correct later if not 
 sp_key<-NEesp::species_key
 sp_key<- sp_key %>% dplyr::rename("NESPP3"="SVSPP")
 key_join<-dplyr::left_join(com_gear,sp_key,by="NESPP3" )
@@ -37,13 +35,66 @@ key_join<-dplyr::left_join(com_gear,sp_key,by="NESPP3" )
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-key_join <-key_join %>% drop_na()
-key_join %>% mutate(Species = forcats::fct_reorder(Species, as.numeric(GEAR), fun = mean))
+```{r gear, echo=FALSE}
 
-key_join%>%
-  ggplot2::ggplot(aes(x=Species,fill=GEAR))+ggplot2::geom_bar(position = "fill")+theme(axis.text.x = element_text(angle = 90))
+key_join <-key_join %>% drop_na()
+key_join %>% 
+  group_by(YEAR, GEAR) %>%
+  dplyr::summarise(gear.count=length(GEAR))%>%
+  ggplot2::ggplot(aes(x= YEAR,y= gear.count,color=GEAR))+
+  ggplot2::geom_point()+
+  geom_line()+
+  nmfspalette::scale_fill_nmfs(palette = "regional web")+
+  theme(axis.text.x = element_text(angle = 90))+
+  xlab("Year")+
+  ylab("# gear type records")
+
 
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r, gear-diversity}
+
+gear.diversity<-key_join %>% group_by(YEAR, EPU, GEAR) %>% summarise(gear.count=(length(GEAR))) 
+
+gear.diversity<-gear.diversity %>%
+  group_by(YEAR, GEAR) %>%
+  mutate( gear.prop= (gear.count/sum(gear.count)))
+
+
+gear.H<-gear.diversity %>% group_by(YEAR, EPU) %>% dplyr::summarise(shannon= -sum(gear.prop*log(gear.prop))) 
+
+gear.H %>% ggplot(aes(x=YEAR, y= shannon, color=EPU))+
+  geom_point()+
+  geom_line()+
+  xlab("Year")+
+  ylab("gear diversity index (H')")
+
+
+
+
+```
+
+```{r}
+
+key_join %>%
+  ggplot2::ggplot(aes(x=GEAR,fill=GEAR))+
+  ggplot2::geom_point()+
+  nmfspalette::scale_fill_nmfs(palette = "regional web")+
+  theme(axis.text.x = element_text(angle = 90))
+
+```
+
+
+```{r, gear-by-species}
+gear.spp<-key_join%>% filter(Species=="Black sea bass")
+  
+gear.spp %>% 
+  group_by(YEAR, EPU) %>% 
+  mutate(gear.count=length(GEAR)) %>%  
+  ggplot2::ggplot(aes(x=YEAR, y=gear.count, fill=GEAR))+
+  ggplot2::geom_bar(stat="identity")+
+  theme(axis.text.x = element_text(angle = 90))
+
+```
+
