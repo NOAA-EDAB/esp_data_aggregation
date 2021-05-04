@@ -16,7 +16,7 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-          ref: abby
+#          ref: abby
           persist-credentials: false
 
       - name: Install Pandoc
