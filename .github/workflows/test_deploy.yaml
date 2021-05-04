@@ -3,7 +3,42 @@ on:
 
 name: Test deploying on ESP_docs
 jobs: 
-  build1:
+  one-repo-here:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:          
+      - name: Checkout esp_data_aggregation
+        uses: actions/checkout@v2
+        with:
+          path: abby
+          
+      - name: Set up R
+        uses: r-lib/actions/setup-r@master
+        with: 
+          r-version: '4.0.3' # problem with using 4.0.4   
+            
+      - name: Make a folder with a file
+        run: |
+          Rscript -e 'list.files()
+          install.packages("here")
+          list.files(here::here(), all.files = TRUE)
+          dir.create(here::here("test-folder"))
+          file.create(here::here("test-folder/test-file.txt"))
+          list.files(here::here(), all.files = TRUE)'
+        
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: abby # The branch the action should deploy to.
+          folder: test-folder # The folder the action should deploy.
+          target-folder: test-folder
+          clean: false # Automatically remove deleted files from the deploy branch
+##
+  one-repo-here-nopersist:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GH_PAT }}
@@ -24,18 +59,215 @@ jobs:
       - name: Make a folder with a file
         run: |
           Rscript -e 'list.files()
-          setwd("abby")
-          list.files(all.files = TRUE)
-          dir.create("test-folder")
-          file.create("test-folder/test-file.txt")
-          list.files(all.files = TRUE)'
+          install.packages("here")
+          list.files(here::here(), all.files = TRUE)
+          dir.create(here::here("test-folder"))
+          file.create(here::here("test-folder/test-file.txt"))
+          list.files(here::here(), all.files = TRUE)'
         
-      - name: Update git???
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: abby # The branch the action should deploy to.
+          folder: test-folder # The folder the action should deploy.
+          target-folder: test-folder
+          clean: false # Automatically remove deleted files from the deploy branch
+##
+  two-repos-here:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:          
+      - name: Checkout esp_data_aggregation
+        uses: actions/checkout@v2
+        with:
+          path: abby
+          
+      - name: Set up R
+        uses: r-lib/actions/setup-r@master
+        with: 
+          r-version: '4.0.3' # problem with using 4.0.4   
+            
+      - name: Make a folder with a file
         run: |
-          /usr/bin/git init
-          /usr/bin/git config user.name atyrell3
-          /usr/bin/git config user.email atyrell3@users.noreply.github.com
+          Rscript -e 'list.files()
+          install.packages("here")
+          list.files(here::here(), all.files = TRUE)
+          dir.create(here::here("test-folder"))
+          file.create(here::here("test-folder/test-file.txt"))
+          list.files(here::here(), all.files = TRUE)'
         
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: test-folder # The folder the action should deploy.
+          target-folder: test-folder
+          clean: false # Automatically remove deleted files from the deploy branch
+          repository-name: NOAA-EDAB/ESP_docs
+##
+  two-repos-here-nopersist:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:          
+      - name: Checkout esp_data_aggregation
+        uses: actions/checkout@v2
+        with:
+          path: abby
+          persist-credentials: false
+          
+      - name: Set up R
+        uses: r-lib/actions/setup-r@master
+        with: 
+          r-version: '4.0.3' # problem with using 4.0.4   
+            
+      - name: Make a folder with a file
+        run: |
+          Rscript -e 'list.files()
+          install.packages("here")
+          list.files(here::here(), all.files = TRUE)
+          dir.create(here::here("test-folder"))
+          file.create(here::here("test-folder/test-file.txt"))
+          list.files(here::here(), all.files = TRUE)'
+        
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: test-folder # The folder the action should deploy.
+          target-folder: test-folder
+          clean: false # Automatically remove deleted files from the deploy branch
+          repository-name: NOAA-EDAB/ESP_docs
+##
+  dont-even-make-files:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:          
+      - name: Checkout esp_data_aggregation
+        uses: actions/checkout@v2
+        with:
+          path: shiny
+        
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: abby # The branch the action should deploy to.
+          folder: www # The folder the action should deploy.
+          target-folder: test-folder
+          clean: false # Automatically remove deleted files from the deploy branch
+##
+  dont-even-make-files-np:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:          
+      - name: Checkout esp_data_aggregation
+        uses: actions/checkout@v2
+        with:
+          path: shiny
+          persist-credentials: false
+        
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: abby # The branch the action should deploy to.
+          folder: www # The folder the action should deploy.
+          target-folder: test-folder
+          clean: false # Automatically remove deleted files from the deploy branch
+##
+  dont-even-make-files2:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:          
+      - name: Checkout esp_data_aggregation
+        uses: actions/checkout@v2
+        with:
+          path: shiny
+        
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: www # The folder the action should deploy.
+          target-folder: test-folder
+          clean: false # Automatically remove deleted files from the deploy branch
+          repository-name: NOAA-EDAB/ESP_docs
+##
+  dont-even-make-files-np2:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:          
+      - name: Checkout esp_data_aggregation
+        uses: actions/checkout@v2
+        with:
+          path: shiny
+          persist-credentials: false
+        
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: www # The folder the action should deploy.
+          target-folder: test-folder
+          clean: false # Automatically remove deleted files from the deploy branch
+          repository-name: NOAA-EDAB/ESP_docs
+## 
+#  build1:
+#    runs-on: ubuntu-latest
+#    env:
+#      GITHUB_PAT: ${{ secrets.GH_PAT }}
+#      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+#    steps:          
+#      - name: Checkout esp_data_aggregation
+#        uses: actions/checkout@v2
+#        with:
+#          path: abby
+#          persist-credentials: false
+          
+#      - name: Set up R
+#        uses: r-lib/actions/setup-r@master
+#        with: 
+#          r-version: '4.0.3' # problem with using 4.0.4   
+            
+#      - name: Make a folder with a file
+#        run: |
+#          Rscript -e 'list.files()
+#          setwd("abby")
+#          list.files(all.files = TRUE)
+#          dir.create("test-folder")
+#          file.create("test-folder/test-file.txt")
+#          list.files(all.files = TRUE)'
+        
+#      - name: Update git???
+#        run: |
+#          /usr/bin/git init
+#          /usr/bin/git config user.name atyrell3
+#          /usr/bin/git config user.email atyrell3@users.noreply.github.com
+#        
 #      - name: Checkout ESP_docs
 #        uses: actions/checkout@v2
 #        with:
@@ -58,13 +290,13 @@ jobs:
 #          TARGET_FOLDER: Reports
 #          CLEAN: false # Automatically remove deleted files from the deploy branch
           
-      - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          token: ${{ secrets.GH_PAT }}
-          branch: abby # The branch the action should deploy to.
-          folder: test-folder # The folder the action should deploy.
-          target-folder: Reports
-          clean: false # Automatically remove deleted files from the deploy branch
-          
- #         repository-name: NOAA-EDAB/ESP_docs
+#      - name: Deploy to Github
+#        uses: JamesIves/github-pages-deploy-action@4.1.1
+#        with:
+#          token: ${{ secrets.GH_PAT }}
+#          branch: abby # The branch the action should deploy to.
+#          folder: test-folder # The folder the action should deploy.
+#          target-folder: Reports
+#          clean: false # Automatically remove deleted files from the deploy branch
+#          
+#         repository-name: NOAA-EDAB/ESP_docs
