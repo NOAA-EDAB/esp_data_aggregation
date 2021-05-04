@@ -48,6 +48,6 @@ jobs:
           repository-name: NOAA-EDAB/ESP_docs
           token: ${{ secrets.GH_PAT }}
           branch: main # The branch the action should deploy to.
-          folder: test-folder # The folder the action should deploy.
+          folder: abby/test-folder # The folder the action should deploy.
           target-folder: Reports
           clean: false # Automatically remove deleted files from the deploy branch
