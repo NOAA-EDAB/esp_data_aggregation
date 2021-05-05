@@ -26,13 +26,13 @@ NEesp::generate_plot(survey_data,
 ### Summary
 ```{r, salin_summary}
 NEesp::generate_table(survey_data,
-                      type = params$file,
+  type = params$file,
   variable = "SURFSALIN",
   cap = "Surface salinity"
 )
 
 NEesp::generate_table(survey_data,
-                      type = params$file,
+  type = params$file,
   variable = "BOTSALIN",
   cap = "Bottom salinity"
 )
@@ -62,10 +62,11 @@ data <- survey_data %>%
   ) %>%
   NEesp::character_to_factor() # mean by season-year
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c(
-  "Year", "Season", "Region",
-  "Mean surface salinity", "Mean bottom salinity"
-))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c(
+    "Year", "Season", "Region",
+    "Mean surface salinity", "Mean bottom salinity"
+  )
+)
 ```

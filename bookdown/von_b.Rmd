@@ -12,14 +12,13 @@ library(rfishbase)
 library(ggpubr)
 library(FSA)
 library(NEesp)
-
 ```
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
 
-#survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
+# survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
 
-#load bio survdat information from the package
+# load bio survdat information from the package
 survdata.w.codes <- NEesp::common_names_survdat("bio")
 
 selected.surv <- survdata.w.codes %>%
@@ -85,7 +84,7 @@ if (nrow(selected.surv.clean) > 0) {
     ylim(0, (1.2 * max(selected.surv.clean$LENGTH, na.rm = TRUE))) +
     xlab("Age (jittered)") +
     ylab(" Total length (cm) (jittered)") +
-    #ggtitle(species, subtitle = "Length at age") +
+    # ggtitle(species, subtitle = "Length at age") +
     theme_minimal()
 
   if (nrow(selected.surv.vonb) > 0) {
@@ -114,7 +113,7 @@ if (nrow(selected.surv.clean) > 0) {
 The rate of growth may vary through time and between sexes. To assess for potential differences in growth among these groups, the global von Bertalanffy growth model was constructed and the residuals of each observation and the predicted size was tested for significant differences among groups and through time. 
 
 ```{r, growth_diff_testing}
-# testing a Common L∞ and t0 Model.
+# testing a Common L8 and t0 Model.
 
 
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
@@ -129,55 +128,49 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   f.fit.summary <- summary(f.fit, correlation = TRUE)
 
   # define the range of age values that will be used to generate points from the fitted model
-   
+
   newages.int <- data.frame(AGE = seq(0, 50))
   # predict(f.fit,newdata=newages) this funtion uses the model from f.fit to generate new lengths
   # make a dataset with the values from the model
   selected.surv.vonb.int <- data.frame(AGE = seq(0, 50), LENGTH = predict(f.fit, newdata = newages.int))
-  #name the predicted length col to avoid conflicts later
-  selected.surv.vonb.int<-selected.surv.vonb.int %>% rename("LENGTH_predicted"="LENGTH")
-  #join with original data set
-  selected.surv.w.predicted <-left_join(selected.surv.clean,selected.surv.vonb.int, by="AGE" )
-  #calculate residuals of predicted length and actual length
-  selected.surv.w.predicted<-selected.surv.w.predicted %>% mutate("vonB.residual"=(LENGTH-LENGTH_predicted))
-  #standardize growth
-  selected.surv.w.predicted<-selected.surv.w.predicted %>% mutate("residual.standardized"=(vonB.residual/LENGTH_predicted))
-  
+  # name the predicted length col to avoid conflicts later
+  selected.surv.vonb.int <- selected.surv.vonb.int %>% rename("LENGTH_predicted" = "LENGTH")
+  # join with original data set
+  selected.surv.w.predicted <- left_join(selected.surv.clean, selected.surv.vonb.int, by = "AGE")
+  # calculate residuals of predicted length and actual length
+  selected.surv.w.predicted <- selected.surv.w.predicted %>% mutate("vonB.residual" = (LENGTH - LENGTH_predicted))
+  # standardize growth
+  selected.surv.w.predicted <- selected.surv.w.predicted %>% mutate("residual.standardized" = (vonB.residual / LENGTH_predicted))
 } else {
   print("Not enough data to test differences")
 }
-
-
-
 ```
 
 
 ```{r, ancova model}
 
-if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
-  
-  #cut the yearly data into decades centered on 1980,
+if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
+
+  # cut the yearly data into decades centered on 1980,
   selected.surv.w.predicted <- selected.surv.w.predicted %>%
     dplyr::mutate(Decade = ggplot2::cut_width(YEAR, width = 10, center = 1980))
- 
-
-    # sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
-    selected.surv.w.predicted$SEX <- recode(selected.surv.w.predicted$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" =     "transitional")
-    #filter out unknown and transitional as they require more detailed analysis 
-  selected.surv.w.predicted<- selected.surv.w.predicted %>% filter(SEX %in% c("male", "female"))   
-  
-#construct an ancova with the interaction between sex and decade to test for differences in fit to von b curve across decades and both sexes
-pred.von.b.ancova<-lm(residual.standardized~SEX+Decade+SEX*Decade ,data = selected.surv.w.predicted)
-
-ancova.table<-summary(pred.von.b.ancova)
 
 
-colnames(ancova.table$coefficients)<-c("Estimate" ,  "Std. Error" ,"t value",   "P-value"  )
+  # sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
+  selected.surv.w.predicted$SEX <- recode(selected.surv.w.predicted$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" = "transitional")
+  # filter out unknown and transitional as they require more detailed analysis
+  selected.surv.w.predicted <- selected.surv.w.predicted %>% filter(SEX %in% c("male", "female"))
+
+  # construct an ancova with the interaction between sex and decade to test for differences in fit to von b curve across decades and both sexes
+  pred.von.b.ancova <- lm(residual.standardized ~ SEX + Decade + SEX * Decade, data = selected.surv.w.predicted)
+
+  ancova.table <- summary(pred.von.b.ancova)
 
 
-
-}else("Not enough data to perform analysis")
-
+  colnames(ancova.table$coefficients) <- c("Estimate", "Std. Error", "t value", "P-value")
+} else {
+  ("Not enough data to perform analysis")
+}
 ```
 
 ### ANCOVA model output
@@ -185,10 +178,11 @@ colnames(ancova.table$coefficients)<-c("Estimate" ,  "Std. Error" ,"t value",   
 
 ```{r, vonb ancova table}
 
-if(nrow(selected.surv.w.predicted)>5){
+if (nrow(selected.surv.w.predicted) > 5) {
   knitr::kable(ancova.table$coefficients, digits = 3)
-}else("No model output")
-
+} else {
+  ("No model output")
+}
 ```
 ### Residuals by sex and decade
 
@@ -196,20 +190,21 @@ The fit of each of these grouping to the global model is visualized as the distr
 
 
 ```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade")}
-if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
-  
-selected.surv.w.predicted %>% 
-  ggplot(aes(x=SEX, y=residual.standardized, fill=Decade))+
-  geom_boxplot()+
-  nmfspalette::scale_fill_nmfs()+
-  xlab("Sex")+
-  ylab("standardized residuals")
-  
-  
+if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
+  selected.surv.w.predicted %>%
+    ggplot(aes(x = SEX, y = residual.standardized, fill = Decade)) +
+    geom_boxplot() +
+    nmfspalette::scale_fill_nmfs() +
+    xlab("Sex") +
+    ylab("standardized residuals")
+
+
 
 
   # unbalenced design of ancova needs to be tested later
-  # remove unknown and transitional fish to simplify interpretation 
-}else("No data")
+  # remove unknown and transitional fish to simplify interpretation
+} else {
+  ("No data")
+}
 ```
 

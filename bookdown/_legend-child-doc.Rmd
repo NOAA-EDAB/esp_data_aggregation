@@ -1,11 +1,11 @@
 ```{r}
 # region data
-if(!exists("asmt_data")){
- asmt_data <- NEesp::asmt[NEesp::asmt$Species == species, ] 
+if (!exists("asmt_data")) {
+  asmt_data <- NEesp::asmt[NEesp::asmt$Species == species, ]
 }
 
-if(!exists("asmt_sum_data")){
-  asmt_sum_data <- NEesp::asmt_sum[NEesp::asmt_sum$Species == species, ]  
+if (!exists("asmt_sum_data")) {
+  asmt_sum_data <- NEesp::asmt_sum[NEesp::asmt_sum$Species == species, ]
 }
 
 # set colors and linetypes to be constant for all regions
@@ -16,5 +16,4 @@ names(lines) <- reg
 
 colors <- nmfspalette::nmfs_palette("regional web")(length(reg))
 names(colors) <- reg
-
 ```

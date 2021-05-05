@@ -92,12 +92,13 @@ NEesp::plot_prop_catch(com = com_data, rec = rec_data)
 #### Stock assessment catch
 ```{r, catch_data}
 data <- asmt_data %>%
-  dplyr::filter(Metric == "Catch",
+  dplyr::filter(
+    Metric == "Catch",
     Region != "Eastern Georges Bank"
   ) %>% # double counted
   dplyr::select(-Species, -Metric) %>%
   dplyr::mutate(options = paste(AssessmentYear, Description, Units, sep = " - ")) %>%
-#  dplyr::arrange(AssessmentYear) %>%
+  #  dplyr::arrange(AssessmentYear) %>%
   dplyr::group_by(Year, options) %>%
   dplyr::summarise(Value = sum(Value)) %>%
   dplyr::ungroup() %>%
@@ -112,8 +113,9 @@ data <- asmt_data %>%
 
 data <- data %>% dplyr::select("Year", sort(colnames(data)[-1]))
 
-NEesp::make_html_table(data, 
-                       type = params$file)
+NEesp::make_html_table(data,
+  type = params$file
+)
 ```
 
 #### Recreational catch
@@ -131,9 +133,10 @@ data <- rec_data %>%
   dplyr::select(year, State, Method, Catch_pounds) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c("Year", "State", "Method", "Catch (lb)"))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c("Year", "State", "Method", "Catch (lb)")
+)
 ```
 
 #### Commercial catch
@@ -156,8 +159,9 @@ data <- com_data %>%
   NEesp::character_to_factor()
 
 
-NEesp::make_html_table(data, 
-                       type = params$file)
+NEesp::make_html_table(data,
+  type = params$file
+)
 ```
 
 #### Commercial vs recreational catch
@@ -165,14 +169,15 @@ NEesp::make_html_table(data,
 data <- NEesp::prop_catch_data(rec = rec_data, com = com_data) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c(
-  "Year", "Recreational catch",
-  "Commercial catch", "Total catch",
-  "Proportion recreational",
-  "Proportion commercial"
-))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c(
+    "Year", "Recreational catch",
+    "Commercial catch", "Total catch",
+    "Proportion recreational",
+    "Proportion commercial"
+  )
+)
 ```
 
 #### Commercial, recreational, and stock assessment catch
@@ -230,9 +235,8 @@ if (exists("all_catch") &
     round(digits = 0) %>%
     # format(big.mark = ",") %>% # messing up formatting
     as.data.frame()
-  
-  all_catch <- all_catch %>% dplyr::select("Year", sort(colnames(all_catch)[-1]))
 
+  all_catch <- all_catch %>% dplyr::select("Year", sort(colnames(all_catch)[-1]))
 }
 
 # make sure there is data on at least 2 types of catch
@@ -242,8 +246,9 @@ sum_test <- sum(test == 0)
 if (sum_test >= 2) {
   print("NO DATA")
 } else {
-  NEesp::make_html_table(all_catch, 
-                       type = params$file)
+  NEesp::make_html_table(all_catch,
+    type = params$file
+  )
 }
 ```
 

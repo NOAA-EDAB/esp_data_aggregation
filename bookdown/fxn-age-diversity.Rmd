@@ -1,11 +1,6 @@
 ## Age diversity
 
-```{r data_wrangling_age, cache = params$cache, cache.lazy = FALSE}
-#selected.spp <- NEesp::bio_survey %>%
-#  dplyr::mutate(SVSPP = as.numeric(SVSPP)) %>%
-#  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
-#  dplyr::filter(Species == species)
-
+```{r data_wrangling_age}
 selected.spp <- NEesp::common_names_survdat("bio") %>%
   dplyr::filter(common_name == params$species)
 ```

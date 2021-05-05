@@ -8,15 +8,19 @@ Chlorophyll-a and primary production were sourced from the `ecodata` package.
 
 
 ```{r}
-NEesp::plot_ecodata(data = chl_data,
-             ylabel = "Chlorophyll (mg/m^-3)")
+NEesp::plot_ecodata(
+  data = chl_data,
+  ylabel = "Chlorophyll (mg/m^-3)"
+)
 ```
 
 
 #### Primary production in the stock region {-}
 ```{r}
-NEesp::plot_ecodata(data = pp_data,
-             ylabel = "Primary production (gC m-2 d-1)")
+NEesp::plot_ecodata(
+  data = pp_data,
+  ylabel = "Primary production (gC m-2 d-1)"
+)
 ```
 
 

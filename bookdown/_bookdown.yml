@@ -4,7 +4,6 @@ rmd_files: [
 "index.Rmd",
 "methods.Rmd", 
 "habitat-title-page.Rmd", #Title page
-#"geography.Rmd",
 "geographic-distribution.Rmd",
 "temperature.Rmd",
 "salinity.Rmd",
@@ -17,6 +16,7 @@ rmd_files: [
 "condition.Rmd",  
 "trophic-title-page.Rmd", # Title page
 "primary-production.Rmd",
+"Ichthyoplankton.Rmd",
 "diet.Rmd",
 "population-title-page.Rmd", #Title page 
 "abundance.Rmd",
@@ -27,6 +27,8 @@ rmd_files: [
 "climate-vulnerability.Rmd", 
 "socio-economic-title-page.Rmd", #Title page 
 "catch.Rmd",
+"Commercial-landings.Rmd",
+"recreational-landings-effort.Rmd",
 "ffmsy.Rmd", 
 "revenue.Rmd", 
 "management.Rmd", 

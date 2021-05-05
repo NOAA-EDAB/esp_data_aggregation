@@ -8,46 +8,45 @@ Ricky Tabandera
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(priceR)
-
 ```
 
 ```{r, com-data-processing}
-#list.files(here::here("commercial"))
+# list.files(here::here("commercial"))
 
-#archival copy of data wrangleing of raw foss data used to produce the clean dataset 
+# archival copy of data wrangleing of raw foss data used to produce the clean dataset
 
 # #load in the stocks managed in NEFSC
 # stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
 # #lowercase all of the names
 # stock_list_all_strata$common_name <- stringr::str_to_lower(stock_list_all_strata$common_name)
-# #extract out the unique names and rename column  
+# #extract out the unique names and rename column
 # stock_list<-stock_list_all_strata %>% distinct(common_name, .keep_all=TRUE)
-# 
-# 
+#
+#
 # #load commercial landings data
 # com_landings<-readr::read_csv(here::here("data","foss_ commercial_landings_NE_MA_1950_2019.csv"))
 # #renaming cols to aling with stocklist
 # com_landings<-com_landings %>% rename(common_name=`NMFS Name`)
-# #simplifying the names to be lowercase 
+# #simplifying the names to be lowercase
 # com_landings$common_name<-stringr::str_to_lower(com_landings$common_name)
-# 
+#
 # #removing empty rows due to confidentiality and counting the number of records removed
-# confid<-com_landings %>% 
+# confid<-com_landings %>%
 #   filter(common_name =="withheld for confidentiality" | Confidentiality == "Confidential" )%>%
 #   group_by(Year) %>%
 #   summarise(count=n())
 # com_landings<-com_landings %>% filter(!common_name =="withheld for confidentiality" , !Confidentiality == "Confidential", !is.na(Pounds), !is.na(Dollars), Dollars >1)
-# 
-# 
+#
+#
 # # removing aggrigated landings records and counting their occurance
 # grouped_landings<-com_landings %>% filter(stringr::str_detect(common_name, "\\*+"))
-# 
+#
 # # rearranging the species names to align with NEFSC conventions
 # com_landings<-com_landings %>% filter(!stringr::str_detect(common_name, "\\*+"))
-# 
+#
 # #splitting off the records without a comma
-# 
-# 
+#
+#
 # single_name<-com_landings %>% filter(!stringr::str_detect(common_name, "\\,\\s"))
 # multipe_name<-com_landings %>% filter(stringr::str_detect(common_name, "\\,\\s"))
 # split_names<-multipe_name%>% separate (col=common_name,sep ="\\,\\s", into = c("first" ,"second", "third"))
@@ -61,48 +60,48 @@ library(priceR)
 # split_names<- split_names %>% dplyr::mutate(second=replace(second, which(second=="shortfin illex"), "northern shortfin"))
 # #goosefish into monkfish
 # single_name<- single_name %>% dplyr::mutate(common_name=replace(common_name, which(common_name=="goosefish"), "monkfish"))
-# #adding flounder to windowpane 
+# #adding flounder to windowpane
 # single_name<- single_name %>% dplyr::mutate(common_name=replace(common_name, which(common_name=="windowpane"), "windowpane flounder"))
 # split_names<-split_names %>% unite(col = "last", c(third, second),sep = " ", remove = TRUE ,na.rm = TRUE)
 # split_names<-split_names %>% unite(col = "common_name", c(last, first),sep = " ", remove = TRUE ,na.rm = TRUE)
-# 
+#
 # joined_names<- dplyr::bind_rows(split_names,single_name)
 # #used to check that there are no missing stocks in the data
 # #missing_stocks<-dplyr::anti_join(stock_list,joined_names, by= "common_name")
-# 
-# 
+#
+#
 # #final clean dataset
 # com_landings_clean<-dplyr::full_join(stock_list,joined_names, by= "common_name")
-#write.csv(com_landings_clean, "FOSS_com_landings_clean_20201222.csv")
+# write.csv(com_landings_clean, "FOSS_com_landings_clean_20201222.csv")
 
-com_landings_clean<- read.csv(here::here("data","FOSS_com_landings_clean_20201222.csv"))
-com_landings_clean <- com_landings_clean %>% mutate(common_name=stringr::str_to_sentence(common_name))
+com_landings_clean <- read.csv(here::here("data", "FOSS_com_landings_clean_20201222.csv"))
+com_landings_clean <- com_landings_clean %>% mutate(common_name = stringr::str_to_sentence(common_name))
 
 
-selected_com_sp<-com_landings_clean %>%
+selected_com_sp <- com_landings_clean %>%
   dplyr::group_by(Year) %>%
-  filter(common_name==params$species) %>%
-  summarise(total_pounds=sum(Pounds,na.rm = FALSE),total_dollars=sum(Dollars,na.rm = FALSE))
+  filter(common_name == params$species) %>%
+  summarise(total_pounds = sum(Pounds, na.rm = FALSE), total_dollars = sum(Dollars, na.rm = FALSE))
 
-selected_com_state<-com_landings_clean %>%
-  dplyr::group_by(Year,State) %>%
-  filter(common_name==params$species) %>%
-  summarise(total_pounds=sum(Pounds,na.rm = FALSE),total_dollars=sum(Dollars,na.rm = FALSE))
+selected_com_state <- com_landings_clean %>%
+  dplyr::group_by(Year, State) %>%
+  filter(common_name == params$species) %>%
+  summarise(total_pounds = sum(Pounds, na.rm = FALSE), total_dollars = sum(Dollars, na.rm = FALSE))
 
 ##########################
 
-#red hake
-data_qual<-TRUE
+# red hake
+data_qual <- TRUE
 
-num_states<-selected_com_state %>% group_by( State) %>% count()
+num_states <- selected_com_state %>%
+  group_by(State) %>%
+  count()
 
-if(min(num_states$n)<5){data_qual<-FALSE
-} else{data_qual<-TRUE}
-
-
-
-
-
+if (min(num_states$n) < 5) {
+  data_qual <- FALSE
+} else {
+  data_qual <- TRUE
+}
 ```
 
 
@@ -115,16 +114,18 @@ Figures produced reflect the coverage of the data. With stocks that have high co
 ```{r, landings-single-stock}
 
 
-if(nrow(selected_com_sp)>4){
-  selected_com_sp %>% 
-  ggplot2::ggplot(aes(x=Year, y=(total_dollars/10^6)))+
-  ggplot2::geom_point()+
-  tidyquant::geom_ma( n=5, lwd=1.4)+
-  ggtitle(label = params$species ,subtitle = "5 year rolling average")+
-  xlab(label= "Year")+
-  ylab(label = "Dollar value of landings in millions ($) ")+
-  theme_minimal()}else("No data")
-
+if (nrow(selected_com_sp) > 4) {
+  selected_com_sp %>%
+    ggplot2::ggplot(aes(x = Year, y = (total_dollars / 10^6))) +
+    ggplot2::geom_point() +
+    tidyquant::geom_ma(n = 5, lwd = 1.4) +
+    ggtitle(label = params$species, subtitle = "5 year rolling average") +
+    xlab(label = "Year") +
+    ylab(label = "Dollar value of landings in millions ($) ") +
+    theme_minimal()
+} else {
+  ("No data")
+}
 ```
 
 #### Commercial landings of `r params$species` across states in the mid-Atlantic and north-east regions
@@ -132,32 +133,27 @@ if(nrow(selected_com_sp)>4){
 ```{r landings-across-states-good-data,  eval=data_qual}
 
 
-selected_com_state %>% 
-  ggplot2::ggplot(aes(x=Year, y=(total_dollars/10^6)))+
-  tidyquant::geom_ma(aes(color= State, lty= State) ,n=3, lwd=1.4)+
-  ggtitle(label = params$species ,subtitle = "5 year rolling average")+
-  xlab(label= "Year")+
-  ylab(label = "Dollar value of landings in millions ($)  ")+
+selected_com_state %>%
+  ggplot2::ggplot(aes(x = Year, y = (total_dollars / 10^6))) +
+  tidyquant::geom_ma(aes(color = State, lty = State), n = 3, lwd = 1.4) +
+  ggtitle(label = params$species, subtitle = "5 year rolling average") +
+  xlab(label = "Year") +
+  ylab(label = "Dollar value of landings in millions ($)  ") +
   theme_minimal()
-
-
-
-
 ```
 
 
 ```{r, landings-across-states-bad-data, eval=!data_qual}
 
 
-selected_com_state %>% 
-  ggplot2::ggplot(aes(x=Year, y=(total_dollars/10^6)))+
-  geom_point(aes(color=State))+
-  geom_line(aes(color=State))+
-  ggtitle(label = params$species ,subtitle = "Data coverage for some states is poor with >5 years reported")+
-  xlab(label= "Year")+
-  ylab(label = "Dollar value of landings in millions ($)  ")+
+selected_com_state %>%
+  ggplot2::ggplot(aes(x = Year, y = (total_dollars / 10^6))) +
+  geom_point(aes(color = State)) +
+  geom_line(aes(color = State)) +
+  ggtitle(label = params$species, subtitle = "Data coverage for some states is poor with >5 years reported") +
+  xlab(label = "Year") +
+  ylab(label = "Dollar value of landings in millions ($)  ") +
   theme_minimal()
-
 ```
 
 
@@ -170,19 +166,18 @@ The calculated price is dollars per pound of reported landings.
 
 ```{r Non-inflation-adjusted-price-history  }
 
-if(nrow(selected_com_sp)>4){
+if (nrow(selected_com_sp) > 4) {
   selected_com_sp %>%
-  dplyr::mutate(price_per_lb=(total_dollars/total_pounds))%>%
-  ggplot2::ggplot(aes(x=Year, y=price_per_lb))+
-  tidyquant::geom_ma(n=5, lwd=1.4)+
-  ggtitle(label = params$species ,subtitle = "5 year rolling average ")+
-  xlab(label= "Year")+
-  ylab(label = "Price per pound (lb/$) ")+
-  theme_minimal()}else("Not enough data")
-
-
-
-
+    dplyr::mutate(price_per_lb = (total_dollars / total_pounds)) %>%
+    ggplot2::ggplot(aes(x = Year, y = price_per_lb)) +
+    tidyquant::geom_ma(n = 5, lwd = 1.4) +
+    ggtitle(label = params$species, subtitle = "5 year rolling average ") +
+    xlab(label = "Year") +
+    ylab(label = "Price per pound (lb/$) ") +
+    theme_minimal()
+} else {
+  ("Not enough data")
+}
 ```
 
 #### Non-inflation adjusted price history of `r params$species` across states in the mid-Atlantic and north-east regions
@@ -191,38 +186,37 @@ The calculated price is dollars per pound of reported landings.
 
 ```{r Non-inflation-adjusted-price-history-across-states-good-data , eval=data_qual}
 
-if(nrow(selected_com_state)>4){
+if (nrow(selected_com_state) > 4) {
   selected_com_state %>%
-  dplyr::mutate(price_per_lb=(total_dollars/total_pounds))%>%
-  ggplot2::ggplot(aes(x=Year, y=price_per_lb))+
-  tidyquant::geom_ma(aes(color= State, lty= State),n=5, lwd=1.4,show.legend = FALSE)+
-  facet_wrap(vars(State))+
-  ggtitle(label = params$species ,subtitle = "5 year rolling average ")+
-  xlab(label= "Year")+
-  ylab(label = "Price per pound (lb/$) ")+
-  theme_minimal()}else("Not enough data")
-
-
-
-
-
+    dplyr::mutate(price_per_lb = (total_dollars / total_pounds)) %>%
+    ggplot2::ggplot(aes(x = Year, y = price_per_lb)) +
+    tidyquant::geom_ma(aes(color = State, lty = State), n = 5, lwd = 1.4, show.legend = FALSE) +
+    facet_wrap(vars(State)) +
+    ggtitle(label = params$species, subtitle = "5 year rolling average ") +
+    xlab(label = "Year") +
+    ylab(label = "Price per pound (lb/$) ") +
+    theme_minimal()
+} else {
+  ("Not enough data")
+}
 ```
 
 ```{r Non-inflation-adjusted-price-history-across-states-poor-data , eval=!data_qual}
 
-if(nrow(selected_com_state)>4){
+if (nrow(selected_com_state) > 4) {
   selected_com_state %>%
-  dplyr::mutate(price_per_lb=(total_dollars/total_pounds))%>%
-  ggplot2::ggplot(aes(x=Year, y=price_per_lb))+
-  geom_point(aes(color=State),show.legend = FALSE)+
-  geom_line(aes(color=State),show.legend = FALSE)+
-  facet_wrap(vars(State))+
-  ggtitle(label = params$species ,subtitle = "Data coverage for some states is poor with >5 years reported")+
-  xlab(label= "Year")+
-  ylab(label = "Price per pound (lb/$) ")+
-  theme_minimal()
-}else("Not enough data")
-
+    dplyr::mutate(price_per_lb = (total_dollars / total_pounds)) %>%
+    ggplot2::ggplot(aes(x = Year, y = price_per_lb)) +
+    geom_point(aes(color = State), show.legend = FALSE) +
+    geom_line(aes(color = State), show.legend = FALSE) +
+    facet_wrap(vars(State)) +
+    ggtitle(label = params$species, subtitle = "Data coverage for some states is poor with >5 years reported") +
+    xlab(label = "Year") +
+    ylab(label = "Price per pound (lb/$) ") +
+    theme_minimal()
+} else {
+  ("Not enough data")
+}
 ```
 
 #### inflation adjusted price history of `r params$species`
@@ -231,24 +225,26 @@ The price history  adjusted to 2019 values using data from the World Bank inflat
 ```{r, inflation-adjusted-price-history }
 
 
-stock_price<-selected_com_state %>%
-  group_by(Year) %>% 
-  dplyr::mutate(price_per_lb=(total_dollars/total_pounds))
+stock_price <- selected_com_state %>%
+  group_by(Year) %>%
+  dplyr::mutate(price_per_lb = (total_dollars / total_pounds))
 country <- "US"
-stock_price$adj_price<-adjust_for_inflation(stock_price$price_per_lb, stock_price$Year,country, to_date = 2019)
+stock_price$adj_price <- adjust_for_inflation(stock_price$price_per_lb, stock_price$Year, country, to_date = 2019)
 
 
-if(nrow(stock_price)>5){
-stock_price%>%
-  group_by(Year)%>%
-  summarise(adj_ave_price=mean(adj_price)) %>%
-  ggplot2::ggplot(aes(x=Year, y=adj_ave_price))+
-  tidyquant::geom_ma(n=5, lwd=1.4)+
-  ggtitle(label = params$species ,subtitle = "5 year rolling average ")+
-  xlab(label= "Year")+
-  ylab(label = "Price per pound (lb/$) in 2019 value ")+
-  theme_minimal()}else("Not enough data")
-
+if (nrow(stock_price) > 5) {
+  stock_price %>%
+    group_by(Year) %>%
+    summarise(adj_ave_price = mean(adj_price)) %>%
+    ggplot2::ggplot(aes(x = Year, y = adj_ave_price)) +
+    tidyquant::geom_ma(n = 5, lwd = 1.4) +
+    ggtitle(label = params$species, subtitle = "5 year rolling average ") +
+    xlab(label = "Year") +
+    ylab(label = "Price per pound (lb/$) in 2019 value ") +
+    theme_minimal()
+} else {
+  ("Not enough data")
+}
 ```
 
 
@@ -257,16 +253,18 @@ stock_price%>%
 
 
 ```{r, inflation-adjusted-price-across-states-good-data, eval=data_qual}
-if(nrow(stock_price)>3){
-stock_price%>%
-  ggplot2::ggplot(aes(x=Year, y=adj_price))+
-  tidyquant::geom_ma(aes( color=State),n=5, lwd=1.4,show.legend = FALSE)+
-  facet_wrap(vars(State))+
-  ggtitle(label = params$species ,subtitle = "5 year rolling average ")+
-  xlab(label= "Year")+
-  ylab(label = "Price per pound (lb/$) in 2019 value ")+
-  theme_minimal()}else("Not enough data")
-
+if (nrow(stock_price) > 3) {
+  stock_price %>%
+    ggplot2::ggplot(aes(x = Year, y = adj_price)) +
+    tidyquant::geom_ma(aes(color = State), n = 5, lwd = 1.4, show.legend = FALSE) +
+    facet_wrap(vars(State)) +
+    ggtitle(label = params$species, subtitle = "5 year rolling average ") +
+    xlab(label = "Year") +
+    ylab(label = "Price per pound (lb/$) in 2019 value ") +
+    theme_minimal()
+} else {
+  ("Not enough data")
+}
 ```
 
 
@@ -274,17 +272,18 @@ stock_price%>%
 
 
 ```{r, inflation-adjusted-price-across-states-poor-data, eval=!data_qual}
-if(nrow(stock_price)>3){
+if (nrow(stock_price) > 3) {
   stock_price %>%
-  ggplot2::ggplot(aes(x=Year, y=adj_price))+
-  geom_point(aes(color=State),show.legend = FALSE)+
-  geom_line(aes(color=State),show.legend = FALSE)+
-  facet_wrap(vars(State))+
-  ggtitle(label = params$species ,subtitle = "Data coverage for some states is poor with >5 years reported ")+
-  xlab(label= "Year")+
-  ylab(label = "Price per pound (lb/$) in 2019 value")+
-  theme_minimal()}else("Not enough data")
-  
-
+    ggplot2::ggplot(aes(x = Year, y = adj_price)) +
+    geom_point(aes(color = State), show.legend = FALSE) +
+    geom_line(aes(color = State), show.legend = FALSE) +
+    facet_wrap(vars(State)) +
+    ggtitle(label = params$species, subtitle = "Data coverage for some states is poor with >5 years reported ") +
+    xlab(label = "Year") +
+    ylab(label = "Price per pound (lb/$) in 2019 value") +
+    theme_minimal()
+} else {
+  ("Not enough data")
+}
 ```
 

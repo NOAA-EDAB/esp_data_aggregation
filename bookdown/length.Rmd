@@ -44,10 +44,11 @@ NEesp::generate_len_table(survey_data)
 data <- NEesp::get_len_data2(survey_data) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c(
-  "Year", "Season", "Region", "Number of fish",
-  "Mean length", "Minimum length", "Maximum length"
-))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c(
+    "Year", "Season", "Region", "Number of fish",
+    "Mean length", "Minimum length", "Maximum length"
+  )
+)
 ```

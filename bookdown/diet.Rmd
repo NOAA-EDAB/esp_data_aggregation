@@ -12,8 +12,10 @@ NEesp::get_diet_plot(data = diet_data)
 
 ### Summary
 ```{r, diet_summary}
-NEesp::get_diet_table(data = diet_data,
-                      type = params$file)
+NEesp::get_diet_table(
+  data = diet_data,
+  type = params$file
+)
 ```
 
 ### Data
@@ -40,9 +42,10 @@ diet_data2 <- diet_data %>%
   NEesp::character_to_factor()
 
 NEesp::make_html_table(diet_data2,
-                       type = params$file,
-                       col_names = c(
-  "Year", "Season", "Region", "Number of fish",
-  "Prey category", "Prey weight", "Prey proportion"
-))
+  type = params$file,
+  col_names = c(
+    "Year", "Season", "Region", "Number of fish",
+    "Prey category", "Prey weight", "Prey proportion"
+  )
+)
 ```

@@ -76,7 +76,7 @@ For each stock, a five-year running mean was calculated for each indicator. Indi
 ```{r, stock-risk, fig.height = 10, fig.cap = paste(species, "within-stock risk over time")}
 NEesp::plot_risk_by_year(risk_species_data,
   indicator = "all",
-    title = "Within-stock risk over time",
+  title = "Within-stock risk over time",
   include_legend = "yes"
 )
 ```
@@ -119,12 +119,13 @@ data <- risk_year_hist_data %>%
   dplyr::rename("Value" = "Value2") %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c(
-  "Region", "Category", "Indicator", "Year", "Value (% of historical)",
-  "Rank", "Normalized rank"
-))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c(
+    "Region", "Category", "Indicator", "Year", "Value (% of historical)",
+    "Rank", "Normalized rank"
+  )
+)
 ```
 
 #### Normalized rank of value in each year {-}
@@ -140,12 +141,13 @@ data <- risk_year_value_data %>%
   dplyr::rename("Value" = "Value2") %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c(
-  "Region", "Category", "Indicator", "Year", "Value (magnitude)",
-  "Rank", "Normalized rank"
-))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c(
+    "Region", "Category", "Indicator", "Year", "Value (magnitude)",
+    "Rank", "Normalized rank"
+  )
+)
 ```
 
 ### Value within each stock, ranked by year 
@@ -161,10 +163,11 @@ data <- risk_species_data %>%
   dplyr::rename("Value" = "Value2") %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c(
-  "Region", "Category", "Indicator", "Year", "Value",
-  "Rank", "Normalized rank"
-))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c(
+    "Region", "Category", "Indicator", "Year", "Value",
+    "Rank", "Normalized rank"
+  )
+)
 ```
