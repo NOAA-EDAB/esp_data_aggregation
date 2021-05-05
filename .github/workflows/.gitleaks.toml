@@ -106,4 +106,6 @@ title = "gitleaks config"
 	'''(go.mod|go.sum)$''']
 	regex = ['''data:image/png;base64[.]{1, 100000}width''',
 	'''data:image/png;base64[.]{1,}width''',
-	'''data:image/png;base64(.){1,}width''']
+	'''data:image/png;base64(.){1,}width''',
+	'''image/png[.]{1,}width''',
+	'''image/png(.){1,}width''']
