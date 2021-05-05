@@ -1,0 +1,257 @@
+---
+title: "Zooplankton anomaly"
+author: "Ricky Tabandera"
+date: "5/5/2021"
+output: html_document
+---
+
+Zooplankton anomaly
+
+Ricky Tabandera
+
+The top taxa occurring in more than 20% of the time series within the Black sea bass stock area. Measurments are the standardized anomalies by year. the entire year and are calculated from the expected abundance on any given day of the year based on a 'climatology' spline created from the entire time series (1977-2019). 
+
+
+# Larval predators{.tabset}
+
+Larval predation is one proposed bottleneck in the recruitment strength of black sea bass. An aggrigated catorory of gelatinous taxa including coelenterata, ctenophores, scyphozoa, and siphonophora was constructed and used as an overall index of larval fish predators. The anomaly from predicted abundance of these taxa is based on climatology spline to the measured abundance.
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(rio)
+# install.packages("rio")
+
+```
+
+
+```{r,larval-pred-data}
+#import data
+BSB_zoo_anom<-rio::import(here::here("data","Annual_Black_Seabass_zooplankton_anomalies.rda" ))
+BSB_f_anom<-rio::import(here::here("data", "Fall_Black_Seabass_zooplankton_anomalies.rda"))
+BSB_s_anom<-rio::import(here::here("data", "Spring_Black_Seabass_zooplankton_anomalies.rda"))
+
+# convert rownames to year col
+BSB_zoo_anom<-tibble::rownames_to_column(BSB_zoo_anom, "year")
+BSB_f_anom<-tibble::rownames_to_column(BSB_f_anom, "year")
+BSB_s_anom<-tibble::rownames_to_column(BSB_s_anom, "year")
+
+#pivot to longer for time serise plotting 
+BSB_zoo_anom<-BSB_zoo_anom %>%
+tidyr::pivot_longer(!year , names_to = "taxa", values_to="anomaly")
+
+BSB_zoo_anom$taxa<- str_replace(BSB_zoo_anom$taxa,"_100m3",'')
+
+BSB_f_anom<-BSB_f_anom %>%
+tidyr::pivot_longer(!year , names_to = "taxa", values_to="anomaly")
+
+BSB_f_anom$taxa<- str_replace(BSB_f_anom$taxa,"_100m3",'')
+
+BSB_s_anom<-BSB_s_anom %>%
+tidyr::pivot_longer(!year , names_to = "taxa", values_to="anomaly")
+
+BSB_s_anom$taxa<- str_replace(BSB_s_anom$taxa,"_100m3",'')
+
+```
+
+
+```{r, bsb-larval-pred}
+
+BSB_zoo_anom %>% filter(taxa =="cnidar") %>%
+  ggplot(aes(x=year,y=anomaly, color="Red", group= taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90),legend.position = "none")+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))+
+  ggtitle("Gelatinous taxa anomaly", subtitle ="coelenterata, ctenophores, scyphozoa, and siphonophora" )
+  
+
+
+```
+
+
+
+
+
+
+
+## All taxa: Annual
+
+```{r, BSB-zoo-anom-plot1 }
+
+
+taxa.list<- c( "ctyp" ,"calfin", "pseudo",  "penilia",  "tlong", "cham", "echino", "larvaceans", "para"  , "gas", "acarspp", "mlucens","evadnespp", "salps", "oithspp", "chaeto", "hyper", "calminor", "clauso",  "dec", "euph", "prot", "poly" ,"fish","oncaea" ,"cory", "siph","coel","euph1", "thecos","spirspp")  
+
+taxa.small1<-taxa.list[1:9]
+taxa.small2<-taxa.list[10:18]
+taxa.small3<-taxa.list[19:27]
+taxa.small4<-taxa.list[28:31]
+
+BSB_zoo_anom %>% filter(taxa %in% taxa.small1) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+
+```{r, , BSB-zoo-anom-plot2}
+BSB_zoo_anom %>% filter(taxa %in% taxa.small2) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+```{r, , BSB-zoo-anom-plot3}
+BSB_zoo_anom %>% filter(taxa %in% taxa.small3) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+
+
+
+
+
+```{r, BSB-zoo-anom-plot4}
+BSB_zoo_anom %>% filter(taxa %in% taxa.small4) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+## All taxa: Spring
+
+```{r, BSB-s-anom-plot1}
+
+BSB_s_anom %>%
+  filter(taxa %in% taxa.small1) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+
+
+```{r, BSB-s-anom-plot2}
+
+BSB_s_anom %>%
+  filter(taxa %in% taxa.small2) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+
+```{r, BSB-s-anom-plot3}
+
+BSB_s_anom %>%
+  filter(taxa %in% taxa.small3) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+```{r, BSB-s-anom-plot4}
+
+BSB_s_anom %>%
+  filter(taxa %in% taxa.small4) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+## All taxa: Fall
+
+```{r, BSB-f-anom-plot1}
+
+BSB_f_anom %>%
+  filter(taxa %in% taxa.small1) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+```{r, BSB-f-anom-plot2}
+
+BSB_f_anom %>%
+  filter(taxa %in% taxa.small2) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+
+
+```{r, BSB-f-anom-plot3}
+
+BSB_f_anom %>%
+  filter(taxa %in% taxa.small3) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+
+```{r, BSB-f-anom-plot4}
+
+BSB_f_anom %>%
+  filter(taxa %in% taxa.small4) %>%
+  ggplot(aes(x=year,y=anomaly, color=taxa, group=taxa))+
+  ggplot2::geom_point()+
+  ggplot2::geom_line()+
+  facet_wrap(~taxa,nrow = 3, scales = "fixed")+
+  theme( axis.text = element_text( size = 8), axis.text.x = element_text(angle = 90))+
+  scale_x_discrete("Year", breaks=c(1975, 1985, 1995, 2005, 2015))
+
+```
+
+
+
+
+
