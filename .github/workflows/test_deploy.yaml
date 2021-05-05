@@ -3,77 +3,6 @@ on:
 
 name: Test deploying on ESP_docs
 jobs: 
-  one-repo-here:
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GH_PAT }}
-      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-    
-    steps:          
-      - name: Checkout esp_data_aggregation
-        uses: actions/checkout@v2
-        with:
-          ref: abby
-          
-      - name: Set up R
-        uses: r-lib/actions/setup-r@master
-        with: 
-          r-version: '4.0.3' # problem with using 4.0.4   
-            
-      - name: Make a folder with a file
-        run: |
-          Rscript -e 'list.files()
-          install.packages("here")
-          list.files(here::here(), all.files = TRUE)
-          dir.create(here::here("test-folder"))
-          file.create(here::here("test-folder/test-file.txt"))
-          list.files(here::here(), all.files = TRUE)'
-        
-      - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          token: ${{ secrets.GH_PAT }}
-          branch: abby # The branch the action should deploy to.
-          folder: test-folder # The folder the action should deploy.
-          target-folder: test-folder
-          clean: false # Automatically remove deleted files from the deploy branch
-##
-  one-repo-here-nopersist:
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GH_PAT }}
-      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-    
-    steps:          
-      - name: Checkout esp_data_aggregation
-        uses: actions/checkout@v2
-        with:
-          ref: abby
-#          persist-credentials: false
-          
-      - name: Set up R
-        uses: r-lib/actions/setup-r@master
-        with: 
-          r-version: '4.0.3' # problem with using 4.0.4   
-            
-      - name: Make a folder with a file
-        run: |
-          Rscript -e 'list.files()
-          install.packages("here")
-          list.files(here::here(), all.files = TRUE)
-          dir.create(here::here("test-folder"))
-          file.create(here::here("test-folder/test-file.txt"))
-          list.files(here::here(), all.files = TRUE)'
-        
-      - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          token: ${{ secrets.GH_PAT }}
-          branch: abby # The branch the action should deploy to.
-          folder: test-folder # The folder the action should deploy.
-          target-folder: test-folder
-          clean: false # Automatically remove deleted files from the deploy branch
-##
   two-repos-here:
     runs-on: ubuntu-latest
     env:
@@ -146,49 +75,6 @@ jobs:
           target-folder: test-folder
           clean: false # Automatically remove deleted files from the deploy branch
           repository-name: NOAA-EDAB/ESP_docs
-##
-  dont-even-make-files:
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GH_PAT }}
-      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-    
-    steps:          
-      - name: Checkout esp_data_aggregation
-        uses: actions/checkout@v2
-        with:
-          ref: shiny
-        
-      - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          token: ${{ secrets.GH_PAT }}
-          branch: abby # The branch the action should deploy to.
-          folder: www # The folder the action should deploy.
-          target-folder: test-folder
-          clean: false # Automatically remove deleted files from the deploy branch
-##
-  dont-even-make-files-np:
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GH_PAT }}
-      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-    
-    steps:          
-      - name: Checkout esp_data_aggregation
-        uses: actions/checkout@v2
-        with:
-          ref: shiny
-          persist-credentials: false
-        
-      - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          token: ${{ secrets.GH_PAT }}
-          branch: abby # The branch the action should deploy to.
-          folder: www # The folder the action should deploy.
-          target-folder: test-folder
-          clean: false # Automatically remove deleted files from the deploy branch
 ##
   dont-even-make-files2:
     runs-on: ubuntu-latest
