@@ -275,9 +275,9 @@ lonmax<-(max(selected.surv.centroid$lon)+1)
 
 
 ggplot2::ggplot(data = ecodata::coast ) +
-  geom_sf() +
-  geom_point(data = selected.surv.centroid, ggplot2::aes(x=lon,y=lat,color=as.numeric(YEAR)))+
-  ggrepel::geom_label_repel(data = selected.surv.centroid,aes(x=lon,y=lat,label=YEAR),max.overlaps =20 )+
+  ggplot2::geom_sf() +
+  ggplot2::geom_point(data = selected.surv.centroid, ggplot2::aes(x=lon,y=lat,color=as.numeric(YEAR)))+
+  ggrepel::geom_label_repel(data = selected.surv.centroid,ggplot2::aes(x=lon,y=lat,label=YEAR),max.overlaps =20 )+
   ggplot2::coord_sf(xlim=c(lonmin,lonmax), ylim=c(latmin,latmax))+
   ggplot2::scale_color_gradient(low = "blue", high = "red", name="Year")+
   ggplot2::xlab("Longitude")+

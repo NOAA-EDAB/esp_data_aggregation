@@ -6,7 +6,7 @@
 #  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
 #  dplyr::filter(Species == species)
 
-selected.spp <- Common_names_survdat("bio") %>%
+selected.spp <- NEesp::common_names_survdat("bio") %>%
   dplyr::filter(common_name == params$species)
 ```
 

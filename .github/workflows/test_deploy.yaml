@@ -95,9 +95,10 @@ jobs:
           # source scripts
           `%>%` <- magrittr::`%>%`
           `.pt` <- ggplot2::`.pt`
+          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
           # function to make reports
           fun <- function(x) {NEesp::render_ind_report(x, input = "bookdown",
-                                     config = "_bookdown-ricky.yml",
+                                     config = "_bookdown-abby.yml",
                                      params_to_use = list(species_ID = x,
                                                           ricky_survey_data = NEesp::bio_survey, 
                                                           path = here::here(paste("action_reports/", x, sep = ""), "figures//"),

@@ -23,7 +23,7 @@ rmd_files: [
 "bbmsy.Rmd",
 "Ichthyoplankton.Rmd",
 "recruitment.Rmd",
-"age-diversity.Rmd",
+"fxn-age-diversity.Rmd",
 "climate-vulnerability.Rmd", 
 "socio-economic-title-page.Rmd", #Title page 
 "Commercial-landings.Rmd",
