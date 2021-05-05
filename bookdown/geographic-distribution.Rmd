@@ -1,6 +1,30 @@
 ## Geographic distribution
 
-Ricky Tabandera
+Ricky Tabandera & Abigail Tyrell
+
+
+
+### Map of distribution
+Strata maps were pulled and compiled using code from [NOAA/EDAB ECSA](https://github.com/NOAA-EDAB/ECSA).
+
+
+```{r, ecsa-map, fig.cap = paste(species, "distribution")}
+NEesp::map_strata(
+  strata = latlong_data,
+  common_name = species
+)
+```
+
+
+### Latitude and longitude ranges
+Latitude and longitude ranges were calculated from NOAA/EDAB ECSA [seasonal species strata](https://github.com/NOAA-EDAB/ECSA/blob/master/data/seasonal_stock_strata.csv) and [Bottom Trawl Survey (BTS) shapefiles](https://github.com/NOAA-EDAB/ECSA/tree/master/data/strata_shapefiles). The coordinate system is WGS84.
+```{r, latlong}
+data <- NEesp::get_latlong(species, latlong_data, shapefile = NEesp::shape) %>%
+  NEesp::character_to_factor()
+
+NEesp::make_html_table(data, col_names = colnames(data))
+```
+
 
 ```{r geography_setup, include=FALSE, eval = FALSE}
 # avoid using `library()` in a package
@@ -17,19 +41,23 @@ Using fisheries independant data from bottom trawls in `survdat`. Several metric
 
 
 ```{r geo-conc-data-wrangling }
+
 # source(here::here("R","common_names_survdat.R")) # loaded in `life_history_functions.R`
-```
-
-```{r}
-survdata.w.codes<-NEesp::common_names_survdat("bio")
 
 ```
 
 ```{r}
+#load all survdat data
+survdata.w.codes<- NEesp::common_names_survdat("all")
+
+```
+
+```{r}
+
 selected.surv<-survdata.w.codes %>%
    dplyr::filter(common_name == params$species)
 
-# selected.surv<-survdata.w.codes %>% 
+# selected.surv<-survdata.w.codes %>%
 #    dplyr::filter(common_name == "Pollock")
 
 ```
@@ -99,7 +127,7 @@ ggplot2::ggplot(data = ecodata::coast) +
 }else{
   
 #if there are  more than 200 observation pre 1970 then this visualization will capture that data  
-selected.surv.1970<-selected.surv %>% filter(SEASON=="SPRING") %>%
+selected.surv.1970<-selected.surv %>% dplyr::filter(SEASON=="SPRING") %>%
   dplyr::mutate(decade=ggplot2::cut_width(YEAR, width = 10, center =  1980 ))
 
 
@@ -192,7 +220,7 @@ ggplot2::ggplot(data = ecodata::coast) +
 }else{
   
 #if there are  more than 200 observation pre 1970 then this visualization will capture that data  
-selected.surv.1970<-selected.surv %>% filter(SEASON=="FALL") %>%
+selected.surv.1970<-selected.surv %>% dplyr::filter(SEASON=="FALL") %>%
   dplyr::mutate(decade=ggplot2::cut_width(YEAR, width = 10, center =  1980 ))
 
 
@@ -238,7 +266,7 @@ The average position of observations across all years of surveys
 ```{r, centroid-plot}
 # spaces in chunk name mess up figure numbers (bookdown bug)
 
-if(nrow(selected.surv.centroid)<4){
+if(nrow(selected.surv.centroid)>4){
   
 latmin<-(min(selected.surv.centroid$lat)-1)
 latmax<-(max(selected.surv.centroid$lat)+1)

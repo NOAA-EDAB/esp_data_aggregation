@@ -1,8 +1,6 @@
 ## von Bertalanffy growth curve
 
-Ricky Tabandera
-
-```{r setup_vonb, cache = params$cache}
+```{r setup-vonb, cache = params$cache}
 # install.packages("ggrepel")
 # install.packages("ggpubr")
 # devtools::install_github("james-thorson/FishLife")
@@ -13,34 +11,36 @@ suppressPackageStartupMessages(library(nlstools))
 library(rfishbase)
 library(ggpubr)
 library(FSA)
+library(NEesp)
+
 ```
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
 
-survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
+#survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
 
-survdata <- survdata %>% mutate(SVSPP = as.numeric(SVSPP))
-stock_list_all_strata <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/stock_list.csv")
-stock_list_all_strata <- stock_list_all_strata %>% rename(SVSPP = svspp)
-stock_list <- stock_list_all_strata %>% dplyr::distinct(SVSPP, .keep_all = T)
-
-survdata.w.codes <- inner_join(survdata, stock_list, by = "SVSPP")
+#load bio survdat information from the package
+survdata.w.codes <- NEesp::common_names_survdat("bio")
 
 selected.surv <- survdata.w.codes %>%
-  dplyr::mutate(common_name = common_name %>%
-    stringr::str_to_sentence()) %>%
   dplyr::filter(common_name == species)
+
+
+# selected.surv <- survdata.w.codes %>%
+#   dplyr::filter(common_name == "Black sea bass")
+
 
 # only take records with age associated
 selected.surv.clean <- selected.surv %>% drop_na(AGE)
 ```
 
-```{r, vonb_model}
+
+```{r, vonb-model}
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # define the type of von b model
   vb <- vbFuns(param = "Typical")
   # define starting parameters based on the avalible data
-  f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "Walford")
+  f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "oldAge")
 
   # fit a non-linear least squares model based on the data and starting values
   f.fit <- nls(LENGTH ~ vb(AGE, Linf, K, t0), data = selected.surv.clean, start = f.starts)
@@ -60,11 +60,12 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
 
 ### Length at age growth curve
 
-The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth parameters of `Linf` (Length infinty), `K` (growth coefficient), and `t0` (size at time 0) were estimated using non-linear least square model. The starting point for model building is accomplished using `FSA::vbStarts`. Age and length data sourced from `survdat` and spans all years and survey areas. 
+The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth parameters of `Linf` (Length infinity), `K` (growth coefficient), and `t0` (size at time 0) were estimated using non-linear least square model. The starting point for model building is accomplished using `FSA::vbStarts`. Age and length data sourced from `survdat` and spans all years and survey areas. 
 
 `r if(params$species == "Monkfish"){"The age determination method for monkfish has not been validated, and the anatomic structure used has changed through time. In addition these stocks display a high degree of sexual dimorphisms making fitting of single growth curves unreliable.  This results a high degree of uncertainty in assessing the age structure of the stock and the effects of fishing pressure."}`
 
-```{r single_growth_curve}
+
+```{r single-growth-curve, fig.cap = paste(species, "length at age growth curve")}
 # palette
 if (nrow(selected.surv.clean) > 0) {
   fig <- ggplot(
@@ -80,11 +81,11 @@ if (nrow(selected.surv.clean) > 0) {
       colors = nmfspalette::nmfs_palette("regional web")(4),
       name = "Year"
     ) +
-    xlim(0, (1.5 * max(selected.surv.clean$AGE))) +
-    ylim(0, (1.5 * max(selected.surv.clean$LENGTH, na.rm = TRUE))) +
+    xlim(0, (1.2 * max(selected.surv.clean$AGE))) +
+    ylim(0, (1.2 * max(selected.surv.clean$LENGTH, na.rm = TRUE))) +
     xlab("Age (jittered)") +
     ylab(" Total length (cm) (jittered)") +
-    ggtitle(species, subtitle = "Length at age") +
+    #ggtitle(species, subtitle = "Length at age") +
     theme_minimal()
 
   if (nrow(selected.surv.vonb) > 0) {
@@ -101,8 +102,114 @@ if (nrow(selected.surv.clean) > 0) {
       )
   }
 
-  return(fig)
+  print(fig)
 } else {
   print("NO DATA")
 }
 ```
+
+
+
+### Growth differences among groups
+The rate of growth may vary through time and between sexes. To assess for potential differences in growth among these groups, the global von Bertalanffy growth model was constructed and the residuals of each observation and the predicted size was tested for significant differences among groups and through time. 
+
+```{r, growth_diff_testing}
+# testing a Common L∞ and t0 Model.
+
+
+if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
+  # define the type of von b model
+  vb <- vbFuns(param = "Typical")
+  # define starting parameters based on the avalible data
+  f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "oldAge")
+
+  # fit a non-linear least squares model based on the data and starting values
+  f.fit <- nls(LENGTH ~ vb(AGE, Linf, K, t0), data = selected.surv.clean, start = f.starts)
+  # store the fit parameters for later investigation
+  f.fit.summary <- summary(f.fit, correlation = TRUE)
+
+  # define the range of age values that will be used to generate points from the fitted model
+   
+  newages.int <- data.frame(AGE = seq(0, 50))
+  # predict(f.fit,newdata=newages) this funtion uses the model from f.fit to generate new lengths
+  # make a dataset with the values from the model
+  selected.surv.vonb.int <- data.frame(AGE = seq(0, 50), LENGTH = predict(f.fit, newdata = newages.int))
+  #name the predicted length col to avoid conflicts later
+  selected.surv.vonb.int<-selected.surv.vonb.int %>% rename("LENGTH_predicted"="LENGTH")
+  #join with original data set
+  selected.surv.w.predicted <-left_join(selected.surv.clean,selected.surv.vonb.int, by="AGE" )
+  #calculate residuals of predicted length and actual length
+  selected.surv.w.predicted<-selected.surv.w.predicted %>% mutate("vonB.residual"=(LENGTH-LENGTH_predicted))
+  #standardize growth
+  selected.surv.w.predicted<-selected.surv.w.predicted %>% mutate("residual.standardized"=(vonB.residual/LENGTH_predicted))
+  
+} else {
+  print("Not enough data to test differences")
+}
+
+
+
+```
+
+
+```{r, ancova model}
+
+if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
+  
+  #cut the yearly data into decades centered on 1980,
+  selected.surv.w.predicted <- selected.surv.w.predicted %>%
+    dplyr::mutate(Decade = ggplot2::cut_width(YEAR, width = 10, center = 1980))
+ 
+
+    # sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
+    selected.surv.w.predicted$SEX <- recode(selected.surv.w.predicted$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" =     "transitional")
+    #filter out unknown and transitional as they require more detailed analysis 
+  selected.surv.w.predicted<- selected.surv.w.predicted %>% filter(SEX %in% c("male", "female"))   
+  
+#construct an ancova with the interaction between sex and decade to test for differences in fit to von b curve across decades and both sexes
+pred.von.b.ancova<-lm(residual.standardized~SEX+Decade+SEX*Decade ,data = selected.surv.w.predicted)
+
+ancova.table<-summary(pred.von.b.ancova)
+
+
+colnames(ancova.table$coefficients)<-c("Estimate" ,  "Std. Error" ,"t value",   "P-value"  )
+
+
+
+}else("Not enough data to perform analysis")
+
+```
+
+### ANCOVA model output
+ 
+
+```{r, vonb ancova table}
+
+if(nrow(selected.surv.w.predicted)>5){
+  knitr::kable(ancova.table$coefficients, digits = 3)
+}else("No model output")
+
+```
+### Residuals by sex and decade
+
+The fit of each of these grouping to the global model is visualized as the distribution of standardized residuals for each observation. Groups with good fit to the model should have smaller overall residuals that have equal variance above and below zero idicating the model predicting growth accuratly. If residuals are unballenced or the average of the residiuals devates from zero, this could indicate that this grouping differs from the expected growth from the global model. This deviation from the global model may indicate slower or faster growth than predicted, and this may be due to either changing energetic conditions,  sexual dimorphism, or other variation in the population. 
+
+
+```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade")}
+if(selected.surv.clean$AGE %>% unique() %>% length() >= 3){
+  
+selected.surv.w.predicted %>% 
+  ggplot(aes(x=SEX, y=residual.standardized, fill=Decade))+
+  geom_boxplot()+
+  nmfspalette::scale_fill_nmfs()+
+  xlab("Sex")+
+  ylab("standardized residuals")
+  
+  
+
+
+  # unbalenced design of ancova needs to be tested later
+  # remove unknown and transitional fish to simplify interpretation 
+}else("No data")
+```
+

@@ -108,7 +108,7 @@ if(min(num_states$n)<5){data_qual<-FALSE
 
 #### Commercial Landings of `r params$species` 
 
-This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(com_landings_clean$Year) ` to `r max(com_landings_clean$Year)`. The entire data set contains `r length(unique(com_landings_clean$common_name))` species. A total of 9656 aggrigated records were removed. These landing reports were aggrigations of mutiple species and can span several taxanomic groups were removied due to their lack of specificity. 5019 records were withheld due to confidentiality of thoese specific landings.
+This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(com_landings_clean$Year) ` to `r max(com_landings_clean$Year)`. The entire data set contains `r length(unique(com_landings_clean$common_name))` species. A total of 9656 aggregated records were removed. These landing reports were aggregations of multiple species and can span several taxonomic groups were removed due to their lack of specificity. 5019 records were withheld due to confidentiality of those specific landings.
 Figures produced reflect the coverage of the data. With stocks that have high coverage, a running average is calculated. In low coverage stocks, missing values are excluded and a simple time series is produced. 
 
 
@@ -226,7 +226,7 @@ if(nrow(selected_com_state)>4){
 ```
 
 #### inflation adjusted price history of `r params$species`
-The price history  adjusted to 2019 values using data from the World Bank inflation data as informed by Inflation adjustment calculations in Principles of Macroeconomics by Gregory Mankiw et al (2014). Adjustements perfomed using the packages [priceR](https://github.com/stevecondylios/priceR).
+The price history  adjusted to 2019 values using data from the World Bank inflation data as informed by Inflation adjustment calculations in Principles of Macroeconomics by Gregory Mankiw et al (2014). Adjustments performed using the packages [priceR](https://github.com/stevecondylios/priceR).
 
 ```{r, inflation-adjusted-price-history }
 

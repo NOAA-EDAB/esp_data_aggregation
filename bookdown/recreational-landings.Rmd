@@ -1,33 +1,30 @@
+
 ---
-author: "Ricky Tabandera"
-date: "`r format(Sys.time(), '%d %b %Y')`"
+title: Doc
 output: html_document
 params:
-  stock:
-    label: "Stock:"
-    value: Alewife
-    input: select
-    choices: [smooth dogfish, spiny dogfish, barndoor skate, winter skate, clearnose skate, rosette skate, little skate, smooth skate, thorny skate, atlantic herring, alewife, blueback herring, silver hake, atlantic cod, haddock, pollock, white hake, red hake, cusk, atlantic halibut, american plaice, summer flounder, yellowtail flounder, winter flounder, atlantic mackerel, butterfish, bluefish, black sea bass, scup, acadian redfish,    atlantic wolffish,  ocean pout, atlantic menhaden,windowpane flounder]
-  
-title: "Recreational catch of `r stringr::str_to_sentence(params$stock)`"
+  species: "Black sea bass"
 ---
 
----
+### Recreational catch of `r params$species`
 
-```{r setup, include=FALSE}
+"Ricky Tabandera"
+
+
+
+```{r rec-setup}
 knitr::opts_chunk$set(echo = TRUE)
-stock_name<- params$stock
-Rec_state<-params$state
+library("tidyverse")
 
 
 ```
 
 
 
-```{r data cleaning, message= FALSE, error=FALSE,warning = FALSE, echo=FALSE}
-library("tidyverse")
+```{r rec-data-cleaning}
+
 #read in recreational landings data
-rec_landings_1950_2019<-readr::read_csv("foss_landings_REC_1950_2019_MA_NE.csv")
+rec_landings_1950_2019<-readr::read_csv(here::here("data","foss_landings_REC_1950_2019_MA_NE.csv"))
 rec_landings_1950_2019<-rec_landings_1950_2019 %>% dplyr::rename( "common_name"= "NMFS Name")
 rec_landings_1950_2019<-as.data.frame(rec_landings_1950_2019)
 
@@ -56,7 +53,7 @@ rec_landings_1950_2019_comma_split<-rec_landings_1950_2019_comma_split %>% selec
 ########################## renaming rows to align with NEFSC naming 
 
 #removing the shark tag from the first name term
-
+rec_w_comma_split<- as.data.frame(rec_w_comma_split)
 
 rec_w_comma_split[str_detect(rec_w_comma_split$first, "shark"),3]<-NA
 #changing tibble back to df to simplify the string replacement
@@ -115,8 +112,8 @@ stock_missing<-anti_join(stock_list, stock_semi, by = "common_name")
 
 
 #final dataset is 
-rec_landings_clean<-rec_by_sp_whole
-rec_landings_1950_2019_clean <-rec_landings_1950_2019_whole
+# rec_landings_clean<-rec_by_sp_whole
+rec_landings_1950_2019_clean <-rec_landings_1950_2019_whole %>% mutate(common_name=stringr::str_to_sentence(common_name))
 #write.csv(rec_landings_1950_2019_clean, "rec_landings_1950_2019_tidy.csv")
 # rm(list =c("rec_by_sp", "rec_landings_1950_2019", "rec_landings_1950_2019_comma", "rec_landings_1950_2019_comma_split" "rec_w_comma", "rec_w_comma_split", "stock_list", "stock_list_all_strata") )
 
@@ -125,11 +122,14 @@ rec_landings_1950_2019_clean <-rec_landings_1950_2019_whole
 
 Selected_sp<-rec_landings_1950_2019_clean %>% 
   group_by(Year) %>%
-  filter(!is.na(Pounds) & common_name==params$stock) %>%
+  filter(!is.na(Pounds) & common_name==params$species) %>%
   summarise(total=sum(Pounds,na.rm = FALSE))
 selected_by_state<-rec_landings_1950_2019_clean %>%
-  filter(!is.na(Pounds) & common_name==params$stock) %>%
+  filter(!is.na(Pounds) & common_name==params$species) %>%
   group_by(State, Year)
+
+
+
 sp_data_qual<-TRUE
 st_data_qual<-TRUE
 
@@ -145,17 +145,17 @@ if(length(which(is.na(selected_by_state$Pounds)))/length(selected_by_state$Pound
 
 ## Recreational catches time series 
 
-This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year) ` to `r max(rec_landings_1950_2019$Year)`. The entire data set contains `r length(unique(rec_landings_1950_2019$common_name))` species. Figures produced reflect the coverage of the data. With stocks that have high coverage, a running average is calculated. In low coverage stocks, missing values are excluded and a simple time series is produced. 
+This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year,na.rm =TRUE) ` to `r max(rec_landings_1950_2019$Year,na.rm =TRUE)`. The entire data set contains `r length(unique(rec_landings_1950_2019$common_name))` species. Figures produced reflect the coverage of the data. With stocks that have high coverage, a running average is calculated. In low coverage stocks, missing values are excluded and a simple time series is produced. 
 
 
 
-```{r total catch good data, messages=FALSE,warning=FALSE, error=FALSE, echo=FALSE, eval= sp_data_qual}
+```{r total-catch-good-data, eval= sp_data_qual}
 
 Selected_sp%>%
   ggplot2::ggplot(aes(x=Year, y=log(total)))+
   tidyquant::geom_ma( n=5, lwd=1.4)+
   geom_point()+
-  ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
+  ggtitle(label = params$species ,subtitle = "5 year rolling average")+
   xlim(1981,2019)+
   xlab(label= "Year")+
   ylab(label = "Log transformed  total catch in pounds (lb) ")+
@@ -163,14 +163,15 @@ Selected_sp%>%
 
 
 ```
-```{r sp if data is poor,messages=FALSE,warning=FALSE, error=FALSE, echo=FALSE, eval= !sp_data_qual}
+
+```{r sp-if-data-is-poor, eval= !sp_data_qual}
 
 
 Selected_sp%>%na.omit()%>%
   ggplot2::ggplot(aes(x=Year, y=log(total)))+
   geom_point(size=1.3)+
   geom_line()+
-  ggtitle(label = params$stock ,subtitle = "Data coverage is poor")+
+  ggtitle(label = params$species ,subtitle = "Data coverage is poor")+
   xlim(1981,2019)+
   xlab(label= "Year")+
   ylab(label = "Log transformed  total catch in pounds (lb)")+
@@ -180,16 +181,16 @@ Selected_sp%>%na.omit()%>%
 ```
 
 
-## Recreational landings of `r params$stock` across states in the mid-Atlantic and north-east regions
+## Recreational landings of `r params$species` across states in the mid-Atlantic and north-east regions
 
-```{r state breakdown if data is good,messages=FALSE,warning=FALSE, error=FALSE, echo=FALSE, eval=st_data_qual}
+```{r, state-breakdown-data-good,eval=st_data_qual}
 
 selected_by_state %>%
   ggplot2::ggplot(aes(x=Year, y=log(Pounds)))+
   geom_point()+
   tidyquant::geom_ma(aes(color = State, lty= State),n=5, lwd=1.4,na.rm = TRUE,show.legend = FALSE)+
   facet_wrap(vars(State))+
-  ggtitle(label = params$stock ,subtitle = "5 year rolling average")+
+  ggtitle(label = params$species ,subtitle = "5 year rolling average")+
   xlim(1981,2019)+
   xlab(label= "Year")+
   ylab(label = "Log transformed  total catch in pounds (lb) ")+
@@ -199,7 +200,8 @@ selected_by_state %>%
 
 
 ```
-```{r data poor graph, warning=FALSE,  echo= FALSE, eval= !st_data_qual}
+
+```{r data-poor-graph, eval= !st_data_qual}
 
 selected_by_state%>% 
   ggplot2::ggplot(aes(x=Year, y=log(Pounds)))+
@@ -207,7 +209,7 @@ selected_by_state%>%
   geom_line(aes(color=State,lty=State),lwd=1.3,show.legend = FALSE)+
   facet_wrap(vars(State))+
   xlim(1981,2019)+
-  ggtitle(label = params$stock ,subtitle = "Data coverage is poor")+
+  ggtitle(label = params$species ,subtitle = "Data coverage is poor")+
   xlab(label= "Year")+
   ylab(label = "Log transformed  total catch in pounds (lb) ")+
   theme_minimal()
