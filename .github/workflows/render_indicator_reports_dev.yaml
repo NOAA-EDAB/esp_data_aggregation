@@ -16,8 +16,8 @@ jobs:
       - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
         with:
-#          ref: abby
           persist-credentials: false
+#          ref: abby
 
       - name: Install Pandoc
         run: brew install pandoc
