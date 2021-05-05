@@ -105,7 +105,7 @@ jobs:
           folder: test-folder # The folder the action should deploy.
           target-folder: test-folder
           clean: false # Automatically remove deleted files from the deploy branch
-         repository-name: NOAA-EDAB/ESP_docs
+          repository-name: NOAA-EDAB/ESP_docs
 ##
   test-report:
     runs-on: ubuntu-latest
