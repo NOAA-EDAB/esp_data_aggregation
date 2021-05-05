@@ -71,7 +71,7 @@ jobs:
           }
 
           # run
-          lapply(NEesp::species_key$Species, fun))'
+          lapply(NEesp::species_key$Species[1], fun))'
 #          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
 #          source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
 
