@@ -1,0 +1,2025 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",29379264.6990232,FALSE,30,0.399907051668459,FALSE
+"2","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",8167723.7673819,FALSE,30,0.708684675571928,FALSE
+"3","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",164760962.97416,FALSE,30,0.0921227244788975,FALSE
+"4","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",2057320421.85807,FALSE,30,0.0667031586432122,FALSE
+"5","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",8159228.04500735,FALSE,30,0.399907051668459,FALSE
+"6","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",12005377.5445703,FALSE,30,0.708684675571928,FALSE
+"7","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",155001553.948152,FALSE,30,0.0921227244788975,FALSE
+"8","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",2457720880.88684,FALSE,30,0.0667031586432122,FALSE
+"9","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",26261334.7585025,FALSE,30,0.399907051668459,FALSE
+"10","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",4545720.44584119,FALSE,30,0.708684675571928,FALSE
+"11","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",97216304.4268092,FALSE,30,0.0921227244788975,FALSE
+"12","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1614311073.68881,FALSE,30,0.0667031586432122,FALSE
+"13","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",54671643.9506965,FALSE,30,0.399907051668459,FALSE
+"14","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",22833362.1665959,FALSE,30,0.708684675571928,FALSE
+"15","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",661838033.485323,FALSE,30,0.0921227244788975,FALSE
+"16","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1986618380.21002,FALSE,30,0.0667031586432122,FALSE
+"17","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",24002315.3255464,FALSE,30,0.399907051668459,FALSE
+"18","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",20537586.8715243,FALSE,30,0.708684675571928,FALSE
+"19","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",408115646.831937,FALSE,30,0.0921227244788975,FALSE
+"20","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1254117990.46335,FALSE,30,0.0667031586432122,FALSE
+"21","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",16283809.9370521,FALSE,30,0.399907051668459,FALSE
+"22","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",20759742.0704506,FALSE,30,0.708684675571928,FALSE
+"23","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",1781522950.88366,FALSE,30,0.0921227244788975,FALSE
+"24","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1296007277.65284,FALSE,30,0.0667031586432122,FALSE
+"25","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",7433004.61480596,FALSE,30,0.399907051668459,FALSE
+"26","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",7052354.32332037,FALSE,30,0.708684675571928,FALSE
+"27","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",1021266044.90992,FALSE,30,0.0921227244788975,FALSE
+"28","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",461063027.080892,FALSE,30,0.0667031586432122,FALSE
+"29","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",51420145.4648147,FALSE,30,0.399907051668459,FALSE
+"30","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",7099867.94171651,FALSE,30,0.708684675571928,FALSE
+"31","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",253330725.542517,FALSE,30,0.0921227244788975,FALSE
+"32","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1225617826.81764,FALSE,30,0.0667031586432122,FALSE
+"33","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",27922952.2981456,FALSE,30,0.399907051668459,FALSE
+"34","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",18655938.1235914,FALSE,30,0.708684675571928,FALSE
+"35","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",140908374.718828,FALSE,30,0.0921227244788975,FALSE
+"36","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1134615509.0836,FALSE,30,0.0667031586432122,FALSE
+"37","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",33248919.8039091,FALSE,30,0.399907051668459,FALSE
+"38","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",9771802.42460488,FALSE,30,0.708684675571928,FALSE
+"39","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",742112383.662048,FALSE,30,0.0921227244788975,FALSE
+"40","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1646536403.14606,FALSE,30,0.0667031586432122,FALSE
+"41","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",43881900.7940997,FALSE,30,0.399907051668459,FALSE
+"42","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",9456561.85887842,FALSE,30,0.708684675571928,FALSE
+"43","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",153154565.560301,FALSE,30,0.0921227244788975,FALSE
+"44","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",645063373.394481,FALSE,30,0.0667031586432122,FALSE
+"45","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",33227457.8457572,FALSE,30,0.399907051668459,FALSE
+"46","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",12222369.9987111,FALSE,30,0.708684675571928,FALSE
+"47","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",153021361.927324,FALSE,30,0.0921227244788975,FALSE
+"48","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",849002399.33359,FALSE,30,0.0667031586432122,FALSE
+"49","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",11740145.9046776,FALSE,30,0.399907051668459,FALSE
+"50","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",9886673.81880833,FALSE,30,0.708684675571928,FALSE
+"51","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",183541718.747686,FALSE,30,0.0921227244788975,FALSE
+"52","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1103760061.48354,FALSE,30,0.0667031586432122,FALSE
+"53","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",16588695.5766845,FALSE,30,0.399907051668459,FALSE
+"54","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",10212468.8206699,FALSE,30,0.708684675571928,FALSE
+"55","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",211086516.413631,FALSE,30,0.0921227244788975,FALSE
+"56","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",907320659.882499,FALSE,30,0.0667031586432122,FALSE
+"57","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",12658075.1786034,FALSE,30,0.399907051668459,FALSE
+"58","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",14060475.2598546,FALSE,30,0.708684675571928,FALSE
+"59","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",329129531.767637,FALSE,30,0.0921227244788975,FALSE
+"60","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",773250571.791941,FALSE,30,0.0667031586432122,FALSE
+"61","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",15992286.6328448,FALSE,30,0.399907051668459,FALSE
+"62","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",5480534.54071862,FALSE,30,0.708684675571928,FALSE
+"63","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",443817583.909472,FALSE,30,0.0921227244788975,FALSE
+"64","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",920130405.491025,FALSE,30,0.0667031586432122,FALSE
+"65","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",8562760.50679254,FALSE,30,0.399907051668459,FALSE
+"66","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",8989444.3735794,FALSE,30,0.708684675571928,FALSE
+"67","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",468741497.711354,FALSE,30,0.0921227244788975,FALSE
+"68","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",336756733.540284,FALSE,30,0.0667031586432122,FALSE
+"69","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",34358542.8226887,FALSE,30,0.399907051668459,FALSE
+"70","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",18135658.0329673,FALSE,30,0.708684675571928,FALSE
+"71","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",227134427.664455,FALSE,30,0.0921227244788975,FALSE
+"72","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",692327785.09499,FALSE,30,0.0667031586432122,FALSE
+"73","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",7591835.80871081,FALSE,30,0.399907051668459,FALSE
+"74","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",3791515.91542904,FALSE,30,0.708684675571928,FALSE
+"75","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",204127410.508455,FALSE,30,0.0921227244788975,FALSE
+"76","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",571108106.10721,FALSE,30,0.0667031586432122,FALSE
+"77","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",19378393.4683817,FALSE,30,0.399907051668459,FALSE
+"78","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",6641572.66917147,FALSE,30,0.708684675571928,FALSE
+"79","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",179036809.268788,FALSE,30,0.0921227244788975,FALSE
+"80","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",686424536.07003,FALSE,30,0.0667031586432122,FALSE
+"81","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",9877987.96127293,FALSE,30,0.399907051668459,FALSE
+"82","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",7910893.62430098,FALSE,30,0.708684675571928,FALSE
+"83","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",192196556.005482,FALSE,30,0.0921227244788975,FALSE
+"84","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",421556825.460709,FALSE,30,0.0667031586432122,FALSE
+"85","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",94740657.6188353,FALSE,30,0.399907051668459,FALSE
+"86","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",32395038.5031413,FALSE,30,0.708684675571928,FALSE
+"87","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",616856683.721446,FALSE,30,0.0921227244788975,FALSE
+"88","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",597205261.958268,FALSE,30,0.0667031586432122,FALSE
+"89","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",30505125.0458051,FALSE,30,0.399907051668459,FALSE
+"90","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",5292550.97344967,FALSE,30,0.708684675571928,FALSE
+"91","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",134691733.161217,FALSE,30,0.0921227244788975,FALSE
+"92","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",608333237.543475,FALSE,30,0.0667031586432122,FALSE
+"93","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",5166578.40200678,FALSE,30,0.399907051668459,FALSE
+"94","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",7146391.21257723,FALSE,30,0.708684675571928,FALSE
+"95","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",131035851.155792,FALSE,30,0.0921227244788975,FALSE
+"96","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",564019722.257699,FALSE,30,0.0667031586432122,FALSE
+"97","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",36405422.1202381,FALSE,30,0.399907051668459,FALSE
+"98","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",8905068.52824169,FALSE,30,0.708684675571928,FALSE
+"99","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",651809073.435511,FALSE,30,0.0921227244788975,FALSE
+"100","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1357387797.18037,FALSE,30,0.0667031586432122,FALSE
+"101","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",18255102.758424,FALSE,30,0.399907051668459,FALSE
+"102","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",15121950.6811851,FALSE,30,0.708684675571928,FALSE
+"103","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",202955527.045099,FALSE,30,0.0921227244788975,FALSE
+"104","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",726494368.022419,FALSE,30,0.0667031586432122,FALSE
+"105","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",14316389.6749926,FALSE,30,0.399907051668459,FALSE
+"106","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",19538559.2790659,FALSE,30,0.708684675571928,FALSE
+"107","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",71732214.5339177,FALSE,30,0.0921227244788975,FALSE
+"108","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",571696988.941615,FALSE,30,0.0667031586432122,FALSE
+"109","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",10079315.7772795,FALSE,30,0.399907051668459,FALSE
+"110","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",10022307.9796558,FALSE,30,0.708684675571928,FALSE
+"111","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",160469157.558343,FALSE,30,0.0921227244788975,FALSE
+"112","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",633562752.803134,FALSE,30,0.0667031586432122,FALSE
+"113","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",7865426.9596242,FALSE,30,0.399907051668459,FALSE
+"114","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",6475324.34877877,FALSE,30,0.708684675571928,FALSE
+"115","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",130537627.404885,FALSE,30,0.0921227244788975,FALSE
+"116","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",612943062.234119,FALSE,30,0.0667031586432122,FALSE
+"117","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Cnidaria
+Absolute Number of Individuals",28091362.0909074,FALSE,30,0.399907051668459,FALSE
+"118","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",19121632.2093019,FALSE,30,0.708684675571928,FALSE
+"119","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",308172740.900593,FALSE,30,0.0921227244788975,FALSE
+"120","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",635364131.820662,FALSE,30,0.0667031586432122,FALSE
+"121","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",29379264.6990232,FALSE,30,0.243975175567772,FALSE
+"122","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",8167723.7673819,FALSE,30,0.459577381862991,FALSE
+"123","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",164760962.97416,FALSE,30,0.267520325769173,FALSE
+"124","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",2057320421.85807,FALSE,30,1.88321950262756e-06,TRUE
+"125","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",8159228.04500735,FALSE,30,0.243975175567772,FALSE
+"126","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",12005377.5445703,FALSE,30,0.459577381862991,FALSE
+"127","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",155001553.948152,FALSE,30,0.267520325769173,FALSE
+"128","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",2457720880.88684,FALSE,30,1.88321950262756e-06,TRUE
+"129","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",26261334.7585025,FALSE,30,0.243975175567772,FALSE
+"130","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",4545720.44584119,FALSE,30,0.459577381862991,FALSE
+"131","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",97216304.4268092,FALSE,30,0.267520325769173,FALSE
+"132","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",1614311073.68881,FALSE,30,1.88321950262756e-06,TRUE
+"133","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",54671643.9506965,FALSE,30,0.243975175567772,FALSE
+"134","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",22833362.1665959,FALSE,30,0.459577381862991,FALSE
+"135","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",661838033.485323,FALSE,30,0.267520325769173,FALSE
+"136","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",1986618380.21002,FALSE,30,1.88321950262756e-06,TRUE
+"137","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",24002315.3255464,FALSE,30,0.243975175567772,FALSE
+"138","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",20537586.8715243,FALSE,30,0.459577381862991,FALSE
+"139","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",408115646.831937,FALSE,30,0.267520325769173,FALSE
+"140","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",1254117990.46335,FALSE,30,1.88321950262756e-06,TRUE
+"141","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",16283809.9370521,FALSE,30,0.243975175567772,FALSE
+"142","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",20759742.0704506,FALSE,30,0.459577381862991,FALSE
+"143","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",1781522950.88366,FALSE,30,0.267520325769173,FALSE
+"144","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",1296007277.65284,FALSE,30,1.88321950262756e-06,TRUE
+"145","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",7433004.61480596,FALSE,30,0.243975175567772,FALSE
+"146","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",7052354.32332037,FALSE,30,0.459577381862991,FALSE
+"147","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",1021266044.90992,FALSE,30,0.267520325769173,FALSE
+"148","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",461063027.080892,FALSE,30,1.88321950262756e-06,TRUE
+"149","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",51420145.4648147,FALSE,30,0.243975175567772,FALSE
+"150","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",7099867.94171651,FALSE,30,0.459577381862991,FALSE
+"151","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",253330725.542517,FALSE,30,0.267520325769173,FALSE
+"152","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",1225617826.81764,FALSE,30,1.88321950262756e-06,TRUE
+"153","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",27922952.2981456,FALSE,30,0.243975175567772,FALSE
+"154","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",18655938.1235914,FALSE,30,0.459577381862991,FALSE
+"155","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",140908374.718828,FALSE,30,0.267520325769173,FALSE
+"156","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",1134615509.0836,FALSE,30,1.88321950262756e-06,TRUE
+"157","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",33248919.8039091,FALSE,30,0.243975175567772,FALSE
+"158","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",9771802.42460488,FALSE,30,0.459577381862991,FALSE
+"159","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",742112383.662048,FALSE,30,0.267520325769173,FALSE
+"160","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",1646536403.14606,FALSE,30,1.88321950262756e-06,TRUE
+"161","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",43881900.7940997,FALSE,30,0.243975175567772,FALSE
+"162","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",9456561.85887842,FALSE,30,0.459577381862991,FALSE
+"163","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",153154565.560301,FALSE,30,0.267520325769173,FALSE
+"164","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",645063373.394481,FALSE,30,1.88321950262756e-06,TRUE
+"165","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",33227457.8457572,FALSE,30,0.243975175567772,FALSE
+"166","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",12222369.9987111,FALSE,30,0.459577381862991,FALSE
+"167","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",153021361.927324,FALSE,30,0.267520325769173,FALSE
+"168","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",849002399.33359,FALSE,30,1.88321950262756e-06,TRUE
+"169","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",11740145.9046776,FALSE,30,0.243975175567772,FALSE
+"170","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",9886673.81880833,FALSE,30,0.459577381862991,FALSE
+"171","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",183541718.747686,FALSE,30,0.267520325769173,FALSE
+"172","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",1103760061.48354,FALSE,30,1.88321950262756e-06,TRUE
+"173","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",16588695.5766845,FALSE,30,0.243975175567772,FALSE
+"174","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",10212468.8206699,FALSE,30,0.459577381862991,FALSE
+"175","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",211086516.413631,FALSE,30,0.267520325769173,FALSE
+"176","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",907320659.882499,FALSE,30,1.88321950262756e-06,TRUE
+"177","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",12658075.1786034,FALSE,30,0.243975175567772,FALSE
+"178","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",14060475.2598546,FALSE,30,0.459577381862991,FALSE
+"179","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",329129531.767637,FALSE,30,0.267520325769173,FALSE
+"180","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",773250571.791941,FALSE,30,1.88321950262756e-06,TRUE
+"181","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",15992286.6328448,FALSE,30,0.243975175567772,FALSE
+"182","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",5480534.54071862,FALSE,30,0.459577381862991,FALSE
+"183","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",443817583.909472,FALSE,30,0.267520325769173,FALSE
+"184","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",920130405.491025,FALSE,30,1.88321950262756e-06,TRUE
+"185","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",8562760.50679254,FALSE,30,0.243975175567772,FALSE
+"186","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",8989444.3735794,FALSE,30,0.459577381862991,FALSE
+"187","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",468741497.711354,FALSE,30,0.267520325769173,FALSE
+"188","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",336756733.540284,FALSE,30,1.88321950262756e-06,TRUE
+"189","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",34358542.8226887,FALSE,30,0.243975175567772,FALSE
+"190","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",18135658.0329673,FALSE,30,0.459577381862991,FALSE
+"191","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",227134427.664455,FALSE,30,0.267520325769173,FALSE
+"192","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",692327785.09499,FALSE,30,1.88321950262756e-06,TRUE
+"193","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",7591835.80871081,FALSE,30,0.243975175567772,FALSE
+"194","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",3791515.91542904,FALSE,30,0.459577381862991,FALSE
+"195","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",204127410.508455,FALSE,30,0.267520325769173,FALSE
+"196","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",571108106.10721,FALSE,30,1.88321950262756e-06,TRUE
+"197","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",19378393.4683817,FALSE,30,0.243975175567772,FALSE
+"198","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",6641572.66917147,FALSE,30,0.459577381862991,FALSE
+"199","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",179036809.268788,FALSE,30,0.267520325769173,FALSE
+"200","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",686424536.07003,FALSE,30,1.88321950262756e-06,TRUE
+"201","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",9877987.96127293,FALSE,30,0.243975175567772,FALSE
+"202","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",7910893.62430098,FALSE,30,0.459577381862991,FALSE
+"203","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",192196556.005482,FALSE,30,0.267520325769173,FALSE
+"204","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",421556825.460709,FALSE,30,1.88321950262756e-06,TRUE
+"205","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",94740657.6188353,FALSE,30,0.243975175567772,FALSE
+"206","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",32395038.5031413,FALSE,30,0.459577381862991,FALSE
+"207","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",616856683.721446,FALSE,30,0.267520325769173,FALSE
+"208","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",597205261.958268,FALSE,30,1.88321950262756e-06,TRUE
+"209","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",30505125.0458051,FALSE,30,0.243975175567772,FALSE
+"210","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",5292550.97344967,FALSE,30,0.459577381862991,FALSE
+"211","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",134691733.161217,FALSE,30,0.267520325769173,FALSE
+"212","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",608333237.543475,FALSE,30,1.88321950262756e-06,TRUE
+"213","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",5166578.40200678,FALSE,30,0.243975175567772,FALSE
+"214","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",7146391.21257723,FALSE,30,0.459577381862991,FALSE
+"215","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",131035851.155792,FALSE,30,0.267520325769173,FALSE
+"216","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",564019722.257699,FALSE,30,1.88321950262756e-06,TRUE
+"217","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",36405422.1202381,FALSE,30,0.243975175567772,FALSE
+"218","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",8905068.52824169,FALSE,30,0.459577381862991,FALSE
+"219","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",651809073.435511,FALSE,30,0.267520325769173,FALSE
+"220","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",1357387797.18037,FALSE,30,1.88321950262756e-06,TRUE
+"221","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",18255102.758424,FALSE,30,0.243975175567772,FALSE
+"222","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",15121950.6811851,FALSE,30,0.459577381862991,FALSE
+"223","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",202955527.045099,FALSE,30,0.267520325769173,FALSE
+"224","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",726494368.022419,FALSE,30,1.88321950262756e-06,TRUE
+"225","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",14316389.6749926,FALSE,30,0.243975175567772,FALSE
+"226","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",19538559.2790659,FALSE,30,0.459577381862991,FALSE
+"227","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",71732214.5339177,FALSE,30,0.267520325769173,FALSE
+"228","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",571696988.941615,FALSE,30,1.88321950262756e-06,TRUE
+"229","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",10079315.7772795,FALSE,30,0.243975175567772,FALSE
+"230","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",10022307.9796558,FALSE,30,0.459577381862991,FALSE
+"231","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",160469157.558343,FALSE,30,0.267520325769173,FALSE
+"232","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",633562752.803134,FALSE,30,1.88321950262756e-06,TRUE
+"233","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",7865426.9596242,FALSE,30,0.243975175567772,FALSE
+"234","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",6475324.34877877,FALSE,30,0.459577381862991,FALSE
+"235","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",130537627.404885,FALSE,30,0.267520325769173,FALSE
+"236","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",612943062.234119,FALSE,30,1.88321950262756e-06,TRUE
+"237","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Cnidaria
+Absolute Number of Individuals",28091362.0909074,FALSE,30,0.243975175567772,FALSE
+"238","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Euphausiacea
+Absolute Number of Individuals",19121632.2093019,FALSE,30,0.459577381862991,FALSE
+"239","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","LargeCalanoida
+Absolute Number of Individuals",308172740.900593,FALSE,30,0.267520325769173,FALSE
+"240","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","SmallCalanoida
+Absolute Number of Individuals",635364131.820662,FALSE,30,1.88321950262756e-06,TRUE
+"241","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",29379264.6990232,FALSE,30,0.313366216495997,FALSE
+"242","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",8167723.7673819,FALSE,30,0.216967445255152,FALSE
+"243","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",164760962.97416,FALSE,30,0.332917660146978,FALSE
+"244","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",2057320421.85807,FALSE,30,0.234441639425499,FALSE
+"245","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",8159228.04500735,FALSE,30,0.313366216495997,FALSE
+"246","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",12005377.5445703,FALSE,30,0.216967445255152,FALSE
+"247","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",155001553.948152,FALSE,30,0.332917660146978,FALSE
+"248","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",2457720880.88684,FALSE,30,0.234441639425499,FALSE
+"249","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",26261334.7585025,FALSE,30,0.313366216495997,FALSE
+"250","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",4545720.44584119,FALSE,30,0.216967445255152,FALSE
+"251","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",97216304.4268092,FALSE,30,0.332917660146978,FALSE
+"252","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",1614311073.68881,FALSE,30,0.234441639425499,FALSE
+"253","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",54671643.9506965,FALSE,30,0.313366216495997,FALSE
+"254","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",22833362.1665959,FALSE,30,0.216967445255152,FALSE
+"255","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",661838033.485323,FALSE,30,0.332917660146978,FALSE
+"256","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",1986618380.21002,FALSE,30,0.234441639425499,FALSE
+"257","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",24002315.3255464,FALSE,30,0.313366216495997,FALSE
+"258","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",20537586.8715243,FALSE,30,0.216967445255152,FALSE
+"259","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",408115646.831937,FALSE,30,0.332917660146978,FALSE
+"260","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",1254117990.46335,FALSE,30,0.234441639425499,FALSE
+"261","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",16283809.9370521,FALSE,30,0.313366216495997,FALSE
+"262","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",20759742.0704506,FALSE,30,0.216967445255152,FALSE
+"263","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",1781522950.88366,FALSE,30,0.332917660146978,FALSE
+"264","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",1296007277.65284,FALSE,30,0.234441639425499,FALSE
+"265","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",7433004.61480596,FALSE,30,0.313366216495997,FALSE
+"266","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",7052354.32332037,FALSE,30,0.216967445255152,FALSE
+"267","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",1021266044.90992,FALSE,30,0.332917660146978,FALSE
+"268","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",461063027.080892,FALSE,30,0.234441639425499,FALSE
+"269","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",51420145.4648147,FALSE,30,0.313366216495997,FALSE
+"270","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",7099867.94171651,FALSE,30,0.216967445255152,FALSE
+"271","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",253330725.542517,FALSE,30,0.332917660146978,FALSE
+"272","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",1225617826.81764,FALSE,30,0.234441639425499,FALSE
+"273","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",27922952.2981456,FALSE,30,0.313366216495997,FALSE
+"274","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",18655938.1235914,FALSE,30,0.216967445255152,FALSE
+"275","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",140908374.718828,FALSE,30,0.332917660146978,FALSE
+"276","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",1134615509.0836,FALSE,30,0.234441639425499,FALSE
+"277","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",33248919.8039091,FALSE,30,0.313366216495997,FALSE
+"278","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",9771802.42460488,FALSE,30,0.216967445255152,FALSE
+"279","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",742112383.662048,FALSE,30,0.332917660146978,FALSE
+"280","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",1646536403.14606,FALSE,30,0.234441639425499,FALSE
+"281","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",43881900.7940997,FALSE,30,0.313366216495997,FALSE
+"282","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",9456561.85887842,FALSE,30,0.216967445255152,FALSE
+"283","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",153154565.560301,FALSE,30,0.332917660146978,FALSE
+"284","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",645063373.394481,FALSE,30,0.234441639425499,FALSE
+"285","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",33227457.8457572,FALSE,30,0.313366216495997,FALSE
+"286","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",12222369.9987111,FALSE,30,0.216967445255152,FALSE
+"287","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",153021361.927324,FALSE,30,0.332917660146978,FALSE
+"288","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",849002399.33359,FALSE,30,0.234441639425499,FALSE
+"289","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",11740145.9046776,FALSE,30,0.313366216495997,FALSE
+"290","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",9886673.81880833,FALSE,30,0.216967445255152,FALSE
+"291","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",183541718.747686,FALSE,30,0.332917660146978,FALSE
+"292","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",1103760061.48354,FALSE,30,0.234441639425499,FALSE
+"293","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",16588695.5766845,FALSE,30,0.313366216495997,FALSE
+"294","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",10212468.8206699,FALSE,30,0.216967445255152,FALSE
+"295","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",211086516.413631,FALSE,30,0.332917660146978,FALSE
+"296","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",907320659.882499,FALSE,30,0.234441639425499,FALSE
+"297","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",12658075.1786034,FALSE,30,0.313366216495997,FALSE
+"298","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",14060475.2598546,FALSE,30,0.216967445255152,FALSE
+"299","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",329129531.767637,FALSE,30,0.332917660146978,FALSE
+"300","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",773250571.791941,FALSE,30,0.234441639425499,FALSE
+"301","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",15992286.6328448,FALSE,30,0.313366216495997,FALSE
+"302","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",5480534.54071862,FALSE,30,0.216967445255152,FALSE
+"303","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",443817583.909472,FALSE,30,0.332917660146978,FALSE
+"304","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",920130405.491025,FALSE,30,0.234441639425499,FALSE
+"305","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",8562760.50679254,FALSE,30,0.313366216495997,FALSE
+"306","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",8989444.3735794,FALSE,30,0.216967445255152,FALSE
+"307","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",468741497.711354,FALSE,30,0.332917660146978,FALSE
+"308","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",336756733.540284,FALSE,30,0.234441639425499,FALSE
+"309","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",34358542.8226887,FALSE,30,0.313366216495997,FALSE
+"310","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",18135658.0329673,FALSE,30,0.216967445255152,FALSE
+"311","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",227134427.664455,FALSE,30,0.332917660146978,FALSE
+"312","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",692327785.09499,FALSE,30,0.234441639425499,FALSE
+"313","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",7591835.80871081,FALSE,30,0.313366216495997,FALSE
+"314","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",3791515.91542904,FALSE,30,0.216967445255152,FALSE
+"315","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",204127410.508455,FALSE,30,0.332917660146978,FALSE
+"316","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",571108106.10721,FALSE,30,0.234441639425499,FALSE
+"317","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",19378393.4683817,FALSE,30,0.313366216495997,FALSE
+"318","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",6641572.66917147,FALSE,30,0.216967445255152,FALSE
+"319","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",179036809.268788,FALSE,30,0.332917660146978,FALSE
+"320","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",686424536.07003,FALSE,30,0.234441639425499,FALSE
+"321","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",9877987.96127293,FALSE,30,0.313366216495997,FALSE
+"322","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",7910893.62430098,FALSE,30,0.216967445255152,FALSE
+"323","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",192196556.005482,FALSE,30,0.332917660146978,FALSE
+"324","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",421556825.460709,FALSE,30,0.234441639425499,FALSE
+"325","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",94740657.6188353,FALSE,30,0.313366216495997,FALSE
+"326","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",32395038.5031413,FALSE,30,0.216967445255152,FALSE
+"327","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",616856683.721446,FALSE,30,0.332917660146978,FALSE
+"328","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",597205261.958268,FALSE,30,0.234441639425499,FALSE
+"329","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",30505125.0458051,FALSE,30,0.313366216495997,FALSE
+"330","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",5292550.97344967,FALSE,30,0.216967445255152,FALSE
+"331","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",134691733.161217,FALSE,30,0.332917660146978,FALSE
+"332","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",608333237.543475,FALSE,30,0.234441639425499,FALSE
+"333","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",5166578.40200678,FALSE,30,0.313366216495997,FALSE
+"334","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",7146391.21257723,FALSE,30,0.216967445255152,FALSE
+"335","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",131035851.155792,FALSE,30,0.332917660146978,FALSE
+"336","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",564019722.257699,FALSE,30,0.234441639425499,FALSE
+"337","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",36405422.1202381,FALSE,30,0.313366216495997,FALSE
+"338","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",8905068.52824169,FALSE,30,0.216967445255152,FALSE
+"339","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",651809073.435511,FALSE,30,0.332917660146978,FALSE
+"340","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",1357387797.18037,FALSE,30,0.234441639425499,FALSE
+"341","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",18255102.758424,FALSE,30,0.313366216495997,FALSE
+"342","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",15121950.6811851,FALSE,30,0.216967445255152,FALSE
+"343","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",202955527.045099,FALSE,30,0.332917660146978,FALSE
+"344","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",726494368.022419,FALSE,30,0.234441639425499,FALSE
+"345","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",14316389.6749926,FALSE,30,0.313366216495997,FALSE
+"346","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",19538559.2790659,FALSE,30,0.216967445255152,FALSE
+"347","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",71732214.5339177,FALSE,30,0.332917660146978,FALSE
+"348","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",571696988.941615,FALSE,30,0.234441639425499,FALSE
+"349","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",10079315.7772795,FALSE,30,0.313366216495997,FALSE
+"350","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",10022307.9796558,FALSE,30,0.216967445255152,FALSE
+"351","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",160469157.558343,FALSE,30,0.332917660146978,FALSE
+"352","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",633562752.803134,FALSE,30,0.234441639425499,FALSE
+"353","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",7865426.9596242,FALSE,30,0.313366216495997,FALSE
+"354","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",6475324.34877877,FALSE,30,0.216967445255152,FALSE
+"355","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",130537627.404885,FALSE,30,0.332917660146978,FALSE
+"356","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",612943062.234119,FALSE,30,0.234441639425499,FALSE
+"357","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Cnidaria
+Absolute Number of Individuals",28091362.0909074,FALSE,30,0.313366216495997,FALSE
+"358","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Euphausiacea
+Absolute Number of Individuals",19121632.2093019,FALSE,30,0.216967445255152,FALSE
+"359","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","LargeCalanoida
+Absolute Number of Individuals",308172740.900593,FALSE,30,0.332917660146978,FALSE
+"360","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","SmallCalanoida
+Absolute Number of Individuals",635364131.820662,FALSE,30,0.234441639425499,FALSE
+"361","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",29379264.6990232,FALSE,30,0.467911335717048,FALSE
+"362","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",8167723.7673819,FALSE,30,0.561046383669159,FALSE
+"363","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",164760962.97416,FALSE,30,0.187758087702958,FALSE
+"364","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",2057320421.85807,FALSE,30,0.0173593027690563,TRUE
+"365","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",8159228.04500735,FALSE,30,0.467911335717048,FALSE
+"366","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",12005377.5445703,FALSE,30,0.561046383669159,FALSE
+"367","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",155001553.948152,FALSE,30,0.187758087702958,FALSE
+"368","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",2457720880.88684,FALSE,30,0.0173593027690563,TRUE
+"369","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",26261334.7585025,FALSE,30,0.467911335717048,FALSE
+"370","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",4545720.44584119,FALSE,30,0.561046383669159,FALSE
+"371","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",97216304.4268092,FALSE,30,0.187758087702958,FALSE
+"372","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1614311073.68881,FALSE,30,0.0173593027690563,TRUE
+"373","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",54671643.9506965,FALSE,30,0.467911335717048,FALSE
+"374","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",22833362.1665959,FALSE,30,0.561046383669159,FALSE
+"375","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",661838033.485323,FALSE,30,0.187758087702958,FALSE
+"376","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1986618380.21002,FALSE,30,0.0173593027690563,TRUE
+"377","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",24002315.3255464,FALSE,30,0.467911335717048,FALSE
+"378","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",20537586.8715243,FALSE,30,0.561046383669159,FALSE
+"379","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",408115646.831937,FALSE,30,0.187758087702958,FALSE
+"380","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1254117990.46335,FALSE,30,0.0173593027690563,TRUE
+"381","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",16283809.9370521,FALSE,30,0.467911335717048,FALSE
+"382","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",20759742.0704506,FALSE,30,0.561046383669159,FALSE
+"383","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",1781522950.88366,FALSE,30,0.187758087702958,FALSE
+"384","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1296007277.65284,FALSE,30,0.0173593027690563,TRUE
+"385","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",7433004.61480596,FALSE,30,0.467911335717048,FALSE
+"386","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",7052354.32332037,FALSE,30,0.561046383669159,FALSE
+"387","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",1021266044.90992,FALSE,30,0.187758087702958,FALSE
+"388","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",461063027.080892,FALSE,30,0.0173593027690563,TRUE
+"389","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",51420145.4648147,FALSE,30,0.467911335717048,FALSE
+"390","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",7099867.94171651,FALSE,30,0.561046383669159,FALSE
+"391","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",253330725.542517,FALSE,30,0.187758087702958,FALSE
+"392","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1225617826.81764,FALSE,30,0.0173593027690563,TRUE
+"393","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",27922952.2981456,FALSE,30,0.467911335717048,FALSE
+"394","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",18655938.1235914,FALSE,30,0.561046383669159,FALSE
+"395","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",140908374.718828,FALSE,30,0.187758087702958,FALSE
+"396","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1134615509.0836,FALSE,30,0.0173593027690563,TRUE
+"397","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",33248919.8039091,FALSE,30,0.467911335717048,FALSE
+"398","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",9771802.42460488,FALSE,30,0.561046383669159,FALSE
+"399","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",742112383.662048,FALSE,30,0.187758087702958,FALSE
+"400","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1646536403.14606,FALSE,30,0.0173593027690563,TRUE
+"401","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",43881900.7940997,FALSE,30,0.467911335717048,FALSE
+"402","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",9456561.85887842,FALSE,30,0.561046383669159,FALSE
+"403","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",153154565.560301,FALSE,30,0.187758087702958,FALSE
+"404","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",645063373.394481,FALSE,30,0.0173593027690563,TRUE
+"405","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",33227457.8457572,FALSE,30,0.467911335717048,FALSE
+"406","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",12222369.9987111,FALSE,30,0.561046383669159,FALSE
+"407","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",153021361.927324,FALSE,30,0.187758087702958,FALSE
+"408","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",849002399.33359,FALSE,30,0.0173593027690563,TRUE
+"409","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",11740145.9046776,FALSE,30,0.467911335717048,FALSE
+"410","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",9886673.81880833,FALSE,30,0.561046383669159,FALSE
+"411","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",183541718.747686,FALSE,30,0.187758087702958,FALSE
+"412","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1103760061.48354,FALSE,30,0.0173593027690563,TRUE
+"413","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",16588695.5766845,FALSE,30,0.467911335717048,FALSE
+"414","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",10212468.8206699,FALSE,30,0.561046383669159,FALSE
+"415","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",211086516.413631,FALSE,30,0.187758087702958,FALSE
+"416","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",907320659.882499,FALSE,30,0.0173593027690563,TRUE
+"417","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",12658075.1786034,FALSE,30,0.467911335717048,FALSE
+"418","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",14060475.2598546,FALSE,30,0.561046383669159,FALSE
+"419","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",329129531.767637,FALSE,30,0.187758087702958,FALSE
+"420","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",773250571.791941,FALSE,30,0.0173593027690563,TRUE
+"421","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",15992286.6328448,FALSE,30,0.467911335717048,FALSE
+"422","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",5480534.54071862,FALSE,30,0.561046383669159,FALSE
+"423","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",443817583.909472,FALSE,30,0.187758087702958,FALSE
+"424","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",920130405.491025,FALSE,30,0.0173593027690563,TRUE
+"425","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",8562760.50679254,FALSE,30,0.467911335717048,FALSE
+"426","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",8989444.3735794,FALSE,30,0.561046383669159,FALSE
+"427","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",468741497.711354,FALSE,30,0.187758087702958,FALSE
+"428","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",336756733.540284,FALSE,30,0.0173593027690563,TRUE
+"429","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",34358542.8226887,FALSE,30,0.467911335717048,FALSE
+"430","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",18135658.0329673,FALSE,30,0.561046383669159,FALSE
+"431","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",227134427.664455,FALSE,30,0.187758087702958,FALSE
+"432","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",692327785.09499,FALSE,30,0.0173593027690563,TRUE
+"433","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",7591835.80871081,FALSE,30,0.467911335717048,FALSE
+"434","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",3791515.91542904,FALSE,30,0.561046383669159,FALSE
+"435","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",204127410.508455,FALSE,30,0.187758087702958,FALSE
+"436","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",571108106.10721,FALSE,30,0.0173593027690563,TRUE
+"437","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",19378393.4683817,FALSE,30,0.467911335717048,FALSE
+"438","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",6641572.66917147,FALSE,30,0.561046383669159,FALSE
+"439","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",179036809.268788,FALSE,30,0.187758087702958,FALSE
+"440","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",686424536.07003,FALSE,30,0.0173593027690563,TRUE
+"441","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",9877987.96127293,FALSE,30,0.467911335717048,FALSE
+"442","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",7910893.62430098,FALSE,30,0.561046383669159,FALSE
+"443","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",192196556.005482,FALSE,30,0.187758087702958,FALSE
+"444","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",421556825.460709,FALSE,30,0.0173593027690563,TRUE
+"445","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",94740657.6188353,FALSE,30,0.467911335717048,FALSE
+"446","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",32395038.5031413,FALSE,30,0.561046383669159,FALSE
+"447","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",616856683.721446,FALSE,30,0.187758087702958,FALSE
+"448","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",597205261.958268,FALSE,30,0.0173593027690563,TRUE
+"449","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",30505125.0458051,FALSE,30,0.467911335717048,FALSE
+"450","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",5292550.97344967,FALSE,30,0.561046383669159,FALSE
+"451","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",134691733.161217,FALSE,30,0.187758087702958,FALSE
+"452","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",608333237.543475,FALSE,30,0.0173593027690563,TRUE
+"453","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",5166578.40200678,FALSE,30,0.467911335717048,FALSE
+"454","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",7146391.21257723,FALSE,30,0.561046383669159,FALSE
+"455","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",131035851.155792,FALSE,30,0.187758087702958,FALSE
+"456","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",564019722.257699,FALSE,30,0.0173593027690563,TRUE
+"457","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",36405422.1202381,FALSE,30,0.467911335717048,FALSE
+"458","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",8905068.52824169,FALSE,30,0.561046383669159,FALSE
+"459","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",651809073.435511,FALSE,30,0.187758087702958,FALSE
+"460","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",1357387797.18037,FALSE,30,0.0173593027690563,TRUE
+"461","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",18255102.758424,FALSE,30,0.467911335717048,FALSE
+"462","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",15121950.6811851,FALSE,30,0.561046383669159,FALSE
+"463","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",202955527.045099,FALSE,30,0.187758087702958,FALSE
+"464","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",726494368.022419,FALSE,30,0.0173593027690563,TRUE
+"465","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",14316389.6749926,FALSE,30,0.467911335717048,FALSE
+"466","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",19538559.2790659,FALSE,30,0.561046383669159,FALSE
+"467","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",71732214.5339177,FALSE,30,0.187758087702958,FALSE
+"468","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",571696988.941615,FALSE,30,0.0173593027690563,TRUE
+"469","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",10079315.7772795,FALSE,30,0.467911335717048,FALSE
+"470","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",10022307.9796558,FALSE,30,0.561046383669159,FALSE
+"471","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",160469157.558343,FALSE,30,0.187758087702958,FALSE
+"472","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",633562752.803134,FALSE,30,0.0173593027690563,TRUE
+"473","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",7865426.9596242,FALSE,30,0.467911335717048,FALSE
+"474","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",6475324.34877877,FALSE,30,0.561046383669159,FALSE
+"475","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",130537627.404885,FALSE,30,0.187758087702958,FALSE
+"476","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",612943062.234119,FALSE,30,0.0173593027690563,TRUE
+"477","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Cnidaria
+Absolute Number of Individuals",28091362.0909074,FALSE,30,0.467911335717048,FALSE
+"478","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Euphausiacea
+Absolute Number of Individuals",19121632.2093019,FALSE,30,0.561046383669159,FALSE
+"479","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","LargeCalanoida
+Absolute Number of Individuals",308172740.900593,FALSE,30,0.187758087702958,FALSE
+"480","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","SmallCalanoida
+Absolute Number of Individuals",635364131.820662,FALSE,30,0.0173593027690563,TRUE
+"481",NA,NA,1977,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",921280.640531408,TRUE,0,NA,NA
+"482",NA,NA,1978,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",1040346.91226068,TRUE,0,NA,NA
+"483",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",2906291.03368519,TRUE,0,NA,NA
+"484",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",3609438.12260896,TRUE,0,NA,NA
+"485",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",8817928.96901422,TRUE,0,NA,NA
+"486",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",3595491.22444682,TRUE,0,NA,NA
+"487",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",1055566.37319841,TRUE,0,NA,NA
+"488",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",1772165.30358076,TRUE,0,NA,NA
+"489",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",1882999.43780225,TRUE,0,NA,NA
+"490",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",3151290.7947428,TRUE,0,NA,NA
+"491",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",4510800.21169554,TRUE,0,NA,NA
+"492",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",2341558.03252708,TRUE,0,NA,NA
+"493",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"Cnidaria
+Absolute Number of Individuals",19001912.8590346,TRUE,0,NA,NA
+"494",NA,NA,1977,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",1822549.70645332,TRUE,0,NA,NA
+"495",NA,NA,1978,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",1782139.94993534,TRUE,0,NA,NA
+"496",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",5085179.05551647,TRUE,0,NA,NA
+"497",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",4387337.58250869,TRUE,0,NA,NA
+"498",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",2223607.63954236,TRUE,0,NA,NA
+"499",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",2563921.10360759,TRUE,0,NA,NA
+"500",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",1255683.02656561,TRUE,0,NA,NA
+"501",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",3298972.96773455,TRUE,0,NA,NA
+"502",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",2391234.05043964,TRUE,0,NA,NA
+"503",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",4099717.74463953,TRUE,0,NA,NA
+"504",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",3828627.37852165,TRUE,0,NA,NA
+"505",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",3934771.40637964,TRUE,0,NA,NA
+"506",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"Euphausiacea
+Absolute Number of Individuals",4690340.21599003,TRUE,0,NA,NA
+"507",NA,NA,1977,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",88763113.3175781,TRUE,0,NA,NA
+"508",NA,NA,1978,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",110980407.715668,TRUE,0,NA,NA
+"509",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",70142122.5636859,TRUE,0,NA,NA
+"510",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",151064825.975041,TRUE,0,NA,NA
+"511",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",104854256.373545,TRUE,0,NA,NA
+"512",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",130908466.057802,TRUE,0,NA,NA
+"513",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",54534142.455404,TRUE,0,NA,NA
+"514",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",80052277.9546934,TRUE,0,NA,NA
+"515",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",116326541.990567,TRUE,0,NA,NA
+"516",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",85025605.4101975,TRUE,0,NA,NA
+"517",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",137695729.531726,TRUE,0,NA,NA
+"518",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",192186658.011095,TRUE,0,NA,NA
+"519",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"LargeCalanoida
+Absolute Number of Individuals",290787125.050282,TRUE,0,NA,NA
+"520",NA,NA,1977,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",713002838.736833,TRUE,0,NA,NA
+"521",NA,NA,1978,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",641971364.137676,TRUE,0,NA,NA
+"522",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",572900944.498172,TRUE,0,NA,NA
+"523",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",717974146.118365,TRUE,0,NA,NA
+"524",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",349107673.714346,TRUE,0,NA,NA
+"525",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",379987974.315133,TRUE,0,NA,NA
+"526",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",305887162.00188,TRUE,0,NA,NA
+"527",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",353836174.331933,TRUE,0,NA,NA
+"528",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",300716523.643161,TRUE,0,NA,NA
+"529",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",244848410.411883,TRUE,0,NA,NA
+"530",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",200386327.822511,TRUE,0,NA,NA
+"531",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",716446178.50362,TRUE,0,NA,NA
+"532",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"SmallCalanoida
+Absolute Number of Individuals",331305003.931838,TRUE,0,NA,NA

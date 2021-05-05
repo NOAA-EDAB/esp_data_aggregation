@@ -1,0 +1,1993 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.547934383819941,FALSE,30,0.00929126214111829,TRUE
+"2","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.563628191762335,FALSE,30,0.111777349576998,FALSE
+"3","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.00370989876764938,FALSE,30,0.0099315699809971,TRUE
+"4","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.189987727324731,FALSE,30,0.162014190552568,FALSE
+"5","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.316246280735752,FALSE,30,0.00929126214111829,TRUE
+"6","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.0913680027744022,FALSE,30,0.111777349576998,FALSE
+"7","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.17897580992986,FALSE,30,0.0099315699809971,TRUE
+"8","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.0392479202739784,FALSE,30,0.162014190552568,FALSE
+"9","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.167517643668747,FALSE,30,0.00929126214111829,TRUE
+"10","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.665172734521013,FALSE,30,0.111777349576998,FALSE
+"11","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.0450704179679597,FALSE,30,0.0099315699809971,TRUE
+"12","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.708323843754616,FALSE,30,0.162014190552568,FALSE
+"13","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.872668788796519,FALSE,30,0.00929126214111829,TRUE
+"14","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-1.37234862158524,FALSE,30,0.111777349576998,FALSE
+"15","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",-1.03833517907997,FALSE,30,0.0099315699809971,TRUE
+"16","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.376610516572355,FALSE,30,0.162014190552568,FALSE
+"17","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.517591909634064,FALSE,30,0.00929126214111829,TRUE
+"18","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.491906045929669,FALSE,30,0.111777349576998,FALSE
+"19","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.0364682548199191,FALSE,30,0.0099315699809971,TRUE
+"20","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.824448874174903,FALSE,30,0.162014190552568,FALSE
+"21","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.128905555276333,FALSE,30,0.00929126214111829,TRUE
+"22","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.322229446263924,FALSE,30,0.111777349576998,FALSE
+"23","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.804299787410976,FALSE,30,0.0099315699809971,TRUE
+"24","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-1.15654323029647,FALSE,30,0.162014190552568,FALSE
+"25","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.475972076839048,FALSE,30,0.00929126214111829,TRUE
+"26","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.155702511306407,FALSE,30,0.111777349576998,FALSE
+"27","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.096000609309705,FALSE,30,0.0099315699809971,TRUE
+"28","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.37064099135663,FALSE,30,0.162014190552568,FALSE
+"29","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-1.51234781027165,FALSE,30,0.00929126214111829,TRUE
+"30","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.725536238943622,FALSE,30,0.111777349576998,FALSE
+"31","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",-1.34159276320904,FALSE,30,0.0099315699809971,TRUE
+"32","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-1.46693685233918,FALSE,30,0.162014190552568,FALSE
+"33","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.580489005570588,FALSE,30,0.00929126214111829,TRUE
+"34","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.66586484787771,FALSE,30,0.111777349576998,FALSE
+"35","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.388332452877858,FALSE,30,0.0099315699809971,TRUE
+"36","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.114026780386041,FALSE,30,0.162014190552568,FALSE
+"37","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.399683347985029,FALSE,30,0.00929126214111829,TRUE
+"38","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.481581894606851,FALSE,30,0.111777349576998,FALSE
+"39","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.137935823364245,FALSE,30,0.0099315699809971,TRUE
+"40","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.0211384844768165,FALSE,30,0.162014190552568,FALSE
+"41","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",1.19613319940585,FALSE,30,0.00929126214111829,TRUE
+"42","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.00452243724564383,FALSE,30,0.111777349576998,FALSE
+"43","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.470858581429574,FALSE,30,0.0099315699809971,TRUE
+"44","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.0708933720602341,FALSE,30,0.162014190552568,FALSE
+"45","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.554751246850893,FALSE,30,0.00929126214111829,TRUE
+"46","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.416048879317126,FALSE,30,0.111777349576998,FALSE
+"47","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.460984854696768,FALSE,30,0.0099315699809971,TRUE
+"48","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",1.03147659059403,FALSE,30,0.162014190552568,FALSE
+"49","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.852612888749942,FALSE,30,0.00929126214111829,TRUE
+"50","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.088277829579086,FALSE,30,0.111777349576998,FALSE
+"51","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.0568221098416188,FALSE,30,0.0099315699809971,TRUE
+"52","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.696080929205745,FALSE,30,0.162014190552568,FALSE
+"53","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.418307123775906,FALSE,30,0.00929126214111829,TRUE
+"54","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.619441320814952,FALSE,30,0.111777349576998,FALSE
+"55","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.497683471238748,FALSE,30,0.0099315699809971,TRUE
+"56","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",1.66877719667329,FALSE,30,0.162014190552568,FALSE
+"57","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.0378444926191843,FALSE,30,0.00929126214111829,TRUE
+"58","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-1.50336828193469,FALSE,30,0.111777349576998,FALSE
+"59","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.382850163869673,FALSE,30,0.0099315699809971,TRUE
+"60","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.500552178291149,FALSE,30,0.162014190552568,FALSE
+"61","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.302213835015973,FALSE,30,0.00929126214111829,TRUE
+"62","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.0222341955501264,FALSE,30,0.111777349576998,FALSE
+"63","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.115295996919485,FALSE,30,0.0099315699809971,TRUE
+"64","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-1.03851176723108,FALSE,30,0.162014190552568,FALSE
+"65","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.25480975308475,FALSE,30,0.00929126214111829,TRUE
+"66","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.903569300567149,FALSE,30,0.111777349576998,FALSE
+"67","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",1.02076625856725,FALSE,30,0.0099315699809971,TRUE
+"68","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.768819619676417,FALSE,30,0.162014190552568,FALSE
+"69","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.498251413780142,FALSE,30,0.00929126214111829,TRUE
+"70","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.335249492675949,FALSE,30,0.111777349576998,FALSE
+"71","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.27855741351496,FALSE,30,0.0099315699809971,TRUE
+"72","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.512304862047327,FALSE,30,0.162014190552568,FALSE
+"73","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.0823223173000578,FALSE,30,0.00929126214111829,TRUE
+"74","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.401238424500283,FALSE,30,0.111777349576998,FALSE
+"75","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.498893873035069,FALSE,30,0.0099315699809971,TRUE
+"76","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.916537126912498,FALSE,30,0.162014190552568,FALSE
+"77","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.219335464982922,FALSE,30,0.00929126214111829,TRUE
+"78","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.224714996477823,FALSE,30,0.111777349576998,FALSE
+"79","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.237781795492079,FALSE,30,0.0099315699809971,TRUE
+"80","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.300715103285127,FALSE,30,0.162014190552568,FALSE
+"81","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.390576631141439,FALSE,30,0.00929126214111829,TRUE
+"82","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.0766946338979597,FALSE,30,0.111777349576998,FALSE
+"83","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.508458531436119,FALSE,30,0.0099315699809971,TRUE
+"84","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.472138446289157,FALSE,30,0.162014190552568,FALSE
+"85","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.418560890053406,FALSE,30,0.00929126214111829,TRUE
+"86","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",1.3635591485277,FALSE,30,0.111777349576998,FALSE
+"87","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",1.22219568595357,FALSE,30,0.0099315699809971,TRUE
+"88","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.973825200573686,FALSE,30,0.162014190552568,FALSE
+"89","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",1.06865995802467,FALSE,30,0.00929126214111829,TRUE
+"90","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",1.27157560473536,FALSE,30,0.111777349576998,FALSE
+"91","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.741285713697074,FALSE,30,0.0099315699809971,TRUE
+"92","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.727925148230022,FALSE,30,0.162014190552568,FALSE
+"93","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.748549098995534,FALSE,30,0.00929126214111829,TRUE
+"94","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",2.18707062110219,FALSE,30,0.111777349576998,FALSE
+"95","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",1.81398287398117,FALSE,30,0.0099315699809971,TRUE
+"96","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",2.2887375902837,FALSE,30,0.162014190552568,FALSE
+"97","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.458037845262727,FALSE,30,0.00929126214111829,TRUE
+"98","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.135782932545583,FALSE,30,0.111777349576998,FALSE
+"99","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.255867333517767,FALSE,30,0.0099315699809971,TRUE
+"100","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",0.708870462316865,FALSE,30,0.162014190552568,FALSE
+"101","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.798492282028102,FALSE,30,0.00929126214111829,TRUE
+"102","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.781424859097159,FALSE,30,0.111777349576998,FALSE
+"103","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.807769217515482,FALSE,30,0.0099315699809971,TRUE
+"104","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.271143474528745,FALSE,30,0.162014190552568,FALSE
+"105","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",1.63850810619685,FALSE,30,0.00929126214111829,TRUE
+"106","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",1.00049051658016,FALSE,30,0.111777349576998,FALSE
+"107","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",1.92266649864881,FALSE,30,0.0099315699809971,TRUE
+"108","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.74219204229336,FALSE,30,0.162014190552568,FALSE
+"109","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",1.03569341108399,FALSE,30,0.00929126214111829,TRUE
+"110","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.471221413787974,FALSE,30,0.111777349576998,FALSE
+"111","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",1.63302864414166,FALSE,30,0.0099315699809971,TRUE
+"112","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",1.44920754077332,FALSE,30,0.162014190552568,FALSE
+"113","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",1.39967480586866,FALSE,30,0.00929126214111829,TRUE
+"114","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.475118057432805,FALSE,30,0.111777349576998,FALSE
+"115","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",0.273460730850378,FALSE,30,0.0099315699809971,TRUE
+"116","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",1.05920657971453,FALSE,30,0.162014190552568,FALSE
+"117","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","fall OI SST Anomaly
+degreesC",0.268754470384254,FALSE,30,0.00929126214111829,TRUE
+"118","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","spring OI SST Anomaly
+degreesC",0.382075372221255,FALSE,30,0.111777349576998,FALSE
+"119","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","summer OI SST Anomaly
+degreesC",1.47771293972095,FALSE,30,0.0099315699809971,TRUE
+"120","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.586620293839168,FALSE,30,0.162014190552568,FALSE
+"121","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.547934383819941,FALSE,30,0.00023235854233895,TRUE
+"122","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.563628191762335,FALSE,30,0.205529076103215,FALSE
+"123","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",-0.00370989876764938,FALSE,30,0.000720324468724473,TRUE
+"124","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.189987727324731,FALSE,30,0.371440403794472,FALSE
+"125","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.316246280735752,FALSE,30,0.00023235854233895,TRUE
+"126","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.0913680027744022,FALSE,30,0.205529076103215,FALSE
+"127","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.17897580992986,FALSE,30,0.000720324468724473,TRUE
+"128","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.0392479202739784,FALSE,30,0.371440403794472,FALSE
+"129","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.167517643668747,FALSE,30,0.00023235854233895,TRUE
+"130","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.665172734521013,FALSE,30,0.205529076103215,FALSE
+"131","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.0450704179679597,FALSE,30,0.000720324468724473,TRUE
+"132","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.708323843754616,FALSE,30,0.371440403794472,FALSE
+"133","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.872668788796519,FALSE,30,0.00023235854233895,TRUE
+"134","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-1.37234862158524,FALSE,30,0.205529076103215,FALSE
+"135","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",-1.03833517907997,FALSE,30,0.000720324468724473,TRUE
+"136","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.376610516572355,FALSE,30,0.371440403794472,FALSE
+"137","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.517591909634064,FALSE,30,0.00023235854233895,TRUE
+"138","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-0.491906045929669,FALSE,30,0.205529076103215,FALSE
+"139","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",-0.0364682548199191,FALSE,30,0.000720324468724473,TRUE
+"140","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.824448874174903,FALSE,30,0.371440403794472,FALSE
+"141","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.128905555276333,FALSE,30,0.00023235854233895,TRUE
+"142","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.322229446263924,FALSE,30,0.205529076103215,FALSE
+"143","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",-0.804299787410976,FALSE,30,0.000720324468724473,TRUE
+"144","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-1.15654323029647,FALSE,30,0.371440403794472,FALSE
+"145","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.475972076839048,FALSE,30,0.00023235854233895,TRUE
+"146","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-0.155702511306407,FALSE,30,0.205529076103215,FALSE
+"147","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.096000609309705,FALSE,30,0.000720324468724473,TRUE
+"148","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.37064099135663,FALSE,30,0.371440403794472,FALSE
+"149","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-1.51234781027165,FALSE,30,0.00023235854233895,TRUE
+"150","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-0.725536238943622,FALSE,30,0.205529076103215,FALSE
+"151","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",-1.34159276320904,FALSE,30,0.000720324468724473,TRUE
+"152","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-1.46693685233918,FALSE,30,0.371440403794472,FALSE
+"153","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.580489005570588,FALSE,30,0.00023235854233895,TRUE
+"154","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-0.66586484787771,FALSE,30,0.205529076103215,FALSE
+"155","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",-0.388332452877858,FALSE,30,0.000720324468724473,TRUE
+"156","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.114026780386041,FALSE,30,0.371440403794472,FALSE
+"157","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.399683347985029,FALSE,30,0.00023235854233895,TRUE
+"158","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-0.481581894606851,FALSE,30,0.205529076103215,FALSE
+"159","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.137935823364245,FALSE,30,0.000720324468724473,TRUE
+"160","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.0211384844768165,FALSE,30,0.371440403794472,FALSE
+"161","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",1.19613319940585,FALSE,30,0.00023235854233895,TRUE
+"162","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-0.00452243724564383,FALSE,30,0.205529076103215,FALSE
+"163","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.470858581429574,FALSE,30,0.000720324468724473,TRUE
+"164","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.0708933720602341,FALSE,30,0.371440403794472,FALSE
+"165","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.554751246850893,FALSE,30,0.00023235854233895,TRUE
+"166","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.416048879317126,FALSE,30,0.205529076103215,FALSE
+"167","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",-0.460984854696768,FALSE,30,0.000720324468724473,TRUE
+"168","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",1.03147659059403,FALSE,30,0.371440403794472,FALSE
+"169","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.852612888749942,FALSE,30,0.00023235854233895,TRUE
+"170","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.088277829579086,FALSE,30,0.205529076103215,FALSE
+"171","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.0568221098416188,FALSE,30,0.000720324468724473,TRUE
+"172","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.696080929205745,FALSE,30,0.371440403794472,FALSE
+"173","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.418307123775906,FALSE,30,0.00023235854233895,TRUE
+"174","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.619441320814952,FALSE,30,0.205529076103215,FALSE
+"175","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.497683471238748,FALSE,30,0.000720324468724473,TRUE
+"176","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",1.66877719667329,FALSE,30,0.371440403794472,FALSE
+"177","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.0378444926191843,FALSE,30,0.00023235854233895,TRUE
+"178","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-1.50336828193469,FALSE,30,0.205529076103215,FALSE
+"179","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",-0.382850163869673,FALSE,30,0.000720324468724473,TRUE
+"180","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.500552178291149,FALSE,30,0.371440403794472,FALSE
+"181","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.302213835015973,FALSE,30,0.00023235854233895,TRUE
+"182","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-0.0222341955501264,FALSE,30,0.205529076103215,FALSE
+"183","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.115295996919485,FALSE,30,0.000720324468724473,TRUE
+"184","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-1.03851176723108,FALSE,30,0.371440403794472,FALSE
+"185","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.25480975308475,FALSE,30,0.00023235854233895,TRUE
+"186","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-0.903569300567149,FALSE,30,0.205529076103215,FALSE
+"187","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",1.02076625856725,FALSE,30,0.000720324468724473,TRUE
+"188","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.768819619676417,FALSE,30,0.371440403794472,FALSE
+"189","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.498251413780142,FALSE,30,0.00023235854233895,TRUE
+"190","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.335249492675949,FALSE,30,0.205529076103215,FALSE
+"191","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.27855741351496,FALSE,30,0.000720324468724473,TRUE
+"192","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.512304862047327,FALSE,30,0.371440403794472,FALSE
+"193","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.0823223173000578,FALSE,30,0.00023235854233895,TRUE
+"194","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",-0.401238424500283,FALSE,30,0.205529076103215,FALSE
+"195","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.498893873035069,FALSE,30,0.000720324468724473,TRUE
+"196","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.916537126912498,FALSE,30,0.371440403794472,FALSE
+"197","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.219335464982922,FALSE,30,0.00023235854233895,TRUE
+"198","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.224714996477823,FALSE,30,0.205529076103215,FALSE
+"199","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.237781795492079,FALSE,30,0.000720324468724473,TRUE
+"200","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.300715103285127,FALSE,30,0.371440403794472,FALSE
+"201","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.390576631141439,FALSE,30,0.00023235854233895,TRUE
+"202","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.0766946338979597,FALSE,30,0.205529076103215,FALSE
+"203","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.508458531436119,FALSE,30,0.000720324468724473,TRUE
+"204","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.472138446289157,FALSE,30,0.371440403794472,FALSE
+"205","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",-0.418560890053406,FALSE,30,0.00023235854233895,TRUE
+"206","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",1.3635591485277,FALSE,30,0.205529076103215,FALSE
+"207","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",1.22219568595357,FALSE,30,0.000720324468724473,TRUE
+"208","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.973825200573686,FALSE,30,0.371440403794472,FALSE
+"209","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",1.06865995802467,FALSE,30,0.00023235854233895,TRUE
+"210","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",1.27157560473536,FALSE,30,0.205529076103215,FALSE
+"211","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.741285713697074,FALSE,30,0.000720324468724473,TRUE
+"212","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.727925148230022,FALSE,30,0.371440403794472,FALSE
+"213","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.748549098995534,FALSE,30,0.00023235854233895,TRUE
+"214","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",2.18707062110219,FALSE,30,0.205529076103215,FALSE
+"215","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",1.81398287398117,FALSE,30,0.000720324468724473,TRUE
+"216","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",2.2887375902837,FALSE,30,0.371440403794472,FALSE
+"217","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.458037845262727,FALSE,30,0.00023235854233895,TRUE
+"218","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.135782932545583,FALSE,30,0.205529076103215,FALSE
+"219","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.255867333517767,FALSE,30,0.000720324468724473,TRUE
+"220","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",0.708870462316865,FALSE,30,0.371440403794472,FALSE
+"221","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.798492282028102,FALSE,30,0.00023235854233895,TRUE
+"222","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.781424859097159,FALSE,30,0.205529076103215,FALSE
+"223","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.807769217515482,FALSE,30,0.000720324468724473,TRUE
+"224","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.271143474528745,FALSE,30,0.371440403794472,FALSE
+"225","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",1.63850810619685,FALSE,30,0.00023235854233895,TRUE
+"226","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",1.00049051658016,FALSE,30,0.205529076103215,FALSE
+"227","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",1.92266649864881,FALSE,30,0.000720324468724473,TRUE
+"228","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.74219204229336,FALSE,30,0.371440403794472,FALSE
+"229","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",1.03569341108399,FALSE,30,0.00023235854233895,TRUE
+"230","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.471221413787974,FALSE,30,0.205529076103215,FALSE
+"231","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",1.63302864414166,FALSE,30,0.000720324468724473,TRUE
+"232","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",1.44920754077332,FALSE,30,0.371440403794472,FALSE
+"233","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",1.39967480586866,FALSE,30,0.00023235854233895,TRUE
+"234","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.475118057432805,FALSE,30,0.205529076103215,FALSE
+"235","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",0.273460730850378,FALSE,30,0.000720324468724473,TRUE
+"236","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",1.05920657971453,FALSE,30,0.371440403794472,FALSE
+"237","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","fall OI SST Anomaly
+degreesC",0.268754470384254,FALSE,30,0.00023235854233895,TRUE
+"238","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","spring OI SST Anomaly
+degreesC",0.382075372221255,FALSE,30,0.205529076103215,FALSE
+"239","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","summer OI SST Anomaly
+degreesC",1.47771293972095,FALSE,30,0.000720324468724473,TRUE
+"240","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","winter OI SST Anomaly
+degreesC",-0.586620293839168,FALSE,30,0.371440403794472,FALSE
+"241","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.547934383819941,FALSE,30,0.0886997362051362,FALSE
+"242","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.563628191762335,FALSE,30,0.000887053435646667,TRUE
+"243","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",-0.00370989876764938,FALSE,30,0.0226762466574507,TRUE
+"244","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.189987727324731,FALSE,30,2.75318379950668e-05,TRUE
+"245","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.316246280735752,FALSE,30,0.0886997362051362,FALSE
+"246","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.0913680027744022,FALSE,30,0.000887053435646667,TRUE
+"247","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.17897580992986,FALSE,30,0.0226762466574507,TRUE
+"248","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.0392479202739784,FALSE,30,2.75318379950668e-05,TRUE
+"249","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.167517643668747,FALSE,30,0.0886997362051362,FALSE
+"250","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.665172734521013,FALSE,30,0.000887053435646667,TRUE
+"251","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.0450704179679597,FALSE,30,0.0226762466574507,TRUE
+"252","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.708323843754616,FALSE,30,2.75318379950668e-05,TRUE
+"253","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.872668788796519,FALSE,30,0.0886997362051362,FALSE
+"254","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-1.37234862158524,FALSE,30,0.000887053435646667,TRUE
+"255","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",-1.03833517907997,FALSE,30,0.0226762466574507,TRUE
+"256","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.376610516572355,FALSE,30,2.75318379950668e-05,TRUE
+"257","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.517591909634064,FALSE,30,0.0886997362051362,FALSE
+"258","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-0.491906045929669,FALSE,30,0.000887053435646667,TRUE
+"259","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",-0.0364682548199191,FALSE,30,0.0226762466574507,TRUE
+"260","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.824448874174903,FALSE,30,2.75318379950668e-05,TRUE
+"261","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.128905555276333,FALSE,30,0.0886997362051362,FALSE
+"262","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.322229446263924,FALSE,30,0.000887053435646667,TRUE
+"263","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",-0.804299787410976,FALSE,30,0.0226762466574507,TRUE
+"264","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-1.15654323029647,FALSE,30,2.75318379950668e-05,TRUE
+"265","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.475972076839048,FALSE,30,0.0886997362051362,FALSE
+"266","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-0.155702511306407,FALSE,30,0.000887053435646667,TRUE
+"267","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.096000609309705,FALSE,30,0.0226762466574507,TRUE
+"268","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.37064099135663,FALSE,30,2.75318379950668e-05,TRUE
+"269","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-1.51234781027165,FALSE,30,0.0886997362051362,FALSE
+"270","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-0.725536238943622,FALSE,30,0.000887053435646667,TRUE
+"271","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",-1.34159276320904,FALSE,30,0.0226762466574507,TRUE
+"272","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-1.46693685233918,FALSE,30,2.75318379950668e-05,TRUE
+"273","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.580489005570588,FALSE,30,0.0886997362051362,FALSE
+"274","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-0.66586484787771,FALSE,30,0.000887053435646667,TRUE
+"275","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",-0.388332452877858,FALSE,30,0.0226762466574507,TRUE
+"276","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.114026780386041,FALSE,30,2.75318379950668e-05,TRUE
+"277","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.399683347985029,FALSE,30,0.0886997362051362,FALSE
+"278","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-0.481581894606851,FALSE,30,0.000887053435646667,TRUE
+"279","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.137935823364245,FALSE,30,0.0226762466574507,TRUE
+"280","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.0211384844768165,FALSE,30,2.75318379950668e-05,TRUE
+"281","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",1.19613319940585,FALSE,30,0.0886997362051362,FALSE
+"282","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-0.00452243724564383,FALSE,30,0.000887053435646667,TRUE
+"283","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.470858581429574,FALSE,30,0.0226762466574507,TRUE
+"284","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.0708933720602341,FALSE,30,2.75318379950668e-05,TRUE
+"285","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.554751246850893,FALSE,30,0.0886997362051362,FALSE
+"286","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.416048879317126,FALSE,30,0.000887053435646667,TRUE
+"287","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",-0.460984854696768,FALSE,30,0.0226762466574507,TRUE
+"288","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",1.03147659059403,FALSE,30,2.75318379950668e-05,TRUE
+"289","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.852612888749942,FALSE,30,0.0886997362051362,FALSE
+"290","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.088277829579086,FALSE,30,0.000887053435646667,TRUE
+"291","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.0568221098416188,FALSE,30,0.0226762466574507,TRUE
+"292","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.696080929205745,FALSE,30,2.75318379950668e-05,TRUE
+"293","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.418307123775906,FALSE,30,0.0886997362051362,FALSE
+"294","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.619441320814952,FALSE,30,0.000887053435646667,TRUE
+"295","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.497683471238748,FALSE,30,0.0226762466574507,TRUE
+"296","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",1.66877719667329,FALSE,30,2.75318379950668e-05,TRUE
+"297","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.0378444926191843,FALSE,30,0.0886997362051362,FALSE
+"298","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-1.50336828193469,FALSE,30,0.000887053435646667,TRUE
+"299","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",-0.382850163869673,FALSE,30,0.0226762466574507,TRUE
+"300","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.500552178291149,FALSE,30,2.75318379950668e-05,TRUE
+"301","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.302213835015973,FALSE,30,0.0886997362051362,FALSE
+"302","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-0.0222341955501264,FALSE,30,0.000887053435646667,TRUE
+"303","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.115295996919485,FALSE,30,0.0226762466574507,TRUE
+"304","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-1.03851176723108,FALSE,30,2.75318379950668e-05,TRUE
+"305","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.25480975308475,FALSE,30,0.0886997362051362,FALSE
+"306","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-0.903569300567149,FALSE,30,0.000887053435646667,TRUE
+"307","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",1.02076625856725,FALSE,30,0.0226762466574507,TRUE
+"308","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.768819619676417,FALSE,30,2.75318379950668e-05,TRUE
+"309","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.498251413780142,FALSE,30,0.0886997362051362,FALSE
+"310","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.335249492675949,FALSE,30,0.000887053435646667,TRUE
+"311","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.27855741351496,FALSE,30,0.0226762466574507,TRUE
+"312","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.512304862047327,FALSE,30,2.75318379950668e-05,TRUE
+"313","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.0823223173000578,FALSE,30,0.0886997362051362,FALSE
+"314","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",-0.401238424500283,FALSE,30,0.000887053435646667,TRUE
+"315","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.498893873035069,FALSE,30,0.0226762466574507,TRUE
+"316","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.916537126912498,FALSE,30,2.75318379950668e-05,TRUE
+"317","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.219335464982922,FALSE,30,0.0886997362051362,FALSE
+"318","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.224714996477823,FALSE,30,0.000887053435646667,TRUE
+"319","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.237781795492079,FALSE,30,0.0226762466574507,TRUE
+"320","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.300715103285127,FALSE,30,2.75318379950668e-05,TRUE
+"321","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.390576631141439,FALSE,30,0.0886997362051362,FALSE
+"322","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.0766946338979597,FALSE,30,0.000887053435646667,TRUE
+"323","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.508458531436119,FALSE,30,0.0226762466574507,TRUE
+"324","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.472138446289157,FALSE,30,2.75318379950668e-05,TRUE
+"325","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",-0.418560890053406,FALSE,30,0.0886997362051362,FALSE
+"326","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",1.3635591485277,FALSE,30,0.000887053435646667,TRUE
+"327","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",1.22219568595357,FALSE,30,0.0226762466574507,TRUE
+"328","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.973825200573686,FALSE,30,2.75318379950668e-05,TRUE
+"329","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",1.06865995802467,FALSE,30,0.0886997362051362,FALSE
+"330","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",1.27157560473536,FALSE,30,0.000887053435646667,TRUE
+"331","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.741285713697074,FALSE,30,0.0226762466574507,TRUE
+"332","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.727925148230022,FALSE,30,2.75318379950668e-05,TRUE
+"333","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.748549098995534,FALSE,30,0.0886997362051362,FALSE
+"334","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",2.18707062110219,FALSE,30,0.000887053435646667,TRUE
+"335","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",1.81398287398117,FALSE,30,0.0226762466574507,TRUE
+"336","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",2.2887375902837,FALSE,30,2.75318379950668e-05,TRUE
+"337","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.458037845262727,FALSE,30,0.0886997362051362,FALSE
+"338","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.135782932545583,FALSE,30,0.000887053435646667,TRUE
+"339","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.255867333517767,FALSE,30,0.0226762466574507,TRUE
+"340","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",0.708870462316865,FALSE,30,2.75318379950668e-05,TRUE
+"341","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.798492282028102,FALSE,30,0.0886997362051362,FALSE
+"342","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.781424859097159,FALSE,30,0.000887053435646667,TRUE
+"343","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.807769217515482,FALSE,30,0.0226762466574507,TRUE
+"344","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.271143474528745,FALSE,30,2.75318379950668e-05,TRUE
+"345","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",1.63850810619685,FALSE,30,0.0886997362051362,FALSE
+"346","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",1.00049051658016,FALSE,30,0.000887053435646667,TRUE
+"347","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",1.92266649864881,FALSE,30,0.0226762466574507,TRUE
+"348","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.74219204229336,FALSE,30,2.75318379950668e-05,TRUE
+"349","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",1.03569341108399,FALSE,30,0.0886997362051362,FALSE
+"350","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.471221413787974,FALSE,30,0.000887053435646667,TRUE
+"351","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",1.63302864414166,FALSE,30,0.0226762466574507,TRUE
+"352","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",1.44920754077332,FALSE,30,2.75318379950668e-05,TRUE
+"353","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",1.39967480586866,FALSE,30,0.0886997362051362,FALSE
+"354","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.475118057432805,FALSE,30,0.000887053435646667,TRUE
+"355","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",0.273460730850378,FALSE,30,0.0226762466574507,TRUE
+"356","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",1.05920657971453,FALSE,30,2.75318379950668e-05,TRUE
+"357","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","fall OI SST Anomaly
+degreesC",0.268754470384254,FALSE,30,0.0886997362051362,FALSE
+"358","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","spring OI SST Anomaly
+degreesC",0.382075372221255,FALSE,30,0.000887053435646667,TRUE
+"359","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","summer OI SST Anomaly
+degreesC",1.47771293972095,FALSE,30,0.0226762466574507,TRUE
+"360","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","winter OI SST Anomaly
+degreesC",-0.586620293839168,FALSE,30,2.75318379950668e-05,TRUE
+"361","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.547934383819941,FALSE,30,0.000353286091028249,TRUE
+"362","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.563628191762335,FALSE,30,0.015346384842359,TRUE
+"363","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.00370989876764938,FALSE,30,3.57493098890635e-05,TRUE
+"364","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.189987727324731,FALSE,30,0.456929385680071,FALSE
+"365","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.316246280735752,FALSE,30,0.000353286091028249,TRUE
+"366","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.0913680027744022,FALSE,30,0.015346384842359,TRUE
+"367","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.17897580992986,FALSE,30,3.57493098890635e-05,TRUE
+"368","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.0392479202739784,FALSE,30,0.456929385680071,FALSE
+"369","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.167517643668747,FALSE,30,0.000353286091028249,TRUE
+"370","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.665172734521013,FALSE,30,0.015346384842359,TRUE
+"371","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.0450704179679597,FALSE,30,3.57493098890635e-05,TRUE
+"372","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.708323843754616,FALSE,30,0.456929385680071,FALSE
+"373","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.872668788796519,FALSE,30,0.000353286091028249,TRUE
+"374","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-1.37234862158524,FALSE,30,0.015346384842359,TRUE
+"375","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",-1.03833517907997,FALSE,30,3.57493098890635e-05,TRUE
+"376","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.376610516572355,FALSE,30,0.456929385680071,FALSE
+"377","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.517591909634064,FALSE,30,0.000353286091028249,TRUE
+"378","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.491906045929669,FALSE,30,0.015346384842359,TRUE
+"379","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.0364682548199191,FALSE,30,3.57493098890635e-05,TRUE
+"380","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.824448874174903,FALSE,30,0.456929385680071,FALSE
+"381","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.128905555276333,FALSE,30,0.000353286091028249,TRUE
+"382","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.322229446263924,FALSE,30,0.015346384842359,TRUE
+"383","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.804299787410976,FALSE,30,3.57493098890635e-05,TRUE
+"384","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-1.15654323029647,FALSE,30,0.456929385680071,FALSE
+"385","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.475972076839048,FALSE,30,0.000353286091028249,TRUE
+"386","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.155702511306407,FALSE,30,0.015346384842359,TRUE
+"387","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.096000609309705,FALSE,30,3.57493098890635e-05,TRUE
+"388","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.37064099135663,FALSE,30,0.456929385680071,FALSE
+"389","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-1.51234781027165,FALSE,30,0.000353286091028249,TRUE
+"390","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.725536238943622,FALSE,30,0.015346384842359,TRUE
+"391","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",-1.34159276320904,FALSE,30,3.57493098890635e-05,TRUE
+"392","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-1.46693685233918,FALSE,30,0.456929385680071,FALSE
+"393","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.580489005570588,FALSE,30,0.000353286091028249,TRUE
+"394","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.66586484787771,FALSE,30,0.015346384842359,TRUE
+"395","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.388332452877858,FALSE,30,3.57493098890635e-05,TRUE
+"396","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.114026780386041,FALSE,30,0.456929385680071,FALSE
+"397","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.399683347985029,FALSE,30,0.000353286091028249,TRUE
+"398","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.481581894606851,FALSE,30,0.015346384842359,TRUE
+"399","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.137935823364245,FALSE,30,3.57493098890635e-05,TRUE
+"400","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.0211384844768165,FALSE,30,0.456929385680071,FALSE
+"401","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",1.19613319940585,FALSE,30,0.000353286091028249,TRUE
+"402","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.00452243724564383,FALSE,30,0.015346384842359,TRUE
+"403","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.470858581429574,FALSE,30,3.57493098890635e-05,TRUE
+"404","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.0708933720602341,FALSE,30,0.456929385680071,FALSE
+"405","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.554751246850893,FALSE,30,0.000353286091028249,TRUE
+"406","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.416048879317126,FALSE,30,0.015346384842359,TRUE
+"407","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.460984854696768,FALSE,30,3.57493098890635e-05,TRUE
+"408","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",1.03147659059403,FALSE,30,0.456929385680071,FALSE
+"409","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.852612888749942,FALSE,30,0.000353286091028249,TRUE
+"410","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.088277829579086,FALSE,30,0.015346384842359,TRUE
+"411","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.0568221098416188,FALSE,30,3.57493098890635e-05,TRUE
+"412","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.696080929205745,FALSE,30,0.456929385680071,FALSE
+"413","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.418307123775906,FALSE,30,0.000353286091028249,TRUE
+"414","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.619441320814952,FALSE,30,0.015346384842359,TRUE
+"415","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.497683471238748,FALSE,30,3.57493098890635e-05,TRUE
+"416","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",1.66877719667329,FALSE,30,0.456929385680071,FALSE
+"417","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.0378444926191843,FALSE,30,0.000353286091028249,TRUE
+"418","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-1.50336828193469,FALSE,30,0.015346384842359,TRUE
+"419","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",-0.382850163869673,FALSE,30,3.57493098890635e-05,TRUE
+"420","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.500552178291149,FALSE,30,0.456929385680071,FALSE
+"421","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.302213835015973,FALSE,30,0.000353286091028249,TRUE
+"422","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.0222341955501264,FALSE,30,0.015346384842359,TRUE
+"423","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.115295996919485,FALSE,30,3.57493098890635e-05,TRUE
+"424","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-1.03851176723108,FALSE,30,0.456929385680071,FALSE
+"425","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.25480975308475,FALSE,30,0.000353286091028249,TRUE
+"426","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.903569300567149,FALSE,30,0.015346384842359,TRUE
+"427","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",1.02076625856725,FALSE,30,3.57493098890635e-05,TRUE
+"428","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.768819619676417,FALSE,30,0.456929385680071,FALSE
+"429","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.498251413780142,FALSE,30,0.000353286091028249,TRUE
+"430","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.335249492675949,FALSE,30,0.015346384842359,TRUE
+"431","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.27855741351496,FALSE,30,3.57493098890635e-05,TRUE
+"432","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.512304862047327,FALSE,30,0.456929385680071,FALSE
+"433","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.0823223173000578,FALSE,30,0.000353286091028249,TRUE
+"434","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",-0.401238424500283,FALSE,30,0.015346384842359,TRUE
+"435","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.498893873035069,FALSE,30,3.57493098890635e-05,TRUE
+"436","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.916537126912498,FALSE,30,0.456929385680071,FALSE
+"437","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.219335464982922,FALSE,30,0.000353286091028249,TRUE
+"438","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.224714996477823,FALSE,30,0.015346384842359,TRUE
+"439","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.237781795492079,FALSE,30,3.57493098890635e-05,TRUE
+"440","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.300715103285127,FALSE,30,0.456929385680071,FALSE
+"441","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.390576631141439,FALSE,30,0.000353286091028249,TRUE
+"442","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.0766946338979597,FALSE,30,0.015346384842359,TRUE
+"443","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.508458531436119,FALSE,30,3.57493098890635e-05,TRUE
+"444","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.472138446289157,FALSE,30,0.456929385680071,FALSE
+"445","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",-0.418560890053406,FALSE,30,0.000353286091028249,TRUE
+"446","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",1.3635591485277,FALSE,30,0.015346384842359,TRUE
+"447","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",1.22219568595357,FALSE,30,3.57493098890635e-05,TRUE
+"448","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.973825200573686,FALSE,30,0.456929385680071,FALSE
+"449","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",1.06865995802467,FALSE,30,0.000353286091028249,TRUE
+"450","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",1.27157560473536,FALSE,30,0.015346384842359,TRUE
+"451","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.741285713697074,FALSE,30,3.57493098890635e-05,TRUE
+"452","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.727925148230022,FALSE,30,0.456929385680071,FALSE
+"453","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.748549098995534,FALSE,30,0.000353286091028249,TRUE
+"454","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",2.18707062110219,FALSE,30,0.015346384842359,TRUE
+"455","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",1.81398287398117,FALSE,30,3.57493098890635e-05,TRUE
+"456","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",2.2887375902837,FALSE,30,0.456929385680071,FALSE
+"457","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.458037845262727,FALSE,30,0.000353286091028249,TRUE
+"458","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.135782932545583,FALSE,30,0.015346384842359,TRUE
+"459","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.255867333517767,FALSE,30,3.57493098890635e-05,TRUE
+"460","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",0.708870462316865,FALSE,30,0.456929385680071,FALSE
+"461","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.798492282028102,FALSE,30,0.000353286091028249,TRUE
+"462","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.781424859097159,FALSE,30,0.015346384842359,TRUE
+"463","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.807769217515482,FALSE,30,3.57493098890635e-05,TRUE
+"464","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.271143474528745,FALSE,30,0.456929385680071,FALSE
+"465","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",1.63850810619685,FALSE,30,0.000353286091028249,TRUE
+"466","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",1.00049051658016,FALSE,30,0.015346384842359,TRUE
+"467","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",1.92266649864881,FALSE,30,3.57493098890635e-05,TRUE
+"468","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.74219204229336,FALSE,30,0.456929385680071,FALSE
+"469","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",1.03569341108399,FALSE,30,0.000353286091028249,TRUE
+"470","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.471221413787974,FALSE,30,0.015346384842359,TRUE
+"471","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",1.63302864414166,FALSE,30,3.57493098890635e-05,TRUE
+"472","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",1.44920754077332,FALSE,30,0.456929385680071,FALSE
+"473","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",1.39967480586866,FALSE,30,0.000353286091028249,TRUE
+"474","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.475118057432805,FALSE,30,0.015346384842359,TRUE
+"475","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",0.273460730850378,FALSE,30,3.57493098890635e-05,TRUE
+"476","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",1.05920657971453,FALSE,30,0.456929385680071,FALSE
+"477","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","fall OI SST Anomaly
+degreesC",0.268754470384254,FALSE,30,0.000353286091028249,TRUE
+"478","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","spring OI SST Anomaly
+degreesC",0.382075372221255,FALSE,30,0.015346384842359,TRUE
+"479","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","summer OI SST Anomaly
+degreesC",1.47771293972095,FALSE,30,3.57493098890635e-05,TRUE
+"480","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","winter OI SST Anomaly
+degreesC",-0.586620293839168,FALSE,30,0.456929385680071,FALSE
+"481",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"fall OI SST Anomaly
+degreesC",0.153405995946073,TRUE,0,NA,NA
+"482",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"fall OI SST Anomaly
+degreesC",0.226448926121334,TRUE,0,NA,NA
+"483",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"fall OI SST Anomaly
+degreesC",0.529201826277305,TRUE,0,NA,NA
+"484",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"fall OI SST Anomaly
+degreesC",1.22524178863322,TRUE,0,NA,NA
+"485",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"fall OI SST Anomaly
+degreesC",0.337297185182472,TRUE,0,NA,NA
+"486",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"fall OI SST Anomaly
+degreesC",-1.36379082565258,TRUE,0,NA,NA
+"487",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"fall OI SST Anomaly
+degreesC",-0.844093653792594,TRUE,0,NA,NA
+"488",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"fall OI SST Anomaly
+degreesC",0.7833721174687,TRUE,0,NA,NA
+"489",NA,NA,2020,NA,NA,NA,NA,NA,NA,NA,"fall OI SST Anomaly
+degreesC",2.7756559527187,TRUE,0,NA,NA
+"490",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"spring OI SST Anomaly
+degreesC",-0.800216278130852,TRUE,0,NA,NA
+"491",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"spring OI SST Anomaly
+degreesC",-0.0899909842260804,TRUE,0,NA,NA
+"492",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"spring OI SST Anomaly
+degreesC",-0.553273260749275,TRUE,0,NA,NA
+"493",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"spring OI SST Anomaly
+degreesC",0.528340216702048,TRUE,0,NA,NA
+"494",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"spring OI SST Anomaly
+degreesC",0.53595465848211,TRUE,0,NA,NA
+"495",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"spring OI SST Anomaly
+degreesC",-0.276362951752512,TRUE,0,NA,NA
+"496",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"spring OI SST Anomaly
+degreesC",-0.463358691765146,TRUE,0,NA,NA
+"497",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"spring OI SST Anomaly
+degreesC",1.15501257423513,TRUE,0,NA,NA
+"498",NA,NA,2020,NA,NA,NA,NA,NA,NA,NA,"spring OI SST Anomaly
+degreesC",-0.0345329018188725,TRUE,0,NA,NA
+"499",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"summer OI SST Anomaly
+degreesC",-0.740574637261172,TRUE,0,NA,NA
+"500",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"summer OI SST Anomaly
+degreesC",-0.116152551916084,TRUE,0,NA,NA
+"501",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"summer OI SST Anomaly
+degreesC",-0.502073445366641,TRUE,0,NA,NA
+"502",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"summer OI SST Anomaly
+degreesC",0.200804522668694,TRUE,0,NA,NA
+"503",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"summer OI SST Anomaly
+degreesC",-0.51969470475176,TRUE,0,NA,NA
+"504",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"summer OI SST Anomaly
+degreesC",0.128883508726794,TRUE,0,NA,NA
+"505",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"summer OI SST Anomaly
+degreesC",-0.491269422911643,TRUE,0,NA,NA
+"506",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"summer OI SST Anomaly
+degreesC",1.37645010905921,TRUE,0,NA,NA
+"507",NA,NA,2020,NA,NA,NA,NA,NA,NA,NA,"summer OI SST Anomaly
+degreesC",1.37636599064015,TRUE,0,NA,NA
+"508",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"winter OI SST Anomaly
+degreesC",-1.02611163104611,TRUE,0,NA,NA
+"509",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"winter OI SST Anomaly
+degreesC",0.758582911775507,TRUE,0,NA,NA
+"510",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"winter OI SST Anomaly
+degreesC",-0.275757906892884,TRUE,0,NA,NA
+"511",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"winter OI SST Anomaly
+degreesC",0.505357348041677,TRUE,0,NA,NA
+"512",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"winter OI SST Anomaly
+degreesC",0.506782247737317,TRUE,0,NA,NA
+"513",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"winter OI SST Anomaly
+degreesC",-0.145422093203314,TRUE,0,NA,NA
+"514",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"winter OI SST Anomaly
+degreesC",-0.640032016325868,TRUE,0,NA,NA
+"515",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"winter OI SST Anomaly
+degreesC",-0.0840446495248699,TRUE,0,NA,NA
+"516",NA,NA,2020,NA,NA,NA,NA,NA,NA,NA,"winter OI SST Anomaly
+degreesC",1.33804458648456,TRUE,0,NA,NA

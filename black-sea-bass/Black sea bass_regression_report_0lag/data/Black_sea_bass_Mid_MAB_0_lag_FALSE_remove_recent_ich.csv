@@ -1,0 +1,323 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.64818021721719,FALSE,20,0.373870040867193,FALSE
+"2","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.43110439391878,FALSE,20,0.373870040867193,FALSE
+"3","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.31069214531773,FALSE,20,0.373870040867193,FALSE
+"4","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.65769682419334,FALSE,20,0.373870040867193,FALSE
+"5","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.88902176334585,FALSE,20,0.373870040867193,FALSE
+"6","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.30839407916973,FALSE,20,0.373870040867193,FALSE
+"7","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.6762277337174,FALSE,20,0.373870040867193,FALSE
+"8","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.58663250369499,FALSE,20,0.373870040867193,FALSE
+"9","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.2392431396126,FALSE,20,0.373870040867193,FALSE
+"10","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.92800880629282,FALSE,20,0.373870040867193,FALSE
+"11","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.50979148748229,FALSE,20,0.373870040867193,FALSE
+"12","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.07244961127498,FALSE,20,0.373870040867193,FALSE
+"13","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.47699369010643,FALSE,20,0.373870040867193,FALSE
+"14","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.51366625971415,FALSE,20,0.373870040867193,FALSE
+"15","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.41157129659106,FALSE,20,0.373870040867193,FALSE
+"16","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.18407162451133,FALSE,20,0.373870040867193,FALSE
+"17","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.14525593535193,FALSE,20,0.373870040867193,FALSE
+"18","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.3238299006724,FALSE,20,0.373870040867193,FALSE
+"19","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.83412114895976,FALSE,20,0.373870040867193,FALSE
+"20","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.20353217928117,FALSE,20,0.373870040867193,FALSE
+"21","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.64818021721719,FALSE,20,0.646953327715128,FALSE
+"22","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.43110439391878,FALSE,20,0.646953327715128,FALSE
+"23","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.31069214531773,FALSE,20,0.646953327715128,FALSE
+"24","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.65769682419334,FALSE,20,0.646953327715128,FALSE
+"25","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.88902176334585,FALSE,20,0.646953327715128,FALSE
+"26","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.30839407916973,FALSE,20,0.646953327715128,FALSE
+"27","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.6762277337174,FALSE,20,0.646953327715128,FALSE
+"28","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.58663250369499,FALSE,20,0.646953327715128,FALSE
+"29","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.2392431396126,FALSE,20,0.646953327715128,FALSE
+"30","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.92800880629282,FALSE,20,0.646953327715128,FALSE
+"31","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.50979148748229,FALSE,20,0.646953327715128,FALSE
+"32","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.07244961127498,FALSE,20,0.646953327715128,FALSE
+"33","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.47699369010643,FALSE,20,0.646953327715128,FALSE
+"34","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.51366625971415,FALSE,20,0.646953327715128,FALSE
+"35","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.41157129659106,FALSE,20,0.646953327715128,FALSE
+"36","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.18407162451133,FALSE,20,0.646953327715128,FALSE
+"37","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.14525593535193,FALSE,20,0.646953327715128,FALSE
+"38","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.3238299006724,FALSE,20,0.646953327715128,FALSE
+"39","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.83412114895976,FALSE,20,0.646953327715128,FALSE
+"40","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.20353217928117,FALSE,20,0.646953327715128,FALSE
+"41","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.64818021721719,FALSE,20,0.5754193779368,FALSE
+"42","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.43110439391878,FALSE,20,0.5754193779368,FALSE
+"43","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.31069214531773,FALSE,20,0.5754193779368,FALSE
+"44","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.65769682419334,FALSE,20,0.5754193779368,FALSE
+"45","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.88902176334585,FALSE,20,0.5754193779368,FALSE
+"46","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.30839407916973,FALSE,20,0.5754193779368,FALSE
+"47","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.6762277337174,FALSE,20,0.5754193779368,FALSE
+"48","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.58663250369499,FALSE,20,0.5754193779368,FALSE
+"49","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.2392431396126,FALSE,20,0.5754193779368,FALSE
+"50","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.92800880629282,FALSE,20,0.5754193779368,FALSE
+"51","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.50979148748229,FALSE,20,0.5754193779368,FALSE
+"52","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.07244961127498,FALSE,20,0.5754193779368,FALSE
+"53","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.47699369010643,FALSE,20,0.5754193779368,FALSE
+"54","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.51366625971415,FALSE,20,0.5754193779368,FALSE
+"55","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.41157129659106,FALSE,20,0.5754193779368,FALSE
+"56","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.18407162451133,FALSE,20,0.5754193779368,FALSE
+"57","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.14525593535193,FALSE,20,0.5754193779368,FALSE
+"58","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.3238299006724,FALSE,20,0.5754193779368,FALSE
+"59","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.83412114895976,FALSE,20,0.5754193779368,FALSE
+"60","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.20353217928117,FALSE,20,0.5754193779368,FALSE
+"61","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.64818021721719,FALSE,20,0.551491035160295,FALSE
+"62","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.43110439391878,FALSE,20,0.551491035160295,FALSE
+"63","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.31069214531773,FALSE,20,0.551491035160295,FALSE
+"64","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.65769682419334,FALSE,20,0.551491035160295,FALSE
+"65","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.88902176334585,FALSE,20,0.551491035160295,FALSE
+"66","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.30839407916973,FALSE,20,0.551491035160295,FALSE
+"67","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.6762277337174,FALSE,20,0.551491035160295,FALSE
+"68","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.58663250369499,FALSE,20,0.551491035160295,FALSE
+"69","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.2392431396126,FALSE,20,0.551491035160295,FALSE
+"70","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.92800880629282,FALSE,20,0.551491035160295,FALSE
+"71","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.50979148748229,FALSE,20,0.551491035160295,FALSE
+"72","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.07244961127498,FALSE,20,0.551491035160295,FALSE
+"73","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.47699369010643,FALSE,20,0.551491035160295,FALSE
+"74","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.51366625971415,FALSE,20,0.551491035160295,FALSE
+"75","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.41157129659106,FALSE,20,0.551491035160295,FALSE
+"76","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.18407162451133,FALSE,20,0.551491035160295,FALSE
+"77","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.14525593535193,FALSE,20,0.551491035160295,FALSE
+"78","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.3238299006724,FALSE,20,0.551491035160295,FALSE
+"79","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",1.83412114895976,FALSE,20,0.551491035160295,FALSE
+"80","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","Ich_Shannon-Wiener_Diversity_index
+Unitless",2.20353217928117,FALSE,20,0.551491035160295,FALSE
+"81",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"Ich_Shannon-Wiener_Diversity_index
+Unitless",2.16447076765615,TRUE,0,NA,NA

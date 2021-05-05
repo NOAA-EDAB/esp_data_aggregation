@@ -13,7 +13,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-              
+        with:
+          persist-credentials: false
+          
       - name: Install Pandoc
         run: brew install pandoc
         shell: bash
@@ -54,10 +56,11 @@ jobs:
           Rscript -e 'NEesp::render_all_reg(input = "correlation_bookdown_template-dev")'
           
       - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: Regressions # The folder the action should deploy.
-          TARGET_FOLDER: Regression_Reports_pkg
-          CLEAN: false # Automatically remove deleted files from the deploy branch
+          repository-name: ESP_docs
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: Regressions # The folder the action should deploy.
+          target-folder: Regression_reports
+          clean: false # Automatically remove deleted files from the deploy branch

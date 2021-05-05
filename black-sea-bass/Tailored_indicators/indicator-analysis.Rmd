@@ -1,0 +1,595 @@
+---
+title: "Black sea bass indicator analysis"
+author: "Abigail Tyrell"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output: word_document
+---
+
+```{r, setup, include = FALSE}
+# set width & height
+n <- 6.5
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.height = n,
+  fig.width = n,
+  dpi = 200 # not sure why default 72 dpi looks worse in word output compared to saved figs
+)
+
+`%>%` <- magrittr::`%>%`
+dir.create("figures")
+
+# report cards to fill
+rpt_card_ind <- c() # all indicators (not used yet/ever)
+rpt_card_time <- c() # only statistically sig indicators
+
+# functions
+plot_corr_only <- function(data, title = "",
+                           tab_data = NULL, lag = 0) { # option to correct for lagged data
+  if (nrow(data) > 0) {
+    my_colors <- c("black", "#B2292E")
+    names(my_colors) <- c("FALSE", "TRUE")
+
+    data$sig <- factor(data$sig, levels = c("TRUE", "FALSE"))
+
+    fig <- ggplot2::ggplot(data, ggplot2::aes(
+      x = Val,
+      y = Value
+    )) +
+      ggplot2::geom_path(ggplot2::aes(color = Time)) +
+      ggplot2::geom_point(ggplot2::aes(color = Time)) +
+      ggplot2::scale_color_gradient(
+        low = "#7F7FFF",
+        high = "#575195",
+        breaks = scales::breaks_extended(n = 4),
+        name = "Year",
+        guide = ggplot2::guide_colorbar(order = 2)
+      ) +
+      ggnewscale::new_scale_color() +
+      ggplot2::stat_smooth(ggplot2::aes(color = sig),
+        method = "lm"
+      ) +
+      ggplot2::scale_color_manual(
+        values = my_colors,
+        name = "Statistically significant\n(p < 0.05)",
+        drop = FALSE,
+        guide = ggplot2::guide_legend(order = 1)
+      ) +
+      ggplot2::scale_y_continuous(labels = scales::comma) +
+      ggplot2::scale_x_continuous(labels = scales::comma) +
+      ggplot2::theme_bw() +
+      ggplot2::labs(title = "Correlation between black sea bass and indicator") +
+      ggplot2::ylab(unique(data$Metric[!is.na(data$Metric)])) +
+      ggplot2::xlab(unique(data$Var))
+
+    # test if bsb is sig over time - overwrite sig
+    dat <- data %>%
+      dplyr::select(Value, Time) %>%
+      dplyr::distinct() %>%
+      dplyr::mutate(Time = Time + lag)
+    model <- lm(Value ~ Time, data = dat)
+    pval <- summary(model)$coefficients[2, 4]
+    data$sig <- (pval < 0.05)
+
+    bsb_fig <- ggplot2::ggplot(
+      data,
+      ggplot2::aes(
+        x = Time + lag,
+        y = Value
+      )
+    ) +
+      ggplot2::geom_path(ggplot2::aes(color = Time)) +
+      ggplot2::geom_point(ggplot2::aes(color = Time)) +
+      ggplot2::scale_color_gradient(
+        low = "#7F7FFF",
+        high = "#575195",
+        breaks = scales::breaks_extended(n = 4),
+        name = "Year"
+      ) +
+      ggnewscale::new_scale_color() +
+      ggplot2::stat_smooth(ggplot2::aes(color = sig),
+        method = "lm"
+      ) +
+      ggplot2::scale_color_manual(
+        values = my_colors,
+        name = "Statistically significant\n(p < 0.05)",
+        drop = FALSE
+      ) +
+      ggplot2::scale_y_continuous(labels = scales::comma) +
+      ggplot2::theme_bw() +
+      ggplot2::labs(title = "Black sea bass") +
+      ggplot2::xlab("Year") +
+      ggplot2::ylab(unique(data$Metric[!is.na(data$Metric)]))
+
+    # test if indicator is sig over time - overwrite sig
+    dat <- data %>%
+      dplyr::select(Val, Time) %>%
+      dplyr::distinct()
+    model <- lm(Val ~ Time, data = dat)
+    pval <- summary(model)$coefficients[2, 4]
+    data$sig <- (pval < 0.05)
+
+    # reformat Var for y-label
+    data$Var <- data$Var %>%
+      stringr::str_replace("\n", " ") %>%
+      stringr::str_wrap(width = 30)
+
+    ind_fig <- ggplot2::ggplot(
+      data,
+      ggplot2::aes(
+        x = Time,
+        y = Val
+      )
+    ) +
+      ggplot2::geom_path(ggplot2::aes(color = Time)) +
+      ggplot2::geom_point(ggplot2::aes(color = Time)) +
+      ggplot2::scale_color_gradient(
+        low = "#7F7FFF",
+        high = "#575195",
+        breaks = scales::breaks_extended(n = 4),
+        name = "Year"
+      ) +
+      ggnewscale::new_scale_color() +
+      ggplot2::stat_smooth(ggplot2::aes(color = sig),
+        method = "lm"
+      ) +
+      ggplot2::scale_color_manual(
+        values = my_colors,
+        name = "Statistically significant\n(p < 0.05)",
+        drop = FALSE
+      ) +
+      ggplot2::scale_y_continuous(labels = scales::comma) +
+      ggplot2::theme_bw() +
+      ggplot2::labs(title = "Indicator") +
+      ggplot2::xlab("Year") +
+      ggplot2::ylab(unique(data$Var))
+
+    # version with summary table
+    # tbl <- ggpubr::ggtexttable(tab_data, theme = ggpubr::ttheme("blank"), rows = NULL)  %>%
+    #  ggpubr::tbody_add_border() %>%
+    #  ggpubr::thead_add_border()
+
+    # big_fig <- ggpubr::ggarrange(
+    #  ggpubr::ggarrange(bsb_fig, ind_fig, tbl,
+    #    ncol = 3,
+    #    legend = "none",
+    #    labels = c("A", "B", "C")
+    #  ),
+    #  fig,
+    #  labels = c(NA, "D"),
+    #  common.legend = TRUE,
+    #  legend = "top",
+    #  nrow = 2
+    # )
+
+    big_fig <- ggpubr::ggarrange(
+      ggpubr::ggarrange(bsb_fig, ind_fig,
+        ncol = 2,
+        legend = "none",
+        labels = c("A", "B")
+      ),
+      fig,
+      labels = c(NA, "C"),
+      common.legend = TRUE,
+      legend = "top",
+      nrow = 2
+    )
+
+    big_fig <- big_fig +
+      ggplot2::theme(
+        plot.background = ggplot2::element_rect(color = "black", size = 1),
+        plot.margin = ggplot2::unit(c(0.1, 0.1, 0.1, 0.1), "cm")
+      )
+
+    ggpubr::annotate_figure(big_fig, top = title)
+
+    # save
+    file <- paste("figures/",
+      unique(data$Metric)[!is.na(unique(data$Metric))],
+      "_",
+      unique(data$Var),
+      ".png",
+      sep = ""
+    ) %>%
+      stringr::str_replace_all(" ", "_") %>%
+      stringr::str_replace_all("\n", "_")
+
+    ggplot2::ggsave(
+      filename = file,
+      width = 6.5,
+      height = 6.5,
+      units = "in",
+      device = "png"
+    )
+
+    return(big_fig)
+  }
+  else {
+    print("No data under conditions selected")
+  }
+}
+
+prep_data <- function(data, metric = "Recruitment") {
+  data <- data %>%
+    read.csv() %>%
+    dplyr::filter(
+      Metric == metric | is.na(Metric),
+      stringr::str_detect(Var, "north", negate = TRUE),
+      stringr::str_detect(Var, "south", negate = TRUE)
+    ) %>%
+    dplyr::mutate(Var = Var %>%
+      stringr::str_replace_all("\n", " ") %>%
+      stringr::str_wrap(40)) %>%
+    dplyr::arrange(Time)
+
+  return(data)
+}
+
+# for northern/southern bounds
+prep_data2 <- function(data, metric = "Recruitment") {
+  data <- data %>%
+    read.csv() %>%
+    dplyr::filter(
+      Metric == metric | is.na(Metric),
+    ) %>%
+    dplyr::mutate(Var = Var %>%
+      stringr::str_replace_all("\n", " ") %>%
+      stringr::str_wrap(40)) %>%
+    dplyr::arrange(Time)
+
+  return(data)
+}
+
+time_rpt <- function(data, col_name = "Val", out_name = "unnamed") {
+  data <- data %>%
+    dplyr::rename(Test = col_name) %>%
+    dplyr::select(Time, Test) %>%
+    dplyr::distinct()
+
+  data <- data %>%
+    dplyr::group_by(Time) %>%
+    dplyr::mutate(avg_value = mean(Test, na.rm = TRUE)) %>% # average by year
+    dplyr::select(-Test) %>%
+    dplyr::distinct()
+
+  analysis <- data %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(
+      long_avg = mean(avg_value) %>%
+        round(digits = 2),
+      long_sd = sd(avg_value) %>%
+        round(digits = 2)
+    ) %>%
+    dplyr::filter(Time >= 2016) %>%
+    dplyr::mutate(
+      yr5_avg = mean(avg_value) %>%
+        round(digits = 2),
+      yr5_sd = sd(avg_value) %>%
+        round(digits = 2),
+      avg_value = round(avg_value, digits = 2)
+    )
+
+  status <- c()
+  for (i in 1:nrow(analysis)) {
+    if (analysis$avg_value[i] > (analysis$long_avg[1] + analysis$long_sd[1])) {
+      status[i] <- "high"
+    } else if (analysis$avg_value[i] < (analysis$long_avg[1] - analysis$long_sd[1])) {
+      status[i] <- "low"
+    } else {
+      status[i] <- "neutral"
+    }
+  }
+
+  analysis$avg_value <- paste(analysis$avg_value,
+    status,
+    sep = ", "
+  )
+
+  output <- rbind(
+    cbind(analysis$Time, analysis$avg_value),
+    c("5-year mean", paste(analysis$yr5_avg, "±", analysis$yr5_sd)),
+    c("long-term mean", paste(analysis$long_avg, "±", analysis$long_sd))
+  ) %>%
+    tibble::as_tibble()
+
+  colnames(output) <- c("Time", out_name)
+
+  return(output)
+}
+```
+
+## Recruitment 
+
+### Winter SST anomaly
+```{r, winter-sst}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst-anom-stock.csv"
+) %>%
+  prep_data() %>%
+  dplyr::filter(stringr::str_detect(Var, "winter"))
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- time_rpt(data, out_name = "SST_winter")
+```
+
+### Fall SST anomaly (prior year)
+```{r, fall-sst}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
+  "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_sst-anom-stock.csv"
+) %>%
+  prep_data() %>%
+  dplyr::filter(stringr::str_detect(Var, "fall"))
+
+data %>%
+  plot_corr_only(lag = 1)
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+  time_rpt(data, out_name = "SST_fall"),
+  by = "Time"
+)
+```
+
+### Winter primary production
+```{r, winter-pp}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_pp-stock.csv"
+) %>%
+  prep_data() %>%
+  dplyr::filter(stringr::str_detect(Var, "winter"))
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+  time_rpt(data, out_name = "PP_winter"),
+  by = "Time"
+)
+```
+
+### Fall primary production (prior year)
+```{r, fall-pp}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
+  "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_pp-stock.csv"
+) %>%
+  prep_data() %>%
+  dplyr::filter(stringr::str_detect(Var, "fall"))
+
+data %>%
+  plot_corr_only(lag = 1)
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+  time_rpt(data, out_name = "PP_fall"),
+  by = "Time"
+)
+```
+
+### Cold pool index (prior year)
+```{r, cold-pool}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_1lag", "data",
+  "Black_sea_bass_Mid_MAB_1_lag_FALSE_remove_recent_cold-pool.csv"
+) %>%
+  prep_data()
+
+for (i in unique(data$Var)) {
+  this_data <- data %>%
+    dplyr::filter(Var == i)
+
+  plt <- plot_corr_only(this_data, title = i, lag = 1)
+  print(plt)
+  cat("\n\n")
+
+  rpt_card_time <- dplyr::full_join(rpt_card_time,
+    time_rpt(this_data, out_name = i),
+    by = "Time"
+  )
+}
+```
+
+### Predator abundance
+
+
+## Ecosystem
+
+### Sea surface temperature
+
+#### Recruitment
+```{r, sst-rec}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst.csv"
+) %>%
+  prep_data()
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+  time_rpt(data, out_name = "SST_annual"),
+  by = "Time"
+)
+```
+
+#### Abundance
+```{r, sst-abun}
+here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_sst.csv"
+) %>%
+  prep_data(metric = "Abundance") %>%
+  plot_corr_only()
+```
+
+### Marine heatwaves
+
+#### Recruitment
+```{r, heat-rec}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_heatwave.csv"
+) %>%
+  prep_data()
+
+for (i in unique(data$Var)) {
+  this_data <- data %>%
+    dplyr::filter(Var == i)
+
+  plt <- plot_corr_only(this_data, title = i)
+  print(plt)
+  cat("\n\n")
+
+  rpt_card_time <- dplyr::full_join(rpt_card_time,
+    time_rpt(this_data, out_name = i),
+    by = "Time"
+  )
+}
+```
+
+#### Abundance
+```{r, heat-abun}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_heatwave.csv"
+) %>%
+  prep_data(metric = "Abundance")
+
+for (i in unique(data$Var)) {
+  this_data <- data %>%
+    dplyr::filter(Var == i)
+
+  plt <- plot_corr_only(this_data, title = i)
+  print(plt)
+  cat("\n\n")
+}
+```
+
+## Management
+
+### Total catch
+```{r, catch, fig.height = 4.25, fig.width = 3.75}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_time.csv"
+) %>%
+  read.csv() %>%
+  dplyr::filter(Metric == "Catch") # pull catch only
+
+my_colors <- c("black", "#B2292E")
+names(my_colors) <- c("FALSE", "TRUE")
+
+data$sig <- factor(data$sig, levels = c("TRUE", "FALSE"))
+
+fig <- ggplot2::ggplot(data, ggplot2::aes(
+  x = Val,
+  y = Value
+)) +
+  ggplot2::geom_path(ggplot2::aes(color = Time)) +
+  ggplot2::geom_point(ggplot2::aes(color = Time)) +
+  ggplot2::scale_color_gradient(
+    low = "#7F7FFF",
+    high = "#575195",
+    breaks = scales::breaks_extended(n = 4),
+    name = "Year",
+    guide = ggplot2::guide_colorbar(order = 2)
+  ) +
+  ggnewscale::new_scale_color() +
+  ggplot2::stat_smooth(ggplot2::aes(color = sig),
+    method = "lm"
+  ) +
+  ggplot2::scale_color_manual(
+    values = my_colors,
+    name = "Statistically significant\n(p < 0.05)",
+    drop = FALSE,
+    guide = ggplot2::guide_legend(order = 1)
+  ) +
+  ggplot2::scale_y_continuous(labels = scales::comma) +
+  ggplot2::theme_bw() +
+  ggplot2::labs(title = "Catch over time") +
+  ggplot2::ylab(paste(unique(data$Description), unique(data$Units), sep = ", ")) +
+  ggplot2::xlab("Year") +
+  ggplot2::theme(
+    legend.position = "top",
+    legend.box = "vertical",
+    legend.spacing = ggplot2::unit(0.1, units = "cm"),
+    legend.box.spacing = ggplot2::unit(0.1, units = "cm")
+  )
+
+ggplot2::ggsave(
+  filename = paste("figures/",
+    unique(data$Var) %>%
+      stringr::str_replace_all(" ", "_") %>%
+      stringr::str_replace_all("\n", "_"),
+    ".png",
+    sep = ""
+  ),
+  width = 3.75,
+  height = 4.25,
+  units = "in",
+  device = "png"
+)
+
+return(fig)
+```
+
+### CPUE
+
+### Catch vs TAC
+
+### Stock range
+
+#### Northern range
+
+Northernmost survey observation in each year.
+
+
+```{r, north}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_northern-bound.csv"
+) %>%
+  prep_data2(metric = "Catch")
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+  time_rpt(data, out_name = "northern_range"),
+  by = "Time"
+)
+```
+
+#### Southern range
+
+Southernmost survey observation in each year.
+
+
+```{r, south}
+data <- here::here(
+  "black-sea-bass", "Black sea bass_regression_report_0lag", "data",
+  "Black_sea_bass_Mid_MAB_0_lag_FALSE_remove_recent_southern-bound.csv"
+) %>%
+  prep_data2(metric = "Catch")
+
+data %>%
+  plot_corr_only()
+
+rpt_card_time <- dplyr::full_join(rpt_card_time,
+  time_rpt(data, out_name = "southern_range"),
+  by = "Time"
+)
+```
+
+### Center of mass
+
+## Report card
+```{r, rpt-card}
+knitr::kable(rpt_card_time)
+```

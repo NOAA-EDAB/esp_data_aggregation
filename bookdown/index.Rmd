@@ -69,20 +69,25 @@ latlong_data <- NEesp::latlong %>%
 
 survey_data <- NEesp::survey %>%
   dplyr::filter(Species == species)
+
 cond_data <- NEesp::cond %>%
   dplyr::filter(Species == species)
+
 diet_data <- NEesp::allfh %>%
   dplyr::filter(Species == species)
 
 asmt_data <- NEesp::asmt %>%
   dplyr::filter(Species == species)
+
 asmt_sum_data <- NEesp::asmt_sum %>%
   dplyr::filter(Species == species)
+
 swept_data <- NEesp::swept %>%
   dplyr::filter(Species == species)
 
 rec_data <- NEesp::rec_catch %>%
   dplyr::filter(Species == species)
+
 com_data <- NEesp::com_catch %>%
   dplyr::filter(Species == species)
 
@@ -104,6 +109,22 @@ bio_survey <- NEesp::bio_survey
 
 # ecodata (temp anomaly)
 ecodat_tanom <- ecodata::ESP_seasonal_oisst_anom %>%
+  dplyr::mutate(Pattern_check = ESP %>%
+                  stringr::str_replace_all("_", " ") %>%
+                  stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, species))  %>%
+  dplyr::distinct()
+
+# ecodata (chl)
+chl_data <- ecodata::ESP_seasonal_chl %>%
+  dplyr::mutate(Pattern_check = ESP %>%
+                  stringr::str_replace_all("_", " ") %>%
+                  stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, species))  %>%
+  dplyr::distinct()
+
+# ecodata (pp)
+pp_data <- ecodata::ESP_seasonal_pp %>%
   dplyr::mutate(Pattern_check = ESP %>%
                   stringr::str_replace_all("_", " ") %>%
                   stringr::str_to_sentence()) %>%
@@ -146,6 +167,10 @@ NEesp::save_data(risk_year_value_data)
 NEesp::save_data(risk_species_data)
 
 NEesp::save_data(ecodat_tanom)
+
+NEesp::save_data(chl_data)
+
+NEesp::save_data(pp_data)
                  
 ```
 

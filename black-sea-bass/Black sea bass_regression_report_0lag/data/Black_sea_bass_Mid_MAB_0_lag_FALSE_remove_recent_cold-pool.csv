@@ -1,0 +1,1249 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.55704952837354,FALSE,26,0.395413310545465,FALSE
+"2","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",4.17349366126799,FALSE,26,0.293902649585217,FALSE
+"3","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.20437119288511,FALSE,26,0.193627936611039,FALSE
+"4","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.773964225873522,FALSE,26,0.144507369003646,FALSE
+"5","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.20861119157167,FALSE,26,0.395413310545465,FALSE
+"6","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",4.1513369424116,FALSE,26,0.293902649585217,FALSE
+"7","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.14130978485123,FALSE,26,0.193627936611039,FALSE
+"8","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.728047463937978,FALSE,26,0.144507369003646,FALSE
+"9","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",8.09786826833125,FALSE,26,0.395413310545465,FALSE
+"10","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.89109990987163,FALSE,26,0.293902649585217,FALSE
+"11","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.8942707581358,FALSE,26,0.193627936611039,FALSE
+"12","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.738268939488649,FALSE,26,0.144507369003646,FALSE
+"13","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.74588032071451,FALSE,26,0.395413310545465,FALSE
+"14","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",4.42951269659975,FALSE,26,0.293902649585217,FALSE
+"15","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.19930594759821,FALSE,26,0.193627936611039,FALSE
+"16","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.766490428522955,FALSE,26,0.144507369003646,FALSE
+"17","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.97170779493451,FALSE,26,0.395413310545465,FALSE
+"18","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.66825572550054,FALSE,26,0.293902649585217,FALSE
+"19","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.9675961972782,FALSE,26,0.193627936611039,FALSE
+"20","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.727190965395922,FALSE,26,0.144507369003646,FALSE
+"21","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.94916101718209,FALSE,26,0.395413310545465,FALSE
+"22","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.42713598410897,FALSE,26,0.293902649585217,FALSE
+"23","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.86051902620008,FALSE,26,0.193627936611039,FALSE
+"24","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.786578321200646,FALSE,26,0.144507369003646,FALSE
+"25","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",8.21574517035225,FALSE,26,0.395413310545465,FALSE
+"26","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.8470719143957,FALSE,26,0.293902649585217,FALSE
+"27","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",8.46719245469711,FALSE,26,0.193627936611039,FALSE
+"28","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.745531885493184,FALSE,26,0.144507369003646,FALSE
+"29","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",8.33622670615634,FALSE,26,0.395413310545465,FALSE
+"30","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.5510153874924,FALSE,26,0.293902649585217,FALSE
+"31","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",8.41654160160912,FALSE,26,0.193627936611039,FALSE
+"32","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.744591483369541,FALSE,26,0.144507369003646,FALSE
+"33","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.70385794771993,FALSE,26,0.395413310545465,FALSE
+"34","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.24094835544498,FALSE,26,0.293902649585217,FALSE
+"35","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.64507368337314,FALSE,26,0.193627936611039,FALSE
+"36","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.76420465496956,FALSE,26,0.144507369003646,FALSE
+"37","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",8.66174074878159,FALSE,26,0.395413310545465,FALSE
+"38","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",7.03307457322961,FALSE,26,0.293902649585217,FALSE
+"39","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",8.69826022873623,FALSE,26,0.193627936611039,FALSE
+"40","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.725414337244332,FALSE,26,0.144507369003646,FALSE
+"41","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.61798853213137,FALSE,26,0.395413310545465,FALSE
+"42","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.12027748322826,FALSE,26,0.293902649585217,FALSE
+"43","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.50659507868178,FALSE,26,0.193627936611039,FALSE
+"44","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.774932807236564,FALSE,26,0.144507369003646,FALSE
+"45","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.07347257698344,FALSE,26,0.395413310545465,FALSE
+"46","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",4.06602574208483,FALSE,26,0.293902649585217,FALSE
+"47","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",6.82310876605741,FALSE,26,0.193627936611039,FALSE
+"48","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.766707421785549,FALSE,26,0.144507369003646,FALSE
+"49","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.59083093321592,FALSE,26,0.395413310545465,FALSE
+"50","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",4.38253382512735,FALSE,26,0.293902649585217,FALSE
+"51","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.13850776548785,FALSE,26,0.193627936611039,FALSE
+"52","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.765833312952539,FALSE,26,0.144507369003646,FALSE
+"53","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.91033922531886,FALSE,26,0.395413310545465,FALSE
+"54","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.40637870908989,FALSE,26,0.293902649585217,FALSE
+"55","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.98930607368447,FALSE,26,0.193627936611039,FALSE
+"56","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.767412572664351,FALSE,26,0.144507369003646,FALSE
+"57","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.85955654335046,FALSE,26,0.395413310545465,FALSE
+"58","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.20868741935699,FALSE,26,0.293902649585217,FALSE
+"59","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",6.84038628418574,FALSE,26,0.193627936611039,FALSE
+"60","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.774068646554719,FALSE,26,0.144507369003646,FALSE
+"61","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",8.46183272330658,FALSE,26,0.395413310545465,FALSE
+"62","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",6.02456306266221,FALSE,26,0.293902649585217,FALSE
+"63","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",8.21560959818623,FALSE,26,0.193627936611039,FALSE
+"64","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.769462588498972,FALSE,26,0.144507369003646,FALSE
+"65","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.8106190777018,FALSE,26,0.395413310545465,FALSE
+"66","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.48542466070471,FALSE,26,0.293902649585217,FALSE
+"67","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.61420570577398,FALSE,26,0.193627936611039,FALSE
+"68","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.683384409142885,FALSE,26,0.144507369003646,FALSE
+"69","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.80707056515337,FALSE,26,0.395413310545465,FALSE
+"70","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",4.81739577788748,FALSE,26,0.293902649585217,FALSE
+"71","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.98572697076977,FALSE,26,0.193627936611039,FALSE
+"72","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.750470104472086,FALSE,26,0.144507369003646,FALSE
+"73","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.8523371829065,FALSE,26,0.395413310545465,FALSE
+"74","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.15514464763947,FALSE,26,0.293902649585217,FALSE
+"75","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.76217662876754,FALSE,26,0.193627936611039,FALSE
+"76","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.768129242811152,FALSE,26,0.144507369003646,FALSE
+"77","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",9.06690029025787,FALSE,26,0.395413310545465,FALSE
+"78","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",7.47946944687117,FALSE,26,0.293902649585217,FALSE
+"79","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",9.30083099925233,FALSE,26,0.193627936611039,FALSE
+"80","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.686972579414543,FALSE,26,0.144507369003646,FALSE
+"81","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",8.12372943322828,FALSE,26,0.395413310545465,FALSE
+"82","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.64626425661751,FALSE,26,0.293902649585217,FALSE
+"83","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",8.27469718872113,FALSE,26,0.193627936611039,FALSE
+"84","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.756477586054223,FALSE,26,0.144507369003646,FALSE
+"85","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.66886122367092,FALSE,26,0.395413310545465,FALSE
+"86","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.10093474182039,FALSE,26,0.293902649585217,FALSE
+"87","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.90579585921302,FALSE,26,0.193627936611039,FALSE
+"88","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.761427504404616,FALSE,26,0.144507369003646,FALSE
+"89","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.53673356044585,FALSE,26,0.395413310545465,FALSE
+"90","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",4.07308933636474,FALSE,26,0.293902649585217,FALSE
+"91","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.85703186569489,FALSE,26,0.193627936611039,FALSE
+"92","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.677827659874618,FALSE,26,0.144507369003646,FALSE
+"93","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",8.3043925686123,FALSE,26,0.395413310545465,FALSE
+"94","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",6.17162862842687,FALSE,26,0.293902649585217,FALSE
+"95","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",8.46080066533232,FALSE,26,0.193627936611039,FALSE
+"96","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.738159657309862,FALSE,26,0.144507369003646,FALSE
+"97","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",8.01161365111695,FALSE,26,0.395413310545465,FALSE
+"98","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.85523419265089,FALSE,26,0.293902649585217,FALSE
+"99","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.91356348354216,FALSE,26,0.193627936611039,FALSE
+"100","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.749157136251305,FALSE,26,0.144507369003646,FALSE
+"101","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_mean",7.86784171489089,FALSE,26,0.395413310545465,FALSE
+"102","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_min",5.26648439911006,FALSE,26,0.293902649585217,FALSE
+"103","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","T_peak",7.49406458629853,FALSE,26,0.193627936611039,FALSE
+"104","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","V_max",0.741290224245608,FALSE,26,0.144507369003646,FALSE
+"105","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.55704952837354,FALSE,26,0.374107268008463,FALSE
+"106","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",4.17349366126799,FALSE,26,0.302655585949401,FALSE
+"107","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.20437119288511,FALSE,26,0.19346499116427,FALSE
+"108","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.773964225873522,FALSE,26,0.695150721876647,FALSE
+"109","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.20861119157167,FALSE,26,0.374107268008463,FALSE
+"110","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",4.1513369424116,FALSE,26,0.302655585949401,FALSE
+"111","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.14130978485123,FALSE,26,0.19346499116427,FALSE
+"112","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.728047463937978,FALSE,26,0.695150721876647,FALSE
+"113","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",8.09786826833125,FALSE,26,0.374107268008463,FALSE
+"114","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.89109990987163,FALSE,26,0.302655585949401,FALSE
+"115","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.8942707581358,FALSE,26,0.19346499116427,FALSE
+"116","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.738268939488649,FALSE,26,0.695150721876647,FALSE
+"117","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.74588032071451,FALSE,26,0.374107268008463,FALSE
+"118","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",4.42951269659975,FALSE,26,0.302655585949401,FALSE
+"119","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.19930594759821,FALSE,26,0.19346499116427,FALSE
+"120","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.766490428522955,FALSE,26,0.695150721876647,FALSE
+"121","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.97170779493451,FALSE,26,0.374107268008463,FALSE
+"122","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.66825572550054,FALSE,26,0.302655585949401,FALSE
+"123","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.9675961972782,FALSE,26,0.19346499116427,FALSE
+"124","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.727190965395922,FALSE,26,0.695150721876647,FALSE
+"125","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.94916101718209,FALSE,26,0.374107268008463,FALSE
+"126","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.42713598410897,FALSE,26,0.302655585949401,FALSE
+"127","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.86051902620008,FALSE,26,0.19346499116427,FALSE
+"128","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.786578321200646,FALSE,26,0.695150721876647,FALSE
+"129","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",8.21574517035225,FALSE,26,0.374107268008463,FALSE
+"130","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.8470719143957,FALSE,26,0.302655585949401,FALSE
+"131","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",8.46719245469711,FALSE,26,0.19346499116427,FALSE
+"132","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.745531885493184,FALSE,26,0.695150721876647,FALSE
+"133","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",8.33622670615634,FALSE,26,0.374107268008463,FALSE
+"134","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.5510153874924,FALSE,26,0.302655585949401,FALSE
+"135","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",8.41654160160912,FALSE,26,0.19346499116427,FALSE
+"136","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.744591483369541,FALSE,26,0.695150721876647,FALSE
+"137","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.70385794771993,FALSE,26,0.374107268008463,FALSE
+"138","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.24094835544498,FALSE,26,0.302655585949401,FALSE
+"139","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.64507368337314,FALSE,26,0.19346499116427,FALSE
+"140","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.76420465496956,FALSE,26,0.695150721876647,FALSE
+"141","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",8.66174074878159,FALSE,26,0.374107268008463,FALSE
+"142","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",7.03307457322961,FALSE,26,0.302655585949401,FALSE
+"143","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",8.69826022873623,FALSE,26,0.19346499116427,FALSE
+"144","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.725414337244332,FALSE,26,0.695150721876647,FALSE
+"145","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.61798853213137,FALSE,26,0.374107268008463,FALSE
+"146","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.12027748322826,FALSE,26,0.302655585949401,FALSE
+"147","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.50659507868178,FALSE,26,0.19346499116427,FALSE
+"148","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.774932807236564,FALSE,26,0.695150721876647,FALSE
+"149","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.07347257698344,FALSE,26,0.374107268008463,FALSE
+"150","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",4.06602574208483,FALSE,26,0.302655585949401,FALSE
+"151","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",6.82310876605741,FALSE,26,0.19346499116427,FALSE
+"152","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.766707421785549,FALSE,26,0.695150721876647,FALSE
+"153","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.59083093321592,FALSE,26,0.374107268008463,FALSE
+"154","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",4.38253382512735,FALSE,26,0.302655585949401,FALSE
+"155","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.13850776548785,FALSE,26,0.19346499116427,FALSE
+"156","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.765833312952539,FALSE,26,0.695150721876647,FALSE
+"157","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.91033922531886,FALSE,26,0.374107268008463,FALSE
+"158","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.40637870908989,FALSE,26,0.302655585949401,FALSE
+"159","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.98930607368447,FALSE,26,0.19346499116427,FALSE
+"160","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.767412572664351,FALSE,26,0.695150721876647,FALSE
+"161","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.85955654335046,FALSE,26,0.374107268008463,FALSE
+"162","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.20868741935699,FALSE,26,0.302655585949401,FALSE
+"163","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",6.84038628418574,FALSE,26,0.19346499116427,FALSE
+"164","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.774068646554719,FALSE,26,0.695150721876647,FALSE
+"165","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",8.46183272330658,FALSE,26,0.374107268008463,FALSE
+"166","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",6.02456306266221,FALSE,26,0.302655585949401,FALSE
+"167","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",8.21560959818623,FALSE,26,0.19346499116427,FALSE
+"168","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.769462588498972,FALSE,26,0.695150721876647,FALSE
+"169","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.8106190777018,FALSE,26,0.374107268008463,FALSE
+"170","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.48542466070471,FALSE,26,0.302655585949401,FALSE
+"171","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.61420570577398,FALSE,26,0.19346499116427,FALSE
+"172","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.683384409142885,FALSE,26,0.695150721876647,FALSE
+"173","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.80707056515337,FALSE,26,0.374107268008463,FALSE
+"174","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",4.81739577788748,FALSE,26,0.302655585949401,FALSE
+"175","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.98572697076977,FALSE,26,0.19346499116427,FALSE
+"176","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.750470104472086,FALSE,26,0.695150721876647,FALSE
+"177","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.8523371829065,FALSE,26,0.374107268008463,FALSE
+"178","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.15514464763947,FALSE,26,0.302655585949401,FALSE
+"179","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.76217662876754,FALSE,26,0.19346499116427,FALSE
+"180","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.768129242811152,FALSE,26,0.695150721876647,FALSE
+"181","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",9.06690029025787,FALSE,26,0.374107268008463,FALSE
+"182","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",7.47946944687117,FALSE,26,0.302655585949401,FALSE
+"183","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",9.30083099925233,FALSE,26,0.19346499116427,FALSE
+"184","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.686972579414543,FALSE,26,0.695150721876647,FALSE
+"185","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",8.12372943322828,FALSE,26,0.374107268008463,FALSE
+"186","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.64626425661751,FALSE,26,0.302655585949401,FALSE
+"187","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",8.27469718872113,FALSE,26,0.19346499116427,FALSE
+"188","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.756477586054223,FALSE,26,0.695150721876647,FALSE
+"189","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.66886122367092,FALSE,26,0.374107268008463,FALSE
+"190","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.10093474182039,FALSE,26,0.302655585949401,FALSE
+"191","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.90579585921302,FALSE,26,0.19346499116427,FALSE
+"192","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.761427504404616,FALSE,26,0.695150721876647,FALSE
+"193","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.53673356044585,FALSE,26,0.374107268008463,FALSE
+"194","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",4.07308933636474,FALSE,26,0.302655585949401,FALSE
+"195","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.85703186569489,FALSE,26,0.19346499116427,FALSE
+"196","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.677827659874618,FALSE,26,0.695150721876647,FALSE
+"197","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",8.3043925686123,FALSE,26,0.374107268008463,FALSE
+"198","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",6.17162862842687,FALSE,26,0.302655585949401,FALSE
+"199","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",8.46080066533232,FALSE,26,0.19346499116427,FALSE
+"200","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.738159657309862,FALSE,26,0.695150721876647,FALSE
+"201","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",8.01161365111695,FALSE,26,0.374107268008463,FALSE
+"202","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.85523419265089,FALSE,26,0.302655585949401,FALSE
+"203","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.91356348354216,FALSE,26,0.19346499116427,FALSE
+"204","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.749157136251305,FALSE,26,0.695150721876647,FALSE
+"205","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_mean",7.86784171489089,FALSE,26,0.374107268008463,FALSE
+"206","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_min",5.26648439911006,FALSE,26,0.302655585949401,FALSE
+"207","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","T_peak",7.49406458629853,FALSE,26,0.19346499116427,FALSE
+"208","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","V_max",0.741290224245608,FALSE,26,0.695150721876647,FALSE
+"209","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.55704952837354,FALSE,26,3.3546453123444e-05,TRUE
+"210","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",4.17349366126799,FALSE,26,0.000176736843193447,TRUE
+"211","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.20437119288511,FALSE,26,5.01856012419284e-05,TRUE
+"212","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.773964225873522,FALSE,26,0.0193174004585418,TRUE
+"213","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.20861119157167,FALSE,26,3.3546453123444e-05,TRUE
+"214","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",4.1513369424116,FALSE,26,0.000176736843193447,TRUE
+"215","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.14130978485123,FALSE,26,5.01856012419284e-05,TRUE
+"216","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.728047463937978,FALSE,26,0.0193174004585418,TRUE
+"217","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",8.09786826833125,FALSE,26,3.3546453123444e-05,TRUE
+"218","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.89109990987163,FALSE,26,0.000176736843193447,TRUE
+"219","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.8942707581358,FALSE,26,5.01856012419284e-05,TRUE
+"220","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.738268939488649,FALSE,26,0.0193174004585418,TRUE
+"221","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.74588032071451,FALSE,26,3.3546453123444e-05,TRUE
+"222","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",4.42951269659975,FALSE,26,0.000176736843193447,TRUE
+"223","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.19930594759821,FALSE,26,5.01856012419284e-05,TRUE
+"224","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.766490428522955,FALSE,26,0.0193174004585418,TRUE
+"225","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.97170779493451,FALSE,26,3.3546453123444e-05,TRUE
+"226","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.66825572550054,FALSE,26,0.000176736843193447,TRUE
+"227","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.9675961972782,FALSE,26,5.01856012419284e-05,TRUE
+"228","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.727190965395922,FALSE,26,0.0193174004585418,TRUE
+"229","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.94916101718209,FALSE,26,3.3546453123444e-05,TRUE
+"230","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.42713598410897,FALSE,26,0.000176736843193447,TRUE
+"231","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.86051902620008,FALSE,26,5.01856012419284e-05,TRUE
+"232","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.786578321200646,FALSE,26,0.0193174004585418,TRUE
+"233","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",8.21574517035225,FALSE,26,3.3546453123444e-05,TRUE
+"234","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.8470719143957,FALSE,26,0.000176736843193447,TRUE
+"235","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",8.46719245469711,FALSE,26,5.01856012419284e-05,TRUE
+"236","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.745531885493184,FALSE,26,0.0193174004585418,TRUE
+"237","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",8.33622670615634,FALSE,26,3.3546453123444e-05,TRUE
+"238","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.5510153874924,FALSE,26,0.000176736843193447,TRUE
+"239","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",8.41654160160912,FALSE,26,5.01856012419284e-05,TRUE
+"240","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.744591483369541,FALSE,26,0.0193174004585418,TRUE
+"241","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.70385794771993,FALSE,26,3.3546453123444e-05,TRUE
+"242","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.24094835544498,FALSE,26,0.000176736843193447,TRUE
+"243","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.64507368337314,FALSE,26,5.01856012419284e-05,TRUE
+"244","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.76420465496956,FALSE,26,0.0193174004585418,TRUE
+"245","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",8.66174074878159,FALSE,26,3.3546453123444e-05,TRUE
+"246","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",7.03307457322961,FALSE,26,0.000176736843193447,TRUE
+"247","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",8.69826022873623,FALSE,26,5.01856012419284e-05,TRUE
+"248","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.725414337244332,FALSE,26,0.0193174004585418,TRUE
+"249","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.61798853213137,FALSE,26,3.3546453123444e-05,TRUE
+"250","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.12027748322826,FALSE,26,0.000176736843193447,TRUE
+"251","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.50659507868178,FALSE,26,5.01856012419284e-05,TRUE
+"252","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.774932807236564,FALSE,26,0.0193174004585418,TRUE
+"253","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.07347257698344,FALSE,26,3.3546453123444e-05,TRUE
+"254","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",4.06602574208483,FALSE,26,0.000176736843193447,TRUE
+"255","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",6.82310876605741,FALSE,26,5.01856012419284e-05,TRUE
+"256","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.766707421785549,FALSE,26,0.0193174004585418,TRUE
+"257","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.59083093321592,FALSE,26,3.3546453123444e-05,TRUE
+"258","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",4.38253382512735,FALSE,26,0.000176736843193447,TRUE
+"259","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.13850776548785,FALSE,26,5.01856012419284e-05,TRUE
+"260","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.765833312952539,FALSE,26,0.0193174004585418,TRUE
+"261","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.91033922531886,FALSE,26,3.3546453123444e-05,TRUE
+"262","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.40637870908989,FALSE,26,0.000176736843193447,TRUE
+"263","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.98930607368447,FALSE,26,5.01856012419284e-05,TRUE
+"264","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.767412572664351,FALSE,26,0.0193174004585418,TRUE
+"265","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.85955654335046,FALSE,26,3.3546453123444e-05,TRUE
+"266","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.20868741935699,FALSE,26,0.000176736843193447,TRUE
+"267","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",6.84038628418574,FALSE,26,5.01856012419284e-05,TRUE
+"268","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.774068646554719,FALSE,26,0.0193174004585418,TRUE
+"269","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",8.46183272330658,FALSE,26,3.3546453123444e-05,TRUE
+"270","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",6.02456306266221,FALSE,26,0.000176736843193447,TRUE
+"271","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",8.21560959818623,FALSE,26,5.01856012419284e-05,TRUE
+"272","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.769462588498972,FALSE,26,0.0193174004585418,TRUE
+"273","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.8106190777018,FALSE,26,3.3546453123444e-05,TRUE
+"274","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.48542466070471,FALSE,26,0.000176736843193447,TRUE
+"275","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.61420570577398,FALSE,26,5.01856012419284e-05,TRUE
+"276","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.683384409142885,FALSE,26,0.0193174004585418,TRUE
+"277","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.80707056515337,FALSE,26,3.3546453123444e-05,TRUE
+"278","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",4.81739577788748,FALSE,26,0.000176736843193447,TRUE
+"279","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.98572697076977,FALSE,26,5.01856012419284e-05,TRUE
+"280","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.750470104472086,FALSE,26,0.0193174004585418,TRUE
+"281","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.8523371829065,FALSE,26,3.3546453123444e-05,TRUE
+"282","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.15514464763947,FALSE,26,0.000176736843193447,TRUE
+"283","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.76217662876754,FALSE,26,5.01856012419284e-05,TRUE
+"284","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.768129242811152,FALSE,26,0.0193174004585418,TRUE
+"285","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",9.06690029025787,FALSE,26,3.3546453123444e-05,TRUE
+"286","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",7.47946944687117,FALSE,26,0.000176736843193447,TRUE
+"287","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",9.30083099925233,FALSE,26,5.01856012419284e-05,TRUE
+"288","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.686972579414543,FALSE,26,0.0193174004585418,TRUE
+"289","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",8.12372943322828,FALSE,26,3.3546453123444e-05,TRUE
+"290","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.64626425661751,FALSE,26,0.000176736843193447,TRUE
+"291","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",8.27469718872113,FALSE,26,5.01856012419284e-05,TRUE
+"292","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.756477586054223,FALSE,26,0.0193174004585418,TRUE
+"293","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.66886122367092,FALSE,26,3.3546453123444e-05,TRUE
+"294","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.10093474182039,FALSE,26,0.000176736843193447,TRUE
+"295","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.90579585921302,FALSE,26,5.01856012419284e-05,TRUE
+"296","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.761427504404616,FALSE,26,0.0193174004585418,TRUE
+"297","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.53673356044585,FALSE,26,3.3546453123444e-05,TRUE
+"298","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",4.07308933636474,FALSE,26,0.000176736843193447,TRUE
+"299","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.85703186569489,FALSE,26,5.01856012419284e-05,TRUE
+"300","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.677827659874618,FALSE,26,0.0193174004585418,TRUE
+"301","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",8.3043925686123,FALSE,26,3.3546453123444e-05,TRUE
+"302","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",6.17162862842687,FALSE,26,0.000176736843193447,TRUE
+"303","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",8.46080066533232,FALSE,26,5.01856012419284e-05,TRUE
+"304","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.738159657309862,FALSE,26,0.0193174004585418,TRUE
+"305","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",8.01161365111695,FALSE,26,3.3546453123444e-05,TRUE
+"306","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.85523419265089,FALSE,26,0.000176736843193447,TRUE
+"307","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.91356348354216,FALSE,26,5.01856012419284e-05,TRUE
+"308","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.749157136251305,FALSE,26,0.0193174004585418,TRUE
+"309","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_mean",7.86784171489089,FALSE,26,3.3546453123444e-05,TRUE
+"310","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_min",5.26648439911006,FALSE,26,0.000176736843193447,TRUE
+"311","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","T_peak",7.49406458629853,FALSE,26,5.01856012419284e-05,TRUE
+"312","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","V_max",0.741290224245608,FALSE,26,0.0193174004585418,TRUE
+"313","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.55704952837354,FALSE,26,0.684463970826718,FALSE
+"314","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",4.17349366126799,FALSE,26,0.628293195385365,FALSE
+"315","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.20437119288511,FALSE,26,0.21411216479757,FALSE
+"316","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.773964225873522,FALSE,26,0.128148345751875,FALSE
+"317","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.20861119157167,FALSE,26,0.684463970826718,FALSE
+"318","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",4.1513369424116,FALSE,26,0.628293195385365,FALSE
+"319","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.14130978485123,FALSE,26,0.21411216479757,FALSE
+"320","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.728047463937978,FALSE,26,0.128148345751875,FALSE
+"321","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",8.09786826833125,FALSE,26,0.684463970826718,FALSE
+"322","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.89109990987163,FALSE,26,0.628293195385365,FALSE
+"323","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.8942707581358,FALSE,26,0.21411216479757,FALSE
+"324","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.738268939488649,FALSE,26,0.128148345751875,FALSE
+"325","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.74588032071451,FALSE,26,0.684463970826718,FALSE
+"326","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",4.42951269659975,FALSE,26,0.628293195385365,FALSE
+"327","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.19930594759821,FALSE,26,0.21411216479757,FALSE
+"328","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.766490428522955,FALSE,26,0.128148345751875,FALSE
+"329","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.97170779493451,FALSE,26,0.684463970826718,FALSE
+"330","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.66825572550054,FALSE,26,0.628293195385365,FALSE
+"331","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.9675961972782,FALSE,26,0.21411216479757,FALSE
+"332","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.727190965395922,FALSE,26,0.128148345751875,FALSE
+"333","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.94916101718209,FALSE,26,0.684463970826718,FALSE
+"334","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.42713598410897,FALSE,26,0.628293195385365,FALSE
+"335","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.86051902620008,FALSE,26,0.21411216479757,FALSE
+"336","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.786578321200646,FALSE,26,0.128148345751875,FALSE
+"337","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",8.21574517035225,FALSE,26,0.684463970826718,FALSE
+"338","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.8470719143957,FALSE,26,0.628293195385365,FALSE
+"339","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",8.46719245469711,FALSE,26,0.21411216479757,FALSE
+"340","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.745531885493184,FALSE,26,0.128148345751875,FALSE
+"341","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",8.33622670615634,FALSE,26,0.684463970826718,FALSE
+"342","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.5510153874924,FALSE,26,0.628293195385365,FALSE
+"343","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",8.41654160160912,FALSE,26,0.21411216479757,FALSE
+"344","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.744591483369541,FALSE,26,0.128148345751875,FALSE
+"345","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.70385794771993,FALSE,26,0.684463970826718,FALSE
+"346","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.24094835544498,FALSE,26,0.628293195385365,FALSE
+"347","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.64507368337314,FALSE,26,0.21411216479757,FALSE
+"348","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.76420465496956,FALSE,26,0.128148345751875,FALSE
+"349","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",8.66174074878159,FALSE,26,0.684463970826718,FALSE
+"350","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",7.03307457322961,FALSE,26,0.628293195385365,FALSE
+"351","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",8.69826022873623,FALSE,26,0.21411216479757,FALSE
+"352","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.725414337244332,FALSE,26,0.128148345751875,FALSE
+"353","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.61798853213137,FALSE,26,0.684463970826718,FALSE
+"354","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.12027748322826,FALSE,26,0.628293195385365,FALSE
+"355","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.50659507868178,FALSE,26,0.21411216479757,FALSE
+"356","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.774932807236564,FALSE,26,0.128148345751875,FALSE
+"357","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.07347257698344,FALSE,26,0.684463970826718,FALSE
+"358","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",4.06602574208483,FALSE,26,0.628293195385365,FALSE
+"359","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",6.82310876605741,FALSE,26,0.21411216479757,FALSE
+"360","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.766707421785549,FALSE,26,0.128148345751875,FALSE
+"361","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.59083093321592,FALSE,26,0.684463970826718,FALSE
+"362","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",4.38253382512735,FALSE,26,0.628293195385365,FALSE
+"363","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.13850776548785,FALSE,26,0.21411216479757,FALSE
+"364","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.765833312952539,FALSE,26,0.128148345751875,FALSE
+"365","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.91033922531886,FALSE,26,0.684463970826718,FALSE
+"366","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.40637870908989,FALSE,26,0.628293195385365,FALSE
+"367","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.98930607368447,FALSE,26,0.21411216479757,FALSE
+"368","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.767412572664351,FALSE,26,0.128148345751875,FALSE
+"369","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.85955654335046,FALSE,26,0.684463970826718,FALSE
+"370","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.20868741935699,FALSE,26,0.628293195385365,FALSE
+"371","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",6.84038628418574,FALSE,26,0.21411216479757,FALSE
+"372","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.774068646554719,FALSE,26,0.128148345751875,FALSE
+"373","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",8.46183272330658,FALSE,26,0.684463970826718,FALSE
+"374","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",6.02456306266221,FALSE,26,0.628293195385365,FALSE
+"375","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",8.21560959818623,FALSE,26,0.21411216479757,FALSE
+"376","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.769462588498972,FALSE,26,0.128148345751875,FALSE
+"377","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.8106190777018,FALSE,26,0.684463970826718,FALSE
+"378","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.48542466070471,FALSE,26,0.628293195385365,FALSE
+"379","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.61420570577398,FALSE,26,0.21411216479757,FALSE
+"380","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.683384409142885,FALSE,26,0.128148345751875,FALSE
+"381","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.80707056515337,FALSE,26,0.684463970826718,FALSE
+"382","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",4.81739577788748,FALSE,26,0.628293195385365,FALSE
+"383","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.98572697076977,FALSE,26,0.21411216479757,FALSE
+"384","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.750470104472086,FALSE,26,0.128148345751875,FALSE
+"385","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.8523371829065,FALSE,26,0.684463970826718,FALSE
+"386","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.15514464763947,FALSE,26,0.628293195385365,FALSE
+"387","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.76217662876754,FALSE,26,0.21411216479757,FALSE
+"388","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.768129242811152,FALSE,26,0.128148345751875,FALSE
+"389","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",9.06690029025787,FALSE,26,0.684463970826718,FALSE
+"390","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",7.47946944687117,FALSE,26,0.628293195385365,FALSE
+"391","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",9.30083099925233,FALSE,26,0.21411216479757,FALSE
+"392","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.686972579414543,FALSE,26,0.128148345751875,FALSE
+"393","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",8.12372943322828,FALSE,26,0.684463970826718,FALSE
+"394","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.64626425661751,FALSE,26,0.628293195385365,FALSE
+"395","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",8.27469718872113,FALSE,26,0.21411216479757,FALSE
+"396","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.756477586054223,FALSE,26,0.128148345751875,FALSE
+"397","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.66886122367092,FALSE,26,0.684463970826718,FALSE
+"398","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.10093474182039,FALSE,26,0.628293195385365,FALSE
+"399","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.90579585921302,FALSE,26,0.21411216479757,FALSE
+"400","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.761427504404616,FALSE,26,0.128148345751875,FALSE
+"401","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.53673356044585,FALSE,26,0.684463970826718,FALSE
+"402","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",4.07308933636474,FALSE,26,0.628293195385365,FALSE
+"403","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.85703186569489,FALSE,26,0.21411216479757,FALSE
+"404","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.677827659874618,FALSE,26,0.128148345751875,FALSE
+"405","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",8.3043925686123,FALSE,26,0.684463970826718,FALSE
+"406","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",6.17162862842687,FALSE,26,0.628293195385365,FALSE
+"407","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",8.46080066533232,FALSE,26,0.21411216479757,FALSE
+"408","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.738159657309862,FALSE,26,0.128148345751875,FALSE
+"409","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",8.01161365111695,FALSE,26,0.684463970826718,FALSE
+"410","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.85523419265089,FALSE,26,0.628293195385365,FALSE
+"411","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.91356348354216,FALSE,26,0.21411216479757,FALSE
+"412","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.749157136251305,FALSE,26,0.128148345751875,FALSE
+"413","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_mean",7.86784171489089,FALSE,26,0.684463970826718,FALSE
+"414","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_min",5.26648439911006,FALSE,26,0.628293195385365,FALSE
+"415","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","T_peak",7.49406458629853,FALSE,26,0.21411216479757,FALSE
+"416","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","V_max",0.741290224245608,FALSE,26,0.128148345751875,FALSE

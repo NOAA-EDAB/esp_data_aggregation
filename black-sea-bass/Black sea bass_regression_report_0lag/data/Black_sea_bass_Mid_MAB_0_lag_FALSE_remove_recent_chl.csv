@@ -1,0 +1,2373 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7124056,FALSE,21,0.684037687582259,FALSE
+"2","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9715506,FALSE,21,0.928015651618396,FALSE
+"3","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5786476,FALSE,21,0.307859207999471,FALSE
+"4","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.896805,FALSE,21,0.295740831675302,FALSE
+"5","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7027889,FALSE,21,0.684037687582259,FALSE
+"6","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9424341,FALSE,21,0.928015651618396,FALSE
+"7","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6346005,FALSE,21,0.307859207999471,FALSE
+"8","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9628688,FALSE,21,0.295740831675302,FALSE
+"9","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8033907,FALSE,21,0.684037687582259,FALSE
+"10","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.070603,FALSE,21,0.928015651618396,FALSE
+"11","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6667774,FALSE,21,0.307859207999471,FALSE
+"12","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.015016,FALSE,21,0.295740831675302,FALSE
+"13","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8030661,FALSE,21,0.684037687582259,FALSE
+"14","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.065584,FALSE,21,0.928015651618396,FALSE
+"15","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6717887,FALSE,21,0.307859207999471,FALSE
+"16","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.019384,FALSE,21,0.295740831675302,FALSE
+"17","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8046254,FALSE,21,0.684037687582259,FALSE
+"18","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.058083,FALSE,21,0.928015651618396,FALSE
+"19","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7324065,FALSE,21,0.307859207999471,FALSE
+"20","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.082285,FALSE,21,0.295740831675302,FALSE
+"21","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.816496,FALSE,21,0.684037687582259,FALSE
+"22","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.114757,FALSE,21,0.928015651618396,FALSE
+"23","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.644856,FALSE,21,0.307859207999471,FALSE
+"24","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9932076,FALSE,21,0.295740831675302,FALSE
+"25","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7424262,FALSE,21,0.684037687582259,FALSE
+"26","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9792118,FALSE,21,0.928015651618396,FALSE
+"27","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6254655,FALSE,21,0.307859207999471,FALSE
+"28","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9558589,FALSE,21,0.295740831675302,FALSE
+"29","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7694307,FALSE,21,0.684037687582259,FALSE
+"30","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.003065,FALSE,21,0.928015651618396,FALSE
+"31","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.628507,FALSE,21,0.307859207999471,FALSE
+"32","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9595143,FALSE,21,0.295740831675302,FALSE
+"33","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8283818,FALSE,21,0.684037687582259,FALSE
+"34","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.092712,FALSE,21,0.928015651618396,FALSE
+"35","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7334538,FALSE,21,0.307859207999471,FALSE
+"36","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.107964,FALSE,21,0.295740831675302,FALSE
+"37","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7914919,FALSE,21,0.684037687582259,FALSE
+"38","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.057061,FALSE,21,0.928015651618396,FALSE
+"39","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6666083,FALSE,21,0.307859207999471,FALSE
+"40","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.021492,FALSE,21,0.295740831675302,FALSE
+"41","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8092533,FALSE,21,0.684037687582259,FALSE
+"42","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.097695,FALSE,21,0.928015651618396,FALSE
+"43","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6691148,FALSE,21,0.307859207999471,FALSE
+"44","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.038713,FALSE,21,0.295740831675302,FALSE
+"45","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7905332,FALSE,21,0.684037687582259,FALSE
+"46","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.044616,FALSE,21,0.928015651618396,FALSE
+"47","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6565244,FALSE,21,0.307859207999471,FALSE
+"48","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9957899,FALSE,21,0.295740831675302,FALSE
+"49","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8142529,FALSE,21,0.684037687582259,FALSE
+"50","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.073841,FALSE,21,0.928015651618396,FALSE
+"51","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6594914,FALSE,21,0.307859207999471,FALSE
+"52","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.016493,FALSE,21,0.295740831675302,FALSE
+"53","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9477691,FALSE,21,0.684037687582259,FALSE
+"54","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.203217,FALSE,21,0.928015651618396,FALSE
+"55","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7548714,FALSE,21,0.307859207999471,FALSE
+"56","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.126171,FALSE,21,0.295740831675302,FALSE
+"57","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7690239,FALSE,21,0.684037687582259,FALSE
+"58","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.030568,FALSE,21,0.928015651618396,FALSE
+"59","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7285936,FALSE,21,0.307859207999471,FALSE
+"60","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.131467,FALSE,21,0.295740831675302,FALSE
+"61","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8196206,FALSE,21,0.684037687582259,FALSE
+"62","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.060703,FALSE,21,0.928015651618396,FALSE
+"63","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7018983,FALSE,21,0.307859207999471,FALSE
+"64","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.030468,FALSE,21,0.295740831675302,FALSE
+"65","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.743644,FALSE,21,0.684037687582259,FALSE
+"66","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9479071,FALSE,21,0.928015651618396,FALSE
+"67","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6208923,FALSE,21,0.307859207999471,FALSE
+"68","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9352322,FALSE,21,0.295740831675302,FALSE
+"69","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7698619,FALSE,21,0.684037687582259,FALSE
+"70","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9919838,FALSE,21,0.928015651618396,FALSE
+"71","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6640332,FALSE,21,0.307859207999471,FALSE
+"72","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.019601,FALSE,21,0.295740831675302,FALSE
+"73","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7705292,FALSE,21,0.684037687582259,FALSE
+"74","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.008547,FALSE,21,0.928015651618396,FALSE
+"75","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6879799,FALSE,21,0.307859207999471,FALSE
+"76","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.050112,FALSE,21,0.295740831675302,FALSE
+"77","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8641285,FALSE,21,0.684037687582259,FALSE
+"78","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.121207,FALSE,21,0.928015651618396,FALSE
+"79","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7115778,FALSE,21,0.307859207999471,FALSE
+"80","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.067508,FALSE,21,0.295740831675302,FALSE
+"81","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7742485,FALSE,21,0.684037687582259,FALSE
+"82","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.055846,FALSE,21,0.928015651618396,FALSE
+"83","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6613015,FALSE,21,0.307859207999471,FALSE
+"84","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.028706,FALSE,21,0.295740831675302,FALSE
+"85","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7124056,FALSE,21,0.856926352668659,FALSE
+"86","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9715506,FALSE,21,0.753292224728174,FALSE
+"87","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5786476,FALSE,21,0.79321759104894,FALSE
+"88","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.896805,FALSE,21,0.727284099760819,FALSE
+"89","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7027889,FALSE,21,0.856926352668659,FALSE
+"90","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9424341,FALSE,21,0.753292224728174,FALSE
+"91","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6346005,FALSE,21,0.79321759104894,FALSE
+"92","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9628688,FALSE,21,0.727284099760819,FALSE
+"93","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8033907,FALSE,21,0.856926352668659,FALSE
+"94","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.070603,FALSE,21,0.753292224728174,FALSE
+"95","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6667774,FALSE,21,0.79321759104894,FALSE
+"96","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.015016,FALSE,21,0.727284099760819,FALSE
+"97","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8030661,FALSE,21,0.856926352668659,FALSE
+"98","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.065584,FALSE,21,0.753292224728174,FALSE
+"99","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6717887,FALSE,21,0.79321759104894,FALSE
+"100","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.019384,FALSE,21,0.727284099760819,FALSE
+"101","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8046254,FALSE,21,0.856926352668659,FALSE
+"102","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.058083,FALSE,21,0.753292224728174,FALSE
+"103","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7324065,FALSE,21,0.79321759104894,FALSE
+"104","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.082285,FALSE,21,0.727284099760819,FALSE
+"105","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.816496,FALSE,21,0.856926352668659,FALSE
+"106","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.114757,FALSE,21,0.753292224728174,FALSE
+"107","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.644856,FALSE,21,0.79321759104894,FALSE
+"108","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9932076,FALSE,21,0.727284099760819,FALSE
+"109","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7424262,FALSE,21,0.856926352668659,FALSE
+"110","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9792118,FALSE,21,0.753292224728174,FALSE
+"111","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6254655,FALSE,21,0.79321759104894,FALSE
+"112","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9558589,FALSE,21,0.727284099760819,FALSE
+"113","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7694307,FALSE,21,0.856926352668659,FALSE
+"114","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.003065,FALSE,21,0.753292224728174,FALSE
+"115","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.628507,FALSE,21,0.79321759104894,FALSE
+"116","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9595143,FALSE,21,0.727284099760819,FALSE
+"117","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8283818,FALSE,21,0.856926352668659,FALSE
+"118","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.092712,FALSE,21,0.753292224728174,FALSE
+"119","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7334538,FALSE,21,0.79321759104894,FALSE
+"120","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.107964,FALSE,21,0.727284099760819,FALSE
+"121","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7914919,FALSE,21,0.856926352668659,FALSE
+"122","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.057061,FALSE,21,0.753292224728174,FALSE
+"123","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6666083,FALSE,21,0.79321759104894,FALSE
+"124","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.021492,FALSE,21,0.727284099760819,FALSE
+"125","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8092533,FALSE,21,0.856926352668659,FALSE
+"126","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.097695,FALSE,21,0.753292224728174,FALSE
+"127","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6691148,FALSE,21,0.79321759104894,FALSE
+"128","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.038713,FALSE,21,0.727284099760819,FALSE
+"129","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7905332,FALSE,21,0.856926352668659,FALSE
+"130","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.044616,FALSE,21,0.753292224728174,FALSE
+"131","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6565244,FALSE,21,0.79321759104894,FALSE
+"132","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9957899,FALSE,21,0.727284099760819,FALSE
+"133","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8142529,FALSE,21,0.856926352668659,FALSE
+"134","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.073841,FALSE,21,0.753292224728174,FALSE
+"135","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6594914,FALSE,21,0.79321759104894,FALSE
+"136","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.016493,FALSE,21,0.727284099760819,FALSE
+"137","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9477691,FALSE,21,0.856926352668659,FALSE
+"138","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.203217,FALSE,21,0.753292224728174,FALSE
+"139","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7548714,FALSE,21,0.79321759104894,FALSE
+"140","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.126171,FALSE,21,0.727284099760819,FALSE
+"141","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7690239,FALSE,21,0.856926352668659,FALSE
+"142","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.030568,FALSE,21,0.753292224728174,FALSE
+"143","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7285936,FALSE,21,0.79321759104894,FALSE
+"144","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.131467,FALSE,21,0.727284099760819,FALSE
+"145","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8196206,FALSE,21,0.856926352668659,FALSE
+"146","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.060703,FALSE,21,0.753292224728174,FALSE
+"147","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7018983,FALSE,21,0.79321759104894,FALSE
+"148","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.030468,FALSE,21,0.727284099760819,FALSE
+"149","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.743644,FALSE,21,0.856926352668659,FALSE
+"150","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9479071,FALSE,21,0.753292224728174,FALSE
+"151","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6208923,FALSE,21,0.79321759104894,FALSE
+"152","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9352322,FALSE,21,0.727284099760819,FALSE
+"153","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7698619,FALSE,21,0.856926352668659,FALSE
+"154","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9919838,FALSE,21,0.753292224728174,FALSE
+"155","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6640332,FALSE,21,0.79321759104894,FALSE
+"156","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.019601,FALSE,21,0.727284099760819,FALSE
+"157","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7705292,FALSE,21,0.856926352668659,FALSE
+"158","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.008547,FALSE,21,0.753292224728174,FALSE
+"159","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6879799,FALSE,21,0.79321759104894,FALSE
+"160","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.050112,FALSE,21,0.727284099760819,FALSE
+"161","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8641285,FALSE,21,0.856926352668659,FALSE
+"162","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.121207,FALSE,21,0.753292224728174,FALSE
+"163","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7115778,FALSE,21,0.79321759104894,FALSE
+"164","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.067508,FALSE,21,0.727284099760819,FALSE
+"165","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7742485,FALSE,21,0.856926352668659,FALSE
+"166","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.055846,FALSE,21,0.753292224728174,FALSE
+"167","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6613015,FALSE,21,0.79321759104894,FALSE
+"168","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.028706,FALSE,21,0.727284099760819,FALSE
+"169","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7124056,FALSE,21,0.873894146436414,FALSE
+"170","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9715506,FALSE,21,0.888065573152813,FALSE
+"171","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5786476,FALSE,21,0.033078999510986,TRUE
+"172","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.896805,FALSE,21,0.0100723924752675,TRUE
+"173","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7027889,FALSE,21,0.873894146436414,FALSE
+"174","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9424341,FALSE,21,0.888065573152813,FALSE
+"175","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6346005,FALSE,21,0.033078999510986,TRUE
+"176","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9628688,FALSE,21,0.0100723924752675,TRUE
+"177","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8033907,FALSE,21,0.873894146436414,FALSE
+"178","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.070603,FALSE,21,0.888065573152813,FALSE
+"179","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6667774,FALSE,21,0.033078999510986,TRUE
+"180","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.015016,FALSE,21,0.0100723924752675,TRUE
+"181","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8030661,FALSE,21,0.873894146436414,FALSE
+"182","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.065584,FALSE,21,0.888065573152813,FALSE
+"183","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6717887,FALSE,21,0.033078999510986,TRUE
+"184","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.019384,FALSE,21,0.0100723924752675,TRUE
+"185","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8046254,FALSE,21,0.873894146436414,FALSE
+"186","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.058083,FALSE,21,0.888065573152813,FALSE
+"187","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7324065,FALSE,21,0.033078999510986,TRUE
+"188","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.082285,FALSE,21,0.0100723924752675,TRUE
+"189","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.816496,FALSE,21,0.873894146436414,FALSE
+"190","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.114757,FALSE,21,0.888065573152813,FALSE
+"191","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.644856,FALSE,21,0.033078999510986,TRUE
+"192","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9932076,FALSE,21,0.0100723924752675,TRUE
+"193","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7424262,FALSE,21,0.873894146436414,FALSE
+"194","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9792118,FALSE,21,0.888065573152813,FALSE
+"195","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6254655,FALSE,21,0.033078999510986,TRUE
+"196","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9558589,FALSE,21,0.0100723924752675,TRUE
+"197","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7694307,FALSE,21,0.873894146436414,FALSE
+"198","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.003065,FALSE,21,0.888065573152813,FALSE
+"199","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.628507,FALSE,21,0.033078999510986,TRUE
+"200","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9595143,FALSE,21,0.0100723924752675,TRUE
+"201","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8283818,FALSE,21,0.873894146436414,FALSE
+"202","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.092712,FALSE,21,0.888065573152813,FALSE
+"203","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7334538,FALSE,21,0.033078999510986,TRUE
+"204","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.107964,FALSE,21,0.0100723924752675,TRUE
+"205","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7914919,FALSE,21,0.873894146436414,FALSE
+"206","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.057061,FALSE,21,0.888065573152813,FALSE
+"207","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6666083,FALSE,21,0.033078999510986,TRUE
+"208","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.021492,FALSE,21,0.0100723924752675,TRUE
+"209","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8092533,FALSE,21,0.873894146436414,FALSE
+"210","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.097695,FALSE,21,0.888065573152813,FALSE
+"211","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6691148,FALSE,21,0.033078999510986,TRUE
+"212","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.038713,FALSE,21,0.0100723924752675,TRUE
+"213","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7905332,FALSE,21,0.873894146436414,FALSE
+"214","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.044616,FALSE,21,0.888065573152813,FALSE
+"215","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6565244,FALSE,21,0.033078999510986,TRUE
+"216","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9957899,FALSE,21,0.0100723924752675,TRUE
+"217","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8142529,FALSE,21,0.873894146436414,FALSE
+"218","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.073841,FALSE,21,0.888065573152813,FALSE
+"219","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6594914,FALSE,21,0.033078999510986,TRUE
+"220","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.016493,FALSE,21,0.0100723924752675,TRUE
+"221","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9477691,FALSE,21,0.873894146436414,FALSE
+"222","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.203217,FALSE,21,0.888065573152813,FALSE
+"223","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7548714,FALSE,21,0.033078999510986,TRUE
+"224","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.126171,FALSE,21,0.0100723924752675,TRUE
+"225","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7690239,FALSE,21,0.873894146436414,FALSE
+"226","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.030568,FALSE,21,0.888065573152813,FALSE
+"227","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7285936,FALSE,21,0.033078999510986,TRUE
+"228","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.131467,FALSE,21,0.0100723924752675,TRUE
+"229","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8196206,FALSE,21,0.873894146436414,FALSE
+"230","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.060703,FALSE,21,0.888065573152813,FALSE
+"231","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7018983,FALSE,21,0.033078999510986,TRUE
+"232","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.030468,FALSE,21,0.0100723924752675,TRUE
+"233","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.743644,FALSE,21,0.873894146436414,FALSE
+"234","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9479071,FALSE,21,0.888065573152813,FALSE
+"235","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6208923,FALSE,21,0.033078999510986,TRUE
+"236","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9352322,FALSE,21,0.0100723924752675,TRUE
+"237","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7698619,FALSE,21,0.873894146436414,FALSE
+"238","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9919838,FALSE,21,0.888065573152813,FALSE
+"239","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6640332,FALSE,21,0.033078999510986,TRUE
+"240","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.019601,FALSE,21,0.0100723924752675,TRUE
+"241","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7705292,FALSE,21,0.873894146436414,FALSE
+"242","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.008547,FALSE,21,0.888065573152813,FALSE
+"243","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6879799,FALSE,21,0.033078999510986,TRUE
+"244","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.050112,FALSE,21,0.0100723924752675,TRUE
+"245","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8641285,FALSE,21,0.873894146436414,FALSE
+"246","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.121207,FALSE,21,0.888065573152813,FALSE
+"247","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7115778,FALSE,21,0.033078999510986,TRUE
+"248","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.067508,FALSE,21,0.0100723924752675,TRUE
+"249","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7742485,FALSE,21,0.873894146436414,FALSE
+"250","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.055846,FALSE,21,0.888065573152813,FALSE
+"251","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6613015,FALSE,21,0.033078999510986,TRUE
+"252","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.028706,FALSE,21,0.0100723924752675,TRUE
+"253","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7124056,FALSE,21,0.930127317331463,FALSE
+"254","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9715506,FALSE,21,0.599484513070925,FALSE
+"255","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.5786476,FALSE,21,0.609611757526977,FALSE
+"256","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.896805,FALSE,21,0.619204582865392,FALSE
+"257","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7027889,FALSE,21,0.930127317331463,FALSE
+"258","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9424341,FALSE,21,0.599484513070925,FALSE
+"259","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6346005,FALSE,21,0.609611757526977,FALSE
+"260","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9628688,FALSE,21,0.619204582865392,FALSE
+"261","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8033907,FALSE,21,0.930127317331463,FALSE
+"262","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.070603,FALSE,21,0.599484513070925,FALSE
+"263","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6667774,FALSE,21,0.609611757526977,FALSE
+"264","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.015016,FALSE,21,0.619204582865392,FALSE
+"265","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8030661,FALSE,21,0.930127317331463,FALSE
+"266","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.065584,FALSE,21,0.599484513070925,FALSE
+"267","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6717887,FALSE,21,0.609611757526977,FALSE
+"268","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.019384,FALSE,21,0.619204582865392,FALSE
+"269","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8046254,FALSE,21,0.930127317331463,FALSE
+"270","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.058083,FALSE,21,0.599484513070925,FALSE
+"271","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7324065,FALSE,21,0.609611757526977,FALSE
+"272","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.082285,FALSE,21,0.619204582865392,FALSE
+"273","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.816496,FALSE,21,0.930127317331463,FALSE
+"274","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.114757,FALSE,21,0.599484513070925,FALSE
+"275","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.644856,FALSE,21,0.609611757526977,FALSE
+"276","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9932076,FALSE,21,0.619204582865392,FALSE
+"277","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7424262,FALSE,21,0.930127317331463,FALSE
+"278","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9792118,FALSE,21,0.599484513070925,FALSE
+"279","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6254655,FALSE,21,0.609611757526977,FALSE
+"280","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9558589,FALSE,21,0.619204582865392,FALSE
+"281","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7694307,FALSE,21,0.930127317331463,FALSE
+"282","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.003065,FALSE,21,0.599484513070925,FALSE
+"283","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.628507,FALSE,21,0.609611757526977,FALSE
+"284","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9595143,FALSE,21,0.619204582865392,FALSE
+"285","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8283818,FALSE,21,0.930127317331463,FALSE
+"286","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.092712,FALSE,21,0.599484513070925,FALSE
+"287","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7334538,FALSE,21,0.609611757526977,FALSE
+"288","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.107964,FALSE,21,0.619204582865392,FALSE
+"289","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7914919,FALSE,21,0.930127317331463,FALSE
+"290","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.057061,FALSE,21,0.599484513070925,FALSE
+"291","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6666083,FALSE,21,0.609611757526977,FALSE
+"292","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.021492,FALSE,21,0.619204582865392,FALSE
+"293","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8092533,FALSE,21,0.930127317331463,FALSE
+"294","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.097695,FALSE,21,0.599484513070925,FALSE
+"295","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6691148,FALSE,21,0.609611757526977,FALSE
+"296","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.038713,FALSE,21,0.619204582865392,FALSE
+"297","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7905332,FALSE,21,0.930127317331463,FALSE
+"298","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.044616,FALSE,21,0.599484513070925,FALSE
+"299","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6565244,FALSE,21,0.609611757526977,FALSE
+"300","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9957899,FALSE,21,0.619204582865392,FALSE
+"301","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8142529,FALSE,21,0.930127317331463,FALSE
+"302","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.073841,FALSE,21,0.599484513070925,FALSE
+"303","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6594914,FALSE,21,0.609611757526977,FALSE
+"304","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.016493,FALSE,21,0.619204582865392,FALSE
+"305","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.9477691,FALSE,21,0.930127317331463,FALSE
+"306","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.203217,FALSE,21,0.599484513070925,FALSE
+"307","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7548714,FALSE,21,0.609611757526977,FALSE
+"308","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.126171,FALSE,21,0.619204582865392,FALSE
+"309","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7690239,FALSE,21,0.930127317331463,FALSE
+"310","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.030568,FALSE,21,0.599484513070925,FALSE
+"311","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7285936,FALSE,21,0.609611757526977,FALSE
+"312","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.131467,FALSE,21,0.619204582865392,FALSE
+"313","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8196206,FALSE,21,0.930127317331463,FALSE
+"314","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.060703,FALSE,21,0.599484513070925,FALSE
+"315","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7018983,FALSE,21,0.609611757526977,FALSE
+"316","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.030468,FALSE,21,0.619204582865392,FALSE
+"317","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.743644,FALSE,21,0.930127317331463,FALSE
+"318","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9479071,FALSE,21,0.599484513070925,FALSE
+"319","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6208923,FALSE,21,0.609611757526977,FALSE
+"320","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",0.9352322,FALSE,21,0.619204582865392,FALSE
+"321","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7698619,FALSE,21,0.930127317331463,FALSE
+"322","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",0.9919838,FALSE,21,0.599484513070925,FALSE
+"323","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6640332,FALSE,21,0.609611757526977,FALSE
+"324","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.019601,FALSE,21,0.619204582865392,FALSE
+"325","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7705292,FALSE,21,0.930127317331463,FALSE
+"326","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.008547,FALSE,21,0.599484513070925,FALSE
+"327","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6879799,FALSE,21,0.609611757526977,FALSE
+"328","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.050112,FALSE,21,0.619204582865392,FALSE
+"329","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.8641285,FALSE,21,0.930127317331463,FALSE
+"330","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.121207,FALSE,21,0.599484513070925,FALSE
+"331","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.7115778,FALSE,21,0.609611757526977,FALSE
+"332","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.067508,FALSE,21,0.619204582865392,FALSE
+"333","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7742485,FALSE,21,0.930127317331463,FALSE
+"334","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.055846,FALSE,21,0.599484513070925,FALSE
+"335","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6613015,FALSE,21,0.609611757526977,FALSE
+"336","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.028706,FALSE,21,0.619204582865392,FALSE
+"337",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"ANNUAL
+CHLOR
+A
+MEDIAN
+mg m^-3",0.7805489,TRUE,0,NA,NA
+"338",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"ANNUAL
+CHLOR
+A
+RATIO
+ANOMALY
+",1.052433,TRUE,0,NA,NA
+"339",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"ANNUAL
+PPD
+MEDIAN
+gCarbon/m^2/Day",0.6827853,TRUE,0,NA,NA
+"340",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"ANNUAL
+PPD
+RATIO
+ANOMALY
+",1.063756,TRUE,0,NA,NA

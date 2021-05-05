@@ -71,10 +71,10 @@ if(eval_dat){
                 Var != "Time") %>%
   dplyr::select(-pval)
    } else "No statistically significant covariates"
-
 ```
 
 ```{r, eval = eval_dat}
+#eval_dat
 data <- abun_data
 type <- "abundance"
 
@@ -131,6 +131,7 @@ if(eval_dat){
 ```
 
 ```{r, eval = eval_dat}
+#eval_dat
 data <- recruit_data
 type <- "recruit"
 

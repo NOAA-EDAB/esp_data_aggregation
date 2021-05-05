@@ -1,0 +1,388 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",34.933333,FALSE,30,0.0462957140397687,TRUE
+"2","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",34.983333,FALSE,30,0.0462957140397687,TRUE
+"3","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",34.666667,FALSE,30,0.0462957140397687,TRUE
+"4","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",34.866667,FALSE,30,0.0462957140397687,TRUE
+"5","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.083333,FALSE,30,0.0462957140397687,TRUE
+"6","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",34.966667,FALSE,30,0.0462957140397687,TRUE
+"7","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.133333,FALSE,30,0.0462957140397687,TRUE
+"8","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.6,FALSE,30,0.0462957140397687,TRUE
+"9","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",34.933333,FALSE,30,0.0462957140397687,TRUE
+"10","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.083333,FALSE,30,0.0462957140397687,TRUE
+"11","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.102333,FALSE,30,0.0462957140397687,TRUE
+"12","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",34.983,FALSE,30,0.0462957140397687,TRUE
+"13","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.687698,FALSE,30,0.0462957140397687,TRUE
+"14","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.606667,FALSE,30,0.0462957140397687,TRUE
+"15","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.064167,FALSE,30,0.0462957140397687,TRUE
+"16","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.597438,FALSE,30,0.0462957140397687,TRUE
+"17","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",34.861168,FALSE,30,0.0462957140397687,TRUE
+"18","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.56205,FALSE,30,0.0462957140397687,TRUE
+"19","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.651408,FALSE,30,0.0462957140397687,TRUE
+"20","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.791457,FALSE,30,0.0462957140397687,TRUE
+"21","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.604422,FALSE,30,0.0462957140397687,TRUE
+"22","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.285772,FALSE,30,0.0462957140397687,TRUE
+"23","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.416227,FALSE,30,0.0462957140397687,TRUE
+"24","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.72411,FALSE,30,0.0462957140397687,TRUE
+"25","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.406342,FALSE,30,0.0462957140397687,TRUE
+"26","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.032833,FALSE,30,0.0462957140397687,TRUE
+"27","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.060817,FALSE,30,0.0462957140397687,TRUE
+"28","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.389428,FALSE,30,0.0462957140397687,TRUE
+"29","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.740993,FALSE,30,0.0462957140397687,TRUE
+"30","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","southern_latitude",35.699078,FALSE,30,0.0462957140397687,TRUE
+"31","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",34.933333,FALSE,30,0.0139187179385966,TRUE
+"32","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",34.983333,FALSE,30,0.0139187179385966,TRUE
+"33","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",34.666667,FALSE,30,0.0139187179385966,TRUE
+"34","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",34.866667,FALSE,30,0.0139187179385966,TRUE
+"35","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.083333,FALSE,30,0.0139187179385966,TRUE
+"36","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",34.966667,FALSE,30,0.0139187179385966,TRUE
+"37","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.133333,FALSE,30,0.0139187179385966,TRUE
+"38","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.6,FALSE,30,0.0139187179385966,TRUE
+"39","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",34.933333,FALSE,30,0.0139187179385966,TRUE
+"40","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.083333,FALSE,30,0.0139187179385966,TRUE
+"41","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.102333,FALSE,30,0.0139187179385966,TRUE
+"42","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",34.983,FALSE,30,0.0139187179385966,TRUE
+"43","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.687698,FALSE,30,0.0139187179385966,TRUE
+"44","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.606667,FALSE,30,0.0139187179385966,TRUE
+"45","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.064167,FALSE,30,0.0139187179385966,TRUE
+"46","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.597438,FALSE,30,0.0139187179385966,TRUE
+"47","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",34.861168,FALSE,30,0.0139187179385966,TRUE
+"48","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.56205,FALSE,30,0.0139187179385966,TRUE
+"49","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.651408,FALSE,30,0.0139187179385966,TRUE
+"50","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.791457,FALSE,30,0.0139187179385966,TRUE
+"51","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.604422,FALSE,30,0.0139187179385966,TRUE
+"52","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.285772,FALSE,30,0.0139187179385966,TRUE
+"53","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.416227,FALSE,30,0.0139187179385966,TRUE
+"54","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.72411,FALSE,30,0.0139187179385966,TRUE
+"55","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.406342,FALSE,30,0.0139187179385966,TRUE
+"56","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.032833,FALSE,30,0.0139187179385966,TRUE
+"57","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.060817,FALSE,30,0.0139187179385966,TRUE
+"58","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.389428,FALSE,30,0.0139187179385966,TRUE
+"59","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.740993,FALSE,30,0.0139187179385966,TRUE
+"60","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","southern_latitude",35.699078,FALSE,30,0.0139187179385966,TRUE
+"61","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",34.933333,FALSE,30,0.110505026086356,FALSE
+"62","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",34.983333,FALSE,30,0.110505026086356,FALSE
+"63","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",34.666667,FALSE,30,0.110505026086356,FALSE
+"64","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",34.866667,FALSE,30,0.110505026086356,FALSE
+"65","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.083333,FALSE,30,0.110505026086356,FALSE
+"66","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",34.966667,FALSE,30,0.110505026086356,FALSE
+"67","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.133333,FALSE,30,0.110505026086356,FALSE
+"68","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.6,FALSE,30,0.110505026086356,FALSE
+"69","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",34.933333,FALSE,30,0.110505026086356,FALSE
+"70","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.083333,FALSE,30,0.110505026086356,FALSE
+"71","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.102333,FALSE,30,0.110505026086356,FALSE
+"72","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",34.983,FALSE,30,0.110505026086356,FALSE
+"73","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.687698,FALSE,30,0.110505026086356,FALSE
+"74","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.606667,FALSE,30,0.110505026086356,FALSE
+"75","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.064167,FALSE,30,0.110505026086356,FALSE
+"76","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.597438,FALSE,30,0.110505026086356,FALSE
+"77","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",34.861168,FALSE,30,0.110505026086356,FALSE
+"78","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.56205,FALSE,30,0.110505026086356,FALSE
+"79","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.651408,FALSE,30,0.110505026086356,FALSE
+"80","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.791457,FALSE,30,0.110505026086356,FALSE
+"81","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.604422,FALSE,30,0.110505026086356,FALSE
+"82","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.285772,FALSE,30,0.110505026086356,FALSE
+"83","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.416227,FALSE,30,0.110505026086356,FALSE
+"84","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.72411,FALSE,30,0.110505026086356,FALSE
+"85","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.406342,FALSE,30,0.110505026086356,FALSE
+"86","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.032833,FALSE,30,0.110505026086356,FALSE
+"87","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.060817,FALSE,30,0.110505026086356,FALSE
+"88","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.389428,FALSE,30,0.110505026086356,FALSE
+"89","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.740993,FALSE,30,0.110505026086356,FALSE
+"90","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","southern_latitude",35.699078,FALSE,30,0.110505026086356,FALSE
+"91","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",34.933333,FALSE,30,0.10193031230367,FALSE
+"92","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",34.983333,FALSE,30,0.10193031230367,FALSE
+"93","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",34.666667,FALSE,30,0.10193031230367,FALSE
+"94","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",34.866667,FALSE,30,0.10193031230367,FALSE
+"95","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.083333,FALSE,30,0.10193031230367,FALSE
+"96","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",34.966667,FALSE,30,0.10193031230367,FALSE
+"97","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.133333,FALSE,30,0.10193031230367,FALSE
+"98","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.6,FALSE,30,0.10193031230367,FALSE
+"99","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",34.933333,FALSE,30,0.10193031230367,FALSE
+"100","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.083333,FALSE,30,0.10193031230367,FALSE
+"101","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.102333,FALSE,30,0.10193031230367,FALSE
+"102","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",34.983,FALSE,30,0.10193031230367,FALSE
+"103","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.687698,FALSE,30,0.10193031230367,FALSE
+"104","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.606667,FALSE,30,0.10193031230367,FALSE
+"105","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.064167,FALSE,30,0.10193031230367,FALSE
+"106","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.597438,FALSE,30,0.10193031230367,FALSE
+"107","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",34.861168,FALSE,30,0.10193031230367,FALSE
+"108","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.56205,FALSE,30,0.10193031230367,FALSE
+"109","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.651408,FALSE,30,0.10193031230367,FALSE
+"110","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.791457,FALSE,30,0.10193031230367,FALSE
+"111","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.604422,FALSE,30,0.10193031230367,FALSE
+"112","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.285772,FALSE,30,0.10193031230367,FALSE
+"113","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.416227,FALSE,30,0.10193031230367,FALSE
+"114","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.72411,FALSE,30,0.10193031230367,FALSE
+"115","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.406342,FALSE,30,0.10193031230367,FALSE
+"116","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.032833,FALSE,30,0.10193031230367,FALSE
+"117","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.060817,FALSE,30,0.10193031230367,FALSE
+"118","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.389428,FALSE,30,0.10193031230367,FALSE
+"119","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.740993,FALSE,30,0.10193031230367,FALSE
+"120","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","southern_latitude",35.699078,FALSE,30,0.10193031230367,FALSE
+"121",NA,NA,1963,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",39.466667,TRUE,0,NA,NA
+"122",NA,NA,1964,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",39.533333,TRUE,0,NA,NA
+"123",NA,NA,1965,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",40.6,TRUE,0,NA,NA
+"124",NA,NA,1967,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.883333,TRUE,0,NA,NA
+"125",NA,NA,1968,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.633333,TRUE,0,NA,NA
+"126",NA,NA,1969,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.666667,TRUE,0,NA,NA
+"127",NA,NA,1970,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.75,TRUE,0,NA,NA
+"128",NA,NA,1971,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.766667,TRUE,0,NA,NA
+"129",NA,NA,1972,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",29.45,TRUE,0,NA,NA
+"130",NA,NA,1973,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",34.033333,TRUE,0,NA,NA
+"131",NA,NA,1974,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",34.066667,TRUE,0,NA,NA
+"132",NA,NA,1975,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.35,TRUE,0,NA,NA
+"133",NA,NA,1976,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.55,TRUE,0,NA,NA
+"134",NA,NA,1977,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.233333,TRUE,0,NA,NA
+"135",NA,NA,1978,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",33.166667,TRUE,0,NA,NA
+"136",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",33.483333,TRUE,0,NA,NA
+"137",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",33.183333,TRUE,0,NA,NA
+"138",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",33.35,TRUE,0,NA,NA
+"139",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",33.216667,TRUE,0,NA,NA
+"140",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",33.433333,TRUE,0,NA,NA
+"141",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",33.833333,TRUE,0,NA,NA
+"142",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",34.1,TRUE,0,NA,NA
+"143",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.1,TRUE,0,NA,NA
+"144",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.333333,TRUE,0,NA,NA
+"145",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.066667,TRUE,0,NA,NA
+"146",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.05337,TRUE,0,NA,NA
+"147",NA,NA,2020,NA,NA,NA,NA,NA,NA,NA,"southern_latitude",35.503667,TRUE,0,NA,NA

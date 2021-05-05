@@ -1,0 +1,1459 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.0358936484966918,TRUE
+"2","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.721586796617752,FALSE
+"3","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",NA,TRUE,26,0.774294846648449,FALSE
+"4","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.0358936484966918,TRUE
+"5","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.721586796617752,FALSE
+"6","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",NA,TRUE,26,0.774294846648449,FALSE
+"7","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.8111129257804,FALSE,26,0.0358936484966918,TRUE
+"8","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",2.31993872819508,FALSE,26,0.721586796617752,FALSE
+"9","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.603974710766557,FALSE,26,0.774294846648449,FALSE
+"10","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.0358936484966918,TRUE
+"11","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.721586796617752,FALSE
+"12","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",NA,TRUE,26,0.774294846648449,FALSE
+"13","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",4.22040937499839,FALSE,26,0.0358936484966918,TRUE
+"14","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",2.99248383154796,FALSE,26,0.721586796617752,FALSE
+"15","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",2.08544217942584,FALSE,26,0.774294846648449,FALSE
+"16","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",4.19604880787162,FALSE,26,0.0358936484966918,TRUE
+"17","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.3397135728418,FALSE,26,0.721586796617752,FALSE
+"18","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",1.08564397779159,FALSE,26,0.774294846648449,FALSE
+"19","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.73995910460359,FALSE,26,0.0358936484966918,TRUE
+"20","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.376827830515247,FALSE,26,0.721586796617752,FALSE
+"21","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.36739712071942,FALSE,26,0.774294846648449,FALSE
+"22","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",4.50835507060505,FALSE,26,0.0358936484966918,TRUE
+"23","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.3001427026661,FALSE,26,0.721586796617752,FALSE
+"24","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",1.32677928327556,FALSE,26,0.774294846648449,FALSE
+"25","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",4.11146998940881,FALSE,26,0.0358936484966918,TRUE
+"26","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.954678272752876,FALSE,26,0.721586796617752,FALSE
+"27","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.798478699408379,FALSE,26,0.774294846648449,FALSE
+"28","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",4.5730122171365,FALSE,26,0.0358936484966918,TRUE
+"29","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",2.74577746025957,FALSE,26,0.721586796617752,FALSE
+"30","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.974986298679153,FALSE,26,0.774294846648449,FALSE
+"31","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.84066183487544,FALSE,26,0.0358936484966918,TRUE
+"32","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.237978220852582,FALSE,26,0.721586796617752,FALSE
+"33","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.774294846648449,FALSE
+"34","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",4.35217883686417,FALSE,26,0.0358936484966918,TRUE
+"35","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.677649269219013,FALSE,26,0.721586796617752,FALSE
+"36","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.884118721953052,FALSE,26,0.774294846648449,FALSE
+"37","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.66489535992234,FALSE,26,0.0358936484966918,TRUE
+"38","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.20485484888924,FALSE,26,0.721586796617752,FALSE
+"39","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.620466289956523,FALSE,26,0.774294846648449,FALSE
+"40","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.67441992767423,FALSE,26,0.0358936484966918,TRUE
+"41","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.700370009609464,FALSE,26,0.721586796617752,FALSE
+"42","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.774294846648449,FALSE
+"43","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.58108452656876,FALSE,26,0.0358936484966918,TRUE
+"44","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.81502568566847,FALSE,26,0.721586796617752,FALSE
+"45","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.776070216349507,FALSE,26,0.774294846648449,FALSE
+"46","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.4595315188799,FALSE,26,0.0358936484966918,TRUE
+"47","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.25948445127887,FALSE,26,0.721586796617752,FALSE
+"48","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.774294846648449,FALSE
+"49","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.33775787599385,FALSE,26,0.0358936484966918,TRUE
+"50","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.695667727633217,FALSE,26,0.721586796617752,FALSE
+"51","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.774294846648449,FALSE
+"52","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.96296225044632,FALSE,26,0.0358936484966918,TRUE
+"53","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.951295259607084,FALSE,26,0.721586796617752,FALSE
+"54","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.322488931706359,FALSE,26,0.774294846648449,FALSE
+"55","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.58848006910859,FALSE,26,0.0358936484966918,TRUE
+"56","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.39226596332537,FALSE,26,0.721586796617752,FALSE
+"57","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.50559525264897,FALSE,26,0.774294846648449,FALSE
+"58","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",4.09977155775385,FALSE,26,0.0358936484966918,TRUE
+"59","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.01581786053243,FALSE,26,0.721586796617752,FALSE
+"60","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",1.03784054668542,FALSE,26,0.774294846648449,FALSE
+"61","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.92297916285143,FALSE,26,0.0358936484966918,TRUE
+"62","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.765152684891682,FALSE,26,0.721586796617752,FALSE
+"63","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.774294846648449,FALSE
+"64","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.96182934601483,FALSE,26,0.0358936484966918,TRUE
+"65","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.02789823979125,FALSE,26,0.721586796617752,FALSE
+"66","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.774294846648449,FALSE
+"67","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",4.05219588071466,FALSE,26,0.0358936484966918,TRUE
+"68","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.618254580912264,FALSE,26,0.721586796617752,FALSE
+"69","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.774294846648449,FALSE
+"70","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.72089007445542,FALSE,26,0.0358936484966918,TRUE
+"71","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.57707579946908,FALSE,26,0.721586796617752,FALSE
+"72","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.371093691586017,FALSE,26,0.774294846648449,FALSE
+"73","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",4.0266497795913,FALSE,26,0.0358936484966918,TRUE
+"74","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.50900909121602,FALSE,26,0.721586796617752,FALSE
+"75","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.77019846259188,FALSE,26,0.774294846648449,FALSE
+"76","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.75250877944748,FALSE,26,0.0358936484966918,TRUE
+"77","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.64400952340961,FALSE,26,0.721586796617752,FALSE
+"78","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.70329313069333,FALSE,26,0.774294846648449,FALSE
+"79","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.42962773379564,FALSE,26,0.0358936484966918,TRUE
+"80","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.23721000943905,FALSE,26,0.721586796617752,FALSE
+"81","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.84201615555639,FALSE,26,0.774294846648449,FALSE
+"82","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.46601869264712,FALSE,26,0.0358936484966918,TRUE
+"83","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.23188126175033,FALSE,26,0.721586796617752,FALSE
+"84","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.595989821006827,FALSE,26,0.774294846648449,FALSE
+"85","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","centropages zoo fall
+log N m^-3",3.62969349619062,FALSE,26,0.0358936484966918,TRUE
+"86","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.31620393259252,FALSE,26,0.721586796617752,FALSE
+"87","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","temora zoo fall
+log N m^-3",0.259903763221039,FALSE,26,0.774294846648449,FALSE
+"88","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.021670884478759,TRUE
+"89","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.0153964502735424,TRUE
+"90","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",NA,TRUE,26,0.0335840351717989,TRUE
+"91","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.021670884478759,TRUE
+"92","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.0153964502735424,TRUE
+"93","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",NA,TRUE,26,0.0335840351717989,TRUE
+"94","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.8111129257804,FALSE,26,0.021670884478759,TRUE
+"95","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",2.31993872819508,FALSE,26,0.0153964502735424,TRUE
+"96","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.603974710766557,FALSE,26,0.0335840351717989,TRUE
+"97","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.021670884478759,TRUE
+"98","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.0153964502735424,TRUE
+"99","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",NA,TRUE,26,0.0335840351717989,TRUE
+"100","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",4.22040937499839,FALSE,26,0.021670884478759,TRUE
+"101","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",2.99248383154796,FALSE,26,0.0153964502735424,TRUE
+"102","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",2.08544217942584,FALSE,26,0.0335840351717989,TRUE
+"103","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",4.19604880787162,FALSE,26,0.021670884478759,TRUE
+"104","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.3397135728418,FALSE,26,0.0153964502735424,TRUE
+"105","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",1.08564397779159,FALSE,26,0.0335840351717989,TRUE
+"106","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.73995910460359,FALSE,26,0.021670884478759,TRUE
+"107","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.376827830515247,FALSE,26,0.0153964502735424,TRUE
+"108","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.36739712071942,FALSE,26,0.0335840351717989,TRUE
+"109","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",4.50835507060505,FALSE,26,0.021670884478759,TRUE
+"110","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.3001427026661,FALSE,26,0.0153964502735424,TRUE
+"111","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",1.32677928327556,FALSE,26,0.0335840351717989,TRUE
+"112","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",4.11146998940881,FALSE,26,0.021670884478759,TRUE
+"113","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.954678272752876,FALSE,26,0.0153964502735424,TRUE
+"114","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.798478699408379,FALSE,26,0.0335840351717989,TRUE
+"115","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",4.5730122171365,FALSE,26,0.021670884478759,TRUE
+"116","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",2.74577746025957,FALSE,26,0.0153964502735424,TRUE
+"117","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.974986298679153,FALSE,26,0.0335840351717989,TRUE
+"118","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.84066183487544,FALSE,26,0.021670884478759,TRUE
+"119","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.237978220852582,FALSE,26,0.0153964502735424,TRUE
+"120","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0,FALSE,26,0.0335840351717989,TRUE
+"121","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",4.35217883686417,FALSE,26,0.021670884478759,TRUE
+"122","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.677649269219013,FALSE,26,0.0153964502735424,TRUE
+"123","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.884118721953052,FALSE,26,0.0335840351717989,TRUE
+"124","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.66489535992234,FALSE,26,0.021670884478759,TRUE
+"125","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.20485484888924,FALSE,26,0.0153964502735424,TRUE
+"126","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.620466289956523,FALSE,26,0.0335840351717989,TRUE
+"127","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.67441992767423,FALSE,26,0.021670884478759,TRUE
+"128","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.700370009609464,FALSE,26,0.0153964502735424,TRUE
+"129","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0,FALSE,26,0.0335840351717989,TRUE
+"130","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.58108452656876,FALSE,26,0.021670884478759,TRUE
+"131","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.81502568566847,FALSE,26,0.0153964502735424,TRUE
+"132","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.776070216349507,FALSE,26,0.0335840351717989,TRUE
+"133","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.4595315188799,FALSE,26,0.021670884478759,TRUE
+"134","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.25948445127887,FALSE,26,0.0153964502735424,TRUE
+"135","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0,FALSE,26,0.0335840351717989,TRUE
+"136","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.33775787599385,FALSE,26,0.021670884478759,TRUE
+"137","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.695667727633217,FALSE,26,0.0153964502735424,TRUE
+"138","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0,FALSE,26,0.0335840351717989,TRUE
+"139","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.96296225044632,FALSE,26,0.021670884478759,TRUE
+"140","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.951295259607084,FALSE,26,0.0153964502735424,TRUE
+"141","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.322488931706359,FALSE,26,0.0335840351717989,TRUE
+"142","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.58848006910859,FALSE,26,0.021670884478759,TRUE
+"143","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.39226596332537,FALSE,26,0.0153964502735424,TRUE
+"144","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.50559525264897,FALSE,26,0.0335840351717989,TRUE
+"145","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",4.09977155775385,FALSE,26,0.021670884478759,TRUE
+"146","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.01581786053243,FALSE,26,0.0153964502735424,TRUE
+"147","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",1.03784054668542,FALSE,26,0.0335840351717989,TRUE
+"148","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.92297916285143,FALSE,26,0.021670884478759,TRUE
+"149","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.765152684891682,FALSE,26,0.0153964502735424,TRUE
+"150","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0,FALSE,26,0.0335840351717989,TRUE
+"151","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.96182934601483,FALSE,26,0.021670884478759,TRUE
+"152","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.02789823979125,FALSE,26,0.0153964502735424,TRUE
+"153","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0,FALSE,26,0.0335840351717989,TRUE
+"154","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",4.05219588071466,FALSE,26,0.021670884478759,TRUE
+"155","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.618254580912264,FALSE,26,0.0153964502735424,TRUE
+"156","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0,FALSE,26,0.0335840351717989,TRUE
+"157","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.72089007445542,FALSE,26,0.021670884478759,TRUE
+"158","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.57707579946908,FALSE,26,0.0153964502735424,TRUE
+"159","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.371093691586017,FALSE,26,0.0335840351717989,TRUE
+"160","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",4.0266497795913,FALSE,26,0.021670884478759,TRUE
+"161","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.50900909121602,FALSE,26,0.0153964502735424,TRUE
+"162","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.77019846259188,FALSE,26,0.0335840351717989,TRUE
+"163","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.75250877944748,FALSE,26,0.021670884478759,TRUE
+"164","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",0.64400952340961,FALSE,26,0.0153964502735424,TRUE
+"165","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.70329313069333,FALSE,26,0.0335840351717989,TRUE
+"166","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.42962773379564,FALSE,26,0.021670884478759,TRUE
+"167","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.23721000943905,FALSE,26,0.0153964502735424,TRUE
+"168","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.84201615555639,FALSE,26,0.0335840351717989,TRUE
+"169","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.46601869264712,FALSE,26,0.021670884478759,TRUE
+"170","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.23188126175033,FALSE,26,0.0153964502735424,TRUE
+"171","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.595989821006827,FALSE,26,0.0335840351717989,TRUE
+"172","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","centropages zoo fall
+log N m^-3",3.62969349619062,FALSE,26,0.021670884478759,TRUE
+"173","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","pseudocalanus zoo fall
+log N m^-3",1.31620393259252,FALSE,26,0.0153964502735424,TRUE
+"174","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","temora zoo fall
+log N m^-3",0.259903763221039,FALSE,26,0.0335840351717989,TRUE
+"175","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.561967068201146,FALSE
+"176","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.257469825264145,FALSE
+"177","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",NA,TRUE,26,0.575667310085534,FALSE
+"178","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.561967068201146,FALSE
+"179","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.257469825264145,FALSE
+"180","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",NA,TRUE,26,0.575667310085534,FALSE
+"181","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.8111129257804,FALSE,26,0.561967068201146,FALSE
+"182","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",2.31993872819508,FALSE,26,0.257469825264145,FALSE
+"183","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.603974710766557,FALSE,26,0.575667310085534,FALSE
+"184","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.561967068201146,FALSE
+"185","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.257469825264145,FALSE
+"186","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",NA,TRUE,26,0.575667310085534,FALSE
+"187","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",4.22040937499839,FALSE,26,0.561967068201146,FALSE
+"188","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",2.99248383154796,FALSE,26,0.257469825264145,FALSE
+"189","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",2.08544217942584,FALSE,26,0.575667310085534,FALSE
+"190","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",4.19604880787162,FALSE,26,0.561967068201146,FALSE
+"191","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.3397135728418,FALSE,26,0.257469825264145,FALSE
+"192","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",1.08564397779159,FALSE,26,0.575667310085534,FALSE
+"193","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.73995910460359,FALSE,26,0.561967068201146,FALSE
+"194","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.376827830515247,FALSE,26,0.257469825264145,FALSE
+"195","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.36739712071942,FALSE,26,0.575667310085534,FALSE
+"196","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",4.50835507060505,FALSE,26,0.561967068201146,FALSE
+"197","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.3001427026661,FALSE,26,0.257469825264145,FALSE
+"198","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",1.32677928327556,FALSE,26,0.575667310085534,FALSE
+"199","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",4.11146998940881,FALSE,26,0.561967068201146,FALSE
+"200","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.954678272752876,FALSE,26,0.257469825264145,FALSE
+"201","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.798478699408379,FALSE,26,0.575667310085534,FALSE
+"202","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",4.5730122171365,FALSE,26,0.561967068201146,FALSE
+"203","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",2.74577746025957,FALSE,26,0.257469825264145,FALSE
+"204","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.974986298679153,FALSE,26,0.575667310085534,FALSE
+"205","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.84066183487544,FALSE,26,0.561967068201146,FALSE
+"206","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.237978220852582,FALSE,26,0.257469825264145,FALSE
+"207","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0,FALSE,26,0.575667310085534,FALSE
+"208","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",4.35217883686417,FALSE,26,0.561967068201146,FALSE
+"209","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.677649269219013,FALSE,26,0.257469825264145,FALSE
+"210","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.884118721953052,FALSE,26,0.575667310085534,FALSE
+"211","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.66489535992234,FALSE,26,0.561967068201146,FALSE
+"212","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.20485484888924,FALSE,26,0.257469825264145,FALSE
+"213","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.620466289956523,FALSE,26,0.575667310085534,FALSE
+"214","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.67441992767423,FALSE,26,0.561967068201146,FALSE
+"215","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.700370009609464,FALSE,26,0.257469825264145,FALSE
+"216","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0,FALSE,26,0.575667310085534,FALSE
+"217","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.58108452656876,FALSE,26,0.561967068201146,FALSE
+"218","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.81502568566847,FALSE,26,0.257469825264145,FALSE
+"219","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.776070216349507,FALSE,26,0.575667310085534,FALSE
+"220","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.4595315188799,FALSE,26,0.561967068201146,FALSE
+"221","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.25948445127887,FALSE,26,0.257469825264145,FALSE
+"222","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0,FALSE,26,0.575667310085534,FALSE
+"223","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.33775787599385,FALSE,26,0.561967068201146,FALSE
+"224","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.695667727633217,FALSE,26,0.257469825264145,FALSE
+"225","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0,FALSE,26,0.575667310085534,FALSE
+"226","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.96296225044632,FALSE,26,0.561967068201146,FALSE
+"227","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.951295259607084,FALSE,26,0.257469825264145,FALSE
+"228","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.322488931706359,FALSE,26,0.575667310085534,FALSE
+"229","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.58848006910859,FALSE,26,0.561967068201146,FALSE
+"230","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.39226596332537,FALSE,26,0.257469825264145,FALSE
+"231","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.50559525264897,FALSE,26,0.575667310085534,FALSE
+"232","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",4.09977155775385,FALSE,26,0.561967068201146,FALSE
+"233","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.01581786053243,FALSE,26,0.257469825264145,FALSE
+"234","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",1.03784054668542,FALSE,26,0.575667310085534,FALSE
+"235","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.92297916285143,FALSE,26,0.561967068201146,FALSE
+"236","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.765152684891682,FALSE,26,0.257469825264145,FALSE
+"237","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0,FALSE,26,0.575667310085534,FALSE
+"238","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.96182934601483,FALSE,26,0.561967068201146,FALSE
+"239","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.02789823979125,FALSE,26,0.257469825264145,FALSE
+"240","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0,FALSE,26,0.575667310085534,FALSE
+"241","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",4.05219588071466,FALSE,26,0.561967068201146,FALSE
+"242","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.618254580912264,FALSE,26,0.257469825264145,FALSE
+"243","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0,FALSE,26,0.575667310085534,FALSE
+"244","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.72089007445542,FALSE,26,0.561967068201146,FALSE
+"245","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.57707579946908,FALSE,26,0.257469825264145,FALSE
+"246","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.371093691586017,FALSE,26,0.575667310085534,FALSE
+"247","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",4.0266497795913,FALSE,26,0.561967068201146,FALSE
+"248","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.50900909121602,FALSE,26,0.257469825264145,FALSE
+"249","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.77019846259188,FALSE,26,0.575667310085534,FALSE
+"250","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.75250877944748,FALSE,26,0.561967068201146,FALSE
+"251","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",0.64400952340961,FALSE,26,0.257469825264145,FALSE
+"252","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.70329313069333,FALSE,26,0.575667310085534,FALSE
+"253","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.42962773379564,FALSE,26,0.561967068201146,FALSE
+"254","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.23721000943905,FALSE,26,0.257469825264145,FALSE
+"255","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.84201615555639,FALSE,26,0.575667310085534,FALSE
+"256","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.46601869264712,FALSE,26,0.561967068201146,FALSE
+"257","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.23188126175033,FALSE,26,0.257469825264145,FALSE
+"258","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.595989821006827,FALSE,26,0.575667310085534,FALSE
+"259","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","centropages zoo fall
+log N m^-3",3.62969349619062,FALSE,26,0.561967068201146,FALSE
+"260","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","pseudocalanus zoo fall
+log N m^-3",1.31620393259252,FALSE,26,0.257469825264145,FALSE
+"261","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","temora zoo fall
+log N m^-3",0.259903763221039,FALSE,26,0.575667310085534,FALSE
+"262","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.0302054859856341,TRUE
+"263","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.399954346564728,FALSE
+"264","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",NA,TRUE,26,0.558421332687504,FALSE
+"265","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.0302054859856341,TRUE
+"266","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.399954346564728,FALSE
+"267","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",NA,TRUE,26,0.558421332687504,FALSE
+"268","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.8111129257804,FALSE,26,0.0302054859856341,TRUE
+"269","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",2.31993872819508,FALSE,26,0.399954346564728,FALSE
+"270","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.603974710766557,FALSE,26,0.558421332687504,FALSE
+"271","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",NA,TRUE,26,0.0302054859856341,TRUE
+"272","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",NA,TRUE,26,0.399954346564728,FALSE
+"273","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",NA,TRUE,26,0.558421332687504,FALSE
+"274","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",4.22040937499839,FALSE,26,0.0302054859856341,TRUE
+"275","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",2.99248383154796,FALSE,26,0.399954346564728,FALSE
+"276","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",2.08544217942584,FALSE,26,0.558421332687504,FALSE
+"277","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",4.19604880787162,FALSE,26,0.0302054859856341,TRUE
+"278","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.3397135728418,FALSE,26,0.399954346564728,FALSE
+"279","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",1.08564397779159,FALSE,26,0.558421332687504,FALSE
+"280","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.73995910460359,FALSE,26,0.0302054859856341,TRUE
+"281","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.376827830515247,FALSE,26,0.399954346564728,FALSE
+"282","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.36739712071942,FALSE,26,0.558421332687504,FALSE
+"283","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",4.50835507060505,FALSE,26,0.0302054859856341,TRUE
+"284","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.3001427026661,FALSE,26,0.399954346564728,FALSE
+"285","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",1.32677928327556,FALSE,26,0.558421332687504,FALSE
+"286","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",4.11146998940881,FALSE,26,0.0302054859856341,TRUE
+"287","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.954678272752876,FALSE,26,0.399954346564728,FALSE
+"288","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.798478699408379,FALSE,26,0.558421332687504,FALSE
+"289","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",4.5730122171365,FALSE,26,0.0302054859856341,TRUE
+"290","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",2.74577746025957,FALSE,26,0.399954346564728,FALSE
+"291","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.974986298679153,FALSE,26,0.558421332687504,FALSE
+"292","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.84066183487544,FALSE,26,0.0302054859856341,TRUE
+"293","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.237978220852582,FALSE,26,0.399954346564728,FALSE
+"294","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.558421332687504,FALSE
+"295","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",4.35217883686417,FALSE,26,0.0302054859856341,TRUE
+"296","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.677649269219013,FALSE,26,0.399954346564728,FALSE
+"297","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.884118721953052,FALSE,26,0.558421332687504,FALSE
+"298","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.66489535992234,FALSE,26,0.0302054859856341,TRUE
+"299","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.20485484888924,FALSE,26,0.399954346564728,FALSE
+"300","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.620466289956523,FALSE,26,0.558421332687504,FALSE
+"301","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.67441992767423,FALSE,26,0.0302054859856341,TRUE
+"302","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.700370009609464,FALSE,26,0.399954346564728,FALSE
+"303","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.558421332687504,FALSE
+"304","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.58108452656876,FALSE,26,0.0302054859856341,TRUE
+"305","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.81502568566847,FALSE,26,0.399954346564728,FALSE
+"306","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.776070216349507,FALSE,26,0.558421332687504,FALSE
+"307","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.4595315188799,FALSE,26,0.0302054859856341,TRUE
+"308","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.25948445127887,FALSE,26,0.399954346564728,FALSE
+"309","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.558421332687504,FALSE
+"310","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.33775787599385,FALSE,26,0.0302054859856341,TRUE
+"311","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.695667727633217,FALSE,26,0.399954346564728,FALSE
+"312","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.558421332687504,FALSE
+"313","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.96296225044632,FALSE,26,0.0302054859856341,TRUE
+"314","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.951295259607084,FALSE,26,0.399954346564728,FALSE
+"315","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.322488931706359,FALSE,26,0.558421332687504,FALSE
+"316","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.58848006910859,FALSE,26,0.0302054859856341,TRUE
+"317","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.39226596332537,FALSE,26,0.399954346564728,FALSE
+"318","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.50559525264897,FALSE,26,0.558421332687504,FALSE
+"319","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",4.09977155775385,FALSE,26,0.0302054859856341,TRUE
+"320","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.01581786053243,FALSE,26,0.399954346564728,FALSE
+"321","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",1.03784054668542,FALSE,26,0.558421332687504,FALSE
+"322","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.92297916285143,FALSE,26,0.0302054859856341,TRUE
+"323","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.765152684891682,FALSE,26,0.399954346564728,FALSE
+"324","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.558421332687504,FALSE
+"325","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.96182934601483,FALSE,26,0.0302054859856341,TRUE
+"326","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.02789823979125,FALSE,26,0.399954346564728,FALSE
+"327","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.558421332687504,FALSE
+"328","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",4.05219588071466,FALSE,26,0.0302054859856341,TRUE
+"329","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.618254580912264,FALSE,26,0.399954346564728,FALSE
+"330","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0,FALSE,26,0.558421332687504,FALSE
+"331","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.72089007445542,FALSE,26,0.0302054859856341,TRUE
+"332","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.57707579946908,FALSE,26,0.399954346564728,FALSE
+"333","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.371093691586017,FALSE,26,0.558421332687504,FALSE
+"334","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",4.0266497795913,FALSE,26,0.0302054859856341,TRUE
+"335","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.50900909121602,FALSE,26,0.399954346564728,FALSE
+"336","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.77019846259188,FALSE,26,0.558421332687504,FALSE
+"337","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.75250877944748,FALSE,26,0.0302054859856341,TRUE
+"338","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",0.64400952340961,FALSE,26,0.399954346564728,FALSE
+"339","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.70329313069333,FALSE,26,0.558421332687504,FALSE
+"340","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.42962773379564,FALSE,26,0.0302054859856341,TRUE
+"341","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.23721000943905,FALSE,26,0.399954346564728,FALSE
+"342","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.84201615555639,FALSE,26,0.558421332687504,FALSE
+"343","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.46601869264712,FALSE,26,0.0302054859856341,TRUE
+"344","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.23188126175033,FALSE,26,0.399954346564728,FALSE
+"345","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.595989821006827,FALSE,26,0.558421332687504,FALSE
+"346","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","centropages zoo fall
+log N m^-3",3.62969349619062,FALSE,26,0.0302054859856341,TRUE
+"347","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","pseudocalanus zoo fall
+log N m^-3",1.31620393259252,FALSE,26,0.399954346564728,FALSE
+"348","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","temora zoo fall
+log N m^-3",0.259903763221039,FALSE,26,0.558421332687504,FALSE
+"349",NA,NA,1977,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",4.21556862099328,TRUE,0,NA,NA
+"350",NA,NA,1978,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",4.70079153740346,TRUE,0,NA,NA
+"351",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",3.6817194910915,TRUE,0,NA,NA
+"352",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",4.23781042487507,TRUE,0,NA,NA
+"353",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",3.54927299918478,TRUE,0,NA,NA
+"354",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",4.1315852528787,TRUE,0,NA,NA
+"355",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",4.34440474173199,TRUE,0,NA,NA
+"356",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",4.21487054205668,TRUE,0,NA,NA
+"357",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",3.7351635169753,TRUE,0,NA,NA
+"358",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",3.73211245931817,TRUE,0,NA,NA
+"359",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",3.86023583064467,TRUE,0,NA,NA
+"360",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"centropages zoo fall
+log N m^-3",3.68004150686352,TRUE,0,NA,NA
+"361",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"pseudocalanus zoo fall
+log N m^-3",1.40654321753544,TRUE,0,NA,NA
+"362",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"pseudocalanus zoo fall
+log N m^-3",1.77007469144901,TRUE,0,NA,NA
+"363",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"pseudocalanus zoo fall
+log N m^-3",1.70377475816693,TRUE,0,NA,NA
+"364",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"pseudocalanus zoo fall
+log N m^-3",1.61166686110386,TRUE,0,NA,NA
+"365",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"pseudocalanus zoo fall
+log N m^-3",1.43401091408686,TRUE,0,NA,NA
+"366",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"pseudocalanus zoo fall
+log N m^-3",1.61056377498395,TRUE,0,NA,NA
+"367",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"pseudocalanus zoo fall
+log N m^-3",1.62176446569399,TRUE,0,NA,NA
+"368",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"pseudocalanus zoo fall
+log N m^-3",1.74243262533253,TRUE,0,NA,NA
+"369",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"pseudocalanus zoo fall
+log N m^-3",2.67301881204497,TRUE,0,NA,NA
+"370",NA,NA,1977,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",1.01379635651772,TRUE,0,NA,NA
+"371",NA,NA,1978,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",1.44909813172392,TRUE,0,NA,NA
+"372",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",1.20993728848391,TRUE,0,NA,NA
+"373",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",2.36811275770245,TRUE,0,NA,NA
+"374",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",1.09899017872993,TRUE,0,NA,NA
+"375",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",1.15377587158077,TRUE,0,NA,NA
+"376",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",0.834630458208416,TRUE,0,NA,NA
+"377",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",1.21091251448081,TRUE,0,NA,NA
+"378",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",1.2769751589684,TRUE,0,NA,NA
+"379",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",0.717598923338822,TRUE,0,NA,NA
+"380",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",0.310938276338841,TRUE,0,NA,NA
+"381",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"temora zoo fall
+log N m^-3",0.558113975651416,TRUE,0,NA,NA

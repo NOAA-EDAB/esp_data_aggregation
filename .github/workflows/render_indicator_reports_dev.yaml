@@ -12,11 +12,13 @@ jobs:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
     
     steps:
-      - name: Checkout repo
+          
+      - name: Checkout esp_data_aggregation
         uses: actions/checkout@v2
-#        with:
+        with:
+          persist-credentials: false
 #          ref: abby
-              
+
       - name: Install Pandoc
         run: brew install pandoc
         shell: bash
@@ -57,13 +59,8 @@ jobs:
           # source scripts
           `%>%` <- magrittr::`%>%`
           `.pt` <- ggplot2::`.pt`
-          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
-          source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
-
           # function to make reports
-          fun <- function(x) {
-            NEesp::render_ind_report(x, 
-                                     input = "bookdown",
+          fun <- function(x) {NEesp::render_ind_report(x, input = "bookdown",
                                      config = "_bookdown-ricky.yml",
                                      params_to_use = list(species_ID = x,
                                                           ricky_survey_data = NEesp::bio_survey, 
@@ -74,13 +71,16 @@ jobs:
           }
 
           # run
-          lapply(NEesp::species_key$Species, fun)'
-          
+          lapply(NEesp::species_key$Species[1], fun)'
+#          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
+#          source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
+
       - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: action_reports # The folder the action should deploy.
-          TARGET_FOLDER: Indicator_Reports-dev
-          CLEAN: false # Automatically remove deleted files from the deploy branch
+          repository-name: ESP_docs
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: action_reports # The folder the action should deploy.
+          target-folder: Reports
+          clean: false # Automatically remove deleted files from the deploy branch

@@ -30,10 +30,40 @@ test <- ecodata::long_term_sst
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Sea surface temperature anomaly
+### Sea surface temperature anomaly in EPU
 ```{r, sst-anom}
 test <- ecodata::seasonal_oisst_anom
 NEesp::render_indicator(test, lab = names[1])
+```
+
+### Sea surface temperature anomaly in stock region
+```{r, sst-anom-stock}
+test <- ecodata::ESP_seasonal_oisst_anom %>%
+  dplyr::mutate(Pattern_check = ESP %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
+  dplyr::distinct()
+
+if (nrow(test) > 0) {
+  if (length(unique(test$Pattern_check)) > 1) {
+    # add stock region into var for faceting
+    test <- test %>%
+      dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
+        stringr::str_replace_all("_", "") %>%
+        stringr::str_wrap(width = 8))
+    if (nrow(test) > 0) {
+      NEesp::render_indicator(test, lab = names[1])
+    }
+  } else {
+    test <- test %>%
+      dplyr::mutate(Var = paste0(Var, "_stock"))
+
+    NEesp::render_indicator(test, lab = names[1])
+  }
+} else {
+  "Indicator data has not been parsed over this stock's region"
+}
 ```
 
 ### Stratification
@@ -85,17 +115,34 @@ test <- ecodata::nao
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Chlorophyll
-```{r, chl}
-test <- ecodata::chl_pp %>%
-  dplyr::mutate(Var = Var %>%
-    stringr::str_replace_all("_", "\n") %>%
-    stringr::str_replace_all(" ", "\n")) %>%
-  dplyr::filter(stringr::str_detect(Var, "ANNUAL")) %>% # only annual indices
-  dplyr::mutate(Time = Time %>%
-    stringr::str_replace("A_", "") %>%
-    as.numeric())
+### Northern range
+Northernmost survey observation in each year.
+```{r, northern-bound}
+test <- NEesp::survey %>%
+  dplyr::filter(Species == params$stock,
+                ABUNDANCE > 0) %>% # why are there entries with 0 abundance but >0 biomass??
+  dplyr::select(YEAR, LAT) %>% 
+  dplyr::group_by(YEAR) %>%
+  dplyr::mutate(Val = max(LAT, na.rm = TRUE),
+                Var = "northern_latitude") %>%
+  dplyr::select(-LAT) %>%
+  dplyr::rename(Time = YEAR) %>%
+  dplyr::distinct()
 NEesp::render_indicator(test, lab = names[1])
+```
 
-# data_prep(stock, test, lag = params$lag) %>% knitr::kable()
+### Southern range
+Southernmost survey observation in each year.
+```{r, southern-bound}
+test <- NEesp::survey %>%
+  dplyr::filter(Species == params$stock,
+                ABUNDANCE > 0) %>% # why are there entries with 0 abundance but >0 biomass??
+  dplyr::select(YEAR, LAT)  %>% 
+  dplyr::group_by(YEAR) %>%
+  dplyr::mutate(Val = min(LAT, na.rm = TRUE),
+                Var = "southern_latitude") %>%
+  dplyr::select(-LAT) %>%
+  dplyr::rename(Time = YEAR) %>%
+  dplyr::distinct()
+NEesp::render_indicator(test, lab = names[1])
 ```

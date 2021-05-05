@@ -1,0 +1,2501 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",78.7666666666667,FALSE,30,0.196563775517204,FALSE
+"2","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.291666666666667,FALSE,30,0.223661042202994,FALSE
+"3","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.00299538488142,FALSE,30,0.452966191029232,FALSE
+"4","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.0763333333333333,FALSE,30,0.255916475289206,FALSE
+"5","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.476333333333333,FALSE,30,0.323323018959884,FALSE
+"6","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",68.8333333333333,FALSE,30,0.196563775517204,FALSE
+"7","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.269666666666667,FALSE,30,0.223661042202994,FALSE
+"8","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",0.661869458076083,FALSE,30,0.452966191029232,FALSE
+"9","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.272,FALSE,30,0.255916475289206,FALSE
+"10","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.214666666666667,FALSE,30,0.323323018959884,FALSE
+"11","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",79.0666666666667,FALSE,30,0.196563775517204,FALSE
+"12","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.269333333333333,FALSE,30,0.223661042202994,FALSE
+"13","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.39419609935052,FALSE,30,0.452966191029232,FALSE
+"14","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.832666666666667,FALSE,30,0.255916475289206,FALSE
+"15","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",1.065,FALSE,30,0.323323018959884,FALSE
+"16","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",81.7,FALSE,30,0.196563775517204,FALSE
+"17","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.288,FALSE,30,0.223661042202994,FALSE
+"18","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.55388254343116,FALSE,30,0.452966191029232,FALSE
+"19","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.186,FALSE,30,0.255916475289206,FALSE
+"20","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.834666666666667,FALSE,30,0.323323018959884,FALSE
+"21","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",76.2333333333333,FALSE,30,0.196563775517204,FALSE
+"22","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.254333333333333,FALSE,30,0.223661042202994,FALSE
+"23","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.34719897143776,FALSE,30,0.452966191029232,FALSE
+"24","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.71,FALSE,30,0.255916475289206,FALSE
+"25","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.971666666666667,FALSE,30,0.323323018959884,FALSE
+"26","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",64.8,FALSE,30,0.196563775517204,FALSE
+"27","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.31,FALSE,30,0.223661042202994,FALSE
+"28","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",2.36468110381548,FALSE,30,0.452966191029232,FALSE
+"29","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",1.52466666666667,FALSE,30,0.255916475289206,FALSE
+"30","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",1.242,FALSE,30,0.323323018959884,FALSE
+"31","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",65.0666666666667,FALSE,30,0.196563775517204,FALSE
+"32","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.308666666666667,FALSE,30,0.223661042202994,FALSE
+"33","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",2.22334575822694,FALSE,30,0.452966191029232,FALSE
+"34","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",-0.526,FALSE,30,0.255916475289206,FALSE
+"35","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.0159999999999999,FALSE,30,0.323323018959884,FALSE
+"36","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",68.8,FALSE,30,0.196563775517204,FALSE
+"37","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.285,FALSE,30,0.223661042202994,FALSE
+"38","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.35936810706163,FALSE,30,0.452966191029232,FALSE
+"39","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.599666666666667,FALSE,30,0.255916475289206,FALSE
+"40","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.951666666666667,FALSE,30,0.323323018959884,FALSE
+"41","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",72.5333333333333,FALSE,30,0.196563775517204,FALSE
+"42","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.270666666666667,FALSE,30,0.223661042202994,FALSE
+"43","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.21976596874986,FALSE,30,0.452966191029232,FALSE
+"44","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.942666666666667,FALSE,30,0.255916475289206,FALSE
+"45","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.633666666666667,FALSE,30,0.323323018959884,FALSE
+"46","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",71.0666666666667,FALSE,30,0.196563775517204,FALSE
+"47","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.259666666666667,FALSE,30,0.223661042202994,FALSE
+"48","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.39838057445851,FALSE,30,0.452966191029232,FALSE
+"49","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.615,FALSE,30,0.255916475289206,FALSE
+"50","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.594333333333333,FALSE,30,0.323323018959884,FALSE
+"51","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",75.6666666666667,FALSE,30,0.196563775517204,FALSE
+"52","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.348666666666667,FALSE,30,0.223661042202994,FALSE
+"53","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.53219009541107,FALSE,30,0.452966191029232,FALSE
+"54","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.187333333333333,FALSE,30,0.255916475289206,FALSE
+"55","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.907,FALSE,30,0.323323018959884,FALSE
+"56","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",70.8333333333333,FALSE,30,0.196563775517204,FALSE
+"57","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.280666666666667,FALSE,30,0.223661042202994,FALSE
+"58","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",0.720300831469487,FALSE,30,0.452966191029232,FALSE
+"59","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.416666666666667,FALSE,30,0.255916475289206,FALSE
+"60","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.229666666666667,FALSE,30,0.323323018959884,FALSE
+"61","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",60.8666666666667,FALSE,30,0.196563775517204,FALSE
+"62","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.291666666666667,FALSE,30,0.223661042202994,FALSE
+"63","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.59552705492087,FALSE,30,0.452966191029232,FALSE
+"64","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.821,FALSE,30,0.255916475289206,FALSE
+"65","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.609333333333333,FALSE,30,0.323323018959884,FALSE
+"66","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",74.6666666666667,FALSE,30,0.196563775517204,FALSE
+"67","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.3,FALSE,30,0.223661042202994,FALSE
+"68","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.24407763733869,FALSE,30,0.452966191029232,FALSE
+"69","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.388333333333333,FALSE,30,0.255916475289206,FALSE
+"70","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.49,FALSE,30,0.323323018959884,FALSE
+"71","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",78,FALSE,30,0.196563775517204,FALSE
+"72","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.332,FALSE,30,0.223661042202994,FALSE
+"73","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",2.9806536763841,FALSE,30,0.452966191029232,FALSE
+"74","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.646,FALSE,30,0.255916475289206,FALSE
+"75","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",1.708,FALSE,30,0.323323018959884,FALSE
+"76","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",59.8333333333333,FALSE,30,0.196563775517204,FALSE
+"77","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.292666666666667,FALSE,30,0.223661042202994,FALSE
+"78","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.89694462790475,FALSE,30,0.452966191029232,FALSE
+"79","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",-0.201666666666667,FALSE,30,0.255916475289206,FALSE
+"80","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.871,FALSE,30,0.323323018959884,FALSE
+"81","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",60.0666666666667,FALSE,30,0.196563775517204,FALSE
+"82","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.273,FALSE,30,0.223661042202994,FALSE
+"83","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",0.978131533632593,FALSE,30,0.452966191029232,FALSE
+"84","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.137666666666667,FALSE,30,0.255916475289206,FALSE
+"85","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.595666666666667,FALSE,30,0.323323018959884,FALSE
+"86","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",73.5333333333333,FALSE,30,0.196563775517204,FALSE
+"87","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.341333333333333,FALSE,30,0.223661042202994,FALSE
+"88","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.50517549589101,FALSE,30,0.452966191029232,FALSE
+"89","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.865666666666667,FALSE,30,0.255916475289206,FALSE
+"90","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.827666666666667,FALSE,30,0.323323018959884,FALSE
+"91","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",66,FALSE,30,0.196563775517204,FALSE
+"92","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.289666666666667,FALSE,30,0.223661042202994,FALSE
+"93","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",0.956591557305343,FALSE,30,0.452966191029232,FALSE
+"94","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.531,FALSE,30,0.255916475289206,FALSE
+"95","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.493,FALSE,30,0.323323018959884,FALSE
+"96","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",60.7666666666667,FALSE,30,0.196563775517204,FALSE
+"97","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.317333333333333,FALSE,30,0.223661042202994,FALSE
+"98","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.93248920349946,FALSE,30,0.452966191029232,FALSE
+"99","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.374,FALSE,30,0.255916475289206,FALSE
+"100","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.517,FALSE,30,0.323323018959884,FALSE
+"101","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",68.9,FALSE,30,0.196563775517204,FALSE
+"102","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.312666666666667,FALSE,30,0.223661042202994,FALSE
+"103","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",2.0182515182536,FALSE,30,0.452966191029232,FALSE
+"104","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.342666666666667,FALSE,30,0.255916475289206,FALSE
+"105","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.581,FALSE,30,0.323323018959884,FALSE
+"106","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",77.3666666666667,FALSE,30,0.196563775517204,FALSE
+"107","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.314,FALSE,30,0.223661042202994,FALSE
+"108","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.36597737543166,FALSE,30,0.452966191029232,FALSE
+"109","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.907,FALSE,30,0.255916475289206,FALSE
+"110","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.883333333333333,FALSE,30,0.323323018959884,FALSE
+"111","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",71.7333333333333,FALSE,30,0.196563775517204,FALSE
+"112","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.302,FALSE,30,0.223661042202994,FALSE
+"113","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.7239727433553,FALSE,30,0.452966191029232,FALSE
+"114","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.722,FALSE,30,0.255916475289206,FALSE
+"115","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",1.27633333333333,FALSE,30,0.323323018959884,FALSE
+"116","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",66.7666666666667,FALSE,30,0.196563775517204,FALSE
+"117","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.275666666666667,FALSE,30,0.223661042202994,FALSE
+"118","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.37087096491955,FALSE,30,0.452966191029232,FALSE
+"119","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.975,FALSE,30,0.255916475289206,FALSE
+"120","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.896666666666667,FALSE,30,0.323323018959884,FALSE
+"121","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",58.4,FALSE,30,0.196563775517204,FALSE
+"122","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.278,FALSE,30,0.223661042202994,FALSE
+"123","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.98077161494519,FALSE,30,0.452966191029232,FALSE
+"124","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",1.33966666666667,FALSE,30,0.255916475289206,FALSE
+"125","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.82,FALSE,30,0.323323018959884,FALSE
+"126","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",68.1666666666667,FALSE,30,0.196563775517204,FALSE
+"127","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.295,FALSE,30,0.223661042202994,FALSE
+"128","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.31341228028457,FALSE,30,0.452966191029232,FALSE
+"129","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.159,FALSE,30,0.255916475289206,FALSE
+"130","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.179666666666667,FALSE,30,0.323323018959884,FALSE
+"131","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",52.5666666666667,FALSE,30,0.196563775517204,FALSE
+"132","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.289,FALSE,30,0.223661042202994,FALSE
+"133","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.43858194023136,FALSE,30,0.452966191029232,FALSE
+"134","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.0903333333333333,FALSE,30,0.255916475289206,FALSE
+"135","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.523666666666667,FALSE,30,0.323323018959884,FALSE
+"136","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",66.7333333333333,FALSE,30,0.196563775517204,FALSE
+"137","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.303,FALSE,30,0.223661042202994,FALSE
+"138","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.72980267649128,FALSE,30,0.452966191029232,FALSE
+"139","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.118333333333333,FALSE,30,0.255916475289206,FALSE
+"140","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.500666666666667,FALSE,30,0.323323018959884,FALSE
+"141","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",68.4,FALSE,30,0.196563775517204,FALSE
+"142","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.335,FALSE,30,0.223661042202994,FALSE
+"143","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",1.57889486532582,FALSE,30,0.452966191029232,FALSE
+"144","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",0.331333333333333,FALSE,30,0.255916475289206,FALSE
+"145","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",0.0106666666666667,FALSE,30,0.323323018959884,FALSE
+"146","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","hcly summer
+m^2/sec^2",65.1666666666667,FALSE,30,0.196563775517204,FALSE
+"147","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","tke summer
+J/kg",0.315666666666667,FALSE,30,0.223661042202994,FALSE
+"148","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","total wind speed summer
+J/kg",2.58599257655579,FALSE,30,0.452966191029232,FALSE
+"149","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","uwnd summer
+J/kg",-0.419666666666667,FALSE,30,0.255916475289206,FALSE
+"150","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","vwnd summer
+J/kg",1.48066666666667,FALSE,30,0.323323018959884,FALSE
+"151","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",78.7666666666667,FALSE,30,0.00248702519692208,TRUE
+"152","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.291666666666667,FALSE,30,0.0323586033235464,TRUE
+"153","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.00299538488142,FALSE,30,0.150369232835592,FALSE
+"154","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.0763333333333333,FALSE,30,0.272968256465368,FALSE
+"155","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.476333333333333,FALSE,30,0.865083606514442,FALSE
+"156","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",68.8333333333333,FALSE,30,0.00248702519692208,TRUE
+"157","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.269666666666667,FALSE,30,0.0323586033235464,TRUE
+"158","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",0.661869458076083,FALSE,30,0.150369232835592,FALSE
+"159","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.272,FALSE,30,0.272968256465368,FALSE
+"160","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.214666666666667,FALSE,30,0.865083606514442,FALSE
+"161","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",79.0666666666667,FALSE,30,0.00248702519692208,TRUE
+"162","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.269333333333333,FALSE,30,0.0323586033235464,TRUE
+"163","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.39419609935052,FALSE,30,0.150369232835592,FALSE
+"164","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.832666666666667,FALSE,30,0.272968256465368,FALSE
+"165","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",1.065,FALSE,30,0.865083606514442,FALSE
+"166","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",81.7,FALSE,30,0.00248702519692208,TRUE
+"167","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.288,FALSE,30,0.0323586033235464,TRUE
+"168","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.55388254343116,FALSE,30,0.150369232835592,FALSE
+"169","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.186,FALSE,30,0.272968256465368,FALSE
+"170","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.834666666666667,FALSE,30,0.865083606514442,FALSE
+"171","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",76.2333333333333,FALSE,30,0.00248702519692208,TRUE
+"172","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.254333333333333,FALSE,30,0.0323586033235464,TRUE
+"173","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.34719897143776,FALSE,30,0.150369232835592,FALSE
+"174","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.71,FALSE,30,0.272968256465368,FALSE
+"175","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.971666666666667,FALSE,30,0.865083606514442,FALSE
+"176","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",64.8,FALSE,30,0.00248702519692208,TRUE
+"177","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.31,FALSE,30,0.0323586033235464,TRUE
+"178","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",2.36468110381548,FALSE,30,0.150369232835592,FALSE
+"179","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",1.52466666666667,FALSE,30,0.272968256465368,FALSE
+"180","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",1.242,FALSE,30,0.865083606514442,FALSE
+"181","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",65.0666666666667,FALSE,30,0.00248702519692208,TRUE
+"182","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.308666666666667,FALSE,30,0.0323586033235464,TRUE
+"183","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",2.22334575822694,FALSE,30,0.150369232835592,FALSE
+"184","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",-0.526,FALSE,30,0.272968256465368,FALSE
+"185","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.0159999999999999,FALSE,30,0.865083606514442,FALSE
+"186","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",68.8,FALSE,30,0.00248702519692208,TRUE
+"187","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.285,FALSE,30,0.0323586033235464,TRUE
+"188","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.35936810706163,FALSE,30,0.150369232835592,FALSE
+"189","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.599666666666667,FALSE,30,0.272968256465368,FALSE
+"190","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.951666666666667,FALSE,30,0.865083606514442,FALSE
+"191","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",72.5333333333333,FALSE,30,0.00248702519692208,TRUE
+"192","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.270666666666667,FALSE,30,0.0323586033235464,TRUE
+"193","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.21976596874986,FALSE,30,0.150369232835592,FALSE
+"194","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.942666666666667,FALSE,30,0.272968256465368,FALSE
+"195","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.633666666666667,FALSE,30,0.865083606514442,FALSE
+"196","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",71.0666666666667,FALSE,30,0.00248702519692208,TRUE
+"197","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.259666666666667,FALSE,30,0.0323586033235464,TRUE
+"198","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.39838057445851,FALSE,30,0.150369232835592,FALSE
+"199","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.615,FALSE,30,0.272968256465368,FALSE
+"200","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.594333333333333,FALSE,30,0.865083606514442,FALSE
+"201","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",75.6666666666667,FALSE,30,0.00248702519692208,TRUE
+"202","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.348666666666667,FALSE,30,0.0323586033235464,TRUE
+"203","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.53219009541107,FALSE,30,0.150369232835592,FALSE
+"204","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.187333333333333,FALSE,30,0.272968256465368,FALSE
+"205","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.907,FALSE,30,0.865083606514442,FALSE
+"206","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",70.8333333333333,FALSE,30,0.00248702519692208,TRUE
+"207","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.280666666666667,FALSE,30,0.0323586033235464,TRUE
+"208","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",0.720300831469487,FALSE,30,0.150369232835592,FALSE
+"209","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.416666666666667,FALSE,30,0.272968256465368,FALSE
+"210","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.229666666666667,FALSE,30,0.865083606514442,FALSE
+"211","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",60.8666666666667,FALSE,30,0.00248702519692208,TRUE
+"212","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.291666666666667,FALSE,30,0.0323586033235464,TRUE
+"213","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.59552705492087,FALSE,30,0.150369232835592,FALSE
+"214","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.821,FALSE,30,0.272968256465368,FALSE
+"215","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.609333333333333,FALSE,30,0.865083606514442,FALSE
+"216","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",74.6666666666667,FALSE,30,0.00248702519692208,TRUE
+"217","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.3,FALSE,30,0.0323586033235464,TRUE
+"218","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.24407763733869,FALSE,30,0.150369232835592,FALSE
+"219","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.388333333333333,FALSE,30,0.272968256465368,FALSE
+"220","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.49,FALSE,30,0.865083606514442,FALSE
+"221","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",78,FALSE,30,0.00248702519692208,TRUE
+"222","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.332,FALSE,30,0.0323586033235464,TRUE
+"223","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",2.9806536763841,FALSE,30,0.150369232835592,FALSE
+"224","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.646,FALSE,30,0.272968256465368,FALSE
+"225","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",1.708,FALSE,30,0.865083606514442,FALSE
+"226","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",59.8333333333333,FALSE,30,0.00248702519692208,TRUE
+"227","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.292666666666667,FALSE,30,0.0323586033235464,TRUE
+"228","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.89694462790475,FALSE,30,0.150369232835592,FALSE
+"229","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",-0.201666666666667,FALSE,30,0.272968256465368,FALSE
+"230","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.871,FALSE,30,0.865083606514442,FALSE
+"231","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",60.0666666666667,FALSE,30,0.00248702519692208,TRUE
+"232","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.273,FALSE,30,0.0323586033235464,TRUE
+"233","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",0.978131533632593,FALSE,30,0.150369232835592,FALSE
+"234","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.137666666666667,FALSE,30,0.272968256465368,FALSE
+"235","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.595666666666667,FALSE,30,0.865083606514442,FALSE
+"236","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",73.5333333333333,FALSE,30,0.00248702519692208,TRUE
+"237","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.341333333333333,FALSE,30,0.0323586033235464,TRUE
+"238","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.50517549589101,FALSE,30,0.150369232835592,FALSE
+"239","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.865666666666667,FALSE,30,0.272968256465368,FALSE
+"240","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.827666666666667,FALSE,30,0.865083606514442,FALSE
+"241","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",66,FALSE,30,0.00248702519692208,TRUE
+"242","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.289666666666667,FALSE,30,0.0323586033235464,TRUE
+"243","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",0.956591557305343,FALSE,30,0.150369232835592,FALSE
+"244","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.531,FALSE,30,0.272968256465368,FALSE
+"245","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.493,FALSE,30,0.865083606514442,FALSE
+"246","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",60.7666666666667,FALSE,30,0.00248702519692208,TRUE
+"247","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.317333333333333,FALSE,30,0.0323586033235464,TRUE
+"248","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.93248920349946,FALSE,30,0.150369232835592,FALSE
+"249","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.374,FALSE,30,0.272968256465368,FALSE
+"250","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.517,FALSE,30,0.865083606514442,FALSE
+"251","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",68.9,FALSE,30,0.00248702519692208,TRUE
+"252","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.312666666666667,FALSE,30,0.0323586033235464,TRUE
+"253","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",2.0182515182536,FALSE,30,0.150369232835592,FALSE
+"254","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.342666666666667,FALSE,30,0.272968256465368,FALSE
+"255","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.581,FALSE,30,0.865083606514442,FALSE
+"256","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",77.3666666666667,FALSE,30,0.00248702519692208,TRUE
+"257","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.314,FALSE,30,0.0323586033235464,TRUE
+"258","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.36597737543166,FALSE,30,0.150369232835592,FALSE
+"259","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.907,FALSE,30,0.272968256465368,FALSE
+"260","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.883333333333333,FALSE,30,0.865083606514442,FALSE
+"261","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",71.7333333333333,FALSE,30,0.00248702519692208,TRUE
+"262","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.302,FALSE,30,0.0323586033235464,TRUE
+"263","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.7239727433553,FALSE,30,0.150369232835592,FALSE
+"264","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.722,FALSE,30,0.272968256465368,FALSE
+"265","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",1.27633333333333,FALSE,30,0.865083606514442,FALSE
+"266","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",66.7666666666667,FALSE,30,0.00248702519692208,TRUE
+"267","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.275666666666667,FALSE,30,0.0323586033235464,TRUE
+"268","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.37087096491955,FALSE,30,0.150369232835592,FALSE
+"269","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.975,FALSE,30,0.272968256465368,FALSE
+"270","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.896666666666667,FALSE,30,0.865083606514442,FALSE
+"271","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",58.4,FALSE,30,0.00248702519692208,TRUE
+"272","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.278,FALSE,30,0.0323586033235464,TRUE
+"273","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.98077161494519,FALSE,30,0.150369232835592,FALSE
+"274","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",1.33966666666667,FALSE,30,0.272968256465368,FALSE
+"275","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.82,FALSE,30,0.865083606514442,FALSE
+"276","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",68.1666666666667,FALSE,30,0.00248702519692208,TRUE
+"277","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.295,FALSE,30,0.0323586033235464,TRUE
+"278","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.31341228028457,FALSE,30,0.150369232835592,FALSE
+"279","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.159,FALSE,30,0.272968256465368,FALSE
+"280","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.179666666666667,FALSE,30,0.865083606514442,FALSE
+"281","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",52.5666666666667,FALSE,30,0.00248702519692208,TRUE
+"282","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.289,FALSE,30,0.0323586033235464,TRUE
+"283","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.43858194023136,FALSE,30,0.150369232835592,FALSE
+"284","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.0903333333333333,FALSE,30,0.272968256465368,FALSE
+"285","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.523666666666667,FALSE,30,0.865083606514442,FALSE
+"286","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",66.7333333333333,FALSE,30,0.00248702519692208,TRUE
+"287","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.303,FALSE,30,0.0323586033235464,TRUE
+"288","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.72980267649128,FALSE,30,0.150369232835592,FALSE
+"289","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.118333333333333,FALSE,30,0.272968256465368,FALSE
+"290","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.500666666666667,FALSE,30,0.865083606514442,FALSE
+"291","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",68.4,FALSE,30,0.00248702519692208,TRUE
+"292","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.335,FALSE,30,0.0323586033235464,TRUE
+"293","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",1.57889486532582,FALSE,30,0.150369232835592,FALSE
+"294","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",0.331333333333333,FALSE,30,0.272968256465368,FALSE
+"295","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",0.0106666666666667,FALSE,30,0.865083606514442,FALSE
+"296","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","hcly summer
+m^2/sec^2",65.1666666666667,FALSE,30,0.00248702519692208,TRUE
+"297","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","tke summer
+J/kg",0.315666666666667,FALSE,30,0.0323586033235464,TRUE
+"298","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","total wind speed summer
+J/kg",2.58599257655579,FALSE,30,0.150369232835592,FALSE
+"299","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","uwnd summer
+J/kg",-0.419666666666667,FALSE,30,0.272968256465368,FALSE
+"300","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","vwnd summer
+J/kg",1.48066666666667,FALSE,30,0.865083606514442,FALSE
+"301","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",78.7666666666667,FALSE,30,0.577673496823137,FALSE
+"302","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.291666666666667,FALSE,30,0.831605579837837,FALSE
+"303","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.00299538488142,FALSE,30,0.596955389893423,FALSE
+"304","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.0763333333333333,FALSE,30,0.232225413774145,FALSE
+"305","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.476333333333333,FALSE,30,0.51180635989204,FALSE
+"306","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",68.8333333333333,FALSE,30,0.577673496823137,FALSE
+"307","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.269666666666667,FALSE,30,0.831605579837837,FALSE
+"308","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",0.661869458076083,FALSE,30,0.596955389893423,FALSE
+"309","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.272,FALSE,30,0.232225413774145,FALSE
+"310","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.214666666666667,FALSE,30,0.51180635989204,FALSE
+"311","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",79.0666666666667,FALSE,30,0.577673496823137,FALSE
+"312","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.269333333333333,FALSE,30,0.831605579837837,FALSE
+"313","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.39419609935052,FALSE,30,0.596955389893423,FALSE
+"314","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.832666666666667,FALSE,30,0.232225413774145,FALSE
+"315","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",1.065,FALSE,30,0.51180635989204,FALSE
+"316","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",81.7,FALSE,30,0.577673496823137,FALSE
+"317","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.288,FALSE,30,0.831605579837837,FALSE
+"318","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.55388254343116,FALSE,30,0.596955389893423,FALSE
+"319","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.186,FALSE,30,0.232225413774145,FALSE
+"320","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.834666666666667,FALSE,30,0.51180635989204,FALSE
+"321","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",76.2333333333333,FALSE,30,0.577673496823137,FALSE
+"322","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.254333333333333,FALSE,30,0.831605579837837,FALSE
+"323","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.34719897143776,FALSE,30,0.596955389893423,FALSE
+"324","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.71,FALSE,30,0.232225413774145,FALSE
+"325","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.971666666666667,FALSE,30,0.51180635989204,FALSE
+"326","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",64.8,FALSE,30,0.577673496823137,FALSE
+"327","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.31,FALSE,30,0.831605579837837,FALSE
+"328","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",2.36468110381548,FALSE,30,0.596955389893423,FALSE
+"329","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",1.52466666666667,FALSE,30,0.232225413774145,FALSE
+"330","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",1.242,FALSE,30,0.51180635989204,FALSE
+"331","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",65.0666666666667,FALSE,30,0.577673496823137,FALSE
+"332","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.308666666666667,FALSE,30,0.831605579837837,FALSE
+"333","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",2.22334575822694,FALSE,30,0.596955389893423,FALSE
+"334","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",-0.526,FALSE,30,0.232225413774145,FALSE
+"335","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.0159999999999999,FALSE,30,0.51180635989204,FALSE
+"336","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",68.8,FALSE,30,0.577673496823137,FALSE
+"337","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.285,FALSE,30,0.831605579837837,FALSE
+"338","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.35936810706163,FALSE,30,0.596955389893423,FALSE
+"339","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.599666666666667,FALSE,30,0.232225413774145,FALSE
+"340","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.951666666666667,FALSE,30,0.51180635989204,FALSE
+"341","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",72.5333333333333,FALSE,30,0.577673496823137,FALSE
+"342","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.270666666666667,FALSE,30,0.831605579837837,FALSE
+"343","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.21976596874986,FALSE,30,0.596955389893423,FALSE
+"344","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.942666666666667,FALSE,30,0.232225413774145,FALSE
+"345","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.633666666666667,FALSE,30,0.51180635989204,FALSE
+"346","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",71.0666666666667,FALSE,30,0.577673496823137,FALSE
+"347","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.259666666666667,FALSE,30,0.831605579837837,FALSE
+"348","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.39838057445851,FALSE,30,0.596955389893423,FALSE
+"349","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.615,FALSE,30,0.232225413774145,FALSE
+"350","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.594333333333333,FALSE,30,0.51180635989204,FALSE
+"351","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",75.6666666666667,FALSE,30,0.577673496823137,FALSE
+"352","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.348666666666667,FALSE,30,0.831605579837837,FALSE
+"353","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.53219009541107,FALSE,30,0.596955389893423,FALSE
+"354","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.187333333333333,FALSE,30,0.232225413774145,FALSE
+"355","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.907,FALSE,30,0.51180635989204,FALSE
+"356","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",70.8333333333333,FALSE,30,0.577673496823137,FALSE
+"357","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.280666666666667,FALSE,30,0.831605579837837,FALSE
+"358","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",0.720300831469487,FALSE,30,0.596955389893423,FALSE
+"359","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.416666666666667,FALSE,30,0.232225413774145,FALSE
+"360","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.229666666666667,FALSE,30,0.51180635989204,FALSE
+"361","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",60.8666666666667,FALSE,30,0.577673496823137,FALSE
+"362","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.291666666666667,FALSE,30,0.831605579837837,FALSE
+"363","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.59552705492087,FALSE,30,0.596955389893423,FALSE
+"364","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.821,FALSE,30,0.232225413774145,FALSE
+"365","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.609333333333333,FALSE,30,0.51180635989204,FALSE
+"366","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",74.6666666666667,FALSE,30,0.577673496823137,FALSE
+"367","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.3,FALSE,30,0.831605579837837,FALSE
+"368","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.24407763733869,FALSE,30,0.596955389893423,FALSE
+"369","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.388333333333333,FALSE,30,0.232225413774145,FALSE
+"370","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.49,FALSE,30,0.51180635989204,FALSE
+"371","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",78,FALSE,30,0.577673496823137,FALSE
+"372","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.332,FALSE,30,0.831605579837837,FALSE
+"373","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",2.9806536763841,FALSE,30,0.596955389893423,FALSE
+"374","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.646,FALSE,30,0.232225413774145,FALSE
+"375","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",1.708,FALSE,30,0.51180635989204,FALSE
+"376","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",59.8333333333333,FALSE,30,0.577673496823137,FALSE
+"377","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.292666666666667,FALSE,30,0.831605579837837,FALSE
+"378","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.89694462790475,FALSE,30,0.596955389893423,FALSE
+"379","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",-0.201666666666667,FALSE,30,0.232225413774145,FALSE
+"380","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.871,FALSE,30,0.51180635989204,FALSE
+"381","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",60.0666666666667,FALSE,30,0.577673496823137,FALSE
+"382","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.273,FALSE,30,0.831605579837837,FALSE
+"383","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",0.978131533632593,FALSE,30,0.596955389893423,FALSE
+"384","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.137666666666667,FALSE,30,0.232225413774145,FALSE
+"385","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.595666666666667,FALSE,30,0.51180635989204,FALSE
+"386","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",73.5333333333333,FALSE,30,0.577673496823137,FALSE
+"387","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.341333333333333,FALSE,30,0.831605579837837,FALSE
+"388","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.50517549589101,FALSE,30,0.596955389893423,FALSE
+"389","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.865666666666667,FALSE,30,0.232225413774145,FALSE
+"390","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.827666666666667,FALSE,30,0.51180635989204,FALSE
+"391","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",66,FALSE,30,0.577673496823137,FALSE
+"392","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.289666666666667,FALSE,30,0.831605579837837,FALSE
+"393","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",0.956591557305343,FALSE,30,0.596955389893423,FALSE
+"394","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.531,FALSE,30,0.232225413774145,FALSE
+"395","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.493,FALSE,30,0.51180635989204,FALSE
+"396","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",60.7666666666667,FALSE,30,0.577673496823137,FALSE
+"397","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.317333333333333,FALSE,30,0.831605579837837,FALSE
+"398","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.93248920349946,FALSE,30,0.596955389893423,FALSE
+"399","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.374,FALSE,30,0.232225413774145,FALSE
+"400","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.517,FALSE,30,0.51180635989204,FALSE
+"401","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",68.9,FALSE,30,0.577673496823137,FALSE
+"402","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.312666666666667,FALSE,30,0.831605579837837,FALSE
+"403","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",2.0182515182536,FALSE,30,0.596955389893423,FALSE
+"404","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.342666666666667,FALSE,30,0.232225413774145,FALSE
+"405","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.581,FALSE,30,0.51180635989204,FALSE
+"406","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",77.3666666666667,FALSE,30,0.577673496823137,FALSE
+"407","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.314,FALSE,30,0.831605579837837,FALSE
+"408","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.36597737543166,FALSE,30,0.596955389893423,FALSE
+"409","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.907,FALSE,30,0.232225413774145,FALSE
+"410","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.883333333333333,FALSE,30,0.51180635989204,FALSE
+"411","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",71.7333333333333,FALSE,30,0.577673496823137,FALSE
+"412","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.302,FALSE,30,0.831605579837837,FALSE
+"413","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.7239727433553,FALSE,30,0.596955389893423,FALSE
+"414","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.722,FALSE,30,0.232225413774145,FALSE
+"415","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",1.27633333333333,FALSE,30,0.51180635989204,FALSE
+"416","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",66.7666666666667,FALSE,30,0.577673496823137,FALSE
+"417","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.275666666666667,FALSE,30,0.831605579837837,FALSE
+"418","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.37087096491955,FALSE,30,0.596955389893423,FALSE
+"419","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.975,FALSE,30,0.232225413774145,FALSE
+"420","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.896666666666667,FALSE,30,0.51180635989204,FALSE
+"421","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",58.4,FALSE,30,0.577673496823137,FALSE
+"422","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.278,FALSE,30,0.831605579837837,FALSE
+"423","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.98077161494519,FALSE,30,0.596955389893423,FALSE
+"424","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",1.33966666666667,FALSE,30,0.232225413774145,FALSE
+"425","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.82,FALSE,30,0.51180635989204,FALSE
+"426","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",68.1666666666667,FALSE,30,0.577673496823137,FALSE
+"427","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.295,FALSE,30,0.831605579837837,FALSE
+"428","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.31341228028457,FALSE,30,0.596955389893423,FALSE
+"429","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.159,FALSE,30,0.232225413774145,FALSE
+"430","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.179666666666667,FALSE,30,0.51180635989204,FALSE
+"431","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",52.5666666666667,FALSE,30,0.577673496823137,FALSE
+"432","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.289,FALSE,30,0.831605579837837,FALSE
+"433","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.43858194023136,FALSE,30,0.596955389893423,FALSE
+"434","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.0903333333333333,FALSE,30,0.232225413774145,FALSE
+"435","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.523666666666667,FALSE,30,0.51180635989204,FALSE
+"436","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",66.7333333333333,FALSE,30,0.577673496823137,FALSE
+"437","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.303,FALSE,30,0.831605579837837,FALSE
+"438","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.72980267649128,FALSE,30,0.596955389893423,FALSE
+"439","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.118333333333333,FALSE,30,0.232225413774145,FALSE
+"440","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.500666666666667,FALSE,30,0.51180635989204,FALSE
+"441","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",68.4,FALSE,30,0.577673496823137,FALSE
+"442","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.335,FALSE,30,0.831605579837837,FALSE
+"443","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",1.57889486532582,FALSE,30,0.596955389893423,FALSE
+"444","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",0.331333333333333,FALSE,30,0.232225413774145,FALSE
+"445","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",0.0106666666666667,FALSE,30,0.51180635989204,FALSE
+"446","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","hcly summer
+m^2/sec^2",65.1666666666667,FALSE,30,0.577673496823137,FALSE
+"447","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","tke summer
+J/kg",0.315666666666667,FALSE,30,0.831605579837837,FALSE
+"448","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","total wind speed summer
+J/kg",2.58599257655579,FALSE,30,0.596955389893423,FALSE
+"449","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","uwnd summer
+J/kg",-0.419666666666667,FALSE,30,0.232225413774145,FALSE
+"450","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","vwnd summer
+J/kg",1.48066666666667,FALSE,30,0.51180635989204,FALSE
+"451","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",78.7666666666667,FALSE,30,0.0154956629811033,TRUE
+"452","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.291666666666667,FALSE,30,0.280116854977544,FALSE
+"453","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.00299538488142,FALSE,30,0.224107100327948,FALSE
+"454","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.0763333333333333,FALSE,30,0.235111418868575,FALSE
+"455","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.476333333333333,FALSE,30,0.695573690152325,FALSE
+"456","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",68.8333333333333,FALSE,30,0.0154956629811033,TRUE
+"457","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.269666666666667,FALSE,30,0.280116854977544,FALSE
+"458","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",0.661869458076083,FALSE,30,0.224107100327948,FALSE
+"459","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.272,FALSE,30,0.235111418868575,FALSE
+"460","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.214666666666667,FALSE,30,0.695573690152325,FALSE
+"461","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",79.0666666666667,FALSE,30,0.0154956629811033,TRUE
+"462","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.269333333333333,FALSE,30,0.280116854977544,FALSE
+"463","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.39419609935052,FALSE,30,0.224107100327948,FALSE
+"464","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.832666666666667,FALSE,30,0.235111418868575,FALSE
+"465","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",1.065,FALSE,30,0.695573690152325,FALSE
+"466","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",81.7,FALSE,30,0.0154956629811033,TRUE
+"467","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.288,FALSE,30,0.280116854977544,FALSE
+"468","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.55388254343116,FALSE,30,0.224107100327948,FALSE
+"469","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.186,FALSE,30,0.235111418868575,FALSE
+"470","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.834666666666667,FALSE,30,0.695573690152325,FALSE
+"471","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",76.2333333333333,FALSE,30,0.0154956629811033,TRUE
+"472","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.254333333333333,FALSE,30,0.280116854977544,FALSE
+"473","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.34719897143776,FALSE,30,0.224107100327948,FALSE
+"474","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.71,FALSE,30,0.235111418868575,FALSE
+"475","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.971666666666667,FALSE,30,0.695573690152325,FALSE
+"476","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",64.8,FALSE,30,0.0154956629811033,TRUE
+"477","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.31,FALSE,30,0.280116854977544,FALSE
+"478","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",2.36468110381548,FALSE,30,0.224107100327948,FALSE
+"479","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",1.52466666666667,FALSE,30,0.235111418868575,FALSE
+"480","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",1.242,FALSE,30,0.695573690152325,FALSE
+"481","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",65.0666666666667,FALSE,30,0.0154956629811033,TRUE
+"482","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.308666666666667,FALSE,30,0.280116854977544,FALSE
+"483","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",2.22334575822694,FALSE,30,0.224107100327948,FALSE
+"484","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",-0.526,FALSE,30,0.235111418868575,FALSE
+"485","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.0159999999999999,FALSE,30,0.695573690152325,FALSE
+"486","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",68.8,FALSE,30,0.0154956629811033,TRUE
+"487","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.285,FALSE,30,0.280116854977544,FALSE
+"488","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.35936810706163,FALSE,30,0.224107100327948,FALSE
+"489","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.599666666666667,FALSE,30,0.235111418868575,FALSE
+"490","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.951666666666667,FALSE,30,0.695573690152325,FALSE
+"491","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",72.5333333333333,FALSE,30,0.0154956629811033,TRUE
+"492","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.270666666666667,FALSE,30,0.280116854977544,FALSE
+"493","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.21976596874986,FALSE,30,0.224107100327948,FALSE
+"494","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.942666666666667,FALSE,30,0.235111418868575,FALSE
+"495","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.633666666666667,FALSE,30,0.695573690152325,FALSE
+"496","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",71.0666666666667,FALSE,30,0.0154956629811033,TRUE
+"497","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.259666666666667,FALSE,30,0.280116854977544,FALSE
+"498","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.39838057445851,FALSE,30,0.224107100327948,FALSE
+"499","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.615,FALSE,30,0.235111418868575,FALSE
+"500","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.594333333333333,FALSE,30,0.695573690152325,FALSE
+"501","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",75.6666666666667,FALSE,30,0.0154956629811033,TRUE
+"502","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.348666666666667,FALSE,30,0.280116854977544,FALSE
+"503","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.53219009541107,FALSE,30,0.224107100327948,FALSE
+"504","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.187333333333333,FALSE,30,0.235111418868575,FALSE
+"505","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.907,FALSE,30,0.695573690152325,FALSE
+"506","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",70.8333333333333,FALSE,30,0.0154956629811033,TRUE
+"507","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.280666666666667,FALSE,30,0.280116854977544,FALSE
+"508","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",0.720300831469487,FALSE,30,0.224107100327948,FALSE
+"509","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.416666666666667,FALSE,30,0.235111418868575,FALSE
+"510","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.229666666666667,FALSE,30,0.695573690152325,FALSE
+"511","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",60.8666666666667,FALSE,30,0.0154956629811033,TRUE
+"512","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.291666666666667,FALSE,30,0.280116854977544,FALSE
+"513","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.59552705492087,FALSE,30,0.224107100327948,FALSE
+"514","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.821,FALSE,30,0.235111418868575,FALSE
+"515","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.609333333333333,FALSE,30,0.695573690152325,FALSE
+"516","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",74.6666666666667,FALSE,30,0.0154956629811033,TRUE
+"517","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.3,FALSE,30,0.280116854977544,FALSE
+"518","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.24407763733869,FALSE,30,0.224107100327948,FALSE
+"519","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.388333333333333,FALSE,30,0.235111418868575,FALSE
+"520","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.49,FALSE,30,0.695573690152325,FALSE
+"521","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",78,FALSE,30,0.0154956629811033,TRUE
+"522","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.332,FALSE,30,0.280116854977544,FALSE
+"523","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",2.9806536763841,FALSE,30,0.224107100327948,FALSE
+"524","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.646,FALSE,30,0.235111418868575,FALSE
+"525","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",1.708,FALSE,30,0.695573690152325,FALSE
+"526","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",59.8333333333333,FALSE,30,0.0154956629811033,TRUE
+"527","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.292666666666667,FALSE,30,0.280116854977544,FALSE
+"528","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.89694462790475,FALSE,30,0.224107100327948,FALSE
+"529","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",-0.201666666666667,FALSE,30,0.235111418868575,FALSE
+"530","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.871,FALSE,30,0.695573690152325,FALSE
+"531","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",60.0666666666667,FALSE,30,0.0154956629811033,TRUE
+"532","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.273,FALSE,30,0.280116854977544,FALSE
+"533","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",0.978131533632593,FALSE,30,0.224107100327948,FALSE
+"534","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.137666666666667,FALSE,30,0.235111418868575,FALSE
+"535","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.595666666666667,FALSE,30,0.695573690152325,FALSE
+"536","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",73.5333333333333,FALSE,30,0.0154956629811033,TRUE
+"537","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.341333333333333,FALSE,30,0.280116854977544,FALSE
+"538","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.50517549589101,FALSE,30,0.224107100327948,FALSE
+"539","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.865666666666667,FALSE,30,0.235111418868575,FALSE
+"540","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.827666666666667,FALSE,30,0.695573690152325,FALSE
+"541","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",66,FALSE,30,0.0154956629811033,TRUE
+"542","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.289666666666667,FALSE,30,0.280116854977544,FALSE
+"543","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",0.956591557305343,FALSE,30,0.224107100327948,FALSE
+"544","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.531,FALSE,30,0.235111418868575,FALSE
+"545","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.493,FALSE,30,0.695573690152325,FALSE
+"546","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",60.7666666666667,FALSE,30,0.0154956629811033,TRUE
+"547","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.317333333333333,FALSE,30,0.280116854977544,FALSE
+"548","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.93248920349946,FALSE,30,0.224107100327948,FALSE
+"549","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.374,FALSE,30,0.235111418868575,FALSE
+"550","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.517,FALSE,30,0.695573690152325,FALSE
+"551","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",68.9,FALSE,30,0.0154956629811033,TRUE
+"552","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.312666666666667,FALSE,30,0.280116854977544,FALSE
+"553","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",2.0182515182536,FALSE,30,0.224107100327948,FALSE
+"554","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.342666666666667,FALSE,30,0.235111418868575,FALSE
+"555","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.581,FALSE,30,0.695573690152325,FALSE
+"556","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",77.3666666666667,FALSE,30,0.0154956629811033,TRUE
+"557","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.314,FALSE,30,0.280116854977544,FALSE
+"558","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.36597737543166,FALSE,30,0.224107100327948,FALSE
+"559","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.907,FALSE,30,0.235111418868575,FALSE
+"560","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.883333333333333,FALSE,30,0.695573690152325,FALSE
+"561","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",71.7333333333333,FALSE,30,0.0154956629811033,TRUE
+"562","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.302,FALSE,30,0.280116854977544,FALSE
+"563","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.7239727433553,FALSE,30,0.224107100327948,FALSE
+"564","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.722,FALSE,30,0.235111418868575,FALSE
+"565","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",1.27633333333333,FALSE,30,0.695573690152325,FALSE
+"566","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",66.7666666666667,FALSE,30,0.0154956629811033,TRUE
+"567","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.275666666666667,FALSE,30,0.280116854977544,FALSE
+"568","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.37087096491955,FALSE,30,0.224107100327948,FALSE
+"569","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.975,FALSE,30,0.235111418868575,FALSE
+"570","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.896666666666667,FALSE,30,0.695573690152325,FALSE
+"571","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",58.4,FALSE,30,0.0154956629811033,TRUE
+"572","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.278,FALSE,30,0.280116854977544,FALSE
+"573","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.98077161494519,FALSE,30,0.224107100327948,FALSE
+"574","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",1.33966666666667,FALSE,30,0.235111418868575,FALSE
+"575","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.82,FALSE,30,0.695573690152325,FALSE
+"576","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",68.1666666666667,FALSE,30,0.0154956629811033,TRUE
+"577","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.295,FALSE,30,0.280116854977544,FALSE
+"578","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.31341228028457,FALSE,30,0.224107100327948,FALSE
+"579","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.159,FALSE,30,0.235111418868575,FALSE
+"580","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.179666666666667,FALSE,30,0.695573690152325,FALSE
+"581","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",52.5666666666667,FALSE,30,0.0154956629811033,TRUE
+"582","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.289,FALSE,30,0.280116854977544,FALSE
+"583","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.43858194023136,FALSE,30,0.224107100327948,FALSE
+"584","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.0903333333333333,FALSE,30,0.235111418868575,FALSE
+"585","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.523666666666667,FALSE,30,0.695573690152325,FALSE
+"586","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",66.7333333333333,FALSE,30,0.0154956629811033,TRUE
+"587","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.303,FALSE,30,0.280116854977544,FALSE
+"588","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.72980267649128,FALSE,30,0.224107100327948,FALSE
+"589","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.118333333333333,FALSE,30,0.235111418868575,FALSE
+"590","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.500666666666667,FALSE,30,0.695573690152325,FALSE
+"591","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",68.4,FALSE,30,0.0154956629811033,TRUE
+"592","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.335,FALSE,30,0.280116854977544,FALSE
+"593","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",1.57889486532582,FALSE,30,0.224107100327948,FALSE
+"594","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",0.331333333333333,FALSE,30,0.235111418868575,FALSE
+"595","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",0.0106666666666667,FALSE,30,0.695573690152325,FALSE
+"596","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","hcly summer
+m^2/sec^2",65.1666666666667,FALSE,30,0.0154956629811033,TRUE
+"597","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","tke summer
+J/kg",0.315666666666667,FALSE,30,0.280116854977544,FALSE
+"598","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","total wind speed summer
+J/kg",2.58599257655579,FALSE,30,0.224107100327948,FALSE
+"599","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","uwnd summer
+J/kg",-0.419666666666667,FALSE,30,0.235111418868575,FALSE
+"600","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","vwnd summer
+J/kg",1.48066666666667,FALSE,30,0.695573690152325,FALSE
+"601",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",68.1333333333333,TRUE,0,NA,NA
+"602",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",76.5,TRUE,0,NA,NA
+"603",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",66.9,TRUE,0,NA,NA
+"604",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",66.1,TRUE,0,NA,NA
+"605",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",65.9,TRUE,0,NA,NA
+"606",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",71.8666666666667,TRUE,0,NA,NA
+"607",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",64.7333333333333,TRUE,0,NA,NA
+"608",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",81.1,TRUE,0,NA,NA
+"609",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",75.7333333333333,TRUE,0,NA,NA
+"610",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"hcly summer
+m^2/sec^2",77.7666666666667,TRUE,0,NA,NA
+"611",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.281666666666667,TRUE,0,NA,NA
+"612",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.272,TRUE,0,NA,NA
+"613",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.308333333333333,TRUE,0,NA,NA
+"614",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.251,TRUE,0,NA,NA
+"615",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.270333333333333,TRUE,0,NA,NA
+"616",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.281666666666667,TRUE,0,NA,NA
+"617",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.268,TRUE,0,NA,NA
+"618",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.27,TRUE,0,NA,NA
+"619",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.245666666666667,TRUE,0,NA,NA
+"620",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"tke summer
+J/kg",0.280333333333333,TRUE,0,NA,NA
+"621",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",1.39953737080464,TRUE,0,NA,NA
+"622",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",1.58661508919967,TRUE,0,NA,NA
+"623",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",0.966796497352055,TRUE,0,NA,NA
+"624",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",1.50235204309281,TRUE,0,NA,NA
+"625",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",1.27772485038627,TRUE,0,NA,NA
+"626",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",1.61117684103922,TRUE,0,NA,NA
+"627",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",1.21156569440801,TRUE,0,NA,NA
+"628",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",0.851535913836506,TRUE,0,NA,NA
+"629",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",0.745219456607541,TRUE,0,NA,NA
+"630",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"total wind speed summer
+J/kg",2.41822855251541,TRUE,0,NA,NA
+"631",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",0.321333333333333,TRUE,0,NA,NA
+"632",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",0.995666666666667,TRUE,0,NA,NA
+"633",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",0.63,TRUE,0,NA,NA
+"634",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",0.685333333333333,TRUE,0,NA,NA
+"635",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",0.836333333333333,TRUE,0,NA,NA
+"636",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",0.532,TRUE,0,NA,NA
+"637",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",0.302333333333333,TRUE,0,NA,NA
+"638",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",0.447,TRUE,0,NA,NA
+"639",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",0.302666666666667,TRUE,0,NA,NA
+"640",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"uwnd summer
+J/kg",1.30566666666667,TRUE,0,NA,NA
+"641",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",0.862666666666667,TRUE,0,NA,NA
+"642",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",1.15666666666667,TRUE,0,NA,NA
+"643",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",-0.0226666666666667,TRUE,0,NA,NA
+"644",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",0.292,TRUE,0,NA,NA
+"645",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",0.299,TRUE,0,NA,NA
+"646",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",0.278,TRUE,0,NA,NA
+"647",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",0.561333333333333,TRUE,0,NA,NA
+"648",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",0.709,TRUE,0,NA,NA
+"649",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",0.649333333333333,TRUE,0,NA,NA
+"650",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"vwnd summer
+J/kg",1.65666666666667,TRUE,0,NA,NA

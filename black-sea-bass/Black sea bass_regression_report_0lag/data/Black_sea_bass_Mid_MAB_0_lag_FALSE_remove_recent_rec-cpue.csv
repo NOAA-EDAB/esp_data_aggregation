@@ -1,0 +1,497 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1989,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",4.13767980795599,FALSE,30,0.781250494465644,FALSE
+"2","Black sea bass","Mid",1990,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",3.18951244311742,FALSE,30,0.781250494465644,FALSE
+"3","Black sea bass","Mid",1991,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",3.43615713682841,FALSE,30,0.781250494465644,FALSE
+"4","Black sea bass","Mid",1992,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.91931103692896,FALSE,30,0.781250494465644,FALSE
+"5","Black sea bass","Mid",1993,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.44110948570262,FALSE,30,0.781250494465644,FALSE
+"6","Black sea bass","Mid",1994,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.53823378500309,FALSE,30,0.781250494465644,FALSE
+"7","Black sea bass","Mid",1995,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.09285325320061,FALSE,30,0.781250494465644,FALSE
+"8","Black sea bass","Mid",1996,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",1.7818406637159,FALSE,30,0.781250494465644,FALSE
+"9","Black sea bass","Mid",1997,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.01429356438314,FALSE,30,0.781250494465644,FALSE
+"10","Black sea bass","Mid",1998,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",1.79260316828951,FALSE,30,0.781250494465644,FALSE
+"11","Black sea bass","Mid",1999,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",1.9499994572924,FALSE,30,0.781250494465644,FALSE
+"12","Black sea bass","Mid",2000,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.38501518124824,FALSE,30,0.781250494465644,FALSE
+"13","Black sea bass","Mid",2001,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.11913563781022,FALSE,30,0.781250494465644,FALSE
+"14","Black sea bass","Mid",2002,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.20100690144608,FALSE,30,0.781250494465644,FALSE
+"15","Black sea bass","Mid",2003,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.43994708716007,FALSE,30,0.781250494465644,FALSE
+"16","Black sea bass","Mid",2004,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.23179050013897,FALSE,30,0.781250494465644,FALSE
+"17","Black sea bass","Mid",2005,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.00177382992635,FALSE,30,0.781250494465644,FALSE
+"18","Black sea bass","Mid",2006,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.06771668484637,FALSE,30,0.781250494465644,FALSE
+"19","Black sea bass","Mid",2007,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.1508140608002,FALSE,30,0.781250494465644,FALSE
+"20","Black sea bass","Mid",2008,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.31398879257961,FALSE,30,0.781250494465644,FALSE
+"21","Black sea bass","Mid",2009,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",1.86641432356701,FALSE,30,0.781250494465644,FALSE
+"22","Black sea bass","Mid",2010,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.83972571969491,FALSE,30,0.781250494465644,FALSE
+"23","Black sea bass","Mid",2011,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.61064653890135,FALSE,30,0.781250494465644,FALSE
+"24","Black sea bass","Mid",2012,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.66219618460158,FALSE,30,0.781250494465644,FALSE
+"25","Black sea bass","Mid",2013,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",3.4275632097748,FALSE,30,0.781250494465644,FALSE
+"26","Black sea bass","Mid",2014,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.79152578434186,FALSE,30,0.781250494465644,FALSE
+"27","Black sea bass","Mid",2015,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.76964968292129,FALSE,30,0.781250494465644,FALSE
+"28","Black sea bass","Mid",2016,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.36701737377916,FALSE,30,0.781250494465644,FALSE
+"29","Black sea bass","Mid",2017,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.71918314214546,FALSE,30,0.781250494465644,FALSE
+"30","Black sea bass","Mid",2018,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.22163577245031,FALSE,30,0.781250494465644,FALSE
+"31","Black sea bass","Mid",1989,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",4.13767980795599,FALSE,30,0.0312480116631144,TRUE
+"32","Black sea bass","Mid",1990,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",3.18951244311742,FALSE,30,0.0312480116631144,TRUE
+"33","Black sea bass","Mid",1991,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",3.43615713682841,FALSE,30,0.0312480116631144,TRUE
+"34","Black sea bass","Mid",1992,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.91931103692896,FALSE,30,0.0312480116631144,TRUE
+"35","Black sea bass","Mid",1993,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.44110948570262,FALSE,30,0.0312480116631144,TRUE
+"36","Black sea bass","Mid",1994,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.53823378500309,FALSE,30,0.0312480116631144,TRUE
+"37","Black sea bass","Mid",1995,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.09285325320061,FALSE,30,0.0312480116631144,TRUE
+"38","Black sea bass","Mid",1996,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",1.7818406637159,FALSE,30,0.0312480116631144,TRUE
+"39","Black sea bass","Mid",1997,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.01429356438314,FALSE,30,0.0312480116631144,TRUE
+"40","Black sea bass","Mid",1998,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",1.79260316828951,FALSE,30,0.0312480116631144,TRUE
+"41","Black sea bass","Mid",1999,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",1.9499994572924,FALSE,30,0.0312480116631144,TRUE
+"42","Black sea bass","Mid",2000,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.38501518124824,FALSE,30,0.0312480116631144,TRUE
+"43","Black sea bass","Mid",2001,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.11913563781022,FALSE,30,0.0312480116631144,TRUE
+"44","Black sea bass","Mid",2002,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.20100690144608,FALSE,30,0.0312480116631144,TRUE
+"45","Black sea bass","Mid",2003,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.43994708716007,FALSE,30,0.0312480116631144,TRUE
+"46","Black sea bass","Mid",2004,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.23179050013897,FALSE,30,0.0312480116631144,TRUE
+"47","Black sea bass","Mid",2005,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.00177382992635,FALSE,30,0.0312480116631144,TRUE
+"48","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.06771668484637,FALSE,30,0.0312480116631144,TRUE
+"49","Black sea bass","Mid",2007,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.1508140608002,FALSE,30,0.0312480116631144,TRUE
+"50","Black sea bass","Mid",2008,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.31398879257961,FALSE,30,0.0312480116631144,TRUE
+"51","Black sea bass","Mid",2009,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",1.86641432356701,FALSE,30,0.0312480116631144,TRUE
+"52","Black sea bass","Mid",2010,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.83972571969491,FALSE,30,0.0312480116631144,TRUE
+"53","Black sea bass","Mid",2011,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.61064653890135,FALSE,30,0.0312480116631144,TRUE
+"54","Black sea bass","Mid",2012,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.66219618460158,FALSE,30,0.0312480116631144,TRUE
+"55","Black sea bass","Mid",2013,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",3.4275632097748,FALSE,30,0.0312480116631144,TRUE
+"56","Black sea bass","Mid",2014,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.79152578434186,FALSE,30,0.0312480116631144,TRUE
+"57","Black sea bass","Mid",2015,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.76964968292129,FALSE,30,0.0312480116631144,TRUE
+"58","Black sea bass","Mid",2016,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.36701737377916,FALSE,30,0.0312480116631144,TRUE
+"59","Black sea bass","Mid",2017,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.71918314214546,FALSE,30,0.0312480116631144,TRUE
+"60","Black sea bass","Mid",2018,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","recreational CPUE
+number of fish caught per day fished (all species)",2.22163577245031,FALSE,30,0.0312480116631144,TRUE
+"61","Black sea bass","Mid",1989,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",4.13767980795599,FALSE,30,0.557461460468078,FALSE
+"62","Black sea bass","Mid",1990,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",3.18951244311742,FALSE,30,0.557461460468078,FALSE
+"63","Black sea bass","Mid",1991,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",3.43615713682841,FALSE,30,0.557461460468078,FALSE
+"64","Black sea bass","Mid",1992,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.91931103692896,FALSE,30,0.557461460468078,FALSE
+"65","Black sea bass","Mid",1993,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.44110948570262,FALSE,30,0.557461460468078,FALSE
+"66","Black sea bass","Mid",1994,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.53823378500309,FALSE,30,0.557461460468078,FALSE
+"67","Black sea bass","Mid",1995,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.09285325320061,FALSE,30,0.557461460468078,FALSE
+"68","Black sea bass","Mid",1996,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",1.7818406637159,FALSE,30,0.557461460468078,FALSE
+"69","Black sea bass","Mid",1997,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.01429356438314,FALSE,30,0.557461460468078,FALSE
+"70","Black sea bass","Mid",1998,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",1.79260316828951,FALSE,30,0.557461460468078,FALSE
+"71","Black sea bass","Mid",1999,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",1.9499994572924,FALSE,30,0.557461460468078,FALSE
+"72","Black sea bass","Mid",2000,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.38501518124824,FALSE,30,0.557461460468078,FALSE
+"73","Black sea bass","Mid",2001,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.11913563781022,FALSE,30,0.557461460468078,FALSE
+"74","Black sea bass","Mid",2002,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.20100690144608,FALSE,30,0.557461460468078,FALSE
+"75","Black sea bass","Mid",2003,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.43994708716007,FALSE,30,0.557461460468078,FALSE
+"76","Black sea bass","Mid",2004,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.23179050013897,FALSE,30,0.557461460468078,FALSE
+"77","Black sea bass","Mid",2005,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.00177382992635,FALSE,30,0.557461460468078,FALSE
+"78","Black sea bass","Mid",2006,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.06771668484637,FALSE,30,0.557461460468078,FALSE
+"79","Black sea bass","Mid",2007,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.1508140608002,FALSE,30,0.557461460468078,FALSE
+"80","Black sea bass","Mid",2008,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.31398879257961,FALSE,30,0.557461460468078,FALSE
+"81","Black sea bass","Mid",2009,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",1.86641432356701,FALSE,30,0.557461460468078,FALSE
+"82","Black sea bass","Mid",2010,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.83972571969491,FALSE,30,0.557461460468078,FALSE
+"83","Black sea bass","Mid",2011,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.61064653890135,FALSE,30,0.557461460468078,FALSE
+"84","Black sea bass","Mid",2012,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.66219618460158,FALSE,30,0.557461460468078,FALSE
+"85","Black sea bass","Mid",2013,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",3.4275632097748,FALSE,30,0.557461460468078,FALSE
+"86","Black sea bass","Mid",2014,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.79152578434186,FALSE,30,0.557461460468078,FALSE
+"87","Black sea bass","Mid",2015,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.76964968292129,FALSE,30,0.557461460468078,FALSE
+"88","Black sea bass","Mid",2016,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.36701737377916,FALSE,30,0.557461460468078,FALSE
+"89","Black sea bass","Mid",2017,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.71918314214546,FALSE,30,0.557461460468078,FALSE
+"90","Black sea bass","Mid",2018,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","recreational CPUE
+number of fish caught per day fished (all species)",2.22163577245031,FALSE,30,0.557461460468078,FALSE
+"91","Black sea bass","Mid",1989,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",4.13767980795599,FALSE,30,0.537570958157301,FALSE
+"92","Black sea bass","Mid",1990,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",3.18951244311742,FALSE,30,0.537570958157301,FALSE
+"93","Black sea bass","Mid",1991,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",3.43615713682841,FALSE,30,0.537570958157301,FALSE
+"94","Black sea bass","Mid",1992,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.91931103692896,FALSE,30,0.537570958157301,FALSE
+"95","Black sea bass","Mid",1993,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.44110948570262,FALSE,30,0.537570958157301,FALSE
+"96","Black sea bass","Mid",1994,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.53823378500309,FALSE,30,0.537570958157301,FALSE
+"97","Black sea bass","Mid",1995,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.09285325320061,FALSE,30,0.537570958157301,FALSE
+"98","Black sea bass","Mid",1996,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",1.7818406637159,FALSE,30,0.537570958157301,FALSE
+"99","Black sea bass","Mid",1997,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.01429356438314,FALSE,30,0.537570958157301,FALSE
+"100","Black sea bass","Mid",1998,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",1.79260316828951,FALSE,30,0.537570958157301,FALSE
+"101","Black sea bass","Mid",1999,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",1.9499994572924,FALSE,30,0.537570958157301,FALSE
+"102","Black sea bass","Mid",2000,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.38501518124824,FALSE,30,0.537570958157301,FALSE
+"103","Black sea bass","Mid",2001,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.11913563781022,FALSE,30,0.537570958157301,FALSE
+"104","Black sea bass","Mid",2002,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.20100690144608,FALSE,30,0.537570958157301,FALSE
+"105","Black sea bass","Mid",2003,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.43994708716007,FALSE,30,0.537570958157301,FALSE
+"106","Black sea bass","Mid",2004,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.23179050013897,FALSE,30,0.537570958157301,FALSE
+"107","Black sea bass","Mid",2005,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.00177382992635,FALSE,30,0.537570958157301,FALSE
+"108","Black sea bass","Mid",2006,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.06771668484637,FALSE,30,0.537570958157301,FALSE
+"109","Black sea bass","Mid",2007,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.1508140608002,FALSE,30,0.537570958157301,FALSE
+"110","Black sea bass","Mid",2008,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.31398879257961,FALSE,30,0.537570958157301,FALSE
+"111","Black sea bass","Mid",2009,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",1.86641432356701,FALSE,30,0.537570958157301,FALSE
+"112","Black sea bass","Mid",2010,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.83972571969491,FALSE,30,0.537570958157301,FALSE
+"113","Black sea bass","Mid",2011,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.61064653890135,FALSE,30,0.537570958157301,FALSE
+"114","Black sea bass","Mid",2012,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.66219618460158,FALSE,30,0.537570958157301,FALSE
+"115","Black sea bass","Mid",2013,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",3.4275632097748,FALSE,30,0.537570958157301,FALSE
+"116","Black sea bass","Mid",2014,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.79152578434186,FALSE,30,0.537570958157301,FALSE
+"117","Black sea bass","Mid",2015,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.76964968292129,FALSE,30,0.537570958157301,FALSE
+"118","Black sea bass","Mid",2016,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.36701737377916,FALSE,30,0.537570958157301,FALSE
+"119","Black sea bass","Mid",2017,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.71918314214546,FALSE,30,0.537570958157301,FALSE
+"120","Black sea bass","Mid",2018,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","recreational CPUE
+number of fish caught per day fished (all species)",2.22163577245031,FALSE,30,0.537570958157301,FALSE
+"121",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"recreational CPUE
+number of fish caught per day fished (all species)",7.27647105785162,TRUE,0,NA,NA
+"122",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"recreational CPUE
+number of fish caught per day fished (all species)",5.78752805584714,TRUE,0,NA,NA
+"123",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"recreational CPUE
+number of fish caught per day fished (all species)",5.20611040014539,TRUE,0,NA,NA
+"124",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"recreational CPUE
+number of fish caught per day fished (all species)",6.76055976410869,TRUE,0,NA,NA
+"125",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"recreational CPUE
+number of fish caught per day fished (all species)",8.41133752735727,TRUE,0,NA,NA
+"126",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"recreational CPUE
+number of fish caught per day fished (all species)",6.16777649341004,TRUE,0,NA,NA
+"127",NA,NA,1988,NA,NA,NA,NA,NA,NA,NA,"recreational CPUE
+number of fish caught per day fished (all species)",4.95745297309715,TRUE,0,NA,NA
+"128",NA,NA,2019,NA,NA,NA,NA,NA,NA,NA,"recreational CPUE
+number of fish caught per day fished (all species)",2.20225451954371,TRUE,0,NA,NA

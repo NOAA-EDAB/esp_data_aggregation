@@ -1,5 +1,77 @@
 ## Trophic indicators
 
+
+### Chlorophyll
+```{r, chl}
+test <- ecodata::chl_pp %>%
+  dplyr::mutate(Var = Var %>%
+    stringr::str_replace_all("_", "\n") %>%
+    stringr::str_replace_all(" ", "\n")) %>%
+  dplyr::filter(stringr::str_detect(Var, "ANNUAL")) %>% # only annual indices
+  dplyr::mutate(Time = Time %>%
+    stringr::str_replace("A_", "") %>%
+    as.numeric())
+NEesp::render_indicator(test, lab = names[1])
+
+# data_prep(stock, test, lag = params$lag) %>% knitr::kable()
+```
+
+### Chlorophyll in stock region
+```{r, chl-stock}
+test <- ecodata::ESP_seasonal_chl %>%
+  dplyr::mutate(Pattern_check = ESP %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
+  dplyr::distinct()
+
+if (nrow(test) > 0) {
+  if (length(unique(test$Pattern_check)) > 1) {
+    # add stock region into var for faceting
+    test <- test %>%
+      dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
+        stringr::str_replace_all("_", "") %>%
+        stringr::str_wrap(width = 8))
+    NEesp::render_indicator(test, lab = names[1])
+  } else {
+    test <- test %>%
+      dplyr::mutate(Var = paste0(Var, "_stock"))
+
+    NEesp::render_indicator(test, lab = names[1])
+  }
+} else {
+  "Indicator data has not been parsed over this stock's region"
+}
+```
+
+### Primary production in stock region
+```{r, pp-stock}
+test <- ecodata::ESP_seasonal_pp %>%
+  dplyr::mutate(Pattern_check = ESP %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, params$stock)) %>%
+  dplyr::distinct()
+
+if (nrow(test) > 0) {
+  if (length(unique(test$Pattern_check)) > 1) {
+    # add stock region into var for faceting
+    test <- test %>%
+      dplyr::mutate(Var = paste(Var, Pattern_check, sep = " ") %>%
+        stringr::str_replace_all("_", "") %>%
+        stringr::str_wrap(width = 8))
+    NEesp::render_indicator(test, lab = names[1])
+  } else {
+    test <- test %>%
+      dplyr::mutate(Var = paste0(Var, "_stock"))
+
+    NEesp::render_indicator(test, lab = names[1])
+  }
+} else {
+  "Indicator data has not been parsed over this stock's region"
+}
+```
+
 ### Spring zooplankton abundance by species
 ```{r, zoo-oi-spring}
 test <- ecodata::zoo_oi %>%

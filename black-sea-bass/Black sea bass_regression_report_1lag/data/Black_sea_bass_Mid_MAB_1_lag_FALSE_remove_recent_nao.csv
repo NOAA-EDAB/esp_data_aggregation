@@ -1,0 +1,731 @@
+"","Species","Region","Time","Value","Metric","Description","Units","AssessmentYear","max_year","facet","Var","Val","missing","n_data_points","pval","sig"
+"1","Black sea bass","Mid",1988,3194,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",0.72,FALSE,30,0.61984351023187,FALSE
+"2","Black sea bass","Mid",1989,3040,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",5.08,FALSE,30,0.61984351023187,FALSE
+"3","Black sea bass","Mid",1990,3142,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",3.96,FALSE,30,0.61984351023187,FALSE
+"4","Black sea bass","Mid",1991,2914,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",1.03,FALSE,30,0.61984351023187,FALSE
+"5","Black sea bass","Mid",1992,3573,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",3.28,FALSE,30,0.61984351023187,FALSE
+"6","Black sea bass","Mid",1993,2443,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",2.67,FALSE,30,0.61984351023187,FALSE
+"7","Black sea bass","Mid",1994,3171,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",3.03,FALSE,30,0.61984351023187,FALSE
+"8","Black sea bass","Mid",1995,4724,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",3.96,FALSE,30,0.61984351023187,FALSE
+"9","Black sea bass","Mid",1996,3973,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",-3.78,FALSE,30,0.61984351023187,FALSE
+"10","Black sea bass","Mid",1997,2263,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",-0.17,FALSE,30,0.61984351023187,FALSE
+"11","Black sea bass","Mid",1998,2736,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",0.72,FALSE,30,0.61984351023187,FALSE
+"12","Black sea bass","Mid",1999,3939,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",1.7,FALSE,30,0.61984351023187,FALSE
+"13","Black sea bass","Mid",2000,5025,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",2.8,FALSE,30,0.61984351023187,FALSE
+"14","Black sea bass","Mid",2001,5518,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",-1.9,FALSE,30,0.61984351023187,FALSE
+"15","Black sea bass","Mid",2002,4595,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",0.76,FALSE,30,0.61984351023187,FALSE
+"16","Black sea bass","Mid",2003,3521,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",0.2,FALSE,30,0.61984351023187,FALSE
+"17","Black sea bass","Mid",2004,3173,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",-0.07,FALSE,30,0.61984351023187,FALSE
+"18","Black sea bass","Mid",2005,2933,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",0.12,FALSE,30,0.61984351023187,FALSE
+"19","Black sea bass","Mid",2006,2920,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",-1.09,FALSE,30,0.61984351023187,FALSE
+"20","Black sea bass","Mid",2007,3132,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",2.79,FALSE,30,0.61984351023187,FALSE
+"21","Black sea bass","Mid",2008,3838,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",2.1,FALSE,30,0.61984351023187,FALSE
+"22","Black sea bass","Mid",2009,5121,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",-0.41,FALSE,30,0.61984351023187,FALSE
+"23","Black sea bass","Mid",2010,2771,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",-4.64,FALSE,30,0.61984351023187,FALSE
+"24","Black sea bass","Mid",2011,5108,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",-1.57,FALSE,30,0.61984351023187,FALSE
+"25","Black sea bass","Mid",2012,4739,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",3.17,FALSE,30,0.61984351023187,FALSE
+"26","Black sea bass","Mid",2013,5896,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",-1.97,FALSE,30,0.61984351023187,FALSE
+"27","Black sea bass","Mid",2014,6969,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",3.1,FALSE,30,0.61984351023187,FALSE
+"28","Black sea bass","Mid",2015,9412,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",3.56,FALSE,30,0.61984351023187,FALSE
+"29","Black sea bass","Mid",2016,10162,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",0.98,FALSE,30,0.61984351023187,FALSE
+"30","Black sea bass","Mid",2017,7277,"Catch","Total Catch","Metric Tons",2019,2019,"Catch
+Total Catch
+Metric Tons","north atlantic oscillation
+unitless",1.47,FALSE,30,0.61984351023187,FALSE
+"31","Black sea bass","Mid",1988,1.13999998569489,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",0.72,FALSE,30,0.104816032812188,FALSE
+"32","Black sea bass","Mid",1989,1.0900000333786,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",5.08,FALSE,30,0.104816032812188,FALSE
+"33","Black sea bass","Mid",1990,1.03999996185303,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",3.96,FALSE,30,0.104816032812188,FALSE
+"34","Black sea bass","Mid",1991,0.930000007152557,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",1.03,FALSE,30,0.104816032812188,FALSE
+"35","Black sea bass","Mid",1992,1.05999994277954,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",3.28,FALSE,30,0.104816032812188,FALSE
+"36","Black sea bass","Mid",1993,0.870000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",2.67,FALSE,30,0.104816032812188,FALSE
+"37","Black sea bass","Mid",1994,0.740000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",3.03,FALSE,30,0.104816032812188,FALSE
+"38","Black sea bass","Mid",1995,0.920000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",3.96,FALSE,30,0.104816032812188,FALSE
+"39","Black sea bass","Mid",1996,0.839999973773956,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",-3.78,FALSE,30,0.104816032812188,FALSE
+"40","Black sea bass","Mid",1997,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",-0.17,FALSE,30,0.104816032812188,FALSE
+"41","Black sea bass","Mid",1998,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",0.72,FALSE,30,0.104816032812188,FALSE
+"42","Black sea bass","Mid",1999,0.540000021457672,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",1.7,FALSE,30,0.104816032812188,FALSE
+"43","Black sea bass","Mid",2000,0.620000004768372,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",2.8,FALSE,30,0.104816032812188,FALSE
+"44","Black sea bass","Mid",2001,0.660000026226044,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",-1.9,FALSE,30,0.104816032812188,FALSE
+"45","Black sea bass","Mid",2002,0.579999983310699,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",0.76,FALSE,30,0.104816032812188,FALSE
+"46","Black sea bass","Mid",2003,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",0.2,FALSE,30,0.104816032812188,FALSE
+"47","Black sea bass","Mid",2004,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",-0.07,FALSE,30,0.104816032812188,FALSE
+"48","Black sea bass","Mid",2005,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",0.12,FALSE,30,0.104816032812188,FALSE
+"49","Black sea bass","Mid",2006,0.550000011920929,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",-1.09,FALSE,30,0.104816032812188,FALSE
+"50","Black sea bass","Mid",2007,0.490000009536743,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",2.79,FALSE,30,0.104816032812188,FALSE
+"51","Black sea bass","Mid",2008,0.670000016689301,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",2.1,FALSE,30,0.104816032812188,FALSE
+"52","Black sea bass","Mid",2009,0.759999990463257,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",-0.41,FALSE,30,0.104816032812188,FALSE
+"53","Black sea bass","Mid",2010,0.409999996423721,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",-4.64,FALSE,30,0.104816032812188,FALSE
+"54","Black sea bass","Mid",2011,0.600000023841858,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",-1.57,FALSE,30,0.104816032812188,FALSE
+"55","Black sea bass","Mid",2012,0.569999992847443,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",3.17,FALSE,30,0.104816032812188,FALSE
+"56","Black sea bass","Mid",2013,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",-1.97,FALSE,30,0.104816032812188,FALSE
+"57","Black sea bass","Mid",2014,0.330000013113022,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",3.1,FALSE,30,0.104816032812188,FALSE
+"58","Black sea bass","Mid",2015,0.349999994039536,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",3.56,FALSE,30,0.104816032812188,FALSE
+"59","Black sea bass","Mid",2016,0.519999980926514,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",0.98,FALSE,30,0.104816032812188,FALSE
+"60","Black sea bass","Mid",2017,0.419999986886978,"Fmort","Average F - Ages 6 - 7 - Retrospective Adjusted","Rate",2019,2019,"Fmort
+Average F - Ages 6 - 7 - Retrospective Adjusted
+Rate","north atlantic oscillation
+unitless",1.47,FALSE,30,0.104816032812188,FALSE
+"61","Black sea bass","Mid",1988,24387,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",0.72,FALSE,30,0.689308900058393,FALSE
+"62","Black sea bass","Mid",1989,29781,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",5.08,FALSE,30,0.689308900058393,FALSE
+"63","Black sea bass","Mid",1990,34070,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",3.96,FALSE,30,0.689308900058393,FALSE
+"64","Black sea bass","Mid",1991,29042,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",1.03,FALSE,30,0.689308900058393,FALSE
+"65","Black sea bass","Mid",1992,19965,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",3.28,FALSE,30,0.689308900058393,FALSE
+"66","Black sea bass","Mid",1993,28660,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",2.67,FALSE,30,0.689308900058393,FALSE
+"67","Black sea bass","Mid",1994,36892,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",3.03,FALSE,30,0.689308900058393,FALSE
+"68","Black sea bass","Mid",1995,26613,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",3.96,FALSE,30,0.689308900058393,FALSE
+"69","Black sea bass","Mid",1996,26816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",-3.78,FALSE,30,0.689308900058393,FALSE
+"70","Black sea bass","Mid",1997,22880,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",-0.17,FALSE,30,0.689308900058393,FALSE
+"71","Black sea bass","Mid",1998,37237,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",0.72,FALSE,30,0.689308900058393,FALSE
+"72","Black sea bass","Mid",1999,46765,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",1.7,FALSE,30,0.689308900058393,FALSE
+"73","Black sea bass","Mid",2000,27538,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",2.8,FALSE,30,0.689308900058393,FALSE
+"74","Black sea bass","Mid",2001,31597,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",-1.9,FALSE,30,0.689308900058393,FALSE
+"75","Black sea bass","Mid",2002,19697,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",0.76,FALSE,30,0.689308900058393,FALSE
+"76","Black sea bass","Mid",2003,15713,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",0.2,FALSE,30,0.689308900058393,FALSE
+"77","Black sea bass","Mid",2004,16564,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",-0.07,FALSE,30,0.689308900058393,FALSE
+"78","Black sea bass","Mid",2005,30816,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",0.12,FALSE,30,0.689308900058393,FALSE
+"79","Black sea bass","Mid",2006,35359,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",-1.09,FALSE,30,0.689308900058393,FALSE
+"80","Black sea bass","Mid",2007,45513,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",2.79,FALSE,30,0.689308900058393,FALSE
+"81","Black sea bass","Mid",2008,34059,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",2.1,FALSE,30,0.689308900058393,FALSE
+"82","Black sea bass","Mid",2009,34419,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",-0.41,FALSE,30,0.689308900058393,FALSE
+"83","Black sea bass","Mid",2010,39651,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",-4.64,FALSE,30,0.689308900058393,FALSE
+"84","Black sea bass","Mid",2011,144684,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",-1.57,FALSE,30,0.689308900058393,FALSE
+"85","Black sea bass","Mid",2012,47802,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",3.17,FALSE,30,0.689308900058393,FALSE
+"86","Black sea bass","Mid",2013,26240,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",-1.97,FALSE,30,0.689308900058393,FALSE
+"87","Black sea bass","Mid",2014,34338,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",3.1,FALSE,30,0.689308900058393,FALSE
+"88","Black sea bass","Mid",2015,79373,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",3.56,FALSE,30,0.689308900058393,FALSE
+"89","Black sea bass","Mid",2016,47293,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",0.98,FALSE,30,0.689308900058393,FALSE
+"90","Black sea bass","Mid",2017,10058,"Recruitment","Recruits - Age 1","Thousand Recruits",2019,2019,"Recruitment
+Recruits - Age 1
+Thousand Recruits","north atlantic oscillation
+unitless",1.47,FALSE,30,0.689308900058393,FALSE
+"91","Black sea bass","Mid",1988,3181,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",0.72,FALSE,30,0.789541465545948,FALSE
+"92","Black sea bass","Mid",1989,3044,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",5.08,FALSE,30,0.789541465545948,FALSE
+"93","Black sea bass","Mid",1990,3134,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",3.96,FALSE,30,0.789541465545948,FALSE
+"94","Black sea bass","Mid",1991,3433,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",1.03,FALSE,30,0.789541465545948,FALSE
+"95","Black sea bass","Mid",1992,3449,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",3.28,FALSE,30,0.789541465545948,FALSE
+"96","Black sea bass","Mid",1993,3475,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",2.67,FALSE,30,0.789541465545948,FALSE
+"97","Black sea bass","Mid",1994,4089,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",3.03,FALSE,30,0.789541465545948,FALSE
+"98","Black sea bass","Mid",1995,4308,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",3.96,FALSE,30,0.789541465545948,FALSE
+"99","Black sea bass","Mid",1996,4131,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",-3.78,FALSE,30,0.789541465545948,FALSE
+"100","Black sea bass","Mid",1997,4636,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",-0.17,FALSE,30,0.789541465545948,FALSE
+"101","Black sea bass","Mid",1998,5893,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",0.72,FALSE,30,0.789541465545948,FALSE
+"102","Black sea bass","Mid",1999,7483,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",1.7,FALSE,30,0.789541465545948,FALSE
+"103","Black sea bass","Mid",2000,9557,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",2.8,FALSE,30,0.789541465545948,FALSE
+"104","Black sea bass","Mid",2001,10081,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",-1.9,FALSE,30,0.789541465545948,FALSE
+"105","Black sea bass","Mid",2002,9580,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",0.76,FALSE,30,0.789541465545948,FALSE
+"106","Black sea bass","Mid",2003,8247,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",0.2,FALSE,30,0.789541465545948,FALSE
+"107","Black sea bass","Mid",2004,7771,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",-0.07,FALSE,30,0.789541465545948,FALSE
+"108","Black sea bass","Mid",2005,6443,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",0.12,FALSE,30,0.789541465545948,FALSE
+"109","Black sea bass","Mid",2006,6726,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",-1.09,FALSE,30,0.789541465545948,FALSE
+"110","Black sea bass","Mid",2007,9544,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",2.79,FALSE,30,0.789541465545948,FALSE
+"111","Black sea bass","Mid",2008,11125,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",2.1,FALSE,30,0.789541465545948,FALSE
+"112","Black sea bass","Mid",2009,14061,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",-0.41,FALSE,30,0.789541465545948,FALSE
+"113","Black sea bass","Mid",2010,14129,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",-4.64,FALSE,30,0.789541465545948,FALSE
+"114","Black sea bass","Mid",2011,16730,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",-1.57,FALSE,30,0.789541465545948,FALSE
+"115","Black sea bass","Mid",2012,23657,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",3.17,FALSE,30,0.789541465545948,FALSE
+"116","Black sea bass","Mid",2013,34712,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",-1.97,FALSE,30,0.789541465545948,FALSE
+"117","Black sea bass","Mid",2014,33242,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",3.1,FALSE,30,0.789541465545948,FALSE
+"118","Black sea bass","Mid",2015,30736,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",3.56,FALSE,30,0.789541465545948,FALSE
+"119","Black sea bass","Mid",2016,26176,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",0.98,FALSE,30,0.789541465545948,FALSE
+"120","Black sea bass","Mid",2017,33407,"Abundance","Spawning Stock Biomass - Retrospective Adjusted","Metric Tons",2019,2019,"Abundance
+Spawning Stock Biomass - Retrospective Adjusted
+Metric Tons","north atlantic oscillation
+unitless",1.47,FALSE,30,0.789541465545948,FALSE
+"121",NA,NA,1864,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.02,TRUE,0,NA,NA
+"122",NA,NA,1865,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.24,TRUE,0,NA,NA
+"123",NA,NA,1866,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.54,TRUE,0,NA,NA
+"124",NA,NA,1867,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.38,TRUE,0,NA,NA
+"125",NA,NA,1868,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.81,TRUE,0,NA,NA
+"126",NA,NA,1869,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.7,TRUE,0,NA,NA
+"127",NA,NA,1870,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-3.01,TRUE,0,NA,NA
+"128",NA,NA,1871,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.01,TRUE,0,NA,NA
+"129",NA,NA,1872,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.76,TRUE,0,NA,NA
+"130",NA,NA,1873,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.5,TRUE,0,NA,NA
+"131",NA,NA,1874,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.32,TRUE,0,NA,NA
+"132",NA,NA,1875,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.35,TRUE,0,NA,NA
+"133",NA,NA,1876,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.21,TRUE,0,NA,NA
+"134",NA,NA,1877,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.05,TRUE,0,NA,NA
+"135",NA,NA,1878,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.46,TRUE,0,NA,NA
+"136",NA,NA,1879,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.22,TRUE,0,NA,NA
+"137",NA,NA,1880,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.89,TRUE,0,NA,NA
+"138",NA,NA,1881,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-3.8,TRUE,0,NA,NA
+"139",NA,NA,1882,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",3.87,TRUE,0,NA,NA
+"140",NA,NA,1883,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.23,TRUE,0,NA,NA
+"141",NA,NA,1884,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.44,TRUE,0,NA,NA
+"142",NA,NA,1885,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.89,TRUE,0,NA,NA
+"143",NA,NA,1886,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.12,TRUE,0,NA,NA
+"144",NA,NA,1887,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.45,TRUE,0,NA,NA
+"145",NA,NA,1888,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.75,TRUE,0,NA,NA
+"146",NA,NA,1889,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.01,TRUE,0,NA,NA
+"147",NA,NA,1890,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.78,TRUE,0,NA,NA
+"148",NA,NA,1891,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.82,TRUE,0,NA,NA
+"149",NA,NA,1892,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.02,TRUE,0,NA,NA
+"150",NA,NA,1893,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.07,TRUE,0,NA,NA
+"151",NA,NA,1894,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.68,TRUE,0,NA,NA
+"152",NA,NA,1895,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-3.97,TRUE,0,NA,NA
+"153",NA,NA,1896,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.12,TRUE,0,NA,NA
+"154",NA,NA,1897,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.09,TRUE,0,NA,NA
+"155",NA,NA,1898,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.02,TRUE,0,NA,NA
+"156",NA,NA,1899,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.03,TRUE,0,NA,NA
+"157",NA,NA,1900,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.13,TRUE,0,NA,NA
+"158",NA,NA,1901,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.33,TRUE,0,NA,NA
+"159",NA,NA,1902,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.41,TRUE,0,NA,NA
+"160",NA,NA,1903,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",3.89,TRUE,0,NA,NA
+"161",NA,NA,1904,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.23,TRUE,0,NA,NA
+"162",NA,NA,1905,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.98,TRUE,0,NA,NA
+"163",NA,NA,1906,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.06,TRUE,0,NA,NA
+"164",NA,NA,1907,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.06,TRUE,0,NA,NA
+"165",NA,NA,1908,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.44,TRUE,0,NA,NA
+"166",NA,NA,1909,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0,TRUE,0,NA,NA
+"167",NA,NA,1910,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.1,TRUE,0,NA,NA
+"168",NA,NA,1911,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.29,TRUE,0,NA,NA
+"169",NA,NA,1912,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.24,TRUE,0,NA,NA
+"170",NA,NA,1913,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.69,TRUE,0,NA,NA
+"171",NA,NA,1914,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.48,TRUE,0,NA,NA
+"172",NA,NA,1915,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.2,TRUE,0,NA,NA
+"173",NA,NA,1916,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.69,TRUE,0,NA,NA
+"174",NA,NA,1917,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-3.8,TRUE,0,NA,NA
+"175",NA,NA,1918,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.8,TRUE,0,NA,NA
+"176",NA,NA,1919,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.8,TRUE,0,NA,NA
+"177",NA,NA,1920,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",3.18,TRUE,0,NA,NA
+"178",NA,NA,1921,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.63,TRUE,0,NA,NA
+"179",NA,NA,1922,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.85,TRUE,0,NA,NA
+"180",NA,NA,1923,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.73,TRUE,0,NA,NA
+"181",NA,NA,1924,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.13,TRUE,0,NA,NA
+"182",NA,NA,1925,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.39,TRUE,0,NA,NA
+"183",NA,NA,1926,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.11,TRUE,0,NA,NA
+"184",NA,NA,1927,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.72,TRUE,0,NA,NA
+"185",NA,NA,1928,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.63,TRUE,0,NA,NA
+"186",NA,NA,1929,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.03,TRUE,0,NA,NA
+"187",NA,NA,1930,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.91,TRUE,0,NA,NA
+"188",NA,NA,1931,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.16,TRUE,0,NA,NA
+"189",NA,NA,1932,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.5,TRUE,0,NA,NA
+"190",NA,NA,1933,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.25,TRUE,0,NA,NA
+"191",NA,NA,1934,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.86,TRUE,0,NA,NA
+"192",NA,NA,1935,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.97,TRUE,0,NA,NA
+"193",NA,NA,1936,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-3.89,TRUE,0,NA,NA
+"194",NA,NA,1937,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.72,TRUE,0,NA,NA
+"195",NA,NA,1938,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.79,TRUE,0,NA,NA
+"196",NA,NA,1939,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.37,TRUE,0,NA,NA
+"197",NA,NA,1940,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.86,TRUE,0,NA,NA
+"198",NA,NA,1941,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.31,TRUE,0,NA,NA
+"199",NA,NA,1942,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.55,TRUE,0,NA,NA
+"200",NA,NA,1943,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.48,TRUE,0,NA,NA
+"201",NA,NA,1944,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.61,TRUE,0,NA,NA
+"202",NA,NA,1945,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.64,TRUE,0,NA,NA
+"203",NA,NA,1946,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.27,TRUE,0,NA,NA
+"204",NA,NA,1947,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.71,TRUE,0,NA,NA
+"205",NA,NA,1948,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.34,TRUE,0,NA,NA
+"206",NA,NA,1949,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.87,TRUE,0,NA,NA
+"207",NA,NA,1950,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.4,TRUE,0,NA,NA
+"208",NA,NA,1951,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.26,TRUE,0,NA,NA
+"209",NA,NA,1952,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.83,TRUE,0,NA,NA
+"210",NA,NA,1953,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.18,TRUE,0,NA,NA
+"211",NA,NA,1954,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.13,TRUE,0,NA,NA
+"212",NA,NA,1955,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.52,TRUE,0,NA,NA
+"213",NA,NA,1956,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.73,TRUE,0,NA,NA
+"214",NA,NA,1957,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.52,TRUE,0,NA,NA
+"215",NA,NA,1958,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.02,TRUE,0,NA,NA
+"216",NA,NA,1959,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.37,TRUE,0,NA,NA
+"217",NA,NA,1960,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.54,TRUE,0,NA,NA
+"218",NA,NA,1961,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.8,TRUE,0,NA,NA
+"219",NA,NA,1962,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.38,TRUE,0,NA,NA
+"220",NA,NA,1963,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-3.6,TRUE,0,NA,NA
+"221",NA,NA,1964,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.86,TRUE,0,NA,NA
+"222",NA,NA,1965,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.88,TRUE,0,NA,NA
+"223",NA,NA,1966,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.69,TRUE,0,NA,NA
+"224",NA,NA,1967,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.28,TRUE,0,NA,NA
+"225",NA,NA,1968,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.04,TRUE,0,NA,NA
+"226",NA,NA,1969,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-4.89,TRUE,0,NA,NA
+"227",NA,NA,1970,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-1.89,TRUE,0,NA,NA
+"228",NA,NA,1971,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.96,TRUE,0,NA,NA
+"229",NA,NA,1972,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.34,TRUE,0,NA,NA
+"230",NA,NA,1973,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.52,TRUE,0,NA,NA
+"231",NA,NA,1974,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.23,TRUE,0,NA,NA
+"232",NA,NA,1975,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.63,TRUE,0,NA,NA
+"233",NA,NA,1976,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.37,TRUE,0,NA,NA
+"234",NA,NA,1977,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.14,TRUE,0,NA,NA
+"235",NA,NA,1978,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.17,TRUE,0,NA,NA
+"236",NA,NA,1979,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-2.25,TRUE,0,NA,NA
+"237",NA,NA,1980,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.56,TRUE,0,NA,NA
+"238",NA,NA,1981,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",2.05,TRUE,0,NA,NA
+"239",NA,NA,1982,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.8,TRUE,0,NA,NA
+"240",NA,NA,1983,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",3.42,TRUE,0,NA,NA
+"241",NA,NA,1984,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",1.6,TRUE,0,NA,NA
+"242",NA,NA,1985,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.63,TRUE,0,NA,NA
+"243",NA,NA,1986,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.5,TRUE,0,NA,NA
+"244",NA,NA,1987,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",-0.75,TRUE,0,NA,NA
+"245",NA,NA,2018,NA,NA,NA,NA,NA,NA,NA,"north atlantic oscillation
+unitless",0.3,TRUE,0,NA,NA
