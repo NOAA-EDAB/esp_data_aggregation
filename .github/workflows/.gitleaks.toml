@@ -104,4 +104,4 @@ title = "gitleaks config"
 	files = ['''^\.?gitleaks.toml$''',
 	'''(.*?)(png|jpg|gif|doc|pdf|bin)$''',
 	'''(go.mod|go.sum)$''']
-	regex = '''data:image/png;base64[.]{1, 100000}width'''
+	regexes = ['''data:image(.){1,}width''']
