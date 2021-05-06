@@ -10,9 +10,9 @@ NEesp::render_ind_report("Black sea bass")
 
 ## source new functions if needed
 
-`%>%` <- magrittr::`%>%`
-`.pt` <- ggplot2::`.pt`
-source(here::here("R-scripts/package-dev", "life_history_functions.R"))
+#`%>%` <- magrittr::`%>%`
+#`.pt` <- ggplot2::`.pt`
+#source(here::here("R-scripts/package-dev", "life_history_functions.R"))
 #source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
 
 NEesp::render_ind_report("Black sea bass", 
