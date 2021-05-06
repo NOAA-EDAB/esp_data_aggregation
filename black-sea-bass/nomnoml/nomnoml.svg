@@ -1,0 +1,175 @@
+<svg version="1.1" baseProfile="full" width="973.125" height="951" viewbox="0 0 973.125 951" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" style="font:bold  12pt Helvetica, Helvetica, sans-serif;;stroke-linejoin:round;stroke-linecap:round">
+  <desc >#gravity: 0
+#.bsb: fill=#8f8
+#.bsbb: fill=#8f8 visual=rhomb
+
+[&lt;bsb&gt; eggs and larvae] -&gt; [&lt;bsbb&gt; recruitment]
+[recruitment] -&gt; [&lt;bsb&gt; YOY and juveniles] 
+[YOY and juveniles] -&gt; [&lt;bsb&gt; adults]
+[adults] -&gt; [&lt;bsbb&gt; spawning] 
+[&lt;bsbb&gt; spawning] -&gt; [eggs and larvae]
+[adults] &lt;-&gt; [&lt;bsb&gt; sneaker males] 
+
+[environment |
+	[&lt;state&gt; cold pool] --&gt; [&lt;state&gt; temperature]
+	[&lt;state&gt; marine heatwaves] --&gt; [temperature]
+	[&lt;state&gt; sea surface temperature] --&gt; [temperature]
+]
+[environment] --&gt; [spawning]
+[environment] --&gt; [recruitment]
+
+[habitat | reef | salt marsh]
+
+[habitat] --&gt; [YOY and juveniles]
+[habitat] --&gt; [adults]
+
+[organisms |
+	[&lt;state&gt; phytoplankton] &lt;--&gt; [&lt;state&gt; zooplankton]
+    [&lt;state&gt; zooplankton] &lt;--&gt; [&lt;state&gt; other fish]
+]
+[organisms] --&gt; [&lt;state&gt; food]
+[organisms] --&gt; [&lt;state&gt; predation]
+
+[&lt;state&gt; winter survival] --&gt; [recruitment]
+[environment] --&gt; [winter survival]
+[environment] &lt;--&gt; [organisms]
+[environment] &lt;--&gt; [habitat]
+
+[&lt;state&gt; predation] --&gt; [recruitment]
+[&lt;state&gt; predation] --&gt; [winter survival]
+[&lt;state&gt; food] --&gt; [winter survival]
+
+[fisheries removals |
+	[&lt;state&gt; CPUE] &lt;--&gt; [&lt;state&gt; fish distribution]
+	[&lt;state&gt; TAC]	
+]
+[&lt;state&gt; fisheries removals] &lt;--&gt; [adults]
+[fisheries removals] --&gt; [sneaker males]
+
+
+
+
+
+
+
+
+
+
+
+</desc>
+  <rect x="0" y="0" height="951" width="973.125" style="stroke:none; fill:transparent;"></rect>
+  <path d="M459.5 857 L544.9 878.7 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M537.1 882.3 L544.9 878.7 L539.8 871.9 L551.4 880.4 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M584.8 877 L516.6 841.5 L516.6 782.8 L516.6 782.8 L516.6 629.5 L516.6 629.5 L410.4 436.3 L410.4 436.3 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M418.3 439.6 L410.4 436.3 L408.9 444.8 L407.2 430.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M398.6 430.5 L398.6 607.3 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M393.3 600.7 L398.6 607.3 L404 600.7 L398.6 614 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M398.6 645 L398.6 752.8 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M393.3 746.2 L398.6 752.8 L404 746.2 L398.6 759.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M398.6 806 L398.6 819.3 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M393.3 812.7 L398.6 819.3 L404 812.7 L398.6 826 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M367.8 648.5 L180.6 763.8 " style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M183.5 755.7 L180.6 763.8 L189.1 764.8 L174.9 767.3 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M364.9 656.5 L367.8 648.5 L359.3 647.4 L373.5 645 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M607 197.5 L589.4 264 L589.4 415 L589.4 415 L589.4 629.5 L589.4 629.5 L432.8 755.3 L432.8 755.3 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M434.6 747 L432.8 755.3 L441.3 755.3 L427.6 759.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M629.4 197.5 L629.4 264 L629.4 415 L629.4 415 L629.4 629.5 L629.4 629.5 L629.4 782.8 L629.4 782.8 L629.4 841.5 L629.4 841.5 L629.4 870.3 L629.4 870.3 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M624 863.7 L629.4 870.3 L634.7 863.7 L629.4 877 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M424.6 310.5 L404.1 393 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M400.5 385.3 L404.1 393 L410.9 387.8 L402.5 399.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M460.9 310.5 L516.6 415 L410.4 608.2 L410.4 608.2 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M408.9 599.7 L410.4 608.2 L418.3 604.9 L407.2 614 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M792.2 739.5 L779.7 761.5 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M778.4 753 L779.7 761.5 L787.6 758.3 L776.4 767.3 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M871.1 739.5 L874.3 760.7 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M868 754.9 L874.3 760.7 L878.6 753.3 L875.3 767.3 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M731.2 857 L690.2 874.4 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M694.3 866.9 L690.2 874.4 L698.4 876.7 L684.1 877 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M669.7 197.5 L701.4 264 L701.4 415 L701.4 415 L701.4 629.5 L701.4 629.5 L701.4 782.8 L701.4 782.8 L745.2 821.6 L745.2 821.6 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M736.6 821.1 L745.2 821.6 L743.7 813.2 L750.1 826 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M761 201.2 L854.6 264 L854.6 415 L854.6 415 L854.6 512.8 L854.6 512.8 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M849.3 506.2 L854.6 512.8 L860 506.2 L854.6 519.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M769.5 200.5 L761 201.2 L763.5 209.4 L755.4 197.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M516 201.6 L486.4 224.7 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M488.3 216.4 L486.4 224.7 L494.9 224.8 L481.1 228.8 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M514 209.9 L516 201.6 L507.4 201.5 L521.2 197.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M877.6 798.3 L877.6 841.5 L713.9 880.3 L713.9 880.3 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M719.1 873.5 L713.9 880.3 L721.6 883.9 L707.4 881.8 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M848.6 798.3 L802.5 822.9 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M805.9 815 L802.5 822.9 L810.9 824.4 L796.6 826 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M767.6 798.3 L767.6 819.3 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M762.3 812.7 L767.6 819.3 L773 812.7 L767.6 826 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M252.8 503.9 L375.6 609.6 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M367.1 609.3 L375.6 609.6 L374 601.3 L380.6 614 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M261.4 504.2 L252.8 503.9 L254.4 512.2 L247.8 499.5 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M149.8 499.5 L149.8 629.5 L149.8 760.6 L149.8 760.6 " style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M144.4 753.9 L149.8 760.6 L155.1 753.9 L149.8 767.3 Z" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <rect x="391.5" y="217.5" height="93" width="90" data-name="habitat" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
+  <path d="M391.5 248.5 L481.5 248.5" data-name="habitat" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M391.5 279.5 L481.5 279.5" data-name="habitat" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="436.5" y="239" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="habitat">habitat</text>
+  <text x="399.5" y="270" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="habitat">reef</text>
+  <text x="399.5" y="301" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="habitat">salt marsh</text>
+  <rect x="340.5" y="28.5" height="169" width="578" data-name="environment" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
+  <path d="M340.5 59.5 L918.5 59.5" data-name="environment" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="629.5" y="50" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="environment">environment</text>
+  <path d="M455.5 116.8 L517.4 136.5 " data-name="environment" style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M509.4 139.5 L517.4 136.5 L512.6 129.4 L523.7 138.5 Z" data-name="environment" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M572.5 118.5 L572.5 131.8 " data-name="environment" style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M567.2 125.2 L572.5 131.8 L577.8 125.2 L572.5 138.5 Z" data-name="environment" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M723.9 118.5 L633 139.8 " data-name="environment" style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M638.3 133.1 L633 139.8 L640.7 143.5 L626.5 141.3 Z" data-name="environment" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <rect x="368.5" y="87.5" rx="15.5" ry="15.5" height="31" width="87" data-name="cold pool" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="412" y="109" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="cold pool">cold pool</text>
+  <rect x="518.5" y="138.5" rx="15.5" ry="15.5" height="31" width="108" data-name="temperature" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="572.5" y="160" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="temperature">temperature</text>
+  <rect x="495.5" y="87.5" rx="15.5" ry="15.5" height="31" width="154" data-name="marine heatwaves" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="572.5" y="109" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="marine heatwaves">marine heatwaves</text>
+  <rect x="689.5" y="87.5" rx="15.5" ry="15.5" height="31" width="201" data-name="sea surface temperature" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="790" y="109" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="sea surface temperature">sea surface temperature</text>
+  <rect x="763.5" y="519.5" height="220" width="182" data-name="organisms" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
+  <path d="M763.5 550.5 L945.5 550.5" data-name="organisms" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="854.5" y="541" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="organisms">organisms</text>
+  <path d="M854.5 616.2 L854.5 622.8 " data-name="organisms" style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M849.2 616.2 L854.5 622.8 L859.8 616.2 L854.5 629.5 Z" data-name="organisms" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M859.8 622.8 L854.5 616.2 L849.2 622.8 L854.5 609.5 Z" data-name="organisms" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M854.5 667.2 L854.5 673.8 " data-name="organisms" style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M849.2 667.2 L854.5 673.8 L859.8 667.2 L854.5 680.5 Z" data-name="organisms" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M859.8 673.8 L854.5 667.2 L849.2 673.8 L854.5 660.5 Z" data-name="organisms" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <rect x="791.5" y="578.5" rx="15.5" ry="15.5" height="31" width="126" data-name="phytoplankton" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="854.5" y="600" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="phytoplankton">phytoplankton</text>
+  <rect x="799.5" y="629.5" rx="15.5" ry="15.5" height="31" width="110" data-name="zooplankton" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="854.5" y="651" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="zooplankton">zooplankton</text>
+  <rect x="810.5" y="680.5" rx="15.5" ry="15.5" height="31" width="89" data-name="other fish" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="855" y="702" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="other fish">other fish</text>
+  <rect x="28.5" y="330.5" height="169" width="242.5" data-name="fisheries removals" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
+  <path d="M28.5 361.5 L271 361.5" data-name="fisheries removals" style="stroke:#33322E;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="149.8" y="352" style="fill: #33322E;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="fisheries removals">fisheries removals</text>
+  <path d="M125 427.2 L125 433.8 " data-name="fisheries removals" style="stroke:#33322E;fill:none;stroke-dasharray:6 6;stroke-width:3;"></path>
+  <path d="M119.7 427.2 L125 433.8 L130.3 427.2 L125 440.5 Z" data-name="fisheries removals" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M130.3 433.8 L125 427.2 L119.7 433.8 L125 420.5 Z" data-name="fisheries removals" style="stroke:#33322E;fill:#33322E;stroke-dasharray:none;stroke-width:3;"></path>
+  <rect x="95.5" y="389.5" rx="15.5" ry="15.5" height="31" width="60" data-name="CPUE" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="125.5" y="411" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="CPUE">CPUE</text>
+  <rect x="56.5" y="440.5" rx="15.5" ry="15.5" height="31" width="137" data-name="fish distribution" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="125" y="462" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="fish distribution">fish distribution</text>
+  <rect x="195.5" y="389.5" rx="15.5" ry="15.5" height="31" width="48" data-name="TAC" style="stroke:#33322E;fill:#fdf6e3;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="219.5" y="411" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="TAC">TAC</text>
+  <rect x="330.5" y="826.5" height="31" width="137" data-name="eggs and larvae" style="stroke:#33322E;fill:#8f8;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="399" y="848" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="eggs and larvae">eggs and larvae</text>
+  <path d="M629.4 877.5 L707.5 900.3 L629.4 924 L551.5 900.3 Z" data-name="recruitment" style="stroke:#33322E;fill:#8f8;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="629.5" y="906.8" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="recruitment">recruitment</text>
+  <rect x="320.5" y="399.5" height="31" width="156" data-name="YOY and juveniles" style="stroke:#33322E;fill:#8f8;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="398.5" y="421" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="YOY and juveniles">YOY and juveniles</text>
+  <rect x="367.5" y="614.5" height="31" width="63" data-name="adults" style="stroke:#33322E;fill:#8f8;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="399" y="636" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="adults">adults</text>
+  <path d="M398.6 759.5 L466.5 782.8 L398.6 806 L331.5 782.8 Z" data-name="spawning" style="stroke:#33322E;fill:#8f8;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="399" y="788.8" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="spawning">spawning</text>
+  <rect x="86.5" y="767.5" height="31" width="126" data-name="sneaker males" style="stroke:#33322E;fill:#8f8;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="149.5" y="789" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="sneaker males">sneaker males</text>
+  <rect x="742.5" y="767.5" rx="15.5" ry="15.5" height="31" width="51" data-name="food" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="768" y="789" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="food">food</text>
+  <rect x="833.5" y="767.5" rx="15.5" ry="15.5" height="31" width="89" data-name="predation" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="878" y="789" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="predation">predation</text>
+  <rect x="703.5" y="826.5" rx="15.5" ry="15.5" height="31" width="128" data-name="winter survival" style="stroke:#33322E;fill:#eee8d5;stroke-dasharray:none;stroke-width:3;"></rect>
+  <text x="767.5" y="848" style="fill: #33322E;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="winter survival">winter survival</text>
+</svg>
