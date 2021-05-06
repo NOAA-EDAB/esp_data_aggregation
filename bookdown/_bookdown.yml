@@ -30,7 +30,6 @@ rmd_files: [
 "catch-rec.Rmd",
 "catch-com.Rmd",
 "landings-data.Rmd",
-#"recreational-landings-effort.Rmd",
 "ffmsy.Rmd", 
 "revenue.Rmd", 
 "management.Rmd", 
