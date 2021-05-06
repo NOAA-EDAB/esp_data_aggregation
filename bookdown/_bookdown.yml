@@ -26,10 +26,13 @@ rmd_files: [
 "fxn-age-diversity.Rmd",
 "climate-vulnerability.Rmd", 
 "socio-economic-title-page.Rmd", #Title page 
-"catch.Rmd",
-"Commercial-landings.Rmd",
-"recreational-landings-effort.Rmd",
+"catch-asmt.Rmd",
+"catch-rec.Rmd",
+"catch-com.Rmd",
+"landings-data.Rmd",
+#"recreational-landings-effort.Rmd",
 "ffmsy.Rmd", 
 "revenue.Rmd", 
 "management.Rmd", 
-"risk-assessment.Rmd"]
+"risk-assessment.Rmd",
+"appendix.Rmd"]

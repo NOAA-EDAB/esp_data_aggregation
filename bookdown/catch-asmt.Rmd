@@ -1,0 +1,45 @@
+## Catch and landings
+
+```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
+```
+
+Stock assessment catch data are from ``r params$asmt_source``. Recreational catch data were downloaded from [NOAA MRIP](https://www.st.nmfs.noaa.gov/st1/recreational/MRIP_Estimate_Data/CSV/). Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
+
+
+```{r}
+if (nrow(asmt_data %>% dplyr::filter(Metric == "Catch")) > 0) {
+  ndesc <- asmt_data %>%
+    dplyr::filter(Metric == "Catch") %>%
+    dplyr::mutate(options = paste(Description, Units)) %>%
+    dplyr::select(options) %>%
+    unique() %>%
+    nrow()
+} else {
+  ndesc <- 1
+}
+```
+
+
+### Stock assessment catch
+
+
+```{r, catch, fig.cap = paste(species, "assessment catch")}
+#  fig.height = ndesc * 10
+NEesp::plot_asmt(asmt_data,
+  metric = "Catch",
+  ytitle = "Catch",
+  lin = lines,
+  col = colors
+)
+```
+
+
+#### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("asmt_catch")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
