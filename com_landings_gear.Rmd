@@ -3,62 +3,90 @@ title: "Commercial landings"
 author: "Ricky Tabandera"
 date: "5/3/2021"
 output: html_document
-prarams:
-  species: "Black sea bass"
+params:
+  species: Black sea bass
 ---
 
-```{r setup, include=FALSE}
+```{r com-gear-setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(comlandr)
 library(dbutils)
 library(remotes)
 library(tidyverse)
-
+library(rio)
 
 ```
 
 ### Commercial fishing gear 
-Fishing gear can range widely in their catchability, selectivity, and effective areas of opperations. Using `comlandr` to extract reported gear used in the many commercial fisheries in the north east and any trends and/or shifts that may have occured as one potentual explanitory factor on changes in fisheries landings/revenue.  
+Fishing gear can range widely in their catch ability, selectivity, and effective areas of operations. Using `comlandr` to extract reported gear used in the many commercial fisheries in the northeast and any trends and/or shifts that may have occurred as one potential explanatory factor on changes in fisheries landings/revenue.  
 
 ```{r gear-wrangling}
-load(file="com_landings_test.rdata")
-com_gear<-`50B45718`
-com_key<-unique(com_gear$NESPP3)
+
+com_gear<-rio::import(here::here("com_landings_test.rdata"))
+sp_group<-rio::import(here::here("data", "species_groupings_V2.csv"))
+
+sp_group<-sp_group %>% filter(!is.na(SVSPP)) %>% select(COMNAME, SVSPP, ITISSPP, NESPP3 , SCINAME) 
+sp_group<-sp_group  %>%  mutate_at(c("COMNAME", "SCINAME"), .funs = str_to_sentence)
 #unsure if NESPP3 and SVSPP are the same, going to asume so and correct later if not 
-sp_key<-NEesp::species_key
-sp_key<- sp_key %>% dplyr::rename("NESPP3"="SVSPP")
-key_join<-dplyr::left_join(com_gear,sp_key,by="NESPP3" )
+
+
+key_join<-dplyr::left_join(com_gear,sp_group,by="NESPP3" )
 
 ```
 
-## Including Plots
+### Gear usage by year
 
-You can also embed plots, for example:
+Each landing record included gear type used, size class of gear, ecological production unit, species landed, weight of catch
 
 ```{r gear, echo=FALSE}
 
 key_join <-key_join %>% drop_na()
-key_join %>% 
+if(nrow(key_join)>6){
+  key_join %>% 
   group_by(YEAR, GEAR) %>%
   dplyr::summarise(gear.count=length(GEAR))%>%
   ggplot2::ggplot(aes(x= YEAR,y= gear.count,color=GEAR))+
   ggplot2::geom_point()+
   geom_line()+
-  nmfspalette::scale_fill_nmfs(palette = "regional web")+
+  nmfspalette::scale_color_nmfs(palette = "regional web")+
   theme(axis.text.x = element_text(angle = 90))+
   xlab("Year")+
   ylab("# gear type records")
+}else("No Data")
 
 
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+#### Commercial gear types used to land 'r params$species'
+
+```{r, gear-by-species}
+
+gear.spp<-key_join%>% filter(COMNAME == params$species)
+
+if(nrow(gear.spp)>5){
+  gear.spp %>% 
+  group_by(YEAR, EPU) %>% 
+  mutate(gear.count=length(GEAR)) %>%  
+  ggplot2::ggplot(aes(x=YEAR, y=gear.count, fill=GEAR))+
+  ggplot2::geom_bar(stat="identity",name = "Gear Type")+
+  theme(axis.text.x = element_text(angle = 90))+
+  labs(fill="Gear Type")+
+  nmfspalette::scale_fill_nmfs(palette = "regional web")
+  # scale_fill_discrete(name = "Gear Type")
+  }else("No data")
+
+```
+#### Diversity index of gear type across EPUs
+
 ```{r, gear-diversity}
 
 gear.diversity<-key_join %>% group_by(YEAR, EPU, GEAR) %>% summarise(gear.count=(length(GEAR))) 
-
-gear.diversity<-gear.diversity %>%
-  group_by(YEAR, GEAR) %>%
+if(nrow(gear.diversity)>5){
+  gear.diversity<-gear.diversity %>%
+  group_by(YEAR,EPU) %>%
   mutate( gear.prop= (gear.count/sum(gear.count)))
 
 
@@ -67,34 +95,38 @@ gear.H<-gear.diversity %>% group_by(YEAR, EPU) %>% dplyr::summarise(shannon= -su
 gear.H %>% ggplot(aes(x=YEAR, y= shannon, color=EPU))+
   geom_point()+
   geom_line()+
+  nmfspalette::scale_color_nmfs(palette = "regional web")+
   xlab("Year")+
   ylab("gear diversity index (H')")
 
 
 
-
+}else("No data")
 ```
+
+
+#### Diversity index of gear used to land 'rparams$species' across EPUs
 
 ```{r}
 
-key_join %>%
-  ggplot2::ggplot(aes(x=GEAR,fill=GEAR))+
-  ggplot2::geom_point()+
-  nmfspalette::scale_fill_nmfs(palette = "regional web")+
-  theme(axis.text.x = element_text(angle = 90))
 
-```
+spp.diversity<-gear.spp %>% group_by(YEAR, GEAR, EPU) %>% summarise(gear.count=(length(GEAR))) 
+
+spp.diversity<-spp.diversity %>%
+  group_by(YEAR, EPU) %>%
+  mutate( gear.prop= (gear.count/sum(gear.count)))
 
 
-```{r, gear-by-species}
-gear.spp<-key_join%>% filter(Species=="Black sea bass")
-  
-gear.spp %>% 
-  group_by(YEAR, EPU) %>% 
-  mutate(gear.count=length(GEAR)) %>%  
-  ggplot2::ggplot(aes(x=YEAR, y=gear.count, fill=GEAR))+
-  ggplot2::geom_bar(stat="identity")+
-  theme(axis.text.x = element_text(angle = 90))
-
+spp.H<-spp.diversity %>% group_by(YEAR, EPU) %>% dplyr::summarise(shannon= -sum(gear.prop*log(gear.prop))) 
+if(nrow(spp.H)>5){
+  spp.H %>% 
+  ggplot(aes(x=YEAR,y=shannon, color=EPU))+
+  geom_point()+
+  geom_line()+
+  nmfspalette::scale_color_nmfs(palette = "regional web")+
+  xlab("Year")+
+  ylab("gear diversity index (H')")+
+  ggtitle(label=params$species)
+}else("No data")
 ```
 
