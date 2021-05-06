@@ -5,13 +5,13 @@
 # install.packages("ggpubr")
 # devtools::install_github("james-thorson/FishLife")
 
-suppressPackageStartupMessages(library(FishLife))
-suppressPackageStartupMessages(library(tidyverse))
-suppressPackageStartupMessages(library(nlstools))
-library(rfishbase)
-library(ggpubr)
-library(FSA)
-library(NEesp)
+#suppressPackageStartupMessages(library(FishLife))
+#suppressPackageStartupMessages(library(tidyverse))
+#suppressPackageStartupMessages(library(nlstools))
+#library(rfishbase)
+#library(ggpubr)
+#library(FSA)
+#library(NEesp)
 ```
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
@@ -23,14 +23,14 @@ selected.surv <- survdata.w.codes %>%
   dplyr::filter(common_name == species)
 
 # only take records with age associated
-selected.surv.clean <- selected.surv %>% drop_na(AGE)
+selected.surv.clean <- selected.surv %>% tidyr::drop_na(AGE)
 ```
 
 
 ```{r, vonb-model}
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # define the type of von b model
-  vb <- vbFuns(param = "Typical")
+  vb <- FSA::vbFuns(param = "Typical")
   # define starting parameters based on the avalible data
   f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "oldAge")
 
@@ -109,7 +109,7 @@ The rate of growth may vary through time and between sexes. To assess for potent
 
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # define the type of von b model
-  vb <- vbFuns(param = "Typical")
+  vb <- FSA::vbFuns(param = "Typical")
   # define starting parameters based on the avalible data
   f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "oldAge")
 
@@ -148,7 +148,7 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
 
 
   # sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
-  selected.surv.w.predicted$SEX <- recode(selected.surv.w.predicted$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" = "transitional")
+  selected.surv.w.predicted$SEX <- dplyr::recode(selected.surv.w.predicted$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" = "transitional")
   # filter out unknown and transitional as they require more detailed analysis
   selected.surv.w.predicted <- selected.surv.w.predicted %>% dplyr::filter(SEX %in% c("male", "female"))
 
@@ -183,13 +183,11 @@ The fit of each of these grouping to the global model is visualized as the distr
 ```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade")}
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   selected.surv.w.predicted %>%
-    ggplot(aes(x = SEX, y = residual.standardized, fill = Decade)) +
-    geom_boxplot() +
+    ggplot2::ggplot(ggplot2::aes(x = SEX, y = residual.standardized, fill = Decade)) +
+    ggplot2::geom_boxplot() +
     nmfspalette::scale_fill_nmfs() +
-    xlab("Sex") +
-    ylab("standardized residuals")
-
-
+    ggplot2::xlab("Sex") +
+    ggplot2::ylab("standardized residuals")
 
 
   # unbalenced design of ancova needs to be tested later

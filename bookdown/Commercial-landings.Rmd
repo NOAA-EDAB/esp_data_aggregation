@@ -14,8 +14,8 @@ selected_com_sp <- com_landings_clean %>%
 
 selected_com_state <- com_landings_clean %>%
   dplyr::group_by(Year, State) %>%
-  filter(Species == params$species) %>%
-  summarise(total_pounds = sum(Pounds, na.rm = FALSE), total_dollars = sum(Dollars, na.rm = FALSE))
+  dplyr::filter(Species == params$species) %>%
+  dplyr::summarise(total_pounds = sum(Pounds, na.rm = FALSE), total_dollars = sum(Dollars, na.rm = FALSE))
 
 ##########################
 
@@ -23,8 +23,8 @@ selected_com_state <- com_landings_clean %>%
 data_qual <- TRUE
 
 num_states <- selected_com_state %>%
-  group_by(State) %>%
-  count()
+  dplyr::group_by(State) %>%
+  dplyr::count()
 
 if (min(num_states$n) < 5) {
   data_qual <- FALSE
@@ -175,7 +175,6 @@ if (nrow(stock_price) > 5) {
 #### inflation adjusted price history of `r params$species` across states in the mid-Atlantic and north-east regions 
 
 
-
 ```{r, inflation-adjusted-price-across-states-good-data, eval=data_qual}
 if (nrow(stock_price) > 3) {
   stock_price %>%
@@ -190,8 +189,6 @@ if (nrow(stock_price) > 3) {
   ("Not enough data")
 }
 ```
-
-
 
 
 

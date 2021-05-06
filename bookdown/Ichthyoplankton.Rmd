@@ -8,7 +8,7 @@ Ichthyoplankton surveyed during the Marine Resources Monitoring, Assessment, and
 
 ```{r, ich-wrangle}
 # filter to just one species of interest
-selected_spp <- NEesp::ichthyo %>% filter(common_name == params$species)
+selected_spp <- NEesp::ichthyo %>% dplyr::filter(common_name == params$species)
 ```
 
 
