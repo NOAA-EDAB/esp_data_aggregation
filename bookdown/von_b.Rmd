@@ -16,18 +16,11 @@ library(NEesp)
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
 
-# survdata <- readRDS(here::here("data", "survdat_pull_bio.rds"))
-
 # load bio survdat information from the package
 survdata.w.codes <- NEesp::common_names_survdat("bio")
 
 selected.surv <- survdata.w.codes %>%
   dplyr::filter(common_name == species)
-
-
-# selected.surv <- survdata.w.codes %>%
-#   dplyr::filter(common_name == "Black sea bass")
-
 
 # only take records with age associated
 selected.surv.clean <- selected.surv %>% drop_na(AGE)
@@ -67,32 +60,32 @@ The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth
 ```{r single-growth-curve, fig.cap = paste(species, "length at age growth curve")}
 # palette
 if (nrow(selected.surv.clean) > 0) {
-  fig <- ggplot(
+  fig <- ggplot2::ggplot(
     data = selected.surv.clean,
-    aes(
+    ggplot2::aes(
       x = AGE,
       y = LENGTH,
       color = YEAR %>% as.numeric()
     )
   ) +
-    geom_jitter(alpha = 0.5) +
-    scale_color_gradientn(
+    ggplot2::geom_jitter(alpha = 0.5) +
+    ggplot2::scale_color_gradientn(
       colors = nmfspalette::nmfs_palette("regional web")(4),
       name = "Year"
     ) +
-    xlim(0, (1.2 * max(selected.surv.clean$AGE))) +
-    ylim(0, (1.2 * max(selected.surv.clean$LENGTH, na.rm = TRUE))) +
-    xlab("Age (jittered)") +
-    ylab(" Total length (cm) (jittered)") +
-    # ggtitle(species, subtitle = "Length at age") +
-    theme_minimal()
+    ggplot2::xlim(0, (1.2 * max(selected.surv.clean$AGE))) +
+    ggplot2::ylim(0, (1.2 * max(selected.surv.clean$LENGTH, na.rm = TRUE))) +
+    ggplot2::xlab("Age (jittered)") +
+    ggplot2::ylab(" Total length (cm) (jittered)") +
+    # ggplot2::ggtitle(species, subtitle = "Length at age") +
+    ggplot2::theme_minimal()
 
   if (nrow(selected.surv.vonb) > 0) {
     fig <- fig +
-      geom_line(
+      ggplot2::geom_line(
         data = selected.surv.vonb,
         inherit.aes = FALSE,
-        mapping = aes(
+        mapping = ggplot2::aes(
           x = AGE,
           y = LENGTH
         ),
@@ -108,13 +101,11 @@ if (nrow(selected.surv.clean) > 0) {
 ```
 
 
-
 ### Growth differences among groups
 The rate of growth may vary through time and between sexes. To assess for potential differences in growth among these groups, the global von Bertalanffy growth model was constructed and the residuals of each observation and the predicted size was tested for significant differences among groups and through time. 
 
 ```{r, growth_diff_testing}
 # testing a Common L8 and t0 Model.
-
 
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # define the type of von b model
@@ -134,13 +125,13 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # make a dataset with the values from the model
   selected.surv.vonb.int <- data.frame(AGE = seq(0, 50), LENGTH = predict(f.fit, newdata = newages.int))
   # name the predicted length col to avoid conflicts later
-  selected.surv.vonb.int <- selected.surv.vonb.int %>% rename("LENGTH_predicted" = "LENGTH")
+  selected.surv.vonb.int <- selected.surv.vonb.int %>% dplyr::rename("LENGTH_predicted" = "LENGTH")
   # join with original data set
-  selected.surv.w.predicted <- left_join(selected.surv.clean, selected.surv.vonb.int, by = "AGE")
+  selected.surv.w.predicted <- dplyr::left_join(selected.surv.clean, selected.surv.vonb.int, by = "AGE")
   # calculate residuals of predicted length and actual length
-  selected.surv.w.predicted <- selected.surv.w.predicted %>% mutate("vonB.residual" = (LENGTH - LENGTH_predicted))
+  selected.surv.w.predicted <- selected.surv.w.predicted %>% dplyr::mutate("vonB.residual" = (LENGTH - LENGTH_predicted))
   # standardize growth
-  selected.surv.w.predicted <- selected.surv.w.predicted %>% mutate("residual.standardized" = (vonB.residual / LENGTH_predicted))
+  selected.surv.w.predicted <- selected.surv.w.predicted %>% dplyr::mutate("residual.standardized" = (vonB.residual / LENGTH_predicted))
 } else {
   print("Not enough data to test differences")
 }
@@ -159,7 +150,7 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
   # sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
   selected.surv.w.predicted$SEX <- recode(selected.surv.w.predicted$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" = "transitional")
   # filter out unknown and transitional as they require more detailed analysis
-  selected.surv.w.predicted <- selected.surv.w.predicted %>% filter(SEX %in% c("male", "female"))
+  selected.surv.w.predicted <- selected.surv.w.predicted %>% dplyr::filter(SEX %in% c("male", "female"))
 
   # construct an ancova with the interaction between sex and decade to test for differences in fit to von b curve across decades and both sexes
   pred.von.b.ancova <- lm(residual.standardized ~ SEX + Decade + SEX * Decade, data = selected.surv.w.predicted)
