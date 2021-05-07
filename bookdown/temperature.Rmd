@@ -34,13 +34,13 @@ NEesp::plot_ecodata(ecodat_tanom)
 ### Summary
 ```{r, temp_summary}
 NEesp::generate_table(survey_data,
-                      type = params$file,
+  type = params$file,
   variable = "SURFTEMP",
   cap = "Surface temperature"
 )
 
 NEesp::generate_table(survey_data,
-                      type = params$file,
+  type = params$file,
   variable = "BOTTEMP",
   cap = "Bottom temperature"
 )
@@ -72,12 +72,13 @@ data <- survey_data %>%
   ) %>%
   NEesp::character_to_factor() # mean by season-year
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c(
-  "Year", "Season", "Region",
-  "Mean surface temperature", "Mean bottom temperature"
-))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c(
+    "Year", "Season", "Region",
+    "Mean surface temperature", "Mean bottom temperature"
+  )
+)
 ```
 
 #### `ecodata` data {-}
@@ -85,6 +86,6 @@ NEesp::make_html_table(data,
 ecodat_tanom %>%
   dplyr::select(-Pattern_check) %>%
   dplyr::mutate(Value = Value %>%
-                  round(digits = 2)) %>%
+    round(digits = 2)) %>%
   NEesp::make_html_table(type = params$file)
 ```

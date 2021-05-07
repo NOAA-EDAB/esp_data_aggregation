@@ -97,9 +97,10 @@ data <- survey_data %>%
     format(big.mark = ",")) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c("Year", "Season", "Region", "Abundance"))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c("Year", "Season", "Region", "Abundance")
+)
 ```
 
 #### Survey data (swept area estimates) {-}
@@ -115,9 +116,10 @@ data <- swept_data %>%
       format(big.mark = ",")
   )
 
-NEesp::make_html_table(data, 
-                       type = params$file,
-                       col_names = c("Year", "Abundance", "Standard error"))
+NEesp::make_html_table(data,
+  type = params$file,
+  col_names = c("Year", "Abundance", "Standard error")
+)
 ```
 
 #### Assessment data {-}
@@ -131,7 +133,8 @@ data <- asmt_data %>%
     format(big.mark = ",")) %>%
   NEesp::character_to_factor()
 
-NEesp::make_html_table(data, 
-                       type = params$file)
+NEesp::make_html_table(data,
+  type = params$file
+)
 ```
 

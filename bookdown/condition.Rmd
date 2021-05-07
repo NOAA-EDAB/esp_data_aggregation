@@ -53,11 +53,12 @@ data <- diet_data %>%
   NEesp::character_to_factor()
 
 NEesp::make_html_table(data,
-                       type = params$file,
-                       col_names = c(
-  "Region", "Year", "Season", "Fish length (cm)",
-  "Fish weight (g)", "Condition (g/cm^3)"
-))
+  type = params$file,
+  col_names = c(
+    "Region", "Year", "Season", "Fish length (cm)",
+    "Fish weight (g)", "Condition (g/cm^3)"
+  )
+)
 ```
 
 #### Relative weight condition factor {-}
@@ -71,9 +72,10 @@ data <- cond_data %>%
   NEesp::character_to_factor()
 
 NEesp::make_html_table(data,
-                       type = params$file,
-                       col_names = c(
-  "EPU", "Fish sex", "Year", "Mean condition",
-  "Number of fish"
-))
+  type = params$file,
+  col_names = c(
+    "EPU", "Fish sex", "Year", "Mean condition",
+    "Number of fish"
+  )
+)
 ```

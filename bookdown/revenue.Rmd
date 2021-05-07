@@ -2,7 +2,134 @@
 
 Commercial catch data were downloaded from [NOAA FOSS](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::).
 
-### Figure
+### Figures
+
+#### Non-inflation adjusted price history of `r params$species`
+The calculated price is dollars per pound of reported landings. 
+
+
+```{r Non-inflation-adjusted-price-history  }
+
+if (nrow(selected_com_sp) > 4) {
+  selected_com_sp %>%
+    dplyr::mutate(price_per_lb = (total_dollars / total_pounds)) %>%
+    ggplot2::ggplot(ggplot2::aes(x = Year, y = price_per_lb)) +
+    tidyquant::geom_ma(n = 5, lwd = 1.4) +
+    ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average ") +
+    ggplot2::xlab(label = "Year") +
+    ggplot2::ylab(label = "Price per pound (lb/$) ") +
+    ggplot2::theme_minimal()
+} else {
+  ("Not enough data")
+}
+```
+
+#### Non-inflation adjusted price history of `r params$species` across states in the mid-Atlantic and north-east regions
+The calculated price is dollars per pound of reported landings. 
+
+
+```{r Non-inflation-adjusted-price-history-across-states-good-data , eval=data_qual}
+
+if (nrow(selected_com_state) > 4) {
+  selected_com_state %>%
+    dplyr::mutate(price_per_lb = (total_dollars / total_pounds)) %>%
+    ggplot2::ggplot(ggplot2::aes(x = Year, y = price_per_lb)) +
+    tidyquant::geom_ma(ggplot2::aes(color = State, lty = State), n = 5, lwd = 1.4, show.legend = FALSE) +
+    ggplot2::facet_wrap(ggplot2::vars(State)) +
+    ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average ") +
+    ggplot2::xlab(label = "Year") +
+    ggplot2::ylab(label = "Price per pound (lb/$) ") +
+    ggplot2::theme_minimal()
+} else {
+  ("Not enough data")
+}
+```
+
+```{r Non-inflation-adjusted-price-history-across-states-poor-data , eval=!data_qual}
+
+if (nrow(selected_com_state) > 4) {
+  selected_com_state %>%
+    dplyr::mutate(price_per_lb = (total_dollars / total_pounds)) %>%
+    ggplot2::ggplot(ggplot2::aes(x = Year, y = price_per_lb)) +
+    ggplot2::geom_point(ggplot2::aes(color = State), show.legend = FALSE) +
+    ggplot2::geom_line(ggplot2::aes(color = State), show.legend = FALSE) +
+    ggplot2::facet_wrap(ggplot2::vars(State)) +
+    ggplot2::ggtitle(label = params$species, subtitle = "Data coverage for some states is poor with >5 years reported") +
+    ggplot2::xlab(label = "Year") +
+    ggplot2::ylab(label = "Price per pound (lb/$) ") +
+    ggplot2::theme_minimal()
+} else {
+  ("Not enough data")
+}
+```
+
+#### inflation adjusted price history of `r params$species`
+The price history  adjusted to 2019 values using data from the World Bank inflation data as informed by Inflation adjustment calculations in Principles of Macroeconomics by Gregory Mankiw et al (2014). Adjustments performed using the packages [priceR](https://github.com/stevecondylios/priceR).
+
+```{r, inflation-adjusted-price-history }
+
+
+stock_price <- selected_com_state %>%
+  dplyr::group_by(Year) %>%
+  dplyr::mutate(price_per_lb = (total_dollars / total_pounds))
+country <- "US"
+stock_price$adj_price <- priceR::adjust_for_inflation(stock_price$price_per_lb, stock_price$Year, country, to_date = 2019)
+
+
+if (nrow(stock_price) > 5) {
+  stock_price %>%
+    dplyr::group_by(Year) %>%
+    dplyr::summarise(adj_ave_price = mean(adj_price)) %>%
+    ggplot2::ggplot(ggplot2::aes(x = Year, y = adj_ave_price)) +
+    tidyquant::geom_ma(n = 5, lwd = 1.4) +
+    ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average ") +
+    ggplot2::xlab(label = "Year") +
+    ggplot2::ylab(label = "Price per pound (lb/$) in 2019 value ") +
+    ggplot2::theme_minimal()
+} else {
+  ("Not enough data")
+}
+```
+
+
+#### inflation adjusted price history of `r params$species` across states in the mid-Atlantic and north-east regions 
+
+
+```{r, inflation-adjusted-price-across-states-good-data, eval=data_qual}
+if (nrow(stock_price) > 3) {
+  stock_price %>%
+    ggplot2::ggplot(ggplot2::aes(x = Year, y = adj_price)) +
+    tidyquant::geom_ma(ggplot2::aes(color = State), n = 5, lwd = 1.4, show.legend = FALSE) +
+    ggplot2::facet_wrap(ggplot2::vars(State)) +
+    ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average ") +
+    ggplot2::xlab(label = "Year") +
+    ggplot2::ylab(label = "Price per pound (lb/$) in 2019 value ") +
+    ggplot2::theme_minimal()
+} else {
+  ("Not enough data")
+}
+```
+
+
+
+```{r, inflation-adjusted-price-across-states-poor-data, eval=!data_qual}
+if (nrow(stock_price) > 3) {
+  stock_price %>%
+    ggplot2::ggplot(ggplot2::aes(x = Year, y = adj_price)) +
+    ggplot2::geom_point(ggplot2::aes(color = State), show.legend = FALSE) +
+    ggplot2::geom_line(ggplot2::aes(color = State), show.legend = FALSE) +
+    ggplot2::facet_wrap(ggplot2::vars(State)) +
+    ggplot2::ggtitle(label = params$species, subtitle = "Data coverage for some states is poor with >5 years reported ") +
+    ggplot2::xlab(label = "Year") +
+    ggplot2::ylab(label = "Price per pound (lb/$) in 2019 value") +
+    ggplot2::theme_minimal()
+} else {
+  ("Not enough data")
+}
+```
+
+
+#### Revenue by state over time
 
 
 ```{r, revenue, fig.cap = paste(species, "revenue")}

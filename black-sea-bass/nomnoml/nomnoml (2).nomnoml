@@ -1,0 +1,57 @@
+
+#gravity: 0
+#.bsb: fill=#8f8
+#.bsbb: fill=#8f8 visual=rhomb
+
+[<bsb> eggs and larvae] - [<bsbb> recruitment]
+[recruitment] -> [<bsb> YOY and juveniles] 
+[YOY and juveniles] -> [<bsb> adults]
+[adults] - [<bsbb> spawning] 
+[<bsbb> spawning] -> [eggs and larvae]
+[adults] <-> [<bsb> sneaker males] 
+
+[<state> cold pool] --> [<state> temperature]
+[<state> marine heatwaves] --> [temperature]
+[<state> sea surface temperature] --> [temperature]
+
+[temperature] --> [spawning]
+[temperature] --> [recruitment]
+
+[habitat | reef | salt marsh]
+
+[habitat] --> [YOY and juveniles]
+[habitat] --> [adults]
+
+[<state> phytoplankton] <--> [<state> zooplankton]
+[<state> zooplankton] <--> [<state> other fish]
+
+[phytoplankton] --> [<state> food]
+[zooplankton] --> [food]
+[zooplankton] --> [<state> predation]
+[other fish] --> [predation]
+
+[<state> winter survival] --> [recruitment]
+[temperature] --> [winter survival]
+
+[predation] --> [recruitment]
+[predation] --> [winter survival]
+[food] --> [winter survival]
+
+[<state> CPUE] <--> [<state> fish distribution]
+[<state> TAC]	
+[TAC] --> [fisheries removals]
+[CPUE] --> [fisheries removals]
+[fish distribution] --> [fisheries removals]
+[temperature] --> [fish distribution]
+    
+[<state> fisheries removals] <--> [adults]
+[fisheries removals] --> [sneaker males]
+
+
+
+
+
+
+
+
+
