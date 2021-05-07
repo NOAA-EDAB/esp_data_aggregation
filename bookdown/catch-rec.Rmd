@@ -1,10 +1,25 @@
+### Recreational landings
 
-### Recreational catch of `r params$species`
+
+```{r, rec, fig.cap = paste(species, "recreational catch")}
+NEesp::plot_rec_catch(rec_data)
+```
+
+
+#### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("rec_catch")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
 
 
 ```{r rec-data-cleaning}
 # effort data
-rec_effort <- read.csv(here::here("data", "mrip_effort_1981_2020_rec_trips_MA_NE.csv"), stringsAsFactors = T, fileEncoding = "UTF-8-BOM")
+rec_effort <- NEesp::rec_effort
 
 # read in recreational landings data
 rec_landings_1950_2019 <- NEesp::rec_catch %>%
@@ -105,7 +120,7 @@ selected_by_state %>%
 ```
 
 
-### Visualizing Recreational fishing effort
+#### Visualizing Recreational fishing effort
 
 These records are Recreational Fisheries Statistics sourced from the [ Marine Recreational Information Program (MRIP) ](https://www.st.nmfs.noaa.gov/recreational-fisheries/data-and-documentation/queries/index) via NOAA Office of Science and Technology and are inclusive of all north and mid-Atlantic states. The records span from `r min(rec_effort$Year )` to `r max(rec_effort$Year) ` and are specific to the mode and location of effort. Effort is quantified as angler trips. Mode is divided into `r stringr::str_to_sentence(levels(rec_effort$Fishing.Mode))`.
 
@@ -155,4 +170,3 @@ by_state %>% ggplot2::ggplot(ggplot2::aes(x = Year, y = (total_trips / 100000)))
   ggplot2::xlab("Year") +
   ggplot2::ylab("Annual recreational trips in 100,000 units")
 ```
-

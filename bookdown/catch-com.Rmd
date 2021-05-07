@@ -1,0 +1,112 @@
+
+### Commercial landings
+
+
+```{r, com-data-processing}
+
+
+com_landings_clean <- NEesp::com_catch
+
+
+selected_com_sp <- com_landings_clean %>%
+  dplyr::group_by(Year) %>%
+  dplyr::filter(Species == params$species) %>%
+  dplyr::summarise(total_pounds = sum(Pounds, na.rm = FALSE), total_dollars = sum(Dollars, na.rm = FALSE))
+
+selected_com_state <- com_landings_clean %>%
+  dplyr::group_by(Year, State) %>%
+  dplyr::filter(Species == params$species) %>%
+  dplyr::summarise(total_pounds = sum(Pounds, na.rm = FALSE), total_dollars = sum(Dollars, na.rm = FALSE))
+
+##########################
+
+# red hake
+data_qual <- TRUE
+
+num_states <- selected_com_state %>%
+  dplyr::group_by(State) %>%
+  dplyr::count()
+
+if (min(num_states$n) < 5) {
+  data_qual <- FALSE
+} else {
+  data_qual <- TRUE
+}
+```
+
+
+#### Commercial Landings of `r params$species` 
+
+This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(com_landings_clean$Year) ` to `r max(com_landings_clean$Year)`. The entire data set contains `r length(unique(com_landings_clean$common_name))` species. A total of 9656 aggregated records were removed. These landing reports were aggregations of multiple species and can span several taxonomic groups were removed due to their lack of specificity. 5019 records were withheld due to confidentiality of those specific landings.
+Figures produced reflect the coverage of the data. With stocks that have high coverage, a running average is calculated. In low coverage stocks, missing values are excluded and a simple time series is produced. 
+
+
+```{r, landings-single-stock}
+
+
+if (nrow(selected_com_sp) > 4) {
+  selected_com_sp %>%
+    ggplot2::ggplot(ggplot2::aes(x = Year, y = (total_dollars / 10^6))) +
+    ggplot2::geom_point() +
+    tidyquant::geom_ma(n = 5, lwd = 1.4) +
+    ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average") +
+    ggplot2::xlab(label = "Year") +
+    ggplot2::ylab(label = "Dollar value of landings in millions ($) ") +
+    ggplot2::theme_minimal()
+} else {
+  ("No data")
+}
+```
+
+#### Commercial landings of `r params$species` across states in the mid-Atlantic and north-east regions
+
+```{r landings-across-states-good-data,  eval=data_qual}
+
+
+selected_com_state %>%
+  ggplot2::ggplot(ggplot2::aes(x = Year, y = (total_dollars / 10^6))) +
+  tidyquant::geom_ma(ggplot2::aes(color = State, lty = State), n = 3, lwd = 1.4) +
+  ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average") +
+  ggplot2::xlab(label = "Year") +
+  ggplot2::ylab(label = "Dollar value of landings in millions ($)  ") +
+  ggplot2::theme_minimal()
+```
+
+
+```{r, landings-across-states-bad-data, eval=!data_qual}
+selected_com_state %>%
+  ggplot2::ggplot(ggplot2::aes(x = Year, y = (total_dollars / 10^6))) +
+  ggplot2::geom_point(ggplot2::aes(color = State)) +
+  ggplot2::geom_line(ggplot2::aes(color = State)) +
+  ggplot2::ggtitle(label = params$species, subtitle = "Data coverage for some states is poor with >5 years reported") +
+  ggplot2::xlab(label = "Year") +
+  ggplot2::ylab(label = "Dollar value of landings in millions ($)  ") +
+  ggplot2::theme_minimal()
+```
+
+
+### Commercial landings by state and year
+
+
+```{r, com, fig.cap = paste(species, "commercial catch")}
+NEesp::plot_com(com_data)
+```
+
+
+#### Risk {-}
+
+See Methods for risk calculation details.
+```{r}
+indicators <- c("com_catch")
+```
+
+```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+### Commercial vs recreational catch
+
+
+```{r, comvrec, fig.cap = paste(species, "proportional commercial and recreational catch")}
+NEesp::plot_prop_catch(com = com_data, rec = rec_data)
+```
+

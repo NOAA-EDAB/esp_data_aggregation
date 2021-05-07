@@ -6,7 +6,7 @@ L50 or length at which 50%  maturity can be calculated using differing methods. 
 
 The relationship between sexual maturity by body size is a well established life history parameter. L50 is a useful metric in fisheries to identify sizes that are able to reproduce. This information can be used to inform regulation as to minimum catch size that should allow for a significant portion of the population to spawn and contribute genetic information to sustain the stock. Changes in this parameter can signal population/evolutionary pressures on the stock with reduction in this size potentially indicating excessive fishing pressure.
 
-```{r, L50 data wrangling}
+```{r, L50-data-wrangling}
 
 # only take records with a maturity status associated
 selected.surv.clean <- NEesp::bio_survey %>%
@@ -25,11 +25,13 @@ selected.surv.clean$MATURITY <- dplyr::recode(selected.surv.clean$MATURITY, "D" 
 # recode sex to male or female
 selected.surv.clean$SEX <- dplyr::recode(selected.surv.clean$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" = "transitional")
 
-selected.surv.clean <- selected.surv.clean %>% 
-  dplyr::mutate(SEX = as.factor(selected.surv.clean$SEX),
-         MATURITY = as.factor(MATURITY))
+selected.surv.clean <- selected.surv.clean %>%
+  dplyr::mutate(
+    SEX = as.factor(selected.surv.clean$SEX),
+    MATURITY = as.factor(MATURITY)
+  )
 
-selected.surv.f <- selected.surv.clean %>% 
+selected.surv.f <- selected.surv.clean %>%
   dplyr::filter(SEX %in% c("female", "male") & MATURITY != "X")
 ```
 
@@ -75,7 +77,7 @@ if (eval_model) {
 
 The gonadal development stage can vary between immature and mature. Once mature, there are several stages that represent phases in the spawning sequence. These stages and phases can vary across body length and the proportion of the population in each of these categories can help identify spawning size and what seasonal effects there are on development. 
 
-```{r, maturity_classification}
+```{r, maturity-classification}
 #########################
 # filter for maturity codes
 selected_surv_mat_clean <- NEesp::bio_survey %>%
@@ -83,7 +85,7 @@ selected_surv_mat_clean <- NEesp::bio_survey %>%
   dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
   dplyr::filter(Species == species) %>%
   tidyr::drop_na(MATURITY) %>%
-  dplyr::mutate(MATURITY = MATURITY %>% stringr::str_to_upper()) 
+  dplyr::mutate(MATURITY = MATURITY %>% stringr::str_to_upper())
 
 # recode maturity codes to readable names
 selected_surv_mat_clean$MATURITY <- dplyr::recode(selected_surv_mat_clean$MATURITY, "D" = "DEVELOPING", "I" = "IMMATURE", "R" = "RIPE", "S" = "SPENT", "T" = "RESTING", "U" = "RIPE AND RUNNING", "E" = "EYED", "X" = "UNKNOWN", "i" = "IMMATURE", "r" = "RIPE", "d" = "DEVELOPING", "t" = "RESTING", "1" = "UNKNOWN")
@@ -99,8 +101,10 @@ if (nrow(selected_surv_mat_clean > 5)) {
 
   dat <- mat_sum_season %>%
     dplyr::group_by(LENGTH, SEASON) %>%
-    dplyr::mutate(mat.sum = sum(mat.code.count), 
-                  prop = (mat.code.count / mat.sum)) %>%
+    dplyr::mutate(
+      mat.sum = sum(mat.code.count),
+      prop = (mat.code.count / mat.sum)
+    ) %>%
     dplyr::group_by(LENGTH)
 
   if (nrow(dat) > 0) {
@@ -129,7 +133,7 @@ if (nrow(selected_surv_mat_clean > 5)) {
 
 `r if(nrow(selected.surv.f)>3){"If the overall model is significant, there is support for the relationship between sexual maturity and body size. This model can predict the size where there are 50% odds of the indevidual is sexually mature. The results table below displays the L50 for Male and female indeviduals. "}` 
 
-```{r, model table}
+```{r, model-table}
 if (eval_model) {
   knitr::kable(pretty_mod, digits = 3)
 }
@@ -139,7 +143,7 @@ if (eval_model) {
 
 `r if(nrow(selected.surv.f)>3){"The significance of differences between sex can be determined by referencing the model summary table above differences in intercept indicate differences in mean size between groups. Differences in betta coefficents indicate increases or decreases to the degree to which probability of maturity increases across body lengths   "}`
 
-```{r model results and L50}
+```{r model-results-and-L50}
 if (eval_model) {
   if (summary(maturity.mod)$coefficients[, 4][1] < 0.05) {
 
@@ -169,19 +173,25 @@ if (eval_model) {
     sel.min <- min(selected.surv.f$LENGTH)
     sel.max <- max(selected.surv.f$LENGTH)
 
-    L50.sim.f <- boot::inv.logit(predict.glm(maturity.mod, 
-                                             newdata = data.frame(LENGTH = seq(1:sel.max), 
-                                                                  SEX = rep("female", length(seq(1:sel.max))), 
-                                                                  type = "response")))
+    L50.sim.f <- boot::inv.logit(predict.glm(maturity.mod,
+      newdata = data.frame(
+        LENGTH = seq(1:sel.max),
+        SEX = rep("female", length(seq(1:sel.max))),
+        type = "response"
+      )
+    ))
 
-    L50.sim.m <- boot::inv.logit(predict.glm(maturity.mod, 
-                                             newdata = data.frame(LENGTH = seq(1:sel.max), 
-                                                                  SEX = rep("male", length(seq(1:sel.max))), 
-                                                                  type = "response")))
+    L50.sim.m <- boot::inv.logit(predict.glm(maturity.mod,
+      newdata = data.frame(
+        LENGTH = seq(1:sel.max),
+        SEX = rep("male", length(seq(1:sel.max))),
+        type = "response"
+      )
+    ))
 
 
     selected.surv.simlulation <- data.frame(L50.sim.f, L50.sim.m, selected.surv.LENGTH)
-    selected.surv.simlulation <- selected.surv.simlulation %>% 
+    selected.surv.simlulation <- selected.surv.simlulation %>%
       tidyr::pivot_longer(!selected.surv.LENGTH, names_to = "sex", values_to = "pred")
 
 
@@ -192,13 +202,17 @@ if (eval_model) {
       ggplot2::ylab("Probability") +
       ggplot2::annotate("text", label = c("Mature", "Immature"), x = 30, y = c(1.05, -.05)) +
       ggplot2::geom_hline(yintercept = c(1, 0)) +
-      ggplot2::geom_vline(xintercept = c(L50.f, L50.m), 
-                          colour = c("#0093D0", "#FF4438"), 
-                          size = 1.4, 
-                          show.legend = TRUE) +
-      ggplot2::scale_color_manual(labels = c("Female", "Male"), 
-                                  name = "Sex", 
-                                  values = c("#0093D0", "#FF4438"))
+      ggplot2::geom_vline(
+        xintercept = c(L50.f, L50.m),
+        colour = c("#0093D0", "#FF4438"),
+        size = 1.4,
+        show.legend = TRUE
+      ) +
+      ggplot2::scale_color_manual(
+        labels = c("Female", "Male"),
+        name = "Sex",
+        values = c("#0093D0", "#FF4438")
+      )
   }
 } else {
   ("Non-significant")

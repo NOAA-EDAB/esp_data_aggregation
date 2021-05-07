@@ -1,0 +1,56 @@
+#padding: 8
+#spacing: 8
+#acyclicer: 
+
+[eggs and larvae] -> recruitment [YOY and juveniles] 
+[YOY and juveniles] -> [adults]
+[adults] -> spawning [eggs and larvae]
+
+[adults] --> [sneaker males]
+[sneaker males] --> [eggs and larvae]
+
+[environment |
+	[<state> cold pool] --> [<state> temperature]
+	[<state> marine heatwaves] --> [temperature]
+	[<state> sea surface temperature] --> [temperature]
+]
+[environment]  --> [eggs and larvae]
+
+[habitat |
+	[<state> reef]
+    [<state> salt marsh]
+]
+[habitat] --> [YOY and juveniles]
+[habitat] --> [adults]
+
+[<state> winter survival] --> [YOY and juveniles]
+[eggs and larvae] --> [winter survival]
+[environment] --> [winter survival]
+
+
+[<state> predation] --> [eggs and larvae]
+[predation] --> [YOY and juveniles]
+[<state> zooplankton] --> [predation]
+
+[<state> food] --> [winter survival]
+[<state> phytoplankton] --> [food]
+[zooplankton] --> [food]
+
+[fisheries removals |
+[<state> CPUE]
+[<state> TAC]
+[<state> fish distribution]
+]
+[<state> fisheries removals] <--> [adults]
+[fisheries removals] --> [sneaker males]
+
+
+
+
+
+
+
+
+
+
+

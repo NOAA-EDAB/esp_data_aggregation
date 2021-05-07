@@ -110,25 +110,25 @@ bio_survey <- NEesp::bio_survey
 # ecodata (temp anomaly)
 ecodat_tanom <- ecodata::ESP_seasonal_oisst_anom %>%
   dplyr::mutate(Pattern_check = ESP %>%
-                  stringr::str_replace_all("_", " ") %>%
-                  stringr::str_to_sentence()) %>%
-  dplyr::filter(stringr::str_detect(Pattern_check, species))  %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, species)) %>%
   dplyr::distinct()
 
 # ecodata (chl)
 chl_data <- ecodata::ESP_seasonal_chl %>%
   dplyr::mutate(Pattern_check = ESP %>%
-                  stringr::str_replace_all("_", " ") %>%
-                  stringr::str_to_sentence()) %>%
-  dplyr::filter(stringr::str_detect(Pattern_check, species))  %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, species)) %>%
   dplyr::distinct()
 
 # ecodata (pp)
 pp_data <- ecodata::ESP_seasonal_pp %>%
   dplyr::mutate(Pattern_check = ESP %>%
-                  stringr::str_replace_all("_", " ") %>%
-                  stringr::str_to_sentence()) %>%
-  dplyr::filter(stringr::str_detect(Pattern_check, species))  %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, species)) %>%
   dplyr::distinct()
 ```
 
@@ -171,7 +171,6 @@ NEesp::save_data(ecodat_tanom)
 NEesp::save_data(chl_data)
 
 NEesp::save_data(pp_data)
-                 
 ```
 
 This is a preliminary report of previously collected data. This report is pulling information on all Northeast `r species` stocks.

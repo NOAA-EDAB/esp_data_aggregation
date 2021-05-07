@@ -13,11 +13,11 @@ data <- NEesp::bio_survey %>%
 
 
 ```{r, depth-fig, fig.cap = paste(species, "depth")}
-plot_depth(data, species = species)
+NEesp::plot_depth(data, species = species)
 ```
 
 
 ```{r, depth-fig2, fig.cap = paste(species, "temperature at depth")}
-plot_temp_depth(data, species = species)
+NEesp::plot_temp_depth(data, species = species)
 ```
 

@@ -1,0 +1,101 @@
+#gravity: 0
+#.bsb: fill=#8f8
+#.bsbb: fill=#8f8 visual=rhomb
+
+[<bsb> eggs and larvae] - [<bsbb> recruitment]
+[recruitment] -> [<bsb> YOY and juveniles] 
+[YOY and juveniles] -> [<bsb> adults]
+[adults] - [<bsbb> spawning] 
+[<bsbb> spawning] -> [eggs and larvae]
+[adults] <-> [<bsb> sneaker males] 
+
+[environment |
+	[<state> cold pool] --> [<state> temperature]
+	[<state> marine heatwaves] --> [temperature]
+	[<state> sea surface temperature] --> [temperature]
+]
+[environment] --> [spawning]
+[environment] --> [recruitment]
+
+[habitat | reef | salt marsh]
+
+[habitat] --> [YOY and juveniles]
+[habitat] --> [adults]
+
+[organisms |
+	[<state> phytoplankton] <--> [<state> zooplankton]
+    [<state> zooplankton] <--> [<state> other fish]
+]
+[organisms] --> [<state> food]
+[organisms] --> [<state> predation]
+
+[<state> winter survival] --> [recruitment]
+[environment] --> [winter survival]
+[environment] <--> [organisms]
+[environment] <--> [habitat]
+
+[<state> predation] --> [recruitment]
+[<state> predation] --> [winter survival]
+[<state> food] --> [winter survival]
+
+[fisheries removals |
+	[<state> CPUE] <--> [<state> fish distribution]
+	[<state> TAC]	
+]
+[<state> fisheries removals] <--> [adults]
+[fisheries removals] --> [sneaker males]
+
+#gravity: 0
+#.bsb: fill=#8f8
+#.bsbb: fill=#8f8 visual=rhomb
+
+[<bsb> eggs and larvae] - [<bsbb> recruitment]
+[recruitment] -> [<bsb> YOY and juveniles] 
+[YOY and juveniles] -> [<bsb> adults]
+[adults] - [<bsbb> spawning] 
+[<bsbb> spawning] -> [eggs and larvae]
+[adults] <-> [<bsb> sneaker males] 
+
+[<state> cold pool] --> [<state> temperature]
+[<state> marine heatwaves] --> [temperature]
+[<state> sea surface temperature] --> [temperature]
+
+[temperature] --> [spawning]
+[temperature] --> [recruitment]
+
+[habitat | reef | salt marsh]
+
+[habitat] --> [YOY and juveniles]
+[habitat] --> [adults]
+
+[organisms |
+	[<state> phytoplankton] <--> [<state> zooplankton]
+    [<state> zooplankton] <--> [<state> other fish]
+]
+[organisms] --> [<state> food]
+[organisms] --> [<state> predation]
+
+[<state> winter survival] --> [recruitment]
+[environment] --> [winter survival]
+[environment] <--> [organisms]
+[environment] <--> [habitat]
+
+[<state> predation] --> [recruitment]
+[<state> predation] --> [winter survival]
+[<state> food] --> [winter survival]
+
+[fisheries removals |
+	[<state> CPUE] <--> [<state> fish distribution]
+	[<state> TAC]	
+]
+[<state> fisheries removals] <--> [adults]
+[fisheries removals] --> [sneaker males]
+
+
+
+
+
+
+
+
+

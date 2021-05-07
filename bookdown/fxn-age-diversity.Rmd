@@ -1,12 +1,7 @@
 ## Age diversity
 
-```{r data_wrangling_age, cache = params$cache, cache.lazy = FALSE}
-#selected.spp <- NEesp::bio_survey %>%
-#  dplyr::mutate(SVSPP = as.numeric(SVSPP)) %>%
-#  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
-#  dplyr::filter(Species == species)
-
-selected.spp <- Common_names_survdat("bio") %>%
+```{r data_wrangling_age}
+selected.spp <- NEesp::common_names_survdat("bio") %>%
   dplyr::filter(common_name == params$species)
 ```
 
@@ -19,7 +14,7 @@ Diversity in age measurements of a stock is a useful indicator of several factor
 
 
 ```{r, age-diversity-calculations, fig.cap = paste(species, "age diversity")}
-plot_age_diversity(selected.spp, species = species)
+NEesp::plot_age_diversity(selected.spp, species = species)
 ```
 
 
@@ -29,5 +24,5 @@ Age distribution across years of survey data of `r params$species`. These plots 
 
 
 ```{r age-density, fig.height = 12, fig.cap = paste(species, "age density")}
-plot_age_density(selected.spp)
+NEesp::plot_age_density(selected.spp)
 ```
