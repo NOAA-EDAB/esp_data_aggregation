@@ -46,8 +46,9 @@ dat <- summary(new_mod)$coefficients %>%
 
 ```{r}
 rnames <- rownames(dat) %>% 
+  stringr::str_replace_all("_", " ") %>%
   stringr::str_wrap(width = 20) %>%
-  stringr::str_replace_all("\n", "<br>")
+  stringr::str_replace_all("\n", "<br/>")
 ```
 
 ```{r}
@@ -73,7 +74,7 @@ if(length(all_coefs) == length(mod_coefs)){
   
   if(length(dropped_coefs) > 1) {
     dropped_coefs <- paste(collapse = ",")
-    print(dropped_coefs)
+   #print(dropped_coefs)
   }
 }
 

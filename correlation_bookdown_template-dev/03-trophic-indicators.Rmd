@@ -120,6 +120,86 @@ test <- ecodata::zoo_abund
 NEesp::render_indicator(test, lab = names[1])
 ```
 
+### Annual zooplankton abundance in the stock region
+```{r, zoop-stock-annual}
+if (params$stock == "Black sea bass") {
+  # load data
+  load(here::here("data", "Annual_Black_Seabass_zooplankton_anomalies.rda"))
+  test_big <- bsb.spr.anom
+  colnames(test_big) <- paste(colnames(test_big), "_annual", sep = "")
+
+  # update names for saving figs
+  names <- c(colnames(test_big), names[-1])
+
+  # loop child doc
+  for (i in 1:ncol(test_big)) {
+    test <- tibble::tibble(
+      Time = rownames(test_big),
+      Var = colnames(test_big)[i],
+      Val = test_big[, i]
+    )
+    NEesp::render_indicator(test, lab = names[1])
+  }
+} else {
+  "No data for this species yet"
+}
+```
+
+### Spring zooplankton abundance in the stock region
+```{r, zoop-stock-spring}
+if (params$stock == "Black sea bass") {
+  # load data
+  load(here::here("data", "Spring_Black_Seabass_zooplankton_anomalies.rda"))
+  test_big <- bsb.spr.anom
+  colnames(test_big) <- paste(colnames(test_big), "_spring", sep = "")
+
+  # update names for saving figs
+  names <- c(colnames(test_big), names[-1])
+
+  # loop child doc
+  for (i in 1:ncol(test_big)) {
+    test <- tibble::tibble(
+      Time = rownames(test_big),
+      Var = colnames(test_big)[i],
+      Val = test_big[, i]
+    )
+
+    # make section title (not sure why this isn't printing)
+    cat(paste("####", names[1]), "\n\n")
+
+    # render section
+    NEesp::render_indicator(test, lab = names[1])
+  }
+} else {
+  "No data for this species yet"
+}
+```
+
+### Fall zooplankton abundance in the stock region
+```{r, zoop-stock-fall}
+if (params$stock == "Black sea bass") {
+  # load data
+  load(here::here("data", "Fall_Black_Seabass_zooplankton_anomalies.rda"))
+  test_big <- bsb.spr.anom
+  colnames(test_big) <- paste(colnames(test_big), "_fall", sep = "")
+
+  # update names for saving figs
+  names <- c(colnames(test_big), names[-1])
+
+  # loop child doc
+  for (i in 1:ncol(test_big)) {
+    test <- tibble::tibble(
+      Time = rownames(test_big),
+      Var = colnames(test_big)[i],
+      Val = test_big[, i]
+    )
+    NEesp::render_indicator(test, lab = names[1])
+  }
+} else {
+  "No data for this species yet"
+}
+```
+
 ### Zooplankton diversity index
 ```{r, zoo-diversity}
 test <- ecodata::zoo_diversity
