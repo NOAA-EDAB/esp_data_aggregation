@@ -8,10 +8,12 @@ rec_effort <- read.csv(here::here("data", "mrip_effort_1981_2020_rec_trips_MA_NE
 
 # read in recreational landings data
 rec_landings_1950_2019 <- NEesp::rec_catch %>%
-    dplyr::rename(State = st_f,
-                  Year = year,
-                  Pounds = lbs_ab1)
-  
+  dplyr::rename(
+    State = st_f,
+    Year = year,
+    Pounds = lbs_ab1
+  )
+
 Selected_sp <- rec_landings_1950_2019 %>%
   dplyr::group_by(Year) %>%
   dplyr::filter(!is.na(Pounds) & Species == params$species) %>%

@@ -29,6 +29,7 @@ rmd_files: [
 "catch-asmt.Rmd",
 "catch-rec.Rmd",
 "catch-com.Rmd",
+"com_landings_gear.Rmd",
 "landings-data.Rmd",
 "ffmsy.Rmd", 
 "revenue.Rmd", 
