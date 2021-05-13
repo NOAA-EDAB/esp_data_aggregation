@@ -99,8 +99,8 @@ if (nrow(gear.spp) > 5) {
 
 #### Diversity index of gear used to land `r params$species` across EPUs
 
-```{r, gear-diversity-by-species}
 
+```{r, gear-diversity-by-species}
 
 spp.diversity <- gear.spp %>%
   dplyr::group_by(YEAR, GEAR, EPU) %>%
