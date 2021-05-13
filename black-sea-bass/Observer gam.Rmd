@@ -15,26 +15,41 @@ library(mgcv)
 
 ## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+"Hilborn and Walters (1992)
+identified two major situations that affect interpretation of mean CPUE as an index of stock
+abundance: 1) hyperstability (when abundance declines faster than CPUE declines), and 2)
+hyperdepletion (when abundance declines slower than CPUE declines). In general, a fishery with
+a situation of hyperstability could be attributed to schooling behavior or changes in the species
+spatial distribution rather than changes in abundance (van der Lee 2012). Hyperdepletion, on the
+other hand, can occur when a more vulnerable portion of the population is easily caught,
+followed by a more cryptic portion that avoids fishing mortality (van der Lee 2012).
+Hyperstability can cause overfishing to go undetected, while hyperdepletion can result in
+foregone yields when adopted management strategies such as catch limits are based on
+inaccurate estimates of abundance (Erisman et al. 2011, van der Lee 2012). "
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r cpue-data}
-OBSPP<-read.csv(here::here( "OBSPP.csv"))
 
-OBSPEC<-read.csv(here::here( "OBSPEC.csv"))
+source(here::here("r","DDMMSS_to_DD.R"))
+
+
+
+OBSPP<-rio::import(here::here("data","OBDBS" ,"OBSPP.rds"))
+
+OBSPEC<-read.csv(here::here("data","OBDBS", "OBSPEC.csv"))
 
 OB_key<-OBSPEC %>% select(SPECIES_ITIS,NESPP4 )%>% rename("ITISSPP" ="SPECIES_ITIS")
 
 OB_key_join<- dplyr::left_join(OBSPP,OB_key, by= "NESPP4")
 
-SP_group<-read.csv(here::here("species_groupings_V2.csv"))
+SP_group<-read.csv(here::here("data","species_groupings_V2.csv"))
 
 SP_key<-SP_group  %>% select( COMNAME, SVSPP, ITISSPP, NESPP3, SCINAME) %>% mutate(COMNAME= stringr::str_to_sentence(COMNAME))
 
 OB_sp_join<-dplyr::left_join(OB_key_join,SP_key, by= "ITISSPP")
 
 OB_selected<-OB_sp_join %>% filter(COMNAME == "Black sea bass")
+
 
 
 
@@ -48,13 +63,17 @@ You can also embed plots, for example:
 
 OB_selected %>% ggplot(aes(x=YEAR,y=HAILWT))+geom_bar(stat="identity")
 OB_selected <- DDMMSS_to_DD(OB_selected, "LATHBEG","LONHBEG")
+#remove rounded data that doesnt play well with conversion 
+OB_selected <- OB_selected %>% filter(LON.DD>30)
 
+t1<-data.frame("type"= seq(1:2),"lat"= c(400000,400001),"lon"=c(730118,730112))
+t2<-DDMMSS_to_DD(t1,"lat","lon")
 
 OB_selected %>% dplyr::group_by(YEAR) %>% dplyr::summarise(haul_per_yr=length(unique(LINK3)))%>% ggplot(aes(x=YEAR,y=haul_per_yr))+geom_bar(stat="identity")
 
 library(sf)
 
-OB_selected %>% ggplot(aes(x=LONHBEG))+geom_histogram()
+OB_selected %>% ggplot(aes(x=LAT.DD))+geom_histogram()
 
 ggplot(data=ecodata::coast)+
   geom_sf()+
@@ -69,10 +88,15 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 #R package mgcv using the argument ‘select’ equals ‘TRUE
 OB_selected <- OB_selected %>% mutate("AREA"=as.factor(AREA), "WGTTYPE"=as.factor(WGTTYPE))
 
+
+# make sure to shift the plot to reflect the actual range of values using seWithMean = TRUE, shift = coef(gam_model)[1]
+
+
 gam_mod <- gam(HAILWT ~ s(YEAR)+s(MONTH)+te(LON.DD,LAT.DD)+WGTTYPE, data = OB_selected, method = "REML", select=TRUE)
 coef(gam_mod)
 summary(gam_mod)
-plot(gam_mod, pages = 2,rug = TRUE)
+plot(gam_mod, pages = 2,rug = TRUE,residuals = TRUE,
+     pch = 1, cex = 1,shade = TRUE)
 install.packages("mgcViz")
 library(mgcViz)
 t1<-mgcViz::getViz(gam_mod)
