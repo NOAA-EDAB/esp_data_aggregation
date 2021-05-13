@@ -6,8 +6,8 @@ Fishing gear can range widely in their catch ability, selectivity, and effective
 
 ```{r gear-wrangling}
 
-com_gear <- rio::import(here::here("data", "com_landings_test.Rdata"))
-sp_group <- rio::import(here::here("data", "species_groupings_V2.csv"))
+com_gear <- NEesp::com_gear
+sp_group <- NEesp::sp_group
 
 sp_group <- sp_group %>%
   dplyr::filter(!is.na(SVSPP)) %>%
@@ -18,7 +18,7 @@ sp_group <- sp_group %>% dplyr::mutate_at(c("COMNAME", "SCINAME"), .funs = strin
 key_join <- dplyr::left_join(com_gear, sp_group, by = "NESPP3")
 ```
 
-### Gear usage by year
+#### Gear usage by year
 
 Each landing record included gear type used, size class of gear, ecological production unit, species landed, weight of catch
 
