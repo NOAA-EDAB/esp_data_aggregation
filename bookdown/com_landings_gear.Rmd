@@ -6,13 +6,13 @@ Fishing gear can range widely in their catch ability, selectivity, and effective
 
 ```{r gear-wrangling}
 
-com_gear <- rio::import(here::here("com_landings_test.rdata"))
+com_gear <- rio::import(here::here("data", "com_landings_test.Rdata"))
 sp_group <- rio::import(here::here("data", "species_groupings_V2.csv"))
 
 sp_group <- sp_group %>%
   dplyr::filter(!is.na(SVSPP)) %>%
   dplyr::select(COMNAME, SVSPP, ITISSPP, NESPP3, SCINAME)
-sp_group <- sp_group %>% dplyr::mutate_at(c("COMNAME", "SCINAME"), .funs = str_to_sentence)
+sp_group <- sp_group %>% dplyr::mutate_at(c("COMNAME", "SCINAME"), .funs = stringr::str_to_sentence)
 
 
 key_join <- dplyr::left_join(com_gear, sp_group, by = "NESPP3")
@@ -24,7 +24,7 @@ Each landing record included gear type used, size class of gear, ecological prod
 
 ```{r, gear-raw}
 
-key_join <- key_join %>% drop_na()
+key_join <- key_join %>% tidyr::drop_na()
 if (nrow(key_join) > 6) {
   key_join %>%
     dplyr::group_by(YEAR, GEAR) %>%
@@ -70,7 +70,7 @@ if (nrow(gear.diversity) > 5) {
 ```
 
 
-#### Commercial gear types used to land 'r params$species'
+#### Commercial gear types used to land `r params$species`
 
 ```{r, gear-by-species}
 
@@ -93,10 +93,11 @@ if (nrow(gear.spp) > 5) {
   ("No data")
 }
 ```
+
 #### Diversity index of gear type across EPUs
 
 
-#### Diversity index of gear used to land 'rparams$species' across EPUs
+#### Diversity index of gear used to land `r params$species` across EPUs
 
 ```{r, gear-diversity-by-species}
 
