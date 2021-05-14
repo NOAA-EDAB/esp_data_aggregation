@@ -5,13 +5,13 @@
 # install.packages("ggpubr")
 # devtools::install_github("james-thorson/FishLife")
 
-#suppressPackageStartupMessages(library(FishLife))
-#suppressPackageStartupMessages(library(tidyverse))
-#suppressPackageStartupMessages(library(nlstools))
-#library(rfishbase)
-#library(ggpubr)
-#library(FSA)
-#library(NEesp)
+# suppressPackageStartupMessages(library(FishLife))
+# suppressPackageStartupMessages(library(tidyverse))
+# suppressPackageStartupMessages(library(nlstools))
+# library(rfishbase)
+# library(ggpubr)
+# library(FSA)
+# library(NEesp)
 ```
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
