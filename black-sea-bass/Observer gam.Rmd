@@ -31,8 +31,8 @@ inaccurate estimates of abundance (Erisman et al. 2011, van der Lee 2012). "
 ```{r cpue-data}
 
 source(here::here("r","DDMMSS_to_DD.R"))
-
-
+#needed to prevent r from converting values to scientific notation that breaks the script that converts degree minute second cords to decimal degree
+options(scipen = 999)
 
 OBSPP<-rio::import(here::here("data","OBDBS" ,"OBSPP.rds"))
 
@@ -50,8 +50,10 @@ OB_sp_join<-dplyr::left_join(OB_key_join,SP_key, by= "ITISSPP")
 
 OB_selected<-OB_sp_join %>% filter(COMNAME == "Black sea bass")
 
+OB_selected <- DDMMSS_to_DD(OB_selected, "LATHBEG","LONHBEG") %>% filter(!is.na(LAT.DD ) & !is.na( LON.DD )) %>% mutate("LON.DD"=(-1*LON.DD))
 
 
+# OB_selected<- OB_selected %>% rename("Latitude"= "LAT.DD", "Longitude"="LON.DD")
 
 ```
 
@@ -61,13 +63,8 @@ You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
 
-OB_selected %>% ggplot(aes(x=YEAR,y=HAILWT))+geom_bar(stat="identity")
-OB_selected <- DDMMSS_to_DD(OB_selected, "LATHBEG","LONHBEG")
-#remove rounded data that doesnt play well with conversion 
-OB_selected <- OB_selected %>% filter(LON.DD>30)
 
-t1<-data.frame("type"= seq(1:2),"lat"= c(400000,400001),"lon"=c(730118,730112))
-t2<-DDMMSS_to_DD(t1,"lat","lon")
+
 
 OB_selected %>% dplyr::group_by(YEAR) %>% dplyr::summarise(haul_per_yr=length(unique(LINK3)))%>% ggplot(aes(x=YEAR,y=haul_per_yr))+geom_bar(stat="identity")
 
@@ -75,9 +72,21 @@ library(sf)
 
 OB_selected %>% ggplot(aes(x=LAT.DD))+geom_histogram()
 
-ggplot(data=ecodata::coast)+
-  geom_sf()+
-  geom_point(aes(x=LON.DD,y=LAT.DD),data=OB_selected)
+str(ecodata::coast)
+
+st_crs(ecodata::coast)
+
+OB_geo<-st_as_sf(OB_selected,coords = c("LON.DD", "LAT.DD"), crs=4269 )
+OB_geo_lim<-OB_selected %>% dplyr::summarise(lonmin=(min(LON.DD)-1), lonmax=(max(LON.DD)+1), latmin=(min(LAT.DD)-1), latmax=(max(LAT.DD)+1))
+
+
+ggplot()+
+  geom_sf(data=OB_geo,shape=21, size=.4)+
+  geom_sf(data=ecodata::coast)+
+  ggplot2::coord_sf(
+        xlim = c(OB_geo_lim$lonmin, OB_geo_lim$lonmax),
+        ylim = c(OB_geo_lim$latmin, OB_geo_lim$latmax)
+      )
 
 
 ```
@@ -88,6 +97,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 #R package mgcv using the argument ‘select’ equals ‘TRUE
 OB_selected <- OB_selected %>% mutate("AREA"=as.factor(AREA), "WGTTYPE"=as.factor(WGTTYPE))
 
+options(scipen = 100)
 
 # make sure to shift the plot to reflect the actual range of values using seWithMean = TRUE, shift = coef(gam_model)[1]
 
@@ -95,8 +105,12 @@ OB_selected <- OB_selected %>% mutate("AREA"=as.factor(AREA), "WGTTYPE"=as.facto
 gam_mod <- gam(HAILWT ~ s(YEAR)+s(MONTH)+te(LON.DD,LAT.DD)+WGTTYPE, data = OB_selected, method = "REML", select=TRUE)
 coef(gam_mod)
 summary(gam_mod)
-plot(gam_mod, pages = 2,rug = TRUE,residuals = TRUE,
-     pch = 1, cex = 1,shade = TRUE)
+# plot(gam_mod, pages = 2,rug = TRUE,residuals = TRUE,
+#      pch = 1, cex = 1,shade = TRUE)
+
+plot(gam_mod,shade = TRUE,seWithMean = TRUE, shift = coef(gam_mod)[1])
+plot(gam_mod, shade = TRUE, shade.col = "lightblue", select = 1)
+
 install.packages("mgcViz")
 library(mgcViz)
 t1<-mgcViz::getViz(gam_mod)
