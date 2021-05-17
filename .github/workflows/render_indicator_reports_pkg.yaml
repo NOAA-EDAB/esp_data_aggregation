@@ -48,7 +48,7 @@ jobs:
                  
       - name: Install more packages
         run: |
-          Rscript -e 'install.packages(c("devtools", "stringi", "car"))
+          Rscript -e 'install.packages(c("devtools", "stringi", "car", "tidyquant"))
           devtools::install_github("NOAA-EDAB/NEesp", ref = "v0.1.0", dependencies = TRUE)'
           
       - name: Render reports
