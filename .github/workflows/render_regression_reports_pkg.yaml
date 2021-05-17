@@ -48,7 +48,7 @@ jobs:
       - name: Install more packages
         run: |
           Rscript -e 'install.packages(c("stringi", "papeR", "ggnewscale"))
-          devtools::install_github("NOAA-EDAB/esp_data_aggregation@package", dependencies = TRUE)'
+          devtools::install_github("NOAA-EDAB/NEesp", ref = v0.1.0, dependencies = TRUE)'
                  
       - name: Render reports
         run: |
