@@ -70,7 +70,7 @@ jobs:
           }
 
           # run
-          lapply(NEesp::species_key$Species[1], fun)'
+          lapply(NEesp::species_key$Species, fun)'
 
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
