@@ -77,7 +77,7 @@ jobs:
             sink()
             print(paste("Done checking", i))
           }
-          if(nrow(outout) > 0){
+          if(nrow(output) > 0){
           colnames(output) <- c("Species", "Error", "File throwing error", "Chunk name", "Line throwing error")
           }'
 
