@@ -25,9 +25,9 @@ jobs:
           Rscript -e 'install.packages(c("devtools", "stringi", "car", "tidyquant"))
           devtools::install_github("NOAA-EDAB/NEesp", ref = "v0.1.0", dependencies = TRUE)'
         
-     - name: Make a new cache
-       uses: actions/cache@v2
-       with:
-         path: ${{ env.R_LIBS_USER }}
-         key: bigger-cache-more-packages-05192021-AT
+      - name: Make a new cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: bigger-cache-more-packages-05192021-AT
 
