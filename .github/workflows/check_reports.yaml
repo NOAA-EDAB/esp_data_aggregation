@@ -1,0 +1,105 @@
+on:
+  workflow_dispatch:
+
+name: Check that all indicator reports run
+
+jobs: 
+  build1:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:
+          
+      - name: Checkout esp_data_aggregation
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+#          ref: abby
+
+      - name: Install Pandoc
+        run: brew install pandoc
+        shell: bash
+
+      - name: Install command line packages
+        run: |        
+          sudo apt update
+          sudo apt-get install  libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
+        shell: bash
+        
+      - name: Set up R
+        uses: r-lib/actions/setup-r@master
+        with: 
+          r-version: '4.0.3' # problem with using 4.0.4        
+      
+      - name: Cache R packages
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: big-cache-DESCRIPTION-02172021-2
+
+      - name: Load R packages (if not cached)
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          sudo R CMD javareconf
+          Rscript -e 'install.packages("devtools")
+          devtools::install_deps(dependencies = TRUE)'
+                 
+      - name: Install more packages
+        run: |
+          Rscript -e 'install.packages(c("devtools", "stringi", "car", "tidyquant"))
+          devtools::install_github("NOAA-EDAB/NEesp", ref = "v0.1.0", dependencies = TRUE)'
+                 
+      - name: Check reports
+        run: |
+          Rscript -e '
+          `%>%` <- magrittr::`%>%`
+          output <- c()
+          for (i in NEesp::species_key$Species){
+            
+            test <- try(NEesp::render_ind_report(i, 
+                                         input = here::here("bookdown"),
+                                         params_to_use = list(
+                                           species_ID = i,
+                                           ricky_survey_data = NEesp::bio_survey,
+                                           path = here::here("action_reports", i, "figures//"),
+                                           save = FALSE
+                                         ), trouble = FALSE))
+            
+            if(class(test) == "try-error"){
+              sink("hide.txt")
+              problem_file <- NEesp::find_files(paste0("\\{r","(.{1,10})", chunk_name), 
+                                                here::here("bookdown")) %>% invisible()
+          
+              if(problem_file == "Not found"){
+                problem_file2 <- NEesp::find_files(paste0("\\{r","(.{1,10})", last_known), 
+                                                  here::here("bookdown")) %>% invisible()
+          
+                this_output <- c(i, test[1], 
+                                 paste("unknown - last known file:", problem_file2[1]), 
+                                 chunk_name, 
+                                 paste("unknown - last known line:", problem_file2[2]))
+              } else {
+                this_output <- c(i, test[1], problem_file[,1], chunk_name, problem_file[,2])
+              }
+              output <- rbind(output, this_output)
+            }
+            sink()
+            print(paste("Done checking", i))
+          }
+          if(nrow(outout) > 0){
+          colnames(output) <- c("Species", "Error", "File throwing error", "Chunk name", "Line throwing error")
+          }'
+
+      - name: Results
+        run: |
+          Rscript -e '
+          if(class(output) == "NULL"){
+          print("All reports ran!")
+          } else {
+          print("Some reports failed!")
+          print(output)
+          exit # force error
+          }'
