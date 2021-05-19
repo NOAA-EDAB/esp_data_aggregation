@@ -85,11 +85,8 @@ jobs:
           }
           if(nrow(output) > 0){
           colnames(output) <- c("Species", "Error", "File throwing error", "Chunk name", "Line throwing error")
-          }'
-
-      - name: Results
-        run: |
-          Rscript -e '
+          }
+          
           if(class(output) == "NULL"){
           print("All reports ran!")
           } else {
