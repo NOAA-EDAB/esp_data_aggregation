@@ -49,6 +49,10 @@ jobs:
       - name: Check reports
         run: |
           Rscript -e '
+          # reinstall sf
+          remove.packages("sf")
+          install.packages("sf")
+          
           `%>%` <- magrittr::`%>%`
           output <- c()
           for (i in NEesp::species_key$Species){
