@@ -38,19 +38,7 @@ jobs:
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-DESCRIPTION-02172021-2
-
-      - name: Load R packages (if not cached)
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          sudo R CMD javareconf
-          Rscript -e 'install.packages("devtools")
-          devtools::install_deps(dependencies = TRUE)'
-                 
-      - name: Install more packages
-        run: |
-          Rscript -e 'install.packages(c("devtools", "stringi", "car", "tidyquant"))
-          devtools::install_github("NOAA-EDAB/NEesp", ref = "v0.1.0", dependencies = TRUE)'
+          key: bigger-cache-more-packages-05192021-AT
                  
       - name: Check reports
         run: |
@@ -59,6 +47,7 @@ jobs:
           output <- c()
           for (i in NEesp::species_key$Species){
             
+            sink("hide.txt")
             test <- try(NEesp::render_ind_report(i, 
                                          input = here::here("bookdown"),
                                          params_to_use = list(
@@ -69,7 +58,6 @@ jobs:
                                          ), trouble = FALSE))
             
             if(class(test) == "try-error"){
-              sink("hide.txt")
               problem_file <- NEesp::find_files(paste0("\\{r","(.{1,10})", chunk_name), 
                                                 here::here("bookdown")) %>% invisible()
           
