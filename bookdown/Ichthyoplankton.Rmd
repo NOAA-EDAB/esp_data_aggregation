@@ -8,7 +8,9 @@ Ichthyoplankton surveyed during the Marine Resources Monitoring, Assessment, and
 
 ```{r, ich-wrangle}
 # filter to just one species of interest
-selected_spp <- NEesp::ichthyo %>% dplyr::filter(common_name == params$species_ID)
+selected_spp <- NEesp::ichthyo %>% 
+  dplyr::filter(common_name == params$species_ID) %>%
+  tidyr::drop_na(any_of("rel.proportion")) # remove na's
 ```
 
 
@@ -20,9 +22,11 @@ selected_spp <- NEesp::ichthyo %>% dplyr::filter(common_name == params$species_I
 if (nrow(selected_spp) > 5) {
   selected_spp <- selected_spp %>%
     dplyr::mutate(decade = ggplot2::cut_width(year, width = 10, center = 1980))
-  selected_spp.1 <- dplyr::filter_all(selected_spp, ~ !is.na(.))
+  selected_spp.1 <- selected_spp %>% dplyr::filter(!is.na(lat),
+                                  !is.na(lon)) # only filter out na lat/long
 
-  selected_spp.1 <- selected_spp.1 %>%
+  if(nrow(selected_spp.1) > 0){
+     selected_spp.1 <- selected_spp.1 %>%
     dplyr::mutate(rel.prop.bin = ggplot2::cut_interval(rel.proportion, length = 25))
 
 
@@ -51,6 +55,8 @@ if (nrow(selected_spp) > 5) {
     ggplot2::labs(size = "Mean abundance", color = "Relative proportion (%)") +
     ggplot2::xlab("Longitude") +
     ggplot2::ylab("Latitude")
+  } else "MISSING DATA"
+ 
 } else {
   ("No data")
 }
