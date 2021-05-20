@@ -41,6 +41,7 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: bigger-cache-more-packages-05192021-AT
           
+      - name: Re-install sf
         run: |
           Rscript -e '
           remove.packages("sf")
