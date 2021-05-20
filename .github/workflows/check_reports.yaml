@@ -82,6 +82,6 @@ jobs:
           }'
           
       - name: Status
-        if: ${{ status != 'good' }}
+        if: $status != 'good'
         run: |
           Rscript -e 'error'
