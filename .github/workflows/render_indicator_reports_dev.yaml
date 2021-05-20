@@ -40,7 +40,12 @@ jobs:
         with:
           path: ${{ env.R_LIBS_USER }}
           key: bigger-cache-more-packages-05192021-AT
-
+          
+        run: |
+          Rscript -e '
+          remove.packages("sf")
+          install.packages("sf")'
+                 
       - name: Render reports
         run: |
           Rscript -e '
