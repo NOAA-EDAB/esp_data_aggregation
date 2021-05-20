@@ -3,7 +3,7 @@
 output <- c()
 
 suppressWarnings({
-  for (i in "Rosette skate") {
+  for (i in NEesp::species_key$Species) {
     sink("hide.txt")
     test <- try(NEesp::render_ind_report(i,
       input = here::here("bookdown"),
