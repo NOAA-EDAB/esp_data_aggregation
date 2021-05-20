@@ -63,7 +63,7 @@ suppressWarnings({
   if (class(output) == "NULL") {
     print("All reports ran!")
     dir.create(here::here("logs"))
-    status <- "good"
+    Sys.setenv(status="good") # set as system variable to access later
   } else {
     print("Some reports failed!")
     colnames(output) <- c("Species", "Error", "File throwing error", "Chunk name", "Line throwing error")
