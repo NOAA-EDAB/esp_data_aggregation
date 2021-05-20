@@ -66,15 +66,12 @@ jobs:
           folder: logs # The folder the action should deploy.
           target-folder: logs
           clean: false # Automatically remove deleted files from the deploy branch
-          
-      - name: Check environment
-        run: |
-          Rscript -e '
-          print(Sys.getenv())'
          
       - name: Status
         run: |
           Rscript -e '
           if (quote(${{ env.deployment_status }}) == "skipped"){
-          "PASSING!"
-          } else { error }'
+          "Passing!"
+          } else { 
+          stop("Errors found! Check logs folder.") 
+          }'
