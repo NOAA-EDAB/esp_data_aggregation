@@ -68,5 +68,4 @@ jobs:
           clean: false # Automatically remove deleted files from the deploy branch
           
       - name: Status
-        run: |
-          Rscript -e '${{ steps.check.outputs.status }}'
+        run: echo "$status"
