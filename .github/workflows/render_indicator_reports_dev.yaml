@@ -51,7 +51,7 @@ jobs:
         run: |
           Rscript -e '
           #species <- NEesp::species_key$Species
-          species <- "Black sea bass"
+          species <- "Rosette skate"
           source(here::here("R-scripts", "check for errors.R"))'
           
       - name: Check environment
@@ -84,6 +84,10 @@ jobs:
       - name: Check environment
         run: |
           Rscript -e 'Sys.getenv()'
+
+      - name: Create issue (if needed)
+        if: ${{ env.deployment_status }} != 'skipped'
+        uses: JasonEtco/create-an-issue@v2
           
       - name: Status
         run: |
