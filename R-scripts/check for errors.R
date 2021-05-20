@@ -3,7 +3,10 @@
 output <- c()
 
 suppressWarnings({
-  for (i in NEesp::species_key$Species) {
+  for (i in "Rosette skate" 
+       #NEesp::species_key$Species
+      ) {
+    
     sink("hide.txt")
     test <- try(NEesp::render_ind_report(i,
       input = here::here("bookdown"),
@@ -46,13 +49,12 @@ suppressWarnings({
           paste("unknown - last known line:", problem_file2[2])
         )
       } else {
-        print(problem_file)
+        
         file_name <- problem_file[, 1] %>%
           stringr::str_split("bookdown/", n = 2)
         file_name <- file_name[[1]][2]
-        print(file_name)
 
-        this_output <- c(i, test[1], file_name, chunk_name, problem_file[, 2])
+        this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2])
       }
       output <- rbind(output, this_output)
     }
