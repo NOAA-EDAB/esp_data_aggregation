@@ -1,0 +1,33 @@
+on:
+  workflow_dispatch:
+
+name: Create new cache
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:
+        
+      - name: Setup R
+        uses: r-lib/actions/setup-r@master
+      
+      - name: Check cached R packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: big-cache-DESCRIPTION-02172021-2
+          
+      - name: Install more packages
+        run: |
+          Rscript -e 'install.packages(c("devtools", "stringi", "car", "tidyquant"))
+          devtools::install_github("NOAA-EDAB/NEesp", ref = "v0.1.0", dependencies = TRUE)'
+        
+      - name: Make a new cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: bigger-cache-more-packages-05192021-AT
+
