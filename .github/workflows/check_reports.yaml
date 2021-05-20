@@ -73,6 +73,8 @@ jobs:
           print(Sys.getenv())'
          
       - name: Status
-        if: ${{ env.deployment_status }} != 'skipped'
         run: |
-          Rscript -e 'error'
+          Rscript -e '
+          if (${{ env.deployment_status }} != 'skipped'){
+          error
+          } else { "PASSING!" }'
