@@ -75,6 +75,6 @@ jobs:
       - name: Status
         run: |
           Rscript -e '
-          if (${{ env.deployment_status }} != "skipped"){
-          error
-          } else { "PASSING!" }'
+          if (${{ env.deployment_status }} == "skipped"){
+          "PASSING!"
+          } else { error }'
