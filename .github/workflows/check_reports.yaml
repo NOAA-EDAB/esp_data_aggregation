@@ -74,4 +74,4 @@ jobs:
           "PASSING!"
           } else {
           error # force error
-          }
+          }'
