@@ -3,7 +3,7 @@
 output <- c()
 
 suppressWarnings({
-  for (i in NEesp::species_key$Species) {
+  for (i in species) {
     
     sink("hide.txt")
     test <- try(NEesp::render_ind_report(i,
@@ -12,7 +12,7 @@ suppressWarnings({
         species_ID = i,
         ricky_survey_data = NEesp::bio_survey,
         path = here::here("action_reports", i, "figures//"),
-        save = FALSE
+        save = TRUE
       ), trouble = FALSE
     ))
 
@@ -58,7 +58,7 @@ suppressWarnings({
       output <- rbind(output, this_output)
     }
     sink()
-    print(paste("Done checking", i))
+    print(paste("Done with", i))
   }
 
   if (class(output) == "NULL") {
