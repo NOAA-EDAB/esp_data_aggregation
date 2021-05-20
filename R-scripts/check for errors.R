@@ -3,7 +3,7 @@
 output <- c()
 
 suppressWarnings({
-  for (i in "Rosette skate") {
+  for (i in "Black sea bass") {
     sink("hide.txt")
     test <- try(NEesp::render_ind_report(i,
       input = here::here("bookdown"),
@@ -62,6 +62,7 @@ suppressWarnings({
 
   if (class(output) == "NULL") {
     print("All reports ran!")
+    dir.create(here::here("logs"))
     status <- "good"
   } else {
     print("Some reports failed!")
