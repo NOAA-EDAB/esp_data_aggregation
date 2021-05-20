@@ -53,6 +53,7 @@ jobs:
           install.packages("sf")'
                  
       - name: Check reports
+        id: check
         run: |
           Rscript -e '
           source(here::here("R-scripts", "check for errors.R"))'
@@ -68,4 +69,4 @@ jobs:
           
       - name: Status
         run: |
-          Rscript -e 'status'
+          Rscript -e '${{ steps.check.outputs.status }}'
