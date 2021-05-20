@@ -80,3 +80,8 @@ jobs:
           } else {
           error # force error
           }'
+          
+      - name: Status
+        if: ${{ status != 'good' }}
+        run: |
+          Rscript -e 'error'
