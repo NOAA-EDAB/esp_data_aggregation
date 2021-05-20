@@ -70,7 +70,7 @@ OB_selected %>% dplyr::group_by(YEAR) %>% dplyr::summarise(haul_per_yr=length(un
 
 library(sf)
 
-OB_selected %>% ggplot(aes(x=LAT.DD))+geom_histogram()
+OB_selected %>% ggplot(aes(x=LON.DD))+geom_histogram()
 
 str(ecodata::coast)
 
@@ -100,9 +100,10 @@ OB_selected <- OB_selected %>% mutate("AREA"=as.factor(AREA), "WGTTYPE"=as.facto
 options(scipen = 100)
 
 # make sure to shift the plot to reflect the actual range of values using seWithMean = TRUE, shift = coef(gam_model)[1]
+# +te(LON.DD,LAT.DD)
 
 
-gam_mod <- gam(HAILWT ~ s(YEAR)+s(MONTH)+te(LON.DD,LAT.DD)+WGTTYPE, data = OB_selected, method = "REML", select=TRUE)
+gam_mod <- gam(HAILWT ~ s(YEAR, by=WGTTYPE)+s(MONTH,bs = "cc",by=WGTTYPE),family= "quasi", data = OB_selected, method = "REML", select=TRUE)
 coef(gam_mod)
 summary(gam_mod)
 # plot(gam_mod, pages = 2,rug = TRUE,residuals = TRUE,
@@ -111,10 +112,15 @@ summary(gam_mod)
 plot(gam_mod,shade = TRUE,seWithMean = TRUE, shift = coef(gam_mod)[1])
 plot(gam_mod, shade = TRUE, shade.col = "lightblue", select = 1)
 
-install.packages("mgcViz")
+# install.packages("mgcViz")
 library(mgcViz)
 t1<-mgcViz::getViz(gam_mod)
 print(plot(t1), ask = FALSE)
+
+concurvity(gam_mod, full = TRUE)
+concurvity(gam_mod, full = FALSE)
+
+gam.check(gam_mod)
 
 ```
 
