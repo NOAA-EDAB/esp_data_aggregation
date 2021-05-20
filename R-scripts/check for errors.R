@@ -3,9 +3,7 @@
 output <- c()
 
 suppressWarnings({
-  for (i in "Rosette skate" 
-       #NEesp::species_key$Species
-      ) {
+  for (i in NEesp::species_key$Species) {
     
     sink("hide.txt")
     test <- try(NEesp::render_ind_report(i,
@@ -54,7 +52,8 @@ suppressWarnings({
           stringr::str_split("bookdown/", n = 2)
         file_name <- file_name[[1]][2]
 
-        this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2])
+        this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
+                         recursive = TRUE)
       }
       output <- rbind(output, this_output)
     }
