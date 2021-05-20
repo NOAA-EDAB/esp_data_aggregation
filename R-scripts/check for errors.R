@@ -62,10 +62,15 @@ suppressWarnings({
 
   if (class(output) == "NULL") {
     print("All reports ran!")
+    status <- "good"
   } else {
     print("Some reports failed!")
     colnames(output) <- c("Species", "Error", "File throwing error", "Chunk name", "Line throwing error")
     print(output)
-    exit # force error
+
+    file <- paste0("logs/", Sys.time(), ".csv") %>%
+      stringr::str_replace_all(":", ".")
+    dir.create(here::here("logs"))
+    write.csv(output, here::here(file), row.names = FALSE)
   }
 })
