@@ -1,6 +1,5 @@
 ---
-title: Error in report creation
-assignees: {{ env.GITHUB_ACTOR }}
+title: Error in report creation {{ date | date('dddd, MMMM Do') }}
 labels: bug
 ---
 
