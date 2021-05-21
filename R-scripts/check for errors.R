@@ -74,5 +74,16 @@ suppressWarnings({
     dir.create(here::here("logs"))
     
     write.csv(output, here::here(file), row.names = FALSE)
+    
+    # clean up .Rmd and .yml files that didn't render
+    files_to_remove <- c(list.files(here::here("action_reports"), 
+                                    pattern = "^\\.Rmd$",
+                                    recursive = TRUE,
+                                    full.names = TRUE),
+                         list.files(here::here("action_reports"), 
+                                    pattern = "^\\.yml$",
+                                    recursive = TRUE,
+                                    full.names = TRUE))
+    file.remove(files_to_remove)
   }
 })
