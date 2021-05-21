@@ -61,6 +61,12 @@ OB_selected <- DDMMSS_to_DD(OB_selected, "LATHBEG","LONHBEG") %>% filter(!is.na(
 
 You can also embed plots, for example:
 
+
+```{r}
+OB_selected %>% ggplot(aes(x=HAILWT ))+geom_histogram(binwidth = 10)
+```
+
+
 ```{r pressure, echo=FALSE}
 
 

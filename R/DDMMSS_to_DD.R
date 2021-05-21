@@ -10,6 +10,7 @@ DDMMSS_to_DD<-function(df, LAT, LON){
   
   df$LAT.DD<-y$LAT.dd
   df$LON.DD<-x$LON.dd
+  #can have issues if the scintific notation of r is too small  can use options(scipen = 999) to avoid the issues
   
   return(df)
 }
