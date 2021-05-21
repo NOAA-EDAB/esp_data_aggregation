@@ -73,6 +73,7 @@ jobs:
           Rscript -e 'Sys.getenv()'
           
       - name: Deploy status check to Github
+        id: logdeploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           token: ${{ secrets.GH_PAT }}
@@ -86,7 +87,7 @@ jobs:
           Rscript -e 'Sys.getenv()'
 
       - name: Create issue (if needed)
-        if: ${{ env.deployment_status }} != 'skipped'
+        if: steps.logdeploy.outputs.deployment_status != 'skipped'
         uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
