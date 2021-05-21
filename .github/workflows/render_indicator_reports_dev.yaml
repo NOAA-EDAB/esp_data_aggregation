@@ -88,15 +88,12 @@ jobs:
           
       - name: Test syntax
         run: |
-          echo "${{ env.deployment_status }}"
-          echo "${{ env.deployment_status }} != 'skipped' "
+          echo "Should the next step run?"
           echo "${{ env.deployment_status != 'skipped' }}"
-          ${{ env.deployment_status }} != 'skipped' 
-          ${{ env.deployment_status != 'skipped' }}
 
           
       - name: Create issue (if needed)
-        if: ${{ steps.logdeploy.outputs.deployment_status != 'skipped' }}
+        if: ${{ env..deployment_status != 'skipped' }}
         uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
