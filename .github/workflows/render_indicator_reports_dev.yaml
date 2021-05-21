@@ -51,7 +51,7 @@ jobs:
         run: |
           Rscript -e '
           #species <- NEesp::species_key$Species
-          species <- "Black sea bass"
+          species <- "Rosette skate"
           source(here::here("R-scripts", "check for errors.R"))'
           
       - name: Check environment
