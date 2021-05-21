@@ -88,14 +88,11 @@ jobs:
           
       - name: Test syntax
         run: |
-          echo "steps.logdeploy.outputs.deployment_status"
-          echo "$steps.logdeploy.outputs.deployment_status"
-          echo "{{ steps.logdeploy.outputs.deployment_status }}"
-          echo "${{ steps.logdeploy.outputs.deployment_status }}"
-          echo "env.deployment_status"
-          echo "$env.deployment_status"
-          echo "{{ env.deployment_status }}"
           echo "${{ env.deployment_status }}"
+          echo "${{ env.deployment_status }} != 'skipped' "
+          echo "${{ env.deployment_status != 'skipped' }}"
+          ${{ env.deployment_status }} != 'skipped' 
+          ${{ env.deployment_status != 'skipped' }}
 
           
       - name: Create issue (if needed)
