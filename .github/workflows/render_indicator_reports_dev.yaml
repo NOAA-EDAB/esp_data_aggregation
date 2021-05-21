@@ -87,7 +87,7 @@ jobs:
           Rscript -e 'Sys.getenv()'
 
       - name: Create issue (if needed)
-        if: steps.logdeploy.outputs.deployment_status != 'skipped'
+        if: steps.logdeploy.outputs.deployment_status != skipped
         uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
