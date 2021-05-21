@@ -85,7 +85,19 @@ jobs:
       - name: Check environment
         run: |
           Rscript -e 'Sys.getenv()'
+          
+      - name: Test syntax
+        run: |
+          echo "steps.logdeploy.outputs.deployment_status"
+          echo "$steps.logdeploy.outputs.deployment_status"
+          echo "{{ steps.logdeploy.outputs.deployment_status }}"
+          echo "${{ steps.logdeploy.outputs.deployment_status }}"
+          echo "env.deployment_status"
+          echo "$env.deployment_status"
+          echo "{{ env.deployment_status }}"
+          echo "${{ env.deployment_status }}"
 
+          
       - name: Create issue (if needed)
         if: ${{ steps.logdeploy.outputs.deployment_status != 'skipped' }}
         uses: JasonEtco/create-an-issue@v2
