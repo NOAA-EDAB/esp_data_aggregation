@@ -77,11 +77,11 @@ suppressWarnings({
     
     # clean up .Rmd and .yml files that didn't render
     files_to_remove <- c(list.files(here::here("action_reports"), 
-                                    pattern = "^\\.Rmd$",
+                                    pattern = "\\.Rmd$",
                                     recursive = TRUE,
                                     full.names = TRUE),
                          list.files(here::here("action_reports"), 
-                                    pattern = "^\\.yml$",
+                                    pattern = "\\.yml$",
                                     recursive = TRUE,
                                     full.names = TRUE))
     file.remove(files_to_remove)
