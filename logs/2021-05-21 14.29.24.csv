@@ -1,3 +1,0 @@
-"Species","Error","File throwing error","Chunk name","Line throwing error"
-"Rosette skate","Error in seq_len(n) : argument must be coercible to non-negative integer
-","catch-rec.Rmd","state-breakdown-data-good","110"
