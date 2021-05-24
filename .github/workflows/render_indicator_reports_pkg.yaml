@@ -37,20 +37,8 @@ jobs:
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-DESCRIPTION-02172021-2
+          key: bigger-cache-more-packages-05192021-AT
 
-      - name: Load R packages (if not cached)
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          sudo R CMD javareconf
-          Rscript -e 'install.packages("devtools")
-          devtools::install_deps(dependencies = TRUE)'
-                 
-      - name: Install more packages
-        run: |
-          Rscript -e 'install.packages(c("devtools", "stringi", "car"))
-          devtools::install_github("NOAA-EDAB/esp_data_aggregation@package", dependencies = TRUE)'
-          
       - name: Render reports
         run: |
           Rscript -e 'lapply(NEesp::species_key$Species, 

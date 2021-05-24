@@ -2,27 +2,31 @@
 ## Icthyoplankton
 
 
-#### Ichyoplankton surveys  that captured `r params$species` larva.
+#### Ichyoplankton surveys  that captured `r params$species_ID` larva.
 Ichthyoplankton surveyed during the Marine Resources Monitoring, Assessment, and Prediction (MARMAP; 1977-1987) and Ecosystem Monitoring (EcoMon; 1999-2008) programs.  Stations were stratified from Cape Hatteras, North Carolina to Cape Sable, Nova Scotia and captured multiple taxa of planktonic organisms and enumerated their mean abundance and relative proportion of catch. Surveys were conducted year round, however catches are averaged to two month intervals(i.e. season 1 represents January-February, Season 6; November-December). 
 
 
 ```{r, ich-wrangle}
 # filter to just one species of interest
-selected_spp <- NEesp::ichthyo %>% dplyr::filter(common_name == params$species)
+selected_spp <- NEesp::ichthyo %>% 
+  dplyr::filter(common_name == params$species_ID) %>%
+  tidyr::drop_na(any_of("rel.proportion")) # remove na's
 ```
 
 
-### Relative proportion and mean abundance of `r params$species`
+### Relative proportion and mean abundance of `r params$species_ID`
 
 
-```{r Relative_proportion plot, fig.cap = paste("Black sea bass", "larva relative proportion")}
+```{r Relative_proportion plot, fig.cap = paste(params$species_ID, "larva relative proportion")}
 
 if (nrow(selected_spp) > 5) {
   selected_spp <- selected_spp %>%
     dplyr::mutate(decade = ggplot2::cut_width(year, width = 10, center = 1980))
-  selected_spp.1 <- dplyr::filter_all(selected_spp, ~ !is.na(.))
+  selected_spp.1 <- selected_spp %>% dplyr::filter(!is.na(lat),
+                                  !is.na(lon)) # only filter out na lat/long
 
-  selected_spp.1 <- selected_spp.1 %>%
+  if(nrow(selected_spp.1) > 0){
+     selected_spp.1 <- selected_spp.1 %>%
     dplyr::mutate(rel.prop.bin = ggplot2::cut_interval(rel.proportion, length = 25))
 
 
@@ -51,6 +55,8 @@ if (nrow(selected_spp) > 5) {
     ggplot2::labs(size = "Mean abundance", color = "Relative proportion (%)") +
     ggplot2::xlab("Longitude") +
     ggplot2::ylab("Latitude")
+  } else "MISSING DATA"
+ 
 } else {
   ("No data")
 }

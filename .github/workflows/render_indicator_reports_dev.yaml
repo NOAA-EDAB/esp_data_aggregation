@@ -39,43 +39,22 @@ jobs:
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-DESCRIPTION-02172021-2
-
-      - name: Load R packages (if not cached)
-        if: steps.cache.outputs.cache-hit != 'true'
+          key: bigger-cache-more-packages-05192021-AT
+          
+      - name: Re-install sf
         run: |
-          sudo R CMD javareconf
-          Rscript -e 'install.packages("devtools")
-          devtools::install_deps(dependencies = TRUE)'
-                 
-      - name: Install more packages
-        run: |
-          Rscript -e 'install.packages(c("devtools", "stringi", "car"))
-          devtools::install_github("NOAA-EDAB/esp_data_aggregation@package", dependencies = TRUE)'
+          Rscript -e '
+          remove.packages("sf")
+          install.packages("sf")'
                  
       - name: Render reports
         run: |
           Rscript -e '
-          # source scripts
-          `%>%` <- magrittr::`%>%`
-          `.pt` <- ggplot2::`.pt`
-          # function to make reports
-          fun <- function(x) {NEesp::render_ind_report(x, input = "bookdown",
-                                     config = "_bookdown-ricky.yml",
-                                     params_to_use = list(species_ID = x,
-                                                          ricky_survey_data = NEesp::bio_survey, 
-                                                          path = here::here(paste("action_reports/", x, sep = ""), "figures//"),
-                                                          save = TRUE)#,
-                                     #trouble = TRUE
-                                     )
-          }
+          species <- NEesp::species_key$Species
+          #species <- "Rosette skate"
+          source(here::here("R-scripts", "render dev report with errors.R"))'
 
-          # run
-          lapply(NEesp::species_key$Species[1], fun)'
-#          source(here::here("R-scripts/package-dev", "life_history_functions.R"))
-#          source(here::here("R-scripts/package-dev", "plot_temp_anom.R"))
-
-      - name: Deploy to Github
+      - name: Deploy reports to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           repository-name: NOAA-EDAB/ESP_docs
@@ -84,3 +63,30 @@ jobs:
           folder: action_reports # The folder the action should deploy.
           target-folder: Reports
           clean: false # Automatically remove deleted files from the deploy branch
+
+      - name: Deploy status check to Github
+        id: logdeploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: logs # The folder the action should deploy.
+          target-folder: logs
+          clean: false # Automatically remove deleted files from the deploy branch
+
+      - name: Create issue (if needed)
+        if: ${{ env.deployment_status != 'skipped' }}
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        with:
+          assignees: ${{ env.GITHUB_ACTOR }}
+          
+      - name: Status
+        run: |
+          Rscript -e '
+          if (quote(${{ env.deployment_status }}) == "skipped"){
+          "Passing!"
+          } else { 
+          stop("Errors found! Check logs folder.") 
+          }'

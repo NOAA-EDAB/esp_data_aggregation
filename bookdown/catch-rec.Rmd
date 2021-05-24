@@ -43,17 +43,31 @@ sp_data_qual <- TRUE
 st_data_qual <- TRUE
 
 # testing if data quality is sufficient for each graph
-if (length(which(is.na(Selected_sp$total))) / length(Selected_sp$total) > 0.40) {
+if(exists("Selected_sp")){
+  if(nrow(Selected_sp) > 0){
+      nas <- length(which(is.na(Selected_sp$total)))
+      total <- length(Selected_sp$total)
+      if ( (nas/total) > 0.40) {
   sp_data_qual <- FALSE
-} else {
+      } else {
   sp_data_qual <- TRUE
 }
+  }
+ else {
+  sp_data_qual <- TRUE
+}
+}
 
-
-if (length(which(is.na(selected_by_state$Pounds))) / length(selected_by_state$Pounds) > 0.50) {
+if(exists("selected_by_state")){
+  if(nrow(selected_by_state) > 0){
+    if (length(which(is.na(selected_by_state$Pounds))) / length(selected_by_state$Pounds) > 0.50) {
   st_data_qual <- FALSE
-} else {
+    } else {
   st_data_qual <- TRUE
+}
+  } else {
+  st_data_qual <- TRUE
+}
 }
 ```
 
@@ -95,7 +109,8 @@ Selected_sp %>%
 
 ```{r, state-breakdown-data-good,eval=st_data_qual}
 
-selected_by_state %>%
+if(nrow(selected_by_state) > 0){
+ selected_by_state %>%
   ggplot2::ggplot(ggplot2::aes(x = Year, y = log(Pounds))) +
   ggplot2::geom_point() +
   tidyquant::geom_ma(ggplot2::aes(color = State, lty = State), n = 5, lwd = 1.4, na.rm = TRUE, show.legend = FALSE) +
@@ -104,11 +119,13 @@ selected_by_state %>%
   ggplot2::xlim(1981, 2019) +
   ggplot2::xlab(label = "Year") +
   ggplot2::ylab(label = "Log transformed  total catch in pounds (lb) ") +
-  ggplot2::theme_minimal()
+  ggplot2::theme_minimal() 
+} else "NO DATA"
+
 ```
 
 ```{r data-poor-graph, eval= !st_data_qual}
-
+if(nrow(selected_by_state) > 0){
 selected_by_state %>%
   ggplot2::ggplot(ggplot2::aes(x = Year, y = log(Pounds))) +
   ggplot2::geom_point(ggplot2::aes(color = State), show.legend = FALSE) +
@@ -119,6 +136,7 @@ selected_by_state %>%
   ggplot2::xlab(label = "Year") +
   ggplot2::ylab(label = "Log transformed  total catch in pounds (lb) ") +
   ggplot2::theme_minimal()
+} else "NO DATA"
 ```
 
 

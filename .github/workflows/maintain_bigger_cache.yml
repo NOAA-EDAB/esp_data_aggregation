@@ -1,0 +1,21 @@
+on:
+  schedule:
+    - cron: "0 0 * * 1,4"
+
+name: Maintain bigger cache
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+    
+    steps:
+      
+      - name: Check cached R packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: bigger-cache-more-packages-05192021-AT
+        
+

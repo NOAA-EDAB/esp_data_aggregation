@@ -2,7 +2,10 @@
 
 #### Stock assessment catch
 ```{r, catch_data}
-data <- asmt_data %>%
+data <- asmt_data 
+
+if(nrow(data) > 0){
+  data <- data %>%
   dplyr::filter(
     Metric == "Catch",
     Region != "Eastern Georges Bank"
@@ -23,6 +26,7 @@ data <- asmt_data %>%
   NEesp::character_to_factor()
 
 data <- data %>% dplyr::select("Year", sort(colnames(data)[-1]))
+}
 
 NEesp::make_html_table(data,
   type = params$file
