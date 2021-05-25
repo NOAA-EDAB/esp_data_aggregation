@@ -67,41 +67,39 @@ OB_selected %>% ggplot(aes(x=HAILWT ))+geom_histogram(binwidth = 10)
 ```
 
 
-```{r pressure, echo=FALSE}
-
-
+```{r, trips-per-year}
 
 
 OB_selected %>% dplyr::group_by(YEAR) %>% dplyr::summarise(haul_per_yr=length(unique(LINK3)))%>% ggplot(aes(x=YEAR,y=haul_per_yr))+geom_bar(stat="identity")
 
-library(sf)
 
-OB_selected %>% ggplot(aes(x=LON.DD))+geom_histogram()
+```
 
-str(ecodata::coast)
 
-st_crs(ecodata::coast)
+```{r OB-haul-locations, echo=FALSE}
+
+
 
 OB_geo<-st_as_sf(OB_selected,coords = c("LON.DD", "LAT.DD"), crs=4269 )
 OB_geo_lim<-OB_selected %>% dplyr::summarise(lonmin=(min(LON.DD)-1), lonmax=(max(LON.DD)+1), latmin=(min(LAT.DD)-1), latmax=(max(LAT.DD)+1))
 
 
 ggplot()+
-  geom_sf(data=OB_geo,shape=21, size=.4)+
+  geom_sf(data=OB_geo,aes(color=as.factor(YEAR)),size=.4,show.legend="Year" )+
   geom_sf(data=ecodata::coast)+
   ggplot2::coord_sf(
         xlim = c(OB_geo_lim$lonmin, OB_geo_lim$lonmax),
         ylim = c(OB_geo_lim$latmin, OB_geo_lim$latmax)
-      )
-
+  )
 
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-```{r}
+```{r, model-building}
+
 #R package mgcv using the argument ‘select’ equals ‘TRUE
-OB_selected <- OB_selected %>% mutate("AREA"=as.factor(AREA), "WGTTYPE"=as.factor(WGTTYPE))
+OB_selected <- OB_selected %>% mutate("AREA"=as.factor(AREA), "NEGEAR"=as.factor(NEGEAR))
 
 options(scipen = 100)
 
@@ -109,24 +107,46 @@ options(scipen = 100)
 # +te(LON.DD,LAT.DD)
 
 
-gam_mod <- gam(HAILWT ~ s(YEAR, by=WGTTYPE)+s(MONTH,bs = "cc",by=WGTTYPE),family= "quasi", data = OB_selected, method = "REML", select=TRUE)
+# gam_mod <- gam(HAILWT ~ s(YEAR, by=NEGEAR)+s(MONTH,bs = "cc",by=NEGEAR),family= "quasi", data = OB_selected, method = "REML", select=TRUE)
+
+gam_mod <- gam(HAILWT ~ s(YEAR,bs="tp")+s(MONTH,bs = "cc")+te(LON.DD,LAT.DD, bs="gp"),family= "nb", data=OB_selected, method = "REML", select=TRUE)
+
 coef(gam_mod)
 summary(gam_mod)
 # plot(gam_mod, pages = 2,rug = TRUE,residuals = TRUE,
 #      pch = 1, cex = 1,shade = TRUE)
-
+plot(gam_mod)
+plot(gam_mod, scheme = 2)
 plot(gam_mod,shade = TRUE,seWithMean = TRUE, shift = coef(gam_mod)[1])
 plot(gam_mod, shade = TRUE, shade.col = "lightblue", select = 1)
 
 # install.packages("mgcViz")
 library(mgcViz)
+?vis.gam()
 t1<-mgcViz::getViz(gam_mod)
 print(plot(t1), ask = FALSE)
+d
 
 concurvity(gam_mod, full = TRUE)
 concurvity(gam_mod, full = FALSE)
 
 gam.check(gam_mod)
+
+# vis.gam(x,
+#         view = NULL,
+#         cond = list(),
+#         n.grid = 30,
+#         too.far = 0,
+#         col = NA,
+#         color = "heat",
+#         contour.col = NULL,
+#         se = -1,
+#         type = "link",
+#         plot.type = "persp",
+#         zlim = NULL,
+#         nCol = 50,
+#         ...)
+
 
 ```
 
@@ -134,6 +154,11 @@ gam.check(gam_mod)
 
 
 
+```{r}
+
+vis.gam(gam_mod, view = c("LON.DD","LAT.DD"), plot.type = "contour", color = "heat", too.far = .1)
+
+```
 
 
 
