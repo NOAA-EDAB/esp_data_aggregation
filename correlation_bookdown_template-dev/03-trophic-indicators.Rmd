@@ -125,7 +125,7 @@ NEesp::render_indicator(test, lab = names[1])
 if (params$stock == "Black sea bass") {
   # load data
   load(here::here("data", "Annual_Black_Seabass_zooplankton_anomalies.rda"))
-  test_big <- bsb.spr.anom
+  test_big <- bsb.yr.anom
   colnames(test_big) <- paste(colnames(test_big), "_annual", sep = "")
 
   # update names for saving figs
@@ -138,6 +138,10 @@ if (params$stock == "Black sea bass") {
       Var = colnames(test_big)[i],
       Val = test_big[, i]
     )
+    # make section title
+    cat(paste("####", names[1], "{-}"), "\n\n")
+
+    # render section
     NEesp::render_indicator(test, lab = names[1])
   }
 } else {
@@ -164,8 +168,8 @@ if (params$stock == "Black sea bass") {
       Val = test_big[, i]
     )
 
-    # make section title (not sure why this isn't printing)
-    cat(paste("####", names[1]), "\n\n")
+    # make section title
+    cat(paste("####", names[1], "{-}"), "\n\n")
 
     # render section
     NEesp::render_indicator(test, lab = names[1])
@@ -180,7 +184,7 @@ if (params$stock == "Black sea bass") {
 if (params$stock == "Black sea bass") {
   # load data
   load(here::here("data", "Fall_Black_Seabass_zooplankton_anomalies.rda"))
-  test_big <- bsb.spr.anom
+  test_big <- bsb.fall.anom
   colnames(test_big) <- paste(colnames(test_big), "_fall", sep = "")
 
   # update names for saving figs
@@ -193,6 +197,10 @@ if (params$stock == "Black sea bass") {
       Var = colnames(test_big)[i],
       Val = test_big[, i]
     )
+    # make section title
+    cat(paste("####", names[1], "{-}"), "\n\n")
+
+    # render section
     NEesp::render_indicator(test, lab = names[1])
   }
 } else {
