@@ -1,42 +1,44 @@
 ## Physical indicators
 
-### Cold pool index
+### Temperature-related
+
+#### Cold pool index
 ```{r, cold-pool}
 test <- ecodata::cold_pool
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Warm core rings
+#### Warm core rings
 ```{r, warm}
 test <- ecodata::wcr
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Marine heatwave index
+#### Marine heatwave index
 ```{r, heatwave}
 test <- ecodata::heatwave
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### GLORYS bottom temperature
+#### GLORYS bottom temperature
 ```{r, glorys}
 test <- ecodata::bottom_temp_glorys
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Long-term sea surface temperature
+#### Long-term sea surface temperature
 ```{r, sst}
 test <- ecodata::long_term_sst
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Sea surface temperature anomaly in EPU
+#### Sea surface temperature anomaly in EPU
 ```{r, sst-anom}
 test <- ecodata::seasonal_oisst_anom
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Sea surface temperature anomaly in stock region
+#### Sea surface temperature anomaly in stock region
 ```{r, sst-anom-stock}
 test <- ecodata::ESP_seasonal_oisst_anom %>%
   dplyr::mutate(Pattern_check = ESP %>%
@@ -72,28 +74,30 @@ test <- ecodata::stratification
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Winter wind speed
+### Wind
+
+#### Winter wind speed
 ```{r, winter-wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("winter"))
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Spring wind speed
+#### Spring wind speed
 ```{r, spring-wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("spring"))
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Summer wind speed
+#### Summer wind speed
 ```{r, summer-wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("summer"))
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Fall wind speed
+#### Fall wind speed
 ```{r, fall-wind}
 test <- ecodata::ne_wind %>%
   dplyr::filter(Var %>% stringr::str_detect("fall"))
@@ -115,32 +119,48 @@ test <- ecodata::nao
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Northern range
+### Species location
+
+#### Species distribution
+```{r, species-dist}
+test <- ecodata::species_dist
+NEesp::render_indicator(test, lab = names[1])
+```
+
+#### Northern range
 Northernmost survey observation in each year.
 ```{r, northern-bound}
 test <- NEesp::survey %>%
-  dplyr::filter(Species == params$stock,
-                ABUNDANCE > 0) %>% # why are there entries with 0 abundance but >0 biomass??
-  dplyr::select(YEAR, LAT) %>% 
+  dplyr::filter(
+    Species == params$stock,
+    ABUNDANCE > 0
+  ) %>% # why are there entries with 0 abundance but >0 biomass??
+  dplyr::select(YEAR, LAT) %>%
   dplyr::group_by(YEAR) %>%
-  dplyr::mutate(Val = max(LAT, na.rm = TRUE),
-                Var = "northern_latitude") %>%
+  dplyr::mutate(
+    Val = max(LAT, na.rm = TRUE),
+    Var = "northern_latitude"
+  ) %>%
   dplyr::select(-LAT) %>%
   dplyr::rename(Time = YEAR) %>%
   dplyr::distinct()
 NEesp::render_indicator(test, lab = names[1])
 ```
 
-### Southern range
+#### Southern range
 Southernmost survey observation in each year.
 ```{r, southern-bound}
 test <- NEesp::survey %>%
-  dplyr::filter(Species == params$stock,
-                ABUNDANCE > 0) %>% # why are there entries with 0 abundance but >0 biomass??
-  dplyr::select(YEAR, LAT)  %>% 
+  dplyr::filter(
+    Species == params$stock,
+    ABUNDANCE > 0
+  ) %>% # why are there entries with 0 abundance but >0 biomass??
+  dplyr::select(YEAR, LAT) %>%
   dplyr::group_by(YEAR) %>%
-  dplyr::mutate(Val = min(LAT, na.rm = TRUE),
-                Var = "southern_latitude") %>%
+  dplyr::mutate(
+    Val = min(LAT, na.rm = TRUE),
+    Var = "southern_latitude"
+  ) %>%
   dplyr::select(-LAT) %>%
   dplyr::rename(Time = YEAR) %>%
   dplyr::distinct()
