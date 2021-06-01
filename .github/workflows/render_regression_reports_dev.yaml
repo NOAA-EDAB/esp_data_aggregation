@@ -42,7 +42,7 @@ jobs:
         run: |
           Rscript -e 'remove.packages("NEesp")
           remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never") # use dev version
-          install.package("ggnewscale")
+          install.packages("ggnewscale")
           NEesp::render_all_reg()'
           
       - name: Deploy to Github
