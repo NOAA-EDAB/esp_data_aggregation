@@ -40,7 +40,9 @@ jobs:
                  
       - name: Render reports
         run: |
-          Rscript -e 'NEesp::render_all_reg(input = "correlation_bookdown_template-dev")'
+          Rscript -e 'remove.packages("NEesp")
+          remotes::install_github("NOAA-EDAB/NEesp, ref = "dev") # use dev version
+          NEesp::render_all_reg()'
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
