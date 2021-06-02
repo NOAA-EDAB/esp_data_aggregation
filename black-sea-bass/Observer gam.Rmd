@@ -29,13 +29,13 @@ inaccurate estimates of abundance (Erisman et al. 2011, van der Lee 2012). "
 
 
 ```{r cpue-data}
-
+#needs to be pushed into package 
 source(here::here("r","DDMMSS_to_DD.R"))
 #needed to prevent r from converting values to scientific notation that breaks the script that converts degree minute second cords to decimal degree
 options(scipen = 999)
 
 OBSPP<-rio::import(here::here("data","OBDBS" ,"OBSPP.rds"))
-
+#pull in species codes from OBSERVER DBS
 OBSPEC<-read.csv(here::here("data","OBDBS", "OBSPEC.csv"))
 
 OB_key<-OBSPEC %>% select(SPECIES_ITIS,NESPP4 )%>% rename("ITISSPP" ="SPECIES_ITIS")
@@ -50,8 +50,15 @@ OB_sp_join<-dplyr::left_join(OB_key_join,SP_key, by= "ITISSPP")
 
 OB_selected<-OB_sp_join %>% filter(COMNAME == "Black sea bass")
 
-OB_selected <- DDMMSS_to_DD(OB_selected, "LATHBEG","LONHBEG") %>% filter(!is.na(LAT.DD ) & !is.na( LON.DD )) %>% mutate("LON.DD"=(-1*LON.DD))
+#convert original lat lon to decimal degrees and remove NAs, finally convery lon to negitive values 
+OB_selected <- DDMMSS_to_DD(OB_selected, "LATHBEG","LONHBEG") %>% 
+  filter(!is.na(LAT.DD ) & !is.na( LON.DD )) %>%
+  mutate("LON.DD"=(-1*LON.DD))
 
+
+
+#limit to 2011 as that is last year with abundant hauls
+OB_selected<-OB_selected %>% filter(YEAR < 2012)
 
 # OB_selected<- OB_selected %>% rename("Latitude"= "LAT.DD", "Longitude"="LON.DD")
 
@@ -70,7 +77,11 @@ OB_selected %>% ggplot(aes(x=HAILWT ))+geom_histogram(binwidth = 10)
 ```{r, trips-per-year}
 
 
-OB_selected %>% dplyr::group_by(YEAR) %>% dplyr::summarise(haul_per_yr=length(unique(LINK3)))%>% ggplot(aes(x=YEAR,y=haul_per_yr))+geom_bar(stat="identity")
+OB_selected %>%
+  dplyr::group_by(YEAR) %>%
+  dplyr::summarise(haul_per_yr=length(unique(LINK3)))%>%
+  ggplot(aes(x=YEAR,y=haul_per_yr))+geom_bar(stat="identity")+
+  ylab("# of hauls")
 
 
 ```
@@ -101,7 +112,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 #R package mgcv using the argument ‘select’ equals ‘TRUE
 OB_selected <- OB_selected %>% mutate("AREA"=as.factor(AREA), "NEGEAR"=as.factor(NEGEAR))
 
-options(scipen = 100)
+options(scipen=0, digits=7)
 
 # make sure to shift the plot to reflect the actual range of values using seWithMean = TRUE, shift = coef(gam_model)[1]
 # +te(LON.DD,LAT.DD)
@@ -116,7 +127,7 @@ summary(gam_mod)
 # plot(gam_mod, pages = 2,rug = TRUE,residuals = TRUE,
 #      pch = 1, cex = 1,shade = TRUE)
 plot(gam_mod)
-plot(gam_mod, scheme = 2)
+plot(gam_mod, scheme = 1)
 plot(gam_mod,shade = TRUE,seWithMean = TRUE, shift = coef(gam_mod)[1])
 plot(gam_mod, shade = TRUE, shade.col = "lightblue", select = 1)
 
@@ -125,28 +136,43 @@ library(mgcViz)
 ?vis.gam()
 t1<-mgcViz::getViz(gam_mod)
 print(plot(t1), ask = FALSE)
-d
 
+plot(gam_mod$residuals)
+
+#concurvity is low in the model
 concurvity(gam_mod, full = TRUE)
 concurvity(gam_mod, full = FALSE)
 
-gam.check(gam_mod)
+# gam.check(gam_mod)
 
-# vis.gam(x,
-#         view = NULL,
-#         cond = list(),
-#         n.grid = 30,
-#         too.far = 0,
-#         col = NA,
-#         color = "heat",
-#         contour.col = NULL,
-#         se = -1,
-#         type = "link",
-#         plot.type = "persp",
-#         zlim = NULL,
-#         nCol = 50,
-#         ...)
+gam_mod$
 
+# Family: Negative Binomial(0.516) 
+# Link function: log 
+# 
+# Formula:
+# HAILWT ~ s(YEAR, bs = "tp") + s(MONTH, bs = "cc") + 
+#     te(LON.DD, LAT.DD, bs = "gp")
+# 
+# Parametric coefficients:
+#             Estimate Std. Error z value Pr(>|z|)    
+# (Intercept) 3.192519   0.008059   396.2   <2e-16 ***
+# ---
+# Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# Approximate significance of smooth terms:
+#                      edf Ref.df Chi.sq p-value    
+# s(YEAR)            8.906      9   1905  <2e-16 ***
+# s(MONTH)           7.794      8   1440  <2e-16 ***
+# te(LON.DD,LAT.DD) 19.719     24   7904  <2e-16 ***
+# ---
+# Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# R-sq.(adj) =  -2.92e+18   Deviance explained = 92.4%
+# -REML = 1.2611e+05  Scale est. = 1         n = 30890
+# > 
+
+#biomass of comercial catch for BSB from last report 
 
 ```
 
@@ -157,6 +183,7 @@ gam.check(gam_mod)
 ```{r}
 
 vis.gam(gam_mod, view = c("LON.DD","LAT.DD"), plot.type = "contour", color = "heat", too.far = .1)
+plot(resid(gam_mod))
 
 ```
 
