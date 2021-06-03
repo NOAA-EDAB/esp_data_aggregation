@@ -112,7 +112,7 @@ jobs:
           target-folder: Regression_reports
           clean: false # Automatically remove deleted files from the deploy branch
           
-   build5:
+  build5:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GH_PAT }}
