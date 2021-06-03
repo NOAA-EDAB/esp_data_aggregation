@@ -3,7 +3,7 @@ description: 'Sets up runner environment for creating reports'
 
 runs:
    using: "composite"
-    steps:
+   steps:
       - name: Checkout repo
         uses: actions/checkout@v2
         with:
