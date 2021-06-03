@@ -45,20 +45,11 @@ jobs:
           install.packages("ggnewscale")
           NEesp::render_all_reg(species = NEesp::regression_species_regions[1:10,])'
           
-      - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          repository-name: NOAA-EDAB/ESP_docs
-          token: ${{ secrets.GH_PAT }}
-          branch: main # The branch the action should deploy to.
-          folder: Regressions # The folder the action should deploy.
-          target-folder: Regression_reports
-          clean: false # Automatically remove deleted files from the deploy branch
-
-      - name: Render reports 11-20
+      - name: Check directory size
         run: |
-          Rscript -e 'unlink(here::here("Regressions"))
-          NEesp::render_all_reg(species = NEesp::regression_species_regions[11:20,])'
+          cd Regressions
+          du -s
+        shell: bash
           
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
@@ -70,11 +61,59 @@ jobs:
           target-folder: Regression_reports
           clean: false # Automatically remove deleted files from the deploy branch
 
+      - name: Render reports 11-15
+        run: |
+          Rscript -e 'unlink(here::here("Regressions"))
+          NEesp::render_all_reg(species = NEesp::regression_species_regions[11:15,])'
+
+      - name: Check directory size
+        run: |
+          cd Regressions
+          du -s
+        shell: bash
+        
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          repository-name: NOAA-EDAB/ESP_docs
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: Regressions # The folder the action should deploy.
+          target-folder: Regression_reports
+          clean: false # Automatically remove deleted files from the deploy branch
+
+      - name: Render reports 16-20
+        run: |
+          Rscript -e 'unlink(here::here("Regressions"))
+          NEesp::render_all_reg(species = NEesp::regression_species_regions[16:20,])'
+
+      - name: Check directory size
+        run: |
+          cd Regressions
+          du -s
+        shell: bash
+        
+      - name: Deploy to Github
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          repository-name: NOAA-EDAB/ESP_docs
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: Regressions # The folder the action should deploy.
+          target-folder: Regression_reports
+          clean: false # Automatically remove deleted files from the deploy branch
+          
       - name: Render reports 21-30
         run: |
           Rscript -e 'unlink(here::here("Regressions"))
           NEesp::render_all_reg(species = NEesp::regression_species_regions[21:30,])'
-          
+
+      - name: Check directory size
+        run: |
+          cd Regressions
+          du -s
+        shell: bash
+        
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
@@ -89,7 +128,13 @@ jobs:
         run: |
           Rscript -e 'unlink(here::here("Regressions"))
           NEesp::render_all_reg(species = NEesp::regression_species_regions[31:40,])'
-          
+
+      - name: Check directory size
+        run: |
+          cd Regressions
+          du -s
+        shell: bash
+        
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
@@ -104,7 +149,13 @@ jobs:
         run: |
           Rscript -e 'unlink(here::here("Regressions"))
           NEesp::render_all_reg(species = NEesp::regression_species_regions[41:50,])'
-          
+
+      - name: Check directory size
+        run: |
+          cd Regressions
+          du -s
+        shell: bash
+        
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
@@ -119,7 +170,13 @@ jobs:
         run: |
           Rscript -e 'unlink(here::here("Regressions"))
           NEesp::render_all_reg(species = NEesp::regression_species_regions[51:61,])'
-          
+
+      - name: Check directory size
+        run: |
+          cd Regressions
+          du -s
+        shell: bash
+        
       - name: Deploy to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
