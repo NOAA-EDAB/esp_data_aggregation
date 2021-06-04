@@ -97,7 +97,9 @@ jobs:
           
       - name: Render reports 16-30
         run: |
-          Rscript -e 'unlink(here::here("Regressions"), recursive = TRUE)
+          Rscript -e 'remove.packages("NEesp")
+          remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never") # use dev version
+          install.packages("ggnewscale")
           NEesp::render_all_reg(species = NEesp::regression_species_regions[16:30,])'
 
       - name: Check directory size
@@ -152,7 +154,9 @@ jobs:
           
       - name: Render reports 31-45
         run: |
-          Rscript -e 'unlink(here::here("Regressions"), recursive = TRUE)
+          Rscript -e 'remove.packages("NEesp")
+          remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never") # use dev version
+          install.packages("ggnewscale")
           NEesp::render_all_reg(species = NEesp::regression_species_regions[31-45,])'
 
       - name: Check directory size
@@ -207,7 +211,9 @@ jobs:
           
       - name: Render reports 46-61
         run: |
-          Rscript -e 'unlink(here::here("Regressions"), recursive = TRUE)
+          Rscript -e 'remove.packages("NEesp")
+          remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never") # use dev version
+          install.packages("ggnewscale")
           NEesp::render_all_reg(species = NEesp::regression_species_regions[46-51,])'
 
       - name: Check directory size
