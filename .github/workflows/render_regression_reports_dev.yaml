@@ -63,7 +63,7 @@ jobs:
 
       - name: Render reports 11-15
         run: |
-          Rscript -e 'unlink(here::here("Regressions", recursive = TRUE))
+          Rscript -e 'unlink(here::here("Regressions"), recursive = TRUE)
           NEesp::render_all_reg(species = NEesp::regression_species_regions[11:15,])'
 
       - name: Check directory size
