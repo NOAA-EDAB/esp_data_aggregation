@@ -53,6 +53,26 @@ jobs:
           species <- NEesp::species_key$Species
           #species <- "Rosette skate"
           source(here::here("R-scripts", "render dev report with errors.R"))'
+          
+      - name: Check directory size
+        run: |
+          cd action_reports
+          du -s
+        shell: bash           
+          
+      - name: Compress Images
+        id: calibre
+        uses: calibreapp/image-actions@main
+        with:
+          githubToken: ${{ secrets.GH_PAT }}
+          ignorePaths: 'Regression_reports/**'
+          compressOnly: true
+          
+      - name: Check directory size
+        run: |
+          cd action_reports
+          du -s
+        shell: bash          
 
       - name: Deploy reports to Github
         uses: JamesIves/github-pages-deploy-action@4.1.1
