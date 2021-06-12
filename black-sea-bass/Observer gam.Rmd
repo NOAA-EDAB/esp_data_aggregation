@@ -30,37 +30,40 @@ inaccurate estimates of abundance (Erisman et al. 2011, van der Lee 2012). "
 
 ```{r cpue-data}
 #needs to be pushed into package 
-source(here::here("r","DDMMSS_to_DD.R"))
-#needed to prevent r from converting values to scientific notation that breaks the script that converts degree minute second cords to decimal degree
-options(scipen = 999)
-
-OBSPP<-rio::import(here::here("data","OBDBS" ,"OBSPP.rds"))
-#pull in species codes from OBSERVER DBS
-OBSPEC<-read.csv(here::here("data","OBDBS", "OBSPEC.csv"))
-
-OB_key<-OBSPEC %>% select(SPECIES_ITIS,NESPP4 )%>% rename("ITISSPP" ="SPECIES_ITIS")
-
-OB_key_join<- dplyr::left_join(OBSPP,OB_key, by= "NESPP4")
-
-SP_group<-read.csv(here::here("data","species_groupings_V2.csv"))
-
-SP_key<-SP_group  %>% select( COMNAME, SVSPP, ITISSPP, NESPP3, SCINAME) %>% mutate(COMNAME= stringr::str_to_sentence(COMNAME))
-
-OB_sp_join<-dplyr::left_join(OB_key_join,SP_key, by= "ITISSPP")
-
-OB_selected<-OB_sp_join %>% filter(COMNAME == "Black sea bass")
-
+# source(here::here("r","DDMMSS_to_DD.R"))
+# #needed to prevent r from converting values to scientific notation that breaks the script that converts degree minute second cords to decimal degree
+# options(scipen = 999)
+# 
+# OBSPP<-rio::import(here::here("data","OBDBS" ,"OBSPP.rds"))
+# #pull in species codes from OBSERVER DBS
+# OBSPEC<-read.csv(here::here("data","OBDBS", "OBSPEC.csv"))
+# 
+# OB_key<-OBSPEC %>% select(SPECIES_ITIS,NESPP4 )%>% rename("ITISSPP" ="SPECIES_ITIS")
+# 
+# OB_key_join<- dplyr::left_join(OBSPP,OB_key, by= "NESPP4")
+# 
+# SP_group<-read.csv(here::here("data","species_groupings_V2.csv"))
+# 
+# SP_key<-SP_group  %>% select( COMNAME, SVSPP, ITISSPP, NESPP3, SCINAME) %>% mutate(COMNAME= stringr::str_to_sentence(COMNAME))
+# 
+# OB_sp_join<-dplyr::left_join(OB_key_join,SP_key, by= "ITISSPP")
+# 
+# OB_selected<-OB_sp_join %>% filter(COMNAME == "Black sea bass")
 #convert original lat lon to decimal degrees and remove NAs, finally convery lon to negitive values 
-OB_selected <- DDMMSS_to_DD(OB_selected, "LATHBEG","LONHBEG") %>% 
-  filter(!is.na(LAT.DD ) & !is.na( LON.DD )) %>%
-  mutate("LON.DD"=(-1*LON.DD))
+# OB_selected <- DDMMSS_to_DD(OB_selected, "LATHBEG","LONHBEG") %>% 
+#   filter(!is.na(LAT.DD ) & !is.na( LON.DD )) %>%
+#   mutate("LON.DD"=(-1*LON.DD))
 
 
 
-#limit to 2011 as that is last year with abundant hauls
-OB_selected<-OB_selected %>% filter(YEAR < 2012)
+OB_selected<-rio::import(here::here("data","black_sea_bass_sf_ob.rds"))
 
-# OB_selected<- OB_selected %>% rename("Latitude"= "LAT.DD", "Longitude"="LON.DD")
+#filter to comprehensive dataset where only catches of >100lb and 10% of catch are BSB
+
+OB_selected_comp<-OB_selected %>% filter(SUM_black_sea_bass_CATCH>100 & (SUM_black_sea_bass_CATCH/TOT_CATCH)>.1)
+
+
+
 
 ```
 
@@ -70,16 +73,36 @@ You can also embed plots, for example:
 
 
 ```{r}
-OB_selected %>% ggplot(aes(x=HAILWT ))+geom_histogram(binwidth = 10)
+OB_selected_comp %>% ggplot(aes(x=(SUM_black_sea_bass_CATCH )))+geom_histogram(binwidth = 100)
 ```
+
+```{r, hawlwt-by-yr}
+
+OB_selected_comp %>%
+  dplyr::group_by(YEAR) %>%
+  dplyr::summarise(num_haul=sum(SUM_black_sea_bass_CATCH))%>%
+  ggplot(aes(x=YEAR,y=num_haul))+geom_bar(stat="identity")+
+  ylab("wt of hauls")+
+  scale_y_continuous(n.breaks = 10)
+```
+
+
+```{r}
+OB_selected_comp %>%
+  ggplot(aes(x=YEAR,y=(SUM_black_sea_bass_CATCH), group=YEAR))+geom_boxplot()+
+  ylab("wt of hauls")+
+  scale_y_continuous(n.breaks = 10)
+```
+
+
 
 
 ```{r, trips-per-year}
 
 
-OB_selected %>%
+OB_selected_comp %>%
   dplyr::group_by(YEAR) %>%
-  dplyr::summarise(haul_per_yr=length(unique(LINK3)))%>%
+  dplyr::summarise(haul_per_yr=length(unique(haul_id)))%>%
   ggplot(aes(x=YEAR,y=haul_per_yr))+geom_bar(stat="identity")+
   ylab("# of hauls")
 
@@ -91,8 +114,8 @@ OB_selected %>%
 
 
 
-OB_geo<-st_as_sf(OB_selected,coords = c("LON.DD", "LAT.DD"), crs=4269 )
-OB_geo_lim<-OB_selected %>% dplyr::summarise(lonmin=(min(LON.DD)-1), lonmax=(max(LON.DD)+1), latmin=(min(LAT.DD)-1), latmax=(max(LAT.DD)+1))
+OB_geo<-st_as_sf(OB_selected_comp,coords = c("start_lon", "start_lat"), crs=4269 )
+OB_geo_lim<-OB_selected_comp %>% dplyr::summarise(lonmin=(min(start_lon)-1), lonmax=(max(start_lon)+1), latmin=(min(start_lat)-1), latmax=(max(start_lat)+1))
 
 
 ggplot()+
@@ -110,9 +133,9 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ```{r, model-building}
 
 #R package mgcv using the argument ‘select’ equals ‘TRUE
-OB_selected <- OB_selected %>% mutate("AREA"=as.factor(AREA), "NEGEAR"=as.factor(NEGEAR))
+OB_selected_comp <- OB_selected_comp %>% mutate("area"=as.factor(area), "gear_code_obs"=as.factor(gear_code_obs), "mesh_size"=as.factor(mesh_size) )
 
-options(scipen=0, digits=7)
+# options(scipen=0, digits=7)
 
 # make sure to shift the plot to reflect the actual range of values using seWithMean = TRUE, shift = coef(gam_model)[1]
 # +te(LON.DD,LAT.DD)
@@ -120,17 +143,24 @@ options(scipen=0, digits=7)
 
 # gam_mod <- gam(HAILWT ~ s(YEAR, by=NEGEAR)+s(MONTH,bs = "cc",by=NEGEAR),family= "quasi", data = OB_selected, method = "REML", select=TRUE)
 
-gam_mod <- gam(HAILWT ~ s(YEAR,bs="tp")+s(MONTH,bs = "cc")+te(LON.DD,LAT.DD, bs="gp"),family= "nb", data=OB_selected, method = "REML", select=TRUE)
+gam_mod <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp")+s(MONTH,bs = "cc")+te(start_lon,start_lat, bs="gp"),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
+
+time_mod <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp")+s(MONTH,bs = "cc"),family= "nb", data=OB_selected, method = "REML", select=TRUE)
 
 coef(gam_mod)
 summary(gam_mod)
+qq.gam(gam_mod)
 # plot(gam_mod, pages = 2,rug = TRUE,residuals = TRUE,
 #      pch = 1, cex = 1,shade = TRUE)
 plot(gam_mod)
-plot(gam_mod, scheme = 1)
+plot(gam_mod, scheme = 2)
 plot(gam_mod,shade = TRUE,seWithMean = TRUE, shift = coef(gam_mod)[1])
 plot(gam_mod, shade = TRUE, shade.col = "lightblue", select = 1)
 
+
+
+plot(time_mod)
+summary(time_mod)
 # install.packages("mgcViz")
 library(mgcViz)
 ?vis.gam()
@@ -143,36 +173,11 @@ plot(gam_mod$residuals)
 concurvity(gam_mod, full = TRUE)
 concurvity(gam_mod, full = FALSE)
 
-# gam.check(gam_mod)
+gam.check(gam_mod)
 
 gam_mod$
 
-# Family: Negative Binomial(0.516) 
-# Link function: log 
-# 
-# Formula:
-# HAILWT ~ s(YEAR, bs = "tp") + s(MONTH, bs = "cc") + 
-#     te(LON.DD, LAT.DD, bs = "gp")
-# 
-# Parametric coefficients:
-#             Estimate Std. Error z value Pr(>|z|)    
-# (Intercept) 3.192519   0.008059   396.2   <2e-16 ***
-# ---
-# Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-# 
-# Approximate significance of smooth terms:
-#                      edf Ref.df Chi.sq p-value    
-# s(YEAR)            8.906      9   1905  <2e-16 ***
-# s(MONTH)           7.794      8   1440  <2e-16 ***
-# te(LON.DD,LAT.DD) 19.719     24   7904  <2e-16 ***
-# ---
-# Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-# 
-# R-sq.(adj) =  -2.92e+18   Deviance explained = 92.4%
-# -REML = 1.2611e+05  Scale est. = 1         n = 30890
-# > 
 
-#biomass of comercial catch for BSB from last report 
 
 ```
 
