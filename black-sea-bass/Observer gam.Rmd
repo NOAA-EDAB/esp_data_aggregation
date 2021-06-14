@@ -63,6 +63,7 @@ OB_selected<-rio::import(here::here("data","black_sea_bass_sf_ob.rds"))
 OB_selected_comp<-OB_selected %>% filter(SUM_black_sea_bass_CATCH>100 & (SUM_black_sea_bass_CATCH/TOT_CATCH)>.1)
 
 
+t1<-OB_selected_comp %>%mutate(WEEK=  strftime(DATE, format = "%V"))
 
 
 ```
@@ -109,6 +110,12 @@ OB_selected_comp %>%
 
 ```
 
+```{r}
+OB_selected_comp %>% ggplot(aes(x=YDAY,y=log(TOT_black_sea_bass_CATCH)))+geom_point()+facet_grid(cols = vars(YEAR))
+```
+
+
+
 
 ```{r OB-haul-locations, echo=FALSE}
 
@@ -145,24 +152,27 @@ OB_selected_comp <- OB_selected_comp %>% mutate("area"=as.factor(area), "gear_co
 
 gam_mod <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
 
-gam_mod.g <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp", k=13, by=gear_code_obs)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
+gam_mod.g <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp", k=13 )+s(MONTH,bs = "cc",k=12,by=gear_code_obs)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
+
+gam_mod.p <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
 
 
+s
 
 logLik(gam_mod)
-logLik(gam_mod.g)
-plot(gam_mod.g)
-summary(gam_mod.g)
+logLik(gam_mod.p)
+plot(gam_mod.p)
+summary(gam_mod.p)
 
 time_mod <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp")+s(MONTH,bs = "cc"),family= "nb", data=OB_selected, method = "REML", select=TRUE)
 
 coef(gam_mod)
 summary(gam_mod)
-qq.gam(gam_mod)
-plot(gam_mod, pages = 2,rug = TRUE,residuals = TRUE,
+qq.gam(gam_mod.p)
+plot(gam_mod.g, pages = 2,rug = TRUE,residuals = TRUE,
      pch = 1, cex = 1,shade = TRUE)
 plot(gam_mod)
-plot(gam_mod, scheme = 2)
+plot(gam_mod.p, scheme = 2)
 plot(gam_mod,shade = TRUE,seWithMean = TRUE, shift = coef(gam_mod)[1])
 plot(gam_mod, shade = TRUE, shade.col = "lightblue", select = 1)
 
@@ -182,11 +192,11 @@ plot(gam_mod$residuals)
 concurvity(gam_mod, full = TRUE)
 concurvity(gam_mod, full = FALSE)
 
-gam.check(gam_mod)
+gam.check(gam_mod.p)
 
 gam_mod$
 
-
+t1<-rqresiduals(gam_mod)
 
 ```
 
