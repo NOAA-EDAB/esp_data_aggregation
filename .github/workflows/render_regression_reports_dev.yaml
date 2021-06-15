@@ -38,12 +38,12 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: bigger-cache-more-packages-05192021-AT
                  
-      - name: Render reports 1-10
+      - name: Render reports 1
         run: |
           Rscript -e 'remove.packages("NEesp")
           remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never") # use dev version
           install.packages("ggnewscale")
-          NEesp::render_all_reg(species = NEesp::regression_species_regions[1:10,])'
+          NEesp::render_all_reg(species = NEesp::regression_species_regions[1,])'
           
       - name: Check directory size
         run: |
