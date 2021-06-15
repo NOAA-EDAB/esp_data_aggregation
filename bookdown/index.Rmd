@@ -55,7 +55,8 @@ knitr::opts_chunk$set(
   dev = "png",
   hook_name = TRUE,
   dpi = 72,
-  fig.retina = 1
+  fig.retina = 1,
+  dev.args = list(type = "windows")
 )
 ```
 
