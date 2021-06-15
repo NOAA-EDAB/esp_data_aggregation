@@ -63,20 +63,23 @@ OB_selected<-rio::import(here::here("data","black_sea_bass_sf_ob.rds"))
 OB_selected_comp<-OB_selected %>% filter(SUM_black_sea_bass_CATCH>100 & (SUM_black_sea_bass_CATCH/TOT_CATCH)>.1)
 
 
-t1<-OB_selected_comp %>%mutate(WEEK=  strftime(DATE, format = "%V"))
+OB_selected_comp<-OB_selected_comp %>%mutate(WEEK=  strftime(DATE, format = "%V"))
 
 
 ```
 
-## Including Plots
+### Distribution of haul size
 
-You can also embed plots, for example:
+Strong peak near zero and long tail indicate a Poisson like distribution. However, the non discrete nature of the data and the extreme tail indidcates a large amount of overdispersion. Procedeing with a negitive binomial distribution to assess the structure of the data 
 
 
 ```{r}
-OB_selected_comp %>% ggplot(aes(x=(SUM_black_sea_bass_CATCH )))+geom_histogram(binwidth = 100)
+OB_selected_comp %>% ggplot(aes(x=(TOT_black_sea_bass_CATCH )))+
+  geom_histogram(binwidth = 100)+
+  xlab("Total of BSB catch per haul (lb)")
 ```
-
+#### Total Hauls by year
+The total amount of BSB caught through time appears to increase drasticly, could be due to either increased effort or higher abundance of BSB on the grounds
 ```{r, hawlwt-by-yr}
 
 OB_selected_comp %>%
@@ -86,6 +89,11 @@ OB_selected_comp %>%
   ylab("wt of hauls")+
   scale_y_continuous(n.breaks = 10)
 ```
+
+```{r}
+OB_selected_comp %>% summar
+```
+
 
 
 ```{r}
@@ -111,7 +119,7 @@ OB_selected_comp %>%
 ```
 
 ```{r}
-OB_selected_comp %>% ggplot(aes(x=YDAY,y=log(TOT_black_sea_bass_CATCH)))+geom_point()+facet_grid(cols = vars(YEAR))
+OB_selected_comp %>% ggplot(aes(x=WEEK,y=log(TOT_black_sea_bass_CATCH)))+geom_point()+facet_wrap(~(YEAR), nrow=4, ncol=4)
 ```
 
 
@@ -156,8 +164,10 @@ gam_mod.g <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp", k=13 )+s(MONTH,bs = 
 
 gam_mod.p <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
 
+gam_mod.poi <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= Poisson, data=OB_selected_comp, method = "REML", select=TRUE)
 
-s
+
+family=poisson
 
 logLik(gam_mod)
 logLik(gam_mod.p)
