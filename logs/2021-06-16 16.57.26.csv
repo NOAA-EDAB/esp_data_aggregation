@@ -1,9 +1,0 @@
-"Species","Error","File throwing error","Chunk name","Line throwing error"
-"Blueback herring","Error in `contrasts<-`(`*tmp*`, value = contr.funs[1 + isOF[nn]]) : 
-  contrasts can be applied only to factors with 2 or more levels
-","von_b.Rmd","ancova model","141"
-"Monkfish","Error in numericDeriv(form[[3L]], names(ind), env) : 
-  Missing value or an infinity produced when evaluating the model
-","von_b.Rmd","vonb-model","30"
-"Rosette skate","Error in seq_len(n) : argument must be coercible to non-negative integer
-","catch-rec.Rmd","state-breakdown-data-good","110"
