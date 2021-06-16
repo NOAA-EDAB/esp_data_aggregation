@@ -54,22 +54,10 @@ jobs:
           #species <- "Rosette skate"
           source(here::here("R-scripts", "render dev report with errors.R"))'
           
-      - name: Check directory size
-        run: |
-          cd action_reports
-          du -s
-        shell: bash           
-
       - name: Change to 8-bit
         run: |
-          cd action_reports
-          du -s
-        shell: bash
-
-      - name: Try to change to 8 bit
-        run: |
           sudo apt-get install -y pngquant
-          cd Reports
+          cd action_reports
           du -s
           pngquant --quality=0-90 --force --ext .png */*/*.png
           du -s

@@ -50,13 +50,22 @@ jobs:
           cd Regressions
           du -s
         shell: bash
+
+      - name: Change to 8-bit
+        run: |
+          sudo apt-get install -y pngquant
+          cd Regressions
+          du -s
+          pngquant --quality=0-90 --force --ext .png */*/*/*.png
+          du -s
+        shell: bash 
         
       - name: Compress Images
         id: calibre
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GH_PAT }}
-          ignorePaths: 'Regression_reports/**'
+          ignorePaths: 'Reports/**'
           compressOnly: true
           
       - name: Check directory size
