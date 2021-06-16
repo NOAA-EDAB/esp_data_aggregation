@@ -50,11 +50,15 @@ jobs:
       - name: Render reports
         run: |
           Rscript -e '
+          # install dev NEesp
+          remove.packages("NEesp")
+          remotes::install_github("NOAA-EDAB/NEesp, ref = "dev", upgrade = "never")
+          
+          # create reports
           species <- NEesp::species_key$Species
-          #species <- "Rosette skate"
           source(here::here("R-scripts", "render dev report with errors.R"))'
           
-      - name: Change to 8-bit
+      - name: Change images to 8-bit
         run: |
           sudo apt-get install -y pngquant
           cd action_reports
