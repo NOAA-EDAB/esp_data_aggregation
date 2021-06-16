@@ -72,7 +72,7 @@ jobs:
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GH_PAT }}
-          ignorePaths: 'Regression_reports/**'
+          ignorePaths: 'Regression_reports/**, black-sea-bass/**, R-scripts/**'
           compressOnly: true
           
       - name: Check directory size
