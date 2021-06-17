@@ -90,8 +90,14 @@ OB_selected_comp %>%
   scale_y_continuous(n.breaks = 10)
 ```
 
+#### Vessel composition
+Large number of vessels in data set with a total of `r length(ves_count$VES_NAME)` unique vessels. May have to remove the rare boats, that occur less than 5 times to reduce the amount of random effects
 ```{r}
-OB_selected_comp %>% summar
+ves_count<-OB_selected_comp %>% group_by(VES_NAME) %>%  tally()
+
+ves_count %>% ggplot(aes(x=VES_NAME, y=n))+geom_bar(stat = "identity")
+rare.ves<-ves_count %>% filter(n<5)
+
 ```
 
 
@@ -162,9 +168,14 @@ gam_mod <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc
 
 gam_mod.g <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp", k=13 )+s(MONTH,bs = "cc",k=12,by=gear_code_obs)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
 
-gam_mod.p <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
+gam_mod.ves <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
 
-gam_mod.poi <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= Poisson, data=OB_selected_comp, method = "REML", select=TRUE)
+
+
+
+
+
+
 
 
 family=poisson
