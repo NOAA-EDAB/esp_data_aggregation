@@ -171,7 +171,7 @@ gam_mod.g <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp", k=13 )+s(MONTH,bs = 
 gam_mod.ves <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
 
 
-
+gam_mod.ds <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="ds", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
 
 
 
@@ -180,9 +180,9 @@ gam_mod.ves <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(M
 
 family=poisson
 
-logLik(gam_mod)
-logLik(gam_mod.p)
-plot(gam_mod.p)
+logLik(gam_mod.ves)
+logLik(gam_mod.ds)
+plot(gam_mod.ds)
 summary(gam_mod.p)
 
 time_mod <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp")+s(MONTH,bs = "cc"),family= "nb", data=OB_selected, method = "REML", select=TRUE)
