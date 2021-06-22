@@ -22,13 +22,26 @@ survdata.w.codes <- NEesp::common_names_survdat("bio")
 selected.surv <- survdata.w.codes %>%
   dplyr::filter(common_name == species)
 
+#used to debug
+# selected.surv <- survdata.w.codes %>%
+#   dplyr::filter(common_name == "Monkfish")
+
 # only take records with age associated
 selected.surv.clean <- selected.surv %>% tidyr::drop_na(AGE)
+
+#add exception to monkfish as its aging is 
+
+if(unique(selected.surv.clean$common_name) == "Monkfish"){
+  selected.surv.clean<-selected.surv.clean %>% slice_head( n =3)
+}
+
+
+
 ```
 
 
 ```{r, vonb-model}
-if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
+if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
   # define the type of von b model
   vb <- FSA::vbFuns(param = "Typical")
   # define starting parameters based on the avalible data
@@ -140,7 +153,7 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
 
 ```{r, ancova model}
 
-if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
+if (selected.surv.clean$AGE %>% unique() %>% length() >= 50) {
 
   # cut the yearly data into decades centered on 1980,
   selected.surv.w.predicted <- selected.surv.w.predicted %>%
