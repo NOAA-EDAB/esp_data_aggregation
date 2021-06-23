@@ -87,7 +87,7 @@ Selected_sp %>%
   ggplot2::ggplot(ggplot2::aes(x = Year, y = log(total))) +
   tidyquant::geom_ma(n = 5, lwd = 1.4) +
   ggplot2::geom_point() +
-  #ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average") +
+  ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average") +
   ggplot2::xlim(1981, 2019) +
   ggplot2::xlab(label = "Year") +
   ggplot2::ylab(label = "Log transformed  total catch in pounds (lb) ") +
