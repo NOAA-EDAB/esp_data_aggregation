@@ -50,22 +50,29 @@ jobs:
       - name: Render reports
         run: |
           Rscript -e '
+          # install dev NEesp
+          remove.packages("NEesp")
+          remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never")
+          
+          # create reports
           species <- NEesp::species_key$Species
-          #species <- "Rosette skate"
           source(here::here("R-scripts", "render dev report with errors.R"))'
           
-      - name: Check directory size
+      - name: Change images to 8-bit
         run: |
+          sudo apt-get install -y pngquant
           cd action_reports
           du -s
-        shell: bash           
-          
+          pngquant --quality=0-90 --force --ext .png */*/*.png
+          du -s
+        shell: bash 
+        
       - name: Compress Images
         id: calibre
         uses: calibreapp/image-actions@main
         with:
           githubToken: ${{ secrets.GH_PAT }}
-          ignorePaths: 'Regression_reports/**'
+          ignorePaths: 'Regression_reports/**, black-sea-bass/**, R-scripts/**'
           compressOnly: true
           
       - name: Check directory size
