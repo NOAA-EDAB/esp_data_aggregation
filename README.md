@@ -34,16 +34,21 @@ species-specific information.
 ## The Northeast ESP suite
 
 There are currently 4 github repos associated with the Northeast ESP
-initiative. 1.
-[`NOAA-EDAB/esp_data_aggregation`](https://github.com/NOAA-EDAB/esp_data_aggregation)
+initiative. 
+
+1. [`NOAA-EDAB/esp_data_aggregation`](https://github.com/NOAA-EDAB/esp_data_aggregation)
 is the original repo and currently houses development and exploratory
-work. 2. [`NOAA-EDAB/NEesp`](https://github.com/NOAA-EDAB/NEesp) houses
+work. 
+
+2. [`NOAA-EDAB/NEesp`](https://github.com/NOAA-EDAB/NEesp) houses
 an R package that contains relevant data, functions for low-level data
-analysis and plotting, and report templates. 3.
-[`NOAA-EDAB/NEespShiny`](https://github.com/NOAA-EDAB/NEespShiny) houses
+analysis and plotting, and report templates. 
+
+3. [`NOAA-EDAB/NEespShiny`](https://github.com/NOAA-EDAB/NEespShiny) houses
 an R Shiny app (in the form of an R package) that provides a graphical
-user interface for creating reports with the `NEesp` package. 4.
-[`NOAA-EDAB/ESP_docs`](https://github.com/NOAA-EDAB/ESP_docs) houses
+user interface for creating reports with the `NEesp` package. 
+
+4.[`NOAA-EDAB/ESP_docs`](https://github.com/NOAA-EDAB/ESP_docs) houses
 reports on Northeast stocks and ecosystem/socioeconomic indicators.
 
 ## Data and analysis
