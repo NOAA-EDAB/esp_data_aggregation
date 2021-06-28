@@ -48,7 +48,7 @@ analysis and plotting, and report templates.
 an R Shiny app (in the form of an R package) that provides a graphical
 user interface for creating reports with the `NEesp` package. 
 
-4.[`NOAA-EDAB/ESP_docs`](https://github.com/NOAA-EDAB/ESP_docs) houses
+4. [`NOAA-EDAB/ESP_docs`](https://github.com/NOAA-EDAB/ESP_docs) houses
 reports on Northeast stocks and ecosystem/socioeconomic indicators.
 
 ## Data and analysis
