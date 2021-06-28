@@ -5,13 +5,13 @@
 # install.packages("ggpubr")
 # devtools::install_github("james-thorson/FishLife")
 
-# suppressPackageStartupMessages(library(FishLife))
-# suppressPackageStartupMessages(library(tidyverse))
-# suppressPackageStartupMessages(library(nlstools))
-# library(rfishbase)
-# library(ggpubr)
-# library(FSA)
-# library(NEesp)
+suppressPackageStartupMessages(library(FishLife))
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(nlstools))
+library(rfishbase)
+library(ggpubr)
+library(FSA)
+library(NEesp)
 ```
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
@@ -19,12 +19,12 @@
 # load bio survdat information from the package
 survdata.w.codes <- NEesp::common_names_survdat("bio")
 
-selected.surv <- survdata.w.codes %>%
-  dplyr::filter(common_name == species)
+# selected.surv <- survdata.w.codes %>%
+#   dplyr::filter(common_name == species)
 
 #used to debug
-# selected.surv <- survdata.w.codes %>%
-#   dplyr::filter(common_name == "Monkfish")
+selected.surv <- survdata.w.codes %>%
+  dplyr::filter(common_name == "Monkfish")
 
 # only take records with age associated
 selected.surv.clean <- selected.surv %>% tidyr::drop_na(AGE)
@@ -72,7 +72,7 @@ The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth
 
 ```{r single-growth-curve, fig.cap = paste(species, "length at age growth curve")}
 # palette
-if (nrow(selected.surv.clean) > 0) {
+if (nrow(selected.surv.clean) > 50) {
   fig <- ggplot2::ggplot(
     data = selected.surv.clean,
     ggplot2::aes(
@@ -120,7 +120,7 @@ The rate of growth may vary through time and between sexes. To assess for potent
 ```{r, growth_diff_testing}
 # testing a Common L8 and t0 Model.
 
-if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
+if (selected.surv.clean$AGE %>% unique() %>% length() >= 50) {
   # define the type of von b model
   vb <- FSA::vbFuns(param = "Typical")
   # define starting parameters based on the avalible data
@@ -198,7 +198,7 @@ The fit of each of these grouping to the global model is visualized as the distr
 
 
 ```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade")}
-if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
+if (selected.surv.clean$AGE %>% unique() %>% length() >= 50) {
   selected.surv.w.predicted %>%
     ggplot2::ggplot(ggplot2::aes(x = SEX, y = residual.standardized, fill = Decade)) +
     ggplot2::geom_boxplot() +
