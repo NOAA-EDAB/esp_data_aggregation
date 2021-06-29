@@ -100,7 +100,7 @@ Selected_sp %>%
 
 if(nrow(Selected_sp)>10){
   Selected_sp %>%
-  data.table::na.omit() %>%
+  tidyr::drop_na() %>%
   ggplot2::ggplot(ggplot2::aes(x = Year, y = log(total))) +
   ggplot2::geom_point(size = 1.3) +
   ggplot2::geom_line() +
