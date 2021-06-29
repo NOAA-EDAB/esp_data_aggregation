@@ -46,6 +46,12 @@ jobs:
           Rscript -e '
           remove.packages("sf")
           install.packages("sf")'
+          
+      - name: Re-install data.table
+        run: |
+          Rscript -e '
+          remove.packages("data.table")
+          install.packages("data.table")'
                  
       - name: Render reports
         run: |
