@@ -34,14 +34,16 @@ params:
 ```{r, setup, include = FALSE}
 # keep track of chunk names for troubleshooting
 last_known <<- "setup"
-knitr::knit_hooks$set(hook_name = function(before){
-  if(before){
-    chunk_name <<- knitr::opts_current$get()$label
-    known_name = stringr::str_detect(chunk_name, "unnamed-chunk-", negate = TRUE)
-    if(known_name) {
-      last_known <<- chunk_name
+knitr::knit_hooks$set(hook_name = function(before) {
+  capture.output({
+    if (before) {
+      chunk_name <<- knitr::opts_current$get()$label
+      known_name <- stringr::str_detect(chunk_name, "unnamed-chunk-", negate = TRUE)
+      if (known_name) {
+        last_known <<- chunk_name
+      }
     }
-  }
+  })
 })
 
 knitr::opts_chunk$set(
@@ -56,7 +58,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r, species_data}
+```{r, species-data}
 species <- params$species_ID
 
 # risk data
@@ -145,7 +147,7 @@ pp_data <- ecodata::ESP_seasonal_pp %>%
   dplyr::distinct()
 ```
 
-```{r, save_data, eval = params$save}
+```{r, save-data, eval = params$save}
 
 dir.create("data")
 

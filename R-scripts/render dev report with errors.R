@@ -1,4 +1,3 @@
-
 `%>%` <- magrittr::`%>%`
 output <- c()
 
@@ -13,7 +12,7 @@ suppressWarnings({
         ricky_survey_data = NEesp::bio_survey,
         path = here::here("action_reports", i, "figures//"),
         save = TRUE
-      ), trouble = FALSE
+      ), trouble = TRUE
     ))
 
     if (class(test) == "try-error") {
