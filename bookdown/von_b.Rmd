@@ -5,13 +5,13 @@
 # install.packages("ggpubr")
 # devtools::install_github("james-thorson/FishLife")
 
-suppressPackageStartupMessages(library(FishLife))
-suppressPackageStartupMessages(library(tidyverse))
-suppressPackageStartupMessages(library(nlstools))
-library(rfishbase)
-library(ggpubr)
-library(FSA)
-library(NEesp)
+# suppressPackageStartupMessages(library(FishLife))
+# suppressPackageStartupMessages(library(tidyverse))
+# suppressPackageStartupMessages(library(nlstools))
+# library(rfishbase)
+# library(ggpubr)
+# library(FSA)
+# library(NEesp)
 ```
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
@@ -19,17 +19,17 @@ library(NEesp)
 # load bio survdat information from the package
 survdata.w.codes <- NEesp::common_names_survdat("bio")
 
-# selected.surv <- survdata.w.codes %>%
-#   dplyr::filter(common_name == species)
+selected.surv <- survdata.w.codes %>%
+  dplyr::filter(common_name == species)
 
 #used to debug
-selected.surv <- survdata.w.codes %>%
-  dplyr::filter(common_name == "Monkfish")
+# selected.surv <- survdata.w.codes %>%
+#   dplyr::filter(common_name == "Monkfish")
 
 # only take records with age associated
 selected.surv.clean <- selected.surv %>% tidyr::drop_na(AGE)
 
-#add exception to monkfish as its aging is 
+#add exception to monkfish as its aging is messy 
 
 if(unique(selected.surv.clean$common_name) == "Monkfish"){
   selected.surv.clean<-selected.surv.clean %>% slice_head( n =3)
