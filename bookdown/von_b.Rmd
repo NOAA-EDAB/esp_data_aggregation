@@ -169,13 +169,13 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 3) {
 
 ```{r, vonb ancova table}
 
-if(exists("selected.surv.w.predicted")){
+if (exists("selected.surv.w.predicted")) {
   if (nrow(selected.surv.w.predicted) > 5) {
-  knitr::kable(ancova.table$coefficients, digits = 3)
+    knitr::kable(ancova.table$coefficients, digits = 3)
   } else {
-  ("No model output")
-}
-  } else {
+    ("No model output")
+  }
+} else {
   ("No model output")
 }
 ```

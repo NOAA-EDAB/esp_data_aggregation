@@ -8,7 +8,7 @@ Ichthyoplankton surveyed during the Marine Resources Monitoring, Assessment, and
 
 ```{r, ich-wrangle}
 # filter to just one species of interest
-selected_spp <- NEesp::ichthyo %>% 
+selected_spp <- NEesp::ichthyo %>%
   dplyr::filter(common_name == params$species_ID) %>%
   tidyr::drop_na(any_of("rel.proportion")) # remove na's
 ```
@@ -22,41 +22,44 @@ selected_spp <- NEesp::ichthyo %>%
 if (nrow(selected_spp) > 5) {
   selected_spp <- selected_spp %>%
     dplyr::mutate(decade = ggplot2::cut_width(year, width = 10, center = 1980))
-  selected_spp.1 <- selected_spp %>% dplyr::filter(!is.na(lat),
-                                  !is.na(lon)) # only filter out na lat/long
+  selected_spp.1 <- selected_spp %>% dplyr::filter(
+    !is.na(lat),
+    !is.na(lon)
+  ) # only filter out na lat/long
 
-  if(nrow(selected_spp.1) > 0){
-     selected_spp.1 <- selected_spp.1 %>%
-    dplyr::mutate(rel.prop.bin = ggplot2::cut_interval(rel.proportion, length = 25))
-
-
-  geo_lim.1 <- selected_spp.1 %>% dplyr::summarise(
-    latmin = min(lat, na.rm = TRUE) - 1,
-    latmax = max(lat, na.rm = TRUE) + 1,
-    lonmin = min(lon, na.rm = TRUE) - 1,
-    lonmax = max(lon, na.rm = TRUE) + 1
-  )
+  if (nrow(selected_spp.1) > 0) {
+    selected_spp.1 <- selected_spp.1 %>%
+      dplyr::mutate(rel.prop.bin = ggplot2::cut_interval(rel.proportion, length = 25))
 
 
-  ggplot2::ggplot() +
-    ggplot2::geom_sf() +
-    ggplot2::coord_sf(
-      xlim = c(geo_lim.1$lonmin - 1, geo_lim.1$lonmax + 1),
-      ylim = c(geo_lim.1$latmin - 1, geo_lim.1$latmax + 1)
-    ) +
-    ggplot2::geom_point(data = selected_spp.1, ggplot2::aes(x = lon, y = lat, size = (mean.abund), color = rel.prop.bin)) +
-    ggplot2::facet_grid(decade ~ season.month) +
-    nmfspalette::scale_color_nmfs("seagrass") +
-    ggplot2::geom_sf(data = ecodata::coast) +
-    ggplot2::coord_sf(
-      xlim = c(geo_lim.1$lonmin + 1, geo_lim.1$lonmax - 1),
-      ylim = c(geo_lim.1$latmin + 1, geo_lim.1$latmax - 1)
-    ) +
-    ggplot2::labs(size = "Mean abundance", color = "Relative proportion (%)") +
-    ggplot2::xlab("Longitude") +
-    ggplot2::ylab("Latitude")
-  } else "MISSING DATA"
- 
+    geo_lim.1 <- selected_spp.1 %>% dplyr::summarise(
+      latmin = min(lat, na.rm = TRUE) - 1,
+      latmax = max(lat, na.rm = TRUE) + 1,
+      lonmin = min(lon, na.rm = TRUE) - 1,
+      lonmax = max(lon, na.rm = TRUE) + 1
+    )
+
+
+    ggplot2::ggplot() +
+      ggplot2::geom_sf() +
+      ggplot2::coord_sf(
+        xlim = c(geo_lim.1$lonmin - 1, geo_lim.1$lonmax + 1),
+        ylim = c(geo_lim.1$latmin - 1, geo_lim.1$latmax + 1)
+      ) +
+      ggplot2::geom_point(data = selected_spp.1, ggplot2::aes(x = lon, y = lat, size = (mean.abund), color = rel.prop.bin)) +
+      ggplot2::facet_grid(decade ~ season.month) +
+      nmfspalette::scale_color_nmfs("seagrass") +
+      ggplot2::geom_sf(data = ecodata::coast) +
+      ggplot2::coord_sf(
+        xlim = c(geo_lim.1$lonmin + 1, geo_lim.1$lonmax - 1),
+        ylim = c(geo_lim.1$latmin + 1, geo_lim.1$latmax - 1)
+      ) +
+      ggplot2::labs(size = "Mean abundance", color = "Relative proportion (%)") +
+      ggplot2::xlab("Longitude") +
+      ggplot2::ylab("Latitude")
+  } else {
+    "MISSING DATA"
+  }
 } else {
   ("No data")
 }
