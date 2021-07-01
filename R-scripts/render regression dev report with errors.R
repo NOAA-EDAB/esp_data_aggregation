@@ -41,8 +41,7 @@ suppressWarnings({
         ) %>% invisible()
 
         problem_file2 <- problem_file2 %>%
-          tibble::as_tibble() %>%
-          dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+          tibble::as_tibble()
 
         file_name <- problem_file2[, 1] %>%
           stringr::str_split("correlation_bookdown_template/", n = 2)
@@ -95,8 +94,7 @@ suppressWarnings({
         ) %>% invisible()
         
         problem_file2 <- problem_file2 %>%
-          tibble::as_tibble() %>%
-          dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+          tibble::as_tibble() 
         
         file_name <- problem_file2[, 1] %>%
           stringr::str_split("correlation_bookdown_template/", n = 2)
@@ -149,8 +147,7 @@ suppressWarnings({
         ) %>% invisible()
         
         problem_file2 <- problem_file2 %>%
-          tibble::as_tibble() %>%
-          dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+          tibble::as_tibble() 
         
         file_name <- problem_file2[, 1] %>%
           stringr::str_split("correlation_bookdown_template/", n = 2)
