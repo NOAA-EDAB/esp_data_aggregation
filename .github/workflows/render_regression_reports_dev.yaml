@@ -42,6 +42,8 @@ jobs:
         run: |
           Rscript -e 'remove.packages("NEesp")
           remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never") # use dev version
+          remove.packages("ecodata")
+          remotes::install_github("NOAA-EDAB/ecodata", upgrade = "never")
           install.packages("ggnewscale")
           NEesp::render_all_reg(species = NEesp::regression_species_regions[1:30,])'
           
