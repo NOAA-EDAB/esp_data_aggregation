@@ -5,7 +5,7 @@ output <- c()
 species <- NEesp::regression_species_regions
 
 suppressWarnings({
-  for (i in species) {
+  for (i in length(species)) {
     
     sink("hide.txt")
     
