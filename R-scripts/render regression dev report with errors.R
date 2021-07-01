@@ -32,8 +32,7 @@ suppressWarnings({
       ) %>% invisible()
 
       problem_file <- problem_file %>%
-        tibble::as_tibble() %>%
-        dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+        tibble::as_tibble() 
 
       if (problem_file == "Not found") {
         problem_file2 <- NEesp::find_files(
@@ -58,7 +57,7 @@ suppressWarnings({
       } else {
         
         file_name <- problem_file[, 1] %>%
-          stringr::str_split("bookdown/", n = 2)
+          stringr::str_split("correlation_bookdown_template/", n = 2)
         file_name <- file_name[[1]][2]
 
         this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
@@ -87,8 +86,7 @@ suppressWarnings({
       ) %>% invisible()
       
       problem_file <- problem_file %>%
-        tibble::as_tibble() %>%
-        dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+        tibble::as_tibble() 
       
       if (problem_file == "Not found") {
         problem_file2 <- NEesp::find_files(
@@ -113,7 +111,7 @@ suppressWarnings({
       } else {
         
         file_name <- problem_file[, 1] %>%
-          stringr::str_split("bookdown/", n = 2)
+          stringr::str_split("correlation_bookdown_template/", n = 2)
         file_name <- file_name[[1]][2]
         
         this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
@@ -142,8 +140,7 @@ suppressWarnings({
       ) %>% invisible()
       
       problem_file <- problem_file %>%
-        tibble::as_tibble() %>%
-        dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+        tibble::as_tibble()
       
       if (problem_file == "Not found") {
         problem_file2 <- NEesp::find_files(
