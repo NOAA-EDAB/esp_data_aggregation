@@ -4,6 +4,81 @@ output <- c()
 
 species <- NEesp::regression_species_regions
 
+# the dumb way to try to force through errors
+error_analysis <- function(chunk_name = chunk_name,
+                           last_known = last_known,
+                           test = test){
+  problem_file <- NEesp::find_files(
+    paste0("\\{r", "(.{1,5})", chunk_name),
+    location
+  ) %>% invisible()
+
+  if (problem_file == "Not found") {
+    problem_file2 <- NEesp::find_files(
+      paste0("\\{r", "(.{1,5})", last_known),
+      location
+    ) %>% invisible()
+
+  } else {
+    problem_file2 <- ""
+  }
+  
+  this_output <- cat(
+    species[i], 
+    "0lag", 
+    test[1],
+    chunk_name,
+    problem_file,
+    problem_file2,
+    sep = "\n"
+  )
+  
+  return(this_output)
+}
+
+# the original way
+error_analysis2 <- function(chunk_name = chunk_name,
+                           last_known = last_known,
+                           test = test){
+  problem_file <- NEesp::find_files(
+    paste0("\\{r", "(.{1,5})", chunk_name),
+    location
+  ) %>% invisible()
+  
+  problem_file <- problem_file %>%
+    tibble::as_tibble() 
+  
+  if (problem_file == "Not found") {
+    problem_file2 <- NEesp::find_files(
+      paste0("\\{r", "(.{1,5})", last_known),
+      location
+    ) %>% invisible()
+    
+    problem_file2 <- problem_file2 %>%
+      tibble::as_tibble()
+    
+    file_name <- problem_file2[, 1] %>%
+      stringr::str_split("correlation_bookdown_template/", n = 2)
+    file_name <- file_name[[1]][2]
+    
+    this_output <- c(
+      i, "0lag", test[1],
+      paste("unknown - last known file:", file_name),
+      chunk_name,
+      paste("unknown - last known line:", problem_file2[,2])
+    )
+  } else {
+    
+    file_name <- problem_file[, 1] %>%
+      stringr::str_split("correlation_bookdown_template/", n = 2)
+    file_name <- file_name[[1]][2]
+    
+    this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
+                     recursive = TRUE)
+  }
+  return(this_output)
+}
+
 suppressWarnings({
   for (i in 1:nrow(species)) {
     
@@ -26,43 +101,9 @@ suppressWarnings({
     ))
 
     if (class(test) == "try-error") {
-      problem_file <- NEesp::find_files(
-        paste0("\\{r", "(.{1,5})", chunk_name),
-        location
-      ) %>% invisible()
-
-      problem_file <- problem_file %>%
-        tibble::as_tibble() 
-
-      if (problem_file == "Not found") {
-        problem_file2 <- NEesp::find_files(
-          paste0("\\{r", "(.{1,5})", last_known),
-          location
-        ) %>% invisible()
-
-        problem_file2 <- problem_file2 %>%
-          tibble::as_tibble()
-
-        file_name <- problem_file2[, 1] %>%
-          stringr::str_split("correlation_bookdown_template/", n = 2)
-        file_name <- file_name[[1]][2]
-
-        this_output <- c(
-          i, "0lag", test[1],
-          paste("unknown - last known file:", file_name),
-          chunk_name,
-          paste("unknown - last known line:", problem_file2[,2])
-        )
-      } else {
-        
-        file_name <- problem_file[, 1] %>%
-          stringr::str_split("correlation_bookdown_template/", n = 2)
-        file_name <- file_name[[1]][2]
-
-        this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
-                         recursive = TRUE)
-      }
-      output <- rbind(output, this_output)
+      this_output <- error_analysis()
+      #output <- rbind(output, this_output)
+      output <- cat(output, this_output)
     }
     
     # make 1 lag reports
@@ -79,43 +120,9 @@ suppressWarnings({
     ))
     
     if (class(test) == "try-error") {
-      problem_file <- NEesp::find_files(
-        paste0("\\{r", "(.{1,5})", chunk_name),
-       location
-      ) %>% invisible()
-      
-      problem_file <- problem_file %>%
-        tibble::as_tibble() 
-      
-      if (problem_file == "Not found") {
-        problem_file2 <- NEesp::find_files(
-          paste0("\\{r", "(.{1,5})", last_known),
-          location
-        ) %>% invisible()
-        
-        problem_file2 <- problem_file2 %>%
-          tibble::as_tibble() 
-        
-        file_name <- problem_file2[, 1] %>%
-          stringr::str_split("correlation_bookdown_template/", n = 2)
-        file_name <- file_name[[1]][2]
-        
-        this_output <- c(
-          i, "1lag", test[1],
-          paste("unknown - last known file:", file_name),
-          chunk_name,
-          paste("unknown - last known line:", problem_file2[,2])
-        )
-      } else {
-        
-        file_name <- problem_file[, 1] %>%
-          stringr::str_split("correlation_bookdown_template/", n = 2)
-        file_name <- file_name[[1]][2]
-        
-        this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
-                         recursive = TRUE)
-      }
-      output <- rbind(output, this_output)
+      this_output <- error_analysis()
+      #output <- rbind(output, this_output)
+      output <- cat(output, this_output)
     }
     
     # make 1 lag remove reports
@@ -132,43 +139,9 @@ suppressWarnings({
     ))
     
     if (class(test) == "try-error") {
-      problem_file <- NEesp::find_files(
-        paste0("\\{r", "(.{1,5})", chunk_name),
-        location
-      ) %>% invisible()
-      
-      problem_file <- problem_file %>%
-        tibble::as_tibble()
-      
-      if (problem_file == "Not found") {
-        problem_file2 <- NEesp::find_files(
-          paste0("\\{r", "(.{1,5})", last_known),
-          location
-        ) %>% invisible()
-        
-        problem_file2 <- problem_file2 %>%
-          tibble::as_tibble() 
-        
-        file_name <- problem_file2[, 1] %>%
-          stringr::str_split("correlation_bookdown_template/", n = 2)
-        file_name <- file_name[[1]][2]
-        
-        this_output <- c(
-          i, "1lagR", test[1],
-          paste("unknown - last known file:", file_name),
-          chunk_name,
-          paste("unknown - last known line:", problem_file2[,2])
-        )
-      } else {
-        
-        file_name <- problem_file[, 1] %>%
-          stringr::str_split("correlation_bookdown_template/", n = 2)
-        file_name <- file_name[[1]][2]
-        
-        this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
-                         recursive = TRUE)
-      }
-      output <- rbind(output, this_output)
+      this_output <- error_analysis()
+      #output <- rbind(output, this_output)
+      output <- cat(output, this_output)
     }
     
     sink()
