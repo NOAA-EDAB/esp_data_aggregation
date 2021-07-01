@@ -51,7 +51,7 @@ suppressWarnings({
           i, "0lag", test[1],
           paste("unknown - last known file:", file_name),
           chunk_name,
-          paste("unknown - last known line:", problem_file2[2])
+          paste("unknown - last known line:", problem_file2[,2])
         )
       } else {
         
@@ -104,7 +104,7 @@ suppressWarnings({
           i, "1lag", test[1],
           paste("unknown - last known file:", file_name),
           chunk_name,
-          paste("unknown - last known line:", problem_file2[2])
+          paste("unknown - last known line:", problem_file2[,2])
         )
       } else {
         
@@ -157,7 +157,7 @@ suppressWarnings({
           i, "1lagR", test[1],
           paste("unknown - last known file:", file_name),
           chunk_name,
-          paste("unknown - last known line:", problem_file2[2])
+          paste("unknown - last known line:", problem_file2[,2])
         )
       } else {
         
