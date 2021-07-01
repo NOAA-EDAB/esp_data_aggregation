@@ -10,6 +10,7 @@ suppressWarnings({
     sink("hide.txt")
     
     location <- system.file("correlation_bookdown_template", package = "NEesp")
+    x <- "package"
     
     # make 0 lag reports
     test <- try(NEesp::render_reg_report(
