@@ -45,7 +45,7 @@ jobs:
           remove.packages("ecodata")
           remotes::install_github("NOAA-EDAB/ecodata", upgrade = "never")
           install.packages("ggnewscale")
-          NEesp::render_all_reg(species = NEesp::regression_species_regions)'
+          source(here::here("R-scripts", "render regression dev report with errors.R"))'
           
       - name: Change to 8-bit
         run: |

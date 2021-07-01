@@ -1,0 +1,206 @@
+
+`%>%` <- magrittr::`%>%`
+output <- c()
+
+suppressWarnings({
+  for (i in species) {
+    
+    sink("hide.txt")
+    
+    location <- system.file("correlation_bookdown_template", package = "NEesp")
+    
+    # make 0 lag reports
+    test <- try(NEesp::render_reg_report(
+      stock_var = species[i, 1],
+      epus_var = species[i, 3],
+      region_var = species[i, 2],
+      lag_var = 0,
+      remove_var = FALSE,
+      save_var = TRUE,
+      input = x,
+      parent_folder = "zero_lag",
+      trouble = FALSE
+    ))
+
+    if (class(test) == "try-error") {
+      problem_file <- NEesp::find_files(
+        paste0("\\{r", "(.{1,5})", chunk_name),
+        location
+      ) %>% invisible()
+
+      problem_file <- problem_file %>%
+        tibble::as_tibble() %>%
+        dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+
+      if (problem_file == "Not found") {
+        problem_file2 <- NEesp::find_files(
+          paste0("\\{r", "(.{1,5})", last_known),
+          location
+        ) %>% invisible()
+
+        problem_file2 <- problem_file2 %>%
+          tibble::as_tibble() %>%
+          dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+
+        file_name <- problem_file2[, 1] %>%
+          stringr::str_split("correlation_bookdown_template/", n = 2)
+        file_name <- file_name[[1]][2]
+
+        this_output <- c(
+          i, "0lag", test[1],
+          paste("unknown - last known file:", file_name),
+          chunk_name,
+          paste("unknown - last known line:", problem_file2[2])
+        )
+      } else {
+        
+        file_name <- problem_file[, 1] %>%
+          stringr::str_split("bookdown/", n = 2)
+        file_name <- file_name[[1]][2]
+
+        this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
+                         recursive = TRUE)
+      }
+      output <- rbind(output, this_output)
+    }
+    
+    # make 1 lag reports
+    test <- try(NEesp::render_reg_report(
+      stock_var = species[i, 1],
+      epus_var = species[i, 3],
+      region_var = species[i, 2],
+      lag_var = 1,
+      remove_var = FALSE,
+      save_var = TRUE,
+      input = x,
+      parent_folder = "one_year_lag",
+      trouble = FALSE
+    ))
+    
+    if (class(test) == "try-error") {
+      problem_file <- NEesp::find_files(
+        paste0("\\{r", "(.{1,5})", chunk_name),
+       location
+      ) %>% invisible()
+      
+      problem_file <- problem_file %>%
+        tibble::as_tibble() %>%
+        dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+      
+      if (problem_file == "Not found") {
+        problem_file2 <- NEesp::find_files(
+          paste0("\\{r", "(.{1,5})", last_known),
+          location
+        ) %>% invisible()
+        
+        problem_file2 <- problem_file2 %>%
+          tibble::as_tibble() %>%
+          dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+        
+        file_name <- problem_file2[, 1] %>%
+          stringr::str_split("correlation_bookdown_template/", n = 2)
+        file_name <- file_name[[1]][2]
+        
+        this_output <- c(
+          i, "1lag", test[1],
+          paste("unknown - last known file:", file_name),
+          chunk_name,
+          paste("unknown - last known line:", problem_file2[2])
+        )
+      } else {
+        
+        file_name <- problem_file[, 1] %>%
+          stringr::str_split("bookdown/", n = 2)
+        file_name <- file_name[[1]][2]
+        
+        this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
+                         recursive = TRUE)
+      }
+      output <- rbind(output, this_output)
+    }
+    
+    # make 1 lag remove reports
+    test <- try(NEesp::render_reg_report(
+      stock_var = species[i, 1],
+      epus_var = species[i, 3],
+      region_var = species[i, 2],
+      lag_var = 1,
+      remove_var = TRUE,
+      save_var = TRUE,
+      input = x,
+      parent_folder = "one_year_lag_remove_recent",
+      trouble = FALSE
+    ))
+    
+    if (class(test) == "try-error") {
+      problem_file <- NEesp::find_files(
+        paste0("\\{r", "(.{1,5})", chunk_name),
+        location
+      ) %>% invisible()
+      
+      problem_file <- problem_file %>%
+        tibble::as_tibble() %>%
+        dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+      
+      if (problem_file == "Not found") {
+        problem_file2 <- NEesp::find_files(
+          paste0("\\{r", "(.{1,5})", last_known),
+          location
+        ) %>% invisible()
+        
+        problem_file2 <- problem_file2 %>%
+          tibble::as_tibble() %>%
+          dplyr::filter(stringr::str_detect(file, "not-used", negate = TRUE))
+        
+        file_name <- problem_file2[, 1] %>%
+          stringr::str_split("correlation_bookdown_template/", n = 2)
+        file_name <- file_name[[1]][2]
+        
+        this_output <- c(
+          i, "1lagR", test[1],
+          paste("unknown - last known file:", file_name),
+          chunk_name,
+          paste("unknown - last known line:", problem_file2[2])
+        )
+      } else {
+        
+        file_name <- problem_file[, 1] %>%
+          stringr::str_split("correlation_bookdown_template/", n = 2)
+        file_name <- file_name[[1]][2]
+        
+        this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
+                         recursive = TRUE)
+      }
+      output <- rbind(output, this_output)
+    }
+    
+    sink()
+    print(paste("Done with", i))
+  }
+
+  if (class(output) == "NULL") {
+
+    dir.create(here::here("logs"))
+  
+  } else {
+    
+    colnames(output) <- c("Species", "Report type", "Error", "File throwing error", "Chunk name", "Line throwing error")
+
+    file <- paste0("logs/", Sys.time(), ".csv") %>%
+      stringr::str_replace_all(":", ".")
+    dir.create(here::here("logs"))
+    
+    write.csv(output, here::here(file), row.names = FALSE)
+    
+    # clean up .Rmd and .yml files that didn't render
+    files_to_remove <- c(list.files(here::here("Regressions"), 
+                                    pattern = "\\.Rmd$",
+                                    recursive = TRUE,
+                                    full.names = TRUE),
+                         list.files(here::here("Regressions"), 
+                                    pattern = "\\.yml$",
+                                    recursive = TRUE,
+                                    full.names = TRUE))
+    file.remove(files_to_remove)
+  }
+})
