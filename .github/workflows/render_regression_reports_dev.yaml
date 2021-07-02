@@ -40,7 +40,9 @@ jobs:
 
       - name: Render reports
         run: |
-          Rscript -e 'source(here::here("R-scripts", "render regression dev report with errors.R"))'          
+          Rscript -e 'remove.packages("NEesp")
+          remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never")
+          source(here::here("R-scripts", "render regression dev report with errors.R"))'          
           
 #      - name: Change to 8-bit
 #        run: |
