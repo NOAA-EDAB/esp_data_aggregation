@@ -2,7 +2,7 @@
 `%>%` <- magrittr::`%>%`
 output <- c()
 
-species <- NEesp::regression_species_regions
+species <- NEesp::regression_species_regions[1,]
 
 # the dumb way to try to force through errors
 error_analysis <- function(fchunk_name = chunk_name,
