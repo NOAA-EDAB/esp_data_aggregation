@@ -24,7 +24,7 @@ error_analysis <- function(fchunk_name = chunk_name,
   }
   
   this_output <- cat(
-    species[i,], 
+    toString(species[i,]), 
     "0lag", 
     ftest[1],
     fchunk_name,
