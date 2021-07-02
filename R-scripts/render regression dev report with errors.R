@@ -24,10 +24,10 @@ error_analysis <- function(fchunk_name = chunk_name,
   }
   
   this_output <- cat(
-    species[i], 
+    species[i,], 
     "0lag", 
     ftest[1],
-    chunk_name,
+    fchunk_name,
     problem_file,
     problem_file2,
     sep = "\n"
@@ -37,11 +37,11 @@ error_analysis <- function(fchunk_name = chunk_name,
 }
 
 # the original way
-error_analysis2 <- function(chunk_name = chunk_name,
-                           last_known = last_known,
-                           test = test){
+error_analysis2 <- function(fchunk_name = chunk_name,
+                           flast_known = last_known,
+                           ftest = test){
   problem_file <- NEesp::find_files(
-    paste0("\\{r", "(.{1,5})", chunk_name),
+    paste0("\\{r", "(.{1,5})", fchunk_name),
     location
   ) %>% invisible()
   
@@ -50,7 +50,7 @@ error_analysis2 <- function(chunk_name = chunk_name,
   
   if (problem_file == "Not found") {
     problem_file2 <- NEesp::find_files(
-      paste0("\\{r", "(.{1,5})", last_known),
+      paste0("\\{r", "(.{1,5})", flast_known),
       location
     ) %>% invisible()
     
@@ -62,9 +62,9 @@ error_analysis2 <- function(chunk_name = chunk_name,
     file_name <- file_name[[1]][2]
     
     this_output <- c(
-      i, "0lag", test[1],
+      i, "0lag", ftest[1],
       paste("unknown - last known file:", file_name),
-      chunk_name,
+      fchunk_name,
       paste("unknown - last known line:", problem_file2[,2])
     )
   } else {
@@ -73,7 +73,7 @@ error_analysis2 <- function(chunk_name = chunk_name,
       stringr::str_split("correlation_bookdown_template/", n = 2)
     file_name <- file_name[[1]][2]
     
-    this_output <- c(i, toString(test[1]), file_name, chunk_name, problem_file[, 2],
+    this_output <- c(i, toString(ftest[1]), file_name, fchunk_name, problem_file[, 2],
                      recursive = TRUE)
   }
   return(this_output)
