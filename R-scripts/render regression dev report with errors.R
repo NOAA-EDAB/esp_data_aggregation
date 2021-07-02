@@ -102,11 +102,13 @@ suppressWarnings({
 
  #   if (class(test) == "try-error") {
     print("ERROR ANALYSIS")
-      this_output <- error_analysis()
-      print(this_output)
+    print(chunk_name)
+    print(last_known)
+     # this_output <- error_analysis()
+    #  print(this_output)
       #output <- rbind(output, this_output)
-      output <- cat(output, this_output)
-      print(output)
+     # output <- cat(output, this_output)
+      #print(output)
   #  }
     
     # make 1 lag reports
