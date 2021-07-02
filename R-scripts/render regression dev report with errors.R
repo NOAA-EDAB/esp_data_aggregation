@@ -5,17 +5,17 @@ output <- c()
 species <- NEesp::regression_species_regions
 
 # the dumb way to try to force through errors
-error_analysis <- function(chunk_name = chunk_name,
-                           last_known = last_known,
-                           test = test){
+error_analysis <- function(fchunk_name = chunk_name,
+                           flast_known = last_known,
+                           ftest = test){
   problem_file <- NEesp::find_files(
-    paste0("\\{r", "(.{1,5})", chunk_name),
+    paste0("\\{r", "(.{1,5})", fchunk_name),
     location
   ) %>% invisible()
 
   if (problem_file == "Not found") {
     problem_file2 <- NEesp::find_files(
-      paste0("\\{r", "(.{1,5})", last_known),
+      paste0("\\{r", "(.{1,5})", flast_known),
       location
     ) %>% invisible()
 
@@ -26,7 +26,7 @@ error_analysis <- function(chunk_name = chunk_name,
   this_output <- cat(
     species[i], 
     "0lag", 
-    test[1],
+    ftest[1],
     chunk_name,
     problem_file,
     problem_file2,
