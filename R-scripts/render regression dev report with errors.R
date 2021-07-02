@@ -145,6 +145,8 @@ suppressWarnings({
     }
     
     sink()
+    print(this_output)
+    print(output)
     print(paste("Done with", i))
   }
 
