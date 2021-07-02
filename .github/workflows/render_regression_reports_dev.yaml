@@ -52,39 +52,4 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: test-cache-07022021-AT
           
-      - name: Render reports
-        run: |
-          Rscript -e 'source(here::here("R-scripts", "render regression dev report with errors.R"))'          
-          
-      - name: Change to 8-bit
-        run: |
-          sudo apt-get install -y pngquant
-          cd Regressions
-          du -s
-          pngquant --quality=0-90 --force --ext .png */*/*/*.png
-          du -s
-        shell: bash 
-        
-      - name: Compress Images
-        id: calibre
-        uses: calibreapp/image-actions@main
-        with:
-          githubToken: ${{ secrets.GH_PAT }}
-          ignorePaths: 'Reports/**, black-sea-bass/**, R-scripts/**'
-          compressOnly: true
-          
-      - name: Check directory size
-        run: |
-          cd Regressions
-          du -s
-        shell: bash
-          
-      - name: Deploy to Github
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          repository-name: NOAA-EDAB/ESP_docs
-          token: ${{ secrets.GH_PAT }}
-          branch: main # The branch the action should deploy to.
-          folder: Regressions # The folder the action should deploy.
-          target-folder: Regression_reports
-          clean: false # Automatically remove deleted files from the deploy branch
+
