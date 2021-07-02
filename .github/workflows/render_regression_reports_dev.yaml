@@ -74,3 +74,30 @@ jobs:
           folder: Regressions # The folder the action should deploy.
           target-folder: Regression_reports
           clean: false # Automatically remove deleted files from the deploy branch
+          
+      - name: Deploy status check to Github
+        id: logdeploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          token: ${{ secrets.GH_PAT }}
+          branch: main # The branch the action should deploy to.
+          folder: logs # The folder the action should deploy.
+          target-folder: logs
+          clean: false # Automatically remove deleted files from the deploy branch
+
+      - name: Create issue (if needed)
+        if: ${{ env.deployment_status != 'skipped' }}
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        with:
+          assignees: ${{ env.GITHUB_ACTOR }}
+          
+      - name: Status
+        run: |
+          Rscript -e '
+          if (quote(${{ env.deployment_status }}) == "skipped"){
+          "Passing!"
+          } else { 
+          stop("Errors found! Check logs folder.") 
+          }'          
