@@ -82,7 +82,7 @@ error_analysis2 <- function(fchunk_name = chunk_name,
 suppressWarnings({
   for (i in 1:nrow(species)) {
     
-    sink("hide.txt")
+#    sink("hide.txt")
     
     location <- system.file("correlation_bookdown_template", package = "NEesp")
     x <- "package"
@@ -119,11 +119,11 @@ suppressWarnings({
 #      trouble = FALSE
 #    ))
     
-    if (class(test) == "try-error") {
-      this_output <- error_analysis()
-      #output <- rbind(output, this_output)
-      output <- cat(output, this_output)
-    }
+#    if (class(test) == "try-error") {
+#      this_output <- error_analysis()
+#      #output <- rbind(output, this_output)
+#      output <- cat(output, this_output)
+#    }
     
     # make 1 lag remove reports
 #    test <- try(NEesp::render_reg_report(
@@ -138,13 +138,13 @@ suppressWarnings({
 #      trouble = FALSE
 #    ))
     
-    if (class(test) == "try-error") {
-      this_output <- error_analysis()
-      #output <- rbind(output, this_output)
-      output <- cat(output, this_output)
-    }
+#    if (class(test) == "try-error") {
+#      this_output <- error_analysis()
+#      #output <- rbind(output, this_output)
+#      output <- cat(output, this_output)
+#    }
     
-    sink()
+#    sink()
     print(test)
     print(this_output)
     print(output)
