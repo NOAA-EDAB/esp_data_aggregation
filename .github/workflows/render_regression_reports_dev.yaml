@@ -38,20 +38,23 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: bigger-cache-more-packages-05192021-AT
                  
-      - name: Render reports
+      - name: Install more packages
         run: |
           Rscript -e 'remove.packages("NEesp")
           remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never") # use dev version
           remove.packages("ecodata")
           remotes::install_github("NOAA-EDAB/ecodata", upgrade = "never")
-          install.packages("ggnewscale")
-          source(here::here("R-scripts", "render regression dev report with errors.R"))'
-          
+          install.packages("ggnewscale")'
+
       - name: Cache more R packages
         uses: actions/cache@v2
         with:
           path: ${{ env.R_LIBS_USER }}
           key: test-cache-07022021-AT
+          
+      - name: Render reports
+        run: |
+          Rscript -e 'source(here::here("R-scripts", "render regression dev report with errors.R"))'          
           
       - name: Change to 8-bit
         run: |
