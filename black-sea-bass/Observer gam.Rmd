@@ -65,6 +65,13 @@ OB_selected_comp<-OB_selected %>% filter(SUM_black_sea_bass_CATCH>100 & (SUM_bla
 
 OB_selected_comp<-OB_selected_comp %>%mutate(WEEK=  strftime(DATE, format = "%V"))
 
+ves_count<-OB_selected_comp %>% group_by(VES_NAME) %>%  tally()
+
+rare.ves<-ves_count %>% filter(n<5)
+
+# remove rare boat from dataset 
+OB_selected_comp_rare<-OB_selected_comp %>% filter(!VES_NAME %in% rare.ves$VES_NAME)
+
 
 ```
 
@@ -175,11 +182,6 @@ gam_mod.ds <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MO
 
 
 
-
-
-
-family=poisson
-
 logLik(gam_mod.ves)
 logLik(gam_mod.ds)
 plot(gam_mod.ds)
@@ -222,6 +224,23 @@ t1<-rqresiduals(gam_mod)
 ```
 
 
+```{r}
+
+gam.mod.rare<-gam(TOT_black_sea_bass_CATCH ~VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp_rare, method = "REML", select=TRUE)
+  
+  
+summary(gam_mod.ves)
+summary(gam.mod.rare)
+plot(gam.mod.rare)
+
+gam.check(gam.mod.rare)
+# summary(gam_mod.ves)
+# Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# R-sq.(adj) =  0.434   Deviance explained = 65.5%
+# -REML =  14923  Scale est. = 1         n = 1742
+
+```
 
 
 
