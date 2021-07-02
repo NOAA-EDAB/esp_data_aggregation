@@ -100,11 +100,14 @@ suppressWarnings({
       trouble = FALSE
     ))
 
-    if (class(test) == "try-error") {
+ #   if (class(test) == "try-error") {
+    print("ERROR ANALYSIS")
       this_output <- error_analysis()
+      print(this_output)
       #output <- rbind(output, this_output)
       output <- cat(output, this_output)
-    }
+      print(output)
+  #  }
     
     # make 1 lag reports
 #    test <- try(NEesp::render_reg_report(
@@ -146,8 +149,8 @@ suppressWarnings({
     
 #    sink()
     print(test)
-    print(this_output)
-    print(output)
+#    print(this_output)
+#    print(output)
     print(paste("Done with", i))
   }
 
