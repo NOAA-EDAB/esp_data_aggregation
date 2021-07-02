@@ -217,7 +217,6 @@ concurvity(gam_mod, full = FALSE)
 
 gam.check(gam_mod.p)
 
-gam_mod$
 
 t1<-rqresiduals(gam_mod)
 
