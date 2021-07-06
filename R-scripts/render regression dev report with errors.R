@@ -2,8 +2,6 @@
 `%>%` <- magrittr::`%>%`
 output <- c()
 
-species <- NEesp::regression_species_regions
-
 suppressWarnings({
   for (i in 1:nrow(species)) {
     
