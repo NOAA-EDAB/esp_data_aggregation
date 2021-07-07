@@ -72,7 +72,9 @@ suppressWarnings({
     
 #    sink()
 
-    print(paste("Done with", NEesp::regression_species_regions[i,]))
+    print(paste("Done with", 
+                paste(NEesp::regression_species_regions[i,], collapse = " ")
+                ))
   }
 
     # clean up .Rmd and .yml files that didn't render
