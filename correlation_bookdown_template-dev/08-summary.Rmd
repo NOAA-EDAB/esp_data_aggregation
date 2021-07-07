@@ -48,46 +48,50 @@ This is an exploratory fit of a poisson GLM. Initial covariates were included ba
 
 ```{r, bonf}
 # bonferroni correction to weed out excess covariates
-bonf_p <- 0.05/bonf_n
+bonf_p <- 0.05 / bonf_n
 ```
 
 ```{r, wrangle-abun}
 eval_dat <- (class(abun_data) != "NULL")
 
-if(eval_dat){
-  
+if (eval_dat) {
   abun_data <- abun_data %>%
-  dplyr::mutate(Var = Var %>%
-  stringr::str_replace_all(" ", "_") %>%
-  stringr::str_replace_all("-", "_") %>%
-  stringr::str_replace_all("/", "_") %>%
-  stringr::str_replace_all("[:^:]", "_") %>%
-  stringr::str_replace_all("\n", "_") %>%
-    stringr::str_remove_all("\\(") %>%
-    stringr::str_remove_all("\\)") %>%
-    stringr::str_remove_all(",")
-  ) %>%
-  dplyr::filter(pval < bonf_p,
-                Var != "Time") %>%
-  dplyr::select(-pval)
-   } else "No statistically significant covariates"
+    dplyr::mutate(Var = Var %>%
+      stringr::str_replace_all(" ", "_") %>%
+      stringr::str_replace_all("-", "_") %>%
+      stringr::str_replace_all("/", "_") %>%
+      stringr::str_replace_all("[:^:]", "_") %>%
+      stringr::str_replace_all("\n", "_") %>%
+      stringr::str_remove_all("\\(") %>%
+      stringr::str_remove_all("\\)") %>%
+      stringr::str_remove_all(",")) %>%
+    dplyr::filter(
+      pval < bonf_p,
+      Var != "Time"
+    ) %>%
+    dplyr::select(-pval)
+} else {
+  "No statistically significant covariates"
+}
 ```
 
 ```{r, eval = eval_dat}
-#eval_dat
+# eval_dat
 data <- abun_data
 type <- "abundance"
 
-if(nrow(data) > 0) {
+if (nrow(data) > 0) {
   res <- knitr::knit_child(
     text = knitr::knit_expand(
       system.file("correlation_bookdown_template/_summary-child-doc.Rmd", package = "NEesp"),
       label = "abundance-model"
-      ),
-  quiet = TRUE
+    ),
+    quiet = TRUE
   )
   cat(res, sep = "\n")
-} else "No statistically significant covariates after Bonferroni correction"
+} else {
+  "No statistically significant covariates after Bonferroni correction"
+}
 ```
 
 
@@ -110,41 +114,44 @@ This is an exploratory fit of a poisson GLM. Initial covariates were included ba
 ```{r, wrangle-recruit}
 eval_dat <- (class(recruit_data) != "NULL")
 
-if(eval_dat){
-  
+if (eval_dat) {
   recruit_data <- recruit_data %>%
-  dplyr::mutate(Var = Var %>%
-  stringr::str_replace_all(" ", "_") %>%
-  stringr::str_replace_all("-", "_") %>%
-  stringr::str_replace_all("/", "_") %>%
-  stringr::str_replace_all("[:^:]", "_") %>%
-  stringr::str_replace_all("\n", "_") %>%
-    stringr::str_remove_all("\\(") %>%
-    stringr::str_remove_all("\\)") %>%
-    stringr::str_remove_all(",")
-  ) %>%
-  dplyr::filter(pval < bonf_p,
-                Var != "Time") %>%
-  dplyr::select(-pval)
-   } else "No statistically significant covariates"
-
+    dplyr::mutate(Var = Var %>%
+      stringr::str_replace_all(" ", "_") %>%
+      stringr::str_replace_all("-", "_") %>%
+      stringr::str_replace_all("/", "_") %>%
+      stringr::str_replace_all("[:^:]", "_") %>%
+      stringr::str_replace_all("\n", "_") %>%
+      stringr::str_remove_all("\\(") %>%
+      stringr::str_remove_all("\\)") %>%
+      stringr::str_remove_all(",")) %>%
+    dplyr::filter(
+      pval < bonf_p,
+      Var != "Time"
+    ) %>%
+    dplyr::select(-pval)
+} else {
+  "No statistically significant covariates"
+}
 ```
 
 ```{r, eval = eval_dat}
-#eval_dat
+# eval_dat
 data <- recruit_data
 type <- "recruit"
 
-if(nrow(data) > 0) {
+if (nrow(data) > 0) {
   res <- knitr::knit_child(
     text = knitr::knit_expand(
       system.file("correlation_bookdown_template/_summary-child-doc.Rmd", package = "NEesp"),
       label = "recruitment-model"
-      ),
-  quiet = TRUE
+    ),
+    quiet = TRUE
   )
   cat(res, sep = "\n")
-} else "No statistically significant covariates after Bonferroni correction"
+} else {
+  "No statistically significant covariates after Bonferroni correction"
+}
 ```
 
 ## Catch

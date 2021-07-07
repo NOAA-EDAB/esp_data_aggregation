@@ -2,30 +2,30 @@
 
 #### Stock assessment catch
 ```{r, catch_data}
-data <- asmt_data 
+data <- asmt_data
 
-if(nrow(data) > 0){
+if (nrow(data) > 0) {
   data <- data %>%
-  dplyr::filter(
-    Metric == "Catch",
-    Region != "Eastern Georges Bank"
-  ) %>% # double counted
-  dplyr::select(-Species, -Metric) %>%
-  dplyr::mutate(options = paste(AssessmentYear, Description, Units, sep = " - ")) %>%
-  #  dplyr::arrange(AssessmentYear) %>%
-  dplyr::group_by(Year, options) %>%
-  dplyr::summarise(Value = sum(Value)) %>%
-  dplyr::ungroup() %>%
-  dplyr::mutate(Value = Value %>%
-    round(digits = 0) %>%
-    format(big.mark = ",")) %>%
-  tidyr::pivot_wider(
-    names_from = options,
-    values_from = Value
-  ) %>%
-  NEesp::character_to_factor()
+    dplyr::filter(
+      Metric == "Catch",
+      Region != "Eastern Georges Bank"
+    ) %>% # double counted
+    dplyr::select(-Species, -Metric) %>%
+    dplyr::mutate(options = paste(AssessmentYear, Description, Units, sep = " - ")) %>%
+    #  dplyr::arrange(AssessmentYear) %>%
+    dplyr::group_by(Year, options) %>%
+    dplyr::summarise(Value = sum(Value)) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(Value = Value %>%
+      round(digits = 0) %>%
+      format(big.mark = ",")) %>%
+    tidyr::pivot_wider(
+      names_from = options,
+      values_from = Value
+    ) %>%
+    NEesp::character_to_factor()
 
-data <- data %>% dplyr::select("Year", sort(colnames(data)[-1]))
+  data <- data %>% dplyr::select("Year", sort(colnames(data)[-1]))
 }
 
 NEesp::make_html_table(data,

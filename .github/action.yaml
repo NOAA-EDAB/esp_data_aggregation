@@ -1,0 +1,33 @@
+name: 'Environment set-up'
+description: 'Sets up runner environment for creating reports'
+
+runs:
+   using: "composite"
+   steps:
+     - name: Checkout repo
+       uses: actions/checkout@v2
+       with:
+         persist-credentials: false
+          
+     - name: Install Pandoc
+       run: brew install pandoc
+       shell: bash
+
+     - name: Install command line packages
+       run: |        
+         sudo apt update
+         sudo apt-get install  libgdal-dev libcurl4-gnutls-dev libgit2-dev libudunits2-dev
+       shell: bash
+        
+     - name: Set up R
+       uses: r-lib/actions/setup-r@master
+       with: 
+         r-version: '4.0.3' # problem with using 4.0.4        
+      
+     - name: Cache R packages
+       uses: actions/cache@v2
+       id: cache
+       with:
+         path: ${{ env.R_LIBS_USER }}
+         key: bigger-cache-more-packages-05192021-AT
+      

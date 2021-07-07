@@ -1,4 +1,5 @@
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * 1,4"
 
@@ -20,5 +21,21 @@ jobs:
         with:
           path: ${{ env.R_LIBS_USER }}
           key: bigger-cache-more-packages-05192021-AT
-        
+          
+      - name: How big is the cache?
+        run: |
+          cd ${{ env.R_LIBS_USER }}
+          du -s
+        shell: bash
+          
+      - name: Check more cached packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: test-cache-07022021-AT
 
+      - name: How big is the cache?
+        run: |
+          cd ${{ env.R_LIBS_USER }}
+          du -s
+        shell: bash

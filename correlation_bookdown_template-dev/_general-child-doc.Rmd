@@ -48,9 +48,6 @@ output <- rbind(output, NEesp::correlation_summary(
   lag = params$lag
 ))
 
-# count number of regressions for bonferroni correction
-bonf_n <- bonf_n + 1
-
 # make name for figure
 knitr::opts_knit$set(unnamed.chunk.label = names[1])
 ```
@@ -78,18 +75,45 @@ if (nrow(data) > 0) {
     stringr::str_replace_all(" - ", "-") %>%
     stringr::str_replace_all("_.csv", ".csv") %>%
     stringr::str_replace_all(" ", "_")
-  
+
   write.csv(data, paste("data/", file_name, sep = ""))
+
+  # prep for fig
+  # remove na's,
+  # count number of regressions for bonferroni correction
+  data <- data %>%
+    tidyr::drop_na()
+  var_names <- unique(test$Var)
+  nvar <- length(var_names)
+  bonf_n <- bonf_n + nvar
 }
 ```
 
 #### Figures {-}
 ```{r, {{label}}-fig, eval = eval_epu, fig.height = 10}
-NEesp::plot_correlation(
-  stock = stock,
-  eco = test,
-  lag = params$lag
-)
+if (nvar > 6) { # break up into multiple graphs
+  for (i in 1:round(nvar / 6)) {
+    index <- ((i - 1) * 6 + 1):(i * 6)
+    dat <- data %>%
+      dplyr::filter(Var %in% var_names[index])
+
+    fig <- try(NEesp::plot_correlation(
+      data = dat,
+      lag = params$lag
+    ))
+
+    if (class(fig) == "try-error") {
+      print(fig)
+    }
+
+    cat("\n\n")
+  }
+} else {
+  NEesp::plot_correlation(
+    data = data,
+    lag = params$lag
+  )
+}
 ```
 
 ```{r, eval = (eval_epu == FALSE)}
@@ -112,23 +136,26 @@ print("No data for the EPU selected")
 ```{r, eval = eval_epu}
 #### Regression data
 this_recruit <- data %>%
-  dplyr::filter(Metric == "Recruitment",
-                sig == TRUE) %>%
+  dplyr::filter(
+    Metric == "Recruitment",
+    sig == TRUE
+  ) %>%
   dplyr::select(Species, Region, Time, Value, Metric, Var, Val, pval)
 
-if(nrow(this_recruit) > 0){
+if (nrow(this_recruit) > 0) {
   recruit_data <- rbind(recruit_data, this_recruit)
 }
 
 this_abun <- data %>%
-  dplyr::filter(Metric == "Abundance",
-                sig == TRUE) %>%
+  dplyr::filter(
+    Metric == "Abundance",
+    sig == TRUE
+  ) %>%
   dplyr::select(Species, Region, Time, Value, Metric, Var, Val, pval)
 
-if(nrow(this_abun) > 0){
+if (nrow(this_abun) > 0) {
   abun_data <- rbind(abun_data, this_abun)
 }
-
 ```
 
 ```{r}
