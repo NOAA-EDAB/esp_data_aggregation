@@ -30,6 +30,20 @@ NEesp::generate_plot(survey_data,
 NEesp::plot_ecodata(ecodat_tanom)
 ```
 
+#### Marine heatwaves in stock region {-}
+```{r, stock-hw, fig.cap = paste(species, "marine heatwaves")}
+NEesp::plot_ecodata(hw_data %>% 
+                      dplyr::filter(Var == "cumulative intensity"))
+
+
+NEesp::plot_ecodata(hw_data %>% 
+                      dplyr::filter(Var == "maximum intensity") %>%
+                      dplyr::mutate(Var = "average maximum intensity") %>% 
+                      dplyr::group_by(Time, Var, Units, Pattern_check) %>%
+                      dplyr::summarise(new_value = mean(Value)) %>%
+                      dplyr::rename(Value = new_value) 
+                    )
+```
 
 ### Summary
 ```{r, temp_summary}
@@ -81,9 +95,18 @@ NEesp::make_html_table(data,
 )
 ```
 
-#### `ecodata` data {-}
+#### `ecodata` temperature data {-}
 ```{r, eco_data}
 ecodat_tanom %>%
+  dplyr::select(-Pattern_check) %>%
+  dplyr::mutate(Value = Value %>%
+    round(digits = 2)) %>%
+  NEesp::make_html_table(type = params$file)
+```
+
+#### `ecodata` heatwave data {-}
+```{r, eco_hw}
+hw_data %>%
   dplyr::select(-Pattern_check) %>%
   dplyr::mutate(Value = Value %>%
     round(digits = 2)) %>%
