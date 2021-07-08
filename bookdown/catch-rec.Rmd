@@ -1,12 +1,24 @@
-### Recreational landings
+### Recreational catch
 
-
-```{r, rec, fig.cap = paste(species, "recreational catch")}
-NEesp::plot_rec_catch(rec_data)
+```{r, rec-catch}
+NEesp::plot_rec(rec_data, var = "total_catch2", title = "Recreational catch (number)")
 ```
 
+### Recreational landings
 
-#### Risk {-}
+#### By number
+
+```{r, rec-land-num}
+NEesp::plot_rec(rec_data, var = "landings_num", title = "Recreational landings (number)")
+```
+
+#### By weight
+
+```{r, rec-land}
+NEesp::plot_rec(rec_data, var = "landings", title = "Recreational landings (lb)")
+```
+
+##### Risk {-}
 
 See Methods for risk calculation details.
 ```{r}
@@ -14,6 +26,36 @@ indicators <- c("rec_catch")
 ```
 
 ```{r, child = system.file("indicator_bookdown_template/_risk-child-doc.Rmd", package = "NEesp")}
+```
+
+#### Proportion of catch landed
+
+```{r, rec-land-prop}
+fig <- NEesp::plot_rec(rec_data, var = "prop_land", title = "Proportion of recreational catch landed (by number)") 
+
+fig <- fig +
+  ggplot2::ylim(c(0,1))
+
+print(fig)
+```
+
+### Recreational discards
+
+#### Discards
+
+```{r, rec-disc}
+NEesp::plot_rec(rec_data, var = "discards", title = "Recreational discards (number)")
+```
+
+#### Proportion of catch discarded
+
+```{r, rec-disc-prop}
+fig <- NEesp::plot_rec(rec_data, var = "prop", title = "Proportion of recreational catch discarded (by number)") 
+
+fig <- fig +
+  ggplot2::ylim(c(0,1))
+
+print(fig)
 ```
 
 
@@ -37,12 +79,6 @@ Selected_sp <- rec_landings_1950_2019 %>%
 selected_by_state <- rec_landings_1950_2019 %>%
   dplyr::filter(!is.na(Pounds) & Species == params$species) %>%
   dplyr::group_by(State, Year)
-
-
-
-
-
-
 
 sp_data_qual <- TRUE
 st_data_qual <- TRUE
@@ -76,7 +112,7 @@ if(exists("selected_by_state")){
 }
 ```
 
-#### Recreational catches time series 
+### Recreational catches time series 
 
 This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200:4615327020711::NO:::) and is inclusive of `r min(rec_landings_1950_2019$Year,na.rm =TRUE) ` to `r max(rec_landings_1950_2019$Year,na.rm =TRUE)`. The entire data set contains `r length(unique(rec_landings_1950_2019$common_name))` species. Figures produced reflect the coverage of the data. With stocks that have high coverage, a running average is calculated. In low coverage stocks, missing values are excluded and a simple time series is produced. 
 
@@ -114,7 +150,7 @@ if(nrow(Selected_sp)>10){
 ```
 
 
-#### Recreational landings of `r params$species` across states in the mid-Atlantic and north-east regions
+### Recreational landings of `r params$species_ID` across states in the mid-Atlantic and north-east regions
 
 ```{r, state-breakdown-data-good,eval=st_data_qual}
 
@@ -152,7 +188,7 @@ if (nrow(selected_by_state) > 0) {
 ```
 
 
-#### Visualizing Recreational fishing effort
+### Visualizing Recreational fishing effort
 
 These records are Recreational Fisheries Statistics sourced from the [ Marine Recreational Information Program (MRIP) ](https://www.st.nmfs.noaa.gov/recreational-fisheries/data-and-documentation/queries/index) via NOAA Office of Science and Technology and are inclusive of all north and mid-Atlantic states. The records span from `r min(rec_effort$Year )` to `r max(rec_effort$Year) ` and are specific to the mode and location of effort. Effort is quantified as angler trips. Mode is divided into `r stringr::str_to_sentence(levels(rec_effort$Fishing.Mode))`.
 
@@ -202,3 +238,4 @@ by_state %>% ggplot2::ggplot(ggplot2::aes(x = Year, y = (total_trips / 100000)))
   ggplot2::xlab("Year") +
   ggplot2::ylab("Annual recreational trips in 100,000 units")
 ```
+

@@ -1,60 +1,55 @@
-## Landings data
+## Catch, landings, and discards data
 
-#### Stock assessment catch
+### Stock assessment catch
 ```{r, catch_data}
-data <- asmt_data
+data <- asmt_data %>%
+  dplyr::filter(
+    Metric == "Catch",
+    Region != "Eastern Georges Bank"
+  ) %>% # double counted
+  dplyr::select(-Species, -Metric) %>%
+  dplyr::mutate(options = paste(AssessmentYear, Description, Units, sep = " - ")) %>%
+  #  dplyr::arrange(AssessmentYear) %>%
+  dplyr::group_by(Year, options) %>%
+  dplyr::summarise(Value = sum(Value)) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(Value = Value %>%
+    round(digits = 0) %>%
+    format(big.mark = ",")) %>%
+  tidyr::pivot_wider(
+    names_from = options,
+    values_from = Value
+  ) %>%
+  NEesp::character_to_factor()
 
-if (nrow(data) > 0) {
-  data <- data %>%
-    dplyr::filter(
-      Metric == "Catch",
-      Region != "Eastern Georges Bank"
-    ) %>% # double counted
-    dplyr::select(-Species, -Metric) %>%
-    dplyr::mutate(options = paste(AssessmentYear, Description, Units, sep = " - ")) %>%
-    #  dplyr::arrange(AssessmentYear) %>%
-    dplyr::group_by(Year, options) %>%
-    dplyr::summarise(Value = sum(Value)) %>%
-    dplyr::ungroup() %>%
-    dplyr::mutate(Value = Value %>%
-      round(digits = 0) %>%
-      format(big.mark = ",")) %>%
-    tidyr::pivot_wider(
-      names_from = options,
-      values_from = Value
-    ) %>%
-    NEesp::character_to_factor()
-
-  data <- data %>% dplyr::select("Year", sort(colnames(data)[-1]))
-}
+data <- data %>% dplyr::select("Year", sort(colnames(data)[-1]))
 
 NEesp::make_html_table(data,
   type = params$file
 )
 ```
 
-#### Recreational catch
+### Recreational landings
 ```{r, rec_data}
 data <- rec_data %>%
-  dplyr::select(year, st_f, mode_fx_f, lbs_ab1) %>%
+  NEesp::rec_data_prep(state = TRUE) %>%
+  dplyr::filter(name == "landings") %>%
   dplyr::mutate(
     State = st_f %>%
-      stringr::str_to_title(),
-    Method = mode_fx_f %>%
       stringr::str_to_sentence(),
-    Catch_pounds = lbs_ab1 %>%
-      format(big.mark = ",")
+    Method = mode_fx_f %>%
+      stringr::str_to_sentence()
   ) %>%
-  dplyr::select(year, State, Method, Catch_pounds) %>%
+  dplyr::select(year, State, Region, Method, value) %>%
   NEesp::character_to_factor()
 
 NEesp::make_html_table(data,
   type = params$file,
-  col_names = c("Year", "State", "Method", "Catch (lb)")
+  col_names = c("Year", "State", "Region", "Method", "Landings (lb)")
 )
 ```
 
-#### Commercial catch
+### Commercial landings
 ```{r, com_data}
 data <- com_data %>%
   dplyr::select(Year, State, Dollars_adj, Pounds) %>%
@@ -69,7 +64,7 @@ data <- com_data %>%
   ) %>%
   dplyr::rename(
     "Revenue (2019 dollars)" = "Dollars_adj",
-    "Commercial catch (lb)" = "Pounds"
+    "Commercial landings (lb)" = "Pounds"
   ) %>%
   NEesp::character_to_factor()
 
@@ -79,7 +74,7 @@ NEesp::make_html_table(data,
 )
 ```
 
-#### Commercial vs recreational catch
+### Commercial vs recreational landings
 ```{r, comvrec_data}
 data <- NEesp::prop_catch_data(rec = rec_data, com = com_data) %>%
   NEesp::character_to_factor()
@@ -87,15 +82,15 @@ data <- NEesp::prop_catch_data(rec = rec_data, com = com_data) %>%
 NEesp::make_html_table(data,
   type = params$file,
   col_names = c(
-    "Year", "Recreational catch",
-    "Commercial catch", "Total catch",
+    "Year", "Recreational landings",
+    "Commercial landings", "Total landings",
     "Proportion recreational",
     "Proportion commercial"
   )
 )
 ```
 
-#### Commercial, recreational, and stock assessment catch
+### Commercial and recreational landings, and stock assessment catch
 ```{r, all_catch}
 stock <- asmt_data %>%
   dplyr::filter(
@@ -113,7 +108,6 @@ stock <- asmt_data %>%
 
 recr <- rec_data %>%
   dplyr::mutate(catch = lbs_ab1 %>%
-    stringr::str_replace_all(",", "") %>%
     as.numeric()) %>%
   dplyr::group_by(year) %>%
   dplyr::rename(Year = year) %>%
