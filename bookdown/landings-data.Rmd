@@ -2,7 +2,8 @@
 
 ### Stock assessment catch
 ```{r, catch_data}
-data <- asmt_data %>%
+if(nrow(asmt_data) > 0){
+  data <- asmt_data %>%
   dplyr::filter(
     Metric == "Catch",
     Region != "Eastern Georges Bank"
@@ -20,9 +21,10 @@ data <- asmt_data %>%
     names_from = options,
     values_from = Value
   ) %>%
-  NEesp::character_to_factor()
-
-data <- data %>% dplyr::select("Year", sort(colnames(data)[-1]))
+  NEesp::character_to_factor() 
+  } else {
+  data <- asmt_data
+  }
 
 NEesp::make_html_table(data,
   type = params$file
@@ -31,7 +33,8 @@ NEesp::make_html_table(data,
 
 ### Recreational landings
 ```{r, rec_data}
-data <- rec_data %>%
+if(nrow(rec_data) > 0){
+  data <- rec_data %>%
   NEesp::rec_data_prep(state = TRUE) %>%
   dplyr::filter(name == "landings") %>%
   dplyr::mutate(
@@ -42,6 +45,9 @@ data <- rec_data %>%
   ) %>%
   dplyr::select(year, State, Region, Method, value) %>%
   NEesp::character_to_factor()
+} else {
+  data <- rec_data
+  }
 
 NEesp::make_html_table(data,
   type = params$file,
