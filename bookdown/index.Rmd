@@ -148,6 +148,14 @@ pp_data <- ecodata::ESP_seasonal_pp %>%
     stringr::str_to_sentence()) %>%
   dplyr::filter(stringr::str_detect(Pattern_check, species)) %>%
   dplyr::distinct()
+
+# ecodata (heatwave)
+hw_data <- ecodata::ESP_heatwave %>%
+  dplyr::mutate(Pattern_check = stock_id %>%
+    stringr::str_replace_all("_", " ") %>%
+    stringr::str_to_sentence()) %>%
+  dplyr::filter(stringr::str_detect(Pattern_check, species)) %>%
+  dplyr::distinct()
 ```
 
 ```{r, save-data, eval = params$save}
@@ -189,6 +197,8 @@ NEesp::save_data(ecodat_tanom)
 NEesp::save_data(chl_data)
 
 NEesp::save_data(pp_data)
+
+NEesp::save_data(hw_data)
 ```
 
 This is a preliminary report of previously collected data. This report is pulling information on all Northeast `r species` stocks.
