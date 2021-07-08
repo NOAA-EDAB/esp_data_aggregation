@@ -40,18 +40,13 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: bigger-cache-more-packages-05192021-AT
           
-      - name: Re-install sf
+      - name: Re-install packages
         run: |
           Rscript -e '
-          remove.packages("sf")
-          install.packages("sf")'
+          remove.packages(c("sf", "ecodata")
+          install.packages("sf")
+          remotes::install_github("NOAA-EDAB/ecodata", upgrade = "never")'
           
-      - name: Re-install data.table
-        run: |
-          Rscript -e '
-          remove.packages("data.table")
-          install.packages("data.table")'
-                 
       - name: Render reports
         run: |
           Rscript -e '
