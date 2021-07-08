@@ -4,7 +4,6 @@
 # install.packages("ggrepel")
 # install.packages("ggpubr")
 # devtools::install_github("james-thorson/FishLife")
-
 # suppressPackageStartupMessages(library(FishLife))
 # suppressPackageStartupMessages(library(tidyverse))
 # suppressPackageStartupMessages(library(nlstools))
@@ -15,28 +14,19 @@
 ```
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
-
 # load bio survdat information from the package
 survdata.w.codes <- NEesp::common_names_survdat("bio")
-
 selected.surv <- survdata.w.codes %>%
   dplyr::filter(common_name == species)
-
 #used to debug
 # selected.surv <- survdata.w.codes %>%
 #   dplyr::filter(common_name == "Black sea bass")
-
 # only take records with age associated
 selected.surv.clean <- selected.surv %>% tidyr::drop_na(AGE)
-
 #add exception to monkfish as its aging is messy 
-
 if(unique(selected.surv.clean$common_name) == "Monkfish"){
-  selected.surv.clean<-selected.surv.clean %>% slice_head( n =3)
+  selected.surv.clean<-selected.surv.clean %>% dplyr::slice_head( n =3)
 }
-
-
-
 ```
 
 
@@ -46,12 +36,10 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
   vb <- FSA::vbFuns(param = "Typical")
   # define starting parameters based on the avalible data
   f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "oldAge")
-
   # fit a non-linear least squares model based on the data and starting values
   f.fit <- nls(LENGTH ~ vb(AGE, Linf, K, t0), data = selected.surv.clean, start = f.starts)
   # store the fit parameters for later investigation
   f.fit.summary <- summary(f.fit, correlation = TRUE)
-
   # define the range of age values that will be used to generate points from the fitted model
   # roughly by 0.2 year steps
   newages <- data.frame(AGE = seq(0, 50, length = 250))
@@ -92,7 +80,6 @@ if (nrow(selected.surv.clean) > 50) {
     ggplot2::ylab(" Total length (cm) (jittered)") +
     # ggplot2::ggtitle(species, subtitle = "Length at age") +
     ggplot2::theme_minimal()
-
   if (nrow(selected.surv.vonb) > 0) {
     fig <- fig +
       ggplot2::geom_line(
@@ -106,7 +93,6 @@ if (nrow(selected.surv.clean) > 50) {
         size = 1.4
       )
   }
-
   print(fig)
 } else {
   print("NO DATA")
@@ -119,20 +105,16 @@ The rate of growth may vary through time and between sexes. To assess for potent
 
 ```{r, growth_diff_testing}
 # testing a Common L8 and t0 Model.
-
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
   # define the type of von b model
   vb <- FSA::vbFuns(param = "Typical")
   # define starting parameters based on the avalible data
   f.starts <- FSA::vbStarts(LENGTH ~ AGE, data = selected.surv.clean, methLinf = "oldAge")
-
   # fit a non-linear least squares model based on the data and starting values
   f.fit <- nls(LENGTH ~ vb(AGE, Linf, K, t0), data = selected.surv.clean, start = f.starts)
   # store the fit parameters for later investigation
   f.fit.summary <- summary(f.fit, correlation = TRUE)
-
   # define the range of age values that will be used to generate points from the fitted model
-
   newages.int <- data.frame(AGE = seq(0, 50))
   # predict(f.fit,newdata=newages) this funtion uses the model from f.fit to generate new lengths
   # make a dataset with the values from the model
@@ -152,25 +134,17 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
 
 
 ```{r, ancova model}
-
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
-
   # cut the yearly data into decades centered on 1980,
   selected.surv.w.predicted <- selected.surv.w.predicted %>%
     dplyr::mutate(Decade = ggplot2::cut_width(YEAR, width = 10, center = 1980))
-
-
   # sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
   selected.surv.w.predicted$SEX <- dplyr::recode(selected.surv.w.predicted$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" = "transitional")
   # filter out unknown and transitional as they require more detailed analysis
   selected.surv.w.predicted <- selected.surv.w.predicted %>% dplyr::filter(SEX %in% c("male", "female"))
-
   # construct an ancova with the interaction between sex and decade to test for differences in fit to von b curve across decades and both sexes
   pred.von.b.ancova <- lm(residual.standardized ~ SEX + Decade + SEX * Decade, data = selected.surv.w.predicted)
-
   ancova.table <- summary(pred.von.b.ancova)
-
-
   colnames(ancova.table$coefficients) <- c("Estimate", "Std. Error", "t value", "P-value")
 } else {
   ("Not enough data to perform analysis")
@@ -181,14 +155,13 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
  
 
 ```{r, vonb ancova table}
-
-if (exists("selected.surv.w.predicted")) {
+if(exists("selected.surv.w.predicted")){
   if (nrow(selected.surv.w.predicted) > 5) {
-    knitr::kable(ancova.table$coefficients, digits = 3)
+  knitr::kable(ancova.table$coefficients, digits = 3)
   } else {
-    ("No model output")
-  }
-} else {
+  ("No model output")
+}
+  } else {
   ("No model output")
 }
 ```
@@ -205,12 +178,9 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
     nmfspalette::scale_fill_nmfs() +
     ggplot2::xlab("Sex") +
     ggplot2::ylab("standardized residuals")
-
-
   # unbalenced design of ancova needs to be tested later
   # remove unknown and transitional fish to simplify interpretation
 } else {
   ("No data")
 }
 ```
-
