@@ -1,4 +1,5 @@
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * 1,4"
 
@@ -11,11 +12,30 @@ jobs:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
     
     steps:
+    
+      - name: Setup R
+        uses: r-lib/actions/setup-r@master
       
       - name: Check cached R packages
         uses: actions/cache@v2
         with:
           path: ${{ env.R_LIBS_USER }}
           key: bigger-cache-more-packages-05192021-AT
-        
+          
+      - name: How big is the cache?
+        run: |
+          cd ${{ env.R_LIBS_USER }}
+          du -s
+        shell: bash
+          
+      - name: Check more cached packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: test-cache-07022021-AT
 
+      - name: How big is the cache?
+        run: |
+          cd ${{ env.R_LIBS_USER }}
+          du -s
+        shell: bash

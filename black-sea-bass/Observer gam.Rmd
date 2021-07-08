@@ -1,0 +1,260 @@
+---
+title: "CPUE"
+author: "Ricky Tabandera"
+date: "5/11/2021"
+output: html_document
+---
+
+```{r cpue-setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(sf)
+library(here)
+library(mgcv)
+```
+
+## R Markdown
+
+"Hilborn and Walters (1992)
+identified two major situations that affect interpretation of mean CPUE as an index of stock
+abundance: 1) hyperstability (when abundance declines faster than CPUE declines), and 2)
+hyperdepletion (when abundance declines slower than CPUE declines). In general, a fishery with
+a situation of hyperstability could be attributed to schooling behavior or changes in the species
+spatial distribution rather than changes in abundance (van der Lee 2012). Hyperdepletion, on the
+other hand, can occur when a more vulnerable portion of the population is easily caught,
+followed by a more cryptic portion that avoids fishing mortality (van der Lee 2012).
+Hyperstability can cause overfishing to go undetected, while hyperdepletion can result in
+foregone yields when adopted management strategies such as catch limits are based on
+inaccurate estimates of abundance (Erisman et al. 2011, van der Lee 2012). "
+
+
+```{r cpue-data}
+#needs to be pushed into package 
+# source(here::here("r","DDMMSS_to_DD.R"))
+# #needed to prevent r from converting values to scientific notation that breaks the script that converts degree minute second cords to decimal degree
+# options(scipen = 999)
+# 
+# OBSPP<-rio::import(here::here("data","OBDBS" ,"OBSPP.rds"))
+# #pull in species codes from OBSERVER DBS
+# OBSPEC<-read.csv(here::here("data","OBDBS", "OBSPEC.csv"))
+# 
+# OB_key<-OBSPEC %>% select(SPECIES_ITIS,NESPP4 )%>% rename("ITISSPP" ="SPECIES_ITIS")
+# 
+# OB_key_join<- dplyr::left_join(OBSPP,OB_key, by= "NESPP4")
+# 
+# SP_group<-read.csv(here::here("data","species_groupings_V2.csv"))
+# 
+# SP_key<-SP_group  %>% select( COMNAME, SVSPP, ITISSPP, NESPP3, SCINAME) %>% mutate(COMNAME= stringr::str_to_sentence(COMNAME))
+# 
+# OB_sp_join<-dplyr::left_join(OB_key_join,SP_key, by= "ITISSPP")
+# 
+# OB_selected<-OB_sp_join %>% filter(COMNAME == "Black sea bass")
+#convert original lat lon to decimal degrees and remove NAs, finally convery lon to negitive values 
+# OB_selected <- DDMMSS_to_DD(OB_selected, "LATHBEG","LONHBEG") %>% 
+#   filter(!is.na(LAT.DD ) & !is.na( LON.DD )) %>%
+#   mutate("LON.DD"=(-1*LON.DD))
+
+
+
+OB_selected<-rio::import(here::here("data","black_sea_bass_sf_ob.rds"))
+
+#filter to comprehensive dataset where only catches of >100lb and 10% of catch are BSB
+
+OB_selected_comp<-OB_selected %>% filter(SUM_black_sea_bass_CATCH>100 & (SUM_black_sea_bass_CATCH/TOT_CATCH)>.1)
+
+
+OB_selected_comp<-OB_selected_comp %>%mutate(WEEK=  strftime(DATE, format = "%V"))
+
+ves_count<-OB_selected_comp %>% group_by(VES_NAME) %>%  tally()
+
+rare.ves<-ves_count %>% filter(n<5)
+
+# remove rare boat from dataset 
+OB_selected_comp_rare<-OB_selected_comp %>% filter(!VES_NAME %in% rare.ves$VES_NAME)
+
+
+```
+
+### Distribution of haul size
+
+Strong peak near zero and long tail indicate a Poisson like distribution. However, the non discrete nature of the data and the extreme tail indidcates a large amount of overdispersion. Procedeing with a negitive binomial distribution to assess the structure of the data 
+
+
+```{r}
+OB_selected_comp %>% ggplot(aes(x=(TOT_black_sea_bass_CATCH )))+
+  geom_histogram(binwidth = 100)+
+  xlab("Total of BSB catch per haul (lb)")
+```
+#### Total Hauls by year
+The total amount of BSB caught through time appears to increase drasticly, could be due to either increased effort or higher abundance of BSB on the grounds
+```{r, hawlwt-by-yr}
+
+OB_selected_comp %>%
+  dplyr::group_by(YEAR) %>%
+  dplyr::summarise(num_haul=sum(SUM_black_sea_bass_CATCH))%>%
+  ggplot(aes(x=YEAR,y=num_haul))+geom_bar(stat="identity")+
+  ylab("wt of hauls")+
+  scale_y_continuous(n.breaks = 10)
+```
+
+#### Vessel composition
+Large number of vessels in data set with a total of `r length(ves_count$VES_NAME)` unique vessels. May have to remove the rare boats, that occur less than 5 times to reduce the amount of random effects
+```{r}
+ves_count<-OB_selected_comp %>% group_by(VES_NAME) %>%  tally()
+
+ves_count %>% ggplot(aes(x=VES_NAME, y=n))+geom_bar(stat = "identity")
+rare.ves<-ves_count %>% filter(n<5)
+
+```
+
+
+
+```{r}
+OB_selected_comp %>%
+  ggplot(aes(x=YEAR,y=(SUM_black_sea_bass_CATCH), group=YEAR))+geom_boxplot()+
+  ylab("wt of hauls")+
+  scale_y_continuous(n.breaks = 10)
+```
+
+
+
+
+```{r, trips-per-year}
+
+
+OB_selected_comp %>%
+  dplyr::group_by(YEAR) %>%
+  dplyr::summarise(haul_per_yr=length(unique(haul_id)))%>%
+  ggplot(aes(x=YEAR,y=haul_per_yr))+geom_bar(stat="identity")+
+  ylab("# of hauls")
+
+
+```
+
+```{r}
+OB_selected_comp %>% ggplot(aes(x=WEEK,y=log(TOT_black_sea_bass_CATCH)))+geom_point()+facet_wrap(~(YEAR), nrow=4, ncol=4)
+```
+
+
+
+
+```{r OB-haul-locations, echo=FALSE}
+
+
+
+OB_geo<-st_as_sf(OB_selected_comp,coords = c("start_lon", "start_lat"), crs=4269 )
+OB_geo_lim<-OB_selected_comp %>% dplyr::summarise(lonmin=(min(start_lon)-1), lonmax=(max(start_lon)+1), latmin=(min(start_lat)-1), latmax=(max(start_lat)+1))
+
+
+ggplot()+
+  geom_sf(data=OB_geo,aes(color=as.factor(YEAR)),size=.4,show.legend="Year" )+
+  geom_sf(data=ecodata::coast)+
+  ggplot2::coord_sf(
+        xlim = c(OB_geo_lim$lonmin, OB_geo_lim$lonmax),
+        ylim = c(OB_geo_lim$latmin, OB_geo_lim$latmax)
+  )
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r, model-building}
+
+#R package mgcv using the argument ‘select’ equals ‘TRUE
+OB_selected_comp <- OB_selected_comp %>% mutate("area"=as.factor(area), "gear_code_obs"=as.factor(gear_code_obs), "mesh_size"=as.factor(mesh_size) )
+
+# options(scipen=0, digits=7)
+
+# make sure to shift the plot to reflect the actual range of values using seWithMean = TRUE, shift = coef(gam_model)[1]
+# +te(LON.DD,LAT.DD)
+
+
+# gam_mod <- gam(HAILWT ~ s(YEAR, by=NEGEAR)+s(MONTH,bs = "cc",by=NEGEAR),family= "quasi", data = OB_selected, method = "REML", select=TRUE)
+
+gam_mod <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
+
+gam_mod.g <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp", k=13 )+s(MONTH,bs = "cc",k=12,by=gear_code_obs)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
+
+gam_mod.ves <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
+
+
+gam_mod.ds <- gam(TOT_black_sea_bass_CATCH ~ VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="ds", k= 13),family= "nb", data=OB_selected_comp, method = "REML", select=TRUE)
+
+
+
+logLik(gam_mod.ves)
+logLik(gam_mod.ds)
+plot(gam_mod.ds)
+summary(gam_mod.p)
+
+time_mod <- gam(TOT_black_sea_bass_CATCH ~ s(YEAR,bs="tp")+s(MONTH,bs = "cc"),family= "nb", data=OB_selected, method = "REML", select=TRUE)
+
+coef(gam_mod)
+summary(gam_mod)
+qq.gam(gam_mod.p)
+plot(gam_mod.g, pages = 2,rug = TRUE,residuals = TRUE,
+     pch = 1, cex = 1,shade = TRUE)
+plot(gam_mod)
+plot(gam_mod.p, scheme = 2)
+plot(gam_mod,shade = TRUE,seWithMean = TRUE, shift = coef(gam_mod)[1])
+plot(gam_mod, shade = TRUE, shade.col = "lightblue", select = 1)
+
+
+
+plot(time_mod)
+summary(time_mod)
+# install.packages("mgcViz")
+library(mgcViz)
+?vis.gam()
+t1<-mgcViz::getViz(gam_mod)
+print(plot(t1), ask = FALSE)
+
+plot(gam_mod$residuals)
+
+#concurvity is low in the model
+concurvity(gam_mod, full = TRUE)
+concurvity(gam_mod, full = FALSE)
+
+gam.check(gam_mod.p)
+
+
+t1<-rqresiduals(gam_mod)
+
+```
+
+
+```{r}
+
+gam.mod.rare<-gam(TOT_black_sea_bass_CATCH ~VES_NAME+s(YEAR,bs="tp", k=13)+s(MONTH,bs = "cc",k=12)+te(start_lon,start_lat, bs="gp", k= 13),family= "nb", data=OB_selected_comp_rare, method = "REML", select=TRUE)
+  
+  
+summary(gam_mod.ves)
+summary(gam.mod.rare)
+plot(gam.mod.rare)
+
+gam.check(gam.mod.rare)
+# summary(gam_mod.ves)
+# Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# R-sq.(adj) =  0.434   Deviance explained = 65.5%
+# -REML =  14923  Scale est. = 1         n = 1742
+
+```
+
+
+
+```{r}
+
+vis.gam(gam_mod, view = c("LON.DD","LAT.DD"), plot.type = "contour", color = "heat", too.far = .1)
+plot(resid(gam_mod))
+
+```
+
+
+
+
+
+
+
+
+
