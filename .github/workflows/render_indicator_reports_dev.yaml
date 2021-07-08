@@ -43,7 +43,7 @@ jobs:
       - name: Re-install packages
         run: |
           Rscript -e '
-          remove.packages(c("sf", "ecodata")
+          remove.packages(c("sf", "ecodata"))
           install.packages("sf")
           remotes::install_github("NOAA-EDAB/ecodata", upgrade = "never")'
           
