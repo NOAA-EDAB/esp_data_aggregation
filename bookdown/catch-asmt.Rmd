@@ -1,4 +1,4 @@
-## Catch and landings
+## Catch, landings, and discards
 
 ```{r, child = system.file("indicator_bookdown_template/_legend-child-doc.Rmd", package = "NEesp")}
 ```
