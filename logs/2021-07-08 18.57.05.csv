@@ -1,0 +1,54 @@
+"Species","Error","File throwing error","Chunk name","Line throwing error"
+"Alewife","Error in UseMethod(""select"") : 
+  no applicable method for 'select' applied to an object of class ""NULL""
+","landings-data.Rmd","catch_data","4"
+"Atlantic halibut","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Atlantic wolffish","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Barndoor skate","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Blueback herring","Error in `contrasts<-`(`*tmp*`, value = contr.funs[1 + isOF[nn]]) : 
+  contrasts can be applied only to factors with 2 or more levels
+","von_b.Rmd","ancova model","154"
+"Clearnose skate","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Little skate","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Monkfish","Error in slice_head(., n = 3) : could not find function ""slice_head""
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Offshore hake","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Rosette skate","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Smooth dogfish","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Smooth skate","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Spiny dogfish","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Thorny skate","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Winter skate","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Witch flounder","Error in min(data$year):max(data$year) : 
+  result would be too long a vector
+","landings-data.Rmd","rec_data","33"
+"American lobster","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
+"Jonah crab","Error in if (unique(selected.surv.clean$common_name) == ""Monkfish"") { : 
+  argument is of length zero
+","fxn-age-diversity.Rmd"", ""/home/runner/work/esp_data_aggregation/esp_data_aggregation/bookdown/von_b.Rmd"")","data_wrangling","3"
