@@ -68,7 +68,7 @@ suppressWarnings({
     
     colnames(output) <- c("Species", "Error", "File throwing error", "Chunk name", "Line throwing error")
 
-    file <- paste0("logs/", Sys.time(), ".csv") %>%
+    file <- paste0("logs/error-in-some-species-", Sys.time(), ".csv") %>%
       stringr::str_replace_all(":", ".")
     dir.create(here::here("logs"))
     

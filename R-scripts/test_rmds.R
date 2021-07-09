@@ -62,5 +62,5 @@ test_rmds <- function(species, test_type) {
     setwd(here::here())
 }
 
-test_rmds(species = "NO SPECIES - TEST", test_type = "cant-handle-missing-data")
-test_rmds(species = "Black sea bass", test_type = "cant-run-alone")
+test_rmds(species = "NO SPECIES - TEST", test_type = "cant-handle-missing-data-")
+test_rmds(species = "Black sea bass", test_type = "cant-run-alone-")
