@@ -1,0 +1,4 @@
+"Species","Error","File throwing error","Chunk name","Line throwing error"
+"Rosette skate","Error in mapply(make_multiplier, from_input = from_date, to_input = to_date) : 
+  zero-length inputs cannot be mixed with those of non-zero length
+","revenue.Rmd","inflation-adjusted-price-history","11, 31, 48, 69"
