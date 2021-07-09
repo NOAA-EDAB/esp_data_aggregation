@@ -11,9 +11,17 @@
 # library(ggpubr)
 # library(FSA)
 # library(NEesp)
+
+if(species == "Monkfish" |
+   species == "Blueback herring"){
+  run <- FALSE
+  print(paste("Calculations are not currently supported for", species))
+} else {
+     run <- TRUE
+   }
 ```
 
-```{r data_wrangling, cache = params$cache, cache.lazy = FALSE}
+```{r data_wrangling, cache = params$cache, cache.lazy = FALSE, eval = run}
 # load bio survdat information from the package
 survdata.w.codes <- NEesp::common_names_survdat("bio")
 selected.surv <- survdata.w.codes %>%
@@ -24,15 +32,13 @@ selected.surv <- survdata.w.codes %>%
 # only take records with age associated
 selected.surv.clean <- selected.surv %>% tidyr::drop_na(AGE)
 #add exception to monkfish as its aging is messy 
-if(nrow(selected.surv.clean) > 0){
-  if(species == "Monkfish"){
-  selected.surv.clean<-selected.surv.clean %>% dplyr::slice_head( n =3)
-}
+if(unique(selected.surv.clean$common_name) == "Monkfish"){
+  selected.surv.clean<-selected.surv.clean %>% slice_head( n =3)
 }
 ```
 
 
-```{r, vonb-model}
+```{r, vonb-model, eval = run}
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
   # define the type of von b model
   vb <- FSA::vbFuns(param = "Typical")
@@ -60,7 +66,7 @@ The predicted von Bertalanffy growth curve for NMFS managed fish species. Growth
 `r if(params$species == "Monkfish"){"The age determination method for monkfish has not been validated, and the anatomic structure used has changed through time. In addition these stocks display a high degree of sexual dimorphisms making fitting of single growth curves unreliable.  This results a high degree of uncertainty in assessing the age structure of the stock and the effects of fishing pressure."}`
 
 
-```{r single-growth-curve, fig.cap = paste(species, "length at age growth curve")}
+```{r single-growth-curve, fig.cap = paste(species, "length at age growth curve"), eval = run}
 # palette
 if (nrow(selected.surv.clean) > 50) {
   fig <- ggplot2::ggplot(
@@ -105,7 +111,7 @@ if (nrow(selected.surv.clean) > 50) {
 ### Growth differences among groups
 The rate of growth may vary through time and between sexes. To assess for potential differences in growth among these groups, the global von Bertalanffy growth model was constructed and the residuals of each observation and the predicted size was tested for significant differences among groups and through time. 
 
-```{r, growth_diff_testing}
+```{r, growth_diff_testing, eval = run}
 # testing a Common L8 and t0 Model.
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
   # define the type of von b model
@@ -135,7 +141,7 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
 ```
 
 
-```{r, ancova model}
+```{r, ancova model, eval = run}
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
   # cut the yearly data into decades centered on 1980,
   selected.surv.w.predicted <- selected.surv.w.predicted %>%
@@ -156,7 +162,7 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
 ### ANCOVA model output
  
 
-```{r, vonb ancova table}
+```{r, vonb ancova table, eval = run}
 if(exists("selected.surv.w.predicted")){
   if (nrow(selected.surv.w.predicted) > 5) {
   knitr::kable(ancova.table$coefficients, digits = 3)
@@ -172,7 +178,7 @@ if(exists("selected.surv.w.predicted")){
 The fit of each of these grouping to the global model is visualized as the distribution of standardized residuals for each observation. Groups with good fit to the model should have smaller overall residuals that have equal variance above and below zero idicating the model predicting growth accuratly. If residuals are unballenced or the average of the residiuals devates from zero, this could indicate that this grouping differs from the expected growth from the global model. This deviation from the global model may indicate slower or faster growth than predicted, and this may be due to either changing energetic conditions,  sexual dimorphism, or other variation in the population. 
 
 
-```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade")}
+```{r, residuals boxplots, fig.cap = paste(species, "fit to global von b model by sex and decade"), eval = run}
 if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
   selected.surv.w.predicted %>%
     ggplot2::ggplot(ggplot2::aes(x = SEX, y = residual.standardized, fill = Decade)) +
