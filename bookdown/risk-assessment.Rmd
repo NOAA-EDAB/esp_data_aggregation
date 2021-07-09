@@ -12,7 +12,8 @@ Risk was calculated over time for all indicators that were documented for five o
 
 
 ```{r, comp-risk-plot, fig.height = 10, fig.cap = paste(species, "comprehensive risk assessment")}
-ggplot2::ggplot(
+if(nrow(risk_data) > 0){
+  ggplot2::ggplot(
   risk_data,
   ggplot2::aes(
     x = reorder(Region, -total_risk),
@@ -41,6 +42,9 @@ ggplot2::ggplot(
   ) +
   ggplot2::xlab("Stock region") +
   ggplot2::ylab("Indicator")
+} else {
+  print("NO DATA")
+}
 ```
 
 
@@ -104,6 +108,7 @@ data <- risk_data %>%
   )
 
 NEesp::make_html_table(data, type = params$file)
+
 ```
 
 #### Normalized rank of magnitude of change compared to historical value by year {-}

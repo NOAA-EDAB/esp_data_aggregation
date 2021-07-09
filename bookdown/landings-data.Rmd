@@ -143,8 +143,8 @@ if (nrow(comm) > 0) {
   }
 }
 
-if (exists("all_catch") &
-  ncol(all_catch > 2)) {
+if (exists("all_catch")){
+  if(ncol(all_catch > 2)){
   all_catch <- all_catch %>%
     dplyr::arrange(Year) %>%
     round(digits = 0) %>%
@@ -152,6 +152,7 @@ if (exists("all_catch") &
     as.data.frame()
 
   all_catch <- all_catch %>% dplyr::select("Year", sort(colnames(all_catch)[-1]))
+}
 }
 
 # make sure there is data on at least 2 types of catch
