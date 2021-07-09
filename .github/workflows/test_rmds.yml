@@ -65,7 +65,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           token: ${{ secrets.GH_PAT }}
-          branch: main # The branch the action should deploy to.
+          branch: ${{ env.GITHUB_REF }} # The branch the action should deploy to.
           folder: logs # The folder the action should deploy.
           target-folder: logs
           clean: false # Automatically remove deleted files from the deploy branch
