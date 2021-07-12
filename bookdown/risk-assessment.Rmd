@@ -12,36 +12,36 @@ Risk was calculated over time for all indicators that were documented for five o
 
 
 ```{r, comp-risk-plot, fig.height = 10, fig.cap = paste(species, "comprehensive risk assessment")}
-if(nrow(risk_data) > 0){
+if (nrow(risk_data) > 0) {
   ggplot2::ggplot(
-  risk_data,
-  ggplot2::aes(
-    x = reorder(Region, -total_risk),
-    y = Indicator %>%
-      stringr::str_replace_all("_", " "),
-    fill = norm_rank
-  )
-) +
-  ggplot2::geom_raster(stat = "identity") +
-  ggplot2::facet_grid(
-    rows = ggplot2::vars(category),
-    scales = "free",
-    space = "free"
+    risk_data,
+    ggplot2::aes(
+      x = reorder(Region, -total_risk),
+      y = Indicator %>%
+        stringr::str_replace_all("_", " "),
+      fill = norm_rank
+    )
   ) +
-  ggplot2::theme_bw() +
-  viridis::scale_fill_viridis(
-    limits = c(0, 1),
-    breaks = c(0, 0.5, 1),
-    direction = -1,
-    na.value = "gray90",
-    name = "Normalized rank"
-  ) +
-  ggplot2::theme(
-    legend.position = "top",
-    strip.text.y = ggplot2::element_text(angle = 0)
-  ) +
-  ggplot2::xlab("Stock region") +
-  ggplot2::ylab("Indicator")
+    ggplot2::geom_raster(stat = "identity") +
+    ggplot2::facet_grid(
+      rows = ggplot2::vars(category),
+      scales = "free",
+      space = "free"
+    ) +
+    ggplot2::theme_bw() +
+    viridis::scale_fill_viridis(
+      limits = c(0, 1),
+      breaks = c(0, 0.5, 1),
+      direction = -1,
+      na.value = "gray90",
+      name = "Normalized rank"
+    ) +
+    ggplot2::theme(
+      legend.position = "top",
+      strip.text.y = ggplot2::element_text(angle = 0)
+    ) +
+    ggplot2::xlab("Stock region") +
+    ggplot2::ylab("Indicator")
 } else {
   print("NO DATA")
 }

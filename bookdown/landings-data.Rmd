@@ -2,29 +2,29 @@
 
 ### Stock assessment catch
 ```{r, catch_data}
-if(nrow(asmt_data) > 0){
+if (nrow(asmt_data) > 0) {
   data <- asmt_data %>%
-  dplyr::filter(
-    Metric == "Catch",
-    Region != "Eastern Georges Bank"
-  ) %>% # double counted
-  dplyr::select(-Species, -Metric) %>%
-  dplyr::mutate(options = paste(AssessmentYear, Description, Units, sep = " - ")) %>%
-  #  dplyr::arrange(AssessmentYear) %>%
-  dplyr::group_by(Year, options) %>%
-  dplyr::summarise(Value = sum(Value)) %>%
-  dplyr::ungroup() %>%
-  dplyr::mutate(Value = Value %>%
-    round(digits = 0) %>%
-    format(big.mark = ",")) %>%
-  tidyr::pivot_wider(
-    names_from = options,
-    values_from = Value
-  ) %>%
-  NEesp::character_to_factor() 
-  } else {
+    dplyr::filter(
+      Metric == "Catch",
+      Region != "Eastern Georges Bank"
+    ) %>% # double counted
+    dplyr::select(-Species, -Metric) %>%
+    dplyr::mutate(options = paste(AssessmentYear, Description, Units, sep = " - ")) %>%
+    #  dplyr::arrange(AssessmentYear) %>%
+    dplyr::group_by(Year, options) %>%
+    dplyr::summarise(Value = sum(Value)) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(Value = Value %>%
+      round(digits = 0) %>%
+      format(big.mark = ",")) %>%
+    tidyr::pivot_wider(
+      names_from = options,
+      values_from = Value
+    ) %>%
+    NEesp::character_to_factor()
+} else {
   data <- asmt_data
-  }
+}
 
 NEesp::make_html_table(data,
   type = params$file
@@ -33,21 +33,21 @@ NEesp::make_html_table(data,
 
 ### Recreational landings
 ```{r, rec_data}
-if(nrow(rec_data) > 0){
+if (nrow(rec_data) > 0) {
   data <- rec_data %>%
-  NEesp::rec_data_prep(state = TRUE) %>%
-  dplyr::filter(name == "landings") %>%
-  dplyr::mutate(
-    State = st_f %>%
-      stringr::str_to_sentence(),
-    Method = mode_fx_f %>%
-      stringr::str_to_sentence()
-  ) %>%
-  dplyr::select(year, State, Region, Method, value) %>%
-  NEesp::character_to_factor()
+    NEesp::rec_data_prep(state = TRUE) %>%
+    dplyr::filter(name == "landings") %>%
+    dplyr::mutate(
+      State = st_f %>%
+        stringr::str_to_sentence(),
+      Method = mode_fx_f %>%
+        stringr::str_to_sentence()
+    ) %>%
+    dplyr::select(year, State, Region, Method, value) %>%
+    NEesp::character_to_factor()
 } else {
   data <- rec_data
-  }
+}
 
 NEesp::make_html_table(data,
   type = params$file,
@@ -143,16 +143,16 @@ if (nrow(comm) > 0) {
   }
 }
 
-if (exists("all_catch")){
-  if(ncol(all_catch > 2)){
-  all_catch <- all_catch %>%
-    dplyr::arrange(Year) %>%
-    round(digits = 0) %>%
-    # format(big.mark = ",") %>% # messing up formatting
-    as.data.frame()
+if (exists("all_catch")) {
+  if (ncol(all_catch > 2)) {
+    all_catch <- all_catch %>%
+      dplyr::arrange(Year) %>%
+      round(digits = 0) %>%
+      # format(big.mark = ",") %>% # messing up formatting
+      as.data.frame()
 
-  all_catch <- all_catch %>% dplyr::select("Year", sort(colnames(all_catch)[-1]))
-}
+    all_catch <- all_catch %>% dplyr::select("Year", sort(colnames(all_catch)[-1]))
+  }
 }
 
 # make sure there is data on at least 2 types of catch

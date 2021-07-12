@@ -31,10 +31,10 @@ indicators <- c("rec_catch")
 #### Proportion of catch landed
 
 ```{r, rec-land-prop}
-fig <- NEesp::plot_rec(rec_data, var = "prop_land", title = "Proportion of recreational catch landed (by number)") 
+fig <- NEesp::plot_rec(rec_data, var = "prop_land", title = "Proportion of recreational catch landed (by number)")
 
 fig <- fig +
-  ggplot2::ylim(c(0,1))
+  ggplot2::ylim(c(0, 1))
 
 print(fig)
 ```
@@ -50,10 +50,10 @@ NEesp::plot_rec(rec_data, var = "discards", title = "Recreational discards (numb
 #### Proportion of catch discarded
 
 ```{r, rec-disc-prop}
-fig <- NEesp::plot_rec(rec_data, var = "prop", title = "Proportion of recreational catch discarded (by number)") 
+fig <- NEesp::plot_rec(rec_data, var = "prop", title = "Proportion of recreational catch discarded (by number)")
 
 fig <- fig +
-  ggplot2::ylim(c(0,1))
+  ggplot2::ylim(c(0, 1))
 
 print(fig)
 ```
@@ -84,31 +84,31 @@ sp_data_qual <- TRUE
 st_data_qual <- TRUE
 
 # testing if data quality is sufficient for each graph
-if(exists("Selected_sp")){
-  if(nrow(Selected_sp) > 10){
-      nas <- length(which(is.na(Selected_sp$total)))
-      total <- length(Selected_sp$total)
-      if ( (nas/total) > 0.40) {
-  sp_data_qual <-TRUE
-      } else {
-  sp_data_qual <- FALSE
-}
+if (exists("Selected_sp")) {
+  if (nrow(Selected_sp) > 10) {
+    nas <- length(which(is.na(Selected_sp$total)))
+    total <- length(Selected_sp$total)
+    if ((nas / total) > 0.40) {
+      sp_data_qual <- TRUE
+    } else {
+      sp_data_qual <- FALSE
+    }
   }
- else {
-  sp_data_qual <- FALSE
-}
+  else {
+    sp_data_qual <- FALSE
+  }
 }
 
-if(exists("selected_by_state")){
-  if(nrow(selected_by_state) > 10){
+if (exists("selected_by_state")) {
+  if (nrow(selected_by_state) > 10) {
     if (length(which(is.na(selected_by_state$Pounds))) / length(selected_by_state$Pounds) > 0.50) {
-  st_data_qual <-TRUE
+      st_data_qual <- TRUE
     } else {
-  st_data_qual <- FALSE
-}
+      st_data_qual <- FALSE
+    }
   } else {
-  st_data_qual <- FALSE
-}
+    st_data_qual <- FALSE
+  }
 }
 ```
 
@@ -118,35 +118,38 @@ This data was sourced from [FOSS - Fisheries One Stop Shop](https://foss.nmfs.no
 
 
 ```{r total-catch-good-data, eval= sp_data_qual}
-if(nrow(Selected_sp)>10){
-Selected_sp %>%
-  ggplot2::ggplot(ggplot2::aes(x = Year, y = log(total))) +
-  tidyquant::geom_ma(n = 5, lwd = 1.4) +
-  ggplot2::geom_point() +
-  ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average") +
-  ggplot2::xlim(1981, 2019) +
-  ggplot2::xlab(label = "Year") +
-  ggplot2::ylab(label = "Log transformed  total catch in pounds (lb) ") +
-  ggplot2::theme_minimal()}else("No data")
-
+if (nrow(Selected_sp) > 10) {
+  Selected_sp %>%
+    ggplot2::ggplot(ggplot2::aes(x = Year, y = log(total))) +
+    tidyquant::geom_ma(n = 5, lwd = 1.4) +
+    ggplot2::geom_point() +
+    ggplot2::ggtitle(label = params$species, subtitle = "5 year rolling average") +
+    ggplot2::xlim(1981, 2019) +
+    ggplot2::xlab(label = "Year") +
+    ggplot2::ylab(label = "Log transformed  total catch in pounds (lb) ") +
+    ggplot2::theme_minimal()
+} else {
+  ("No data")
+}
 ```
 
 
 ```{r sp-if-data-is-poor, eval= !sp_data_qual}
 
-if(nrow(Selected_sp)>10){
+if (nrow(Selected_sp) > 10) {
   Selected_sp %>%
-  tidyr::drop_na() %>%
-  ggplot2::ggplot(ggplot2::aes(x = Year, y = log(total))) +
-  ggplot2::geom_point(size = 1.3) +
-  ggplot2::geom_line() +
-  ggplot2::ggtitle(label = params$species, subtitle = "Data coverage is poor") +
-  ggplot2::xlim(1981, 2019) +
-  ggplot2::xlab(label = "Year") +
-  ggplot2::ylab(label = "Log transformed  total catch in pounds (lb)") +
-  ggplot2::theme_minimal()
-  }else("No data")
-
+    tidyr::drop_na() %>%
+    ggplot2::ggplot(ggplot2::aes(x = Year, y = log(total))) +
+    ggplot2::geom_point(size = 1.3) +
+    ggplot2::geom_line() +
+    ggplot2::ggtitle(label = params$species, subtitle = "Data coverage is poor") +
+    ggplot2::xlim(1981, 2019) +
+    ggplot2::xlab(label = "Year") +
+    ggplot2::ylab(label = "Log transformed  total catch in pounds (lb)") +
+    ggplot2::theme_minimal()
+} else {
+  ("No data")
+}
 ```
 
 
