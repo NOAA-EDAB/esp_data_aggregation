@@ -1,0 +1,112 @@
+"Species","Error","File throwing error","Chunk name","Line throwing error"
+"Acadian redfish","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Alewife","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"American plaice","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Atlantic cod","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Atlantic halibut","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Atlantic herring","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Atlantic mackerel","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Atlantic wolffish","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Barndoor skate","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Black sea bass","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Bluefish","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Blueback herring","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Butterfish","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Clearnose skate","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Haddock","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Little skate","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Monkfish","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Ocean pout","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Offshore hake","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Pollock","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Red hake","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Rosette skate","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Scup","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Silver hake","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Smooth dogfish","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Smooth skate","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Spiny dogfish","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Summer flounder","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Thorny skate","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"White hake","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Windowpane","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Winter flounder","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Winter skate","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Witch flounder","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Yellowtail flounder","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"American lobster","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
+"Jonah crab","Error in seq_len(ncol(data)) : 
+  argument must be coercible to non-negative integer
+","geographic-distribution.Rmd","latlong","17"
