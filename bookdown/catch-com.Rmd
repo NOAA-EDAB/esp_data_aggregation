@@ -10,12 +10,12 @@ com_landings_clean <- NEesp::com_catch
 
 selected_com_sp <- com_landings_clean %>%
   dplyr::group_by(Year) %>%
-  dplyr::filter(Species == params$species) %>%
+  dplyr::filter(Species == species) %>%
   dplyr::summarise(total_pounds = sum(Pounds, na.rm = FALSE), total_dollars = sum(Dollars, na.rm = FALSE))
 
 selected_com_state <- com_landings_clean %>%
   dplyr::group_by(Year, State) %>%
-  dplyr::filter(Species == params$species) %>%
+  dplyr::filter(Species == species) %>%
   dplyr::summarise(total_pounds = sum(Pounds, na.rm = FALSE), total_dollars = sum(Dollars, na.rm = FALSE))
 
 ##########################

@@ -12,13 +12,13 @@
 # library(FSA)
 # library(NEesp)
 
-if(species == "Monkfish" |
-   species == "Blueback herring"){
+if (species == "Monkfish" |
+  species == "Blueback herring") {
   run <- FALSE
   print(paste("Calculations are not currently supported for", species))
 } else {
-     run <- TRUE
-   }
+  run <- TRUE
+}
 ```
 
 ```{r data_wrangling, cache = params$cache, cache.lazy = FALSE, eval = run}
@@ -26,14 +26,16 @@ if(species == "Monkfish" |
 survdata.w.codes <- NEesp::common_names_survdat("bio")
 selected.surv <- survdata.w.codes %>%
   dplyr::filter(common_name == species)
-#used to debug
+# used to debug
 # selected.surv <- survdata.w.codes %>%
 #   dplyr::filter(common_name == "Black sea bass")
 # only take records with age associated
 selected.surv.clean <- selected.surv %>% tidyr::drop_na(AGE)
-#add exception to monkfish as its aging is messy 
-if(unique(selected.surv.clean$common_name) == "Monkfish"){
-  selected.surv.clean<-selected.surv.clean %>% slice_head( n =3)
+# add exception to monkfish as its aging is messy
+if (nrow(selected.surv.clean) > 0) {
+  if (unique(selected.surv.clean$common_name) == "Monkfish") {
+    selected.surv.clean <- selected.surv.clean %>% slice_head(n = 3)
+  }
 }
 ```
 
@@ -163,13 +165,13 @@ if (selected.surv.clean$AGE %>% unique() %>% length() >= 5) {
  
 
 ```{r, vonb ancova table, eval = run}
-if(exists("selected.surv.w.predicted")){
+if (exists("selected.surv.w.predicted")) {
   if (nrow(selected.surv.w.predicted) > 5) {
-  knitr::kable(ancova.table$coefficients, digits = 3)
+    knitr::kable(ancova.table$coefficients, digits = 3)
   } else {
-  ("No model output")
-}
-  } else {
+    ("No model output")
+  }
+} else {
   ("No model output")
 }
 ```
