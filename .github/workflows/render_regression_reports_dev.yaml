@@ -40,8 +40,9 @@ jobs:
 
       - name: Render reports
         run: |
-          Rscript -e 'remove.packages("NEesp")
+          Rscript -e 'remove.packages(c("NEesp", "ecodata"))
           remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never")
+          remotes::install_github("NOAA-EDAB/ecodata", upgrade = "never")
           install.packages("ggnewscale")
           
           species <- NEesp::regression_species_regions[1:30,]
@@ -116,8 +117,9 @@ jobs:
 
       - name: Render reports
         run: |
-          Rscript -e 'remove.packages("NEesp")
+          Rscript -e 'remove.packages(c("NEesp", "ecodata"))
           remotes::install_github("NOAA-EDAB/NEesp", ref = "dev", upgrade = "never")
+          remotes::install_github("NOAA-EDAB/ecodata", upgrade = "never")
           install.packages("ggnewscale")
                     
           species <- NEesp::regression_species_regions[31:61,]
