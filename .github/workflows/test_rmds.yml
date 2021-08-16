@@ -60,12 +60,22 @@ jobs:
           # test
           source(here::here("R-scripts", "test_rmds.R"))'
           
+      - name: Extract branch name
+        run: |
+          Rscript -e '
+          test <- "${{ github.ref }}"
+          print(test)
+          b <- strsplit(test, split = "refs/heads/")[[1]][2]
+          print(b)
+          Sys.setenv(branch = b)
+          Sys.getenv("branch")'
+          
       - name: Deploy status check to Github
         id: logdeploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           token: ${{ secrets.GH_PAT }}
-          branch: ${{ github.ref }} # The branch the action should deploy to.
+          branch: ${{ env.branch }} # The branch the action should deploy to.
           folder: logs # The folder the action should deploy.
           target-folder: logs
           clean: false # Automatically remove deleted files from the deploy branch
