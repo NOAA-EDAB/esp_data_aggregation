@@ -76,7 +76,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         with:
-          assignees: ${{ env.GITHUB_ACTOR }}
+          assignees: ${{ github.actor }}
           filename: .github/rmd-test-template.md
           
       - name: Status
