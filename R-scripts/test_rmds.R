@@ -2,10 +2,12 @@ test_rmds <- function(species, test_type) {
 
   `%>%` <- magrittr::`%>%`
   
-  this_dir <- here::here("TEST")
+  dir_name <- "TEST"
+  
+  this_dir <- here::here(dir_name)
   dir.create(this_dir)
   
-  file.copy(from = list.files(here::here("bookdown"), pattern = ".Rmd", full.names = TRUE),
+  file.copy(from = list.files(here::here("bookdown"), pattern = "index.Rmd", full.names = TRUE),
             to = this_dir, overwrite = TRUE)
   
     params_list <- list(
@@ -17,20 +19,25 @@ test_rmds <- function(species, test_type) {
     )
     
     setwd(this_dir)
-    files <- list.files(pattern = ".Rmd") %>%
+    files <- list.files(here::here("bookdown"), pattern = ".Rmd", full.names = TRUE) %>%
       stringr::str_subset("index.Rmd", negate = TRUE)  %>%
-      stringr::str_subset("^_", negate = TRUE)
-    
+      stringr::str_subset("/_", negate = TRUE)
+
     problem_files <- c()
     last_known_chunk <- c()
+    error <- c()
     
     for(i in files){
+      
+      file.copy(from = i, to = this_dir, overwrite = TRUE)
+      
       name <- i %>%
         stringr::str_remove(".Rmd") %>%
+        stringr::str_replace("bookdown", dir_name) %>%
         paste(".html", sep = "")
       
       test <- try(bookdown::render_book(
-        preview = TRUE,
+    #    preview = TRUE,
         input = c("index.Rmd", i),
         params = params_list,
         output_format = bookdown::html_document2(),
@@ -43,19 +50,28 @@ test_rmds <- function(species, test_type) {
         quiet = TRUE
       ))
       
+      short <- i %>%
+        stringr::str_remove("^.{1,}bookdown/")
+      
       if(class(test) == "try-error"){
-        problem_files <- c(problem_files, i)
+        problem_files <- c(problem_files, short)
         last_known_chunk <- c(last_known_chunk, last_known)
+
+        error <- c(error, test)
+
         file.remove("_main.Rmd")
       }
       
-      print(paste("Tested", i))
+      file.remove(i %>% stringr::str_replace("bookdown", dir_name))
+      
+      print(paste("Tested", short))
     }
     
     if(length(problem_files) > 0){
+
       filename <- paste0("logs/", test_type, Sys.time(), ".csv") %>%
         stringr::str_replace_all(":", ".")
-      data <- cbind(problem_files, last_known_chunk)
+      data <- cbind(problem_files, last_known_chunk, error)
       write.csv(data, file = here::here(filename))
     }
     
