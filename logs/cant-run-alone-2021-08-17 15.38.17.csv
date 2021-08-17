@@ -1,0 +1,7 @@
+"","problem_files","last_known_chunk","error"
+"1","abundance.Rmd","abunance-survey-swept","Error : Column `alue` not found in `.data`
+"
+"2","biomass.Rmd","bio-survey-swept","Error : Column `alue` not found in `.data`
+"
+"3","revenue.Rmd","save-data","Error in head(selected_com_sp) : object 'selected_com_sp' not found
+"
