@@ -27,5 +27,7 @@ jobs:
       - name: Install more packages
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          Rscript -e 'install.packages(c("devtools", "stringi", "car"))
-          devtools::install_github("NOAA-EDAB/NEesp", ref = "v0.1.1", dependencies = TRUE)'
+          Rscript -e 'install.packages(c("devtools", "stringi", "car"),
+          dependencies = TRUE)
+          devtools::install_github("NOAA-EDAB/NEesp", ref = "v0.1.1", 
+          dependencies = TRUE)'
