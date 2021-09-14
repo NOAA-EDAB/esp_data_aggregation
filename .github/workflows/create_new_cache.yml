@@ -1,5 +1,7 @@
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1,4"
 
 name: Create new cache
 
@@ -8,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     
     steps:
         
@@ -16,17 +19,13 @@ jobs:
       
       - name: Check cached R packages
         uses: actions/cache@v2
+        id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: big-cache-DESCRIPTION-02172021-2
+          key: cache-09142021-AT
           
       - name: Install more packages
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          Rscript -e 'install.packages(c("devtools", "stringi", "car", "tidyquant"))
-          devtools::install_github("NOAA-EDAB/NEesp", ref = "v0.1.0", dependencies = TRUE)'
-        
-      - name: Make a new cache
-        uses: actions/cache@v2
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: bigger-cache-more-packages-05192021-AT
+          Rscript -e 'install.packages(c("devtools", "stringi", "car"))
+          devtools::install_github("NOAA-EDAB/NEesp", ref = "v0.1.1", dependencies = TRUE)'

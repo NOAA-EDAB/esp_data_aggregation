@@ -8,7 +8,7 @@ jobs:
   build1:
     runs-on: ubuntu-latest
     env:
-      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
     
     steps:
@@ -38,7 +38,7 @@ jobs:
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: bigger-cache-more-packages-05192021-AT
+          key: cache-09142021-AT
           
       - name: Re-install packages
         run: |
@@ -71,7 +71,7 @@ jobs:
         id: calibre
         uses: calibreapp/image-actions@main
         with:
-          githubToken: ${{ secrets.GH_PAT }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
           ignorePaths: 'Regression_reports/**, black-sea-bass/**, R-scripts/**'
           compressOnly: true
           
@@ -85,7 +85,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           repository-name: NOAA-EDAB/ESP_docs
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: main # The branch the action should deploy to.
           folder: action_reports # The folder the action should deploy.
           target-folder: Reports
@@ -95,7 +95,7 @@ jobs:
         id: logdeploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: main # The branch the action should deploy to.
           folder: logs # The folder the action should deploy.
           target-folder: logs
@@ -105,7 +105,7 @@ jobs:
         if: ${{ env.deployment_status != 'skipped' }}
         uses: JasonEtco/create-an-issue@v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           assignees: ${{ env.GITHUB_ACTOR }}
           

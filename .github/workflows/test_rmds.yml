@@ -41,7 +41,7 @@ jobs:
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: bigger-cache-more-packages-05192021-AT
+          key: cache-09142021-AT
           
       - name: Re-install packages
         run: |
@@ -70,7 +70,7 @@ jobs:
         id: logdeploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.branch }} # The branch the action should deploy to.
           folder: logs # The folder the action should deploy.
           target-folder: logs
@@ -80,7 +80,7 @@ jobs:
         if: ${{ env.deployment_status != 'skipped' }}
         uses: JasonEtco/create-an-issue@v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           assignees: ${{ github.actor }}
           filename: .github/rmd-test-template.md

@@ -8,7 +8,7 @@ jobs:
   build1:
     runs-on: ubuntu-latest
     env:
-      GITHUB_PAT: ${{ secrets.GH_PAT }}
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
     
     steps:
@@ -37,7 +37,7 @@ jobs:
         id: cache
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: bigger-cache-more-packages-05192021-AT
+          key: cache-09142021-AT
 
       - name: Render reports
         run: |
@@ -48,7 +48,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           repository-name: NOAA-EDAB/ESP_docs
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: main # The branch the action should deploy to.
           folder: action_reports # The folder the action should deploy.
           target-folder: Reports
