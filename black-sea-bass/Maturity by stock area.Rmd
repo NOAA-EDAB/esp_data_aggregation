@@ -1,0 +1,74 @@
+---
+title: "Regional_maturity"
+author: "Ricky Tabandera"
+date: "9/23/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(NEesp)
+
+
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r, data_wrangling}
+
+# only take records with a maturity status associated
+selected.surv.clean <- NEesp::bio_survey %>%
+  dplyr::mutate(SVSPP = as.numeric(SVSPP)) %>%
+  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
+  dplyr::filter(Species == "Black sea bass") %>%
+  tidyr::drop_na(MATURITY) %>%
+  dplyr::mutate(MATURITY = MATURITY %>% stringr::str_to_upper()) %>%
+  dplyr::filter(MATURITY %in% c("D", "I", "R", "S", "T", "U", "E"))
+
+# recode the maturity col into factor
+
+# recode sexed fish to readable names
+# sex codes 1 male, 2 female, 4 transitional, 0 unsexed/unknown
+selected.surv.clean$MATURITY <- dplyr::recode(selected.surv.clean$MATURITY, "D" = "Mature", "I" = "Immature", "R" = "Mature", "S" = "Mature", "T" = "Mature", "U" = "Mature", "E" = "Mature")
+# recode sex to male or female
+selected.surv.clean$SEX <- dplyr::recode(selected.surv.clean$SEX, "1" = "male", "2" = "female", "0" = "unknown", "4" = "transitional")
+
+selected.surv.clean <- selected.surv.clean %>%
+  dplyr::mutate(
+    SEX = as.factor(selected.surv.clean$SEX),
+    MATURITY = as.factor(MATURITY)
+  )
+
+selected.surv.f <- selected.surv.clean %>%
+  dplyr::filter(SEX %in% c("female", "male") & MATURITY != "X")
+
+
+selected_surv_mat_clean <- NEesp::bio_survey %>%
+  dplyr::mutate(SVSPP = as.numeric(SVSPP)) %>%
+  dplyr::left_join(NEesp::species_key, by = "SVSPP") %>%
+  dplyr::filter(Species == "Black sea bass") %>%
+  tidyr::drop_na(MATURITY) %>%
+  dplyr::mutate(MATURITY = MATURITY %>% stringr::str_to_upper())
+
+# recode maturity codes to readable names
+selected_surv_mat_clean$MATURITY <- dplyr::recode(selected_surv_mat_clean$MATURITY, "D" = "DEVELOPING", "I" = "IMMATURE", "R" = "RIPE", "S" = "SPENT", "T" = "RESTING", "U" = "RIPE AND RUNNING", "E" = "EYED", "X" = "UNKNOWN", "i" = "IMMATURE", "r" = "RIPE", "d" = "DEVELOPING", "t" = "RESTING", "1" = "UNKNOWN")
+
+selected_surv_mat_clean %>% ggplot(aes(x=YEAR, fill=MATURITY))+geom_histogram(position="stack")  
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
