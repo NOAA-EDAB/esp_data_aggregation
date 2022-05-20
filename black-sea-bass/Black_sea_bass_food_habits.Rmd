@@ -1,0 +1,127 @@
+---
+title: "Black_sea_bass_foodhabits"
+author: "Ricky Tabandera"
+date: "5/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Black sea bass food habits
+
+Black sea bass are diurnal visual predators usually associated with complex hard structured bottoms and are observed to eat a wide variety of prey. Investigations into the food habits of black sea bass as sampled by three bottom trawl surveys (NEFSC, NEAMAP, and CHESAMAP).
+
+
+```{r data_organization}
+
+#all food habits from condition work +
+
+load(url("https://github.com/Laurels1/Condition/raw/master/data/allfh.RData"))
+#key of strata from ECSA <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
+
+
+CHESAMAP_2022<-read.csv("BSB_CHESAMAP_2022.csv")
+NEAMAP_2022<-read.csv("BSB_NEAMAP_2022.csv" )
+
+#col definitions from data dict
+#PDLEN	PREDATOR LENGTH	Predator length in CM, rounded up.
+
+
+#filter all food habits down to just black sea bass svspp code 141
+#NEesp::species_key used to get svspp key
+
+#Well-digested prey (unidentifiable animal remains) labeled as WDP.
+
+#removing pre 1991 years as they lack a unique predator id making reconstructing stomachs difficult 
+#removing rows without prey weight ~ 400 records removed
+BSB_allfh<- allfh %>% filter(svspp=="141" & year>1990 & !is.na(pyamtw))
+BSB_allfh1<- allfh %>% filter(svspp=="141"  )
+
+#select only used variables PYPERI
+BSB_small<-BSB_allfh %>% select(c(pynam, gencat, gensci, analcat,  analsci, 
+                                  pyamtw,pywgti,pdid, pdlen,pdsex, pdwgt,pynum, 
+                                  geoarea,
+                                  stratum, surftemp, bottemp, season,month, day, year,cruise6))
+#remove SAB as contains only ~20 records
+BSB_small<-BSB_small %>% filter(!geoarea=="SAB")
+
+
+# north vs south
+# geo regions in the dataset "MAB" "SNE" "GoM" "GB"  "SAB"
+# refactor GOM and GB into SNE as northern subunit, and removed South atlantic bight
+
+BSB_small$subunit <- BSB_small$geoarea
+
+BSB_small$subunit[BSB_small$geoarea=="MAB"]<-"Southern"
+BSB_small$subunit[BSB_small$geoarea=="SNE"]<-"Northern"
+BSB_small$subunit[BSB_small$geoarea=="GoM"]<-"Northern"
+BSB_small$subunit[BSB_small$geoarea=="GB"]<-"Northern"
+
+
+
+```
+
+## Frequency of occurance
+
+NEFSC bottom trawl survey food habits contain a fraction of fish collected in a tow for stomach removal and analysis. Each entry is the identified contents of indevidual black sea bass stomachs associated with a unique predatorID. This dataset contains `r length(unique(BSB_ID$pdid))  ` stomachs containing `r length(BSB_ID$pdid) ` prey records. Data from prior to 1991 are 
+
+```{r frequency_occ, echo=FALSE}
+
+# PYSPP	Prey species name.
+
+
+N<-BSB_small %>% filter(subunit =="Northern") %>% group_by(gensci) %>%
+  summarise(count=n(),freq_occ=(count/length(BSB_small$analcat)),weight=sum(pyamtw))
+
+S<-BSB_small %>% filter(subunit =="Southern") %>% group_by(gensci) %>%
+  summarise(count=n(),freq_occ=(count/length(BSB_small$analcat)),weight=sum(pyamtw))
+
+
+
+
+N_feq_occ_plot<-N %>% mutate(gensci=forcats::fct_reorder(gensci, desc(count))) %>%
+  ggplot(aes(x=gensci,y=count))+geom_bar(stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90))
+
+S_feq_occ_plot<-S %>% mutate(gensci=forcats::fct_reorder(gensci, desc(count))) %>%
+  ggplot(aes(x=gensci,y=count))+geom_bar(stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90))
+
+
+
+
+
+
+print(N_feq_occ_plot)
+print(S_feq_occ_plot)
+
+
+```
+
+```{r By_weight, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+N_weight<-BSB_small %>% filter(subunit =="Northern") %>% group_by(gensci) %>% summarise(weight=sum(pyamtw))
+N_weight<- N_weight %>% mutate(perc_weight=weight/sum(weight)*100)     
+
+S_weight<-BSB_small %>% filter(subunit =="Southern") %>% group_by(gensci) %>% summarise(weight=sum(pyamtw))
+S_weight<- S_weight %>% mutate(perc_weight=weight/sum(weight)*100)  
+
+
+N_weight_plot<-N_weight %>% mutate(gensci=forcats::fct_reorder(gensci, desc(perc_weight))) %>%
+  ggplot(aes(x=gensci,y=perc_weight))+geom_bar(stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90))
+
+
+S_weight_plot<-S_weight %>% mutate(gensci=forcats::fct_reorder(gensci, desc(perc_weight))) %>%
+  ggplot(aes(x=gensci,y=perc_weight))+geom_bar(stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90))
+
+print(N_weight_plot)
+print(S_weight_plot)
+
+```
+
