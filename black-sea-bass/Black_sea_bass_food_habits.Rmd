@@ -21,8 +21,10 @@ Black sea bass are diurnal visual predators usually associated with complex hard
 
 #all food habits from condition work +
 
-load(url("https://github.com/Laurels1/Condition/raw/master/data/allfh.RData"))
-#saveRDS(allfh, file="allfh_20200526.rds")
+#load(url("https://github.com/Laurels1/Condition/raw/master/data/allfh.RData"))
+# load("C:\\Users\\ricky.tabandera\\Documents\\EDAB\\esp_data_aggregation\\black-sea-bass\\allfh_20200526.rds")
+# saveRDS(allfh, file="allfh_20200526.RDS")
+load("allfh_20200526.RDATA")
 #key of strata from ECSA <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 
 
@@ -68,9 +70,9 @@ BSB_small$subunit[BSB_small$geoarea=="GB"]<-"Northern"
 
 ```
 
-## Frequency of occurance
+## Frequency of occurance and weight of prey items
 
-NEFSC bottom trawl survey food habits contain a fraction of fish collected in a tow for stomach removal and analysis. Each entry is the identified contents of indevidual black sea bass stomachs associated with a unique predatorID. This dataset contains `r length(unique(BSB_ID$pdid))  ` stomachs containing `r length(BSB_ID$pdid) ` prey records. Data from prior to 1991 are 
+NEFSC bottom trawl survey food habits contain a fraction of fish collected in a tow for stomach removal and analysis. Each entry is the identified contents of indevidual black sea bass stomachs associated with a unique predatorID. This dataset contains `r length(unique(BSB_small$pdid))  ` stomachs containing `r length(BSB_small$pdid) ` prey records. Data coverage begins in 1977 though 2020.
 
 ```{r frequency_occ, echo=FALSE}
 
@@ -79,7 +81,6 @@ NEFSC bottom trawl survey food habits contain a fraction of fish collected in a 
 #removing 
 
 
- 
 
 
 N<-BSB_small %>% filter(subunit =="Northern" & !gensci%in%c("EMPTY","","OTHER") ) %>% group_by(gensci) %>%
@@ -92,38 +93,42 @@ N_weight<- N_weight %>% mutate(perc_weight=weight/sum(weight)*100)
 N_order<-N %>%  mutate(gensci=forcats::fct_reorder(gensci, (count)))
 
 
-#N_feq_occ_plot<-
 N1<-N %>%
   mutate(gensci=forcats::fct_reorder(gensci, (count))) %>%
-  ggplot(aes(x=gensci,y=count))+
+  ggplot(aes(x=gensci,y=count, fill= gensci))+
   geom_bar(stat = "identity")+
   theme(axis.text.x = element_text(angle = 90),
         panel.border= element_blank(),
         panel.background= element_rect(fill = "white"),
-        axis.title.y=element_blank()
+        axis.title.y=element_blank(),
+        legend.position="none"
         )+
    coord_flip()+
   xlab("Prey category")+
-  ylab("Frequency of occurrence")
+  ylab("Frequency of occurrence")+
+  nmfspalette::scale_fill_nmfs(palette = "regional web")
 
 N2<-N_weight %>%
   mutate(gensci=forcats::fct_reorder(gensci, desc(perc_weight))) %>%
-  ggplot(aes(x=N_order$gensci,y=weight))+geom_bar(stat = "identity")+
+  ggplot(aes(x=N_order$gensci,y=weight, fill=N_order$gensci))+geom_bar(stat = "identity")+
   theme(axis.text.x = element_text(angle = 90),
         panel.border= element_blank(),
         panel.background= element_rect(fill = "white"),
         axis.title.y=element_blank(),
         axis.text.y = element_blank(),
         axis.ticks.y = element_blank(),
+        legend.position="none"
         )+
   scale_y_reverse()+
   coord_flip()+
-  ylab("Weight (g)")
+  ylab("Weight (g)")+
+  nmfspalette::scale_fill_nmfs(palette = "regional web")
 
 
-grid.arrange(N2,N1,ncol=2)
+plot_N<-ggpubr::ggarrange(N2,N1,ncol=2)
 
-
+ggpubr::annotate_figure(plot_N,top = ggpubr::text_grob("Northern area food habits", 
+               color = "red", face = "bold", size = 14))
 
 
 
@@ -131,30 +136,95 @@ grid.arrange(N2,N1,ncol=2)
 
 ```{r By_weight, echo=FALSE, message=FALSE, warning=FALSE}
 
-S<-BSB_small %>% filter(subunit =="Southern"& !gensci%in%c("EMPTY","","OTHER")) %>% group_by(gensci) %>%
+
+
+
+
+S<-BSB_small %>% filter(subunit =="Southern" & !gensci%in%c("EMPTY","","OTHER") ) %>% group_by(gensci) %>%
   summarise(count=n(),freq_occ=(count/length(BSB_small$gensci)),weight=sum(pyamtw))
 
-   
 
-S_weight<-BSB_small %>% filter(subunit =="Southern"& !gensci==c("EMPTY","")) %>% group_by(gensci) %>% summarise(weight=sum(pyamtw))
+S_weight<-BSB_small %>% filter(subunit =="Southern"& !gensci%in%c("EMPTY","","OTHER")) %>% group_by(gensci) %>% summarise(weight=sum(pyamtw))
 S_weight<- S_weight %>% mutate(perc_weight=weight/sum(weight)*100)  
 
+S_order<-S %>%  mutate(gensci=forcats::fct_reorder(gensci, (count)))
 
-S_feq_occ_plot<-S %>% mutate(gensci=forcats::fct_reorder(gensci, desc(count))) %>%
-  ggplot(aes(x=gensci,y=count))+geom_bar(stat = "identity")+
-  theme(axis.text.x = element_text(angle = 90))+
+
+S1<-S %>%
+  mutate(gensci=forcats::fct_reorder(gensci, (count))) %>%
+  ggplot(aes(x=gensci,y=count, fill= gensci))+
+  geom_bar(stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"),
+        axis.title.y=element_blank(),
+        legend.position="none"
+        )+
+   coord_flip()+
   xlab("Prey category")+
   ylab("Frequency of occurrence")+
-  theme_minimal()
+  nmfspalette::scale_fill_nmfs(palette = "regional web")
+
+S2<-S_weight %>%
+  mutate(gensci=forcats::fct_reorder(gensci, desc(perc_weight))) %>%
+  ggplot(aes(x=S_order$gensci,y=weight, fill=S_order$gensci))+geom_bar(stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"),
+        axis.title.y=element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        legend.position="none"
+        )+
+  scale_y_reverse()+
+  coord_flip()+
+  ylab("Weight (g)")+
+  nmfspalette::scale_fill_nmfs(palette = "regional web")
 
 
+plot_S<-ggpubr::ggarrange(S2,S1,ncol=2)
 
-S_weight_plot<-S_weight %>% mutate(gensci=forcats::fct_reorder(gensci, desc(perc_weight))) %>%
-  ggplot(aes(x=gensci,y=perc_weight))+geom_bar(stat = "identity")+
-  theme(axis.text.x = element_text(angle = 90))
-
-print(N_weight_plot)
-print(S_weight_plot)
+ggpubr::annotate_figure(plot_S,top = ggpubr::text_grob("Southern area food habits", 
+               color = "red", face = "bold", size = 14))
 
 ```
+
+## NEAMAP
+
+```{r NEAMAP_RAW, echo=FALSE, message=FALSE, warning=FALSE}
+# total prey items 8227, 
+NEAMAP_2022 %>%
+  filter(Frequency>100)%>%
+  mutate(Common_order=forcats::fct_reorder(COMMON, Frequency)) %>%
+  ggplot(aes(x=Common_order,y=Frequency, fill= COMMON))+geom_bar(stat = "identity")+
+  coord_flip()+
+  theme(
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"),
+        axis.title.y=element_blank(),
+        legend.position="none"
+        )+
+  ggtitle("NEAMAP raw freq")
+
+```
+
+##CHESAMAP
+
+```{r CHESAMAP_RAW, echo=FALSE, message=FALSE, warning=FALSE}
+
+CHESAMAP_2022 %>%
+  filter(Frequency>15)%>%
+  mutate(Common_order=forcats::fct_reorder(COMMON, Frequency)) %>%
+  ggplot(aes(x=Common_order,y=Frequency, fill= COMMON))+geom_bar(stat = "identity")+
+  coord_flip()+
+  theme(
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"),
+        axis.title.y=element_blank(),
+        legend.position="none"
+        )+
+  ggtitle("CHESAMAP raw freq")
+
+```
+
 
