@@ -40,9 +40,81 @@ SHW_SMAB <- read.csv("~\\EDAB\\esp_data_aggregation\\data\\Oceanography\\SHW_SMA
 SHW_NMAB<-read.csv("~\\EDAB\\esp_data_aggregation\\data\\Oceanography\\SHW_NMAB.csv")
 SHW_MAB<-read.csv("~\\EDAB\\esp_data_aggregation\\data\\Oceanography\\SHW_MAB.csv")
 
+
+
+
+
 TSanom_SMAB<-read.csv("~\\EDAB\\esp_data_aggregation\\data\\Oceanography\\TSanom_SMAB.csv")
 TSanom_NMAB<-read.csv("~\\EDAB\\esp_data_aggregation\\data\\Oceanography\\TSanom_NMAB.csv")
 TSanom_MAB<-read.csv("~\\EDAB\\esp_data_aggregation\\data\\Oceanography\\TSanom_MAB.csv")
+
+
+
+
+############## mutate data to incude season
+
+#convert decimal year to date
+SHW_SMAB$date_ymd<-lubridate::date_decimal(SHW_SMAB$Year, tz = "UTC")
+SHW_NMAB$date_ymd<-lubridate::date_decimal(SHW_NMAB$Year, tz = "UTC")
+SHW_MAB$date_ymd<-lubridate::date_decimal(SHW_MAB$Year, tz = "UTC")
+#extract month
+
+
+SHW_SMAB$month<-lubridate::month(SHW_SMAB$date_ymd) 
+SHW_NMAB$month<-lubridate::month(SHW_NMAB$date_ymd) 
+SHW_MAB$month<-lubridate::month(SHW_MAB$date_ymd) 
+######## extract year
+
+SHW_SMAB$year<-lubridate::year(SHW_SMAB$date_ymd)
+SHW_NMAB$year<-lubridate::year(SHW_NMAB$date_ymd)
+SHW_MAB$year<-lubridate::year(SHW_MAB$date_ymd)
+
+# limit to just winter months feb-mar as jan is irregularly avalible 
+#no december measurments
+                     
+SHW_SMAB<-SHW_SMAB %>%   mutate(season=dplyr::case_when(
+  month <= 2 | month < 4 ~ "winter",
+  month < 4 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  ))     
+
+SHW_NMAB<-SHW_NMAB %>%   mutate(season=dplyr::case_when(
+  month <= 2 | month < 4 ~ "winter",
+  month < 4 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  )) 
+SHW_MAB<-SHW_MAB %>%   mutate(season=dplyr::case_when(
+  month <= 2 | month < 4 ~ "winter",
+  month < 4 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  )) 
+
+
+#summerize to mean winter for each variable of interest 
+SHW_SMAB_winter <-SHW_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom))
+                         
+SHW_NMAB_winter <-SHW_NMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom))
+
+ SHW_MAB_winter <-SHW_MAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom))
+ 
+#Fall 
+ 
+SHW_SMAB_fall <-SHW_SMAB %>% filter(season=="fall") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom))
+                         
+SHW_NMAB_fall <-SHW_NMAB %>% filter(season=="fall") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom))
+
+ SHW_MAB_fall <-SHW_MAB %>% filter(season=="fall") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom)) 
+ 
+
+
+
+
+
+
+
 
 ```
 
@@ -154,6 +226,112 @@ plot(SHW_MAB_anom_plot)
 
 
 ```
+
+
+## winter shelf water volume and anomaly
+
+```{r winter_shelf_water_vol_anom, echo=FALSE, message=FALSE, warning=FALSE}
+SHW_SMAB_winter_plot<-SHW_SMAB_winter %>% 
+  ggplot2::ggplot()+
+  geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
+  geom_hline(yintercept = 0)+
+  ylab(expression(Winter~shelf~water~volume~anomoly~km^{"3"}))+
+  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  scale_y_continuous(breaks = seq(-1500,1500, by= 500))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+  ggtitle("Southern Middle Atlantic Bight")
+
+SHW_NMAB_winter_plot<-SHW_SMAB_winter %>% 
+  ggplot2::ggplot()+
+  geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
+  geom_hline(yintercept = 0)+
+  ylab(expression(Winter~shelf~water~volume~anomoly~km^{"3"}))+
+  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  scale_y_continuous(breaks = seq(-1500,1500, by= 500))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+  ggtitle("Northern Middle Atlantic Bight")
+
+SHW_MAB_winter_plot<-SHW_SMAB_winter %>% 
+  ggplot2::ggplot()+
+  geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
+  geom_hline(yintercept = 0)+
+  ylab(expression(Winter~shelf~water~volume~anomoly~km^{"3"}))+
+  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  scale_y_continuous(breaks = seq(-1500,1500, by= 500))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+  ggtitle("All Middle Atlantic Bight")
+
+plot(SHW_SMAB_winter_plot)
+plot(SHW_NMAB_winter_plot)
+plot(SHW_MAB_winter_plot)
+
+```
+ 
+
+
+
+## Shelf water volume fall
+
+To replicate Millter et al. 2016 methods the previous fall shelf water volume was used in the GAM. 
+
+```{r fall_shelf_water_vol_anom, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+SHW_SMAB_fall_plot<-SHW_SMAB_fall %>% 
+  ggplot2::ggplot()+
+  geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
+  geom_hline(yintercept = 0)+
+  ylab(expression(Fall~shelf~water~volume~anomoly~km^{"3"}))+
+  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  scale_y_continuous(breaks = seq(-1500,1500, by= 500))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+  ggtitle("Southern Middle Atlantic Bight")
+
+
+SHW_NMAB_fall_plot<-SHW_SMAB_fall %>% 
+  ggplot2::ggplot()+
+  geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
+  geom_hline(yintercept = 0)+
+  ylab(expression(Fall~shelf~water~volume~anomoly~km^{"3"}))+
+  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  scale_y_continuous(breaks = seq(-1500,1500, by= 500))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+  ggtitle("Northern Middle Atlantic Bight")
+
+
+SHW_MAB_fall_plot<-SHW_SMAB_fall %>% 
+  ggplot2::ggplot()+
+  geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
+  geom_hline(yintercept = 0)+
+  ylab(expression(Fall~shelf~water~volume~anomoly~km^{"3"}))+
+  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  scale_y_continuous(breaks = seq(-1500,1500, by= 500))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+  ggtitle("All Middle Atlantic Bight")
+
+plot(SHW_SMAB_fall_plot)
+plot(SHW_NMAB_fall_plot)
+plot(SHW_MAB_fall_plot)
+
+
+```
+
+
+
+
+
 
 
 ## Regional in-situ bottom temperature and salinity with anomaly
@@ -349,6 +527,10 @@ MAB_winter_bot_plot<-MAB_winter_bot %>%
   ggtitle("All Middle Atlantic Bight")
 
 
+#########################
+
+#fall 
+
 
 ##################
 plot(SMAB_winter_bot_plot)
@@ -362,6 +544,89 @@ plot(MAB_winter_bot_plot)
 
 
 
+
+## Gulf of Maine and Georges bank bottom temperature
+
+Placeholder with SOE information extracted from ecodata. Data occurs at annual time scale and is across the whole EPU.
+
+```{r GB_GOM_SOE_bottom_T, echo=FALSE, message=FALSE, warning=FALSE}
+
+#remotes::install_github("https://github.com/NOAA-EDAB/ecodata")
+
+eco_bottom_temp<-ecodata::bottom_temp
+
+
+
+bottom_t_anom_GOM_plot<-eco_bottom_temp %>%
+  filter(EPU=="GOM" & Var=="bottom temp anomaly in situ") %>%
+  ggplot(aes(x=Time, y=Value))+
+  geom_point()+
+  geom_line()+
+  xlab("Year")+
+  ylab("Bottom temperature anomoly (C)")+
+  ggtitle("Gulf of Maine in situ")+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+   scale_x_continuous(breaks = seq(1977,2021, by= 1))
+
+bottom_t_anom_GB_plot<-eco_bottom_temp %>%
+  filter(EPU=="GB" & Var=="bottom temp anomaly in situ") %>%
+  ggplot(aes(x=Time, y=Value))+
+  geom_point()+
+  geom_line()+
+  xlab("Year")+
+  ylab("Bottom temperature anomoly (C)")+
+  ggtitle("Georges bank in situ")+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+   scale_x_continuous(breaks = seq(1977,2021, by= 1))
+#get real bottom temp by combining anomoly and the long term mean
+eco_bottom_temp_bt<-eco_bottom_temp %>%tidyr::spread(Var,Value)
+colnames(eco_bottom_temp_bt)<-c("Time","EPU","Units", "BT_amom","BT_ref","SST_ref", "SST_amom" )
+eco_bottom_temp_real<-eco_bottom_temp_bt %>% group_by(Time, EPU) %>% mutate(bottom_T=(BT_amom+BT_ref))
+
+
+bottom_t_real_GB_plot<-eco_bottom_temp_real %>%
+  filter(EPU=="GB") %>%
+  ggplot(aes(x=Time, y=bottom_T))+
+  geom_point()+
+  geom_line()+
+  xlab("Year")+
+  ylab("Bottom temperature (C)")+
+  ggtitle("Georges bank in situ")+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+   scale_x_continuous(breaks = seq(1977,2021, by= 1))
+
+bottom_t_real_GOM_plot<-eco_bottom_temp_real %>%
+  filter(EPU=="GOM") %>%
+  ggplot(aes(x=Time, y=bottom_T))+
+  geom_point()+
+  geom_line()+
+  xlab("Year")+
+  ylab("Bottom temperature (C)")+
+  ggtitle("Gulf of Maine in situ")+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+   scale_x_continuous(breaks = seq(1977,2021, by= 1))
+
+
+
+
+plot(bottom_t_anom_GOM_plot)
+plot(bottom_t_anom_GB_plot)
+plot(bottom_t_real_GB_plot)
+plot(bottom_t_real_GOM_plot)
+```
+
+
+
+
+
 ## Winter available habitat 
 
-Using a reanalysis product to get estimated available habitat during the winter months. These reanalysis products will use all insitu data and use physics to predict and interpolate over missing cells. With this tool we can expand the temporal scale of our bottom temperature and salinity questions. The main indicator of question relate to the amount of available habitat in winter. Proposed parameters for sutable habitat is >33 PSU and 8°C in FEB-MAR. The hypothesis is years with  
+Using a reanalysis product to get estimated available habitat during the winter months. These reanalysis products will use all insitu data and use physics to predict and interpolate over missing cells. With this tool we can expand the temporal scale of our bottom temperature and salinity questions. The main indicator of question relate to the amount of available habitat in winter. Proposed parameters for suitable habitat is >33 PSU and 8°C in FEB-MAR. The hypothesis is years with more available habitat will require shorter migration distances and result in lower 
