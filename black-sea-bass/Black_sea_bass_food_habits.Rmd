@@ -2,7 +2,9 @@
 title: "Black_sea_bass_foodhabits"
 author: "Ricky Tabandera"
 date: "5/12/2022"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -17,7 +19,7 @@ library(grid)
 Black sea bass are diurnal visual predators usually associated with complex hard structured bottoms and are observed to eat a wide variety of prey. Investigations into the food habits of black sea bass as sampled by three bottom trawl surveys (NEFSC, NEAMAP, and CHESAMAP).
 
 
-```{r data_organization}
+```{r data_organization, warning=FALSE, include=FALSE}
 
 #all food habits from condition work +
 
@@ -43,16 +45,21 @@ NEAMAP_2022<-read.csv("BSB_NEAMAP_2022.csv" )
 #removing pre 1991 years as they lack a unique predator id making reconstructing stomachs difficult 
 #removing rows without prey weight ~ 400 records removed 
 # & year>1990
-BSB_allfh<- allfh %>% filter(svspp=="141"  & !is.na(pyamtw))
+BSB_allfh<- allfh %>% filter(svspp=="141"  )
 
 
 #select only used variables PYPERI
 BSB_small<-BSB_allfh %>% select(c(pynam, gencat, gensci, analcat,  analsci, 
                                   pyamtw,pywgti,pdid, pdlen,pdsex, pdwgt,pynum, 
                                   geoarea,
-                                  stratum, surftemp, bottemp, season,month, day, year,decade ,cruise6))
+                                  stratum, surftemp, bottemp, season,month, day, year,decade ,cruise6,tow))
+
 #remove SAB as contains only ~20 records
 BSB_small<-BSB_small %>% filter(!geoarea=="SAB" )
+
+
+
+
 
 
 # north vs south
@@ -66,6 +73,9 @@ BSB_small$subunit[BSB_small$geoarea=="SNE"]<-"Northern"
 BSB_small$subunit[BSB_small$geoarea=="GoM"]<-"Northern"
 BSB_small$subunit[BSB_small$geoarea=="GB"]<-"Northern"
 
+#removing pre 1991 years as they lack a unique predator id making reconstructing stomachs difficult used for freq
+BSB_small_ID<-BSB_small  %>% filter(year>1990)
+
 
 
 ```
@@ -74,7 +84,118 @@ BSB_small$subunit[BSB_small$geoarea=="GB"]<-"Northern"
 
 NEFSC bottom trawl survey food habits contain a fraction of fish collected in a tow for stomach removal and analysis. Each entry is the identified contents of indevidual black sea bass stomachs associated with a unique predatorID. This dataset contains `r length(unique(BSB_small$pdid))  ` stomachs containing `r length(BSB_small$pdid) ` prey records. Data coverage begins in 1977 though 2020.
 
-```{r frequency_occ, echo=FALSE}
+
+```{r}
+#create a new index of indevidual bsb as pdid appears to not be reliable at IDing fish early in the dataset
+#strata cruise tow station pdid ==== to make key
+t1<- BSB_small %>% unite("ID",c(month, day, year,cruise6, pdlen,tow),remove =FALSE)
+#generate counts of each prey catagory by year and subunit
+t2<-t1 %>% group_by(decade,subunit, analsci ) %>% summarise(count=n())
+#count each identified predator for each subunit and year
+t3<-t1 %>% group_by(decade,subunit) %>% summarise(pd_count=length(unique(ID)))
+#join the above counts to get frequency of occurance in stomachs by region and decade
+t4<-dplyr::full_join( t2,t3, by= c("decade","subunit"))
+
+t4<-t4 %>% mutate(freq_o=count/pd_count)
+
+
+
+#######testing
+
+#need key to group prey together IE decapoda crab, vs cancer spp, 
+# pyamtw is in g
+
+t0<- BSB_small %>% filter(!analsci%in%c("BLOWN"))
+
+t1<- t0 %>% unite("ID",c(month, day, year,cruise6, pdid, pdlen, tow),remove =FALSE)
+
+length(unique(t1$ID))
+
+#generate counts of each prey catagory by year and subunit
+t2<-t1 %>% group_by( analsci ) %>% summarise(count=n())
+
+t2<-t2 %>% mutate(f_o=count/length(unique(t1$ID)))
+#count each identified predator for each subunit and year
+t3<-t1 %>%group_by( analsci )%>%  summarise(pd_count=length(unique(ID)))
+#join the above counts to get frequency of occurance in stomachs by region and decade
+t4<-dplyr::full_join( t2,t3, by= "analsci")
+
+t4<-t4 %>% mutate(freq_o=count/pd_count)
+
+
+
+#remove all blown
+
+t2 %>%
+  filter(count>10, !analsci%in%c("","BLOWN", "EMPTY"))%>%
+  mutate(analsci=forcats::fct_reorder(analsci, f_o, .desc = TRUE))%>%
+  ggplot()+
+  geom_bar(aes(x=analsci, y=f_o),stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"),
+        axis.title.y=element_blank(),
+        legend.position="none"
+        )
+
+
+
+
+
+
+
+
+
+ # group_by(analsci)%>% 
+ #  mutate(analsci=forcats::fct_reorder(analsci, freq_o))%>%
+ # 
+ #  group_by(analsci)%>%
+ #    facet_wrap(vars(subunit,decade))+
+  
+  
+
+```
+
+
+```{r prey trial}
+t0<- BSB_small %>% filter(!analsci%in%c("BLOWN"))
+
+t1<- t0 %>% unite("ID",c(month, day, year,cruise6, pdlen, tow),remove =FALSE)
+
+length(unique(t1$ID))
+
+#generate counts of each prey catagory by year and subunit
+t2<-t1 %>% group_by( pynam ) %>% summarise(count=n())
+
+t2<-t2 %>% mutate(f_o=count/length(unique(t1$ID)))
+#count each identified predator for each subunit and year
+t3<-t1 %>%group_by( pynam )%>%  summarise(pd_count=length(unique(ID)))
+#join the above counts to get frequency of occurance in stomachs by region and decade
+t4<-dplyr::full_join( t2,t3, by= "analsci")
+
+t4<-t4 %>% mutate(freq_o=count/pd_count)
+
+
+
+
+
+t2 %>%
+  filter(count>20,!pynam%in%c("EMPTY"))%>%
+  mutate(analsci=forcats::fct_reorder(pynam, f_o, .desc = TRUE))%>%
+  ggplot()+
+  geom_bar(aes(x=pynam, y=f_o),stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"),
+        axis.title.y=element_blank(),
+        legend.position="none"
+        )
+
+```
+
+
+
+```{r northern_raw, echo=FALSE}
 
 # PYSPP	Prey species name.
 
@@ -83,12 +204,18 @@ NEFSC bottom trawl survey food habits contain a fraction of fish collected in a 
 
 
 
-N<-BSB_small %>% filter(subunit =="Northern" & !gensci%in%c("EMPTY","","OTHER") ) %>% group_by(gensci) %>%
+N<-BSB_small %>% filter(subunit =="Northern" , !gensci%in%c("EMPTY","","OTHER","BLOWN") & !is.na(pyamtw)) %>% group_by(gensci)%>%
   summarise(count=n(),freq_occ=(count/length(BSB_small$gensci)),weight=sum(pyamtw))
 
 
-N_weight<-BSB_small %>% filter(subunit =="Northern"& !gensci%in%c("EMPTY","","OTHER")) %>% group_by(gensci) %>% summarise(weight=sum(pyamtw))
-N_weight<- N_weight %>% mutate(perc_weight=weight/sum(weight)*100)  
+N_weight<-BSB_small %>%
+  filter(subunit =="Northern"& !gensci%in%c("EMPTY","","OTHER")) %>%
+  group_by(gensci)%>%
+  summarise(weight=sum(pyamtw))
+
+
+N_weight<- N_weight %>% filter(weight>0)%>%
+  mutate(perc_weight=weight/sum(weight)*100)  
 
 N_order<-N %>%  mutate(gensci=forcats::fct_reorder(gensci, (count)))
 
@@ -105,7 +232,7 @@ N1<-N %>%
         )+
    coord_flip()+
   xlab("Prey category")+
-  ylab("Frequency of occurrence")+
+  ylab("count")+
   nmfspalette::scale_fill_nmfs(palette = "regional web")
 
 N2<-N_weight %>%
@@ -134,18 +261,24 @@ ggpubr::annotate_figure(plot_N,top = ggpubr::text_grob("Northern area food habit
 
 ```
 
-```{r By_weight, echo=FALSE, message=FALSE, warning=FALSE}
+```{r southern_raw, echo=FALSE, message=FALSE, warning=FALSE}
 
 
 
 
 
-S<-BSB_small %>% filter(subunit =="Southern" & !gensci%in%c("EMPTY","","OTHER") ) %>% group_by(gensci) %>%
+S<-BSB_small %>% filter(subunit =="Southern" & !gensci%in%c("EMPTY","","OTHER") & !is.na(pyamtw)) %>% group_by(gensci) %>%
   summarise(count=n(),freq_occ=(count/length(BSB_small$gensci)),weight=sum(pyamtw))
 
 
-S_weight<-BSB_small %>% filter(subunit =="Southern"& !gensci%in%c("EMPTY","","OTHER")) %>% group_by(gensci) %>% summarise(weight=sum(pyamtw))
-S_weight<- S_weight %>% mutate(perc_weight=weight/sum(weight)*100)  
+S_weight<-BSB_small %>% 
+  filter(subunit =="Southern"& !gensci%in%c("EMPTY","","OTHER")) %>%
+  group_by(gensci) %>% 
+  summarise(weight=sum(pyamtw))
+
+S_weight<- S_weight %>%
+  filter(weight>0)%>% 
+  mutate(perc_weight=weight/sum(weight)*100)  
 
 S_order<-S %>%  mutate(gensci=forcats::fct_reorder(gensci, (count)))
 
@@ -162,7 +295,7 @@ S1<-S %>%
         )+
    coord_flip()+
   xlab("Prey category")+
-  ylab("Frequency of occurrence")+
+  ylab("count")+
   nmfspalette::scale_fill_nmfs(palette = "regional web")
 
 S2<-S_weight %>%
@@ -188,6 +321,38 @@ ggpubr::annotate_figure(plot_S,top = ggpubr::text_grob("Southern area food habit
                color = "red", face = "bold", size = 14))
 
 ```
+
+
+```{r Frequency_occ, echo=FALSE, message=FALSE, warning=FALSE}
+#removing 
+t1<-BSB_small_ID %>% filter(year==1991)
+t2<-BSB_small_ID %>% filter(year==1992)
+t3<-BSB_small_ID %>% filter(year==2012)
+  
+t3 %>% filter(pdid==177479)
+  # group_by(year) %>%
+  # summarise(nstom=unique(pdid))
+  
+  
+  t4<-t3 %>% group_by(pdid) %>% summarise(count=n())
+  
+
+
+BSB_small_ID %>%
+  group_by(pynam) %>%
+  summarise(count=n())%>%
+  filter(count>10) %>%
+  mutate(pynam=forcats::fct_reorder(pynam, desc(count))) %>%
+  ggplot(aes(x=pynam, y=count))+geom_bar(stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90) )
+
+```
+
+
+
+
+
+
 
 ## NEAMAP
 
