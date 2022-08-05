@@ -1,7 +1,7 @@
 ---
 title: "BSB Oceanography"
 author: "Ricky Tabandera"
-date: "6/8/2022"
+date: "8/1/2022"
 output:
   pdf_document: default
   html_document: default
@@ -16,7 +16,7 @@ library(tidyverse)
 
 
 
-```{r Excel cleaning, include=FALSE}
+```{r Excel_cleaning, include=FALSE}
 
 # SHW_SMAB<-readxl::read_xlsx("~\\EDAB\\esp_data_aggregation\\black-sea-bass\\ShelfWaterVolume_BSB_update.xlsx",sheet =1)
 # SHW_NMAB<-readxl::read_xlsx("~\\EDAB\\esp_data_aggregation\\black-sea-bass\\ShelfWaterVolume_BSB_update.xlsx",sheet =2)
@@ -77,7 +77,7 @@ SHW_NMAB$year<-lubridate::year(SHW_NMAB$date_ymd)
 SHW_MAB$year<-lubridate::year(SHW_MAB$date_ymd)
 
 # limit to just winter months feb-mar as jan is irregularly avalible 
-#no december measurments
+#very few december measurments
                      
 SHW_SMAB<-SHW_SMAB %>%   mutate(season=dplyr::case_when(
   month <= 2 | month < 4 ~ "winter",
@@ -115,7 +115,102 @@ SHW_NMAB_fall <-SHW_NMAB %>% filter(season=="fall") %>% group_by(year) %>% summa
 
  SHW_MAB_fall <-SHW_MAB %>% filter(season=="fall") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom)) 
  
+#########
+ 
+#convert decimal year to date
+TSanom_WGOM$year_date<-lubridate::date_decimal(TSanom_WGOM$Year, tz = "UTC")
+#extract month
 
+TSanom_WGOM$month<-lubridate::month(TSanom_WGOM$year_date) 
+TSanom_WGOM$year<-lubridate::year(TSanom_WGOM$year_date)
+# limit to just winter months jan-mar
+#no december measurments
+                     
+TSanom_WGOM<-TSanom_WGOM %>%   mutate(season=dplyr::case_when(
+  month <= 3 ~ "winter",
+  month < 3 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  ))                    
+                         
+WGOM_winter_bot<-TSanom_WGOM %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
+#################### convert decimal date to month and classify to a season 
+
+
+#convert decimal year to date
+TSanom_WGB$year_date<-lubridate::date_decimal(TSanom_WGB$Year, tz = "UTC")
+#extract month
+
+TSanom_WGB$month<-lubridate::month(TSanom_WGB$year_date) 
+TSanom_WGB$year<-lubridate::year(TSanom_WGB$year_date)
+# limit to just winter months jan-mar
+#no december measurments
+                     
+TSanom_WGB<-TSanom_WGB %>%   mutate(season=dplyr::case_when(
+  month <= 3 ~ "winter",
+  month < 3 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  ))                    
+                         
+WGB_winter_bot<-TSanom_WGB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
+#convert decimal year to date
+TSanom_SMAB$year_date<-lubridate::date_decimal(TSanom_SMAB$Year, tz = "UTC")
+#extract month
+
+TSanom_SMAB$month<-lubridate::month(TSanom_SMAB$year_date) 
+TSanom_SMAB$year<-lubridate::year(TSanom_SMAB$year_date)
+# limit to just winter months jan-mar
+#no december measurments
+                     
+TSanom_SMAB<-TSanom_SMAB %>%   mutate(season=dplyr::case_when(
+  month <= 3 ~ "winter",
+  month < 3 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  ))                    
+                         
+SMAB_winter_bot<-TSanom_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
+#convert decimal year to date
+TSanom_NMAB$year_date<-lubridate::date_decimal(TSanom_NMAB$Year, tz = "UTC")
+#extract month
+
+TSanom_NMAB$month<-lubridate::month(TSanom_NMAB$year_date) 
+TSanom_NMAB$year<-lubridate::year(TSanom_NMAB$year_date)
+# limit to just winter months jan-mar
+#no december measurments
+                     
+TSanom_NMAB<-TSanom_NMAB %>%   mutate(season=dplyr::case_when(
+  month <= 3 ~ "winter",
+  month < 3 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  ))                   
+                         
+NMAB_winter_bot<-TSanom_NMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
+
+###########################
+#convert decimal year to date
+TSanom_MAB$year_date<-lubridate::date_decimal(TSanom_MAB$Year, tz = "UTC")
+#extract month
+TSanom_MAB$month<-lubridate::month(TSanom_MAB$year_date) 
+TSanom_MAB$year<-lubridate::year(TSanom_MAB$year_date)
+# limit to just winter months jan-mar
+#no december measurments
+                     
+TSanom_MAB<-TSanom_MAB %>%   mutate(season=dplyr::case_when(
+  month <= 3 ~ "winter",
+  month < 3 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  ))                    
+                         
+MAB_winter_bot<-TSanom_MAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+ 
 
 
 
@@ -129,7 +224,7 @@ SHW_NMAB_fall <-SHW_NMAB %>% filter(season=="fall") %>% group_by(year) %>% summa
 
 Shelf water volume which is a measure of the volume of water bounded inshore of a hydrodynamic feature called the shelf-slope front. In this analysis the shelf water is defined as all water having salinity <34. It is hypothesized that fish are migrating from the self edge and using the shelf slope font as a way-point. The position of this front will vary inter-annually with the higher values indicating the front being pushed further towards the shelf break. As this font moves closer or further from the coast, the available susceptible habitat can expand or contract as black sea bass are known to concentrate slope ward of the front. Miller et al. 2016 Identified a negative impact on catches of both juveniles and adult black sea bass when shelf water volume exceeded 4000 km^3
 
-```{r Shelf water volume, echo=FALSE, warning=FALSE}
+```{r Shelf water volume, eval=FALSE, warning=FALSE, include=FALSE}
 SHW_SMAB_plot<-SHW_SMAB %>% 
   ggplot2::ggplot()+
   geom_line(aes(x=Year, y=ShW.Vol), width = .51, color="black",fill="lightgrey")+
@@ -176,20 +271,14 @@ SHW_MAB_plot<-SHW_MAB %>%
   
 ```
 
-```{r, echo=FALSE}
+```{r SHW_PLOTS, eval=FALSE, include=FALSE}
 plot(SHW_SMAB_plot)
 plot(SHW_NMAB_plot)
 plot(SHW_MAB_plot)
 ```
 
-### Shelf water volume anomaly
-The anomaly is the excess volume above the seasonal and regional mean for each period. 
 
-
-```{r SWVanom, echo=FALSE, message=FALSE, warning=FALSE}
-
-
-
+```{r SWVanom, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
 SHW_SMAB_anom_plot<-SHW_SMAB %>% 
   ggplot2::ggplot()+
@@ -238,10 +327,52 @@ plot(SHW_MAB_anom_plot)
 ```
 
 
-## winter shelf water volume and anomaly
+## winter shelf water volume
 
 ```{r winter_shelf_water_vol_anom, echo=FALSE, message=FALSE, warning=FALSE}
 SHW_SMAB_winter_plot<-SHW_SMAB_winter %>% 
+  ggplot2::ggplot()+
+  geom_col(aes(x=year, y= mean_SHW , fill=mean_SHW_T ), width = .51, )+
+  geom_hline(yintercept = 0)+
+  ylab(expression(Winter~shelf~water~volume~km^{"3"}))+
+  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  scale_y_continuous(breaks = seq(0,3000, by= 500))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+  ggtitle("Southern Mid Atlantic Bight")+
+  labs(fill="Temperature (C)")
+
+SHW_NMAB_winter_plot<-SHW_NMAB_winter %>% 
+  ggplot2::ggplot()+
+  geom_col(aes(x=year, y= mean_SHW , fill=mean_SHW_T ), width = .51, )+
+  geom_hline(yintercept = 0)+
+  ylab(expression(Winter~shelf~water~volume~km^{"3"}))+
+  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  scale_y_continuous(breaks = seq(0,3000, by= 500))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+  ggtitle("Northern Mid Atlantic Bight")+
+  labs(fill="Temperature (C)")
+
+SHW_MAB_winter_plot<-SHW_SMAB_winter %>% 
+  ggplot2::ggplot()+
+  geom_col(aes(x=year, y= mean_SHW , fill=mean_SHW_T ), width = .51, )+
+  geom_hline(yintercept = 0)+
+  ylab(expression(Winter~shelf~water~volume~km^{"3"}))+
+  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  scale_y_continuous(breaks = seq(0,3000, by= 500))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))+
+  ggtitle("All Mid Atlantic Bight")+
+  labs(fill="Temperature (C)")
+
+##############
+
+
+SHW_anom_SMAB_winter_plot<-SHW_SMAB_winter %>% 
   ggplot2::ggplot()+
   geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
   geom_hline(yintercept = 0)+
@@ -254,7 +385,7 @@ SHW_SMAB_winter_plot<-SHW_SMAB_winter %>%
   ggtitle("Southern Mid Atlantic Bight")+
   labs(fill="Temperature (C)")
 
-SHW_NMAB_winter_plot<-SHW_NMAB_winter %>% 
+SHW_anom_NMAB_winter_plot<-SHW_NMAB_winter %>% 
   ggplot2::ggplot()+
   geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
   geom_hline(yintercept = 0)+
@@ -267,7 +398,7 @@ SHW_NMAB_winter_plot<-SHW_NMAB_winter %>%
   ggtitle("Northern Mid Atlantic Bight")+
   labs(fill="Temperature (C)")
 
-SHW_MAB_winter_plot<-SHW_SMAB_winter %>% 
+SHW_anom_MAB_winter_plot<-SHW_SMAB_winter %>% 
   ggplot2::ggplot()+
   geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
   geom_hline(yintercept = 0)+
@@ -284,13 +415,15 @@ plot(SHW_SMAB_winter_plot)
 plot(SHW_NMAB_winter_plot)
 plot(SHW_MAB_winter_plot)
 
+plot(SHW_anom_SMAB_winter_plot)
+plot(SHW_anom_NMAB_winter_plot)
+plot(SHW_anom_MAB_winter_plot)
+
 ```
 
-## Shelf water volume fall
 
-To replicate Millter et al. 2016 methods the previous fall shelf water volume was used in the GAM. 
 
-```{r fall_shelf_water_vol_anom, echo=FALSE, message=FALSE, warning=FALSE}
+```{r fall_shelf_water_vol_anom, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
 
 SHW_SMAB_fall_plot<-SHW_SMAB_fall %>% 
@@ -307,7 +440,7 @@ SHW_SMAB_fall_plot<-SHW_SMAB_fall %>%
   labs(fill="Temperature (C)")
 
 
-SHW_NMAB_fall_plot<-SHW_SMAB_fall %>% 
+SHW_NMAB_fall_plot<-SHW_NMAB_fall %>% 
   ggplot2::ggplot()+
   geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
   geom_hline(yintercept = 0)+
@@ -321,7 +454,7 @@ SHW_NMAB_fall_plot<-SHW_SMAB_fall %>%
   labs(fill="Temperature (C)")
 
 
-SHW_MAB_fall_plot<-SHW_SMAB_fall %>% 
+SHW_MAB_fall_plot<-SHW_MAB_fall %>% 
   ggplot2::ggplot()+
   geom_col(aes(x=year, y=mean_SHW_anom , fill=mean_SHW_T ), width = .51, )+
   geom_hline(yintercept = 0)+
@@ -342,187 +475,316 @@ plot(SHW_MAB_fall_plot)
 ```
 
 
-
-
-
-
-
-## Regional in-situ bottom temperature and salinity with anomaly
+## Regional in-situ winter bottom temperature and salinity with anomaly
 
 All available CTD data within 10m of the bottom between the northern and southern MAB region and as a whole. Regional time series were computed as follows: area-weighted regional mean values were computed for each survey in the OCDBS and a reference annual cycle was removed (fit to observations from 1981-2010) to get seasonal anomalies. 
 
 note: winter coverage is very sparse due to the winter ECOMON surveys ending. A better approach may to be to use a two month span at the end of winter where coverage is better i.e. FEB-MAR rather than a whole winter. 
 
 
-```{r regional_t_s_plots, echo=FALSE, message=FALSE, warning=FALSE}
+```{r regional_t_s_plots, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
-TSanom_WGOM_T_plot<-TSanom_WGOM %>% 
-  ggplot(aes(x=Year,y= `T` ))+
-  geom_point(color="red")+
-  geom_line()+
-  ylab("Mean temperature(C)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("Western Gulf of Maine")
+# TSanom_WGOM_T_plot<-TSanom_WGOM %>% 
+#   ggplot(aes(x=Year,y= `T` ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Western Gulf of Maine")
+# 
+# 
+# 
+# TSanom_WGOM_S_plot<-TSanom_WGOM %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Western Gulf of Maine")
+# 
+# #####################
+# 
+# TSanom_WGB_T_plot<-TSanom_WGB %>% 
+#   ggplot(aes(x=Year,y= `T` ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Western Georges Bank")
+# 
+# 
+# 
+# TSanom_WGB_S_plot<-TSanom_WGB %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Western Georges Bank")
+# 
+# 
+# 
+# #################
+# TSanom_SMAB_T_plot<-TSanom_SMAB %>% 
+#   ggplot(aes(x=Year,y= `T` ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Southern Mid Atlantic Bight")
+# 
+# 
+# 
+# TSanom_SMAB_S_plot<-TSanom_SMAB %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Southern Mid Atlantic Bight")
+# 
+# #######  
+# 
+# TSanom_NMAB_T_plot<-TSanom_NMAB %>% 
+#   ggplot(aes(x=Year,y= `T` ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Northern Mid Atlantic Bight")
+# 
+# 
+# 
+# TSanom_NMAB_S_plot<-TSanom_NMAB %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Northern Mid Atlantic Bight")
+#   
+# #############
+# 
+# 
+# TSanom_MAB_T_plot<-TSanom_MAB %>% 
+#   ggplot(aes(x=Year,y= `T` ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("All Mid Atlantic Bight")
+# 
+# 
+# 
+# TSanom_MAB_S_plot<-TSanom_MAB %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("All Mid Atlantic Bight")
+#   
+# plot(TSanom_WGOM_T_plot)
+# plot(TSanom_WGOM_S_plot)
+# 
+# plot(TSanom_WGB_T_plot)
+# plot(TSanom_WGB_S_plot)
+# 
+# 
+# plot(TSanom_SMAB_T_plot)
+# plot(TSanom_SMAB_S_plot)
+# 
+# plot(TSanom_NMAB_T_plot)
+# plot(TSanom_NMAB_S_plot)
+# 
+# plot(TSanom_MAB_T_plot)
+# plot(TSanom_MAB_S_plot)
 
+```
 
+```{r regional_t_s_anom_plots, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
-TSanom_WGOM_S_plot<-TSanom_WGOM %>% 
-  ggplot(aes(x=Year,y=as.numeric( `S` )))+
-  geom_point(color="blue")+
-  geom_line()+
-  ylab("Mean salinity (PSU)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("Western Gulf of Maine")
-
-#####################
-
-TSanom_WGB_T_plot<-TSanom_WGB %>% 
-  ggplot(aes(x=Year,y= `T` ))+
-  geom_point(color="red")+
-  geom_line()+
-  ylab("Mean temperature(C)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("Western Georges Bank")
-
-
-
-TSanom_WGB_S_plot<-TSanom_WGB %>% 
-  ggplot(aes(x=Year,y=as.numeric( `S` )))+
-  geom_point(color="blue")+
-  geom_line()+
-  ylab("Mean salinity (PSU)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("Western Georges Bank")
-
-
-
-#################
-TSanom_SMAB_T_plot<-TSanom_SMAB %>% 
-  ggplot(aes(x=Year,y= `T` ))+
-  geom_point(color="red")+
-  geom_line()+
-  ylab("Mean temperature(C)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("Southern Mid Atlantic Bight")
-
-
-
-TSanom_SMAB_S_plot<-TSanom_SMAB %>% 
-  ggplot(aes(x=Year,y=as.numeric( `S` )))+
-  geom_point(color="blue")+
-  geom_line()+
-  ylab("Mean salinity (PSU)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("Southern Mid Atlantic Bight")
-
-#######  
-
-TSanom_NMAB_T_plot<-TSanom_NMAB %>% 
-  ggplot(aes(x=Year,y= `T` ))+
-  geom_point(color="red")+
-  geom_line()+
-  ylab("Mean temperature(C)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("Northern Mid Atlantic Bight")
-
-
-
-TSanom_NMAB_S_plot<-TSanom_NMAB %>% 
-  ggplot(aes(x=Year,y=as.numeric( `S` )))+
-  geom_point(color="blue")+
-  geom_line()+
-  ylab("Mean salinity (PSU)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("Northern Mid Atlantic Bight")
-  
-#############
-
-
-TSanom_MAB_T_plot<-TSanom_MAB %>% 
-  ggplot(aes(x=Year,y= `T` ))+
-  geom_point(color="red")+
-  geom_line()+
-  ylab("Mean temperature(C)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("All Mid Atlantic Bight")
-
-
-
-TSanom_MAB_S_plot<-TSanom_MAB %>% 
-  ggplot(aes(x=Year,y=as.numeric( `S` )))+
-  geom_point(color="blue")+
-  geom_line()+
-  ylab("Mean salinity (PSU)")+
-    theme(axis.text.x = element_text(angle = 90),
-        panel.border= element_blank(),
-        panel.background= element_rect(fill = "white"))+
-   scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  ggtitle("All Mid Atlantic Bight")
-  
-plot(TSanom_WGOM_T_plot)
-plot(TSanom_WGOM_S_plot)
-
-plot(TSanom_WGB_T_plot)
-plot(TSanom_WGB_S_plot)
-
-
-plot(TSanom_SMAB_T_plot)
-plot(TSanom_SMAB_S_plot)
-
-plot(TSanom_NMAB_T_plot)
-plot(TSanom_NMAB_S_plot)
-
-plot(TSanom_MAB_T_plot)
-plot(TSanom_MAB_S_plot)
+# TSanom_WGOM_Tanom_plot<-TSanom_WGOM %>% 
+#   ggplot(aes(x=Year,y= (`T`-Annual.Avg.T) ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Western Gulf of Maine")
+# 
+# 
+# 
+# TSanom_WGOM_S_plot<-TSanom_WGOM %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Western Gulf of Maine")
+# 
+# #####################
+# 
+# TSanom_WGB_T_plot<-TSanom_WGB %>% 
+#   ggplot(aes(x=Year,y= `T` ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Western Georges Bank")
+# 
+# 
+# 
+# TSanom_WGB_S_plot<-TSanom_WGB %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Western Georges Bank")
+# 
+# 
+# 
+# #################
+# TSanom_SMAB_T_plot<-TSanom_SMAB %>% 
+#   ggplot(aes(x=Year,y= `T` ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Southern Mid Atlantic Bight")
+# 
+# 
+# 
+# TSanom_SMAB_S_plot<-TSanom_SMAB %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Southern Mid Atlantic Bight")
+# 
+# #######  
+# 
+# TSanom_NMAB_T_plot<-TSanom_NMAB %>% 
+#   ggplot(aes(x=Year,y= `T` ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Northern Mid Atlantic Bight")
+# 
+# 
+# 
+# TSanom_NMAB_S_plot<-TSanom_NMAB %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("Northern Mid Atlantic Bight")
+#   
+# #############
+# 
+# 
+# TSanom_MAB_T_plot<-TSanom_MAB %>% 
+#   ggplot(aes(x=Year,y= `T` ))+
+#   geom_point(color="red")+
+#   geom_line()+
+#   ylab("Mean temperature(C)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("All Mid Atlantic Bight")
+# 
+# 
+# 
+# TSanom_MAB_S_plot<-TSanom_MAB %>% 
+#   ggplot(aes(x=Year,y=as.numeric( `S` )))+
+#   geom_point(color="blue")+
+#   geom_line()+
+#   ylab("Mean salinity (PSU)")+
+#     theme(axis.text.x = element_text(angle = 90),
+#         panel.border= element_blank(),
+#         panel.background= element_rect(fill = "white"))+
+#    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+#   ggtitle("All Mid Atlantic Bight")
+#   
+# plot(TSanom_WGOM_T_plot) 
+# plot(TSanom_WGOM_S_plot)
+# 
+# plot(TSanom_WGB_T_plot)
+# plot(TSanom_WGB_S_plot)
+# 
+# 
+# plot(TSanom_SMAB_T_plot)
+# plot(TSanom_SMAB_S_plot)
+# 
+# plot(TSanom_NMAB_T_plot)
+# plot(TSanom_NMAB_S_plot)
+# 
+# plot(TSanom_MAB_T_plot)
+# plot(TSanom_MAB_S_plot)
 
 ```
 
 
 ```{r winter_bottom_temp_and_salinity, echo=FALSE, message=FALSE, warning=FALSE}
-#convert decimal year to date
-TSanom_WGOM$year_date<-lubridate::date_decimal(TSanom_WGOM$Year, tz = "UTC")
-#extract month
 
-TSanom_WGOM$month<-lubridate::month(TSanom_WGOM$year_date) 
-TSanom_WGOM$year<-lubridate::year(TSanom_WGOM$year_date)
-# limit to just winter months jan-mar
-#no december measurments
-                     
-TSanom_WGOM<-TSanom_WGOM %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
-  month < 6 | month <= 8 ~ "summer",
-  month <= 9 | month < 12 ~ "fall"
-  ))                    
-                         
-WGOM_winter_bot<-TSanom_WGOM %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
 
 WGOM_winter_bot_plot<-WGOM_winter_bot %>%
   ggplot(aes(x=year,y=mean_bot_T))+
@@ -535,24 +797,7 @@ WGOM_winter_bot_plot<-WGOM_winter_bot %>%
    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
   ggtitle("Western Gulf Of Maine")
 
-####################
-#convert decimal year to date
-TSanom_WGB$year_date<-lubridate::date_decimal(TSanom_WGB$Year, tz = "UTC")
-#extract month
-
-TSanom_WGB$month<-lubridate::month(TSanom_WGB$year_date) 
-TSanom_WGB$year<-lubridate::year(TSanom_WGB$year_date)
-# limit to just winter months jan-mar
-#no december measurments
-                     
-TSanom_WGB<-TSanom_WGB %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
-  month < 6 | month <= 8 ~ "summer",
-  month <= 9 | month < 12 ~ "fall"
-  ))                    
-                         
-WGB_winter_bot<-TSanom_WGB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+###############
 
 WGB_winter_bot_plot<-WGB_winter_bot %>%
   ggplot(aes(x=year,y=mean_bot_T))+
@@ -568,23 +813,7 @@ WGB_winter_bot_plot<-WGB_winter_bot %>%
 
 ####################
 
-#convert decimal year to date
-TSanom_SMAB$year_date<-lubridate::date_decimal(TSanom_SMAB$Year, tz = "UTC")
-#extract month
 
-TSanom_SMAB$month<-lubridate::month(TSanom_SMAB$year_date) 
-TSanom_SMAB$year<-lubridate::year(TSanom_SMAB$year_date)
-# limit to just winter months jan-mar
-#no december measurments
-                     
-TSanom_SMAB<-TSanom_SMAB %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
-  month < 6 | month <= 8 ~ "summer",
-  month <= 9 | month < 12 ~ "fall"
-  ))                    
-                         
-SMAB_winter_bot<-TSanom_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
 
 SMAB_winter_bot_plot<-SMAB_winter_bot %>%
   ggplot(aes(x=year,y=mean_bot_T))+
@@ -599,23 +828,7 @@ SMAB_winter_bot_plot<-SMAB_winter_bot %>%
 
 ##################################
 
-#convert decimal year to date
-TSanom_NMAB$year_date<-lubridate::date_decimal(TSanom_NMAB$Year, tz = "UTC")
-#extract month
 
-TSanom_NMAB$month<-lubridate::month(TSanom_NMAB$year_date) 
-TSanom_NMAB$year<-lubridate::year(TSanom_NMAB$year_date)
-# limit to just winter months jan-mar
-#no december measurments
-                     
-TSanom_NMAB<-TSanom_NMAB %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
-  month < 6 | month <= 8 ~ "summer",
-  month <= 9 | month < 12 ~ "fall"
-  ))                   
-                         
-NMAB_winter_bot<-TSanom_NMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
 
 NMAB_winter_bot_plot<-NMAB_winter_bot %>%
   ggplot(aes(x=year,y=mean_bot_T))+
@@ -628,24 +841,7 @@ NMAB_winter_bot_plot<-NMAB_winter_bot %>%
    scale_x_continuous(breaks = seq(1977,2021, by= 1))+
   ggtitle("Northern Mid Atlantic Bight")
 
-
-###########################
-#convert decimal year to date
-TSanom_MAB$year_date<-lubridate::date_decimal(TSanom_MAB$Year, tz = "UTC")
-#extract month
-TSanom_MAB$month<-lubridate::month(TSanom_MAB$year_date) 
-TSanom_MAB$year<-lubridate::year(TSanom_MAB$year_date)
-# limit to just winter months jan-mar
-#no december measurments
-                     
-TSanom_MAB<-TSanom_MAB %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
-  month < 6 | month <= 8 ~ "summer",
-  month <= 9 | month < 12 ~ "fall"
-  ))                    
-                         
-MAB_winter_bot<-TSanom_MAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+##############
 
 MAB_winter_bot_plot<-MAB_winter_bot %>%
   ggplot(aes(x=year,y=mean_bot_T))+
@@ -661,10 +857,7 @@ MAB_winter_bot_plot<-MAB_winter_bot %>%
 
 #########################
 
-#fall 
 
-
-##################
 plot(WGOM_winter_bot_plot)
 plot(WGB_winter_bot_plot)
 plot(SMAB_winter_bot_plot)
@@ -678,12 +871,64 @@ plot(MAB_winter_bot_plot)
 
 
 
+```{r cor_testing, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+
+  # ggplot()+
+  # geom_point(aes(x=Year,y= `T`*1000 ), color="red", data=TSanom_MAB)+
+  # geom_line(aes(x=Year, y= `T` *1000), data=TSanom_MAB)+
+  # geom_point(aes(x=Year,y= ShW.Vol ),color= "green", data=SHW_MAB)+
+  # geom_line(aes(x=Year,y= ShW.Vol ), data=SHW_MAB)+
+  # ylab("Mean temperature(C)")+
+  #   theme(axis.text.x = element_text(angle = 90),
+  #       panel.border= element_blank(),
+  #       panel.background= element_rect(fill = "white"))+
+  #  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
+  # ggtitle("All Mid Atlantic Bight")
+
+
+
+T_shw_MAB<-ccf(x = TSanom_MAB$T,y = SHW_MAB$ShW.Vol.anom)
+S_shw_SMAB<-ccf(x = TSanom_SMAB$S,y = SHW_SMAB$ShW.Vol, rm.)
+
+#use recrutment deviations for simple correlations 
 
 
 
 
+# z scale both vars
+#remove lines from plots
 
 
-## Winter available habitat 
+```
 
-Using a reanalysis product to get estimated available habitat during the winter months. These reanalysis products will use all insitu data and use physics to predict and interpolate over missing cells. With this tool we can expand the temporal scale of our bottom temperature and salinity questions. The main indicator of question relate to the amount of available habitat in winter. Proposed parameters for suitable habitat is >33 PSU and 8°C in FEB-MAR. The hypothesis is years with more available habitat will require shorter migration distances and result in lower mixing of the sub-units populations.
+## Gulf Stream Index
+The GSI is calculated based on the method presented by Pérez-Hernández and Joyce (2014). This gulf stream index is a position anomaly meaning the larger the value of the index the further north the northern wall of the Gulf Stream is for that year.
+
+
+```{r Gulf_stream_index, echo=FALSE}
+GSI<-ecodata::gsi
+
+GSI %>%
+  dplyr::mutate(Year = floor(Time)) %>%
+  dplyr::group_by(Year) %>%
+  dplyr::summarise(Value = mean(Value)) %>%
+  dplyr::mutate(hline = mean(Value)) %>%
+  ggplot(aes(x=Year, y=Value))+
+  ggplot2::geom_line() +
+  ggplot2::geom_point() +
+  ggplot2::ylab("Gulf Stream position anomaly") +
+  ggplot2::xlab(element_blank())+
+  ggplot2::ggtitle("Gulf Stream Index") +
+  ggplot2::scale_x_continuous(expand = c(0.01, 0.01),breaks = seq(1950,2021, by= 5))+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"))
+ 
+
+
+
+```
+
+
+
+
