@@ -101,7 +101,7 @@ SHW_MAB<-SHW_MAB %>%   mutate(season=dplyr::case_when(
 
 
 #summerize to mean winter for each variable of interest 
-SHW_SMAB_winter <-SHW_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom))
+SHW_SMAB_winter <-SHW_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom), ShW.T.anom)
                          
 SHW_NMAB_winter <-SHW_NMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom))
 
@@ -115,7 +115,14 @@ SHW_NMAB_fall <-SHW_NMAB %>% filter(season=="fall") %>% group_by(year) %>% summa
 
  SHW_MAB_fall <-SHW_MAB %>% filter(season=="fall") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom)) 
  
-#########
+######### calculate anomoly for bottom T and S
+ 
+
+TSanom_SMAB<-TSanom_SMAB %>% mutate(T_anom = T -Annual.Avg.T)
+TSanom_NMAB<-TSanom_NMAB %>% mutate(T_anom = T -Annual.Avg.T)
+
+ 
+ 
  
 #convert decimal year to date
 TSanom_WGOM$year_date<-lubridate::date_decimal(TSanom_WGOM$Year, tz = "UTC")
@@ -133,7 +140,7 @@ TSanom_WGOM<-TSanom_WGOM %>%   mutate(season=dplyr::case_when(
   month <= 9 | month < 12 ~ "fall"
   ))                    
                          
-WGOM_winter_bot<-TSanom_WGOM %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
 
 #################### convert decimal date to month and classify to a season 
 
@@ -154,7 +161,7 @@ TSanom_WGB<-TSanom_WGB %>%   mutate(season=dplyr::case_when(
   month <= 9 | month < 12 ~ "fall"
   ))                    
                          
-WGB_winter_bot<-TSanom_WGB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
 
 #convert decimal year to date
 TSanom_SMAB$year_date<-lubridate::date_decimal(TSanom_SMAB$Year, tz = "UTC")
@@ -172,7 +179,7 @@ TSanom_SMAB<-TSanom_SMAB %>%   mutate(season=dplyr::case_when(
   month <= 9 | month < 12 ~ "fall"
   ))                    
                          
-SMAB_winter_bot<-TSanom_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
 
 #convert decimal year to date
 TSanom_NMAB$year_date<-lubridate::date_decimal(TSanom_NMAB$Year, tz = "UTC")
@@ -190,7 +197,7 @@ TSanom_NMAB<-TSanom_NMAB %>%   mutate(season=dplyr::case_when(
   month <= 9 | month < 12 ~ "fall"
   ))                   
                          
-NMAB_winter_bot<-TSanom_NMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
 
 
 ###########################
@@ -208,7 +215,23 @@ TSanom_MAB<-TSanom_MAB %>%   mutate(season=dplyr::case_when(
   month < 6 | month <= 8 ~ "summer",
   month <= 9 | month < 12 ~ "fall"
   ))                    
-                         
+
+
+
+
+########################
+
+# calculate winter means and filter to only winter values
+
+
+WGOM_winter_bot<-TSanom_WGOM %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
+WGB_winter_bot<-TSanom_WGB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
+
+SMAB_winter_bot<-TSanom_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ),mean_bot_T_anom=mean(T_anom,na.rm=T) )
+
+NMAB_winter_bot<-TSanom_NMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ),mean_bot_T_anom=mean(T_anom,na.rm=T))
+
 MAB_winter_bot<-TSanom_MAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
  
 
@@ -868,39 +891,6 @@ plot(MAB_winter_bot_plot)
 ```
 
 
-
-
-
-```{r cor_testing, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-
-  # ggplot()+
-  # geom_point(aes(x=Year,y= `T`*1000 ), color="red", data=TSanom_MAB)+
-  # geom_line(aes(x=Year, y= `T` *1000), data=TSanom_MAB)+
-  # geom_point(aes(x=Year,y= ShW.Vol ),color= "green", data=SHW_MAB)+
-  # geom_line(aes(x=Year,y= ShW.Vol ), data=SHW_MAB)+
-  # ylab("Mean temperature(C)")+
-  #   theme(axis.text.x = element_text(angle = 90),
-  #       panel.border= element_blank(),
-  #       panel.background= element_rect(fill = "white"))+
-  #  scale_x_continuous(breaks = seq(1977,2021, by= 1))+
-  # ggtitle("All Mid Atlantic Bight")
-
-
-
-T_shw_MAB<-ccf(x = TSanom_MAB$T,y = SHW_MAB$ShW.Vol.anom)
-S_shw_SMAB<-ccf(x = TSanom_SMAB$S,y = SHW_SMAB$ShW.Vol, rm.)
-
-#use recrutment deviations for simple correlations 
-
-
-
-
-# z scale both vars
-#remove lines from plots
-
-
-```
-
 ## Gulf Stream Index
 The GSI is calculated based on the method presented by Pérez-Hernández and Joyce (2014). This gulf stream index is a position anomaly meaning the larger the value of the index the further north the northern wall of the Gulf Stream is for that year.
 
@@ -926,9 +916,222 @@ GSI %>%
  
 
 
+GSI_annual<-GSI %>%
+  dplyr::mutate(Year = floor(Time)) %>%
+  dplyr::group_by(Year) %>%
+  dplyr::summarise(Value = mean(Value)) %>%
+  dplyr::mutate(hline = mean(Value))
+
 
 ```
 
+
+```{r export_data, include=FALSE}
+
+# write.csv(SHW_SMAB_winter, file="SHW_SMAB_winter.csv")
+# write.csv(SHW_SMAB_winter, file="SHW_NMAB_winter.csv")
+# write.csv(SHW_SMAB_winter, file="SHW_MAB_winter.csv")
+# 
+# 
+# write.csv(NMAB_winter_bot, file="SMAB_winter_bot.csv")
+# write.csv(NMAB_winter_bot, file="NMAB_winter_bot.csv")
+# write.csv(NMAB_winter_bot, file="MAB_winter_bot.csv")
+# 
+# write.csv(GSI_annual, file = "GSI_annual.csv")
+
+
+```
+
+
+
+## Cross correlation testing
+
+Explorations into the association between bottom conditions and Black sea bass recruitment deviations. recruitment deviations from the 2021 operational assessment. This model output lacks 2020 data and thus 2019 is the terminal year. Bottom conditions are also limited to this time span. Temperature anomaly are used to avoid seasonal and annual patterns. The association is likely to occur with a time lag as current conditions would likely manifest in following years.  
+
+
+
+```{r cor_testing, message=FALSE, warning=FALSE, include=FALSE}
+# install.packages("astsa")
+# install.packages("TSstudio")
+# install.packages("timetk")
+# install.packages("forecast")
+
+
+
+# read in recruitment deveations from the 2021 opperational assesment. This model output lacks 2020 data and thus 2019 is the terminal year
+
+
+
+South_rec_dev<-read.csv("~//EDAB//esp_data_aggregation//black-sea-bass//South_rec_dev.csv")
+North_rec_dev<-read.csv("~//EDAB//esp_data_aggregation//black-sea-bass//North_rec_dev.csv")
+
+
+South_rec_dev$recruit_dev_Ln<-exp(South_rec_dev$log_recruit_devs)
+South_rec_dev$recruit_dev_log10<-(10^(South_rec_dev$log_recruit_devs))
+
+#limit bottom mesurments to align with the years with recruitment deveations
+# 1989-2019
+SMAB_winter_bot_89<-SMAB_winter_bot %>% filter(year %in% (1989:2019))
+NMAB_winter_bot_89<-NMAB_winter_bot %>% filter(year %in% (1989:2019))
+
+
+
+S_rec_temp<-dplyr::full_join (South_rec_dev,SMAB_winter_bot_89, by="year")
+N_rec_temp<-dplyr::full_join (North_rec_dev,NMAB_winter_bot_89, by="year")
+
+
+
+
+# 
+# south_join<-dplyr::full_join(South_rec_dev,SMAB_winter_bot_89, by="year")
+# 
+# south_ts<-ts(data = south_join[, c("log_recruit_devs", "mean_bot_T_anom")], # selecting 2 variables
+#    start = c(1989, 01), # start date
+#    end = c(2019, 12), # end date 
+#    frequency = 1)
+# 
+# south_rec_ts<-ts(data = south_join[, c("log_recruit_devs")], # selecting 2 variables
+#    start = c(1989), # start date
+#    end = c(2019), # end date 
+#    frequency = 1)
+# 
+# south_T_anom_ts<-ts(data = south_join[, c("mean_bot_T_anom")], # selecting 2 variables
+#    start = c(1989), # start date
+#    end = c(2019), # end date 
+#    frequency = 1)
+
+
+
+# south_join<-south_join %>% mutate(T_lag1=lag(mean_bot_T_anom,order_by = year), T_lag2=lag(T_lag1,order_by = year),T_lag3=lag(T_lag2,order_by = year),T_lag4=lag(T_lag3,order_by = year))
+# 
+# 
+# 
+# south_join %>% ggplot(aes(x=log_recruit_devs, y=T_lag1))+geom_point()+geom_smooth()
+
+#use recrutment deviations for simple correlations 
+
+
+
+
+# z scale both vars
+#remove lines from plots
+
+
+```
+
+
+### southern MAB ccf 
+Peak correlation occurs at a lag of 2 years. This could be and artifact due to how calendar year is in winter conditions   
+
+```{r southern_mab_ccf, echo=FALSE, message=FALSE, warning=FALSE}
+
+#ccf(South_rec_dev$log_recruit_devs,SMAB_winter_bot_89$mean_bot_T_anom)
+
+s_ccf_log<-ccf(South_rec_dev$log_recruit_devs,SMAB_winter_bot_89$mean_bot_T_anom, plot = F)
+s_x<-c(-11:11)
+s_y<-c(s_ccf_log$acf)
+
+
+s_ccf_log_tidy<-as.data.frame(cbind(s_x,s_y))
+
+s_ccf_plot<-s_ccf_log_tidy %>% 
+  ggplot(aes(x=s_x,y=s_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Log recruitment deviations & winter bottom temperature anomaly", subtitle = "Southern MAB")+
+  theme_minimal()
+
+
+print(s_ccf_plot)
+
+```
+
+ ### Northern MAB CCF
+ 
+ Peak correlation occurs with a 1 year lag.
+ 
+```{r Northern_mab_ccf, echo=FALSE, message=FALSE, warning=FALSE}
+
+# ccf(North_rec_dev$log_recruit_devs,NMAB_winter_bot_89$mean_bot_T_anom)
+
+N_ccf_log<-ccf(North_rec_dev$log_recruit_devs,NMAB_winter_bot_89$mean_bot_T_anom, plot = F)
+N_x<-c(-11:11)
+N_y<-c(N_ccf_log$acf)
+
+
+N_ccf_log_tidy<-as.data.frame(cbind(N_x,N_y))
+
+N_ccf_plot<-N_ccf_log_tidy %>% 
+  ggplot(aes(x=N_x,y=N_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Log recruitment deviations & winter bottom temperature anomaly", subtitle = "Northern MAB")+
+  theme_minimal()
+
+
+print(N_ccf_plot)
+
+```
+### Gulf stream wall index
+
+Differing patterns in association is observed across the north vs south. Northern MAB has -3 and -7 lags, while Southern MAB has no significant time lags that correlate with recruitment deviations.  
+
+
+```{r GSI_CCF, message=FALSE, warning=FALSE, include=FALSE}
+
+GSI_89<-GSI_annual %>% filter(Year %in% c(1989:2019))
+#north
+
+# ccf(North_rec_dev$log_recruit_devs,GSI_89$Value)
+# 
+# ccf(South_rec_dev$log_recruit_devs,GSI_89$Value)
+
+
+N_GSI_ccf_log<-ccf(North_rec_dev$log_recruit_devs,GSI_89$Value, plot = F)
+S_GSI_ccf_log<-ccf(South_rec_dev$log_recruit_devs,GSI_89$Value, plot = F)
+
+N_GSI_x<-c(-11:11)
+S_GSI_x<-c(-11:11)
+
+N_GSI_y<-c(N_GSI_ccf_log$acf)
+S_GSI_y<-c(S_GSI_ccf_log$acf)
+
+N_GSI_ccf_log_tidy<-as.data.frame(cbind(N_GSI_x,N_GSI_y))
+S_GSI_ccf_log_tidy<-as.data.frame(cbind(S_GSI_x,S_GSI_y))
+
+
+
+
+N_GSI_ccf_plot<-N_GSI_ccf_log_tidy %>% 
+  ggplot(aes(x=N_GSI_x,y=N_GSI_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Log recruitment deviations & Gulf stream wall index", subtitle = "Northern MAB")+
+  theme_minimal()
+
+
+S_GSI_ccf_plot<-S_GSI_ccf_log_tidy %>% 
+  ggplot(aes(x=S_GSI_x,y=S_GSI_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Log recruitment deviations & Gulf stream wall index", subtitle = "Southern MAB")+
+  theme_minimal()
+
+print(N_GSI_ccf_plot)
+print(S_GSI_ccf_plot)
+
+
+
+
+```
 
 
 

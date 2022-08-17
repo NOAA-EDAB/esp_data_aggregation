@@ -51,11 +51,11 @@ BSB_allfh<- allfh %>% filter(svspp=="141"  )
 #select only used variables PYPERI
 BSB_small<-BSB_allfh %>% select(c(pynam, gencat, gensci, analcat,  analsci, 
                                   pyamtw,pywgti,pdid, pdlen,pdsex, pdwgt,pynum, 
-                                  geoarea,
-                                  stratum, surftemp, bottemp, season,month, day, year,decade ,cruise6,tow))
+                                  geoarea,station,stratum, surftemp, bottemp,
+                                  season,month, day, year,decade ,cruise6,tow))
 
 #remove SAB as contains only ~20 records
-BSB_small<-BSB_small %>% filter(!geoarea=="SAB" )
+BSB_small<-BSB_small %>% filter(!geoarea=="SAB")
 
 
 
@@ -88,7 +88,9 @@ NEFSC bottom trawl survey food habits contain a fraction of fish collected in a 
 ```{r}
 #create a new index of indevidual bsb as pdid appears to not be reliable at IDing fish early in the dataset
 #strata cruise tow station pdid ==== to make key
-t1<- BSB_small %>% unite("ID",c(month, day, year,cruise6, pdlen,tow),remove =FALSE)
+t11<- BSB_small %>% unite("ID",c(month, day, year,stratum,cruise6, tow, station, pdid),remove =FALSE)
+t12<-t11 %>% filter(!analsci=="BLOWN")
+t1<- BSB_small %>% unite("ID",c(cruise6, pdid,tow,stratum,station),remove =FALSE)
 #generate counts of each prey catagory by year and subunit
 t2<-t1 %>% group_by(decade,subunit, analsci ) %>% summarise(count=n())
 #count each identified predator for each subunit and year
@@ -96,7 +98,7 @@ t3<-t1 %>% group_by(decade,subunit) %>% summarise(pd_count=length(unique(ID)))
 #join the above counts to get frequency of occurance in stomachs by region and decade
 t4<-dplyr::full_join( t2,t3, by= c("decade","subunit"))
 
-t4<-t4 %>% mutate(freq_o=count/pd_count)
+t4<-t4 %>% mutate(freq_o=(count/pd_count))
 
 
 
@@ -350,6 +352,11 @@ BSB_small_ID %>%
 
 
 
+```{r}
+
+BSB_small_ID %>%
+
+```
 
 
 
@@ -392,4 +399,14 @@ CHESAMAP_2022 %>%
 
 ```
 
+
+```{r Diet diversity, echo=FALSE, message=FALSE, warning=FALSE}
+
+BSB_small_ID %>% group_by()
+
+
+
+
+
+```
 
