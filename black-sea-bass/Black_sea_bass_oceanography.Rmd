@@ -1,7 +1,7 @@
 ---
 title: "BSB Oceanography"
 author: "Ricky Tabandera"
-date: "8/1/2022"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   pdf_document: default
   html_document: default
@@ -946,7 +946,7 @@ GSI_annual<-GSI %>%
 
 ## Cross correlation testing
 
-Explorations into the association between bottom conditions and Black sea bass recruitment deviations. recruitment deviations from the 2021 operational assessment. This model output lacks 2020 data and thus 2019 is the terminal year. Bottom conditions are also limited to this time span. Temperature anomaly are used to avoid seasonal and annual patterns. The association is likely to occur with a time lag as current conditions would likely manifest in following years.  
+Explorations into the association between bottom conditions and Black sea bass recruitment deviations. recruitment deviations from the 2021 operational assessment. This model output lacks 2020 data and thus 2019 is the terminal year. Bottom conditions are also limited to this time span. Temperature anomaly are used to avoid seasonal and annual patterns. The association is likely to occur with a time lag as current conditions would likely manifest in following years. Horizontal line indicates significant cross correlation   
 
 
 
@@ -1044,11 +1044,11 @@ s_ccf_plot<-s_ccf_log_tidy %>%
   theme_minimal()
 
 
-print(s_ccf_plot)
+plot(s_ccf_plot)
 
 ```
 
- ### Northern MAB CCF
+### Northern MAB CCF
  
  Peak correlation occurs with a 1 year lag.
  
@@ -1073,15 +1073,16 @@ N_ccf_plot<-N_ccf_log_tidy %>%
   theme_minimal()
 
 
-print(N_ccf_plot)
+plot(N_ccf_plot)
 
 ```
-### Gulf stream wall index
+
+### Gulf stream wall index CCF
 
 Differing patterns in association is observed across the north vs south. Northern MAB has -3 and -7 lags, while Southern MAB has no significant time lags that correlate with recruitment deviations.  
 
 
-```{r GSI_CCF, message=FALSE, warning=FALSE, include=FALSE}
+```{r GSI_CCF, echo=FALSE, message=FALSE, warning=FALSE}
 
 GSI_89<-GSI_annual %>% filter(Year %in% c(1989:2019))
 #north
@@ -1125,8 +1126,8 @@ S_GSI_ccf_plot<-S_GSI_ccf_log_tidy %>%
   ggtitle("Log recruitment deviations & Gulf stream wall index", subtitle = "Southern MAB")+
   theme_minimal()
 
-print(N_GSI_ccf_plot)
-print(S_GSI_ccf_plot)
+plot(N_GSI_ccf_plot)
+plot(S_GSI_ccf_plot)
 
 
 
