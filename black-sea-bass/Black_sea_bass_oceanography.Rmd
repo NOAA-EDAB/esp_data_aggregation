@@ -78,27 +78,82 @@ SHW_MAB$year<-lubridate::year(SHW_MAB$date_ymd)
 
 # limit to just winter months feb-mar as jan is irregularly avalible 
 #very few december measurments
+
+SHW_SMAB<-SHW_SMAB %>%
+  mutate(season=dplyr::case_when(
+  month == 1 ~ "NA",
+  month == 2 | month == 3 ~ "winter",
+  month <= 4 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  )
+  ) %>%
+  
+  mutate(quarter=dplyr::case_when(
+  month == 1 | month == 2 | month == 3 ~ "Q1",
+  month == 4 | month == 5 | month == 6 ~ "Q2",
+  month == 7 | month == 8 | month == 9 ~ "Q3",
+  month == 10 | month == 11 | month == 12 ~ "Q4",
+  )
+  ) 
+
+
+
                      
-SHW_SMAB<-SHW_SMAB %>%   mutate(season=dplyr::case_when(
-  month <= 2 | month < 4 ~ "winter",
-  month < 4 | month < 6 ~ "spring",
+SHW_SMAB<-SHW_SMAB %>% 
+  mutate(season=dplyr::case_when(
+  month == 1 ~ "NA",
+  month == 2 | month == 3 ~ "winter",
+  month <= 4 | month < 6 ~ "spring",
   month < 6 | month <= 8 ~ "summer",
   month <= 9 | month < 12 ~ "fall"
-  ))     
+  )
+  ) %>%
+  
+  mutate(quarter=dplyr::case_when(
+  month == 1 | month == 2 | month == 3 ~ "Q1",
+  month == 4 | month == 5 | month == 6 ~ "Q2",
+  month == 7 | month == 8 | month == 9 ~ "Q3",
+  month == 10 | month == 11 | month == 12 ~ "Q4",
+  )
+  )    
 
-SHW_NMAB<-SHW_NMAB %>%   mutate(season=dplyr::case_when(
-  month <= 2 | month < 4 ~ "winter",
-  month < 4 | month < 6 ~ "spring",
+SHW_NMAB<-SHW_NMAB %>%  
+    mutate(season=dplyr::case_when(
+  month == 1 ~ "NA",
+  month == 2 | month == 3 ~ "winter",
+  month <= 4 | month < 6 ~ "spring",
   month < 6 | month <= 8 ~ "summer",
   month <= 9 | month < 12 ~ "fall"
-  )) 
-SHW_MAB<-SHW_MAB %>%   mutate(season=dplyr::case_when(
-  month <= 2 | month < 4 ~ "winter",
-  month < 4 | month < 6 ~ "spring",
-  month < 6 | month <= 8 ~ "summer",
-  month <= 9 | month < 12 ~ "fall"
-  )) 
+  )
+  ) %>%
+  
+  mutate(quarter=dplyr::case_when(
+  month == 1 | month == 2 | month == 3 ~ "Q1",
+  month == 4 | month == 5 | month == 6 ~ "Q2",
+  month == 7 | month == 8 | month == 9 ~ "Q3",
+  month == 10 | month == 11 | month == 12 ~ "Q4",
+  )
+  )
 
+
+SHW_MAB<-SHW_MAB %>% 
+    mutate(season=dplyr::case_when(
+  month == 1 ~ "NA",
+  month == 2 | month == 3 ~ "winter",
+  month <= 4 | month < 6 ~ "spring",
+  month < 6 | month <= 8 ~ "summer",
+  month <= 9 | month < 12 ~ "fall"
+  )
+  ) %>%
+  
+  mutate(quarter=dplyr::case_when(
+  month == 1 | month == 2 | month == 3 ~ "Q1",
+  month == 4 | month == 5 | month == 6 ~ "Q2",
+  month == 7 | month == 8 | month == 9 ~ "Q3",
+  month == 10 | month == 11 | month == 12 ~ "Q4",
+  )
+  )
 
 #summerize to mean winter for each variable of interest 
 SHW_SMAB_winter <-SHW_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_SHW=mean(ShW.Vol,na.rm=T ),mean_SHW_anom=mean(ShW.Vol.anom,na.rm=T ), mean_SHW_T=mean(ShW.T,na.rm=T),mean_SHW_T_anom=mean( ShW.T.anom), ShW.T.anom)
@@ -118,8 +173,10 @@ SHW_NMAB_fall <-SHW_NMAB %>% filter(season=="fall") %>% group_by(year) %>% summa
 ######### calculate anomoly for bottom T and S
  
 
-TSanom_SMAB<-TSanom_SMAB %>% mutate(T_anom = T -Annual.Avg.T)
-TSanom_NMAB<-TSanom_NMAB %>% mutate(T_anom = T -Annual.Avg.T)
+TSanom_SMAB<-TSanom_SMAB %>% mutate(T_anom = (T -Annual.Avg.T),S_anom = S -Annual.Avg.S)
+TSanom_NMAB<-TSanom_NMAB %>% mutate(T_anom = (T -Annual.Avg.T),S_anom = S -Annual.Avg.S)
+
+
 
  
  
@@ -133,12 +190,23 @@ TSanom_WGOM$year<-lubridate::year(TSanom_WGOM$year_date)
 # limit to just winter months jan-mar
 #no december measurments
                      
-TSanom_WGOM<-TSanom_WGOM %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
+TSanom_WGOM<-TSanom_WGOM %>%  
+    mutate(season=dplyr::case_when(
+  month == 1 ~ "NA",
+  month == 2 | month == 3 ~ "winter",
+  month <= 4 | month < 6 ~ "spring",
   month < 6 | month <= 8 ~ "summer",
   month <= 9 | month < 12 ~ "fall"
-  ))                    
+  )
+  ) %>%
+  
+  mutate(quarter=dplyr::case_when(
+  month == 1 | month == 2 | month == 3 ~ "Q1",
+  month == 4 | month == 5 | month == 6 ~ "Q2",
+  month == 7 | month == 8 | month == 9 ~ "Q3",
+  month == 10 | month == 11 | month == 12 ~ "Q4",
+  )
+  )
                          
 
 
@@ -154,12 +222,23 @@ TSanom_WGB$year<-lubridate::year(TSanom_WGB$year_date)
 # limit to just winter months jan-mar
 #no december measurments
                      
-TSanom_WGB<-TSanom_WGB %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
+TSanom_WGB<-TSanom_WGB %>% 
+    mutate(season=dplyr::case_when(
+  month == 1 ~ "NA",
+  month == 2 | month == 3 ~ "winter",
+  month <= 4 | month < 6 ~ "spring",
   month < 6 | month <= 8 ~ "summer",
   month <= 9 | month < 12 ~ "fall"
-  ))                    
+  )
+  ) %>%
+  
+  mutate(quarter=dplyr::case_when(
+  month == 1 | month == 2 | month == 3 ~ "Q1",
+  month == 4 | month == 5 | month == 6 ~ "Q2",
+  month == 7 | month == 8 | month == 9 ~ "Q3",
+  month == 10 | month == 11 | month == 12 ~ "Q4",
+  )
+  )
                          
 
 
@@ -172,13 +251,23 @@ TSanom_SMAB$year<-lubridate::year(TSanom_SMAB$year_date)
 # limit to just winter months jan-mar
 #no december measurments
                      
-TSanom_SMAB<-TSanom_SMAB %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
+TSanom_SMAB<-TSanom_SMAB %>%   
+    mutate(season=dplyr::case_when(
+  month == 1 ~ "NA",
+  month == 2 | month == 3 ~ "winter",
+  month <= 4 | month < 6 ~ "spring",
   month < 6 | month <= 8 ~ "summer",
   month <= 9 | month < 12 ~ "fall"
-  ))                    
-                         
+  )
+  ) %>%
+  
+  mutate(quarter=dplyr::case_when(
+  month == 1 | month == 2 | month == 3 ~ "Q1",
+  month == 4 | month == 5 | month == 6 ~ "Q2",
+  month == 7 | month == 8 | month == 9 ~ "Q3",
+  month == 10 | month == 11 | month == 12 ~ "Q4",
+  )
+  )
 
 
 #convert decimal year to date
@@ -190,12 +279,23 @@ TSanom_NMAB$year<-lubridate::year(TSanom_NMAB$year_date)
 # limit to just winter months jan-mar
 #no december measurments
                      
-TSanom_NMAB<-TSanom_NMAB %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
+TSanom_NMAB<-TSanom_NMAB %>% 
+  mutate(season=dplyr::case_when(
+  month == 1 ~ "NA",
+  month == 2 | month == 3 ~ "winter",
+  month <= 4 | month < 6 ~ "spring",
   month < 6 | month <= 8 ~ "summer",
   month <= 9 | month < 12 ~ "fall"
-  ))                   
+  )
+  ) %>%
+  
+  mutate(quarter=dplyr::case_when(
+  month == 1 | month == 2 | month == 3 ~ "Q1",
+  month == 4 | month == 5 | month == 6 ~ "Q2",
+  month == 7 | month == 8 | month == 9 ~ "Q3",
+  month == 10 | month == 11 | month == 12 ~ "Q4",
+  )
+  )                   
                          
 
 
@@ -209,12 +309,23 @@ TSanom_MAB$year<-lubridate::year(TSanom_MAB$year_date)
 # limit to just winter months jan-mar
 #no december measurments
                      
-TSanom_MAB<-TSanom_MAB %>%   mutate(season=dplyr::case_when(
-  month <= 3 ~ "winter",
-  month < 3 | month < 6 ~ "spring",
+TSanom_MAB<-TSanom_MAB %>% 
+  mutate(season=dplyr::case_when(
+  month == 1 ~ "NA",
+  month == 2 | month == 3 ~ "winter",
+  month <= 4 | month < 6 ~ "spring",
   month < 6 | month <= 8 ~ "summer",
   month <= 9 | month < 12 ~ "fall"
-  ))                    
+  )
+  ) %>%
+  
+  mutate(quarter=dplyr::case_when(
+  month == 1 | month == 2 | month == 3 ~ "Q1",
+  month == 4 | month == 5 | month == 6 ~ "Q2",
+  month == 7 | month == 8 | month == 9 ~ "Q3",
+  month == 10 | month == 11 | month == 12 ~ "Q4",
+  )
+  )
 
 
 
@@ -228,9 +339,9 @@ WGOM_winter_bot<-TSanom_WGOM %>% filter(season=="winter") %>% group_by(year) %>%
 
 WGB_winter_bot<-TSanom_WGB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
 
-SMAB_winter_bot<-TSanom_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ),mean_bot_T_anom=mean(T_anom,na.rm=T) )
+SMAB_winter_bot<-TSanom_SMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ),mean_bot_T_anom=mean(T_anom,na.rm=T), mean_bot_S_anom=mean(S_anom,na.rm=T ) )
 
-NMAB_winter_bot<-TSanom_NMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ),mean_bot_T_anom=mean(T_anom,na.rm=T))
+NMAB_winter_bot<-TSanom_NMAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ),mean_bot_T_anom=mean(T_anom,na.rm=T), mean_bot_S_anom=mean(S_anom,na.rm=T ))
 
 MAB_winter_bot<-TSanom_MAB %>% filter(season=="winter") %>% group_by(year) %>% summarise(mean_bot_T=mean(T,na.rm=T ),mean_bot_S=mean(S,na.rm=T ))
  
@@ -891,6 +1002,7 @@ plot(MAB_winter_bot_plot)
 ```
 
 
+
 ## Gulf Stream Index
 The GSI is calculated based on the method presented by Pérez-Hernández and Joyce (2014). This gulf stream index is a position anomaly meaning the larger the value of the index the further north the northern wall of the Gulf Stream is for that year.
 
@@ -971,6 +1083,7 @@ South_rec_dev$recruit_dev_log10<-(10^(South_rec_dev$log_recruit_devs))
 
 #limit bottom mesurments to align with the years with recruitment deveations
 # 1989-2019
+
 SMAB_winter_bot_89<-SMAB_winter_bot %>% filter(year %in% (1989:2019))
 NMAB_winter_bot_89<-NMAB_winter_bot %>% filter(year %in% (1989:2019))
 
@@ -982,71 +1095,412 @@ N_rec_temp<-dplyr::full_join (North_rec_dev,NMAB_winter_bot_89, by="year")
 
 
 
-# 
-# south_join<-dplyr::full_join(South_rec_dev,SMAB_winter_bot_89, by="year")
-# 
-# south_ts<-ts(data = south_join[, c("log_recruit_devs", "mean_bot_T_anom")], # selecting 2 variables
-#    start = c(1989, 01), # start date
-#    end = c(2019, 12), # end date 
-#    frequency = 1)
-# 
-# south_rec_ts<-ts(data = south_join[, c("log_recruit_devs")], # selecting 2 variables
-#    start = c(1989), # start date
-#    end = c(2019), # end date 
-#    frequency = 1)
-# 
-# south_T_anom_ts<-ts(data = south_join[, c("mean_bot_T_anom")], # selecting 2 variables
-#    start = c(1989), # start date
-#    end = c(2019), # end date 
-#    frequency = 1)
-
-
-
-# south_join<-south_join %>% mutate(T_lag1=lag(mean_bot_T_anom,order_by = year), T_lag2=lag(T_lag1,order_by = year),T_lag3=lag(T_lag2,order_by = year),T_lag4=lag(T_lag3,order_by = year))
-# 
-# 
-# 
-# south_join %>% ggplot(aes(x=log_recruit_devs, y=T_lag1))+geom_point()+geom_smooth()
-
-#use recrutment deviations for simple correlations 
-
-
-
-
-# z scale both vars
-#remove lines from plots
-
-
 ```
 
 
-### southern MAB ccf 
-Peak correlation occurs at a lag of 2 years. This could be and artifact due to how calendar year is in winter conditions   
+```{r Time series vis, echo=FALSE, message=FALSE, warning=FALSE}
 
-```{r southern_mab_ccf, echo=FALSE, message=FALSE, warning=FALSE}
+S_rec_plot<-S_rec_temp %>% ggplot(aes(x= year,y=log_recruit_devs))+
+  geom_point(size=2)+
+  xlab("Year")+
+  ylab("Log recruitment deviation")+
+  ggtitle("Log recruitment deviations",subtitle = "Southern MAB")+
+  theme_minimal()
 
-#ccf(South_rec_dev$log_recruit_devs,SMAB_winter_bot_89$mean_bot_T_anom)
+N_rec_plot<-N_rec_temp %>% ggplot(aes(x= year,y=log_recruit_devs))+
+  geom_point(size=2)+
+  xlab("Year")+
+  ylab("Log recruitment deviation")+
+  ggtitle("Log recruitment deviations",subtitle = "Northern MAB")+
+  theme_minimal()
 
-s_ccf_log<-ccf(South_rec_dev$log_recruit_devs,SMAB_winter_bot_89$mean_bot_T_anom, plot = F)
-s_x<-c(-11:11)
-s_y<-c(s_ccf_log$acf)
+rec_plot<-ggpubr::ggarrange(S_rec_plot,N_rec_plot, nrow = 2,ncol = 1)
 
+S_temp_ts_plot<-S_rec_temp %>% ggplot(aes(x=year, y=mean_bot_T_anom))+
+  geom_point(size=2)+
+  xlab("Year")+
+  ylab("Temperature anomaly")+
+  ggtitle("Winter bottom",subtitle = "Southern MAB")+
+  theme_minimal()
 
-s_ccf_log_tidy<-as.data.frame(cbind(s_x,s_y))
-
-s_ccf_plot<-s_ccf_log_tidy %>% 
-  ggplot(aes(x=s_x,y=s_y))+
-  geom_col(width = .1)+
-  geom_hline(yintercept = c(.35))+
-  xlab("Lag")+
-  ylab("ACF")+
-  ggtitle("Log recruitment deviations & winter bottom temperature anomaly", subtitle = "Southern MAB")+
+N_temp_ts_plot<-N_rec_temp %>% ggplot(aes(x=year, y=mean_bot_T_anom))+
+  geom_point(size=2)+
+  xlab("Year")+
+  ylab("Temperature anomaly")+
+  ggtitle("Winter bottom",subtitle = "Northern MAB")+
   theme_minimal()
 
 
-plot(s_ccf_plot)
+temp_ts_plot<-ggpubr::ggarrange(S_temp_ts_plot,N_temp_ts_plot, nrow = 2,ncol = 1)
+
+
+plot(rec_plot)
+
+  
+
+
 
 ```
+
+
+```{r temp_plots, echo=FALSE}
+plot(temp_ts_plot)
+```
+
+
+### Pearsons correlations
+
+Associations between model estimates of recruitment and environmental indicators is tested using Pearsons correlations. Mean winter bottom temperature is signifcantly correlated within year estimates of recruitment in both regions  (South. P-value = 0.012, t = 2.69, r=0.467; North, P-value = 0.013, t = 2.68, r= 0.480). No signifcant associations were found for lags of one or two years in mean bottom temperatures across regions. Temperature anomalys display a similar significance level and mangitude of associaiton to in-situ temperature values.
+
+```{r Simple_correlation, echo=FALSE, message=FALSE, warning=FALSE}
+
+#Join recrutment and bottom measurments by year for both regions
+South_rec_join<-dplyr::left_join(South_rec_dev,SMAB_winter_bot,by="year")
+
+North_rec_join<-dplyr::left_join(North_rec_dev,NMAB_winter_bot,by="year")
+
+#used to test with funtions sensitive to NAs
+S_rec_c<-South_rec_join %>%  na.omit()
+
+N_rec_c<-North_rec_join %>%  na.omit()
+
+# lag recruitment by suspected 1 or 2 year increments to check for differences in correlations 
+
+South_rec_join$T_lag1<-dplyr::lag(South_rec_join$mean_bot_T,1)
+South_rec_join$T_lag2<-dplyr::lag(South_rec_join$mean_bot_T,2)
+
+North_rec_join$T_lag1<-dplyr::lag(North_rec_join$mean_bot_T,1)
+North_rec_join$T_lag2<-dplyr::lag(North_rec_join$mean_bot_T,2)
+
+
+# lag temperature anomaly to check if it improves or changes association
+South_rec_join$T_A_lag1<-dplyr::lag(South_rec_join$mean_bot_T_anom,1)
+South_rec_join$T_A_lag2<-dplyr::lag(South_rec_join$mean_bot_T_anom,2)
+
+North_rec_join$T_A_lag1<-dplyr::lag(North_rec_join$mean_bot_T_anom,1)
+North_rec_join$T_A_lag2<-dplyr::lag(North_rec_join$mean_bot_T_anom,2)
+
+# correlation test within year
+
+South_rec_cor<-South_rec_join %>%  with(cor.test(mean_bot_T, log_recruit_devs, method=c("pearson")))
+#significant P= 0.012, r= 0.467
+
+#correlation test with temperature lagged by 1 year I.E  2000 recruitment as a result of 1999 winter
+South_rec_cor_lag1<-South_rec_join %>%  with(cor.test(T_lag1, log_recruit_devs, method=c("pearson")))
+#non significant and low r estimate
+
+
+# correlation test with temperature lagged by 2 year I.E  2000 recruitment as a result of 1998 winter 
+South_rec_cor_lag2<-South_rec_join %>%  with(cor.test(T_lag2, log_recruit_devs, method=c("pearson")))
+# non-significant and negitive r value
+
+
+# correlation test with temperature anomaly display near identical pattern of within year correlations but no associations when lagged by 1 or 2
+
+South_rec_cor_A<-South_rec_join %>%  with(cor.test(mean_bot_T_anom, log_recruit_devs, method=c("pearson")))
+South_rec_cor_A_lag1<-South_rec_join %>%  with(cor.test(T_A_lag1, log_recruit_devs, method=c("pearson")))
+South_rec_cor_A_lag2<-South_rec_join %>%  with(cor.test(T_A_lag2, log_recruit_devs, method=c("pearson")))
+
+
+
+
+
+####################################
+
+#correlations within year 
+North_rec_cor<-North_rec_join %>% with(cor.test(mean_bot_T  , log_recruit_devs    , method=c("pearson")))
+#significant P=0.013, r=0.480
+
+
+#correlation test with temperature lagged by 1 year I.E  2000 recruitment as a result of 1999 winter
+North_rec_cor_lag1<-North_rec_join %>% with(cor.test(T_lag1 , log_recruit_devs    , method=c("pearson")))
+# non-significant and low r value
+
+
+#correlation test with temperature lagged by 1 year I.E  2000 recruitment as a result of 1998 winter
+North_rec_cor_lag2<-North_rec_join %>% with(cor.test(T_lag2 , log_recruit_devs    , method=c("pearson")))
+# non-significant and negitive r value
+
+#similar pattern in north
+
+
+############# visualize significant correlations 
+
+
+
+
+South_rec_cor_plot<-South_rec_join %>%
+  ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
+  geom_point()+
+  xlab("Mean winter Bottom temperature (C)")+
+  ylab("Log recrutment deviations")+
+  annotate("text",x=10,y=.5,label="r =0.47, P-value=0.012")+
+  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "southern MAB")
+
+
+
+########################## northern correlations 
+
+N_test_log<-North_rec_join %>%  with(cor.test(mean_bot_T  , log_recruit_devs    , method=c("pearson")))
+
+North_rec_cor_plot<-North_rec_join %>%
+  ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
+  geom_point()+
+  xlab("Mean winter Bottom temperature (C)")+
+  ylab("Log recrutment deviations")+
+  annotate("text",x=7.8,y=2,label="r =0.48, P-value=0.013")+
+  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")
+
+
+
+plot(South_rec_cor_plot)
+plot(North_rec_cor_plot)
+
+
+
+```
+
+### linear models
+
+The association in mean winter bottom temperature is further investigated using linear models. Significant relationships were found between bottom temperature and recruitment deviation. Model residuals do not display any concerning patterns and positive relationships observed in both regions. 
+
+
+
+```{r rec_lm, echo=FALSE}
+
+
+
+south_lm<- lm(log_recruit_devs~mean_bot_T,data =South_rec_join)
+
+South_res<-data.frame(residuals=south_lm$residuals,fitted=fitted(south_lm))
+
+South_res_plot<-South_res %>% ggplot(aes(x= fitted, y=residuals))+
+  geom_point()+
+  ggplot2::geom_hline(yintercept =0)
+
+South_lm_plot<-South_rec_join %>%
+  ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
+  geom_point()+
+  geom_smooth(method = "lm", formula = y ~ x)+
+  xlab("Mean winter Bottom temperature (C)")+
+  ylab("Log recrutment deviations")+
+  annotate("text",x=11,y=.5,label="R^2 = 0.218,	Adj R^2 = 0.188, P-value=0.012")+
+  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "southern MAB")
+
+
+#####################
+
+North_lm<- lm(log_recruit_devs~mean_bot_T,data =North_rec_join)
+
+North_res<-data.frame(residuals=North_lm$residuals,fitted=fitted(North_lm))
+
+#summary(North_lm)
+
+North_res_plot<-North_res %>% 
+  ggplot(aes(x= fitted, y=residuals))+
+  geom_point()+
+  ggplot2::geom_hline(yintercept =0)
+
+North_lm_plot<-North_rec_join %>%
+  ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
+  geom_point()+
+  geom_smooth(method = "lm", formula = y ~ x)+
+  xlab("Mean winter Bottom temperature (C)")+
+  ylab("Log recrutment deviations")+
+  annotate("text",x=8,y=2,label="R^2 = 0.230,	Adj R^2 = 0.199, P-value=0.015")+
+  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")
+
+
+plot(South_lm_plot)
+plot(North_lm_plot)
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Autocorrelation function 
+Searching for Autocorrelation within each variable is useful for identifiying the types of structure the data may contain. Each time series is correlated with itself at differing time lags.
+
+#### Bottom temp anomaly ACF
+Appears to display minimal issues with autocorrelations, and appears to be similar to white noise for both Northern and southern regions
+
+```{r S_temp_ACF, echo=FALSE}
+
+
+
+South_rec_dev_ts<-ts(South_rec_dev$log_recruit_devs,frequency =1, start = 1989, end = 2019)
+North_rec_dev_ts<-ts(North_rec_dev$log_recruit_devs,frequency =1, start = 1989, end = 2019)
+
+
+South_temp_ts<-ts(SMAB_winter_bot_89$mean_bot_T_anom,frequency =1, start = 1989, end = 2019)
+North_temp_ts<-ts(NMAB_winter_bot_89$mean_bot_T_anom,frequency =1, start = 1989, end = 2019)
+
+acf(South_temp_ts, main = "Southern MAB bottom temp anomaly")
+
+
+
+
+```
+
+
+```{r N_temp_ACF, echo=FALSE}
+
+acf(North_temp_ts, main = "Northern MAB bottom temp anomaly")
+```
+
+
+
+
+
+
+
+#### Stationarity
+Augmented Dickey-Fuller Test indicates that recrutment time serise are not stationary. Recrutment deviations are however are corrected into stationarity when differenced, converting the data from original values to sequential rate changes in time. IE, each value is the difference of preceding years $$Y_{t}-Y_{t-1}$$
+
+```{r Difference testing , eval=FALSE, include=FALSE}
+#Testing for stationarity of original time serise 
+ADFT_table_SR<-tseries::adf.test(South_rec_dev_ts)
+ADFT_table_ST<-tseries::adf.test(South_temp_ts)
+ADFT_table_NR<-tseries::adf.test(North_rec_dev_ts)
+ADFT_table_NT<-tseries::adf.test(North_temp_ts)
+#non stationary as formulated
+
+# s.test<-urca::ur.df(South_rec_dev_ts,type = "trend", lags = 2)
+# urca::summary(s.test)
+
+
+tseries::kpss.test(diff(South_rec_dev_ts))
+tseries::adf.test(diff(South_rec_dev_ts))
+tseries::adf.test(diff(South_rec_dev_ts))
+
+forecast::ndiffs(South_rec_dev_ts)
+forecast::ndiffs(North_rec_dev_ts)
+
+
+forecast::ndiffs(North_temp_ts)
+forecast::ndiffs(North_temp_ts)
+
+# forecast::auto.arima(South_rec_dev_ts)
+
+```
+
+
+
+
+### southern MAB ccf 
+
+Cross Correlation Functions are useful in identifying lags in a time serise that may be predictors of another serise. This test indicates that there is a significant positive correlation between the rate of change in recruitment deviations and bottom temperature anomaly. There is more positive devation from model predictions when the previouse years anomaly is higher.
+
+IE, the positive bottom temperature amomaly in 1999 is associated with increasing rate of recuitment deviations in 2000
+
+
+
+```{r southern_mab_ccf, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+#ccf(South_rec_dev$log_recruit_devs,SMAB_winter_bot_89$mean_bot_T_anom)
+
+
+# s_ccf_log<-ccf(diff(South_rec_dev$log_recruit_devs),SMAB_winter_bot_89$mean_bot_T_anom)
+# s_x<-c(-11:11)
+# s_y<-c(s_ccf_log$acf)
+# 
+# 
+# s_ccf_log_tidy<-as.data.frame(cbind(s_x,s_y))
+# 
+# s_ccf_plot<-
+#   s_ccf_log_tidy %>% 
+#   ggplot(aes(x=s_x,y=s_y))+
+#   geom_col(width = .1)+
+#   geom_hline(yintercept = c(.35,-.35))+
+#   xlab("Lag")+
+#   ylab("CCF")+
+#   scale_x_continuous(limits = c(-1,6), breaks = seq(0,6,1))+
+#   ggtitle("Log recruitment deviations & winter bottom temperature anomaly", subtitle = "Southern MAB")+
+#   theme_minimal()
+# 
+# 
+# plot(s_ccf_plot)
+# 
+
+astsa::ccf2(diff(South_rec_dev$log_recruit_devs),SMAB_winter_bot_89$mean_bot_T_anom, main="Log recruitment deviations & winter bottom temperature anomaly")
+
+
+# cor(x = lag(S_rec_temp$mean_bot_T_anom,2),y=S_rec_temp$diff_rec, use = "complete.obs",method = "pearson")
+# astsa::lag2.plot(diff(South_rec_dev$log_recruit_devs),SMAB_winter_bot_89$mean_bot_T_anom, 3,corr	=TRUE)
+
+
+
+
+
+```
+
+### southern MAB ccf visualizations
+
+Range of lagged winter bottom temperature scatterplots with a lowess fit smoother displayed. Lag of 1 year has a positive correlations to rate of recuitment deviation. 
+
+```{r SMAB_scatter, echo=FALSE}
+
+#significant cross correlations at lags 1 and 2, 
+
+
+astsa::lag2.plot(SMAB_winter_bot_89$mean_bot_T_anom,diff(South_rec_dev$log_recruit_devs),5)
+
+ 
+```
+
+
+
+### Shelf water volume and recruitment CCF 
+
+No significant correlations between Shelf water volume anomaly and the rate of recruitment deviations in either region
+
+
+
+```{r SHW CCF, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+SHW_NMAB_winter$mean_SHW_anom
+
+
+forecast::ndiffs(SHW_SMAB_winter$mean_SHW_anom)
+forecast::ndiffs(SHW_NMAB_winter$mean_SHW_anom)
+
+acf(SHW_SMAB_winter$mean_SHW_anom)
+acf(SHW_NMAB_winter$mean_SHW_anom)
+
+SHW_NMAB_ts<-ts(SHW_NMAB_winter$mean_SHW_anom, start =1978, end= 2019, frequency =1 )
+
+tseries::adf.test(diff(SHW_NMAB_ts))
+
+astsa::ccf2(diff(South_rec_dev$log_recruit_devs),SHW_SMAB_winter$mean_SHW_anom, main="Log recruitment deviations & winter Shelf water volume anomaly South MAB")
+
+astsa::ccf2(diff(North_rec_dev$log_recruit_devs),SHW_NMAB_winter$mean_SHW_anom, main="Log recruitment deviations & winter Shelf water volume anomaly North MAB")
+
+```
+
+
+
+
+
+
+
+
 
 ### Northern MAB CCF
  
@@ -1056,26 +1510,37 @@ plot(s_ccf_plot)
 
 # ccf(North_rec_dev$log_recruit_devs,NMAB_winter_bot_89$mean_bot_T_anom)
 
-N_ccf_log<-ccf(North_rec_dev$log_recruit_devs,NMAB_winter_bot_89$mean_bot_T_anom, plot = F)
-N_x<-c(-11:11)
-N_y<-c(N_ccf_log$acf)
+# N_ccf_log<-ccf(North_rec_dev$log_recruit_devs,NMAB_winter_bot_89$mean_bot_T_anom, plot = F)
+# N_x<-c(-11:11)
+# N_y<-c(N_ccf_log$acf)
+# 
+# 
+# N_ccf_log_tidy<-as.data.frame(cbind(N_x,N_y))
+# 
+# N_ccf_plot<-N_ccf_log_tidy %>% 
+#   ggplot(aes(x=N_x,y=N_y))+
+#   geom_col(width = .1)+
+#   geom_hline(yintercept = c(.35))+
+#   xlab("Lag")+
+#   ylab("ACF")+
+#   ggtitle("Log recruitment deviations & winter bottom temperature anomaly", subtitle = "Northern MAB")+
+#   theme_minimal()
+# 
+# 
+# plot(N_ccf_plot)
 
 
-N_ccf_log_tidy<-as.data.frame(cbind(N_x,N_y))
-
-N_ccf_plot<-N_ccf_log_tidy %>% 
-  ggplot(aes(x=N_x,y=N_y))+
-  geom_col(width = .1)+
-  geom_hline(yintercept = c(.35))+
-  xlab("Lag")+
-  ylab("ACF")+
-  ggtitle("Log recruitment deviations & winter bottom temperature anomaly", subtitle = "Northern MAB")+
-  theme_minimal()
-
-
-plot(N_ccf_plot)
+astsa::ccf2(diff(North_rec_dev$log_recruit_devs),NMAB_winter_bot_89$mean_bot_T_anom, main="Log recruitment deviations & winter bottom temperature anomaly")
 
 ```
+
+```{r NMAB_scatter, echo=FALSE}
+
+astsa::lag2.plot(NMAB_winter_bot_89$mean_bot_T_anom,diff(North_rec_dev$log_recruit_devs),5)
+
+```
+
+
 
 ### Gulf stream wall index CCF
 
@@ -1084,55 +1549,204 @@ Differing patterns in association is observed across the north vs south. Norther
 
 ```{r GSI_CCF, echo=FALSE, message=FALSE, warning=FALSE}
 
-GSI_89<-GSI_annual %>% filter(Year %in% c(1989:2019))
-#north
-
-# ccf(North_rec_dev$log_recruit_devs,GSI_89$Value)
+# GSI_89<-GSI_annual %>% filter(Year %in% c(1989:2019))
+# #north
 # 
-# ccf(South_rec_dev$log_recruit_devs,GSI_89$Value)
-
-
-N_GSI_ccf_log<-ccf(North_rec_dev$log_recruit_devs,GSI_89$Value, plot = F)
-S_GSI_ccf_log<-ccf(South_rec_dev$log_recruit_devs,GSI_89$Value, plot = F)
-
-N_GSI_x<-c(-11:11)
-S_GSI_x<-c(-11:11)
-
-N_GSI_y<-c(N_GSI_ccf_log$acf)
-S_GSI_y<-c(S_GSI_ccf_log$acf)
-
-N_GSI_ccf_log_tidy<-as.data.frame(cbind(N_GSI_x,N_GSI_y))
-S_GSI_ccf_log_tidy<-as.data.frame(cbind(S_GSI_x,S_GSI_y))
-
-
-
-
-N_GSI_ccf_plot<-N_GSI_ccf_log_tidy %>% 
-  ggplot(aes(x=N_GSI_x,y=N_GSI_y))+
-  geom_col(width = .1)+
-  geom_hline(yintercept = c(.35))+
-  xlab("Lag")+
-  ylab("ACF")+
-  ggtitle("Log recruitment deviations & Gulf stream wall index", subtitle = "Northern MAB")+
-  theme_minimal()
-
-
-S_GSI_ccf_plot<-S_GSI_ccf_log_tidy %>% 
-  ggplot(aes(x=S_GSI_x,y=S_GSI_y))+
-  geom_col(width = .1)+
-  geom_hline(yintercept = c(.35))+
-  xlab("Lag")+
-  ylab("ACF")+
-  ggtitle("Log recruitment deviations & Gulf stream wall index", subtitle = "Southern MAB")+
-  theme_minimal()
-
-plot(N_GSI_ccf_plot)
-plot(S_GSI_ccf_plot)
+# # ccf(North_rec_dev$log_recruit_devs,GSI_89$Value)
+# # 
+# # ccf(South_rec_dev$log_recruit_devs,GSI_89$Value)
+# 
+# 
+# N_GSI_ccf_log<-ccf(North_rec_dev$log_recruit_devs,GSI_89$Value, plot = F)
+# S_GSI_ccf_log<-ccf(South_rec_dev$log_recruit_devs,GSI_89$Value, plot = F)
+# 
+# N_GSI_x<-c(-11:11)
+# S_GSI_x<-c(-11:11)
+# 
+# N_GSI_y<-c(N_GSI_ccf_log$acf)
+# S_GSI_y<-c(S_GSI_ccf_log$acf)
+# 
+# N_GSI_ccf_log_tidy<-as.data.frame(cbind(N_GSI_x,N_GSI_y))
+# S_GSI_ccf_log_tidy<-as.data.frame(cbind(S_GSI_x,S_GSI_y))
+# 
+# 
+# 
+# 
+# N_GSI_ccf_plot<-N_GSI_ccf_log_tidy %>% 
+#   ggplot(aes(x=N_GSI_x,y=N_GSI_y))+
+#   geom_col(width = .1)+
+#   geom_hline(yintercept = c(.35))+
+#   xlab("Lag")+
+#   ylab("ACF")+
+#   ggtitle("Log recruitment deviations & Gulf stream wall index", subtitle = "Northern MAB")+
+#   theme_minimal()
+# 
+# 
+# S_GSI_ccf_plot<-S_GSI_ccf_log_tidy %>% 
+#   ggplot(aes(x=S_GSI_x,y=S_GSI_y))+
+#   geom_col(width = .1)+
+#   geom_hline(yintercept = c(.35))+
+#   xlab("Lag")+
+#   ylab("ACF")+
+#   ggtitle("Log recruitment deviations & Gulf stream wall index", subtitle = "Southern MAB")+
+#   theme_minimal()
+# 
+# plot(N_GSI_ccf_plot)
+# plot(S_GSI_ccf_plot)
 
 
 
 
 ```
+
+
+
+## Indicator cross correlations 
+
+All indicators are reverted to their respective anomaly values and tested for correlations across differing lags. indicators for each region are tested for potental differences. 
+
+### Winter bottom temperature vs Shelf water volume
+
+No meaningful correlations detected across time lags across ether region between winter bottom temperature and Shelf water volume
+
+
+```{r indicator cross correlations_ temp_ SHW, echo=FALSE, message=FALSE, warning=FALSE}
+# temp anomoly correlation with shelf water anomoly
+
+astsa::lag2.plot
+
+S_temp_anom_SHW_anom_log<-ccf(SMAB_winter_bot$mean_bot_T_anom, SHW_SMAB_winter$mean_SHW_anom,  type = "correlation", plot = F )
+
+N_temp_anom_SHW_anom_log<-ccf(NMAB_winter_bot$mean_bot_T_anom, SHW_NMAB_winter$mean_SHW_anom,  type = "correlation" , plot = F)
+
+
+S_temp_anom_SHW_anom_x<-c(-11:11)
+N_temp_anom_SHW_anom_x<-c(-11:11)
+
+S_temp_anom_SHW_anom_y<-c(S_temp_anom_SHW_anom_log$acf)
+N_temp_anom_SHW_anom_y<-c(N_temp_anom_SHW_anom_log$acf)
+
+N_temp_anom_SHW_anom_log_tidy<-as.data.frame(cbind(N_temp_anom_SHW_anom_x,N_temp_anom_SHW_anom_y))
+S_temp_anom_SHW_anom_log_tidy<-as.data.frame(cbind(S_temp_anom_SHW_anom_x,S_temp_anom_SHW_anom_y))
+
+
+N_temp_anom_SHW_anom_plot<-N_temp_anom_SHW_anom_log_tidy %>% 
+  ggplot(aes(x=N_temp_anom_SHW_anom_x ,y=N_temp_anom_SHW_anom_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Winter bottom temperature & winter shelf water volume anomoly", subtitle = "Northern MAB")+
+  theme_minimal()
+
+S_temp_anom_SHW_anom_plot<-S_temp_anom_SHW_anom_log_tidy %>% 
+  ggplot(aes(x=S_temp_anom_SHW_anom_x ,y=S_temp_anom_SHW_anom_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Winter bottom temperature & winter shelf water volume anomoly", subtitle = "Southern MAB")+
+  theme_minimal()
+
+plot(N_temp_anom_SHW_anom_plot)
+plot(S_temp_anom_SHW_anom_plot)
+
+```
+
+
+### Winter bottom salinity vs Shelf water volume
+
+Southern MAB displays some correlations between variables at the 5 and 8 year lag, while northern MAB has a negitive correlation at a one year lag.
+
+
+```{r indicator cross correlations_salinity_SHW, echo=FALSE, message=FALSE, warning=FALSE}
+
+# winter bottom salinity anomoly correlation with  shelf water volume anomoly
+
+
+
+S_S_anom_SHW_anom_log<-ccf(SMAB_winter_bot$mean_bot_S_anom, SHW_SMAB_winter$mean_SHW_anom,  type = "correlation" , plot = F)
+N_S_anom_SHW_anom_log<-ccf(NMAB_winter_bot$mean_bot_S_anom, SHW_NMAB_winter$mean_SHW_anom,  type = "correlation" , plot = F)
+
+
+S_S_anom_SHW_anom_x<-c(-11:11)
+N_S_anom_SHW_anom_x<-c(-11:11)
+
+S_S_anom_SHW_anom_y<-c(S_S_anom_SHW_anom_log$acf)
+N_S_anom_SHW_anom_y<-c(N_S_anom_SHW_anom_log$acf)
+
+S_S_anom_SHW_anom_log_tidy<-as.data.frame(cbind(S_S_anom_SHW_anom_x,S_S_anom_SHW_anom_y))
+N_S_anom_SHW_anom_log_tidy<-as.data.frame(cbind(N_S_anom_SHW_anom_x,N_S_anom_SHW_anom_y))
+
+
+S_S_anom_SHW_anom_plot<-S_S_anom_SHW_anom_log_tidy %>% 
+  ggplot(aes(x=S_S_anom_SHW_anom_x  ,y=S_S_anom_SHW_anom_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35,-0.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Winter bottom salinity anomaly & winter shelf water volume anomaly", subtitle = "Southern MAB")+
+  theme_minimal()
+
+N_S_anom_SHW_anom_plot<-N_S_anom_SHW_anom_log_tidy %>% 
+  ggplot(aes(x=N_S_anom_SHW_anom_x  ,y=N_S_anom_SHW_anom_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35,-0.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Winter bottom salinity anomaly & winter shelf water volume anomaly", subtitle = "Northern MAB")+
+  theme_minimal()
+
+plot(S_S_anom_SHW_anom_plot)
+plot(N_S_anom_SHW_anom_plot)
+
+```
+
+
+
+
+```{r indicator cross correlations_ temp_salinity, echo=FALSE, message=FALSE, warning=FALSE}
+# winter bottom temp anomoly correlations with winter bottom salinity 
+
+
+S_S_temp_log<-ccf(SMAB_winter_bot$mean_bot_S_anom, SMAB_winter_bot$mean_bot_T_anom,  type = "correlation" , plot = F)
+
+N_S_temp_log<-ccf(NMAB_winter_bot$mean_bot_S_anom, NMAB_winter_bot$mean_bot_T_anom,  type = "correlation" , plot = F)
+
+S_S_temp_x<-c(-11:11)
+N_S_temp_x<-c(-11:11)
+
+S_S_temp_y<-c(S_S_temp_log$acf)
+N_S_temp_y<-c(N_S_temp_log$acf)
+
+S_S_temp_log_tidy<-as.data.frame(cbind(S_S_temp_x,S_S_temp_y))
+N_S_temp_log_tidy<-as.data.frame(cbind(N_S_temp_x,N_S_temp_y))
+
+
+S_S_temp_plot<-S_S_temp_log_tidy %>% 
+  ggplot(aes(x=S_S_temp_x  ,y=S_S_temp_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Winter bottom salinity anomaly & winter bottom temp anomaly", subtitle = "Southern MAB")+
+  theme_minimal()
+
+N_S_temp_plot<-N_S_temp_log_tidy %>% 
+  ggplot(aes(x=N_S_temp_x  ,y=N_S_temp_y))+
+  geom_col(width = .1)+
+  geom_hline(yintercept = c(.35))+
+  xlab("Lag")+
+  ylab("ACF")+
+  ggtitle("Winter bottom salinity anomaly & winter bottom temp anomaly", subtitle = "Northern MAB")+
+  theme_minimal()
+
+plot(S_S_temp_plot)
+plot(N_S_temp_plot)
+
+
+```
+
 
 
 
