@@ -1150,7 +1150,17 @@ plot(temp_ts_plot)
 
 ### Pearsons correlations
 
+#### Bottom temperature
+
 Associations between model estimates of recruitment and environmental indicators is tested using Pearsons correlations. Mean winter bottom temperature is signifcantly correlated within year estimates of recruitment in both regions  (South. P-value = 0.012, t = 2.69, r=0.467; North, P-value = 0.013, t = 2.68, r= 0.480). No signifcant associations were found for lags of one or two years in mean bottom temperatures across regions. Temperature anomalys display a similar significance level and mangitude of associaiton to in-situ temperature values.
+
+#### Bottom Salinity 
+
+No significant associations found in either region (South. P-value = 0.880, t = 0.151, r=0.029; North, P-value = 0.080, t = 2.68, r= 0.353). Simiarly nither one or two year lags were found to be associated with recruitment deviation.
+
+
+#### Winter Shelf water volume 
+No significant associations found in either region (South, t = -1.00, p-value = 0.321, r= -0.13; North t = -1.098, p-value = 0.283, r= -0.210). Additionally no lags had significant associations for either of one or two years of winter shelf water volume. 
 
 ```{r Simple_correlation, echo=FALSE, message=FALSE, warning=FALSE}
 
@@ -1257,8 +1267,64 @@ plot(South_rec_cor_plot)
 plot(North_rec_cor_plot)
 
 
+#########################################
+
+#salinity correlations with recruitment
+
+S_sal_log<-South_rec_join %>%  with(cor.test(mean_bot_S   , log_recruit_devs    , method=c("pearson")))
+
+N_sal_log<-North_rec_join %>%  with(cor.test(mean_bot_S   , log_recruit_devs    , method=c("pearson")))
+
+
+S_sal_log_lag1<-South_rec_join %>%  with(cor.test(lag(mean_bot_S,1)   , log_recruit_devs    , method=c("pearson")))
+
+N_sal_log_lag1<-North_rec_join %>%  with(cor.test(lag(mean_bot_S,1 )  , log_recruit_devs    , method=c("pearson")))
+
+S_sal_log_lag2<-South_rec_join  %>%  with(cor.test(lag(mean_bot_S,2)   , log_recruit_devs    , method=c("pearson")))
+
+N_sal_log_lag2<-North_rec_join %>%  with(cor.test(lag(mean_bot_S,2 )  , log_recruit_devs    , method=c("pearson")))
+
+
+
+#######################
+
+# Shelf water volume associations
+
+
+
+South_SHW_join<-left_join(South_rec_dev,SHW_SMAB_winter, by= "year")
+
+North_SHW_join<-left_join(North_rec_dev,SHW_NMAB_winter, by= "year")
+
+South_SHW_log<-South_SHW_join %>%  with(cor.test(mean_SHW   , log_recruit_devs    , method=c("pearson")))
+
+North_SHW_log<-North_SHW_join %>%  with(cor.test(mean_SHW   , log_recruit_devs    , method=c("pearson")))
+
+South_SHW_log_lag1<-South_SHW_join %>%  with(cor.test(lag(mean_SHW,1)   , log_recruit_devs    , method=c("pearson")))
+
+Nouth_SHW_log_lag1<-North_SHW_join %>%  with(cor.test(lag(mean_SHW ,1)  , log_recruit_devs    , method=c("pearson")))
+
+South_SHW_log_lag2<-South_SHW_join %>%  with(cor.test(lag(mean_SHW,2)   , log_recruit_devs    , method=c("pearson")))
+
+North_SHW_log_lag1<-North_SHW_join %>%  with(cor.test(lag(mean_SHW ,2)  , log_recruit_devs    , method=c("pearson")))
+
+
+
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### linear models
 
@@ -1276,7 +1342,8 @@ South_res<-data.frame(residuals=south_lm$residuals,fitted=fitted(south_lm))
 
 South_res_plot<-South_res %>% ggplot(aes(x= fitted, y=residuals))+
   geom_point()+
-  ggplot2::geom_hline(yintercept =0)
+  ggplot2::geom_hline(yintercept =0)+
+  ggtitle("Model residuals vs fitted Southern MAB")
 
 South_lm_plot<-South_rec_join %>%
   ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
@@ -1299,7 +1366,8 @@ North_res<-data.frame(residuals=North_lm$residuals,fitted=fitted(North_lm))
 North_res_plot<-North_res %>% 
   ggplot(aes(x= fitted, y=residuals))+
   geom_point()+
-  ggplot2::geom_hline(yintercept =0)
+  ggplot2::geom_hline(yintercept =0)+
+  ggtitle("Model residuals vs fitted Northern MAB")
 
 North_lm_plot<-North_rec_join %>%
   ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
@@ -1312,8 +1380,12 @@ North_lm_plot<-North_rec_join %>%
 
 
 plot(South_lm_plot)
+
+plot(South_res_plot)
+
 plot(North_lm_plot)
 
+plot(North_res_plot)
 
 
 ```
