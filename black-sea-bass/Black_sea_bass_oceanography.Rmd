@@ -1280,7 +1280,7 @@ S_sal_log_lag1<-South_rec_join %>%  with(cor.test(lag(mean_bot_S,1)   , log_recr
 
 N_sal_log_lag1<-North_rec_join %>%  with(cor.test(lag(mean_bot_S,1 )  , log_recruit_devs    , method=c("pearson")))
 
-S_sal_log_lag2<-South_rec_join  %>%  with(cor.test(lag(mean_bot_S,2)   , log_recruit_devs    , method=c("pearson")))
+S_sal_log_lag2<-South_rec_join  %>%  with(cor.test(lag(mean_bot_S,2)   , log_recruit_devs   , method=c("pearson")))
 
 N_sal_log_lag2<-North_rec_join %>%  with(cor.test(lag(mean_bot_S,2 )  , log_recruit_devs    , method=c("pearson")))
 
@@ -1313,6 +1313,36 @@ North_SHW_log_lag1<-North_SHW_join %>%  with(cor.test(lag(mean_SHW ,2)  , log_re
 
 ```
 
+
+#### Within indicator correlations
+
+indicators are evaluated for their auto correlation within years to detect if meaningful confounding occurs. 
+Bottom salinity and Shelf water volume is sigificantly negitivly correlated with shelf water volume in both regions (South ,t = -12.78, P-value= 0.001, r = -0.8551866 ( North, t = -3.46, P-value= 0.001, r = -0.534). This strong association requires the selection of one of these indicators at the exclusion of the other to avoid overfitting.Shelf water volume was not associated with bottom temperature. Salinity and temperature were not significantly associated with one another in either region 
+
+```{r between indicator cor, echo=FALSE, message=FALSE, warning=FALSE}
+
+South_ind_join<-left_join(SMAB_winter_bot, SHW_SMAB_winter, by="year")
+
+North_ind_join<-left_join(NMAB_winter_bot, SHW_NMAB_winter, by="year")
+
+# Bottom T and S not correlated within year
+North_ind_TS_log<-North_ind_join %>%  with(cor.test(mean_bot_T  , mean_bot_S    , method=c("pearson")))
+South_ind_TS_log<-South_ind_join %>%  with(cor.test(mean_bot_T  , mean_bot_S    , method=c("pearson")))
+
+
+
+
+North_ind_TSHW_log<-North_ind_join %>%  with(cor.test(mean_bot_T  , mean_SHW    , method=c("pearson")))
+South_ind_TSHW_log<-South_ind_join %>%  with(cor.test(mean_bot_T  , mean_SHW    , method=c("pearson")))
+
+North_ind_SSHW_log<-North_ind_join %>%  with(cor.test(mean_bot_S  , mean_SHW    , method=c("pearson")))
+South_ind_SSHW_log<-South_ind_join %>%  with(cor.test(mean_bot_S  , mean_SHW    , method=c("pearson")))
+
+
+
+
+
+```
 
 
 
