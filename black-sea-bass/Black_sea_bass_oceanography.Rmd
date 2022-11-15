@@ -1240,12 +1240,13 @@ North_rec_cor_lag2<-North_rec_join %>% with(cor.test(T_lag2 , log_recruit_devs  
 
 
 South_rec_cor_plot<-South_rec_join %>%
-  ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
+  ggplot(aes(x=mean_bot_T, y=log_recruit_devs, label=year))+
   geom_point()+
   xlab("Mean winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
   annotate("text",x=10,y=.5,label="r =0.47, P-value=0.012")+
-  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "southern MAB")
+  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "southern MAB")+
+  geom_text(hjust=0, vjust=0)
 
 
 
@@ -1254,12 +1255,13 @@ South_rec_cor_plot<-South_rec_join %>%
 N_test_log<-North_rec_join %>%  with(cor.test(mean_bot_T  , log_recruit_devs    , method=c("pearson")))
 
 North_rec_cor_plot<-North_rec_join %>%
-  ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
+  ggplot(aes(x=mean_bot_T, y=log_recruit_devs, label=year))+
   geom_point()+
   xlab("Mean winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
   annotate("text",x=7.8,y=2,label="r =0.48, P-value=0.013")+
-  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")
+  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")+
+  geom_text(hjust=0, vjust=0)
 
 
 
@@ -1308,7 +1310,7 @@ South_SHW_log_lag2<-South_SHW_join %>%  with(cor.test(lag(mean_SHW,2)   , log_re
 
 North_SHW_log_lag1<-North_SHW_join %>%  with(cor.test(lag(mean_SHW ,2)  , log_recruit_devs    , method=c("pearson")))
 
-
+#add in year to dots 
 
 
 ```
@@ -1346,6 +1348,53 @@ South_ind_SSHW_log<-South_ind_join %>%  with(cor.test(mean_bot_S  , mean_SHW    
 
 
 
+#### Reanalysis product 
+
+A high-resolution bottom temperature ocean reanalysis and model output over the period 1989 - 2021 is compared to observed ocean temperature data using methods described in Miller et. al. 2016. The in situ dataset is subject to missing data coverage due to the timing and quality of data collection platforms resulting in Southern MAB missing 3 years, while Northern MAB is missing 7 years in coverage. The reanalysis data uses numerical simulation to interpolate for areas and times where data is limited.  
+
+```{r reanalysis bottom temp, echo=FALSE}
+reanalysis_bt<-here::here("black-sea-bass", "monthly_bottom_temp.csv") %>% read.csv()
+
+
+reanalysis_bt %>% group_by("Region", year)
+
+
+ra_S<-reanalysis_bt %>% filter(Region =="South" & month %in% c(2,3) ) %>% group_by(year) %>% summarise( w_bt_temp= mean(bt_temp))
+ra_N<-reanalysis_bt %>% filter(Region =="North" & month %in% c(2,3) ) %>% group_by(year) %>% summarise( w_bt_temp= mean(bt_temp))
+
+
+
+
+
+SMAB_re_join<-left_join(ra_S,  SMAB_winter_bot, by="year")
+NMAB_re_join<-left_join(ra_N,  NMAB_winter_bot, by="year")
+
+
+NMAB_re_join %>%  with(cor.test(w_bt_temp,mean_bot_T, method=c("pearson")))
+SMAB_re_join %>%  with(cor.test(w_bt_temp,mean_bot_T, method=c("pearson")))
+
+
+SMAB_re_join_plot<-SMAB_re_join %>% ggplot(aes(x=mean_bot_T, y=w_bt_temp))+geom_point()+
+  xlab(" In situ Mean winter Bottom temperature (C)")+
+  ylab("Reanalysis Mean winter Bottom temperature (C)")+
+  annotate("text",x=10,y=10,label="r =0.90, P-value<0.001")+
+  ggtitle("Association between bottom temperature methods: insitu vs Reanalysis", subtitle = "Southern MAB")
+
+
+NMAB_re_join_plot<-NMAB_re_join %>% ggplot(aes(x=mean_bot_T, y=w_bt_temp))+geom_point()+
+  xlab(" In situ Mean winter Bottom temperature (C)")+
+  ylab("Reanalysis Mean winter Bottom temperature (C)")+
+  annotate("text",x=8,y=10,label="r =0.81, P-value<0.001")+
+  ggtitle("Association between bottom temperature methods: insitu vs Reanalysis", subtitle = "Northern MAB")
+
+
+
+
+plot(SMAB_re_join_plot)
+plot(NMAB_re_join_plot)
+
+```
+
 
 
 
@@ -1376,13 +1425,14 @@ South_res_plot<-South_res %>% ggplot(aes(x= fitted, y=residuals))+
   ggtitle("Model residuals vs fitted Southern MAB")
 
 South_lm_plot<-South_rec_join %>%
-  ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
+  ggplot(aes(x=mean_bot_T, y=log_recruit_devs, label=year))+
   geom_point()+
   geom_smooth(method = "lm", formula = y ~ x)+
   xlab("Mean winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
   annotate("text",x=11,y=.5,label="R^2 = 0.218,	Adj R^2 = 0.188, P-value=0.012")+
-  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "southern MAB")
+  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "southern MAB")+
+  geom_text(hjust=0, vjust=0)
 
 
 #####################
@@ -1400,13 +1450,14 @@ North_res_plot<-North_res %>%
   ggtitle("Model residuals vs fitted Northern MAB")
 
 North_lm_plot<-North_rec_join %>%
-  ggplot(aes(x=mean_bot_T, y=log_recruit_devs))+
+  ggplot(aes(x=mean_bot_T, y=log_recruit_devs, label=year))+
   geom_point()+
   geom_smooth(method = "lm", formula = y ~ x)+
   xlab("Mean winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
   annotate("text",x=8,y=2,label="R^2 = 0.230,	Adj R^2 = 0.199, P-value=0.015")+
-  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")
+  ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")+
+  geom_text(hjust=0, vjust=0)
 
 
 plot(South_lm_plot)
@@ -1424,6 +1475,28 @@ plot(North_res_plot)
 
 
 
+```{r}
+ra_S_rec<-left_join(ra_S,South_rec_dev, by= "year")
+ra_N_rec<-left_join(ra_N,North_rec_dev, by= "year")
+
+
+ra_S_rec %>% with(cor.test(w_bt_temp,log_recruit_devs, method=c("pearson")))
+ra_N_rec %>% with(cor.test(w_bt_temp,log_recruit_devs, method=c("pearson")))
+
+
+re_rec_lm_N<-lm(log_recruit_devs~w_bt_temp,data =ra_N_rec)
+summary(re_rec_lm_N)
+
+
+re_rec_lm_S<-lm(log_recruit_devs~w_bt_temp,data =ra_S_rec)
+summary(re_rec_lm_S)
+#0.173,	Adjusted R-squared:  0.1445 
+
+re_rec_lm<-lm(log_recruit_devs~w_bt_temp,data =ra_N_rec)
+summary(re_rec_lm)
+#0.2782,	Adjusted R-squared:  0.2533 P-value= 0.002
+
+```
 
 
 
