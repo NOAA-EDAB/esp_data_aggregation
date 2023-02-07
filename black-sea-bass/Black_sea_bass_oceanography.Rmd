@@ -843,15 +843,15 @@ GSI_annual<-GSI %>%
 
 ```{r export_data, include=FALSE}
 
-write.csv(SHW_MAB_winter, file="SHW_SMAB_winter.csv")
-write.csv(SHW_NMAB_winter, file="SHW_NMAB_winter.csv")
-write.csv(SHW_SMAB_winter, file="SHW_MAB_winter.csv")
+# write.csv(SHW_MAB_winter, file="SHW_SMAB_winter.csv")
+# write.csv(SHW_NMAB_winter, file="SHW_NMAB_winter.csv")
+# write.csv(SHW_SMAB_winter, file="SHW_MAB_winter.csv")
 # 
 # 
-# write.csv(NMAB_winter_bot, file="SMAB_winter_bot.csv")
+# write.csv(SMAB_winter_bot, file="SMAB_winter_bot.csv")
 # write.csv(NMAB_winter_bot, file="NMAB_winter_bot.csv")
-# write.csv(NMAB_winter_bot, file="MAB_winter_bot.csv")
-# 
+# write.csv(MAB_winter_bot, file="MAB_winter_bot.csv")
+
 # write.csv(GSI_annual, file = "GSI_annual.csv")
 
 
@@ -1117,7 +1117,7 @@ A high-resolution bottom temperature ocean reanalysis and model output over the 
 reanalysis_bt<-here::here("black-sea-bass", "monthly_bottom_temp.csv") %>% read.csv()
 
 
-reanalysis_bt %>% group_by("Region", year)
+
 
 
 ra_S<-reanalysis_bt %>% filter(Region =="South" & month %in% c(2,3) ) %>% group_by(year) %>% summarise( w_bt_temp= mean(bt_temp))
@@ -1151,9 +1151,12 @@ NMAB_re_join_plot<-NMAB_re_join %>% ggplot(aes(x=mean_bot_T, y=w_bt_temp))+geom_
 
 
 
-plot(SMAB_re_join_plot)
-plot(NMAB_re_join_plot)
+# plot(SMAB_re_join_plot)
+# plot(NMAB_re_join_plot)
 
+re_join_plot<-ggpubr::ggarrange(SMAB_re_join_plot,NMAB_re_join_plot, ncol = 1, nrow=2)
+
+plot(re_join_plot)
 ```
 
 
@@ -1318,7 +1321,27 @@ cog_s_E<- cog %>% filter(stock=="South", variable =="Eastings")
 cog_n_temp<-left_join(cog_n, ra_N, by= "year")
 cog_s_temp<-left_join(cog_n, ra_S, by= "year")
 
+cog_invert_n<-left_join(cog_n, SHW_SMAB_winter, by= "year")
+cog_invert_s<-left_join(cog_s, SHW_NMAB_winter, by= "year")
 
+ cog_invert_n %>%  with(cor.test(value,mean_SHW , method=c("pearson")))
+ 
+ cog_invert_s %>%  with(cor.test(value,mean_SHW , method=c("pearson")))
+ 
+cog_invert_n %>% 
+  ggplot(aes(x=mean_SHW,y=value))+
+  geom_point()+
+  xlab("Mean winter Shelf water volume (km^3)")+
+  ylab("Center of gravity (Northings)")+
+  ggtitle("Center of gravity of northern subunit and southern MAB shelf water volume", subtitle = "Northern subunit")+
+  annotate("text",x=1600,y= 4600, label="r=0.33, P-value= 0.012")
+
+
+cog_invert_s %>% 
+  ggplot(aes(x=mean_SHW,y=value))+
+  geom_point()+
+  xlab("Mean winter Shelf water volume (km^3)")+
+  ylab("Center of gravity (Northings)")
 
 
 cog_n_join<- left_join(cog_n, SHW_NMAB_winter, by= "year")
@@ -1354,34 +1377,153 @@ cog_s_join %>%
   annotate("text",x=1200,y= 4410, label="r=0.027, P-value= 0.839")
 
 
-cog_n_temp  %>%  with(cor.test(value,w_bt_temp   , method=c("pearson")))
-
-cog_s_temp  %>%  with(cor.test(value,w_bt_temp   , method=c("pearson")))
-
-
-cog_n_temp  %>% ggplot(aes(x=w_bt_temp,y=value))+geom_point()
-
-cog_s_temp  %>% ggplot(aes(x=w_bt_temp,y=value))+geom_point()
 
 
 
 
-cog_s_temp %>% 
-  ggplot(aes(x=w_bt_temp,y=value))+
-  geom_point()+
-  xlab("Mean winter bottom temp")+
-  ylab("Center of gravity (Northings)")+
-  ggtitle("Center of gravity and Winter bottom temperature", subtitle = "Southern MAB")+
-  annotate("text",x=7,y= 4500, label="r = -0.311, P-value = 0.077")
+# cog_n_temp  %>%  with(cor.test(value,w_bt_temp   , method=c("pearson")))
+# 
+# cog_s_temp  %>%  with(cor.test(value,w_bt_temp   , method=c("pearson")))
+# 
+# 
+# cog_n_temp  %>% ggplot(aes(x=w_bt_temp,y=value))+geom_point()
+# 
+# cog_s_temp  %>% ggplot(aes(x=w_bt_temp,y=value))+geom_point()
 
-cog_n_temp %>% 
-  ggplot(aes(x=w_bt_temp,y=value))+
-  geom_point()+
-  xlab("Mean winter bottom temp")+
-  ylab("Center of gravity (Northings)")+
-  ggtitle("Center of gravity and Winter bottom temperature", subtitle = "Northern MAB")+
-  annotate("text",x=6,y= 4500, label="r = -0.4421761, P-value = 0.009")
 
+
+
+# cog_s_temp %>% 
+#   ggplot(aes(x=w_bt_temp,y=value))+
+#   geom_point()+
+#   xlab("Mean winter bottom temp")+
+#   ylab("Center of gravity (Northings)")+
+#   ggtitle("Center of gravity and Winter bottom temperature", subtitle = "Southern MAB")+
+#   annotate("text",x=7,y= 4500, label="r = -0.311, P-value = 0.077")
+# 
+# cog_n_temp %>% 
+#   ggplot(aes(x=w_bt_temp,y=value))+
+#   geom_point()+
+#   xlab("Mean winter bottom temp")+
+#   ylab("Center of gravity (Northings)")+
+#   ggtitle("Center of gravity and Winter bottom temperature", subtitle = "Northern MAB")+
+#   annotate("text",x=6,y= 4500, label="r = -0.4421761, P-value = 0.009")
+
+
+
+cog
+
+#### alex vast output and code to extract 
+load("C:/Users/ricky.tabandera/Desktop/parameter_estimates.RData")
+
+parameter_estimates$par
+
+results <- plot(parameter_estimates)
+
+
+
+
+#library("devtools")
+#install_github("james-thorson/VAST@main", INSTALL_opts="--no-staged-install")
+
+
+library("VAST")
+
+nrow_sd <- length(Sdreport_spring$value)
+year<-1989:2021
+n_yea <- length(unique(year))
+n_surv <- 11
+n_stock<-2
+
+
+
+df_cog <-
+  df_sdreport %>%
+  dplyr::filter(variable %in% c("mean_Z_ctm"))%>%
+  dplyr::mutate(variable = rep(c("Eastings", "Northings"),
+                               each = n_yea*n_stock),
+                stock = rep(c("North", "South"),
+                            each = 1,
+                            times = n_yea*n_stock),
+                year   = rep(c(1989:2021),
+                             each = 2,
+                             times = 2))
+
+
+df_cog %>% filter(season== "SPRING")
+
+# mu+1.6449*SD
+#
+df_cog_95<-df_cog %>% mutate(upper95=value+(1.6449*sd))
+
+
+df_cog_95 %>% filter(stock=="North"& variable=="Northings") %>%
+  ggplot(aes(x=year))+
+  geom_line(aes( y=value))+
+  geom_line(aes(y=upper95), color="red")
+
+
+N_cog_95<-df_cog_95 %>% filter(stock=="North" & variable=="Northings")
+S_cog_95<-df_cog_95 %>% filter(stock=="South" & variable=="Northings")
+
+N_cog_95_join<-left_join(N_cog_95, SHW_NMAB_winter, by= "year")
+
+S_cog_95_join<-left_join(S_cog_95, SHW_SMAB_winter, by= "year")
+
+
+N_cog_95_join  %>% with(cor.test(value,mean_SHW_T_anom     , method=c("pearson")))
+
+S_cog_95_join %>%  with(cor.test(value,mean_SHW      , method=c("pearson")))
+
+N_cog_95_join %>% ggplot()+
+  geom_point(aes(x=mean_SHW, y= value))+
+  xlab("Winter shelf water volume (km^3)")+
+  ylab("Center of gravity upper 95% CI (Northings)")+
+  ggtitle("Upper 95% CI Center of gravity and Winter shelf water volume", subtitle = "Northern MAB")+
+  annotate("text",x=1500,y= 4450, label="r = 0.099, P-value = 0.629")
+
+S_cog_95_join %>% ggplot()+
+  geom_point(aes(x=mean_SHW, y= value))+
+  xlab("Winter shelf water volume (km^3)")+
+  ylab("Center of gravity upper 95% CI (Northings)")+
+  ggtitle("Upper 95% CI Center of gravity and Winter shelf water volume", subtitle = "Southern MAB")+
+  annotate("text",x=1500,y= 4450, label="r = -0.359,t = -2.81,df = 53, P-value = 0.007")
+
+
+
+
+df_effArea <-
+  df_sdreport %>%
+  dplyr::filter(variable %in% c("effective_area_ctl"))%>%
+  dplyr::mutate(size = rep(c("North", "South"),
+                           times = n_yea*n_surv))%>%
+  dplyr::mutate(year   = rep(c(1989:2021),
+                             each = 2,
+                             times = 11),
+                survey   = rep(c(1:11),
+                               each = 66,
+                               times = 1))
+
+N_eff_area<-df_effArea %>% filter(size=="North" & survey==1)
+S_eff_area<-df_effArea %>% filter(size=="South" & survey==1)
+N_eff_area_join<-left_join(N_eff_area, SHW_NMAB_winter, by= "year") 
+S_eff_area_join<-left_join(N_eff_area, SHW_SMAB_winter, by= "year")
+N_eff_area_join  %>% with(cor.test(value,mean_SHW, method=c("pearson")))
+S_eff_area_join  %>% with(cor.test(value,mean_SHW, method=c("pearson")))
+
+N_eff_area_join %>% ggplot()+
+geom_point(aes(x=mean_SHW, y= value))+
+  xlab("Winter shelf water volume (km^3)")+
+  ylab("Effective area occupied ln(Km^2)")+
+  ggtitle("Effective area occupied ln(Km^2) and Winter shelf water volume", subtitle = "Northern MAB")+
+  annotate("text",x=1750,y= 40000, label="r = -0.333,t = -1.73,df = 24, P-value = 0.096")
+
+S_eff_area_join %>% ggplot()+
+geom_point(aes(x=mean_SHW, y= value))+
+  xlab("Winter shelf water volume (km^3)")+
+  ylab("Effective area occupied ln(Km^2)")+
+  ggtitle("Effective area occupied ln(Km^2) and Winter shelf water volume", subtitle = "Southern MAB")+
+  annotate("text",x=1750,y= 40000, label="r = -0.467,t = -3.84,df = 24, P-value < 0.001")
 
 
 ```
