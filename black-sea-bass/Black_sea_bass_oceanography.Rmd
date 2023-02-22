@@ -1005,9 +1005,9 @@ South_rec_cor_plot<-South_rec_join %>%
   geom_point()+
   xlab("Mean winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
-  annotate("text",x=10,y=.5,label="r =0.47, P-value=0.012")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "southern MAB")+
-  geom_text(hjust=0, vjust=0)
+  geom_text(hjust=0, vjust=0)+
+  theme_bw()
 
 
 
@@ -1020,9 +1020,9 @@ North_rec_cor_plot<-North_rec_join %>%
   geom_point()+
   xlab("Mean winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
-  annotate("text",x=7.8,y=2,label="r =0.48, P-value=0.013")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")+
-  geom_text(hjust=0, vjust=0)
+  geom_text(hjust=0, vjust=0)+
+  theme_bw()
 
 
 
@@ -1138,15 +1138,17 @@ SMAB_re_join %>%  with(cor.test(w_bt_temp,mean_bot_T, method=c("pearson")))
 SMAB_re_join_plot<-SMAB_re_join %>% ggplot(aes(x=mean_bot_T, y=w_bt_temp))+geom_point()+
   xlab(" In situ Mean winter Bottom temperature (C)")+
   ylab("Reanalysis Mean winter Bottom temperature (C)")+
-  annotate("text",x=10,y=10,label="r =0.90, P-value<0.001")+
-  ggtitle("Association between bottom temperature methods: insitu vs Reanalysis", subtitle = "Southern MAB")
+  
+  ggtitle("Association between bottom temperature methods: insitu vs Reanalysis", subtitle = "Southern MAB")+
+  theme_bw()
 
 
 NMAB_re_join_plot<-NMAB_re_join %>% ggplot(aes(x=mean_bot_T, y=w_bt_temp))+geom_point()+
   xlab(" In situ Mean winter Bottom temperature (C)")+
   ylab("Reanalysis Mean winter Bottom temperature (C)")+
-  annotate("text",x=8,y=10,label="r =0.81, P-value<0.001")+
-  ggtitle("Association between bottom temperature methods: insitu vs Reanalysis", subtitle = "Northern MAB")
+ 
+  ggtitle("Association between bottom temperature methods: insitu vs Reanalysis", subtitle = "Northern MAB")+
+  theme_bw()
 
 
 
@@ -1194,9 +1196,9 @@ South_lm_plot<-South_rec_join %>%
   geom_smooth(method = "lm", formula = y ~ x)+
   xlab("Mean winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
-  annotate("text",x=11,y=.5,label="R^2 = 0.218,	Adj R^2 = 0.188, P-value=0.012")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "southern MAB")+
-  geom_text(hjust=0, vjust=0)
+  geom_text(hjust=0, vjust=0)+
+  theme_bw()
 
 
 #####################
@@ -1219,9 +1221,9 @@ North_lm_plot<-North_rec_join %>%
   geom_smooth(method = "lm", formula = y ~ x)+
   xlab("Mean winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
-  annotate("text",x=8,y=2,label="R^2 = 0.230,	Adj R^2 = 0.199, P-value=0.015")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")+
-  geom_text(hjust=0, vjust=0)
+  geom_text(hjust=0, vjust=0)+
+  theme_bw()
 
 
 plot(South_lm_plot)
@@ -1269,9 +1271,9 @@ re_North_lm_plot<-ra_N_rec %>%
   geom_smooth(method = "lm", formula = y ~ x)+
   xlab("Reanalyis winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
-  annotate("text",x=8,y=2,label="R^2 = 0.278,	Adj R^2 = 0.253, P-value=0.002")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")+
-  geom_text(hjust=0, vjust=0)
+  geom_text(hjust=0, vjust=0)+
+  theme_bw()
 
 re_North_lm_plot<-ra_N_rec %>%
   ggplot(aes(x=w_bt_temp, y=log_recruit_devs, label=year))+
@@ -1279,9 +1281,9 @@ re_North_lm_plot<-ra_N_rec %>%
   geom_smooth(method = "lm", formula = y ~ x)+
   xlab("Reanalyis winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
-  annotate("text",x=8,y=2,label="R^2 = 0.278,	Adj R^2 = 0.253, P-value=0.002")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")+
-  geom_text(hjust=0, vjust=0)
+  geom_text(hjust=0, vjust=0)+
+  theme_bw()
 
 
 re_South_lm_plot<-ra_S_rec %>%
@@ -1290,9 +1292,9 @@ re_South_lm_plot<-ra_S_rec %>%
   geom_smooth(method = "lm", formula = y ~ x)+
   xlab("Reanalyis winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
-  annotate("text",x=8,y=1,label="R^2 = 0.173,	Adj R^2 = 0.144, P-value=0.019")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Southern MAB")+
-  geom_text(hjust=0, vjust=0)
+  geom_text(hjust=0, vjust=0)+
+  theme_bw()
 
 
 
@@ -1411,14 +1413,11 @@ cog_s_join %>%
 
 
 
-cog
+
 
 #### alex vast output and code to extract 
 load("C:/Users/ricky.tabandera/Desktop/parameter_estimates.RData")
 
-parameter_estimates$par
-
-results <- plot(parameter_estimates)
 
 
 
@@ -1429,6 +1428,7 @@ results <- plot(parameter_estimates)
 
 library("VAST")
 
+Sdreport_spring <-parameter_estimates$SD
 nrow_sd <- length(Sdreport_spring$value)
 year<-1989:2021
 n_yea <- length(unique(year))
@@ -1436,6 +1436,11 @@ n_surv <- 11
 n_stock<-2
 
 
+df_sdreport <-
+  data.frame(variable = c(names(Sdreport_spring$value)),
+             value = c(Sdreport_spring$value),
+             sd = c(Sdreport_spring$sd),
+             season = c(rep("SPRING", times = nrow_sd)))
 
 df_cog <-
   df_sdreport %>%
@@ -1450,7 +1455,7 @@ df_cog <-
                              times = 2))
 
 
-df_cog %>% filter(season== "SPRING")
+
 
 # mu+1.6449*SD
 #
@@ -1466,28 +1471,29 @@ df_cog_95 %>% filter(stock=="North"& variable=="Northings") %>%
 N_cog_95<-df_cog_95 %>% filter(stock=="North" & variable=="Northings")
 S_cog_95<-df_cog_95 %>% filter(stock=="South" & variable=="Northings")
 
-N_cog_95_join<-left_join(N_cog_95, SHW_NMAB_winter, by= "year")
+N_cog_95_join<-inner_join(N_cog_95, SHW_NMAB_winter, by= "year")
 
-S_cog_95_join<-left_join(S_cog_95, SHW_SMAB_winter, by= "year")
+S_cog_95_join<-inner_join(S_cog_95, SHW_SMAB_winter, by= "year")
 
 
-N_cog_95_join  %>% with(cor.test(value,mean_SHW_T_anom     , method=c("pearson")))
 
-S_cog_95_join %>%  with(cor.test(value,mean_SHW      , method=c("pearson")))
+N_cog_95_join  %>% with(cor.test(value,mean_SHW     , method=c("pearson")))
+
+s_store<-S_cog_95_join %>%  with(cor.test(value,mean_SHW      , method=c("pearson")))
 
 N_cog_95_join %>% ggplot()+
   geom_point(aes(x=mean_SHW, y= value))+
   xlab("Winter shelf water volume (km^3)")+
   ylab("Center of gravity upper 95% CI (Northings)")+
   ggtitle("Upper 95% CI Center of gravity and Winter shelf water volume", subtitle = "Northern MAB")+
-  annotate("text",x=1500,y= 4450, label="r = 0.099, P-value = 0.629")
+  theme_bw()
 
 S_cog_95_join %>% ggplot()+
   geom_point(aes(x=mean_SHW, y= value))+
   xlab("Winter shelf water volume (km^3)")+
   ylab("Center of gravity upper 95% CI (Northings)")+
   ggtitle("Upper 95% CI Center of gravity and Winter shelf water volume", subtitle = "Southern MAB")+
-  annotate("text",x=1500,y= 4450, label="r = -0.359,t = -2.81,df = 53, P-value = 0.007")
+  theme_bw()
 
 
 
@@ -1507,23 +1513,26 @@ df_effArea <-
 N_eff_area<-df_effArea %>% filter(size=="North" & survey==1)
 S_eff_area<-df_effArea %>% filter(size=="South" & survey==1)
 N_eff_area_join<-left_join(N_eff_area, SHW_NMAB_winter, by= "year") 
-S_eff_area_join<-left_join(N_eff_area, SHW_SMAB_winter, by= "year")
+S_eff_area_join<-left_join(S_eff_area, SHW_SMAB_winter, by= "year")
+
 N_eff_area_join  %>% with(cor.test(value,mean_SHW, method=c("pearson")))
-S_eff_area_join  %>% with(cor.test(value,mean_SHW, method=c("pearson")))
+S_eff_area_join  %>%  distinct(year, .keep_all=TRUE) %>% with(cor.test(value,mean_SHW, method=c("pearson")))
+
+
 
 N_eff_area_join %>% ggplot()+
 geom_point(aes(x=mean_SHW, y= value))+
   xlab("Winter shelf water volume (km^3)")+
   ylab("Effective area occupied ln(Km^2)")+
   ggtitle("Effective area occupied ln(Km^2) and Winter shelf water volume", subtitle = "Northern MAB")+
-  annotate("text",x=1750,y= 40000, label="r = -0.333,t = -1.73,df = 24, P-value = 0.096")
+  theme_bw()
 
 S_eff_area_join %>% ggplot()+
 geom_point(aes(x=mean_SHW, y= value))+
   xlab("Winter shelf water volume (km^3)")+
   ylab("Effective area occupied ln(Km^2)")+
   ggtitle("Effective area occupied ln(Km^2) and Winter shelf water volume", subtitle = "Southern MAB")+
-  annotate("text",x=1750,y= 40000, label="r = -0.467,t = -3.84,df = 24, P-value < 0.001")
+  theme_bw()
 
 
 ```
