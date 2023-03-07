@@ -1,14 +1,14 @@
 # Ecosystem and Socioeconomic Profiles
 
 [![](https://img.shields.io/github/last-commit/NOAA-EDAB/esp_data_aggregation.svg)](https://github.com/NOAA-EDAB/esp_data_aggregation/commits/main)
-![](https://img.shields.io/badge/repo%20size-1.59%20GB-blue.svg)
+![](https://img.shields.io/badge/repo%20size-1.67%20GB-blue.svg)
 [![](https://github.com/NOAA-EDAB/esp_data_aggregation/workflows/gitleaks/badge.svg)](https://github.com/NOAA-EDAB/esp_data_aggregation/actions/workflows/secretScan.yml)
 [![](https://github.com/NOAA-EDAB/esp_data_aggregation/workflows/Indicator%20Reports%20(development)/badge.svg)](https://github.com/NOAA-EDAB/esp_data_aggregation/actions/workflows/render_indicator_reports_dev.yaml)
 [![](https://github.com/NOAA-EDAB/esp_data_aggregation/workflows/Regression%20Reports%20(development)/badge.svg)](https://github.com/NOAA-EDAB/esp_data_aggregation/actions/workflows/render_regression_reports_dev.yaml)
 
 ## View current data products
 
-<https://noaa-edab.github.io/ESP_docs/docs>
+<https://nefsc.github.io/READ-EDAB-ESP_docs/docs>
 
 ## Introduction
 
@@ -34,34 +34,32 @@ species-specific information.
 ## The Northeast ESP suite
 
 There are currently 4 github repos associated with the Northeast ESP
-initiative. 
-
-1. [`NOAA-EDAB/esp_data_aggregation`](https://github.com/NOAA-EDAB/esp_data_aggregation)
+initiative. 1.
+[`NOAA-EDAB/esp_data_aggregation`](https://github.com/NOAA-EDAB/esp_data_aggregation)
 is the original repo and currently houses development and exploratory
-work. 
-
-2. [`NOAA-EDAB/NEesp`](https://github.com/NOAA-EDAB/NEesp) houses
-an R package that contains relevant data, functions for low-level data
-analysis and plotting, and report templates. 
-
-3. [`NOAA-EDAB/NEespShiny`](https://github.com/NOAA-EDAB/NEespShiny) houses
-an R Shiny app (in the form of an R package) that provides a graphical
-user interface for creating reports with the `NEesp` package. 
-
-4. [`NOAA-EDAB/ESP_docs`](https://github.com/NOAA-EDAB/ESP_docs) houses
-reports on Northeast stocks and ecosystem/socioeconomic indicators.
+work. 2.
+[`NEFSC/READ-EDAB-NEesp`](https://github.com/NEFSC/READ-EDAB-NEesp)
+houses an R package that contains relevant data, functions for low-level
+data analysis and plotting, and report templates. 3.
+[`NEFSC/READ-EDAB-NEespShiny`](https://github.com/NEFSC/READ-EDAB-NEespShiny)
+houses an R Shiny app (in the form of an R package) that provides a
+graphical user interface for creating reports with the `NEesp` package.
+4.
+[`NEFSC/READ-EDAB-ESP_docs`](https://github.com/NEFSC/READ-EDAB-ESP_docs)
+houses reports on Northeast stocks and ecosystem/socioeconomic
+indicators.
 
 ## Data and analysis
 
 The current preliminary report aggregates data from many existing
 sources and creates several data visualizations. Reports for all
 northeast stocks have been compiled and can be viewed
-[here](https://noaa-edab.github.io/ESP_docs/docs). We have recently
-aggregated our data, functions, and report templates into a preliminary
-R package that can be viewed in the [package
-repo](https://github.com/NOAA-EDAB/NEesp). The package can be downloaded
-locally in R with the command
-`devtools::install_github("NOAA-EDAB/NEesp")`.
+[here](https://nefsc.github.io/READ-EDAB-ESP_docs/docs). We have
+recently aggregated our data, functions, and report templates into a
+preliminary R package that can be viewed in the [package
+repo](https://github.com/NEFSC/READ-EDAB-NEesp). The package can be
+downloaded locally in R with the command
+`devtools::install_github("NEFSC/READ-EDAB-NEesp")`.
 
 ## Running a report
 
@@ -75,10 +73,9 @@ note, report generation will take some time (2+ minutes per species).
 ### Running a report with `R shiny`
 
 We have recently developed an `R shiny` app to visualize Northeast ESP
-data, which is bundled into the `NEespShiny` R package (on the [shiny
-branch](https://github.com/NOAA-EDAB/esp_data_aggregation/tree/package)).
-The app can be installed in R with:
-`remotes::install_github("NOAA-EDAB/NEespShiny")`. If installation
+data, which is bundled into the `NEespShiny` R package. The app can be
+installed in R with:
+`remotes::install_github("NEFSC/READ-EDAB-NEespShiny")`. If installation
 throws an error, you may have to override package installation errors
 from warnings with:
 `sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")`. Once you have
@@ -100,6 +97,10 @@ are free from errors; please contact us if you notice any issues.
 ## Developers
 
 <table>
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 58%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th><a href="https://github.com/atyrell3">atyrell3</a></th>
@@ -108,8 +109,10 @@ are free from errors; please contact us if you notice any issues.
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="https://github.com/atyrell3"><img src="https://avatars.githubusercontent.com/u/77738923?s=100&amp;u=92e54f60ca179f3e41c1a3610fb3ecdb9e233434&amp;v=4" /></a></td>
-<td><a href="https://github.com/rtabandera"><img src="https://avatars.githubusercontent.com/u/64960823?s=100&amp;u=ea5abeca602e43d461e964fe8283f703aef63c61&amp;v=4" /></a></td>
+<td><a href="https://github.com/atyrell3"><img
+src="https://avatars.githubusercontent.com/u/77738923?s=100&amp;u=92e54f60ca179f3e41c1a3610fb3ecdb9e233434&amp;v=4" /></a></td>
+<td><a href="https://github.com/rtabandera"><img
+src="https://avatars.githubusercontent.com/u/64960823?s=100&amp;u=ea5abeca602e43d461e964fe8283f703aef63c61&amp;v=4" /></a></td>
 </tr>
 </tbody>
 </table>
