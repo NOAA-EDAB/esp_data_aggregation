@@ -865,15 +865,15 @@ S_rec_plot<-S_rec_temp %>% ggplot(aes(x= year,y=log_recruit_devs))+
   geom_point(size=2)+
   xlab("Year")+
   ylab("Log recruitment deviation")+
-  ggtitle("Log recruitment deviations",subtitle = "Southern MAB")+
-  theme_minimal()
+  ggtitle(label="",subtitle = "Southern MAB")+
+  theme_bw()
 
 N_rec_plot<-N_rec_temp %>% ggplot(aes(x= year,y=log_recruit_devs))+
   geom_point(size=2)+
   xlab("Year")+
   ylab("Log recruitment deviation")+
-  ggtitle("Log recruitment deviations",subtitle = "Northern MAB")+
-  theme_minimal()
+  ggtitle(label= "",subtitle = "Northern MAB")+
+  theme_bw()
 
 rec_plot<-ggpubr::ggarrange(S_rec_plot,N_rec_plot, nrow = 2,ncol = 1)
 
@@ -882,14 +882,14 @@ S_temp_ts_plot<-S_rec_temp %>% ggplot(aes(x=year, y=mean_bot_T_anom))+
   xlab("Year")+
   ylab("Temperature anomaly")+
   ggtitle("Winter bottom",subtitle = "Southern MAB")+
-  theme_minimal()
+  theme_bw()
 
 N_temp_ts_plot<-N_rec_temp %>% ggplot(aes(x=year, y=mean_bot_T_anom))+
   geom_point(size=2)+
   xlab("Year")+
   ylab("Temperature anomaly")+
   ggtitle("Winter bottom",subtitle = "Northern MAB")+
-  theme_minimal()
+  theme_bw()
 
 
 temp_ts_plot<-ggpubr::ggarrange(S_temp_ts_plot,N_temp_ts_plot, nrow = 2,ncol = 1)
@@ -1136,18 +1136,17 @@ SMAB_re_join %>%  with(cor.test(w_bt_temp,mean_bot_T, method=c("pearson")))
 
 
 SMAB_re_join_plot<-SMAB_re_join %>% ggplot(aes(x=mean_bot_T, y=w_bt_temp))+geom_point()+
-  xlab(" In situ Mean winter Bottom temperature (C)")+
-  ylab("Reanalysis Mean winter Bottom temperature (C)")+
+  xlab(" In situ Mean winter Bottom temp (C)")+
+  ylab("Reanalysis Mean winter Bottom temp (C)")+
   
   ggtitle("Association between bottom temperature methods: insitu vs Reanalysis", subtitle = "Southern MAB")+
   theme_bw()
 
 
 NMAB_re_join_plot<-NMAB_re_join %>% ggplot(aes(x=mean_bot_T, y=w_bt_temp))+geom_point()+
-  xlab(" In situ Mean winter Bottom temperature (C)")+
-  ylab("Reanalysis Mean winter Bottom temperature (C)")+
- 
-  ggtitle("Association between bottom temperature methods: insitu vs Reanalysis", subtitle = "Northern MAB")+
+  xlab(" In situ Mean winter Bottom temp (C)")+
+  ylab("Reanalysis Mean winter Bottom temp (C)")+
+  ggtitle("", subtitle = "Northern MAB")+
   theme_bw()
 
 
@@ -1268,7 +1267,7 @@ summary(re_rec_lm)
 re_North_lm_plot<-ra_N_rec %>%
   ggplot(aes(x=w_bt_temp, y=log_recruit_devs, label=year))+
   geom_point()+
-  geom_smooth(method = "lm", formula = y ~ x)+
+  geom_smooth(method = "lm", formula = y ~ x,color="red")+
   xlab("Reanalyis winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")+
@@ -1278,7 +1277,7 @@ re_North_lm_plot<-ra_N_rec %>%
 re_North_lm_plot<-ra_N_rec %>%
   ggplot(aes(x=w_bt_temp, y=log_recruit_devs, label=year))+
   geom_point()+
-  geom_smooth(method = "lm", formula = y ~ x)+
+  geom_smooth(method = "lm", formula = y ~ x, color="red")+
   xlab("Reanalyis winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Northern MAB")+
@@ -1289,7 +1288,7 @@ re_North_lm_plot<-ra_N_rec %>%
 re_South_lm_plot<-ra_S_rec %>%
   ggplot(aes(x=w_bt_temp, y=log_recruit_devs, label=year))+
   geom_point()+
-  geom_smooth(method = "lm", formula = y ~ x)+
+  geom_smooth(method = "lm", formula = y ~ x,color="red")+
   xlab("Reanalyis winter Bottom temperature (C)")+
   ylab("Log recrutment deviations")+
   ggtitle("Black sea bass Recrutment and bottom temperature", subtitle = "Southern MAB")+
