@@ -1,7 +1,7 @@
 ---
 title: "Black_sea_bass_foodhabits"
 author: "Ricky Tabandera"
-date: "5/12/2022"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   pdf_document: default
   html_document: default
@@ -26,12 +26,12 @@ Black sea bass are diurnal visual predators usually associated with complex hard
 #load(url("https://github.com/Laurels1/Condition/raw/master/data/allfh.RData"))
 # load("C:\\Users\\ricky.tabandera\\Documents\\EDAB\\esp_data_aggregation\\black-sea-bass\\allfh_20200526.rds")
 # saveRDS(allfh, file="allfh_20200526.RDS")
-load("allfh_20200526.RDATA")
+load("~/EDAB/esp_data_aggregation/black-sea-bass/allfh_20200526.RDATA")
 #key of strata from ECSA <- read.csv("https://raw.githubusercontent.com/NOAA-EDAB/ECSA/master/data/seasonal_stock_strata.csv")
 
 
-CHESAMAP_2022<-read.csv("BSB_CHESAMAP_2022.csv")
-NEAMAP_2022<-read.csv("BSB_NEAMAP_2022.csv" )
+CHESAMAP_2022<-read.csv("~/EDAB/esp_data_aggregation/black-sea-bass/BSB_CHESAMAP_2022.csv")
+NEAMAP_2022<-read.csv("~/EDAB/esp_data_aggregation/black-sea-bass/BSB_NEAMAP_2022.csv" )
 
 #col definitions from data dict
 #PDLEN	PREDATOR LENGTH	Predator length in CM, rounded up.
@@ -80,6 +80,89 @@ BSB_small_ID<-BSB_small  %>% filter(year>1990)
 
 ```
 
+```{r data_sumary, echo=FALSE, message=FALSE, warning=FALSE}
+
+list.files(here::here("black-sea-bass","FWdp_shiney_data"))
+
+prey_70<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).1970s.2023-04-09.csv" )) %>%    mutate(Decade = 1970)   
+
+prey_80<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).1980s.2023-04-09.csv" )) %>%    mutate(Decade = 1980)
+ 
+prey_80<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).1980s.2023-04-09.csv" )) %>%    mutate(Decade = 1980)
+
+prey_00<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).2000s.2023-04-09.csv"   )) %>%    mutate(Decade = 2000)
+
+prey_10<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).2010s.2023-04-09.csv"  )) %>%    mutate(Decade = 2010)             
+   
+prey_20<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).2020s.2023-04-09.csv"  )) %>%    mutate(Decade = 2020)               
+  
+BSB_prey_dec<-rbind(prey_70,prey_80,prey_00,prey_10,prey_20)
+
+
+library(Polychrome)
+
+prey_colors<-glasbey.colors(33)
+
+py_names<-c("Ammodytes sp"   ,       "Anthozoa"     ,         "Aphroditidae"       ,   "Bivalvia",     
+ "Cancer sp"     ,        "Centropristis striata", "Cephalopoda"         ,  "Clupeidae"   ,         
+"Crustacea"       ,      "Crustacean shrimp",     "Decapoda crab"         ,"Decapoda shrimp",      
+ "Euphausiacea"    ,      "Gammaridea"       ,     "Gastropoda"           , "Illex sp"       ,      
+"Invertebrata"      ,    "Larvaceans"         ,   "Loligo pealeii"      ,  "Loligo sp"        ,    
+"Miscellaneous"      ,   "Mollusca"            ,  "Myctophidae"         ,  "Mysidacea"         ,   
+"Octopoda"            ,  "Ophiuroidea"          , "Paguroidea"           , "Pandalidae"         ,  
+ "Polychaeta"          ,  "Prionotus carolinus"  , "Stenotomus chrysops"  , "Unidentified fish"  ,  
+ "WDP")
+
+
+
+names(prey_colors)<-py_names[1:length(prey_colors)]
+
+prey_all<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).All.2023-04-09.csv"   )) 
+
+
+prey_m<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).M.2023-04-09.csv"  ))                 
+
+
+prey_s<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).S.2023-04-09.csv"  ))    
+
+prey_MAB<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).MID-ATLANTIC BIGHT.2023-04-09.csv"  )) 
+
+prey_SNE<-read.csv(here::here("black-sea-bass","FWdp_shiney_data","DC.Black sea bass (Centropristis striata).SOUTHERN NEW ENGLAND.2023-04-09.csv"  )) 
+
+
+BSB_prey_dec %>%
+  # mutate(Pct.m=forcats::fct_reorder2(Prey, Decade, Pct.m, .desc = TRUE))%>%
+  ggplot(aes(x=as.factor(Decade), y=Pct.m ,fill=Prey))+
+  geom_col(stat = "identity",show.legend = TRUE)+
+  scale_fill_manual(values=prey_colors)+
+  theme(axis.text.y=element_blank())+
+  xlab("Decade")+
+  ylab("Percent by weight")
+
+
+
+
+BSB_prey_dec %>% filter(Decade==1970) %>% mutate(Pct.m=forcats::fct_reorder(Prey, Pct.m, .desc = TRUE)) %>%
+  ggplot(aes(x=Pct.m,y=Prey, fill= Prey))+
+  geom_bar(stat = "identity")+
+  theme(axis.text.x = element_text(angle = 90),
+        panel.border= element_blank(),
+        panel.background= element_rect(fill = "white"),
+        axis.title.y=element_blank(),
+        legend.position="none"
+        )+
+   coord_flip()+
+  xlab("Prey name")+
+  ylab("Percent by weight")+
+  scale_fill_manual(values=prey_colors)
+
+
+
+```
+
+
+
+
 ## Frequency of occurance and weight of prey items
 
 NEFSC bottom trawl survey food habits contain a fraction of fish collected in a tow for stomach removal and analysis. Each entry is the identified contents of indevidual black sea bass stomachs associated with a unique predatorID. This dataset contains `r length(unique(BSB_small$pdid))  ` stomachs containing `r length(BSB_small$pdid) ` prey records. Data coverage begins in 1977 though 2020.
@@ -88,46 +171,63 @@ NEFSC bottom trawl survey food habits contain a fraction of fish collected in a 
 ```{r}
 #create a new index of indevidual bsb as pdid appears to not be reliable at IDing fish early in the dataset
 #strata cruise tow station pdid ==== to make key
-t11<- BSB_small %>% unite("ID",c(month, day, year,stratum,cruise6, tow, station, pdid),remove =FALSE)
-t12<-t11 %>% filter(!analsci=="BLOWN")
-t1<- BSB_small %>% unite("ID",c(cruise6, pdid,tow,stratum,station),remove =FALSE)
-#generate counts of each prey catagory by year and subunit
-t2<-t1 %>% group_by(decade,subunit, analsci ) %>% summarise(count=n())
-#count each identified predator for each subunit and year
-t3<-t1 %>% group_by(decade,subunit) %>% summarise(pd_count=length(unique(ID)))
-#join the above counts to get frequency of occurance in stomachs by region and decade
-t4<-dplyr::full_join( t2,t3, by= c("decade","subunit"))
+BSB_small_ID<- BSB_small %>% unite("ID",c(month, day, year,stratum,cruise6, tow, station, pdid),remove =FALSE)
 
-t4<-t4 %>% mutate(freq_o=(count/pd_count))
+#used to get total number of stomachs by year
+ID_counts<-BSB_small_ID %>% group_by(year) %>% summarise(id_count=length(unique(ID)))
+#used to get counts of empty stomachs
+ID_counts.1<-BSB_small_ID %>% group_by(year) %>% filter(analsci=="EMPTY") %>% summarise(empty.stom=length(unique(ID)))
 
+#used to get proportion of stomachs that are empty
+empty.count.table<-left_join(ID_counts.1, ID_counts, by=c("year"))
+empty.count.table<-empty.count.table %>% mutate(pct.empty=(empty.stom/id_count))
+# remove the blown stomachs as they are indetermanant 
+BSB_small_ID_clean<-BSB_small_ID %>% filter(!analsci=="BLOWN")
 
-
-#######testing
-
-#need key to group prey together IE decapoda crab, vs cancer spp, 
-# pyamtw is in g
-
-t0<- BSB_small %>% filter(!analsci%in%c("BLOWN"))
-
-t1<- t0 %>% unite("ID",c(month, day, year,cruise6, pdid, pdlen, tow),remove =FALSE)
-
-length(unique(t1$ID))
-
-#generate counts of each prey catagory by year and subunit
-t2<-t1 %>% group_by( analsci ) %>% summarise(count=n())
-
-t2<-t2 %>% mutate(f_o=count/length(unique(t1$ID)))
-#count each identified predator for each subunit and year
-t3<-t1 %>%group_by( analsci )%>%  summarise(pd_count=length(unique(ID)))
-#join the above counts to get frequency of occurance in stomachs by region and decade
-t4<-dplyr::full_join( t2,t3, by= "analsci")
-
-t4<-t4 %>% mutate(freq_o=count/pd_count)
 
 
 
-#remove all blown
+#generate counts of each prey catagory by year and subunit
+prey_dec_sub<-BSB_small_ID_clean %>% group_by(pynam ) %>% summarise(count=n()) %>% arrange(desc(count))
 
+prey_dec_sub.ani<-BSB_small_ID_clean %>% group_by(analsci ) %>% summarise(count=n()) %>% arrange(desc(count))
+
+
+#get a count of blown stomachs and empty by decade and subunit
+prey_dec_sub_blown<-BSB_small_ID_clean %>% group_by(decade,subunit ) %>% summarise(count=n())
+BSB_small_ID %>% group_by(decade,subunit) %>% filter(analsci=="BLOWN") %>% summarise(count=n())
+
+
+
+# weighted average by prey item
+
+# tow id for 
+BSB_small_ID<-BSB_small_ID %>% unite("tow_ID",c(cruise6, tow,station, stratum),remove =FALSE)
+#verify we have the correct number of tows for BSB
+tow_ID_list<-BSB_small_ID %>%  summarise( tow_count=unique(tow_ID))
+# count the number of predator stomachs in each tow
+n_pred_per_tow<-BSB_small_ID %>% group_by(tow_ID) %>% summarise(n_stom=length(unique(ID)))
+# calculate the total number of stomachs by decade 
+n_pred_per_tow_dec<-BSB_small_ID %>% group_by(decade) %>% summarise(n_stom_dec=length(unique(ID)))
+BSB_small_ID %>% group_by(decade) %>% summarise(n_tow_dec=length(unique(ID)))
+
+# merge total number of stomachs by decade into original dataset 
+BSB_small_ID<-left_join(BSB_small_ID,n_pred_per_tow, by="tow_ID")
+
+n_tow_dec_table<-BSB_small_ID %>% group_by(decade) %>% summarise(n_tow_dec=length(unique(tow_ID)))
+  
+BSB_small_ID<-left_join(BSB_small_ID,n_tow_dec_table,by="decade")
+# calculate weighted average by decade 
+
+t1<-BSB_small_ID %>% filter() %>% group_by( decade,pynam) %>% summarise(w_ijs=(n_stom*mean(pywgti)/n_tow_dec))
+
+
+
+t1 %>% ggplot(aes(x=decade,y=w_ijs, color=pynam))+geom_bar(position="dodge", stat="identity")
+
+
+
+ 
 t2 %>%
   filter(count>10, !analsci%in%c("","BLOWN", "EMPTY"))%>%
   mutate(analsci=forcats::fct_reorder(analsci, f_o, .desc = TRUE))%>%
@@ -148,13 +248,7 @@ t2 %>%
 
 
 
- # group_by(analsci)%>% 
- #  mutate(analsci=forcats::fct_reorder(analsci, freq_o))%>%
- # 
- #  group_by(analsci)%>%
- #    facet_wrap(vars(subunit,decade))+
-  
-  
+ 
 
 ```
 
@@ -176,6 +270,9 @@ t3<-t1 %>%group_by( pynam )%>%  summarise(pd_count=length(unique(ID)))
 t4<-dplyr::full_join( t2,t3, by= "analsci")
 
 t4<-t4 %>% mutate(freq_o=count/pd_count)
+
+#weighted mean 
+ 
 
 
 
@@ -354,7 +451,7 @@ BSB_small_ID %>%
 
 ```{r}
 
-BSB_small_ID %>%
+
 
 ```
 
